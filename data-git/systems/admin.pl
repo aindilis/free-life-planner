@@ -1,0 +1,1 @@
+catalystUserNameResolvesToAgent(admin,andrewDougherty).

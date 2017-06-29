@@ -1,0 +1,688 @@
+swipl -s convert.pl -g 'trace,convert_term_to_fluents(a(b,c,d,e(f,g,h(i,j,k))),1,PVarName,Fluents),sec_write_list(Fluents),halt.'
+Warning: /var/lib/myfrdcsa/codebases/minor/free-life-planner/lib/util/util.pl:95:
+	Singleton variables: [Project]
+Warning: /var/lib/myfrdcsa/codebases/minor/free-life-planner/lib/util/util.pl:180:
+	Singleton variables: [Dir]
+Warning: /var/lib/myfrdcsa/codebases/minor/free-life-planner/lib/util/util.pl:192:
+	Singleton variables: [Project]
+Warning: /var/lib/myfrdcsa/codebases/minor/free-life-planner/lib/util/util.pl:197:
+	Singleton variables: [Project,Dir]
+Warning: /var/lib/myfrdcsa/codebases/minor/free-life-planner/lib/util/util.pl:216:
+	Singleton variables: [Project]
+Warning: /var/lib/myfrdcsa/codebases/minor/free-life-planner/lib/util/util.pl:221:
+	Singleton variables: [Project,Dir]
+Warning: /var/lib/myfrdcsa/codebases/minor/free-life-planner/lib/util/util.pl:229:
+	Singleton variables: [FileProlog]
+Warning: /var/lib/myfrdcsa/codebases/minor/free-life-planner/lib/util/util.pl:236:
+	Singleton variables: [Thing]
+Warning: /var/lib/myfrdcsa/codebases/minor/free-life-planner/lib/util/util.pl:246:
+	Singleton variables: [Dir,Extension]
+Warning: /var/lib/myfrdcsa/codebases/minor/free-life-planner/lib/util/util.pl:254:
+	Singleton variables: [Thing]
+Warning: /var/lib/myfrdcsa/codebases/minor/free-life-planner/lib/util/util.pl:264:
+	Singleton variables: [Dir,Extension]
+Prolog-Loading: /var/lib/myfrdcsa/codebases/minor/free-life-planner/lib/util/shell-utils.pl
+Warning: /var/lib/myfrdcsa/codebases/minor/free-life-planner/lib/util/util.pl:281:
+	Singleton variables: [File]
+Warning: /var/lib/myfrdcsa/codebases/minor/free-life-planner/lib/util/util.pl:314:
+	Singleton variables: [Dir,Regex]
+Warning: /var/lib/myfrdcsa/codebases/minor/free-life-planner/lib/util/util.pl:328:
+	Singleton variables: [Dir]
+Warning: /var/lib/myfrdcsa/codebases/minor/free-life-planner/lib/util/util.pl:423:
+	Singleton variables: [R]
+Warning: /var/lib/myfrdcsa/codebases/minor/free-life-planner/lib/util/util.pl:428:
+	Singleton variables: [R]
+Warning: /var/lib/myfrdcsa/codebases/minor/free-life-planner/lib/util/util.pl:433:
+	Singleton variables: [R]
+Warning: /var/lib/myfrdcsa/codebases/minor/free-life-planner/lib/util/util.pl:441:
+	Singleton variables: [Term,R]
+Warning: /var/lib/myfrdcsa/codebases/minor/free-life-planner/lib/util/util.pl:450:
+	Singleton variables: [R]
+Warning: /var/lib/myfrdcsa/codebases/minor/free-life-planner/lib/util/util.pl:563:
+	Singleton variables: [Output]
+Warning: /var/lib/myfrdcsa/codebases/minor/free-life-planner/lib/util/util.pl:584:
+	Singleton variables: [R,C,A]
+   Call: (6) convert_term_to_fluents(a(b, c, d, e(f, g, h(i, j, k))), 1, _G1475, _G1476) ? 
+   Call: (7) a(b, c, d, e(f, g, h(i, j, k)))=..[_G1492|_G1493] ? 
+   Exit: (7) a(b, c, d, e(f, g, h(i, j, k)))=..[a, b, c, d, e(f, g, h(i, j, k))] ? 
+   Call: (7) incrCounter(predId, _G1515) ? 
+   Call: (8) counter(predId, _G1515) ? 
+   Fail: (8) counter(predId, _G1515) ? 
+   Redo: (7) incrCounter(predId, _G1515) ? 
+^  Call: (8) not(counter(predId, _G1508)) ? 
+   Call: (9) counter(predId, _G1508) ? 
+   Fail: (9) counter(predId, _G1508) ? 
+^  Exit: (8) not(user:counter(predId, _G1508)) ? 
+   Call: (8) _G1520=1 ? 
+   Exit: (8) 1=1 ? 
+^  Call: (8) assertz(counter(predId, 1)) ? 
+^  Exit: (8) assertz(counter(predId, 1)) ? 
+   Exit: (7) incrCounter(predId, 1) ? 
+   Call: (7) atomic_list_concat(['V', 1, '_', 1], '', _G1475) ? 
+   Exit: (7) atomic_list_concat(['V', 1, '_', 1], '', 'V1_1') ? 
+   Call: (7) emptyList([b, c, d, e(f, g, h(i, j, k))]) ? 
+   Call: (8) length([b, c, d, e(f, g, h(i, j, k))], 0) ? 
+   Fail: (8) length([b, c, d, e(f, g, h(i, j, k))], 0) ? 
+   Fail: (7) emptyList([b, c, d, e(f, g, h(i, j, k))]) ? 
+   Redo: (6) convert_term_to_fluents(a(b, c, d, e(f, g, h(i, j, k))), 1, 'V1_1', _G1476) ? 
+   Call: (7) see([b, [b, c, d, e(f, g, h(i, j, k))]]) ? 
+^  Call: (8) write_term([b, [b, c, d, e(f, g, h(i, j, k))]], [quoted(true)]) ? 
+[b,[b,c,d,e(f,g,h(i,j,k))]]
+^  Exit: (8) write_term([b, [b, c, d, e(f, g, h(i, j, k))]], [quoted(true)]) ? 
+   Call: (8) nl ? 
+
+   Exit: (8) nl ? 
+   Exit: (7) see([b, [b, c, d, e(f, g, h(i, j, k))]]) ? 
+^  Call: (7) findall([_G1539, _G1542], (member(_G1548, [b, c, d, e(f, g, h(i, j, k))]), see(_G1548), convert_term_to_fluents(_G1548, 1, _G1539, _G1542)), _G1570) ? 
+
+   Call: (13) lists:member(_G1548, [b, c, d, e(f, g, h(i, j, k))]) ?    Exit: (13) lists:member(b, [b, c, d, e(f, g, h(i, j, k))]) ? 
+   Call: (13) see(b) ? 
+^  Call: (14) write_term(b, [quoted(true)]) ? 
+b
+^  Exit: (14) write_term(b, [quoted(true)]) ? 
+   Call: (14) nl ? 
+
+   Exit: (14) nl ? 
+   Exit: (13) see(b) ? 
+   Call: (13) convert_term_to_fluents(b, 1, _G1539, _G1542) ? 
+   Call: (14) b=..[_G1583|_G1584] ? 
+   Exit: (14) b=..[b] ? 
+   Call: (14) incrCounter(predId, _G1594) ? 
+   Call: (15) counter(predId, _G1594) ? 
+   Exit: (15) counter(predId, 1) ? 
+^  Call: (15) retract(counter(predId, _G1587)) ? 
+^  Exit: (15) retract(counter(predId, 1)) ? 
+   Call: (15) _G1599 is 1+1 ? 
+   Exit: (15) 2 is 1+1 ? 
+^  Call: (15) assertz(counter(predId, 2)) ? 
+^  Exit: (15) assertz(counter(predId, 2)) ? 
+   Exit: (14) incrCounter(predId, 2) ? 
+   Call: (14) atomic_list_concat(['V', 1, '_', 2], '', _G1539) ? 
+   Exit: (14) atomic_list_concat(['V', 1, '_', 2], '', 'V1_2') ? 
+   Call: (14) emptyList([]) ? 
+   Call: (15) length([], 0) ? 
+   Exit: (15) length([], 0) ? 
+   Exit: (14) emptyList([]) ? 
+   Call: (14) _G1542=[b, 'V1_2'] ? 
+   Exit: (14) [b, 'V1_2']=[b, 'V1_2'] ? 
+
+   Exit: (13) convert_term_to_fluents(b, 1, 'V1_2', [b, 'V1_2']) ?    Redo: (13) lists:member(_G1548, [b, c, d, e(f, g, h(i, j, k))]) ? 
+   Exit: (13) lists:member(c, [b, c, d, e(f, g, h(i, j, k))]) ? 
+
+   Call: (13) see(c) ? ^  Call: (14) write_term(c, [quoted(true)]) ? 
+c
+^  Exit: (14) write_term(c, [quoted(true)]) ? 
+
+   Call: (14) nl ? 
+   Exit: (14) nl ? 
+   Exit: (13) see(c) ? 
+   Call: (13) convert_term_to_fluents(c, 1, _G1539, _G1542) ? 
+   Call: (14) c=..[_G1583|_G1584] ? 
+   Exit: (14) c=..[c] ? 
+   Call: (14) incrCounter(predId, _G1594) ? 
+   Call: (15) counter(predId, _G1594) ? 
+   Exit: (15) counter(predId, 2) ? 
+^  Call: (15) retract(counter(predId, _G1587)) ? 
+^  Exit: (15) retract(counter(predId, 2)) ? 
+   Call: (15) _G1599 is 2+1 ? 
+   Exit: (15) 3 is 2+1 ? 
+^  Call: (15) assertz(counter(predId, 3)) ? 
+
+^  Exit: (15) assertz(counter(predId, 3)) ?    Exit: (14) incrCounter(predId, 3) ? 
+   Call: (14) atomic_list_concat(['V', 1, '_', 3], '', _G1539) ? 
+   Exit: (14) atomic_list_concat(['V', 1, '_', 3], '', 'V1_3') ? 
+   Call: (14) emptyList([]) ? 
+   Call: (15) length([], 0) ? 
+   Exit: (15) length([], 0) ? 
+   Exit: (14) emptyList([]) ? 
+   Call: (14) _G1542=[c, 'V1_3'] ? 
+   Exit: (14) [c, 'V1_3']=[c, 'V1_3'] ? 
+   Exit: (13) convert_term_to_fluents(c, 1, 'V1_3', [c, 'V1_3']) ? 
+   Redo: (13) lists:member(_G1548, [b, c, d, e(f, g, h(i, j, k))]) ? 
+   Exit: (13) lists:member(d, [b, c, d, e(f, g, h(i, j, k))]) ? 
+   Call: (13) see(d) ? 
+^  Call: (14) write_term(d, [quoted(true)]) ? 
+d
+^  Exit: (14) write_term(d, [quoted(true)]) ? 
+   Call: (14) nl ? 
+
+   Exit: (14) nl ? 
+   Exit: (13) see(d) ? 
+   Call: (13) convert_term_to_fluents(d, 1, _G1539, _G1542) ? 
+   Call: (14) d=..[_G1583|_G1584] ? 
+   Exit: (14) d=..[d] ? 
+   Call: (14) incrCounter(predId, _G1594) ? 
+   Call: (15) counter(predId, _G1594) ? 
+   Exit: (15) counter(predId, 3) ? 
+^  Call: (15) retract(counter(predId, _G1587)) ? 
+^  Exit: (15) retract(counter(predId, 3)) ? 
+   Call: (15) _G1599 is 3+1 ? 
+   Exit: (15) 4 is 3+1 ? 
+^  Call: (15) assertz(counter(predId, 4)) ? 
+^  Exit: (15) assertz(counter(predId, 4)) ? 
+   Exit: (14) incrCounter(predId, 4) ? 
+   Call: (14) atomic_list_concat(['V', 1, '_', 4], '', _G1539) ? 
+   Exit: (14) atomic_list_concat(['V', 1, '_', 4], '', 'V1_4') ? 
+   Call: (14) emptyList([]) ? 
+   Call: (15) length([], 0) ? 
+   Exit: (15) length([], 0) ? 
+   Exit: (14) emptyList([]) ? 
+   Call: (14) _G1542=[d, 'V1_4'] ? 
+   Exit: (14) [d, 'V1_4']=[d, 'V1_4'] ? 
+   Exit: (13) convert_term_to_fluents(d, 1, 'V1_4', [d, 'V1_4']) ? 
+   Redo: (13) lists:member(_G1548, [b, c, d, e(f, g, h(i, j, k))]) ? 
+   Exit: (13) lists:member(e(f, g, h(i, j, k)), [b, c, d, e(f, g, h(i, j, k))]) ? 
+   Call: (13) see(e(f, g, h(i, j, k))) ? 
+^  Call: (14) write_term(e(f, g, h(i, j, k)), [quoted(true)]) ? 
+e(f,g,h(i,j,k))
+^  Exit: (14) write_term(e(f, g, h(i, j, k)), [quoted(true)]) ? 
+   Call: (14) nl ? 
+
+
+   Exit: (14) nl ?    Exit: (13) see(e(f, g, h(i, j, k))) ? 
+   Call: (13) convert_term_to_fluents(e(f, g, h(i, j, k)), 1, _G1539, _G1542) ? 
+   Call: (14) e(f, g, h(i, j, k))=..[_G1583|_G1584] ? 
+   Exit: (14) e(f, g, h(i, j, k))=..[e, f, g, h(i, j, k)] ? 
+   Call: (14) incrCounter(predId, _G1603) ? 
+   Call: (15) counter(predId, _G1603) ? 
+   Exit: (15) counter(predId, 4) ? 
+^  Call: (15) retract(counter(predId, _G1596)) ? 
+^  Exit: (15) retract(counter(predId, 4)) ? 
+   Call: (15) _G1608 is 4+1 ? 
+   Exit: (15) 5 is 4+1 ? 
+^  Call: (15) assertz(counter(predId, 5)) ? 
+^  Exit: (15) assertz(counter(predId, 5)) ? 
+   Exit: (14) incrCounter(predId, 5) ? 
+   Call: (14) atomic_list_concat(['V', 1, '_', 5], '', _G1539) ? 
+   Exit: (14) atomic_list_concat(['V', 1, '_', 5], '', 'V1_5') ? 
+   Call: (14) emptyList([f, g, h(i, j, k)]) ? 
+   Call: (15) length([f, g, h(i, j, k)], 0) ? 
+   Fail: (15) length([f, g, h(i, j, k)], 0) ? 
+   Fail: (14) emptyList([f, g, h(i, j, k)]) ? 
+   Redo: (13) convert_term_to_fluents(e(f, g, h(i, j, k)), 1, 'V1_5', _G1542) ? 
+   Call: (14) see([b, [f, g, h(i, j, k)]]) ? 
+^  Call: (15) write_term([b, [f, g, h(i, j, k)]], [quoted(true)]) ? 
+[b,[f,g,h(i,j,k)]]
+^  Exit: (15) write_term([b, [f, g, h(i, j, k)]], [quoted(true)]) ? 
+   Call: (15) nl ? 
+
+
+
+
+   Exit: (15) nl ?    Exit: (14) see([b, [f, g, h(i, j, k)]]) ? ^  Call: (14) findall([_G1627, _G1630], (member(_G1636, [f, g, h(i, j, k)]), see(_G1636), convert_term_to_fluents(_G1636, 1, _G1627, _G1630)), _G1658) ?    Call: (20) lists:member(_G1636, [f, g, h(i, j, k)]) ? 
+   Exit: (20) lists:member(f, [f, g, h(i, j, k)]) ? 
+
+   Call: (20) see(f) ? ^  Call: (21) write_term(f, [quoted(true)]) ? 
+f
+^  Exit: (21) write_term(f, [quoted(true)]) ? 
+   Call: (21) nl ? 
+
+
+   Exit: (21) nl ?    Exit: (20) see(f) ? 
+   Call: (20) convert_term_to_fluents(f, 1, _G1627, _G1630) ? 
+
+   Call: (21) f=..[_G1671|_G1672] ?    Exit: (21) f=..[f] ? 
+   Call: (21) incrCounter(predId, _G1682) ? 
+   Call: (22) counter(predId, _G1682) ? 
+   Exit: (22) counter(predId, 5) ? 
+^  Call: (22) retract(counter(predId, _G1675)) ? 
+
+^  Exit: (22) retract(counter(predId, 5)) ?    Call: (22) _G1687 is 5+1 ? 
+   Exit: (22) 6 is 5+1 ? 
+^  Call: (22) assertz(counter(predId, 6)) ? 
+
+^  Exit: (22) assertz(counter(predId, 6)) ?    Exit: (21) incrCounter(predId, 6) ? 
+   Call: (21) atomic_list_concat(['V', 1, '_', 6], '', _G1627) ? 
+   Exit: (21) atomic_list_concat(['V', 1, '_', 6], '', 'V1_6') ? 
+   Call: (21) emptyList([]) ? 
+   Call: (22) length([], 0) ? 
+   Exit: (22) length([], 0) ? 
+   Exit: (21) emptyList([]) ? 
+   Call: (21) _G1630=[f, 'V1_6'] ? 
+   Exit: (21) [f, 'V1_6']=[f, 'V1_6'] ? 
+   Exit: (20) convert_term_to_fluents(f, 1, 'V1_6', [f, 'V1_6']) ? 
+   Redo: (20) lists:member(_G1636, [f, g, h(i, j, k)]) ? 
+   Exit: (20) lists:member(g, [f, g, h(i, j, k)]) ? 
+   Call: (20) see(g) ? 
+^  Call: (21) write_term(g, [quoted(true)]) ? 
+g
+^  Exit: (21) write_term(g, [quoted(true)]) ? 
+   Call: (21) nl ? 
+
+   Exit: (21) nl ? 
+   Exit: (20) see(g) ? 
+   Call: (20) convert_term_to_fluents(g, 1, _G1627, _G1630) ? 
+   Call: (21) g=..[_G1671|_G1672] ? 
+   Exit: (21) g=..[g] ? 
+   Call: (21) incrCounter(predId, _G1682) ? 
+   Call: (22) counter(predId, _G1682) ? 
+   Exit: (22) counter(predId, 6) ? 
+^  Call: (22) retract(counter(predId, _G1675)) ? 
+^  Exit: (22) retract(counter(predId, 6)) ? 
+   Call: (22) _G1687 is 6+1 ? 
+   Exit: (22) 7 is 6+1 ? 
+^  Call: (22) assertz(counter(predId, 7)) ? 
+^  Exit: (22) assertz(counter(predId, 7)) ? 
+   Exit: (21) incrCounter(predId, 7) ? 
+   Call: (21) atomic_list_concat(['V', 1, '_', 7], '', _G1627) ? 
+   Exit: (21) atomic_list_concat(['V', 1, '_', 7], '', 'V1_7') ? 
+   Call: (21) emptyList([]) ? 
+   Call: (22) length([], 0) ? 
+   Exit: (22) length([], 0) ? 
+   Exit: (21) emptyList([]) ? 
+   Call: (21) _G1630=[g, 'V1_7'] ? 
+   Exit: (21) [g, 'V1_7']=[g, 'V1_7'] ? 
+   Exit: (20) convert_term_to_fluents(g, 1, 'V1_7', [g, 'V1_7']) ? 
+   Redo: (20) lists:member(_G1636, [f, g, h(i, j, k)]) ? 
+   Exit: (20) lists:member(h(i, j, k), [f, g, h(i, j, k)]) ? 
+   Call: (20) see(h(i, j, k)) ? 
+^  Call: (21) write_term(h(i, j, k), [quoted(true)]) ? 
+h(i,j,k)
+^  Exit: (21) write_term(h(i, j, k), [quoted(true)]) ? 
+   Call: (21) nl ? 
+
+   Exit: (21) nl ? 
+   Exit: (20) see(h(i, j, k)) ? 
+   Call: (20) convert_term_to_fluents(h(i, j, k), 1, _G1627, _G1630) ? 
+   Call: (21) h(i, j, k)=..[_G1671|_G1672] ? 
+   Exit: (21) h(i, j, k)=..[h, i, j, k] ? 
+   Call: (21) incrCounter(predId, _G1691) ? 
+   Call: (22) counter(predId, _G1691) ? 
+   Exit: (22) counter(predId, 7) ? 
+^  Call: (22) retract(counter(predId, _G1684)) ? 
+^  Exit: (22) retract(counter(predId, 7)) ? 
+   Call: (22) _G1696 is 7+1 ? 
+   Exit: (22) 8 is 7+1 ? 
+^  Call: (22) assertz(counter(predId, 8)) ? 
+^  Exit: (22) assertz(counter(predId, 8)) ? 
+   Exit: (21) incrCounter(predId, 8) ? 
+   Call: (21) atomic_list_concat(['V', 1, '_', 8], '', _G1627) ? 
+   Exit: (21) atomic_list_concat(['V', 1, '_', 8], '', 'V1_8') ? 
+   Call: (21) emptyList([i, j, k]) ? 
+   Call: (22) length([i, j, k], 0) ? 
+   Fail: (22) length([i, j, k], 0) ? 
+   Fail: (21) emptyList([i, j, k]) ? 
+   Redo: (20) convert_term_to_fluents(h(i, j, k), 1, 'V1_8', _G1630) ? 
+   Call: (21) see([b, [i, j, k]]) ? 
+^  Call: (22) write_term([b, [i, j, k]], [quoted(true)]) ? 
+
+[b,[i,j,k]]
+^  Exit: (22) write_term([b, [i, j, k]], [quoted(true)]) ?    Call: (22) nl ? 
+
+   Exit: (22) nl ? 
+   Exit: (21) see([b, [i, j, k]]) ? 
+^  Call: (21) findall([_G1715, _G1718], (member(_G1724, [i, j, k]), see(_G1724), convert_term_to_fluents(_G1724, 1, _G1715, _G1718)), _G1746) ? 
+   Call: (27) lists:member(_G1724, [i, j, k]) ? 
+   Exit: (27) lists:member(i, [i, j, k]) ? 
+   Call: (27) see(i) ? 
+^  Call: (28) write_term(i, [quoted(true)]) ? 
+i
+^  Exit: (28) write_term(i, [quoted(true)]) ? 
+   Call: (28) nl ? 
+
+   Exit: (28) nl ? 
+   Exit: (27) see(i) ? 
+   Call: (27) convert_term_to_fluents(i, 1, _G1715, _G1718) ? 
+   Call: (28) i=..[_G1759|_G1760] ? 
+   Exit: (28) i=..[i] ? 
+   Call: (28) incrCounter(predId, _G1770) ? 
+   Call: (29) counter(predId, _G1770) ? 
+   Exit: (29) counter(predId, 8) ? 
+^  Call: (29) retract(counter(predId, _G1763)) ? 
+^  Exit: (29) retract(counter(predId, 8)) ? 
+   Call: (29) _G1775 is 8+1 ? 
+   Exit: (29) 9 is 8+1 ? 
+^  Call: (29) assertz(counter(predId, 9)) ? 
+^  Exit: (29) assertz(counter(predId, 9)) ? 
+   Exit: (28) incrCounter(predId, 9) ? 
+   Call: (28) atomic_list_concat(['V', 1, '_', 9], '', _G1715) ? 
+   Exit: (28) atomic_list_concat(['V', 1, '_', 9], '', 'V1_9') ? 
+   Call: (28) emptyList([]) ? 
+   Call: (29) length([], 0) ? 
+   Exit: (29) length([], 0) ? 
+   Exit: (28) emptyList([]) ? 
+   Call: (28) _G1718=[i, 'V1_9'] ? 
+   Exit: (28) [i, 'V1_9']=[i, 'V1_9'] ? 
+   Exit: (27) convert_term_to_fluents(i, 1, 'V1_9', [i, 'V1_9']) ? 
+   Redo: (27) lists:member(_G1724, [i, j, k]) ? 
+   Exit: (27) lists:member(j, [i, j, k]) ? 
+   Call: (27) see(j) ? 
+^  Call: (28) write_term(j, [quoted(true)]) ? 
+
+j
+^  Exit: (28) write_term(j, [quoted(true)]) ?    Call: (28) nl ? 
+
+   Exit: (28) nl ? 
+   Exit: (27) see(j) ? 
+   Call: (27) convert_term_to_fluents(j, 1, _G1715, _G1718) ? 
+   Call: (28) j=..[_G1759|_G1760] ? 
+   Exit: (28) j=..[j] ? 
+   Call: (28) incrCounter(predId, _G1770) ? 
+   Call: (29) counter(predId, _G1770) ? 
+   Exit: (29) counter(predId, 9) ? 
+^  Call: (29) retract(counter(predId, _G1763)) ? 
+^  Exit: (29) retract(counter(predId, 9)) ? 
+   Call: (29) _G1775 is 9+1 ? 
+   Exit: (29) 10 is 9+1 ? 
+^  Call: (29) assertz(counter(predId, 10)) ? 
+^  Exit: (29) assertz(counter(predId, 10)) ? 
+   Exit: (28) incrCounter(predId, 10) ? 
+   Call: (28) atomic_list_concat(['V', 1, '_', 10], '', _G1715) ? 
+   Exit: (28) atomic_list_concat(['V', 1, '_', 10], '', 'V1_10') ? 
+   Call: (28) emptyList([]) ? 
+   Call: (29) length([], 0) ? 
+   Exit: (29) length([], 0) ? 
+
+   Exit: (28) emptyList([]) ?    Call: (28) _G1718=[j, 'V1_10'] ? 
+   Exit: (28) [j, 'V1_10']=[j, 'V1_10'] ? 
+   Exit: (27) convert_term_to_fluents(j, 1, 'V1_10', [j, 'V1_10']) ? 
+   Redo: (27) lists:member(_G1724, [i, j, k]) ? 
+   Exit: (27) lists:member(k, [i, j, k]) ? 
+   Call: (27) see(k) ? 
+^  Call: (28) write_term(k, [quoted(true)]) ? 
+k
+^  Exit: (28) write_term(k, [quoted(true)]) ? 
+
+   Call: (28) nl ? 
+   Exit: (28) nl ? 
+   Exit: (27) see(k) ? 
+   Call: (27) convert_term_to_fluents(k, 1, _G1715, _G1718) ? 
+   Call: (28) k=..[_G1759|_G1760] ? 
+   Exit: (28) k=..[k] ? 
+   Call: (28) incrCounter(predId, _G1770) ? 
+   Call: (29) counter(predId, _G1770) ? 
+   Exit: (29) counter(predId, 10) ? 
+^  Call: (29) retract(counter(predId, _G1763)) ? 
+^  Exit: (29) retract(counter(predId, 10)) ? 
+   Call: (29) _G1775 is 10+1 ? 
+
+   Exit: (29) 11 is 10+1 ? ^  Call: (29) assertz(counter(predId, 11)) ? 
+^  Exit: (29) assertz(counter(predId, 11)) ? 
+   Exit: (28) incrCounter(predId, 11) ? 
+   Call: (28) atomic_list_concat(['V', 1, '_', 11], '', _G1715) ? 
+   Exit: (28) atomic_list_concat(['V', 1, '_', 11], '', 'V1_11') ? 
+   Call: (28) emptyList([]) ? 
+   Call: (29) length([], 0) ? 
+   Exit: (29) length([], 0) ? 
+   Exit: (28) emptyList([]) ? 
+   Call: (28) _G1718=[k, 'V1_11'] ? 
+   Exit: (28) [k, 'V1_11']=[k, 'V1_11'] ? 
+   Exit: (27) convert_term_to_fluents(k, 1, 'V1_11', [k, 'V1_11']) ? 
+^  Exit: (21) findall([_G1715, _G1718], user: (member(_G1724, [i, j, k]), see(_G1724), convert_term_to_fluents(_G1724, 1, _G1715, _G1718)), [['V1_9', [i, 'V1_9']], ['V1_10', [j, 'V1_10']], ['V1_11', [k, 'V1_11']]]) ? 
+   Call: (21) see([results, [['V1_9', [i, 'V1_9']], ['V1_10', [j, 'V1_10']], ['V1_11', [k|...]]]]) ? 
+^  Call: (22) write_term([results, [['V1_9', [i, 'V1_9']], ['V1_10', [j, 'V1_10']], ['V1_11', [k|...]]]], [quoted(true)]) ? 
+[results,[['V1_9',[i,'V1_9']],['V1_10',[j,'V1_10']],['V1_11',[k,'V1_11']]]]
+^  Exit: (22) write_term([results, [['V1_9', [i, 'V1_9']], ['V1_10', [j, 'V1_10']], ['V1_11', [k|...]]]], [quoted(true)]) ? 
+   Call: (22) nl ? 
+
+   Exit: (22) nl ? 
+   Exit: (21) see([results, [['V1_9', [i, 'V1_9']], ['V1_10', [j, 'V1_10']], ['V1_11', [k|...]]]]) ? 
+   Call: (21) getNthOfListOfSameLengthLists([['V1_9', [i, 'V1_9']], ['V1_10', [j, 'V1_10']], ['V1_11', [k, 'V1_11']]], 0, _G1819) ? 
+^  Call: (22) findall(_G1818, (member(_G1813, [['V1_9', [i, 'V1_9']], ['V1_10', [j, 'V1_10']], ['V1_11', [k|...]]]), nth0(0, _G1813, _G1818)), _G1829) ? 
+   Call: (28) lists:member(_G1813, [['V1_9', [i, 'V1_9']], ['V1_10', [j, 'V1_10']], ['V1_11', [k, 'V1_11']]]) ? 
+
+   Exit: (28) lists:member(['V1_9', [i, 'V1_9']], [['V1_9', [i, 'V1_9']], ['V1_10', [j, 'V1_10']], ['V1_11', [k, 'V1_11']]]) ?    Call: (28) lists:nth0(0, ['V1_9', [i, 'V1_9']], _G1818) ? 
+   Exit: (28) lists:nth0(0, ['V1_9', [i, 'V1_9']], 'V1_9') ? 
+   Redo: (28) lists:member(_G1813, [['V1_9', [i, 'V1_9']], ['V1_10', [j, 'V1_10']], ['V1_11', [k, 'V1_11']]]) ? 
+   Exit: (28) lists:member(['V1_10', [j, 'V1_10']], [['V1_9', [i, 'V1_9']], ['V1_10', [j, 'V1_10']], ['V1_11', [k, 'V1_11']]]) ? 
+   Call: (28) lists:nth0(0, ['V1_10', [j, 'V1_10']], _G1818) ? 
+   Exit: (28) lists:nth0(0, ['V1_10', [j, 'V1_10']], 'V1_10') ? 
+   Redo: (28) lists:member(_G1813, [['V1_9', [i, 'V1_9']], ['V1_10', [j, 'V1_10']], ['V1_11', [k, 'V1_11']]]) ? 
+   Exit: (28) lists:member(['V1_11', [k, 'V1_11']], [['V1_9', [i, 'V1_9']], ['V1_10', [j, 'V1_10']], ['V1_11', [k, 'V1_11']]]) ? 
+   Call: (28) lists:nth0(0, ['V1_11', [k, 'V1_11']], _G1818) ? 
+   Exit: (28) lists:nth0(0, ['V1_11', [k, 'V1_11']], 'V1_11') ? 
+^  Exit: (22) findall(_G1818, user: (member(_G1813, [['V1_9', [i, 'V1_9']], ['V1_10', [j|...]], ['V1_11', [...|...]]]), nth0(0, _G1813, _G1818)), ['V1_9', 'V1_10', 'V1_11']) ? 
+   Exit: (21) getNthOfListOfSameLengthLists([['V1_9', [i, 'V1_9']], ['V1_10', [j, 'V1_10']], ['V1_11', [k, 'V1_11']]], 0, ['V1_9', 'V1_10', 'V1_11']) ? 
+   Call: (21) getNthOfListOfSameLengthLists([['V1_9', [i, 'V1_9']], ['V1_10', [j, 'V1_10']], ['V1_11', [k, 'V1_11']]], 1, _G1855) ? 
+^  Call: (22) findall(_G1854, (member(_G1849, [['V1_9', [i, 'V1_9']], ['V1_10', [j, 'V1_10']], ['V1_11', [k|...]]]), nth0(1, _G1849, _G1854)), _G1865) ? 
+   Call: (28) lists:member(_G1849, [['V1_9', [i, 'V1_9']], ['V1_10', [j, 'V1_10']], ['V1_11', [k, 'V1_11']]]) ? 
+   Exit: (28) lists:member(['V1_9', [i, 'V1_9']], [['V1_9', [i, 'V1_9']], ['V1_10', [j, 'V1_10']], ['V1_11', [k, 'V1_11']]]) ? 
+   Call: (28) lists:nth0(1, ['V1_9', [i, 'V1_9']], _G1854) ? 
+   Exit: (28) lists:nth0(1, ['V1_9', [i, 'V1_9']], [i, 'V1_9']) ? 
+   Redo: (28) lists:member(_G1849, [['V1_9', [i, 'V1_9']], ['V1_10', [j, 'V1_10']], ['V1_11', [k, 'V1_11']]]) ? 
+   Exit: (28) lists:member(['V1_10', [j, 'V1_10']], [['V1_9', [i, 'V1_9']], ['V1_10', [j, 'V1_10']], ['V1_11', [k, 'V1_11']]]) ? 
+   Call: (28) lists:nth0(1, ['V1_10', [j, 'V1_10']], _G1854) ? 
+   Exit: (28) lists:nth0(1, ['V1_10', [j, 'V1_10']], [j, 'V1_10']) ? 
+   Redo: (28) lists:member(_G1849, [['V1_9', [i, 'V1_9']], ['V1_10', [j, 'V1_10']], ['V1_11', [k, 'V1_11']]]) ? 
+
+   Exit: (28) lists:member(['V1_11', [k, 'V1_11']], [['V1_9', [i, 'V1_9']], ['V1_10', [j, 'V1_10']], ['V1_11', [k, 'V1_11']]]) ?    Call: (28) lists:nth0(1, ['V1_11', [k, 'V1_11']], _G1854) ? 
+   Exit: (28) lists:nth0(1, ['V1_11', [k, 'V1_11']], [k, 'V1_11']) ? 
+^  Exit: (22) findall(_G1854, user: (member(_G1849, [['V1_9', [i, 'V1_9']], ['V1_10', [j|...]], ['V1_11', [...|...]]]), nth0(1, _G1849, _G1854)), [[i, 'V1_9'], [j, 'V1_10'], [k, 'V1_11']]) ? 
+
+   Exit: (21) getNthOfListOfSameLengthLists([['V1_9', [i, 'V1_9']], ['V1_10', [j, 'V1_10']], ['V1_11', [k, 'V1_11']]], 1, [[i, 'V1_9'], [j, 'V1_10'], [k, 'V1_11']]) ?    Call: (21) lists:append([h, 'V1_8'], ['V1_9', 'V1_10', 'V1_11'], _G1915) ? 
+   Exit: (21) lists:append([h, 'V1_8'], ['V1_9', 'V1_10', 'V1_11'], [h, 'V1_8', 'V1_9', 'V1_10', 'V1_11']) ? 
+   Call: (21) lists:append([[h, 'V1_8', 'V1_9', 'V1_10', 'V1_11']], [[i, 'V1_9'], [j, 'V1_10'], [k, 'V1_11']], _G1630) ? 
+   Exit: (21) lists:append([[h, 'V1_8', 'V1_9', 'V1_10', 'V1_11']], [[i, 'V1_9'], [j, 'V1_10'], [k, 'V1_11']], [[h, 'V1_8', 'V1_9', 'V1_10', 'V1_11'], [i, 'V1_9'], [j, 'V1_10'], [k, 'V1_11']]) ? 
+   Call: (21) see([should, [[[h, 'V1_8', 'V1_9', 'V1_10'|...]], [[i, 'V1_9'], [j, 'V1_10'], [k|...]]]]) ? 
+^  Call: (22) write_term([should, [[[h, 'V1_8', 'V1_9', 'V1_10'|...]], [[i, 'V1_9'], [j, 'V1_10'], [k|...]]]], [quoted(true)]) ? 
+[should,[[[h,'V1_8','V1_9','V1_10','V1_11']],[[i,'V1_9'],[j,'V1_10'],[k,'V1_11']]]]
+^  Exit: (22) write_term([should, [[[h, 'V1_8', 'V1_9', 'V1_10'|...]], [[i, 'V1_9'], [j, 'V1_10'], [k|...]]]], [quoted(true)]) ? 
+   Call: (22) nl ? 
+
+   Exit: (22) nl ? 
+   Exit: (21) see([should, [[[h, 'V1_8', 'V1_9', 'V1_10'|...]], [[i, 'V1_9'], [j, 'V1_10'], [k|...]]]]) ? 
+   Call: (21) see([fluents, [[h, 'V1_8', 'V1_9', 'V1_10', 'V1_11'], [i, 'V1_9'], [j, 'V1_10'], [k, 'V1_11']]]) ? 
+^  Call: (22) write_term([fluents, [[h, 'V1_8', 'V1_9', 'V1_10', 'V1_11'], [i, 'V1_9'], [j, 'V1_10'], [k, 'V1_11']]], [quoted(true)]) ? 
+
+
+[fluents,[[h,'V1_8','V1_9','V1_10','V1_11'],[i,'V1_9'],[j,'V1_10'],[k,'V1_11']]]
+^  Exit: (22) write_term([fluents, [[h, 'V1_8', 'V1_9', 'V1_10', 'V1_11'], [i, 'V1_9'], [j, 'V1_10'], [k, 'V1_11']]], [quoted(true)]) ?    Call: (22) nl ? 
+   Exit: (22) nl ? 
+
+
+   Exit: (21) see([fluents, [[h, 'V1_8', 'V1_9', 'V1_10', 'V1_11'], [i, 'V1_9'], [j, 'V1_10'], [k, 'V1_11']]]) ?    Exit: (20) convert_term_to_fluents(h(i, j, k), 1, 'V1_8', [[h, 'V1_8', 'V1_9', 'V1_10', 'V1_11'], [i, 'V1_9'], [j, 'V1_10'], [k, 'V1_11']]) ? ^  Exit: (14) findall([_G1627, _G1630], user: (member(_G1636, [f, g, h(i, j, k)]), see(_G1636), convert_term_to_fluents(_G1636, 1, _G1627, _G1630)), [['V1_6', [f, 'V1_6']], ['V1_7', [g, 'V1_7']], ['V1_8', [[h, 'V1_8'|...], [i|...], [...|...]|...]]]) ? 
+   Call: (14) see([results, [['V1_6', [f, 'V1_6']], ['V1_7', [g, 'V1_7']], ['V1_8', [[...|...]|...]]]]) ? 
+^  Call: (15) write_term([results, [['V1_6', [f, 'V1_6']], ['V1_7', [g, 'V1_7']], ['V1_8', [[...|...]|...]]]], [quoted(true)]) ? 
+
+
+[results,[['V1_6',[f,'V1_6']],['V1_7',[g,'V1_7']],['V1_8',[[h,'V1_8','V1_9','V1_10','V1_11'],[i,'V1_9'],[j,'V1_10'],[k,'V1_11']]]]]
+^  Exit: (15) write_term([results, [['V1_6', [f, 'V1_6']], ['V1_7', [g, 'V1_7']], ['V1_8', [[...|...]|...]]]], [quoted(true)]) ?    Call: (15) nl ? 
+   Exit: (15) nl ? 
+   Exit: (14) see([results, [['V1_6', [f, 'V1_6']], ['V1_7', [g, 'V1_7']], ['V1_8', [[...|...]|...]]]]) ? 
+   Call: (14) getNthOfListOfSameLengthLists([['V1_6', [f, 'V1_6']], ['V1_7', [g, 'V1_7']], ['V1_8', [[h, 'V1_8'|...], [i|...], [...|...]|...]]], 0, _G1770) ? 
+
+^  Call: (15) findall(_G1769, (member(_G1764, [['V1_6', [f, 'V1_6']], ['V1_7', [g, 'V1_7']], ['V1_8', [[...|...]|...]]]), nth0(0, _G1764, _G1769)), _G1780) ?    Call: (21) lists:member(_G1764, [['V1_6', [f, 'V1_6']], ['V1_7', [g, 'V1_7']], ['V1_8', [[h|...], [...|...]|...]]]) ? 
+
+
+   Exit: (21) lists:member(['V1_6', [f, 'V1_6']], [['V1_6', [f, 'V1_6']], ['V1_7', [g, 'V1_7']], ['V1_8', [[h|...], [...|...]|...]]]) ?    Call: (21) lists:nth0(0, ['V1_6', [f, 'V1_6']], _G1769) ?    Exit: (21) lists:nth0(0, ['V1_6', [f, 'V1_6']], 'V1_6') ? 
+   Redo: (21) lists:member(_G1764, [['V1_6', [f, 'V1_6']], ['V1_7', [g, 'V1_7']], ['V1_8', [[h|...], [...|...]|...]]]) ? 
+   Exit: (21) lists:member(['V1_7', [g, 'V1_7']], [['V1_6', [f, 'V1_6']], ['V1_7', [g, 'V1_7']], ['V1_8', [[h|...], [...|...]|...]]]) ? 
+   Call: (21) lists:nth0(0, ['V1_7', [g, 'V1_7']], _G1769) ? 
+
+
+   Exit: (21) lists:nth0(0, ['V1_7', [g, 'V1_7']], 'V1_7') ?    Redo: (21) lists:member(_G1764, [['V1_6', [f, 'V1_6']], ['V1_7', [g, 'V1_7']], ['V1_8', [[h|...], [...|...]|...]]]) ?    Exit: (21) lists:member(['V1_8', [[h, 'V1_8', 'V1_9', 'V1_10'|...], [i, 'V1_9'], [j, 'V1_10'], [k|...]]], [['V1_6', [f, 'V1_6']], ['V1_7', [g, 'V1_7']], ['V1_8', [[h|...], [...|...]|...]]]) ? 
+   Call: (21) lists:nth0(0, ['V1_8', [[h, 'V1_8', 'V1_9', 'V1_10'|...], [i, 'V1_9'], [j, 'V1_10'], [k|...]]], _G1769) ? 
+
+   Exit: (21) lists:nth0(0, ['V1_8', [[h, 'V1_8', 'V1_9', 'V1_10'|...], [i, 'V1_9'], [j, 'V1_10'], [k|...]]], 'V1_8') ? ^  Exit: (15) findall(_G1769, user: (member(_G1764, [['V1_6', [f, 'V1_6']], ['V1_7', [g|...]], ['V1_8', [...|...]]]), nth0(0, _G1764, _G1769)), ['V1_6', 'V1_7', 'V1_8']) ? 
+
+   Exit: (14) getNthOfListOfSameLengthLists([['V1_6', [f, 'V1_6']], ['V1_7', [g, 'V1_7']], ['V1_8', [[h, 'V1_8'|...], [i|...], [...|...]|...]]], 0, ['V1_6', 'V1_7', 'V1_8']) ?    Call: (14) getNthOfListOfSameLengthLists([['V1_6', [f, 'V1_6']], ['V1_7', [g, 'V1_7']], ['V1_8', [[h, 'V1_8'|...], [i|...], [...|...]|...]]], 1, _G1806) ? 
+^  Call: (15) findall(_G1805, (member(_G1800, [['V1_6', [f, 'V1_6']], ['V1_7', [g, 'V1_7']], ['V1_8', [[...|...]|...]]]), nth0(1, _G1800, _G1805)), _G1816) ? 
+   Call: (21) lists:member(_G1800, [['V1_6', [f, 'V1_6']], ['V1_7', [g, 'V1_7']], ['V1_8', [[h|...], [...|...]|...]]]) ? 
+
+   Exit: (21) lists:member(['V1_6', [f, 'V1_6']], [['V1_6', [f, 'V1_6']], ['V1_7', [g, 'V1_7']], ['V1_8', [[h|...], [...|...]|...]]]) ?    Call: (21) lists:nth0(1, ['V1_6', [f, 'V1_6']], _G1805) ? 
+   Exit: (21) lists:nth0(1, ['V1_6', [f, 'V1_6']], [f, 'V1_6']) ? 
+
+   Redo: (21) lists:member(_G1800, [['V1_6', [f, 'V1_6']], ['V1_7', [g, 'V1_7']], ['V1_8', [[h|...], [...|...]|...]]]) ?    Exit: (21) lists:member(['V1_7', [g, 'V1_7']], [['V1_6', [f, 'V1_6']], ['V1_7', [g, 'V1_7']], ['V1_8', [[h|...], [...|...]|...]]]) ? 
+   Call: (21) lists:nth0(1, ['V1_7', [g, 'V1_7']], _G1805) ? 
+
+
+   Exit: (21) lists:nth0(1, ['V1_7', [g, 'V1_7']], [g, 'V1_7']) ?    Redo: (21) lists:member(_G1800, [['V1_6', [f, 'V1_6']], ['V1_7', [g, 'V1_7']], ['V1_8', [[h|...], [...|...]|...]]]) ?    Exit: (21) lists:member(['V1_8', [[h, 'V1_8', 'V1_9', 'V1_10'|...], [i, 'V1_9'], [j, 'V1_10'], [k|...]]], [['V1_6', [f, 'V1_6']], ['V1_7', [g, 'V1_7']], ['V1_8', [[h|...], [...|...]|...]]]) ? 
+
+
+   Call: (21) lists:nth0(1, ['V1_8', [[h, 'V1_8', 'V1_9', 'V1_10'|...], [i, 'V1_9'], [j, 'V1_10'], [k|...]]], _G1805) ?    Exit: (21) lists:nth0(1, ['V1_8', [[h, 'V1_8', 'V1_9', 'V1_10'|...], [i, 'V1_9'], [j, 'V1_10'], [k|...]]], [[h, 'V1_8', 'V1_9', 'V1_10', 'V1_11'], [i, 'V1_9'], [j, 'V1_10'], [k, 'V1_11']]) ? ^  Exit: (15) findall(_G1805, user: (member(_G1800, [['V1_6', [f, 'V1_6']], ['V1_7', [g|...]], ['V1_8', [...|...]]]), nth0(1, _G1800, _G1805)), [[f, 'V1_6'], [g, 'V1_7'], [[h, 'V1_8', 'V1_9', 'V1_10'|...], [i, 'V1_9'], [j, 'V1_10'], [k|...]]]) ? 
+
+   Exit: (14) getNthOfListOfSameLengthLists([['V1_6', [f, 'V1_6']], ['V1_7', [g, 'V1_7']], ['V1_8', [[h, 'V1_8'|...], [i|...], [...|...]|...]]], 1, [[f, 'V1_6'], [g, 'V1_7'], [[h, 'V1_8', 'V1_9', 'V1_10'|...], [i, 'V1_9'], [j, 'V1_10'], [k|...]]]) ?    Call: (14) lists:append([e, 'V1_5'], ['V1_6', 'V1_7', 'V1_8'], _G1905) ? 
+   Exit: (14) lists:append([e, 'V1_5'], ['V1_6', 'V1_7', 'V1_8'], [e, 'V1_5', 'V1_6', 'V1_7', 'V1_8']) ? 
+
+   Call: (14) lists:append([[e, 'V1_5', 'V1_6', 'V1_7', 'V1_8']], [[f, 'V1_6'], [g, 'V1_7'], [[h, 'V1_8', 'V1_9'|...], [i, 'V1_9'], [j|...], [...|...]]], _G1542) ?    Exit: (14) lists:append([[e, 'V1_5', 'V1_6', 'V1_7', 'V1_8']], [[f, 'V1_6'], [g, 'V1_7'], [[h, 'V1_8', 'V1_9'|...], [i, 'V1_9'], [j|...], [...|...]]], [[e, 'V1_5', 'V1_6', 'V1_7', 'V1_8'], [f, 'V1_6'], [g, 'V1_7'], [[h, 'V1_8'|...], [i|...], [...|...]|...]]) ? 
+   Call: (14) see([should, [[[e, 'V1_5', 'V1_6', 'V1_7'|...]], [[f, 'V1_6'], [g, 'V1_7'], [[...|...]|...]]]]) ? 
+^  Call: (15) write_term([should, [[[e, 'V1_5', 'V1_6', 'V1_7'|...]], [[f, 'V1_6'], [g, 'V1_7'], [[...|...]|...]]]], [quoted(true)]) ? 
+[should,[[[e,'V1_5','V1_6','V1_7','V1_8']],[[f,'V1_6'],[g,'V1_7'],[[h,'V1_8','V1_9','V1_10','V1_11'],[i,'V1_9'],[j,'V1_10'],[k,'V1_11']]]]]
+^  Exit: (15) write_term([should, [[[e, 'V1_5', 'V1_6', 'V1_7'|...]], [[f, 'V1_6'], [g, 'V1_7'], [[...|...]|...]]]], [quoted(true)]) ? 
+   Call: (15) nl ? 
+
+   Exit: (15) nl ? 
+   Exit: (14) see([should, [[[e, 'V1_5', 'V1_6', 'V1_7'|...]], [[f, 'V1_6'], [g, 'V1_7'], [[...|...]|...]]]]) ? 
+
+   Call: (14) see([fluents, [[e, 'V1_5', 'V1_6', 'V1_7', 'V1_8'], [f, 'V1_6'], [g, 'V1_7'], [[h|...], [...|...]|...]]]) ? ^  Call: (15) write_term([fluents, [[e, 'V1_5', 'V1_6', 'V1_7', 'V1_8'], [f, 'V1_6'], [g, 'V1_7'], [[h|...], [...|...]|...]]], [quoted(true)]) ? 
+[fluents,[[e,'V1_5','V1_6','V1_7','V1_8'],[f,'V1_6'],[g,'V1_7'],[[h,'V1_8','V1_9','V1_10','V1_11'],[i,'V1_9'],[j,'V1_10'],[k,'V1_11']]]]
+^  Exit: (15) write_term([fluents, [[e, 'V1_5', 'V1_6', 'V1_7', 'V1_8'], [f, 'V1_6'], [g, 'V1_7'], [[h|...], [...|...]|...]]], [quoted(true)]) ? 
+
+   Call: (15) nl ? 
+   Exit: (15) nl ? 
+   Exit: (14) see([fluents, [[e, 'V1_5', 'V1_6', 'V1_7', 'V1_8'], [f, 'V1_6'], [g, 'V1_7'], [[h|...], [...|...]|...]]]) ? 
+   Exit: (13) convert_term_to_fluents(e(f, g, h(i, j, k)), 1, 'V1_5', [[e, 'V1_5', 'V1_6', 'V1_7', 'V1_8'], [f, 'V1_6'], [g, 'V1_7'], [[h, 'V1_8', 'V1_9'|...], [i, 'V1_9'], [j|...], [...|...]]]) ? 
+^  Exit: (7) findall([_G1539, _G1542], user: (member(_G1548, [b, c, d, e(f, g, h(..., ..., ...))]), see(_G1548), convert_term_to_fluents(_G1548, 1, _G1539, _G1542)), [['V1_2', [b, 'V1_2']], ['V1_3', [c, 'V1_3']], ['V1_4', [d, 'V1_4']], ['V1_5', [[e|...], [...|...]|...]]]) ? 
+   Call: (7) see([results, [['V1_2', [b, 'V1_2']], ['V1_3', [c, 'V1_3']], ['V1_4', [d|...]], ['V1_5', [...|...]]]]) ? 
+
+^  Call: (8) write_term([results, [['V1_2', [b, 'V1_2']], ['V1_3', [c, 'V1_3']], ['V1_4', [d|...]], ['V1_5', [...|...]]]], [quoted(true)]) ? [results,[['V1_2',[b,'V1_2']],['V1_3',[c,'V1_3']],['V1_4',[d,'V1_4']],['V1_5',[[e,'V1_5','V1_6','V1_7','V1_8'],[f,'V1_6'],[g,'V1_7'],[[h,'V1_8','V1_9','V1_10','V1_11'],[i,'V1_9'],[j,'V1_10'],[k,'V1_11']]]]]]
+^  Exit: (8) write_term([results, [['V1_2', [b, 'V1_2']], ['V1_3', [c, 'V1_3']], ['V1_4', [d|...]], ['V1_5', [...|...]]]], [quoted(true)]) ? 
+
+   Call: (8) nl ? 
+   Exit: (8) nl ? 
+   Exit: (7) see([results, [['V1_2', [b, 'V1_2']], ['V1_3', [c, 'V1_3']], ['V1_4', [d|...]], ['V1_5', [...|...]]]]) ? 
+
+
+
+   Call: (7) getNthOfListOfSameLengthLists([['V1_2', [b, 'V1_2']], ['V1_3', [c, 'V1_3']], ['V1_4', [d, 'V1_4']], ['V1_5', [[e|...], [...|...]|...]]], 0, _G1736) ? ^  Call: (8) findall(_G1735, (member(_G1730, [['V1_2', [b, 'V1_2']], ['V1_3', [c, 'V1_3']], ['V1_4', [d|...]], ['V1_5', [...|...]]]), nth0(0, _G1730, _G1735)), _G1746) ?    Call: (14) lists:member(_G1730, [['V1_2', [b, 'V1_2']], ['V1_3', [c, 'V1_3']], ['V1_4', [d, 'V1_4']], ['V1_5', [[...|...]|...]]]) ?    Exit: (14) lists:member(['V1_2', [b, 'V1_2']], [['V1_2', [b, 'V1_2']], ['V1_3', [c, 'V1_3']], ['V1_4', [d, 'V1_4']], ['V1_5', [[...|...]|...]]]) ? 
+   Call: (14) lists:nth0(0, ['V1_2', [b, 'V1_2']], _G1735) ? 
+
+
+   Exit: (14) lists:nth0(0, ['V1_2', [b, 'V1_2']], 'V1_2') ?    Redo: (14) lists:member(_G1730, [['V1_2', [b, 'V1_2']], ['V1_3', [c, 'V1_3']], ['V1_4', [d, 'V1_4']], ['V1_5', [[...|...]|...]]]) ?    Exit: (14) lists:member(['V1_3', [c, 'V1_3']], [['V1_2', [b, 'V1_2']], ['V1_3', [c, 'V1_3']], ['V1_4', [d, 'V1_4']], ['V1_5', [[...|...]|...]]]) ? 
+
+   Call: (14) lists:nth0(0, ['V1_3', [c, 'V1_3']], _G1735) ?    Exit: (14) lists:nth0(0, ['V1_3', [c, 'V1_3']], 'V1_3') ? 
+   Redo: (14) lists:member(_G1730, [['V1_2', [b, 'V1_2']], ['V1_3', [c, 'V1_3']], ['V1_4', [d, 'V1_4']], ['V1_5', [[...|...]|...]]]) ? 
+
+
+   Exit: (14) lists:member(['V1_4', [d, 'V1_4']], [['V1_2', [b, 'V1_2']], ['V1_3', [c, 'V1_3']], ['V1_4', [d, 'V1_4']], ['V1_5', [[...|...]|...]]]) ?    Call: (14) lists:nth0(0, ['V1_4', [d, 'V1_4']], _G1735) ?    Exit: (14) lists:nth0(0, ['V1_4', [d, 'V1_4']], 'V1_4') ? 
+
+   Redo: (14) lists:member(_G1730, [['V1_2', [b, 'V1_2']], ['V1_3', [c, 'V1_3']], ['V1_4', [d, 'V1_4']], ['V1_5', [[...|...]|...]]]) ?    Exit: (14) lists:member(['V1_5', [[e, 'V1_5', 'V1_6', 'V1_7'|...], [f, 'V1_6'], [g, 'V1_7'], [[...|...]|...]]], [['V1_2', [b, 'V1_2']], ['V1_3', [c, 'V1_3']], ['V1_4', [d, 'V1_4']], ['V1_5', [[...|...]|...]]]) ? 
+
+   Call: (14) lists:nth0(0, ['V1_5', [[e, 'V1_5', 'V1_6', 'V1_7'|...], [f, 'V1_6'], [g, 'V1_7'], [[...|...]|...]]], _G1735) ?    Exit: (14) lists:nth0(0, ['V1_5', [[e, 'V1_5', 'V1_6', 'V1_7'|...], [f, 'V1_6'], [g, 'V1_7'], [[...|...]|...]]], 'V1_5') ? 
+^  Exit: (8) findall(_G1735, user: (member(_G1730, [['V1_2', [b, 'V1_2']], ['V1_3', [c|...]], ['V1_4', [...|...]], ['V1_5'|...]]), nth0(0, _G1730, _G1735)), ['V1_2', 'V1_3', 'V1_4', 'V1_5']) ? 
+   Exit: (7) getNthOfListOfSameLengthLists([['V1_2', [b, 'V1_2']], ['V1_3', [c, 'V1_3']], ['V1_4', [d, 'V1_4']], ['V1_5', [[e|...], [...|...]|...]]], 0, ['V1_2', 'V1_3', 'V1_4', 'V1_5']) ? 
+   Call: (7) getNthOfListOfSameLengthLists([['V1_2', [b, 'V1_2']], ['V1_3', [c, 'V1_3']], ['V1_4', [d, 'V1_4']], ['V1_5', [[e|...], [...|...]|...]]], 1, _G1775) ? 
+^  Call: (8) findall(_G1774, (member(_G1769, [['V1_2', [b, 'V1_2']], ['V1_3', [c, 'V1_3']], ['V1_4', [d|...]], ['V1_5', [...|...]]]), nth0(1, _G1769, _G1774)), _G1785) ? 
+   Call: (14) lists:member(_G1769, [['V1_2', [b, 'V1_2']], ['V1_3', [c, 'V1_3']], ['V1_4', [d, 'V1_4']], ['V1_5', [[...|...]|...]]]) ? 
+   Exit: (14) lists:member(['V1_2', [b, 'V1_2']], [['V1_2', [b, 'V1_2']], ['V1_3', [c, 'V1_3']], ['V1_4', [d, 'V1_4']], ['V1_5', [[...|...]|...]]]) ? 
+   Call: (14) lists:nth0(1, ['V1_2', [b, 'V1_2']], _G1774) ? 
+   Exit: (14) lists:nth0(1, ['V1_2', [b, 'V1_2']], [b, 'V1_2']) ? 
+   Redo: (14) lists:member(_G1769, [['V1_2', [b, 'V1_2']], ['V1_3', [c, 'V1_3']], ['V1_4', [d, 'V1_4']], ['V1_5', [[...|...]|...]]]) ? 
+
+
+
+   Exit: (14) lists:member(['V1_3', [c, 'V1_3']], [['V1_2', [b, 'V1_2']], ['V1_3', [c, 'V1_3']], ['V1_4', [d, 'V1_4']], ['V1_5', [[...|...]|...]]]) ?    Call: (14) lists:nth0(1, ['V1_3', [c, 'V1_3']], _G1774) ?    Exit: (14) lists:nth0(1, ['V1_3', [c, 'V1_3']], [c, 'V1_3']) ?    Redo: (14) lists:member(_G1769, [['V1_2', [b, 'V1_2']], ['V1_3', [c, 'V1_3']], ['V1_4', [d, 'V1_4']], ['V1_5', [[...|...]|...]]]) ? 
+   Exit: (14) lists:member(['V1_4', [d, 'V1_4']], [['V1_2', [b, 'V1_2']], ['V1_3', [c, 'V1_3']], ['V1_4', [d, 'V1_4']], ['V1_5', [[...|...]|...]]]) ? 
+   Call: (14) lists:nth0(1, ['V1_4', [d, 'V1_4']], _G1774) ? 
+   Exit: (14) lists:nth0(1, ['V1_4', [d, 'V1_4']], [d, 'V1_4']) ? 
+   Redo: (14) lists:member(_G1769, [['V1_2', [b, 'V1_2']], ['V1_3', [c, 'V1_3']], ['V1_4', [d, 'V1_4']], ['V1_5', [[...|...]|...]]]) ? 
+
+
+
+
+   Exit: (14) lists:member(['V1_5', [[e, 'V1_5', 'V1_6', 'V1_7'|...], [f, 'V1_6'], [g, 'V1_7'], [[...|...]|...]]], [['V1_2', [b, 'V1_2']], ['V1_3', [c, 'V1_3']], ['V1_4', [d, 'V1_4']], ['V1_5', [[...|...]|...]]]) ?    Call: (14) lists:nth0(1, ['V1_5', [[e, 'V1_5', 'V1_6', 'V1_7'|...], [f, 'V1_6'], [g, 'V1_7'], [[...|...]|...]]], _G1774) ?    Exit: (14) lists:nth0(1, ['V1_5', [[e, 'V1_5', 'V1_6', 'V1_7'|...], [f, 'V1_6'], [g, 'V1_7'], [[...|...]|...]]], [[e, 'V1_5', 'V1_6', 'V1_7', 'V1_8'], [f, 'V1_6'], [g, 'V1_7'], [[h, 'V1_8'|...], [i|...], [...|...]|...]]) ? ^  Exit: (8) findall(_G1774, user: (member(_G1769, [['V1_2', [b, 'V1_2']], ['V1_3', [c|...]], ['V1_4', [...|...]], ['V1_5'|...]]), nth0(1, _G1769, _G1774)), [[b, 'V1_2'], [c, 'V1_3'], [d, 'V1_4'], [[e, 'V1_5', 'V1_6'|...], [f, 'V1_6'], [g|...], [...|...]]]) ?    Exit: (7) getNthOfListOfSameLengthLists([['V1_2', [b, 'V1_2']], ['V1_3', [c, 'V1_3']], ['V1_4', [d, 'V1_4']], ['V1_5', [[e|...], [...|...]|...]]], 1, [[b, 'V1_2'], [c, 'V1_3'], [d, 'V1_4'], [[e, 'V1_5', 'V1_6'|...], [f, 'V1_6'], [g|...], [...|...]]]) ? 
+   Call: (7) lists:append([a, 'V1_1'], ['V1_2', 'V1_3', 'V1_4', 'V1_5'], _G1922) ? 
+
+   Exit: (7) lists:append([a, 'V1_1'], ['V1_2', 'V1_3', 'V1_4', 'V1_5'], [a, 'V1_1', 'V1_2', 'V1_3', 'V1_4', 'V1_5']) ?    Call: (7) lists:append([[a, 'V1_1', 'V1_2', 'V1_3', 'V1_4', 'V1_5']], [[b, 'V1_2'], [c, 'V1_3'], [d, 'V1_4'], [[e, 'V1_5'|...], [f|...], [...|...]|...]], _G1476) ? 
+   Exit: (7) lists:append([[a, 'V1_1', 'V1_2', 'V1_3', 'V1_4', 'V1_5']], [[b, 'V1_2'], [c, 'V1_3'], [d, 'V1_4'], [[e, 'V1_5'|...], [f|...], [...|...]|...]], [[a, 'V1_1', 'V1_2', 'V1_3', 'V1_4', 'V1_5'], [b, 'V1_2'], [c, 'V1_3'], [d, 'V1_4'], [[e|...], [...|...]|...]]) ? 
+   Call: (7) see([should, [[[a, 'V1_1', 'V1_2', 'V1_3'|...]], [[b, 'V1_2'], [c, 'V1_3'], [d|...], [...|...]]]]) ? 
+^  Call: (8) write_term([should, [[[a, 'V1_1', 'V1_2', 'V1_3'|...]], [[b, 'V1_2'], [c, 'V1_3'], [d|...], [...|...]]]], [quoted(true)]) ? 
+[should,[[[a,'V1_1','V1_2','V1_3','V1_4','V1_5']],[[b,'V1_2'],[c,'V1_3'],[d,'V1_4'],[[e,'V1_5','V1_6','V1_7','V1_8'],[f,'V1_6'],[g,'V1_7'],[[h,'V1_8','V1_9','V1_10','V1_11'],[i,'V1_9'],[j,'V1_10'],[k,'V1_11']]]]]]
+^  Exit: (8) write_term([should, [[[a, 'V1_1', 'V1_2', 'V1_3'|...]], [[b, 'V1_2'], [c, 'V1_3'], [d|...], [...|...]]]], [quoted(true)]) ? 
+
+   Call: (8) nl ? 
+   Exit: (8) nl ? 
+   Exit: (7) see([should, [[[a, 'V1_1', 'V1_2', 'V1_3'|...]], [[b, 'V1_2'], [c, 'V1_3'], [d|...], [...|...]]]]) ? 
+   Call: (7) see([fluents, [[a, 'V1_1', 'V1_2', 'V1_3', 'V1_4'|...], [b, 'V1_2'], [c, 'V1_3'], [d, 'V1_4'], [[...|...]|...]]]) ? 
+^  Call: (8) write_term([fluents, [[a, 'V1_1', 'V1_2', 'V1_3', 'V1_4'|...], [b, 'V1_2'], [c, 'V1_3'], [d, 'V1_4'], [[...|...]|...]]], [quoted(true)]) ? 
+[fluents,[[a,'V1_1','V1_2','V1_3','V1_4','V1_5'],[b,'V1_2'],[c,'V1_3'],[d,'V1_4'],[[e,'V1_5','V1_6','V1_7','V1_8'],[f,'V1_6'],[g,'V1_7'],[[h,'V1_8','V1_9','V1_10','V1_11'],[i,'V1_9'],[j,'V1_10'],[k,'V1_11']]]]]
+^  Exit: (8) write_term([fluents, [[a, 'V1_1', 'V1_2', 'V1_3', 'V1_4'|...], [b, 'V1_2'], [c, 'V1_3'], [d, 'V1_4'], [[...|...]|...]]], [quoted(true)]) ? 
+
+
+
+   Call: (8) nl ? 
+   Exit: (8) nl ?    Exit: (7) see([fluents, [[a, 'V1_1', 'V1_2', 'V1_3', 'V1_4'|...], [b, 'V1_2'], [c, 'V1_3'], [d, 'V1_4'], [[...|...]|...]]]) ?    Exit: (6) convert_term_to_fluents(a(b, c, d, e(f, g, h(i, j, k))), 1, 'V1_1', [[a, 'V1_1', 'V1_2', 'V1_3', 'V1_4', 'V1_5'], [b, 'V1_2'], [c, 'V1_3'], [d, 'V1_4'], [[e, 'V1_5'|...], [f|...], [...|...]|...]]) ? 
+   Call: (6) sec_write_list([[a, 'V1_1', 'V1_2', 'V1_3', 'V1_4', 'V1_5'], [b, 'V1_2'], [c, 'V1_3'], [d, 'V1_4'], [[e, 'V1_5'|...], [f|...], [...|...]|...]]) ? 
+   Call: (7) lists:member(_G1963, [[a, 'V1_1', 'V1_2', 'V1_3', 'V1_4', 'V1_5'], [b, 'V1_2'], [c, 'V1_3'], [d, 'V1_4'], [[e|...], [...|...]|...]]) ? 
+
+
+
+   Exit: (7) lists:member([a, 'V1_1', 'V1_2', 'V1_3', 'V1_4', 'V1_5'], [[a, 'V1_1', 'V1_2', 'V1_3', 'V1_4', 'V1_5'], [b, 'V1_2'], [c, 'V1_3'], [d, 'V1_4'], [[e|...], [...|...]|...]]) ?    Call: (7) tab(4) ?     
+   Exit: (7) tab(4) ? ^  Call: (7) write_term([a, 'V1_1', 'V1_2', 'V1_3', 'V1_4', 'V1_5'], [quoted(true)]) ? 
+[a,'V1_1','V1_2','V1_3','V1_4','V1_5']
+^  Exit: (7) write_term([a, 'V1_1', 'V1_2', 'V1_3', 'V1_4', 'V1_5'], [quoted(true)]) ? 
+   Call: (7) write('.') ? 
+
+
+.
+   Exit: (7) write('.') ?    Call: (7) nl ? 
+   Exit: (7) nl ? 
+   Call: (7) fail ? 
+
+
+   Fail: (7) fail ?    Redo: (7) lists:member(_G1963, [[a, 'V1_1', 'V1_2', 'V1_3', 'V1_4', 'V1_5'], [b, 'V1_2'], [c, 'V1_3'], [d, 'V1_4'], [[e|...], [...|...]|...]]) ?    Exit: (7) lists:member([b, 'V1_2'], [[a, 'V1_1', 'V1_2', 'V1_3', 'V1_4', 'V1_5'], [b, 'V1_2'], [c, 'V1_3'], [d, 'V1_4'], [[e|...], [...|...]|...]]) ? 
+
+   Call: (7) tab(4) ?     
+   Exit: (7) tab(4) ? 
+^  Call: (7) write_term([b, 'V1_2'], [quoted(true)]) ? 
+[b,'V1_2']
+^  Exit: (7) write_term([b, 'V1_2'], [quoted(true)]) ? 
+   Call: (7) write('.') ? 
+
+.
+   Exit: (7) write('.') ?    Call: (7) nl ? 
+
+   Exit: (7) nl ? 
+   Call: (7) fail ? 
+   Fail: (7) fail ? 
+   Redo: (7) lists:member(_G1963, [[a, 'V1_1', 'V1_2', 'V1_3', 'V1_4', 'V1_5'], [b, 'V1_2'], [c, 'V1_3'], [d, 'V1_4'], [[e|...], [...|...]|...]]) ? 
+   Exit: (7) lists:member([c, 'V1_3'], [[a, 'V1_1', 'V1_2', 'V1_3', 'V1_4', 'V1_5'], [b, 'V1_2'], [c, 'V1_3'], [d, 'V1_4'], [[e|...], [...|...]|...]]) ? 
+
+   Call: (7) tab(4) ?     
+   Exit: (7) tab(4) ? 
+^  Call: (7) write_term([c, 'V1_3'], [quoted(true)]) ? 
+
+[c,'V1_3']
+^  Exit: (7) write_term([c, 'V1_3'], [quoted(true)]) ?    Call: (7) write('.') ? 
+.
+   Exit: (7) write('.') ? 
+   Call: (7) nl ? 
+
+   Exit: (7) nl ? 
+   Call: (7) fail ? 
+   Fail: (7) fail ? 
+   Redo: (7) lists:member(_G1963, [[a, 'V1_1', 'V1_2', 'V1_3', 'V1_4', 'V1_5'], [b, 'V1_2'], [c, 'V1_3'], [d, 'V1_4'], [[e|...], [...|...]|...]]) ? 
+
+   Exit: (7) lists:member([d, 'V1_4'], [[a, 'V1_1', 'V1_2', 'V1_3', 'V1_4', 'V1_5'], [b, 'V1_2'], [c, 'V1_3'], [d, 'V1_4'], [[e|...], [...|...]|...]]) ?    Call: (7) tab(4) ? 
+
+
+    
+   Exit: (7) tab(4) ? ^  Call: (7) write_term([d, 'V1_4'], [quoted(true)]) ? [d,'V1_4']
+^  Exit: (7) write_term([d, 'V1_4'], [quoted(true)]) ? 
+   Call: (7) write('.') ? 
+.
+   Exit: (7) write('.') ? 
+   Call: (7) nl ? 
+
+   Exit: (7) nl ? 
+   Call: (7) fail ? 
+
+
+
+   Fail: (7) fail ?    Redo: (7) lists:member(_G1963, [[a, 'V1_1', 'V1_2', 'V1_3', 'V1_4', 'V1_5'], [b, 'V1_2'], [c, 'V1_3'], [d, 'V1_4'], [[e|...], [...|...]|...]]) ?    Exit: (7) lists:member([[e, 'V1_5', 'V1_6', 'V1_7', 'V1_8'], [f, 'V1_6'], [g, 'V1_7'], [[h, 'V1_8'|...], [i|...], [...|...]|...]], [[a, 'V1_1', 'V1_2', 'V1_3', 'V1_4', 'V1_5'], [b, 'V1_2'], [c, 'V1_3'], [d, 'V1_4'], [[e|...], [...|...]|...]]) ?    Call: (7) tab(4) ? 
+    
+   Exit: (7) tab(4) ? 
+^  Call: (7) write_term([[e, 'V1_5', 'V1_6', 'V1_7', 'V1_8'], [f, 'V1_6'], [g, 'V1_7'], [[h, 'V1_8', 'V1_9'|...], [i, 'V1_9'], [j|...], [...|...]]], [quoted(true)]) ? 
+[[e,'V1_5','V1_6','V1_7','V1_8'],[f,'V1_6'],[g,'V1_7'],[[h,'V1_8','V1_9','V1_10','V1_11'],[i,'V1_9'],[j,'V1_10'],[k,'V1_11']]]
+^  Exit: (7) write_term([[e, 'V1_5', 'V1_6', 'V1_7', 'V1_8'], [f, 'V1_6'], [g, 'V1_7'], [[h, 'V1_8', 'V1_9'|...], [i, 'V1_9'], [j|...], [...|...]]], [quoted(true)]) ? 
+   Call: (7) write('.') ? 
+.
+   Exit: (7) write('.') ? 
+   Call: (7) nl ? 
+
+   Exit: (7) nl ? 
+   Call: (7) fail ? 
+   Fail: (7) fail ? 
+   Redo: (6) sec_write_list([[a, 'V1_1', 'V1_2', 'V1_3', 'V1_4', 'V1_5'], [b, 'V1_2'], [c, 'V1_3'], [d, 'V1_4'], [[e, 'V1_5'|...], [f|...], [...|...]|...]]) ? 
+   Exit: (6) sec_write_list([[a, 'V1_1', 'V1_2', 'V1_3', 'V1_4', 'V1_5'], [b, 'V1_2'], [c, 'V1_3'], [d, 'V1_4'], [[e, 'V1_5'|...], [f|...], [...|...]|...]]) ? 
+   Call: (6) halt ? 

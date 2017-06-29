@@ -1,0 +1,288 @@
+========================================================================
+                           LPG - version 1.2
+                      Essential User Instructions 
+========================================================================
+
+   This code is provided for research and experimental purposes only
+
+           Alfonso Gerevini, Alessandro Saetti and Ivan Serina              
+                         University of Brescia 
+                 Via Branze 38, I-25123, Brescia, Italy
+                  {gerevini,saetti,serina}@ing.unibs.it 
+                     http://prometeo.ing.unibs.it/lpg
+         
+				June 2003                 
+                                                           
+              
+LPG (Local Search for Planing Graphs) is a fully automated planner for 
+planning problems specified using PDDL2.1.
+"lpg1.2-linux.tar.gz" is a complied version for Linux (Mandrake 8.0)
+"lpg1.2-sunos.tar.gz" is a compiled version for Unix (SunOS 5.7)
+"lpg1.2-source.tar.gz" is the source code of version 1.2.
+
+
+1. Installation of Compile Code
+
+Installing the planner is very easy:
+
+- Copy lpg1.2-linux.tar.gz (or lpg1.2-unix.tar.gz) into the directory 
+  where you want to have the planner.
+ 
+- From this directory run
+      gunzip lpg1.2-linux.tar.gz (or lpg1.2-unix.tar.gz) 
+      tar xvf lpg1.2-linux.tar (or lpg1.2-unix.tar) 
+
+  A directory called LPG1.2 will be generated including these files:
+      lpg       -- the executable code of the planner
+      README-LPG1.2    -- this file 
+      Satellite -- a directory containing the domains and problems
+                   of "satellite" one of the test domains that were 
+                   used in the 3rd Int. Planning Competition. 
+
+Note that there are 5 different versions of the domain satellite, each
+of which includes different features of PDDL2.1: Strips, SimpleTime,
+Time, Numeric and Complex.  These formalizations of satellite are
+included to give examples of domains and problems that can be solved
+by our planner.
+
+-----------------------------------------------------------------------
+
+2. Installation & Compilation of Source Code
+
+- Copy lpg1.2-source.tar.gz into the directory where you want to have 
+  the planner.
+ 
+- From this directory run
+      gunzip lpg1.2-source.tar.gz 
+      tar xvf lpg1.2-source.tar 
+
+  A directory called LPG1.2-source will be generated, containing:
+      LPG       -- a directory containing the source code of the planner
+      README-LPG1.2    -- this file 
+      Satellite -- a directory containing the domains and problems
+                   of "satellite" one of the test domains that were 
+                   used in the 3rd Int. Planning Competition. 
+
+- Move into the LPG-directory containing the source code and type:
+      make      -- This command produces an executable file called "lpg"
+
+
+-----------------------------------------------------------------------
+
+3. Running LPG
+
+3.1 Necessary Settings
+
+In order to run the program (lpg) it is necessary to specify the value 
+of three parameters indicating (a) a file containing a set of PDDL2.1 
+operators; (b) a file containing a problem specification in PDDL2.1 (the 
+facts of the initial and goal states); (c) the maximum number of desired 
+solutions. This must be specified using 
+
+  -o <operator file name> 
+  -f <problem file name>
+  -n <max number of solutions>
+
+When the specified number of solutions (plans) is higher than 1, each 
+solution computed is an improvement with respect to the previous
+solutions, in terms of the metric indicated in the operator file.  
+For a fast run of LPG we suggest to use "-n 1".
+Each solution that is found by LPG is stored in a file with standard 
+name 
+
+   plan_<problem file name>_<solution number>.SOL
+
+Note that only the last solution that is computed is shown on screen. 
+For example, "lpg -o operator-file -f problem-file -n 3" runs lpg
+using the operators specified in operator-file to produce (at most)
+three plans solving the problem specified in problem-file.
+
+Note that the number specified for -n is an upper bound. 
+It can happen that the system quickly finds the first solution, while 
+finding alternative better solutions requires significant additional 
+effort. This depends on the domain and problem under considerations, 
+but also on the quality of the first solution that is produced -- the 
+better a solution is, the more difficult it will be to improve its 
+quality (if possible).
+Each new solution can be obtained by either forcing some inconsistencies 
+in the best previous solution and then restarting the search, or by 
+searching from scratch using an initial empty plan.
+
+
+3.2 Optional Settings
+
+In addition to the three parameters above, LPG allows to specify several
+additional settings, which all have their default values.
+
+  -p <string>
+
+This parameter can be used to specify the path name of the directory 
+containing the file of the operators and the file of the problem 
+definition.
+Example: lpg -p /home/LPG/domains -o operator-file -f problem-file -n 1
+
+
+  -out <string> 
+
+This parameter allows to change the default names of the file containing 
+the plans computed by LPG. 
+For example, "lpg -o operator-file -f problem-file -n 2 -out myplan"
+produces two files (assuming lpg finds two solutions) named "myplan_1.SOL"
+and "myplan_2.SOL".
+
+
+  -noout
+
+With this option no output file is produced.
+
+
+  -same_objects
+
+In order to make the instantiation of the operators faster, the current
+version of LPG uses different objects to instantiate operator parameters 
+having different names. -same_objects removes this restriction, i.e., 
+parameters with different names can be bound to the same object. 
+Note that in the "Rovers" domain of the 3rd IPC it is necessary to use 
+this option, otherwise solve some problems cannot be solved.
+
+
+  -h <heuristic identifier: 1-2>
+
+LPG incorporates several heuristics. In this version the default strategy
+is "Walkplan" using two possible functions for evaluating the elements of 
+the search neighborhood (i.e., each search step that can be accomplished 
+to remove an inconsistency selected from the current plan):
+
+  -h 1  Corresponds to an evaluation function similar to E_H+, a function 
+        described in our AIPS'02 paper (available from the LPG homepage).
+
+  -h 2  This is the default function of LPG, and it was used in the 3rd 
+        International Planning Competition to solve most of the problems. 
+        The function is based on a new method for estimating the search 
+        costs and execution costs of unsupported preconditions.
+        We are currently writing a paper describing this new technique.
+
+In both cases the evaluation function takes into account information 
+such as numerical quantities and "durative actions" that are not handled 
+in the original evaluation function described in the AIPS'02 paper. 
+
+  -v off
+
+Switches off the verbose output of LPG. Only essential information is 
+given.
+
+
+  -restarts <integer>
+
+Specifies the maximum number or search restarts to find the first solution,
+or to find an additional solution that improves the quality of the previous 
+ones. The default value is 50.
+
+
+  -search_steps <integer> 
+
+Specifies the initial number of search steps after which the search is
+restarted.  After each search, this number is automatically incremented 
+by a factor of 1.1. The default initial value of -search_steps is 500.
+Note that for simple problems this value could be significantly reduced,
+obtaining better performance.
+
+
+  -noise <number between 0 and 1>
+
+Specifies the noise factor of Walkplan. The default value is 0.1.
+
+
+  -nobestfirst
+
+When all restarts of the local search have been performed without finding 
+a solution, LPG runs in addition a best first search based on J. Hoffman's
+implementation (FF package v2.3) which handles a subset of ADL. 
+Best first search can be avoided by adding -nobestfirst to the command 
+line of LPG.                                                       
+
+
+  -onlybestfirst     
+
+Forces the immediate run of the best first search (no local search is 
+performed). In the 3rd IPC this option was used to solve problems in the 
+"FreeCell" domain.
+
+
+  -seed <integer>
+
+Specifies the seed that will be used by the planner (note that LPG uses
+stochastic local search). This option allows to repeat identical runs by 
+using the same seed number. The output files containing the solutions 
+produced by LPG include the seed number used by the planner to generate 
+them.
+
+
+  -i_choice <number>
+
+Specifies different methods for selecting the next inconsistency to 
+remove in the current plan (search state). The default value is 2.
+Note that in this version of LPG, we force one action per level of the 
+underlying planning graph. As a consequence, each inconsistency in the 
+current plan corresponds to a precondition that is not supported.
+
+  -i_choice 1  
+      The unsupported precondition is randomly chosen.
+
+  -i_choice 2  
+      The unsupported precondition at the earliest level of the 
+      underlying planning graph is preferred. If more than one of such 
+      inconsistencies are present, LPG chooses randomly one of them.
+
+  -i_choice 3  
+      The unsupported precondition at the latest level of the 
+      underlying planning graph is preferred. If more than one of such 
+      inconsistencies are present, LPG chooses randomly one of them.
+
+  -i_choice 4  
+      Each unsupported precondition is evaluated in terms of its 
+      "execution cost", i.e, in terms of the quality the plan that 
+      would be produced by the search to achieve it. The precondition 
+      leading to the best plan is preferred. If there is more than 
+      one of such inconsistencies, LPG chooses randomly.
+
+  -i_choice 21 
+      This is an extension of i_choice 2: 
+      when the inconsistencies at earliest levels are more than one, 
+      LPG prefers the one with the minimum execution cost. If there 
+      is more than one of such inconsistencies, LPG chooses randomly.
+
+  -i_choice 22 
+      This is another extension of i_choice 21 in which LPG considers 
+      also a relaxed (sub)plan for each unsupported precondition at 
+      the earliest level, and chooses one of them taking into account 
+      the interferences of its plan with the other preconditions. 
+
+
+We are currently testing additional inconsistency selection strategies
+that will possibly be included in the next version of the system.
+
+
+New optional settings (not present in the version 1.0):
+
+   -cputime <number>       
+
+      Specifies the maximum CPU-time (in seconds).
+
+   -lowmemory              
+
+      Computes mutex relations between actions at runtime.
+      We suggest to set this option only for very large problems.
+  
+   -AdvancedTime           
+
+      Takes the overlapping of actions into account during the
+      neighbourhood evaluation. This option sometimes leads to plans 
+      of better quality.
+
+
+
+
+
+
+

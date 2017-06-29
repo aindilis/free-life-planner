@@ -1,0 +1,1811 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
+  <head>
+    <meta http-equiv="x-ua-compatible" content="IE=EDGE">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, maximum-width=1">
+    <meta name="keywords" content="amazon, appstore, developer portal"/>
+    
+    <meta name="description" content="Amazon Apps & Services Developer Portal"/>
+
+    <script type="text/javascript">var ue_t0=window.ue_t0||+new Date();</script><script type="text/javascript">(function(e){var c=e;var a=c.ue||{};a.main_scope="mainscopecsm";a.q=[];a.t0=c.ue_t0||+new Date();a.d=g;function g(h){return +new Date()-(h?0:a.t0)}function d(h){return function(){a.q.push({n:h,a:arguments,t:a.d()})}}function b(m,l,h,j,i){var k={m:m,f:l,l:h,c:""+j,err:i,fromOnError:1,args:arguments};c.ueLogError(k);return false}b.skipTrace=1;e.onerror=b;function f(){c.uex("ld")}if(e.addEventListener){e.addEventListener("load",f,false)}else{if(e.attachEvent){e.attachEvent("onload",f)}}a.tag=d("tag");a.log=d("log");a.reset=d("rst");c.ue_csm=c;c.ue=a;c.ueLogError=d("err");c.ues=d("ues");c.uet=d("uet");c.uex=d("uex");c.uet("ue")})(window);(function(e,d){var a=e.ue||{};function c(g){if(!g){return}var f=d.head||d.getElementsByTagName("head")[0]||d.documentElement,h=d.createElement("script");h.async="async";h.src=g;f.insertBefore(h,f.firstChild)}function b(){var k=e.ue_cdn||"z-ecx.images-amazon.com",g=e.ue_cdns||"images-na.ssl-images-amazon.com",j="/images/G/01/csminstrumentation/",h=e.ue_file||"ue-full-11e51f253e8ad9d145f4ed644b40f692._V1_.js",f,i;if(h.indexOf("NSTRUMENTATION_FIL")>=0){return}if("ue_https" in e){f=e.ue_https}else{f=e.location&&e.location.protocol=="https:"?1:0}i=f?"https://":"http://";i+=f?g:k;i+=j;i+=h;c(i)}if(!e.ue_inline){if(a.loadUEFull){a.loadUEFull()}else{b()}}a.uels=c;e.ue=a})(window,document);</script>
+
+    <script type="text/javascript">
+//<![CDATA[
+if (typeof h285083731 === 'undefined') {
+    h285083731 = {};
+}
+if (typeof h285083731.i285083731 === 'undefined') {
+    h285083731.i285083731 = {};
+}
+
+h285083731.i285083731.AsyncPage = {
+
+    load : function() {
+        var result,divs , i, length;
+        result = [];
+
+        if (document.getElementsByClassName) {
+            result = document.getElementsByClassName('j285083731Async');
+        } else {
+            divs = document.getElementsByTagName('div');
+            for (i=0, length=divs.length; i<length; i++) {
+                if (divs[i].className === 'j285083731Async') {
+                    result.push(divs[i]);
+                }
+            }
+        }
+
+        for (i=0, length=result.length; i< length; i++) {
+            (function(element) {
+                this.sendRequest(element.id, function(xmlHttp) {
+                    var fragment, tmpDiv, parent;
+                    fragment = document.createDocumentFragment();
+                    tmpDiv = document.createElement('div');
+                    tmpDiv.innerHTML = xmlHttp.responseText;
+                    while (tmpDiv.firstChild) {
+                        fragment.appendChild(tmpDiv.firstChild);
+                    }
+                    parent = element.parentNode;
+                    parent.replaceChild(fragment, element);
+                });
+            }).call(this, result[i]);
+        }
+    },
+
+    sendRequest : function(url, callback) {
+        var xmlHttpRequest;
+        try {
+            xmlHttpRequest = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
+            xmlHttpRequest.open("GET", url, true);
+            xmlHttpRequest.onreadystatechange = function () {
+                if (xmlHttpRequest.readyState !== 4) {
+                    return;
+                }
+                if (xmlHttpRequest.status !== 200 && xmlHttpRequest.status !== 304) {
+                    return;
+                }
+                callback(xmlHttpRequest);
+            };
+
+            xmlHttpRequest.send();
+        } catch (e) {
+            if (typeof window.console !== 'undefined') {
+                if (typeof console.error !== 'undefined') {
+                    console.error(e.name + ": " + e.message);
+                } else if (typeof console.log !== 'undefined') {
+                    console.log(e.name + ": " + e.message);
+                }
+            }
+        }
+    }
+};
+//]]>
+</script>
+<meta name="id" content="1b09ef90-b296-4c16-a30b-797b9b58cc92"/>
+<title>
+            Alexa Skills Kit Policy Testing - Amazon Apps &amp; Services Developer Portal
+        </title>
+<meta name="description" content="Learn about the Amazon policies for Alexa skills."/>
+<meta name="keywords" content="checklist,certification,certify,testing,alexa,ask,submitting,quality,quality assurance,qa,policy,content policy.rules"/>
+
+
+    <link rel="stylesheet" href="https://images-na.ssl-images-amazon.com/images/G/01/AUIClients/MASAriaThemeAssets-cc1c91b11ab782aab8b8270cbcbd45db7345699d._V2_.css" />
+
+    <link href="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal2/res/css/webfonts._V326851759_.css" rel="stylesheet" type="text/css"/>
+    <link id="page_css" rel="stylesheet" href="" type="text/css"/>
+    <link href='https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/taas/jquery/widget/jquery-ui-1.10.3.custom.min.css' rel='stylesheet' type='text/css'/>
+
+    <script type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal2/public/resources/js/jquery-1.10.1.min._V352894325_.js"></script>
+    <script type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/taas/jquery/widget/jquery-ui-1.10.3.custom.min.js"></script>
+    
+    <script type="text/javascript" src="/public/js/jquery_cookie.js"></script>
+    
+    <script type="text/javascript" src="/public/js/mediatest.js"></script>
+    
+    <script type="text/javascript" src="/public/js/scroll_to.js"></script>
+    
+    <script type="text/javascript" src="/public/js/language_switcher.js"></script>
+  </head>
+  <body>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="header">
+  <div style="display:none;" id="/public/_hn:component-rendering%7Cr33_r2_r1/solutions/alexa/alexa-skills-kit/docs/alexa-skills-kit-policy-testing" class="j285083731Async"></div>
+  <div id="lower-header">
+    <div id="lower-header-wrapper">
+      <ul id="header-menu">
+        
+        
+        
+        <li class="">
+          <a id="header-home" href="/public">Home</a>
+        </li>
+        
+        
+         
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   
+
+	 
+
+
+
+
+  
+    <li class="active">
+      <a href="/public/solutions/alexa">ALEXA</a>
+    </li>
+  
+  
+
+
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   
+
+	 
+
+
+
+
+  
+  
+    <li>
+      <a href="/public/apis">SERVICES &AMP; APIS</a>
+    </li>
+  
+
+
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   
+
+	 
+
+
+
+
+  
+  
+    <li>
+      <a href="/public/solutions/devices">DEVICES</a>
+    </li>
+  
+
+
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   
+
+	 
+
+
+
+
+  
+  
+    <li>
+      <a href="/public/resources">RESOURCES</a>
+    </li>
+  
+
+
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   
+
+	 
+
+
+
+
+  
+  
+    <li>
+      <a href="/public/community/blog">BLOGS</a>
+    </li>
+  
+
+
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   
+
+	 
+
+
+
+
+  
+  
+    <li>
+      <a href="/public/support">SUPPORT</a>
+    </li>
+  
+
+
+        
+      </ul>
+      <div id="search-box">
+        
+        
+        <form id="search-box-form" action="/public/search" method="get" onsubmit="sanitizeRequestParam(document.forms['searchSubmit']['query'], 'Search')">
+          
+          <input id="search-box-input" type="text" name="query" placeholder="Search..." value="" />
+          <input id="search-box-submit" type="image" src="/public/images/icon-search.png" name="image" width="18" height="18">
+        </form>
+        <button id="search-box-toggle-button" style="background-image: url('/public/images/icon-search.png')" onclick="javascript:toggleSearch()"></button>
+        
+		<script type="text/javascript" src="/public/js/searchbox_controller.js"></script>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="/public/js/header_scroller.js"></script>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="directory">
+    <div id="directory-wrapper">
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="/public">Home</a>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <span>&gt;</span>
+    
+      
+        
+      
+      
+    
+    <a href="/public/solutions/alexa">Alexa</a>
+  
+  
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <span>&gt;</span>
+    
+      
+        
+      
+      
+    
+    <a href="/public/solutions/alexa/alexa-skills-kit">Alexa Skills Kit</a>
+  
+  
+    
+  
+
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+</div>
+<div id="outer-wrapper">
+  <div id="inner-wrapper">
+    <div id="left-sidebar">
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<ul id="left-sidebar-list">
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+      
+    
+    
+  
+  
+  
+  
+  
+  	
+    
+  
+  
+    
+    
+      <li>
+        <a href="/public/solutions/alexa">Alexa </a>
+      </li>
+    
+  
+  
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+    
+  
+
+
+  
+    
+    
+  
+  
+
+
+
+  
+  
+  
+    <li class="active">
+      <a href="/public/solutions/alexa/alexa-skills-kit">Alexa Skills Kit</a>
+      
+    </li>
+  
+  
+  
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+    
+  
+
+
+  
+    
+    
+  
+  
+
+
+
+  
+  
+  
+  
+  
+    <li>
+      <a href="/public/solutions/alexa/alexa-voice-service">Alexa Voice Service</a>
+    </li>
+  
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+    
+  
+
+
+  
+    
+    
+  
+  
+
+
+
+  
+  
+  
+  
+  
+    <li>
+      <a href="/public/solutions/alexa/alexa-fund">Alexa Fund</a>
+    </li>
+  
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+    
+  
+
+
+  
+    
+    
+  
+  
+
+
+
+  
+  
+  
+  
+  
+    <li>
+      <a href="/public/solutions/alexa/rewards-for-skill-developers">Rewards for Skill Developers</a>
+    </li>
+  
+
+  
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</ul>
+    </div>
+    <div id="content">
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal2/content/sdk/js/shCore._V138392098_.js"></script>
+<script type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal2/content/sdk/js/shBrushPlain._V138254508_.js"></script>
+<script type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal2/content/sdk/js/shBrushJava._V138392099_.js"></script>
+<script type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal2/content/sdk/js/shBrushXml._V138392099_.js"></script>
+<script type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal2/content/sdk/js/shBrushJScript._V307911092_.js"></script>
+<script type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal2/content/sdk/js/shBrushCSharp._V307911161_.js"></script>
+<script type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal2/content/sdk/js/shBrushAS3._V307911115_.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+      SyntaxHighlighter.all();
+    });
+</script>
+
+
+  
+  
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        
+        
+    
+
+
+
+
+
+    
+    
+    <script type="text/javascript" src="/public/js/text_banner_modify.js"></script>
+    <div id="content-body" class="group">
+
+      
+
+      <div class="content-html-container tech-doc">
+      <div id="text-banner" class="tech-doc" style="border-bottom-style:none;">
+        <h2>Alexa Skills Kit Policy Testing</h2>
+      </div>
+        
+        
+          
+            
+            <a class="anchor" name="Introduction"></a>
+            
+            <h2>Introduction</h2>
+            <link rel="stylesheet" type="text/css" href="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal/highlighter.min._TTH_.css" />
+<link rel="stylesheet" type="text/css" href="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal/hipposidebarpage.min._TTH_.css" />
+<link rel="stylesheet" type="text/css" href="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal/hipposidebar._TTH_.css" />
+<script type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal/includescript.min._TTH_.js"></script>
+<!-- Bootstrap is used under the MIT license. -->
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<div class="rightMenu"> <span class="inc:https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal/menus/ask-customskills._TTH_.html"> </span></div>
+
+<!-- AnchorJS is used under the MIT license. -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/2.0.0/anchor.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<!-- Navgoco is used under the BSD license. -->
+<script src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal/jquery.navgoco.min._TTH_.js"></script>
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<script type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal/customscriptshippo._TTH_.js"></script>
+<!--[if IE]>
+<link rel="stylesheet" type="text/css" href="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal/navtabshippo._TTH_.css" />
+<![endif]-->
+<style>
+ul#markdown-toc::before  {
+content: "Table of Contents"
+ }
+ </style>
+
+
+
+
+
+<p>All skills submitted to Alexa must adhere to our <a href="https://developer.amazon.com/public/support/submitting-your-app/tech-docs/appstore-content-policy" title="Content Guidelines">Content Guidelines</a>.</p>
+
+<ul id="markdown-toc">
+  <li><a href="#policy-examples" id="markdown-toc-policy-examples">Policy Examples</a>    <ul>
+      <li><a href="#trademarks-intellectual-property-and-brands" id="markdown-toc-trademarks-intellectual-property-and-brands">1. Trademarks, Intellectual Property, and Brands</a></li>
+      <li><a href="#no-child-directed-alexa-skills" id="markdown-toc-no-child-directed-alexa-skills">2. No Child-Directed Alexa Skills</a></li>
+      <li><a href="#health" id="markdown-toc-health">3. Health</a></li>
+      <li><a href="#purchasing-and-currencies" id="markdown-toc-purchasing-and-currencies">4. Purchasing and Currencies</a></li>
+      <li><a href="#advertising" id="markdown-toc-advertising">5. Advertising</a></li>
+      <li><a href="#pornography-and-sex" id="markdown-toc-pornography-and-sex">6. Pornography and Sex</a></li>
+      <li><a href="#violence" id="markdown-toc-violence">7. Violence</a></li>
+      <li><a href="#religion-ethnicity-and-culture" id="markdown-toc-religion-ethnicity-and-culture">8. Religion, Ethnicity, and Culture</a></li>
+      <li><a href="#emergency-services-telecommunications" id="markdown-toc-emergency-services-telecommunications">9. Emergency Services (Telecommunications)</a></li>
+      <li><a href="#skill-content" id="markdown-toc-skill-content">10. Content</a></li>
+      <li><a href="#general" id="markdown-toc-general">11. General</a></li>
+    </ul>
+  </li>
+  <li><a href="#next-steps" id="markdown-toc-next-steps">Next Steps</a></li>
+</ul>
+
+<h2 id="policy-examples">Policy Examples</h2>
+
+<p>The following list shows specific examples that we look out for when evaluating whether a skill can be made available on Alexa. The list is not exhaustive, and the guidelines may change over time as new issues arise.</p>
+
+<p>If Amazon determines that your skill contains, facilitates, or promotes content that is prohibited by these policy guidelines, we will reject or suspend the submission and notify you using the e-mail address associated with your developer account.</p>
+
+<p>Your skill will be rejected or suspended if it:</p>
+
+<h3 id="trademarks-intellectual-property-and-brands">1. Trademarks, Intellectual Property, and Brands</h3>
+
+<p>a.  Implies sponsorship or endorsement by Amazon or otherwise mischaracterizes the relationship with Amazon.<br />
+b.  Uses the image or likeness of an Amazon device as part of the skill icon.<br />
+c.  Infringes the intellectual property rights (including copyright, trademark and publicity rights) of a third party.<br />
+d.  Purports to be affiliated with a company or brand but is not the official skill of that company or brand.</p>
+
+<h3 id="no-child-directed-alexa-skills">2. No Child-Directed Alexa Skills</h3>
+
+<p>a.  Is directed to children under the age of 13 or interacts with any user accounts or profiles you may maintain for children under the age of 13.</p>
+
+<h3 id="health">3. Health</h3>
+
+<p>a.  Collects information relating to any person’s physical or mental health or condition, the provision of health care to a person, or payment for the same.<br />
+b.  Is a health-related skill and does not include a disclaimer in the skill description stating that the skill is not a substitute for professional advice. Example: “This tool does not provide medical advice, and is for informational and educational purposes only, and is not a substitute for professional medical advice, treatment or diagnosis. Call your doctor to receive medical advice. If you think you may have a medical emergency, please dial your local emergency response phone number.”<br />
+c.  Claims to provide life-saving assistance through the skill or in the skill name, invocation name or skill description.</p>
+
+<h3 id="purchasing-and-currencies">4. Purchasing and Currencies</h3>
+
+<p>a.  Offers a separate skill store or recommends other skills.<br />
+b.  Offers compensation for enabling other skills, or for providing product reviews on skills. Examples of compensation may include digital goods, physical goods, or monetary transactions.<br />
+c.  Solicits donations from end users.</p>
+
+<h3 id="advertising">5. Advertising</h3>
+
+<p>a. Includes or otherwise surfaces advertising or promotional messaging. There are specific exceptions we will allow:</p>
+
+<ul>
+  <li>Streaming music, streaming radio, podcast, and flash briefing skills may include audio advertisements as long as (1) the advertisements do not use Alexa’s voice or a similar voice, refer to Alexa, or imitate Alexa interactions and (2) the skill does not include more or materially different advertising than is included when the same or similar content is made available outside of Alexa.</li>
+  <li>Skills that allow customers to order products or services may include audio messaging promoting those products or services.</li>
+  <li>Skills may include audio messaging informing customers of promotional offers or deals in response to specific requests from customers.</li>
+  <li>Skills that are specifically designed to promote a product or service may include audio messaging promoting that product or service.</li>
+</ul>
+
+<p>We reserve the right to reject or suspend any skill that includes advertising or promotional messaging we determine is misleading or confusing, results in a poor customer experience, or is otherwise inappropriate.</p>
+
+<h3 id="pornography-and-sex">6. Pornography and Sex</h3>
+
+<p>a.  Has sexually explicit textual descriptions and/or home card has images that contain sexually explicit material.</p>
+
+<h3 id="violence">7. Violence</h3>
+
+<p>a.  Contains graphic depictions or descriptions of extreme gore, decapitations, unsettling content, and/or excessive violence.<br />
+b.  Promotes organized crime, terrorism, or other illegal activities meant to undermine local and/or national governments or police.</p>
+
+<h3 id="religion-ethnicity-and-culture">8. Religion, Ethnicity, and Culture</h3>
+
+<p>a.  Includes references to or information regarding forced marriages or purchasable husbands and/or wives.<br />
+b.  Purports to be able to predict gender.<br />
+c.  Contains derogatory comments or hate speech specifically targeting any group or individuals.<br />
+d.  Contains content that references or promotes out-of-context quotations that mislead about the intentions of the figure being quoted.<br />
+e.  Contains or references Nazi symbols or other symbols of hate, promotes hate speech, incites racial or gender hatred, or promotes groups or organizations which support such beliefs such as the Ku Klux Klan.</p>
+
+<h3 id="emergency-services-telecommunications">9. Emergency Services (Telecommunications)</h3>
+
+<p>a. Allows the user to contact emergency responders (e.g. 911).</p>
+
+<h3 id="skill-content">10. Content</h3>
+
+<p>a.  Contains references and/or promotes illegal downloading of torrents or pirated software.<br />
+b.  Contains specific advice on how to join an illegal organization.<br />
+c.  Provides advice on how to begin or be involved in an illegal lifestyle, such as prostitution.<br />
+d.  Gives guidance on how create or build dangerous materials (e.g., how to build a bomb, silencer, meth lab, etc.)<br />
+e.  Promotes or praises terrorism, including detailing specific tactics or recruiting new members for terrorist groups.<br />
+f.  Contains or references illegal or controlled drug use.<br />
+g.  Contains false claims regarding medicine and/or prescription drugs—such as pills claiming to cure all diseases—or provides information about black market sales of prescription drugs.<br />
+h.  Enables end users to engage in gambling to win real money prizes or other tangible prizes that have an actual cash value.<br />
+i.  Promotes the sale of alcohol or tobacco, contains or references underage use of tobacco or alcohol, or promotes excessive use.<br />
+j.  Contains excessive profanity.</p>
+
+<h3 id="general">11. General</h3>
+
+<p>a.  Lacks an English product description, invocation name, or title.<br />
+b.  Contains profanity aimed at children.<br />
+c.  Contains malicious functionality, or is a prank skill that does not disclose its prank functionality in its product description.<br />
+d.  Contains unmoderated user generated content.</p>
+
+<!-- end of shared content. -->
+
+<h2 id="next-steps">Next Steps</h2>
+
+<ul>
+  <li><a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/alexa-skills-kit-security-testing">2. Security Testing</a></li>
+  <li><a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/alexa-skills-kit-functional-testing">3. Functional Testing</a></li>
+  <li><a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/alexa-skills-kit-voice-interface-and-user-experience-testing">4. Voice Interface and User Experience Testing</a></li>
+  <li>Go back to: <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/publishing-an-alexa-skill">Submitting an Alexa Skill for Certification</a>.</li>
+  <li>Return to: <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/overviews/steps-to-build-a-custom-skill">Steps to Build a Custom Skill</a></li>
+</ul>
+
+<!-- common links -->
+          
+        
+      </div>
+    </div>
+  
+
+
+<script type="text/javascript" src="/public/js/gamecircle.js"></script>
+    </div>
+    
+    <script type="text/javascript" src="/public/js/leftmenu_controller.js"></script>
+  </div>
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="footer">
+  <div id="upper-footer">
+    <div id="upper-footer-wrapper">
+      <span id="footer-sitemap-title">Sitemap</span>
+      
+      
+      
+      
+      <div id="socialmedia-icons">
+        <a href="https://www.facebook.com/AmazonAppDev"><img src="/public/images/logo-facebook.png" alt="facebook_logo" width="31" height="31" /></a>
+        <a href="https://twitter.com/AmazonAppDev"><img src="/public/images/logo-twitter.png" alt="twitter_logo" width="31" height="31" /></a>
+        <a href="/public/community/blog"><img src="/public/images/logo-blog.png" alt="blog_logo" width="31" height="31" /></a>
+      </div>
+      <span id="footer-followus-span">Follow us</span>
+    </div>
+  </div>
+  <div id="median-footer">
+    <div id="median-footer-wrapper">
+      <ul id="footer-sitemap">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+<li>
+  <a href="/public/solutions/alexa">Alexa</a>
+  
+    <ul>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/solutions/alexa/alexa-skills-kit">Alexa Skills Kit</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/solutions/alexa/alexa-voice-service">Alexa Voice Service</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/solutions/alexa/alexa-fund">Alexa Fund</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/solutions/alexa/rewards-for-skill-developers">Rewards for Skill Developers</a>
+	    </li>
+      
+    </ul>
+  
+</li>
+
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+<li>
+  <a href="/public/apis">Services &amp; APIs</a>
+  
+    <ul>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/apis/earn">Earn</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/apis/engage">Engage</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/apis/experience">Build</a>
+	    </li>
+      
+    </ul>
+  
+</li>
+
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+<li>
+  <a href="/public/solutions/devices">Devices</a>
+  
+    <ul>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/solutions/devices/fire-tablets">Fire Tablets</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/solutions/devices/fire-tv">Amazon Fire TV</a>
+	    </li>
+      
+        
+          
+	      
+	        
+	      
+	    
+	    <li>
+	      <a href="https://developer.amazon.com/dash-replenishment-service">Dash Replenishment Service</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/solutions/devices/fire-phone">Fire Phone</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/solutions/devices/echo">Amazon Echo</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/solutions/devices/amazon-tap">Amazon Tap</a>
+	    </li>
+      
+    </ul>
+  
+</li>
+
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+<li>
+  <a href="/public/resources">Resources</a>
+  
+    <ul>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/solutions/platforms">Platforms</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/resources/learning-center">Learning Center</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/resources/development-tools">Development Tools</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/resources/promotional-tools">Promotional Tools</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/resources/marketing-tools">Marketing Tips</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/resources/other">Other Resources</a>
+	    </li>
+      
+    </ul>
+  
+</li>
+
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+<li>
+  <a href="/public/community/blog">Blogs</a>
+  
+    <ul>
+      
+        
+          
+	      
+	        
+	      
+	    
+	    <li>
+	      <a href="https://developer.amazon.com/blogs/alexa/">Alexa Blog</a>
+	    </li>
+      
+        
+          
+	      
+	        
+	      
+	    
+	    <li>
+	      <a href="https://developer.amazon.com/blogs/appstore/">Appstore Blog</a>
+	    </li>
+      
+        
+          
+	      
+	        
+	      
+	    
+	    <li>
+	      <a href="https://aws.amazon.com/blogs/aws/">AWS Blog</a>
+	    </li>
+      
+    </ul>
+  
+</li>
+
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+<li>
+  <a href="/public/support">Support</a>
+  
+    <ul>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/support/submitting-your-app">Submitting Your Apps</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/support/faq">FAQs</a>
+	    </li>
+      
+        
+          
+	      
+	        
+	      
+	    
+	    <li>
+	      <a href="http://forums.developer.amazon.com">Forums</a>
+	    </li>
+      
+        
+          
+	      
+	        
+	      
+	    
+	    <li>
+	      <a href="https://developer.amazon.com/public/support/contact/contact-us?sc_channel=website&amp;sc_publisher=devportal&amp;sc_campaign=Conversion_Contact-Us&amp;sc_assettype=conversion&amp;sc_team=us&amp;sc_traffictype=organic&amp;sc_country=united-states&amp;sc_segment=all&amp;sc_itrackingcode=100020_us_website&amp;sc_detail=dp-sidebar">Contact Us</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/support/legal/da">App Distribution Agreement</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/support/mobileads/publisher-agreement.html">Mobile Ad Network Publisher Agreement</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/support/mobileads/participation-requirements.html">Mobile Ad Network Program Participation Requirements</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/support/advertise-your-app-agreement">Advertise Your App With Amazon Agreement</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/support/pml.html">Program Materials License Agreement</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/support/legal/tuabg">Trademark Guidelines</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/support/legal/tou">Terms of Use</a>
+	    </li>
+      
+    </ul>
+  
+</li>
+
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- SiteCatalyst code version: H.26.
+Copyright 1996-2013 Adobe, Inc. All Rights Reserved
+More info available at http://www.omniture.com -->
+<script language="JavaScript" type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal/s_code2.js"></script>
+
+<script type="text/javascript">var SiteCatalystId = ""</script>
+
+<script language="JavaScript" type="text/javascript"><!--
+/* You may give each page an identifying name, server, and channel on
+the next lines. */
+s.pageName="/public/solutions/alexa/alexa-skills-kit/docs/alexa-skills-kit-policy-testing"
+s.server="developer.amazon.com"
+s.channel=""
+s.pageType=""
+s.prop1="173.165.36.107"
+s.prop2="Mozilla/5.0 (X11; Linux x86_64; rv:45.0) Gecko/20100101 Firefox/45.0"
+s.prop3=""
+s.prop4=""
+s.prop5=""
+/* Conversion Variables */
+s.campaign=""
+s.state=""
+s.zip=""
+s.events=""
+s.products=""
+s.purchaseID=""
+s.eVar1=""
+s.eVar2=""
+s.eVar3=""
+s.eVar4=""
+s.eVar5=""
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)//--></script>
+<script language="JavaScript" type="text/javascript"><!--
+if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+//--></script><noscript><img src="http://amazonservices.d2.sc.omtrdc.net/b/ss/amzna2z/1/H.22.1--NS/0"
+height="1" width="1" border="0" alt="" /></noscript><!--/DO NOT REMOVE/-->
+<!-- End SiteCatalyst code version: H.26. -->
+
+
+      </ul>
+    </div>
+  </div>
+  <div id="lower-footer">&copy; 2010-2016, Amazon.com, Inc. or its affiliates. All Rights Reserved.</div>
+</div> 
+
+
+    <script type="text/javascript">
+//<![CDATA[
+h285083731.i285083731.AsyncPage.load();
+//]]>
+</script>
+
+    <script type="text/javascript"> 
+    if (window.ue && window.ue.tag) { 
+        window.ue.tag("prelogin", ue.main_scope);
+    }
+    </script>
+    
+  </body>
+</html>

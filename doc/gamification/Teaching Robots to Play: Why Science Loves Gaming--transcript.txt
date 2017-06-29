@@ -1,0 +1,768 @@
+0:00
+this is ein games and welcome to a new
+0:12
+lecture entitled teaching robots to play
+0:15
+why science loves gaming quick heads up
+0:18
+with the original article as well as the
+0:20
+video as part of this is a reproduction
+0:22
+of a talk originally given during the
+0:24
+red sessions of the egx 2015 event at
+0:27
+the NEC in birmingham UK in September
+0:30
+2015 one of the most interesting aspects
+0:35
+of human behavior and by extension
+0:36
+applications of intelligence as a
+0:39
+species is the relationship that we
+0:41
+humans have with games in principle
+0:43
+games are tasks are challenges designed
+0:45
+to stimulate the brain however well our
+0:47
+brains are often forced to deal with
+0:49
+demanding and often stressful mentor
+0:50
+tasks as part of our daily lives we
+0:53
+still have time for games and the
+0:54
+notions of play games are designed to
+0:56
+keep his challenged but ultimately did
+0:58
+not prove so taxing that they proved too
+1:00
+demanding or stressful for our regular
+1:03
+consumption it's certainly interesting
+1:04
+to observe the relationship between
+1:06
+humans and the notion of play as a means
+1:09
+of relaxation their number of reasons
+1:11
+why games prove to be an interesting to
+1:13
+mean to explore scientific problems and
+1:15
+more importantly I challenges
+1:17
+perhaps unsurprisingly these are likely
+1:20
+reasons that humans already embrace them
+1:21
+one major reason that good games proved
+1:26
+so effective is that they act as
+1:27
+frameworks for reward through structured
+1:29
+activity games define looks of behavior
+1:32
+that have completed repeated
+1:33
+successfully will reward the player
+1:35
+through a number of means some of these
+1:37
+rewards are my other nature and maybe
+1:39
+purely cosmetic whereas others allow for
+1:41
+a sense of progression to be
+1:43
+conceptualized with the player these
+1:45
+interactions continue to increase in
+1:46
+scale to help maintain our players
+1:48
+interests and momentum until the
+1:50
+long-term an explicit reward is achieved
+1:52
+the Super Mario Brothers series is one
+1:55
+of the finest examples of her aboard
+1:56
+frameworks can be used to drive and
+1:58
+maintain player interests reward
+2:00
+interactions in the lips of behavior
+2:02
+required to release them are often
+2:03
+referred to as compulsion loops whereby
+2:06
+remaining players interest by shooting a
+2:08
+reward with an abstract and relative
+2:10
+time frame short-term loan
+2:12
+so often the result of simple
+2:13
+interactions that maybe like the
+2:15
+cosmetic but help maintain the players
+2:17
+engagement the interaction response from
+2:19
+the collection of coins and Superman
+2:21
+brothers may seem simple but the use of
+2:23
+counters and sound effects provide
+2:25
+positive reinforcement to users that
+2:26
+their actions not only makes sense but
+2:29
+also work towards their long-term goals
+2:31
+then subsequently skills to medium-term
+2:33
+compulsion loops conceptualize through
+2:35
+levels given every level of Super Mario
+2:37
+games celebrate the fact the player has
+2:40
+completed that activity returning back
+2:42
+to coin collection continued adoption of
+2:45
+the short-term look reward you with
+2:47
+extra lives this medium term loop is no
+2:49
+reinforcing a player's continued
+2:51
+adoption of the short-term loop and
+2:52
+gives not only context but a real
+2:55
+quantifiable reason to continue doing it
+2:57
+the skills father into long-term losses
+3:00
+activity as levels are grouped into
+3:01
+Worlds with the requirement to defeat a
+3:03
+boss enemy with closure achieve through
+3:05
+the field bozer and the eighth and final
+3:07
+world ultimately the point here is that
+3:11
+we have this confine system within which
+3:12
+intelligent decisions can be made we can
+3:15
+quantify their value as well as identify
+3:17
+their position within the roadmap of
+3:18
+future actions you can take in order to
+3:20
+win their game
+3:21
+conversely good games are able to
+3:24
+quickly point out bad and drank ginger
+3:25
+making and that's reinforced you that
+3:27
+doing certain things is bad
+3:30
+well Mario does a good job of this it's
+3:31
+arguably has compared to sonic hedgehog
+3:33
+who signifies this even better with
+3:35
+significantly exaggerated behavior and
+3:37
+the event rings are lost
+3:39
+that's losing our progress on that
+3:40
+medium-term loop but also when losing
+3:42
+lives the next major factor that helps
+3:46
+build a game as a valid scientific
+3:47
+problem is that it has to be fun
+3:50
+well finalize the subjective notion is
+3:53
+evidence to suggest that the level of
+3:54
+challenge involved must me a certain
+3:56
+threshold and are referred to be
+3:58
+interesting in the eyes of humans when
+4:00
+we consider this from a computer science
+4:02
+perspective we would actually classify
+4:04
+the games must be at least
+4:05
+non-deterministic polynomial time hard
+4:08
+or NP hyphen hard for short ensure this
+4:11
+means it's something of a non-trivial
+4:13
+problem in computer science
+4:15
+NP problems are typically ones that
+4:17
+require some intelligent algorithmic
+4:19
+process in order for them to be solved
+4:21
+in a reasonable amount of time if you
+4:24
+were to look at the range of games out
+4:25
+there
+4:25
+from online FPS games such as call of
+4:28
+duty to racing games like Forza and even
+4:30
+smaller and functionally similar games
+4:32
+such as flappy bird we can begin to
+4:34
+recognize a large range of problems that
+4:36
+are not only sufficiently difficult
+4:38
+video games but can rearrange of equally
+4:40
+interesting decision problems in their
+4:42
+own right
+4:43
+despite this assertion of a certain
+4:44
+level of computational define difficulty
+4:46
+we would not paint all games the same
+4:48
+games can carry a variety of problem
+4:51
+trees that make them interesting for
+4:52
+autonomous systems that try and solve
+4:54
+these trees can change between genres of
+4:56
+games and even releases within the same
+4:58
+game series these traits normally result
+5:01
+in games exhibiting particular
+5:02
+artificial intelligence problems but
+5:04
+also begin to necessitate the use of
+5:06
+certain AI techniques and methodologies
+5:08
+given their useful for that particular
+5:09
+type of problem country to the popular
+5:12
+opinion he is not some black box design
+5:15
+that will work in any and all
+5:16
+circumstances AI systems and the
+5:19
+techniques used to build them are
+5:20
+typically specialist in nature focusing
+5:22
+on very particular types of problems
+5:24
+only know after over 50 years of
+5:27
+research in this area are we seriously
+5:28
+looking at the challenges of building
+5:30
+general intelligence systems which we'll
+5:33
+discuss later there are several
+5:35
+properties of a game that we will
+5:36
+typically consider when trying to figure
+5:37
+out how best to approach the problem
+5:39
+there are three the proved to be rather
+5:41
+important number one accessible
+5:44
+knowledge just how much to be knew about
+5:46
+the game we're playing any point in time
+5:48
+this can be both a blessing and a curse
+5:50
+depending on how much we actually know
+5:52
+in some games we may not actually know
+5:55
+everything about the current state of
+5:57
+the game at this point in time step with
+5:59
+the case in card games ranging from
+6:01
+texas holdem to hearthstone we don't
+6:03
+know what cards the other player is
+6:05
+holding but can make some educated
+6:07
+guesses ultimately gate our
+6:09
+decision-making conversely we exploit
+6:12
+this imperfect information given up the
+6:14
+opponent does not know war hands we
+6:16
+might play but this doesn't mean that
+6:18
+knowing everything about the world will
+6:20
+help us that much either one of the best
+6:22
+examples of this can be found in
+6:23
+fighting games such as streetfighter
+6:25
+mortal kombat and killer instinct in
+6:28
+each case we can see the whole state of
+6:30
+the world where the players how much
+6:32
+health or energy bar they have and the
+6:33
+team remaining in that round
+6:35
+despite this the number of possible
+6:38
+actions that can be executed in that
+6:39
+state leads to a large number of
+6:41
+possible future states also known as
+6:43
+successors this large number of actions
+6:47
+and future state implies the branching
+6:49
+factor of a given state meaning that
+6:51
+even if we start thinking three or four
+6:52
+moves ahead we need to start filtering
+6:54
+out decisions that we don't think the
+6:56
+opposing player will make given the
+6:57
+number of possibilities is massive
+7:00
+number to predicting the unpredictable
+7:04
+one vital aspect of gaming's been able
+7:07
+to see things before they actually
+7:08
+happen allowing us to make quick
+7:10
+decisions and react to changes in the
+7:12
+world when playing platforming games we
+7:14
+quickly learned the minutiae of the
+7:16
+movement mechanics meaning we can
+7:17
+predict whether we can make certain
+7:19
+jumps in particular circumstances and
+7:21
+quickly adapt to survive predictability
+7:23
+can also come in really handy for
+7:25
+dealing with enemies learning the
+7:27
+behavior parents of bosses and games
+7:29
+such as dark souls is key to knowing
+7:31
+when to attack and went to fall back and
+7:33
+defend but sometimes our model of that
+7:35
+predictability is broken and that makes
+7:37
+things so much harder for us one of the
+7:39
+best examples of this can be found in
+7:41
+pac-man where the original ghosts are
+7:43
+deterministic in nature meaning we can
+7:45
+learn in time one enemy will do at any
+7:47
+point however in the sequel miss pac-man
+7:49
+that ghosts are able to make run moves
+7:51
+at junctions if this or wish this
+7:53
+results in a non deterministic system
+7:55
+meaning that we can no longer predict
+7:57
+safely making the game significantly
+8:00
+more difficult number three the players
+8:04
+the enemies and the actors just how many
+8:07
+characters are in this game and making
+8:08
+Sammy intelligent decisions this ties
+8:11
+back to normal the complexity issue but
+8:13
+also the branching factor discussed
+8:15
+earlier the branching factors influence
+8:17
+not just on how many actions you can
+8:19
+make it any given state or frame of that
+8:21
+game but also the actions that any other
+8:23
+character can make in that world the
+8:25
+number of unique configurations of the
+8:27
+game world can explode an exponential
+8:29
+rate once you have multiple characters
+8:31
+that can all do different things at once
+8:33
+we need to figure out a which
+8:35
+information is useful to us be what we
+8:37
+can ignore and see how do we ensure that
+8:40
+the space of all potential game
+8:41
+configurations is tractable meaning that
+8:44
+any i can actually search it to find
+8:46
+answers
+8:47
+despite all this for boarding and gloom
+8:49
+the stone awful lot to celebrate my
+8:51
+research and games kept off in full
+8:53
+swing in the mid-2000s with a number of
+8:55
+big projects bringing the community
+8:56
+together as well as solving some
+8:58
+interesting challenges the second major
+9:01
+problem area together attention was a
+9:03
+the complete Mario which actually turned
+9:05
+out to be a lot easier than we
+9:07
+originally envisaged and fight the more
+9:09
+interesting problems were not whether i
+9:10
+could play mario but whether it could
+9:12
+build manual levels leading to a sudden
+9:15
+surge in research and procedural content
+9:17
+generation be sure to check out the
+9:19
+rather large overview of the game
+9:21
+playing level generation tracks we have
+9:22
+your AI in games something of an
+9:25
+interesting challenge to create a I the
+9:27
+complete unreal tournament 2004
+9:30
+however unlike most challenges this was
+9:32
+not about trying to beat the game or be
+9:34
+the most effective at it but whether you
+9:36
+could fill other humans into believing
+9:37
+that the ball was not an AI this is an
+9:40
+example of the cheering test in which
+9:42
+you build the either contact or tasks we
+9:44
+would expect of a human but design it
+9:45
+such that it cannot be distinguished
+9:47
+from humans when observed this
+9:49
+competition run for several years until
+9:51
+the winner was found that was able to
+9:52
+fool judges into believing it was
+9:54
+actually a human player
+9:56
+despite this the still lot of work to do
+9:59
+and many challenges yet to be solved we
+10:02
+break down some of the bigger talking
+10:03
+points here as was pointed out to some
+10:05
+interesting reading material for you to
+10:06
+check out if you're interested
+10:09
+PCG has become a big talking point in
+10:11
+the academic community for a number of
+10:13
+reasons it's perhaps not considered a is
+10:15
+such in the wider discussion
+10:16
+regenerative systems are making
+10:18
+intelligent decisions to craft artifacts
+10:20
+what makes this an even bigger task is
+10:23
+that how to evaluate this content is
+10:24
+highly subjective unlike many other AI
+10:27
+problems such as robotics shelling and
+10:29
+even playing games we cannot holding
+10:31
+evaluate the quality of the final hope
+10:33
+and a robotics problem we can evaluate
+10:36
+against the expected behavior or even
+10:38
+how well the robot works and specific
+10:40
+circumstances however with generated
+10:42
+content but we can evaluate whether it
+10:45
+adheres to specific functional aspect we
+10:47
+make struggle to identify more aesthetic
+10:49
+and subjective aspect of that content so
+10:52
+while we can quantify whether a gun can
+10:54
+actually hurt an enemy or other levels
+10:56
+playable it's much harder to establish
+10:58
+whether that gun was interesting too
+11:00
+use or of that level was fun to play
+11:02
+some links to check out include Angelina
+11:05
+which is the AI system built to create
+11:07
+entire games by itself the Alpha
+11:09
+mentioned Mario a competition piece here
+11:12
+nain games.com as well as checking out
+11:14
+prop Joe a game jam all about procedural
+11:16
+content generation one of the most
+11:20
+exciting fields happening any I right
+11:22
+now is the notion of general
+11:23
+intelligence the reason for this is an
+11:25
+actuality I systems are typically
+11:27
+specialist in nature in other words
+11:29
+they're very good at one thing and one
+11:30
+thing alone
+11:31
+this is country to love science fiction
+11:33
+and that for example Skynet and the
+11:35
+Terminator our showdown in the system
+11:37
+shock
+11:37
+our systems are largely omnipotent and
+11:39
+can solve any problem placed in front of
+11:41
+them
+11:41
+this can be seen when developing a I the
+11:43
+complete a particular game but we can
+11:46
+write any I the complete pacman it
+11:47
+cannot play super mario brothers and
+11:49
+vice versa
+11:50
+this is an issue that spreads far beyond
+11:52
+games into larger real-world problems
+11:54
+general intelligence is the challenge of
+11:57
+building AI that can solve any problem
+11:58
+you give it which is far more in line
+12:01
+with the original aspirations of AI from
+12:02
+the early 20th century
+12:04
+this is now a big problem with research
+12:06
+departments at universities as well as
+12:07
+big tech companies attempting to solve
+12:09
+it
+12:10
+some links to check out and put the
+12:12
+three-part series the challenge of
+12:13
+general intelligence and games was
+12:15
+denying games as well as looking at the
+12:17
+general video game AI competition hosted
+12:19
+at the university of essex in the UK as
+12:21
+well as Google deep mains work and
+12:23
+exactly the same problem area to
+12:26
+conclude as games become more
+12:27
+increasingly complex so do the
+12:29
+artificial intelligence systems that
+12:31
+seek to learn from them we are fortunate
+12:33
+in the gaming is such a vibrant creative
+12:34
+field given it provides a continuous
+12:36
+body of complex and interesting problem
+12:38
+spaces to be working within in our own
+12:40
+way signs loves gaming for our own
+12:42
+selfish reasons with complex problem
+12:44
+spaces that require reactive and
+12:46
+long-term decision-making systems to
+12:48
+handle some of the most dynamic and
+12:49
+multifaceted domains ok to the real
+12:51
+world itself there to be honest sciences
+12:55
+into games were pretty much the same
+12:56
+reasons as everyone else
+12:58
+we're here to have fun this has been
+13:00
+teaching robots to play by science labs
+13:02
+gaming on cin games thanks for listening
+13:05
+and be sure to check out more over lan
+13:07
+games.com

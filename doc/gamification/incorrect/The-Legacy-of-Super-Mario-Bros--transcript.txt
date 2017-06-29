@@ -1,0 +1,812 @@
+0:00
+hi everyone i'm tommy Thompson this is
+0:03
+AI in games today we're going to look at
+0:05
+a level design of super mario brothers
+0:07
+and how the core principles so why she
+0:09
+got on my immortal and Takashi Tezuka
+0:11
+have been revered and evolved in
+0:13
+subsequent games as we celebrate the
+0:16
+30th anniversary of super mario brothers
+0:18
+in 2015
+0:20
+today we're going to discuss not only
+0:21
+heard the Mario series continues to
+0:23
+reuse the same concepts are familiar but
+0:25
+adopts new ideas that fundamentally
+0:27
+never break the matter of formula this
+0:30
+video is in fact based on multiple
+0:32
+academic papers and the analysis of
+0:34
+level design a more fair and link to
+0:36
+them throughout should you wish to learn
+0:37
+more about this research
+0:41
+the Super Mario series started in
+0:43
+nineteen eighty-five with the release of
+0:45
+super mario brothers on the nintendo
+0:47
+entertainment system the game itself
+0:49
+introduce the number of innovations that
+0:51
+differentiated it from previous games
+0:53
+starring Mario such as the original
+0:55
+Donkey Kong and is largely inspired from
+0:58
+Mario Brothers an arena based game in
+1:00
+which both mario and luigi fight off
+1:02
+waves of enemies the game expanded on
+1:05
+mario brothers by introducing a range of
+1:07
+power-ups more flexible movement and
+1:09
+jumping mechanic scrolling to the rate
+1:11
+of the screen to discover the game world
+1:13
+and much more besides with over 290
+1:17
+million copies sold by 2015 the Super
+1:21
+Mario series is not only the most
+1:22
+successful series in video game history
+1:24
+but has established Mario and the core
+1:27
+mechanics of his games as a cultural
+1:29
+phenomenon but like any other videogame
+1:32
+property Mario continuing needs to
+1:34
+evolve there's a fundamental need for
+1:36
+video games to continue to energy on
+1:38
+their core concepts in order to maintain
+1:39
+interest from fans of course that's a
+1:42
+really difficult issue to tackle and /
+1:44
+nintendo receive a lot of hassle from
+1:46
+both the game press and indeed the more
+1:48
+vocal online communities about how they
+1:50
+feel to nav on the core manual formula
+1:53
+of course content will have deviated
+1:56
+from the original concept in many
+1:57
+respects having Maddie or prescribe
+1:59
+drugs develop a third dimension raid on
+2:01
+go-karts hold host parties turn into
+2:03
+paper and sort through galaxies babo
+2:06
+Super Mario Brothers other 2d games
+2:09
+simply derivative of throwing out the
+2:12
+same thing every couple of years and
+2:14
+different hardware the answer obviously
+2:16
+is no but how that's achieved is rather
+2:20
+fascinating
+2:22
+to understand how Superman your enemies
+2:25
+we need to concern yourself with the
+2:26
+idea of design patterns a constructive
+2:29
+game design which has a significant
+2:31
+impact on player experience the same
+2:33
+parents appear everywhere in video games
+2:35
+and we're good parents have phoned they
+2:37
+are often duplicated and other games and
+2:39
+indeed other genres a simple example is
+2:42
+that of coin collection and Mario
+2:43
+resulting an unlocking of valuable item
+2:46
+a pattern that's been subsequently
+2:47
+adopted for the likes of starting the
+2:49
+Hedgehog crash bandicoot and bind your
+2:51
+kazoo but in this case we want to look
+2:54
+at the patterns of Mardi level design
+2:56
+research in the same patterns and an
+3:01
+academic sense has actually been
+3:02
+conducted for some time now
+3:04
+however what we're looking at is a
+3:06
+particular body of one that was
+3:07
+conducted by Steve kalskag annually
+3:09
+imperious exploring the original Super
+3:11
+Mario Brothers acknowledging the game
+3:13
+aDOT's a group of roughly 20 patterns
+3:16
+that are repeated throughout each level
+3:18
+these patterns acknowledge the placement
+3:20
+of enemies the grouping of environmental
+3:22
+obstacles and even placement of coins
+3:23
+and power-ups and an effort to make
+3:25
+players commit the same small but
+3:27
+fundamental unique gameplay actions
+3:29
+through each level in addition each
+3:32
+Super Mario Brothers level when measured
+3:34
+in terms of individual game played beats
+3:36
+in which we cannot be as unique segment
+3:38
+of gameplay is roughly the same length
+3:40
+know what that doesn't mean they're the
+3:42
+same physical way but the number of
+3:44
+unique gameplay moments is roughly the
+3:46
+same this analysis did not address to
+3:50
+particular types of level underwater and
+3:53
+castles this is because on a fundamental
+3:55
+level the actually differently from the
+3:57
+rest of the game the way in which
+3:59
+players and tried with underwater levels
+4:00
+is totally different from the rest of
+4:02
+the game because well man is underwater
+4:05
+meanwhile castles are also different
+4:07
+because the introduction of bows are
+4:08
+sending fireballs through the map as
+4:10
+well as confronting him at the
+4:11
+drawbridge has an impact of how about
+4:13
+levels designed despite this there is
+4:16
+significant evidence that there is a
+4:18
+language they express his/her Super
+4:20
+Mario levels are designed so the key
+4:22
+question is does the same language apply
+4:24
+to future games in the series
+4:28
+in order to understand what impact this
+4:31
+design pattern language has we need to
+4:33
+look at each level in each game adheres
+4:35
+to the Super Mario Brothers formula
+4:37
+spans 10 different games across the last
+4:41
+30 years while there have been
+4:43
+significantly more than that were only
+4:45
+interested in games in the official
+4:47
+super mario series that routine the
+4:49
+original gameplay concepts so firstly we
+4:52
+can ignore all 3d Mario games
+4:54
+given that they are fundamentally
+4:55
+different from the 2d games
+4:57
+that's right go get it
+5:01
+furthermore three of the 2d super mario
+5:04
+games deviate from the original formula
+5:06
+to the point the games are actually
+5:08
+designed differently
+5:09
+Super Mario Land 3y land and super mario
+5:12
+world to yoshi's island are 2d Mario
+5:15
+games that don't play the original
+5:16
+likely because you don't plays mario
+5:18
+himself but also we need to assess the
+5:21
+real super mario brothers too
+5:24
+here's a bit of trivia for you the
+5:26
+american and european release of Super
+5:28
+Mario Brothers 2 is not actually super
+5:30
+mario bros 2 it's a reskin of Japanese
+5:32
+tight or unique or doki doki panick this
+5:35
+is all rather ironic given that docu
+5:37
+panic is a discarded prototype for super
+5:39
+mario brothers to the original Super
+5:41
+Mario Brothers 2 was released in japan
+5:43
+in 1986 but it did not make it to
+5:45
+western shores because nintendo of
+5:47
+america thought it would be too hard for
+5:49
+American audiences bunch of pansies it
+5:52
+was eventually released in america and
+5:54
+europe in 1993 when it was done Super
+5:56
+Mario Brothers the lost levels as part
+5:59
+of the super mario all-stars on the
+6:01
+Super Nintendo at the time of this video
+6:04
+this research has only looked at the
+6:06
+first world of each game while ignoring
+6:08
+the underwater and Castle levels despite
+6:11
+this this results in 42 different levels
+6:14
+being analyzed across 10 games that span
+6:16
+27 years of Mario history 2d Mario games
+6:24
+continue to use the same design pounds
+6:26
+from 30 years ago but there are some
+6:28
+really interesting observations when we
+6:29
+consider the number of unique beats of
+6:31
+game clean each level as well as the
+6:33
+actual patterns adopted
+6:35
+firstly Mario levels have progressively
+6:37
+increased the number of beats per level
+6:39
+and only recently began to reduce this
+6:41
+count actually the Mario Land games
+6:44
+carry the most beats per level of all
+6:46
+games which is an interesting idea
+6:48
+considering we would imagine levels for
+6:50
+a portable device would be less dense
+6:53
+with activity given modern habits of how
+6:55
+we consume mobile games
+6:57
+similarly the density of how many design
+6:59
+pounds are adopted for beat is only now
+7:01
+beginning to increase with some really
+7:03
+interesting applications and the new
+7:05
+super mario brothers series which we'll
+7:06
+talk about in a moment outside of bee
+7:09
+caves we observe other interesting
+7:11
+fights about the use of specific design
+7:13
+parents
+7:14
+firstly many ideas from the original
+7:17
+Super Mario Brothers seldom apparently
+7:19
+our games with parents such as the roof
+7:21
+Valley available gap and the gaps there
+7:23
+Valley really used secondly a lot of
+7:27
+design patterns are nobody's reskinned
+7:30
+to make them look fresh and appealing
+7:32
+although it's fundamentally the same
+7:33
+idea this actually meet some of the
+7:35
+research quite challenging particularly
+7:37
+when the analysis started on the new
+7:39
+super mario brothers games perhaps most
+7:42
+interesting new patterns are always and
+7:46
+I mean always inspired from existing
+7:49
+ones new design patterns appear in the
+7:51
+Mario series and abundance with 25 new
+7:55
+patterns recognizing the early phases of
+7:57
+this research however was really
+7:59
+fascinating is the each new pattern is
+8:01
+an innovation on an existing one
+8:04
+take for example a to path pattern shown
+8:07
+early on in the original Super Mario
+8:08
+Brothers that allows the player to pass
+8:10
+to clear a particular segment of the
+8:12
+game when evolution of this pattern is
+8:14
+to pass item with the well-known example
+8:16
+and world 1-1 of Super Mario Brothers 3
+8:19
+for the super early fellows Mario to fly
+8:21
+to a separate paths in the map the same
+8:23
+pattern is also inverted in the links of
+8:26
+Superman you land but the player must
+8:28
+not be carrying a
+8:29
+item to take a particular path some more
+8:32
+modern twists found in the New Super
+8:33
+Mario Brothers games include two paths
+8:35
+hidden where the path will be made
+8:37
+visible if Mario walks into as well as
+8:39
+two paths dead end which forces an
+8:42
+uncharacteristic behavior of having the
+8:43
+player bike track all 25 patterns
+8:46
+observed in subsequent games share some
+8:48
+fundamental relationship with an
+8:50
+original pattern from Super Mario
+8:52
+Brothers this tells us two things one
+8:55
+that the original analysis of Super
+8:56
+Mario Brothers sound but more
+8:58
+importantly there's a fundamental
+9:00
+language to Mario level design that
+9:02
+Nintendo must actually use whether this
+9:05
+is explicit or not or whether it's
+9:07
+invite annotated the same way that we
+9:08
+describe them we don't know but it's
+9:11
+clear that there is a core logic behind
+9:13
+each game enemies
+9:15
+despite this there are also some weird
+9:18
+habits with games like Super Mario Land
+9:20
+2 super mario world being the main
+9:22
+culprits for creating what we call
+9:24
+throwaways patterns the same parents
+9:27
+such as the spate trap and trench valley
+9:29
+that seldom appear ever and other Mario
+9:33
+games arguably the most exciting fame
+9:37
+from this analysis is the continued use
+9:39
+of the silent tutorial level 11 of Super
+9:42
+Mario Brothers creates an invaluable
+9:44
+tutorial on core gameplay mechanics and
+9:46
+its opening segment with Mario being
+9:48
+faced with a goomba as well as a
+9:50
+particular brick placement and ahead
+9:51
+mushroom in one of the question blogs
+9:54
+this is actually three design patterns
+9:56
+of once multiple paths establishing the
+10:00
+Mario can either run under the brake
+10:02
+blocks of jump onto them in this case
+10:04
+this is a two paths pattern single enemy
+10:07
+providing one enemy that will challenge
+10:09
+Mario risk/reward the culmination of the
+10:12
+head mushroom being in the same level as
+10:14
+the Goomba these three parents tell us
+10:17
+some really useful information on how to
+10:18
+play mario implicitly one you can use
+10:22
+the jump to either e kill an enemy or be
+10:25
+jump onto a platform to avoid being
+10:26
+attacked and in fact see it blocks to
+10:30
+fame datums number two touching a goomba
+10:33
+and not jumping on it or killers but
+10:36
+touching a mushroom reward errs three
+10:39
+sometimes it's really worth going for
+10:40
+the question blocks even if enemies are
+10:42
+nearby
+10:43
+this is a silent tutorial no text is
+10:46
+displayed your words are said but the
+10:48
+player gains tremendous insight on how
+10:50
+to play super mario brothers so it's
+10:53
+perhaps fitting then that the same
+10:55
+tutorial appears in the first level of
+10:57
+subsequent games with almost every game
+11:00
+using the same three patterns as we see
+11:04
+here in World 11 of Super Mario Brothers
+11:06
+3 the two path has changed to a three
+11:08
+paths with the mushroom on the top layer
+11:11
+meanwhile super mario world mixes up
+11:14
+with a coupe attacking from the top path
+11:16
+but the risk-reward this time being a
+11:18
+dragon coin a trimmed-down Russian of
+11:22
+the same pattern appears in Super Mario
+11:23
+Land fast-forward over a decade later
+11:26
+and new super mario brothers on the d/s
+11:29
+uses the same old trick we round up here
+11:32
+and New Super Mario Brothers you
+11:34
+repeating the same approach almost 30
+11:37
+years later it might change slightly but
+11:41
+at the end of the day it's always the
+11:43
+same patterns two or more paths and a
+11:46
+risk/reward gamble brought about by a
+11:48
+solitary enemy only super mario line two
+11:51
+fields to adhere to this pattern
+11:54
+what's fascinating is that the silent
+11:56
+tutorial has been setting and right
+11:57
+front of us all this time for 30 years
+12:02
+the new Superman of our series is
+12:03
+equally fascinating and that both
+12:05
+respect the traditions of older mario
+12:07
+games but continuous subverts four
+12:09
+screws around with them for his own
+12:10
+purposes while many old school parents
+12:13
+return new patterns emerge either to
+12:15
+expressly challenge old ideas such as
+12:17
+the two paths hidden or two paths dead
+12:19
+end for all patterns are matched
+12:21
+together and interesting ways this can
+12:24
+be summed up as pattern crossover
+12:26
+whereby two patterns are much together
+12:28
+to create something that isn't some
+12:30
+sense new
+12:31
+the example should know from New Super
+12:33
+Mario Bros u T two patterns and merge
+12:36
+them together to create something that
+12:37
+is not only a new experience but is
+12:39
+immediately relatable to anyone who has
+12:41
+knowledge of money or platforms in
+12:43
+general in each case one of the patterns
+12:46
+becomes the dominant where we have a
+12:48
+strong understanding of how to clear
+12:49
+this particular set of patterns given we
+12:52
+already have a lot of experience in
+12:54
+beating the dominant one
+12:55
+however the other one that's been merged
+12:57
+into it now provides some interesting
+12:59
+segment to kind of enhance the gameplay
+13:01
+in addition we observe cases of patterns
+13:04
+subversion for all parents return VAR
+13:07
+deliberately changed operate on lately
+13:09
+but expect a simple example appears in
+13:11
+New Super Mario Bros 2 where we see a 3
+13:14
+horde typically shown in other games as
+13:16
+good as attacking you one after the
+13:18
+other to know being stacked atop one
+13:20
+another we start to think about the same
+13:23
+core issue but I means of tackling it
+13:25
+changes to accommodate for the new
+13:27
+approach this leaves us with plenty of
+13:29
+questions for future manual level
+13:31
+analysis as the sand tutorial the only
+13:34
+one that exists
+13:35
+probably not we've already observed
+13:37
+parents and level types such as
+13:40
+underground high ground landed cetera
+13:42
+but whether specific patterns are used
+13:44
+with a certain frequency particular
+13:45
+point in time would be interesting to
+13:47
+discover there's a significant body of
+13:50
+the remaining it could be conducted once
+13:52
+this data has been annotated from across
+13:54
+walmart do games in addition taken much
+13:57
+this knowledge of pouring it into the
+13:58
+challenge of procedurally-generated
+13:59
+Mario levels would prove rather exciting
+14:02
+can we proceed to regenerate Mario
+14:04
+levels are a reflection of specific
+14:06
+games in the series can refrain means to
+14:08
+consolidate the creative spaces of these
+14:10
+systems to reflect specific mario games
+14:13
+and effectively create a I systems that
+14:15
+could build spiritual successors if you
+14:17
+will to establish games there's plenty
+14:21
+of work happening and procedural
+14:22
+generation of Maddie levels has already
+14:24
+been discussed in the Mario a
+14:25
+competition video but it's a topic of
+14:28
+continued relevance today as we wrap up
+14:30
+I want to take a moment to acknowledge
+14:32
+that all of the talking points from this
+14:33
+video are derived from actual academic
+14:35
+research in Super Mario level design
+14:37
+check out the video description for link
+14:39
+to numerous research papers by a variety
+14:41
+of academics on this topic from all over
+14:43
+the world
+14:44
+this video is also inspired by paper I
+14:46
+presented myself at the 2015 foundation
+14:49
+of digital games conference if you find
+14:51
+this research interesting take a moment
+14:53
+to read through these publications as
+14:55
+the cover these topics in far greater
+14:56
+detail and with that we close this video
+14:59
+wishing super mario brothers are very
+15:02
+happy 30th birthday and we look forward
+15:04
+to what's coming in the future thanks
+15:07
+for watching folks will see you soon
+15:10
+again

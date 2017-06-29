@@ -1,0 +1,476 @@
+  • Home
+  • ALEXA
+  • SERVICES & APIS
+  • DEVICES
+  • RESOURCES
+  • BLOGS
+  • SUPPORT
+
+[                    ] ●
+Home > Alexa > Alexa Skills Kit
+
+  • Alexa
+  • Alexa Skills Kit
+  • Alexa Voice Service
+  • Alexa Fund
+  • Rewards for Skill Developers
+
+Submitting an Alexa Skill for Certification
+
+Introduction
+
+  • English
+  • Deutsch
+
+Once you have completed developing and testing a new skill for Alexa, choose to
+deploy your skill for beta testing to a specified group of users, or you can
+submit it for certification for potential publication.
+
+In either case, users can see the skill in the Amazon Alexa App and enable it
+for use with their devices. The Amazon Alexa App is available for Fire OS,
+Android, iOS, and desktop web browsers.
+
+  • Testing the Skill and Completing the Submission Checklist
+  • Submitting the Skill for Certification
+  • Publication Status
+  • Continuing to Work on Your Skill after Publication
+  • Next Steps
+
+Testing the Skill and Completing the Submission Checklist
+
+When you submit your skill to the Alexa Store, it must pass a certification
+process before it can be published live to Amazon customers. To ensure that
+your skill will meet the certification requirements, complete all of the
+testing described in the Certification Requirements for Custom Skills.
+
+This includes:
+
+  • Meeting policy guidelines
+  • Meeting security requirements
+  • Functional testing
+  • Voice interface and user experience testing
+
+Submitting the Skill for Certification
+
+When your skill is ready for publication, you can submit it to Amazon for
+review. The Submit for Certification button becomes available once all required
+fields are completed.
+
+ 1. Log on to the Developer Portal.
+ 2. Navigate to the Alexa section by clicking Apps & Services and then clicking
+    Alexa in the top navigation. This displays a list of your existing Alexa
+    skills.
+ 3. Find the skill to submit in the list and choose Edit.
+
+    Note that there should be a green check mark next to each section. If any
+    sections are missing the check mark, this means that at least one required
+    field is not filled in. Review the section and complete all required
+    fields.
+
+ 4. Click the Submit for Certification button. When prompted to confirm, click
+    Yes.
+
+Once you have submitted the skill, it shows “Certification” in the Status
+column on list of skills. While it is in the certification process, you cannot
+make any further edits to the configuration. If you change your mind, you can
+select the skill, then click the Withdraw from Certification button.
+
+After Amazon completes the review, you will receive an email at the address
+associated with your developer portal account:
+
+  • If the skill has been certified, the email will provide an estimate for
+    when it will become available to end users.
+  • If the skill could not be certified, the email provides information about
+    the issues you need to correct. You can make any necessary changes and then
+    re-submit.
+
+Publication Status
+
+The current publication status for a skill is displayed in the developer portal
+on your list of skills, in the Status column:
+
+  • Development The skill is available only to you. If you have enabled it for
+    testing, you can test it on devices registered to your developer account.
+  • Certification Amazon is currently reviewing the skill for publication.
+    During this time, you cannot edit the configuration.
+  • Live The skill has been published and is available to users. You cannot
+    edit the configuration for live skills. To start development on an updated
+    version, make your changes on the development version instead.
+
+Continuing to Work on Your Skill after Publication
+
+Once your skill is published to end users, your skill’s status changes to live.
+You cannot change the configuration for a live skill. A new development version
+is automatically created in the developer portal. This version has the same
+information as the original live version. You can use it to continue to work on
+your skill to improve it and add features.
+
+The live and development versions are displayed together in the list of skills
+in the developer portal. When collapsed, the skill shows the development
+version:
+
+Published skill with row collapsedPublished skill with row collapsed
+
+If you expand the row, you can see both the development and live versions:
+
+Published skill with row expandedPublished skill with row expanded
+
+You can work on the new version independently of the original. For instance,
+you can add more intents and sample utterances to the interaction model, change
+the description, and so on. If you make code changes in your service, you
+should use a different endpoint or Lambda function to test those changes so you
+do not disrupt users who are using the live version.
+
+When you submit your new version for certification, both versions remain in
+your list until the new version is certified. Once the new version is
+certified, it becomes live and replaces the previous live version. A new
+development version is then created so that you can continue making updates.
+
+It is recommended that your update maintains backward compatibility with the
+previous version for a seamless user experience. For example, while your update
+may add new intents, you should continue to support the previous intents that
+users are already using.
+
+Next Steps
+
+  • Next: Certification Requirements for Custom Skills
+  • Go back to: Testing a Custom Skill
+  • Return to: Steps to Build a Custom Skill
+
+Auf Deutsch übersetzte Seiten+
+
+  • Definieren der Sprachschnittstelle
+  • Wie Benutzer benutzerdefinierte Skills aufrufen
+  • Auswählen eines Aufrufsnamen für einen benutzerdefinierten Skill
+  • Handbuch für Sprachdesign
+  • Best Practices für Voice Design
+  • Verknüpfen eines Alexa-Benutzers mit einem Benutzer in Ihrem System
+  • Übermitteln eines Alexa Skills zur Zertifizierung
+  • Alexa Skills Kit-Checkliste für die Einreichung
+  • Testen der Sprachschnittstelle und der Benutzererfahrung für einen
+    Alexa-Skill
+
+Übermitteln eines Alexa Skills zur Zertifizierung
+
+Einleitung
+
+Sobald Sie einen neuen Skill für Alexa entwickelt und getestet haben, können
+Sie diesen Skill übermitteln und für die Veröffentlichung zertifzieren lassen.
+Zertifizierte und veröffentlichte Skills können von Benutzern in der Amazon
+Alexa App aufgerufen und zur Verwendung auf ihren Geräten aktiviert werden. Die
+Amazon Alexa App ist für Fire OS, Android, iOS und Desktop-Webbrowser
+verfügbar.
+
+Bearbeiten der Detail-Karte eines Skills
+
+Benutzer der Alexa App können eine Liste aller veröffentlichten Skills
+durchsuchen und in den Detail-Karten Informationen zu den einzelnen Skills
+abrufen. Bevor Sie einen Skill übermitteln, müssen Sie eine Detail-Karte für
+diesen Skill definieren, indem Sie im Entwicklerportal die entsprechenden
+Felder ausfüllen. Durch die Bereitstellung relevanter Inhalte für die
+Detail-Karte machen Sie Ihren Skill für Benutzer schnell auffindbar, leicht
+verständlich und einfach zu verwenden.
+
+Die Detail-Karte enthält die folgenden Informationen:
+
+                     Beschreibung                     Feld im Entwicklerportal
+A. Skillname, der oben auf der Detail-Karte          Skill Information > Name
+   angezeigt wird.
+B. Skillsymbol.                                      Publishing Information >
+                                                     Images
+   Drei Beispielsätze, die veranschaulichen, wie
+   Benutzer Ihren Skill aufrufen können. Diese Sätze
+   müssen Ihren Musteräußerungen entnommen werden,   Publishing Information >
+C. damit Konsistenz gewährleistet wird.Weitere       Example Phrases
+   Informationen finden Sie nachfolgend unter
+   Definieren von Beispielsätzen („Sagen Sie zum
+   Beispiel…“).
+   Vollständige Beschreibung der Hauptfunktionen des
+   Skills und sämtlicher Voraussetzungen für seine
+   Nutzung (zum Beispiel zusätzliche Hardware,       Publishing Information >
+D. Software oder Konten).                            Full Skill Description
+                                                     Publishing Information >
+   Darüber hinaus muss eine kurze Beschreibung       Short Skill Description
+   eingegeben werden, die beim Aufrufen der Liste
+   mit den Skills zu sehen ist.
+   Der Aufrufsname, den Benutzer zum Aufrufen des
+   Skills sagen. Wenn der Aufrufsname zum Beispiel   Skill Information >
+E. „Wattläufer“ lautet, können Benutzer die          Invocation Name
+   Interaktion mit dem Satz: „Frage den Wattläufer…“
+   beginnen.
+
+Detail-Karte für einen Skill in der Alexa AppDetail-Karte für einen Skill in
+der Alexa App
+
+Die Liste der Skills zeigt außerdem kurze Informationen zu jedem Skill:
+
+  • Skillname (Skill Information > Name) und Symbol (Publishing Information >
+    Images)
+  • Eine kurze Beschreibung (Publishing Information > Short Skill Description)
+  • Der erste von drei Beispielsätzen (Publishing Information > Example Phrases
+    )
+
+Das nachfolgende Beispiel zeigt, wie der Skill „Wattläufer“ in der Liste
+dargestellt wird. An dieser Stelle sind eine kurze Beschreibung sowie ein
+Beispielsatz zu sehen:
+
+Darstellung eines Skills in der ListeDarstellung eines Skills in der Liste
+
+Definieren von Beispielsätzen („Sagen Sie zum Beispiel…“)
+
+Anhand der drei Beispielsätze wird für Benutzer ersichtlich, was sie sagen
+müssen, um Ihrem Skill benutzen zu können. Wie oben gezeigt, ist nur der erste
+Satz in der Liste der Skills zu sehen. Die Detail-Karte hingegen umfasst alle
+drei Beispielsätze. Diese Sätze müssen Ihren Musteräußerungen entnommen werden,
+damit Konsistenz gewährleistet wird.
+
+Erstellen der Beispielsätze für die Detail-Karte:
+
+ 1. Wählen Sie aus Ihren Musteräußerungen drei Sätze aus, die Benutzern den
+    Einstieg erleichtern und schnellen Zugriff auf die Hauptfunktionen Ihres
+    Skills ermöglichen.
+ 2. Geben Sie für jeden Slot in diesen Äußerungen einen gültigen Wert ein. Wenn
+    die Äußerung einen Slot enthält, der durch einen benutzerdefinierten
+    Slottyp definiert wird, verwenden Sie einen explizit für diesen
+    benutzerdefinierten Slottyp definierten Wert.
+
+      □ Beispiel: Der Slot {City} in der Äußerung OneshotTideIntent wann ist
+        Flut in {City} verwendet den benutzerdefinierten Slottyp
+        LIST_OF_CITIES. Für diesen Slot müsste eine in LIST_OF_CITIES
+        verwendete Stadt verwendet werden.
+      □ Weitere Informationen über benutzerdefinierte Slots finden Sie unter
+        Definieren der Sprachschnittstelle.
+ 3. Kombinieren Sie mindestens für den ersten Satz die Äußerung mit dem
+    standardmäßigen Aktivierungswort („Alexa“) und dem Aufrufsnamen Ihres
+    Skills.
+
+      □ Der Aufrufsname muss mit einem Großbuchstaben beginnen (zum Beispiel
+        „Wattläufer“, und nicht „wattläufer“).
+      □ Stellen Sie sicher, dass der Satz grammatikalisch korrekt ist und die
+        richtigen Satzzeichen enthält.
+      □ Beispiel: Die Äußerung wann ist Flut in {City} wird zu „Alexa, frage
+        Wattläufer, wann in Bremen Flut ist.“ In diesem Fall ist „frage“ einer
+        der unterstützten Begriffe zum Aufrufen eines Skills, während
+        „Wattläufer“ der Aufrufsname ist.
+ 4. Geben Sie die drei Sätze auf der Registerkarte Publishing Information für
+    Ihren Skill in das Feld Example Phrases ein.
+
+Der Beispielskill „Wattläufer“ enthält die folgenden Musteräußerungen:
+
+OneshotTideIntent `Wann ist in {City} Flut?`
+OneshotTideIntent wann ist Flut in {City} {State}
+OneshotTideIntent wann ist Flut in {City} Stadt
+OneshotTideIntent `Wann ist in {City} am {Date} Flut?`
+OneshotTideIntent wann ist Flut am {Date}
+OneshotTideIntent wann ist Flut {Date}
+SupportedCitiesIntent welche Städte
+SupportedCitiesIntent `Welche Städte werden unterstützt?`
+SupportedCitiesIntent welche Städte
+OneshotTideIntent Gezeiten abrufen für {Date}
+OneshotTideIntent rufe Gezeiten ab {Date}
+OneshotTideIntent wann ist Flut {Date}
+OneshotTideIntent Gezeiteninformationen
+OneshotTideIntent Gezeiteninformationen für {City}
+
+Für diesen Skill hat der Entwickler die folgenden drei Äußerungen verwendet:
+
+OneshotTideIntent when is high tide in {City}
+OneshotTideIntent when is high tide in {City} on {Date}
+SupportedCitiesIntent what cities are supported
+
+Der Slot {City} wurde durch Ist-Werte des benutzerdefinierten Slottyps
+LIST_OF_CITIES ersetzt („Seattle“ und „San Diego“). Für die Detail-Karte hat
+der Entwickler die drei folgenden Beispielsätze eingegeben:
+
+  • „Alexa, frage Wattläufer, wann in Seattle Flut ist.“
+  • „Alexa, frage Wattläufer, wann in San Diego am Samstag Flut ist.“
+  • „Alexa, frage Wattläufer, welche Städte unterstützt werden.“
+
+In diesem Beispiel werden die drei Sätze jeweils als Frage dargestellt. Der
+Entwickler hätte aus den oben genannten Äußerungen auch eine andere Reihe von
+Sätzen auswählen können, wie zum Beispiel:
+
+  • „Alexa, sage Wattläufer, dass er Flutzeiten für morgen abrufen soll.“
+  • „Alexa, frage Wattläufer nach Gezeiten für Los Angeles.“
+
+Beachten Sie, dass auch diese Variationen aus der Liste der Musteräußerungen
+stammen:
+
+OneshotTideIntent get high tide for {Date}
+OneshotTideIntent tide information for {City}
+
+Aufrufen einer Vorschau der Detail-Karte in der Alexa App
+
+Nachdem Sie alle Informationen für Ihre Detail-Karte eingegeben haben, öffnen
+Sie die Alexa App und rufen Sie eine Vorschau der Karte auf. Die App zeigt
+sowohl veröffentlichte Skills als auch Ihre Skills, die Sie gerade entwickeln,
+sodass Sie jederzeit überprüfen können, wie die Karte für Benutzer dargestellt
+wird. Wenn Sie die Liste der Skills filtern möchten, geben Sie den Namen Ihres
+Skills in das Suchfeld ein.
+
+Testen eines Skills und Ausfüllen der Checkliste zur Übermittlung
+
+Wenn Sie Ihren Skill im Alexa Store einreichen, muss er einen
+Zertifizierungsprozess durchlaufen, bevor er für Amazon-Kunden veröffentlicht
+werden kann. Führen Sie alle Tests durch, die unter
+Zertifizierungsanforderungen für benutzerdefinierte Skills beschrieben werden,
+um sicherzustellen, dass Ihr Skill die Zertifizierungsanforderungen erfüllt.
+
+Dazu gehören die folgenden Tests:
+
+  • Einhaltung von Vorschriften
+  • Einhaltung von Sicherheitsanforderungen
+  • Funktionstest
+  • Testen der Sprachschnittstelle und der Benutzererfahrung
+
+Eine Schritt-für-Schritt-Anleitung zur Durchführung dieser Tests anhand eines
+Beispielskills finden Sie unter Schritt-für-Schritt-Anleitung zum Testen eines
+Skills vor der Übermittlung: Beispiel „Wattläufer“.
+
+Übermitteln eines Skills zur Zertifizierung
+
+Wenn Ihr Skill für die Veröffentlichtung bereit ist, können Sie ihn zur
+Überprüfung an Amazon übermitteln. Sobald Sie alle Pflichtfelder ausgefüllt
+haben, wird die Schaltfläche Submit for Certification verfügbar.
+
+ 1. Melden Sie sich beim Entwicklerportal an.
+ 2. Klicken Sie auf Apps und Services, navigieren Sie zum Alexa-Bereich und
+    klicken Sie in der Navigationsleiste oben auf Alexa. Daraufhin sehen Sie
+    eine Liste Ihrer bestehenden Alexa-Skills.
+ 3. Suchen Sie in der Liste den Skill, der übermittelt werden soll, und klicken
+    Sie auf Edit.
+
+    Achten Sie darauf, dass neben jedem Bereich ein grünes Häkchen ist.Wenn
+    dieses Häkchen neben einem oder mehreren Bereichen fehlt, wurde mindestens
+    ein Pflichtfeld nicht ausgefüllt. Überprüfen Sie den Bereich und füllen Sie
+    alle Pflichtfelder aus.
+
+ 4. Klicken Sie auf die Schaltfläche Submit for Certification. Bestätigen Sie
+    den Vorgang mit Yes, wenn Sie dazu aufgefordert werden.
+
+In der Liste der Skills wird der übermittelte Skill mit dem Status
+„Certification“ versehen. Während des Zertifizierungsprozesses können Sie die
+Konfiguration nicht ändern. Wenn Sie den Skill doch nicht zertifizieren lassen
+möchten, klicken Sie auf die Schaltfläche Withdraw from Certification.
+
+Nachdem Amazon die Überprüfung abgeschlossen hat, erhalten Sie eine E-Mail an
+die Adresse, die Ihrem Konto im Entwicklerportal zugeordnet ist.
+
+  • Wenn der Skill zertifiziert wurde, werden Sie in dieser E-Mail darüber
+    informiert, wann der Skill für Benutzer voraussichtlich verfügbar sein
+    wird.
+  • Wenn der Skill nicht zertifiziert werden konnte, werden Sie in dieser
+    E-Mail auf die Probleme hingewiesen, die behoben werden müssen. In diesem
+    Fall können Sie alle erforderlichen Änderungen vornehmen und den Skill
+    erneut übermitteln.
+
+Veröffentlichungsstatus
+
+Den aktuellen Veröffentlichungsstatus eines Skills finden Sie im
+Entwicklerportal in der Liste der Skills in der Spalte Status:
+
+  • Development (Entwiklung) Der Skill ist nur für Sie verfügbar. Wenn Sie den
+    Skill für Testzwecke aktiviert haben, können Sie ihn auf Geräten testen,
+    die Sie über Ihr Entwicklerkonto registriert haben.
+  • Certification (Zertifizierung) Amazon überprüft derzeit, ob die
+    Voraussetzungen für die Veröffentlichung des Skills erfüllt werden. In
+    dieser Phase kann die Konfiguration nicht geändert werden.
+  • Live Der Skill wurde veröffentlicht und ist für Benutzer verfügbar. Sobald
+    ein Skill live verfügbar ist, kann seine Konfiguration nicht mehr geändert
+    werden. Wenn Sie einen Skill aktualisieren möchten, bearbeiten Sie die für
+    diesen Zweck vorgesehene Entwicklungsversion.
+
+Bearbeiten eines Skills nach seiner Veröffentlichung
+
+Sobald Sie Ihren Skill für Benutzer veröffentlicht haben, ändert sich sein
+Status zu live. Die Konfiguration für einen Live-Skill kann nicht geändert
+werden. Im Entwicklerportal wurde jedoch eine neue Entwicklungsversion für Sie
+erstellt. Diese Version umfasst dieselben Informationen wie die Live-Version.
+Mit dieser Version können Sie Ihren Skill verbessern und durch neue Funktionen
+erweitern.
+
+Sowohl die Live-Version als auch die Entwicklungsversion werden in der Liste
+der Skills im Entwicklerportal aufgeführt.Wenn die Zeile eingeklappt ist, sehen
+Sie nur die Entwicklungsversion.
+
+Veröffentlichter Skill mit eingeklappter ZeileVeröffentlichter Skill mit
+eingeklappter Zeile
+
+Wenn Sie die Zeile ausklappen, sind die Entwicklungs- und die Live-Version
+sichtbar:
+
+Veröffentlichter Skill mit ausgeklappter ZeileVeröffentlichter Skill mit
+ausgeklappter Zeile
+
+Die neue Version lässt sich unabhängig vom Original bearbeiten. Sie können
+beispielsweise weitere Absichten und Musteräußerungen zum Interaktionsmodell
+hinzufügen oder die Beschreibung ändern. Wenn Sie Änderungen am Code für Ihren
+Dienst vornehmen, testen Sie diese Änderungen mit einem anderen Endpunkt bzw.
+einer anderen Lambda-Funktion, sodass keine Unterbrechung für Benutzer der
+Live-Version entsteht.
+
+Nach Übermittlung Ihrer neuen Version bleiben beide Versionen bis zur
+Zertifizierung der neuen Version in der Liste erhalten. Sobald die neue Version
+zertifiziert wurde, wird sie anstelle ihrer Vorgängerversion live geschaltet.
+Gleichzeitig wird eine neue Entwicklungsversion erstellt, mit der Sie den Skill
+jederzeit aktualisieren können.
+
+Damit eine reibungslose Benutzererfahrung gewährleistet werden kann, wird
+empfohlen, bei jeder Aktualisierung Rückwärtskompatibilität mit früheren
+Versionen sicherzustellen. Wenn Ihr Update zum Beispiel neue Absichten enthält,
+sollten Sie dennoch auch die früheren Absichten unterstützen, die von Benutzern
+bereits verwendet werden.
+
+Nächste Schritte
+
+  • So geht es weiter: Zertifizierungsanforderungen für benutzerdefinierte
+    Skills
+  • Zurückgehen zu: Testen eines benutzerdefinierten Skills
+  • Zurückkehren zu: Schritte zum Erstellen eines benutzerdefinierten Skill
+
+Sitemap
+facebook_logo twitter_logo blog_logo
+Follow us
+
+  • Alexa
+      □ Alexa Skills Kit
+      □ Alexa Voice Service
+      □ Alexa Fund
+      □ Rewards for Skill Developers
+  • Services & APIs
+      □ Earn
+      □ Engage
+      □ Build
+  • Devices
+      □ Fire Tablets
+      □ Amazon Fire TV
+      □ Dash Replenishment Service
+      □ Fire Phone
+      □ Amazon Echo
+      □ Amazon Tap
+  • Resources
+      □ Platforms
+      □ Learning Center
+      □ Development Tools
+      □ Promotional Tools
+      □ Marketing Tips
+      □ Other Resources
+  • Blogs
+      □ Alexa Blog
+      □ Appstore Blog
+      □ AWS Blog
+  • Support
+      □ Submitting Your Apps
+      □ FAQs
+      □ Forums
+      □ Contact Us
+      □ App Distribution Agreement
+      □ Mobile Ad Network Publisher Agreement
+      □ Mobile Ad Network Program Participation Requirements
+      □ Advertise Your App With Amazon Agreement
+      □ Program Materials License Agreement
+      □ Trademark Guidelines
+      □ Terms of Use
+    *
+
+© 2010-2016, Amazon.com, Inc. or its affiliates. All Rights Reserved.

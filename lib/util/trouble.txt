@@ -1,0 +1,32 @@
+% isAFact(Goal) :-
+% 	setof(Goal,Goal,List),
+% 	length(List,Length),
+% 	Length > 0.
+	
+% declassified(Goal) :-
+% 	Goal ->
+% 	forall(occurs:sub_term(X,Goal),isDeclassified(X)) ;
+% 	.
+
+% isDeclassified(Term) :-
+% 	see(Term),
+% 	var(Term) -> true ; forall(classifiedTerm(Sub),free_of_term(Sub,Term)).
+
+% isDeclassified(Term) :-
+% 	forall(classifiedTerm(Sub),subtermNotPresentInTerm(Sub,Term)).
+
+% subtermNotPresentInTerm(Sub,Term) :-
+% 	 forall(occurs:sub_term(X,Sub),free_of_term(X,Term)).
+
+% isDeclassified(Term) :-
+% 	forall(classifiedTerm(Sub),forall(occurs:sub_term(X,Sub),((see(X), \+ ground(X)) -> free_of_term(Sub, Term)))).
+
+% declassified(Goal) :-
+% 	Goal,
+% 	forall(occurs:sub_term(X,Goal),isDeclassified(X)).
+
+%% ?- isDeclassified(ask(freeLifePlanner, andrewDougherty, hasSeason(qty(airFilterHAPF600D, 2), _G78413))).
+%% false.
+
+%% ?- isDeclassified(ask(freeLifePlanner, andrewDougherty, hasSeason(qty(airFilterHAPF600D, 2), season))).
+%% true.

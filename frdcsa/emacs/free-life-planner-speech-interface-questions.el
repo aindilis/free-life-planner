@@ -1,0 +1,17 @@
+(setq free-life-planner-speech-interface-questions
+ '(("Is <HEALTHWORKER> coming at 3?" . "")
+   ("Who's coming at 11:30?" . "")
+   ("What's mondays schedule?" . "")
+   ("Who's coming monday?" . "")
+   ("Who else is coming monday?" . "")
+   ("No one is coming this morning" . "")
+   ("Is <HEALTHWORKER> the only one coming today?" . "")
+   ("What appointments are tomorrow?" . "")
+   ("Is there anything in the morning tomorrow?" . "")
+   ("Did we pay the water bill?" . "")
+   ("When does <HEALTHWORKER> come next?" . "")
+   ("When was the last time <HEALTHWORKER> came?" . "")
+   ("What was the amount of the last water bill?" . "")
+   ))
+
+(provide 'free-life-planner-speech-interface-questions)

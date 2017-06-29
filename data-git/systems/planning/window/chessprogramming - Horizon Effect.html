@@ -1,0 +1,1443 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="search" href="https://chessprogramming.wikispaces.com/space/opensearch" type="application/opensearchdescription+xml" title="Wikispaces Search (chessprogramming Wiki)">
+<link rel="alternate" type="application/x-wiki" title="Edit This Page" href="https://chessprogramming.wikispaces.com/page/edit/Horizon+Effect">
+<link rel="alternate" title="chessprogramming - All Changes" href="https://chessprogramming.wikispaces.com/wiki/xmla?v=rss_2_0" type="application/rss+xml">
+<link rel="alternate" title="chessprogramming : Horizon Effect - Discussion" href="https://chessprogramming.wikispaces.com/message/xml/Horizon+Effect?v=rss_2_0" type="application/rss+xml">
+<link rel="alternate" title="chessprogramming : Horizon Effect - Edits" href="https://chessprogramming.wikispaces.com/page/xml/Horizon+Effect?v=rss_2_0" type="application/rss+xml">
+<link rel="microsummary" href="https://chessprogramming.wikispaces.com/page/microsummary/Horizon+Effect/edits">
+<link rel="microsummary" href="https://chessprogramming.wikispaces.com/page/microsummary/Horizon+Effect/messages">
+<script type="text/javascript">
+  
+if (typeof ws === 'undefined') ws = {};
+ws.context = {
+  instance: {
+    id: '1',
+    url: 'wikispaces.com',
+    isMain: true,
+    supportsGoogleDocs: false,
+    isTesClassroom: false,
+  },
+  user: {
+    id: '',
+    username: '',
+    status: '',
+    locale: 'en_US',
+    imageUrlPrefix: 'https://ssl.wikicdn.com/i/user_none_',
+    isTeacher: false,
+    canAdministerWiki: false,
+  },
+  wiki: {
+    id: '335449',
+    name: 'chessprogramming',
+    text: 'chessprogramming',
+    module: 'B',
+    isClassroom: false,
+    isTesClassroom: false
+    ,defaultSpaceId: 335449
+    ,isWwwWiki: false
+  },
+  project: {
+    id: '335449',
+    name: ''
+  },
+  space: {
+    id: '335449',
+    name: 'chessprogramming',
+    isDefaultSpace: true,
+    isDefaultTemplate: false
+  },
+
+  environment_name: 'prod',
+
+  path: {
+    object: 'page',
+    method: 'view',
+    page: 'Horizon Effect',
+    id: ''
+  },
+
+  settings: {
+    main_domain: 'wikispaces.com',
+    session_url: 'https://session.wikispaces.com/1/',
+    asset_url_prefix: 'https://ssl.wikicdn.com',
+    beta_features: false,
+    isMobileSite: false,
+    isUploadCapable: true,
+    can_discuss: false,
+    has_gdocs: false,
+    isDialog: false,
+    pwin: ''
+  },
+  clockSkewMillis: 1461738627536 - ((window.performance && window.performance.timing.responseStart > 0) ? window.performance.timing.responseStart : (new Date()).getTime())
+}
+
+
+// legacy javascript API variables, use the above instead
+var wikispaces_isUserLoggedIn = !!ws.context.user.id;
+var wikispaces_isMain = ws.context.instance.isMain;
+var wikispaces_username = ws.context.user.username;
+var wikispaces_spaceName = ws.context.space.name;
+var wikispaces_projectName = ws.context.project.name;
+var wikispaces_wikiName = ws.context.wiki.name;
+var wikispaces_wikiText = ws.context.wiki.text;
+var wikispaces_isDefaultSpace = ws.context.space.isDefaultSpace;
+var wikispaces_method = ws.context.path.method;
+var wikispaces_object = ws.context.path.object;
+var wikispaces_page = ws.context.path.page;
+var wikispaces_id = ws.context.path.id;
+var wikispaces_domain = ws.context.instance.url;
+var wikispaces_isUserOrganizer = false;
+var wikispaces_main_domain = ws.context.settings.asset_url_prefix;
+var wikispaces_asset_url_prefix = ws.context.settings.asset_url_prefix;
+var wikispaces_beta_features = ws.context.settings.beta_features;
+var wikispaces_isMobileSite = ws.context.settings.isMobileSite;
+var wikispaces_isUploadCapable = ws.context.settings.isUploadCapable;
+var wikispaces_can_discuss = ws.context.settings.can_discuss;
+var wikispaces_has_gdocs = ws.context.settings.has_gdocs;
+
+</script><title>chessprogramming - Horizon Effect</title>
+<meta charset="utf-8">
+<link rel="apple-touch-icon" sizes="144x144" href="https://ssl.wikicdn.com/_/z6371z4x/i/logo-144.png">
+<link rel="apple-touch-icon" sizes="114x114" href="https://ssl.wikicdn.com/_/j5j77xz3/i/logo-114.png">
+<link rel="apple-touch-icon" sizes="72x72" href="https://ssl.wikicdn.com/_/vq8j5432/i/logo-72.png">
+<link rel="apple-touch-icon" href="https://ssl.wikicdn.com/_/38515190/i/logo-57.png">
+<link rel="shortcut icon" href="https://ssl.wikicdn.com/_/55v9k02z/i/logo-16.png">
+<style type="text/css">
+/* Standard theme styles */
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+body {
+  font-family: arial, helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0;
+}
+.ws-theme-header-inner,
+.ws-theme-body-inner,
+.ws-theme-footer-inner,
+.ws-theme-content-inner,
+.ws-theme-sidebar-inner {
+  position: relative;
+}
+.ws-theme-header-inner:after,
+.ws-theme-body-inner:after,
+.ws-theme-footer-inner:after,
+.ws-theme-content-inner:after,
+.ws-theme-sidebar-inner:after,
+.ws-theme-menu-inner:after {
+  content: " ";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+.ws-theme-content, .ws-theme-sidebar {
+  overflow-x: auto;
+}
+.ws-theme-footer {
+  text-align: right;
+}
+.ws-theme-footer a, .ws-theme-footer a:hover {
+  text-decoration: none;
+}
+@media (min-width: 768px) {
+  .ws-theme-container {
+    width: 750px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .ws-theme-content {
+    width: 550px;
+    min-height: 384px;
+    float: right;
+  }
+  .ws-theme-sidebar {
+    width: 200px;
+    float: left;
+  }
+}
+@media (min-width: 992px) {
+  .ws-theme-container {
+    width: 970px;
+  }
+  .ws-theme-content {
+    width: 770px;
+    min-height: 496px;
+  }
+}
+@media (min-width: 1200px) {
+  .ws-theme-container {
+    width: 1170px;
+  }
+  .ws-theme-content {
+    width: 970px;
+    min-height: 600px;
+  }
+}
+/* End standard theme styles */
+</style>
+<style type="text/css">
+/* Theme-specific styles */
+body {
+  background-color: #DBDBE1;
+}
+
+.ws-theme-header .WikiSearch .WikiSearchInput,
+.ws-theme-sidebar .WikiSearch .WikiSearchInput,
+.ws-theme-footer .WikiSearch .WikiSearchInput {
+  width: 100%;
+}
+
+.ws-theme-header,
+.ws-theme-sidebar,
+.ws-theme-footer {
+  color: #000000;
+}
+.ws-theme-header img,
+.ws-theme-sidebar img,
+.ws-theme-footer img {
+  padding: 0;
+  vertical-align: top;
+  border: 0;
+}
+.ws-theme-header a,
+.ws-theme-sidebar a,
+.ws-theme-footer a {
+  color: #0000FF;
+  text-decoration: none
+}
+.ws-theme-header a:hover,
+.ws-theme-sidebar a:hover,
+.ws-theme-footer a:hover {
+  text-decoration: underline;
+}
+
+.ws-theme-header,
+.ws-theme-sidebar {
+  display: none;
+}
+
+.ws-theme-body-inner {
+  padding: 3px;
+}
+
+.ws-theme-content {
+  overflow-x: visible;
+}
+.ws-theme-content-inner {
+  background-color: #FFF;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #CCC;
+}
+
+.ws-theme-footer {
+  margin: 15px 8px;
+  font-size: 12px;
+}
+
+.ws-theme-footer .WikiLicense img {
+  vertical-align: text-bottom;
+}
+
+@media (min-width: 768px) {
+  .ws-theme-container {
+    width: auto;
+  }
+
+  .ws-theme-header,
+  .ws-theme-sidebar {
+    display: block;
+  }
+
+  .ws-theme-header {
+    margin: 8px 0;
+  }
+
+  .ws-theme-body-inner {
+    padding: 0 10px;
+  }
+
+  .ws-theme-content {
+    width: auto;
+    float: none;
+    margin-left: 200px;
+  }
+  .ws-theme-content-inner {
+    width: 100%;
+    border: none;
+    float: left;
+    box-shadow: 0 0 3px 0 rgba(0,0,0,.625);
+  }
+
+  .ws-theme-sidebar {
+    padding: 15px 10px 0 0;
+  }
+  .ws-theme-sidebar ul.WikiActions,
+  .ws-theme-sidebar .WikispacesNavbar .WikispacesNavbarEntryItems ol {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  .ws-theme-sidebar ul.WikiActions > li {
+    padding: 2px;
+  }
+  .ws-theme-nav-edit {
+    color: #666;
+    text-align: center;
+  }
+}
+</style>
+<link rel="stylesheet" href="chessprogramming%20-%20Horizon%20Effect_files/217420326D.css" type="text/css">
+<link rel="stylesheet" href="chessprogramming%20-%20Horizon%20Effect_files/9q897620-internal-bootstrap.css" type="text/css">
+<link rel="stylesheet" href="chessprogramming%20-%20Horizon%20Effect_files/vz033906-internal.css" type="text/css">
+<script src="chessprogramming%20-%20Horizon%20Effect_files/j91xzz3x-top.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+
+  var wsGoogleAccount = 'UA-80504-1';
+  _gaq.push(['_setAccount', wsGoogleAccount]);
+  _gaq.push(['_gat._anonymizeIp']);
+  _gaq.push(['_setDomainName', 'wikispaces.com']);
+  _gaq.push(['_setAllowLinker', true]);
+  _gaq.push(['_setCustomVar', 2, 'Authenticated', 'Guest', 2]);
+  _gaq.push(['_trackPageview']);
+</script></head>
+<body><a href="#WikiContent" class="hidden sr-only sr-only-focusable">Skip to main content</a><div id="js-fixed-header-holder" class="fixed"><div class="WikispacesContent WikispacesBs3" role="banner">
+      
+    <div class="ws-main-top-nav visible-xs">
+    <div class="navbar navbar-static-top" style="margin-bottom: 0;">
+      <div class="container">
+                <div class="navbar-header">
+          <div class="visible-xs pull-left">
+            <a href="https://chessprogramming.wikispaces.com/space/menu" class="WikispacesDialogLink btn navbar-btn">
+              <i class="fa fa-bars"></i>
+            </a>
+          </div>
+          <div class="visible-xs pull-right js-globalnav-popover-container">
+                        <a href="https://www.wikispaces.com/site/signin?goto=https%3A%2F%2Fchessprogramming.wikispaces.com%2FHorizon%2520Effect%3FresponseToken%3D047e878962069f3edefbf112bc5c3d50d" class="btn navbar-btn ws-mobile-guest-username js-globalnav-popover-trigger">
+              guest
+            </a>
+                        <div class="hidden js-globalnav-popover-content">
+              <div class="WikispacesContent WikispacesBs3">
+                <div class="WikiInternalHeaderNav noHide">
+  <div class="WikiInternalHeaderNavMenu">
+                          
+                  <span class="WikiInternalHeaderNavMenuArea"><a href="https://www.wikispaces.com/user/join?goto=https%3A%2F%2Fchessprogramming.wikispaces.com%2FHorizon%2520Effect%3FresponseToken%3D047e878962069f3edefbf112bc5c3d50d" rel="nofollow" class="WikispacesXDomainDialogLink">Join</a></span>
+
+          <span class="divider">|</span>
+        
+        <span class="WikiInternalHeaderNavMenuArea"><a class="js-help-trigger" rel="nofollow" href="http://helpcenter.wikispaces.com/">Help</a></span>
+
+        <span class="divider">|</span>
+      
+      <span class="WikiInternalHeaderNavMenuArea"><a href="https://www.wikispaces.com/site/signin?goto=https%3A%2F%2Fchessprogramming.wikispaces.com%2FHorizon%2520Effect%3FresponseToken%3D047e878962069f3edefbf112bc5c3d50d" rel="nofollow" class="WikispacesXDomainDialogLink">Sign In</a></span>
+      </div>
+</div>              </div>
+            </div>
+          </div>
+          <div class="ws-navbar-middle-xs">
+            <div class="navbar-brand" role="navigation">
+              <a href="https://www.wikispaces.com/" class="ws-logo"></a>
+              <i class="fa fa-angle-right"></i>
+              <a href="https://chessprogramming.wikispaces.com/">chessprogramming</a>
+                              <i class="fa fa-angle-right"></i> <a href="https://chessprogramming.wikispaces.com/home">Home</a>
+              
+            </div>
+          </div>
+                    <form action="/search/view" method="post" class="navbar-form ws-include-xs pull-left ws-navbar-search hidden-xs" role="search"><input name="wikispacesFormToken" value="4ae360acc3292421af17e1e641ccdf733057a8af" type="hidden"><input class="form-control search-query" name="q" placeholder="Search" type="text"> </form>
+                  </div>
+      </div>
+    </div>
+  </div>
+      <div class="hidden-xs"><div class="WikiInternalHeaderNav WikiElement floating">
+  <div class="WikiInternalHeaderNavMenu">
+                                    <span class="WikiInternalHeaderNavMenuArea guestUserName">guest</span><span class="slideMarker divider">|</span>
+        
+                  <span class="WikiInternalHeaderNavMenuArea"><a href="https://www.wikispaces.com/user/join?goto=https%3A%2F%2Fchessprogramming.wikispaces.com%2FHorizon%2520Effect%3FresponseToken%3D047e878962069f3edefbf112bc5c3d50d" rel="nofollow" class="WikispacesXDomainDialogLink">Join</a></span>
+
+          <span class="divider">|</span>
+        
+        <span class="WikiInternalHeaderNavMenuArea"><a class="js-help-trigger" rel="nofollow" href="http://helpcenter.wikispaces.com/">Help</a></span>
+
+        <span class="divider">|</span>
+      
+      <span class="WikiInternalHeaderNavMenuArea"><a href="https://www.wikispaces.com/site/signin?goto=https%3A%2F%2Fchessprogramming.wikispaces.com%2FHorizon%2520Effect%3FresponseToken%3D047e878962069f3edefbf112bc5c3d50d" rel="nofollow" class="WikispacesXDomainDialogLink">Sign In</a></span>
+      </div>
+</div></div>
+  </div></div><div id="js-fixed-header-offset">
+
+<div class="ws-theme-body">
+  <div class="ws-theme-container">
+    <div class="ws-theme-body-inner">
+      <nav class="ws-theme-sidebar" role="navigation">
+        <div class="ws-theme-sidebar-inner">
+                    <div class="ws-theme-logo">
+            <a href="https://chessprogramming.wikispaces.com/" class="WikiLogo WikiElement"><img src="chessprogramming%20-%20Horizon%20Effect_files/logo.jpg" alt="chessprogramming"></a>          </div>
+                    <div class="ws-theme-menu">
+            <div class="ws-theme-menu-inner">
+              <ul class="WikiActions WikiElement WikiControls">
+    <li id="WikiActionHome"><div><span class="WikiActionSupplemental" style="float: right;"></span><a href="https://chessprogramming.wikispaces.com/"><i class="fa fa-home fa-fw"></i></a><a href="https://chessprogramming.wikispaces.com/">Wiki Home</a></div></li>
+    <li id="WikiActionChanges"><div><span class="WikiActionSupplemental" style="float: right;"></span><a href="https://chessprogramming.wikispaces.com/wiki/changes"><i class="fa fa-clock-o fa-fw"></i></a><a href="https://chessprogramming.wikispaces.com/wiki/changes">Recent Changes</a></div></li>
+    <li id="WikiActionPagesAndFiles"><div><span class="WikiActionSupplemental" style="float: right;"></span><a href="https://chessprogramming.wikispaces.com/space/content"><i class="fa fa-file-text-o fa-fw"></i></a><a href="https://chessprogramming.wikispaces.com/space/content">Pages and Files</a></div></li>
+    <li id="WikiActionMembers"><div class="js-member-link"><span class="WikiActionSupplemental" style="float: right;"></span><a href="https://chessprogramming.wikispaces.com/wiki/members"><i class="fa fa-user fa-fw"></i></a><a href="https://chessprogramming.wikispaces.com/wiki/members">Members</a></div></li>
+</ul>
+              <form action="/search/view" method="post" class="WikiSearch WikiElement" role="search"><input class="form-control WikiSearchInput" name="q" placeholder="Search" type="text"> </form>              <div class="WikiCustomNav WikiElement wiki"><strong><a class="wiki_link" href="https://chessprogramming.wikispaces.com/Home">Home</a></strong><br>
+<ul><li><strong><a class="wiki_link" href="https://chessprogramming.wikispaces.com/Home#ChessProgramming">Basics</a></strong><ul><li><a class="wiki_link" href="https://chessprogramming.wikispaces.com/Getting+Started">Getting Started</a></li><li><a class="wiki_link" href="https://chessprogramming.wikispaces.com/Board+Representation">Board Representation</a></li><li><a class="wiki_link" href="https://chessprogramming.wikispaces.com/Search">Search</a></li><li><a class="wiki_link" href="https://chessprogramming.wikispaces.com/Evaluation">Evaluation</a></li></ul></li><li><strong><a class="wiki_link" href="https://chessprogramming.wikispaces.com/Home#PrincipleTopics">Principle Topics</a></strong><ul><li><a class="wiki_link" href="https://chessprogramming.wikispaces.com/Chess">Chess</a></li><li><a class="wiki_link" href="https://chessprogramming.wikispaces.com/Programming">Programming</a></li><li><a class="wiki_link" href="https://chessprogramming.wikispaces.com/Artificial+Intelligence">Artificial Intelligence</a></li><li><a class="wiki_link" href="https://chessprogramming.wikispaces.com/Knowledge">Knowledge</a></li><li><a class="wiki_link" href="https://chessprogramming.wikispaces.com/Learning">Learning</a></li><li><a class="wiki_link" href="https://chessprogramming.wikispaces.com/Engine+Testing">Testing</a></li><li><a class="wiki_link" href="https://chessprogramming.wikispaces.com/Automated+Tuning">Tuning</a></li><li><a class="wiki_link" href="https://chessprogramming.wikispaces.com/User+Interface">User Interface</a></li><li><a class="wiki_link" href="https://chessprogramming.wikispaces.com/Protocols">Protocols</a></li><li><a class="wiki_link" href="https://chessprogramming.wikispaces.com/Dictionary">Dictionary</a></li></ul></li><li><strong><a class="wiki_link" href="https://chessprogramming.wikispaces.com/Home#Lists">Lists</a></strong><ul><li><a class="wiki_link" href="https://chessprogramming.wikispaces.com/Arts">Arts</a></li><li><a class="wiki_link" href="https://chessprogramming.wikispaces.com/Cartoons">Cartoons</a></li><li><a class="wiki_link" href="https://chessprogramming.wikispaces.com/Computer+Chess+Forums">CC Forums</a></li><li><a class="wiki_link" href="https://chessprogramming.wikispaces.com/Conferences">Conferences</a></li><li><a class="wiki_link" href="https://chessprogramming.wikispaces.com/Dedicated+Chess+Computers">Dedicated CC</a></li><li><a class="wiki_link" href="https://chessprogramming.wikispaces.com/Engines">Engines</a></li><li><a class="wiki_link" href="https://chessprogramming.wikispaces.com/Games">Games</a></li><li><a class="wiki_link" href="https://chessprogramming.wikispaces.com/Hardware">Hardware</a></li><li><a class="wiki_link" href="https://chessprogramming.wikispaces.com/History">History</a></li><li><a class="wiki_link" href="https://chessprogramming.wikispaces.com/Organizations">Organizations</a></li><li><a class="wiki_link" href="https://chessprogramming.wikispaces.com/Papers">Papers</a></li><li><a class="wiki_link" href="https://chessprogramming.wikispaces.com/People">People</a></li><li><a class="wiki_link" href="https://chessprogramming.wikispaces.com/Periodical">Periodical</a></li><li><a class="wiki_link" href="https://chessprogramming.wikispaces.com/Samples">Samples</a></li><li><a class="wiki_link" href="https://chessprogramming.wikispaces.com/Software">Software</a></li><li><a class="wiki_link" href="https://chessprogramming.wikispaces.com/Timeline">Timeline</a></li><li><a class="wiki_link" href="https://chessprogramming.wikispaces.com/Tournaments">Tournaments and Matches</a></li><li><a class="wiki_link" href="https://chessprogramming.wikispaces.com/Videos">Videos</a></li></ul></li><li><strong><a class="wiki_link" href="https://chessprogramming.wikispaces.com/Home#Help">Misc</a></strong><ul><li><a class="wiki_link" href="https://chessprogramming.wikispaces.com/Acknowledgments">Acknowledgments</a></li><li><a class="wiki_link" href="https://chessprogramming.wikispaces.com/Guidance+for+Creating+New+Pages">On New Pages</a></li><li><a class="wiki_link" href="https://chessprogramming.wikispaces.com/Recommended+Reading">Recommended Reading</a></li><li><a class="wiki_link" href="https://help.wikispaces.com/home">Wikispaces Help</a></li></ul></li></ul></div>              <div class="ws-theme-nav-edit">
+                              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <main class="ws-theme-content" role="main">
+        <div class="ws-theme-content-inner">
+          <div class="contentBox"><div class="innerContentBox" id="WikiContent">
+
+<script type="text/template" id="comment-footer-template">
+
+<div class="commentFooter modal-footer">
+  <div class="pull-left">
+    <button type="button" class="btn btn-default btn-sm previous"><i class="fa fa-arrow-left"></i></button>
+    <button type="button" class="btn btn-default btn-sm next"><i class="fa fa-arrow-right"></i></button>
+  </div>
+  <% if (ws.context.user.canAdministerWiki && !ws.comments.Manager.readOnly) { %>
+  <div class="pull-right">
+    <button type="button" class="btn btn-default btn-sm remove">Remove</button>
+  </div>
+  <% } %>
+</div>
+
+</script>
+
+<script type="text/template" id="comment-content-template">
+<div class="ws-box commentView">
+  <div class="comment-close">
+    <button type="button" class="closeme close" aria-hidden="true"><i class="fa fa-times"></i></button>
+  </div>
+  <div class="commentHeader">
+    <p class="ws-stream-meta command-context">
+      <a class="userLink userLinkPicture" href="<%= userCreated.url %>"><img class="userPicture" src="<%= userCreated.imageUrl %>" width="16" height="16"></a>
+      <a href="<%= userCreated.url %>"><%= userCreated.username %></a>
+      <% if (smartDate == '__live__') { %>
+      <abbr class="timeago" title="<%= (new Date(parseInt(dateCreated, 10) * 1000)).toISOString() %>">
+        <%= dateCreated %>
+      </abbr>
+      <% } else { %>
+        <%- smartDate %>
+      <% } %>
+      <% if (ws.context.user.canAdministerWiki && ws.comments.Manager.readOnly) { %>
+        <i class="fa fa-trash-o contextual-command delete ws-tip" title="Delete Comment"></i>
+      <% } %>
+    </p>
+  </div>
+
+  <div class="commentBody">
+    <div class="commentContent">
+      <%= description %>
+    </div>
+
+      <% for(i = 0; i < replyPages.length; i++) { %>
+        <% for(var j = 0; j < replyPages[i].digests.length; j++) { %>
+      <div class="commentReply" data-id="<%= replyPages[i].digests[j].id %>">
+        <p class="ws-stream-meta command-context">
+          <a class="userLink userLinkPicture" href="<%= replyPages[i].digests[j].userCreated.url %>"><img class="userPicture" src="<%= replyPages[i].digests[j].userCreated.imageUrl %>" width="16" height="16"></a>
+          <a href="<%= replyPages[i].digests[j].userCreated.url %>"><%= replyPages[i].digests[j].userCreated.username %></a>
+          <% if (smartDate == '__live__') { %>
+          <abbr class="timeago" title="<%= (new Date(parseInt(replyPages[i].digests[j].dateCreated, 10) * 1000)).toISOString() %>">
+            <%= new Date(parseInt(replyPages[i].digests[j].dateCreated, 10) * 1000).toLocaleString() %>
+          </abbr>
+          <% } else { %>
+            <%- smartDate %>
+          <% } %>
+          <% if (ws.context.user.canAdministerWiki) { %>
+          <i class="fa fa-trash-o contextual-command delete-reply ws-tip" title="Delete Reply"></i>
+          <% } %>
+          </p>
+        <div class="commentContent"><%= replyPages[i].digests[j].body %></div>
+      </div>
+        <% } %>
+      <% } %>
+
+      <form class="reply commentReply">
+        <div class="form-group">
+          <textarea name="reply" placeholder="Reply" class="form-control" /></textarea>
+        </div>
+        <div class="btn-toolbar">
+          <button type="submit" class="btn btn-primary btn-sm" name="go" value="1">Post</button>
+
+          <% if (ws.context.user.id) { %>
+            <% if (monitored) { %>
+            <button type="button" class="btn btn-default btn-sm pull-right toggle-monitor ws-tip active" title="You are monitoring replies."><i class="fa fa-eye"></i></button>
+            <% } else { %>
+            <button type="button" class="btn btn-default btn-sm pull-right toggle-monitor ws-tip" title="You are not monitoring replies."><i class="fa fa-eye"></i></button>
+            <% } %>
+          <% } %>
+          <% if (ws.context.user.canAdministerWiki) { %>
+            <% if (locked) { %>
+            <button type="button" class="btn btn-default btn-sm pull-right toggle-lock ws-tip active" title="Replies are not allowed."><i class="fa fa-lock"></i></button>
+            <% } else { %>
+            <button type="button" class="btn btn-default btn-sm pull-right toggle-lock ws-tip" title="Replies are allowed."><i class="fa fa-lock"></i></button>
+            <% } %>
+          <% } %>
+
+          <i class="fa fa-spinner fa-spin spinner pull-right hidden"></i>
+        </div>
+      </form>
+   </div>
+
+   
+<div class="commentFooter modal-footer">
+  <div class="pull-left">
+    <button type="button" class="btn btn-default btn-sm previous"><i class="fa fa-arrow-left"></i></button>
+    <button type="button" class="btn btn-default btn-sm next"><i class="fa fa-arrow-right"></i></button>
+  </div>
+  <% if (ws.context.user.canAdministerWiki && !ws.comments.Manager.readOnly) { %>
+  <div class="pull-right">
+    <button type="button" class="btn btn-default btn-sm remove">Remove</button>
+  </div>
+  <% } %>
+</div>
+
+</div>
+</script>
+
+<script type="text/template" id="comment-composer-template">
+<div class="ws-box commentView">
+  <div class="commentComposer">
+    <div class="comment-close">
+      &nbsp;<button type="button" class="close closeme" aria-hidden="true"><i class="fa fa-times"></i></button>
+    </div>
+    <div class="commentHeader">
+      <p class="ws-stream-meta command-context">
+        <img class="userPicture" src="<%= userCreated.imageUrl %>" width="16" height="16">
+        <a href="#" onclick="return false;"><%= userCreated.username %></a>
+      </p>
+    </div>
+    <div class="commentBody">
+      <textarea name="comment" class="compose form-control" placeholder="Comment"/></textarea><br/>
+      <div class="btn-toolbar">
+        <button type="button" class="btn btn-default btn-sm monitored active pull-right" style="margin-left: 6px" onclick="jQuery(this).toggleClass('active')"><i class="fa fa-eye"></i></button>
+        <button type="button" class="btn btn-default btn-sm locked btn-toggle pull-right" onclick="jQuery(this).toggleClass('active')"><i class="fa fa-lock"></i></button>
+        <button type="button" class="btn btn-primary btn-sm closeme">Save</button>
+      </div>
+    </div>
+  </div>
+
+  
+<div class="commentFooter modal-footer">
+  <div class="pull-left">
+    <button type="button" class="btn btn-default btn-sm previous"><i class="fa fa-arrow-left"></i></button>
+    <button type="button" class="btn btn-default btn-sm next"><i class="fa fa-arrow-right"></i></button>
+  </div>
+  <% if (ws.context.user.canAdministerWiki && !ws.comments.Manager.readOnly) { %>
+  <div class="pull-right">
+    <button type="button" class="btn btn-default btn-sm remove">Remove</button>
+  </div>
+  <% } %>
+</div>
+
+</div>
+</script>
+
+<script type="text/template" id="comment-proxy-template">
+<div class="comment-proxy">
+  <span class="commentUser">
+  <% if (userCreated) { %>
+    <img class="userPicture" src="<%= userCreated.imageUrl %>" width="16" height="16">
+  <% } else { %>
+    <img class="userPicture" src="<%= ws.context.user.imageUrlPrefix %>sm.jpg" width="16" height="16">
+  <% } %>
+  </span>
+  <span class="commentReplies"><%= 1 + _(replyPages).reduce(function(memo, page){ return memo + page.digests.length; }, 0) %></span>
+</div>
+</script>
+
+<div class="ws-menu-bar WikiControls WikispacesContent WikispacesBs3">
+  
+    <h1 class="pageTitle"><a href="https://chessprogramming.wikispaces.com/Horizon+Effect">Horizon Effect</a></h1>
+      <div class="btn-group pull-right">
+          <span class="btn btn-default disabled tipme" title="you do not have permission to edit this page"><i class="fa fa-pencil fa-fw"></i> Edit</span>          <a class="btn btn-default tipme" title="no discussion posts" href="https://chessprogramming.wikispaces.com/Horizon+Effect#discussion"><i class="fa fa-comments fa-fw"></i> 0</a>          <a class="btn btn-default tipme" title="view 37 revisions" href="https://chessprogramming.wikispaces.com/page/history/Horizon+Effect"><i class="fa fa-clock-o fa-fw"></i> 37</a>          <a class="btn btn-default ws-btn-more dropdown-toggle tipme" title="more options" href="https://chessprogramming.wikispaces.com/page/menu/Horizon+Effect"><i class="icon-height-only fa-fw"></i>…</a>        <ul class="ws-more-menu dropdown-menu dropdown-menu-right">
+              <li class=" dropdown"><a class=" ws-tag-dropdown-toggle" href="https://chessprogramming.wikispaces.com/page/tags/Horizon+Effect"><span class="pull-right">4</span> <i class="fa fa-tag fa-fw"></i> Tags</a>
+          <div class="dropdown-menu dropdown-menu-right ws-tag-dropdown-menu">
+          
+
+
+
+<form action="#" name="WikiTagForm" class="WikiTagForm"><input name="wikispacesFormToken" value="1b80e1bcb907ba7450df84e5e8c1d85b092aa409" type="hidden"><input name="wikispacesFormToken" value="1b80e1bcb907ba7450df84e5e8c1d85b092aa409" type="hidden">
+  <div class="WikiTagList">
+    <i class="fa fa-tag ws-action"></i>
+        <ul class="list-unstyled">
+                          <li><a href="https://chessprogramming.wikispaces.com/space/content?tag=diagrams">diagrams</a></li>
+                                <li><a href="https://chessprogramming.wikispaces.com/space/content?tag=mezzoforte">mezzoforte</a></li>
+                                <li><a href="https://chessprogramming.wikispaces.com/space/content?tag=musicvideos">musicvideos</a></li>
+                                <li><a href="https://chessprogramming.wikispaces.com/space/content?tag=search">search</a></li>
+              </ul>
+      </div>
+  </form>      </div>
+    </li>
+              <li class="divider"></li>
+            <li class=""><a class=" WikispacesDialogLink" href="https://chessprogramming.wikispaces.com/wiki/addmonitor?monitorLink=page%3AHorizon%20Effect"><i class="fa fa-eye fa-fw"></i> Notify</a>
+    </li>
+        <li class=""><a class=" WikispacesDialogLink" href="https://chessprogramming.wikispaces.com/page/rss/Horizon+Effect"><i class="fa fa-rss fa-fw"></i> RSS</a>
+    </li>
+        <li class=""><a class="" href="https://chessprogramming.wikispaces.com/page/links/Horizon+Effect"><i class="fa fa-link fa-fw"></i> Backlinks</a>
+    </li>
+              <li class="divider"></li>
+            <li class=""><a class="" href="https://chessprogramming.wikispaces.com/page/code/Horizon+Effect"><i class="fa fa-code fa-fw"></i> Source</a>
+    </li>
+        <li class=""><a class="" href="https://chessprogramming.wikispaces.com/Horizon+Effect?f=print"><i class="fa fa-print fa-fw"></i> Print</a>
+    </li>
+        <li class=""><a class="" href="https://chessprogramming.wikispaces.com/page/pdf/Horizon+Effect"><i class="fa fa-cloud-download fa-fw"></i> Export (PDF)</a>
+    </li>
+      </ul>  </div>
+  </div>
+
+
+
+
+  <textarea class="form-control" id="autosaveContent" style="display:none;" rows="1" cols="1"></textarea>
+  <div id="autosavePrompt" style="display:none;"></div>
+
+<div class="commentContainer">
+  <div class="commentSubject">
+  <div class="wiki wikiPage" id="content_view">
+  <strong><a class="wiki_link" href="https://chessprogramming.wikispaces.com/Home">Home</a> * <a class="wiki_link" href="https://chessprogramming.wikispaces.com/Search">Search</a> * Horizon Effect</strong><br>
+
+
+<table class="wiki_table">
+    <tbody><tr>
+        <td><!-- ws:start:WikiTextLocalImageRule:240:&lt;a href=&quot;https://en.wikipedia.org/wiki/Horizon&quot; rel=&quot;nofollow&quot;&gt;&lt;img src=&quot;/file/view/Sonne_Meer_und_M%C3%B6we.jpg/415452182/Sonne_Meer_und_M%C3%B6we.jpg&quot; alt=&quot;&quot; title=&quot;&quot; /&gt;&lt;/a&gt; --><a href="https://en.wikipedia.org/wiki/Horizon" rel="nofollow"><img src="chessprogramming%20-%20Horizon%20Effect_files/Sonne_Meer_und_Mwe.jpg" alt="Sonne_Meer_und_Möwe.jpg" title="Sonne_Meer_und_Möwe.jpg"></a><!-- ws:end:WikiTextLocalImageRule:240 --><br>
+</td>
+        <th><br>
+</th>
+        <td rowspan="2">The <strong>Horizon Effect</strong> is caused by the <a class="wiki_link" href="https://chessprogramming.wikispaces.com/Depth">depth</a> limitation of the <a class="wiki_link" href="https://chessprogramming.wikispaces.com/Search">search algorithm</a>,
+ and became manifest when some negative event is inevitable but 
+postponable. Because only a partial game tree has been analyzed, it will
+ appear to the system that the event can be avoided when in fact this is
+ not the case. Beside obligatory <a class="wiki_link" href="https://chessprogramming.wikispaces.com/Quiescence+Search">quiescence search</a>, <a class="wiki_link" href="https://chessprogramming.wikispaces.com/Extensions">extensions</a>, specially <a class="wiki_link" href="https://chessprogramming.wikispaces.com/Check+Extensions">check extensions</a> are designed to reduce horizon effects.<br>
+</td>
+    </tr>
+    <tr>
+        <td><a class="wiki_link_ext" href="https://en.wikipedia.org/wiki/Horizon" rel="nofollow">Water Horizon</a> <!-- ws:start:WikiTextRefRule:1:&amp;lt;ref&amp;gt;&lt;a class=&quot;wiki_link_ext&quot; href=&quot;https://en.wikipedia.org/wiki/Horizon&quot; rel=&quot;nofollow&quot;&gt;Horizon from Wikipedia&lt;/a&gt;&amp;lt;/ref&amp;gt; --><sup id="cite_ref-1" class="reference"><a href="#cite_note-1">[1]</a></sup><!-- ws:end:WikiTextRefRule:1 --><br>
+</td>
+        <th><br>
+</th>
+    </tr>
+</tbody></table>
+
+<!-- ws:start:WikiTextTocRule:99:&lt;img id=&quot;wikitext@@toc@@normal&quot; class=&quot;WikiMedia WikiMediaToc&quot; title=&quot;Table of Contents&quot; src=&quot;/site/embedthumbnail/toc/normal?w=225&amp;h=100&quot;/&gt; --><div id="toc"><h1 class="nopad">Table of Contents</h1><!-- ws:end:WikiTextTocRule:99 --><!-- ws:start:WikiTextTocRule:100: --><div style="margin-left: 1em;"><a href="#Quotes">Quotes</a></div>
+<!-- ws:end:WikiTextTocRule:100 --><!-- ws:start:WikiTextTocRule:101: --><div style="margin-left: 2em;"><a href="#Quotes-By%20Tony%20Marsland">By Tony Marsland</a></div>
+<!-- ws:end:WikiTextTocRule:101 --><!-- ws:start:WikiTextTocRule:102: --><div style="margin-left: 2em;"><a href="#Quotes-By%20Amir%20Ban">By Amir Ban</a></div>
+<!-- ws:end:WikiTextTocRule:102 --><!-- ws:start:WikiTextTocRule:103: --><div style="margin-left: 2em;"><a href="#Quotes-By%20Robert%20Hyatt">By Robert Hyatt</a></div>
+<!-- ws:end:WikiTextTocRule:103 --><!-- ws:start:WikiTextTocRule:104: --><div style="margin-left: 2em;"><a href="#Quotes-By%20Gerald%20Tripard">By Gerald Tripard</a></div>
+<!-- ws:end:WikiTextTocRule:104 --><!-- ws:start:WikiTextTocRule:105: --><div style="margin-left: 2em;"><a href="#Quotes-Crossovers">Crossovers</a></div>
+<!-- ws:end:WikiTextTocRule:105 --><!-- ws:start:WikiTextTocRule:106: --><div style="margin-left: 2em;"><a href="#Quotes-Ostrich%20Effect">Ostrich Effect</a></div>
+<!-- ws:end:WikiTextTocRule:106 --><!-- ws:start:WikiTextTocRule:107: --><div style="margin-left: 1em;"><a href="#See%20also">See also</a></div>
+<!-- ws:end:WikiTextTocRule:107 --><!-- ws:start:WikiTextTocRule:108: --><div style="margin-left: 1em;"><a href="#Publications">Publications</a></div>
+<!-- ws:end:WikiTextTocRule:108 --><!-- ws:start:WikiTextTocRule:109: --><div style="margin-left: 1em;"><a href="#Horizon%20Effect%20Elsewhere">Horizon Effect Elsewhere</a></div>
+<!-- ws:end:WikiTextTocRule:109 --><!-- ws:start:WikiTextTocRule:110: --><div style="margin-left: 1em;"><a href="#Forum%20Posts">Forum Posts</a></div>
+<!-- ws:end:WikiTextTocRule:110 --><!-- ws:start:WikiTextTocRule:111: --><div style="margin-left: 1em;"><a href="#External%20Links">External Links</a></div>
+<!-- ws:end:WikiTextTocRule:111 --><!-- ws:start:WikiTextTocRule:112: --><div style="margin-left: 1em;"><a href="#References">References</a></div>
+<!-- ws:end:WikiTextTocRule:112 --><!-- ws:start:WikiTextTocRule:113: --><div style="margin-left: 1em;"><a href="#What%20links%20here?">What links here?</a></div>
+<!-- ws:end:WikiTextTocRule:113 --><!-- ws:start:WikiTextTocRule:114: --></div>
+<!-- ws:end:WikiTextTocRule:114 --><!-- ws:start:WikiTextHeadingRule:71:&lt;h1&gt; --><h1 id="toc0"><a name="Quotes"></a><!-- ws:end:WikiTextHeadingRule:71 -->Quotes</h1>
+ <!-- ws:start:WikiTextHeadingRule:73:&lt;h2&gt; --><h2 id="toc1"><a name="Quotes-By Tony Marsland"></a><!-- ws:end:WikiTextHeadingRule:73 -->By Tony Marsland</h2>
+ Quote by <a class="wiki_link" href="https://chessprogramming.wikispaces.com/Tony+Marsland">Tony Marsland</a> from <em>Computer Chess and Search.</em> <!-- ws:start:WikiTextRefRule:8:&amp;lt;ref&amp;gt;&lt;a class=&quot;wiki_link&quot; href=&quot;/Tony+Marsland&quot;&gt;Tony Marsland&lt;/a&gt; (&lt;strong&gt;1992&lt;/strong&gt;). &lt;em&gt;Computer Chess and Search.&lt;/em&gt; Encyclopedia of Artificial Intelligence (2nd ed.) (ed. S.C. Shapiro) pp. 224-241. John Wiley &amp;amp; Sons, Inc., New York, NY. ISBN 0-471-50305-3. &lt;a class=&quot;wiki_link_ext&quot; href=&quot;http://www.cs.ualberta.ca/%7Etony/RecentPapers/report.mac.pdf&quot; rel=&quot;nofollow&quot;&gt;pdf&lt;/a&gt;&amp;lt;/ref&amp;gt; --><sup id="cite_ref-2" class="reference"><a href="#cite_note-2">[2]</a></sup><!-- ws:end:WikiTextRefRule:8 --> :<br>
+
+
+<table class="wiki_table">
+    <tbody><tr>
+        <td><tt><strong>2. 6. Horizon Effect</strong></tt><br>
+<tt>An unresolved defect of chess programs is the insertion of delaying 
+moves that cause any inevitable loss of material to occur beyond the 
+program’s horizon (maximum search depth), so that the loss is hidden (<a class="wiki_link" href="https://chessprogramming.wikispaces.com/Hans+Berliner">Berliner</a>, 1973 <!-- ws:start:WikiTextRefRule:15:&amp;lt;ref&amp;gt;&lt;a class=&quot;wiki_link&quot; href=&quot;/Hans+Berliner&quot;&gt;Hans Berliner&lt;/a&gt; (&lt;strong&gt;1973&lt;/strong&gt;). &lt;em&gt;Some Necessary Conditions for a Master Chess Program.&lt;/em&gt; &lt;a class=&quot;wiki_link_ext&quot; href=&quot;http://dblp.uni-trier.de/db/conf/ijcai/ijcai73.html&quot; rel=&quot;nofollow&quot;&gt;3. IJCAI 1973&lt;/a&gt;&amp;lt;/ref&amp;gt; --><sup id="cite_ref-3" class="reference"><a href="#cite_note-3">[3]</a></sup><!-- ws:end:WikiTextRefRule:15 -->).
+ The ‘horizon effect’ is said to occur when the delaying moves 
+unnecessarily weaken the position or give up additional material to 
+postpone the eventual loss. The effect is less apparent in programs with
+ more knowledgeable quiescence searches (<a class="wiki_link" href="https://chessprogramming.wikispaces.com/Hermann+Kaindl">Hermann Kaindl</a>, 1982 <!-- ws:start:WikiTextRefRule:22:&amp;lt;ref&amp;gt;&lt;a class=&quot;wiki_link&quot; href=&quot;/Hermann+Kaindl&quot;&gt;Hermann Kaindl&lt;/a&gt; (&lt;strong&gt;1982&lt;/strong&gt;). &lt;em&gt;&lt;a class=&quot;wiki_link&quot; href=&quot;/Quiescence+Search&quot;&gt;Quiescence Search&lt;/a&gt; in Computer Chess.&lt;/em&gt; SIGART Newsletter, 80, pp. 124-131. Reprinted (1983) in Computer-Game-Playing: Theory and Practice, pp. 39-52. Ellis Horwood Ltd., Chichester.&amp;lt;/ref&amp;gt; --><sup id="cite_ref-4" class="reference"><a href="#cite_note-4">[4]</a></sup><!-- ws:end:WikiTextRefRule:22 -->),
+ but all programs exhibit this phenomenon. There are many illustrations 
+of the difficulty; the example in Figure 4, which is based on a study by
+ Kaindl, is clear. Here a program with a simple quiescence search 
+involving only captures would assume that any blocking move saves the 
+queen. Even an 8-ply search (..., Pb2; Bxb2, Pc3; Bxc3, Pd4; Bxd4, Pe5; 
+Bxe5) might not show the inevitable, ‘believing’ that the queen has been
+ saved at the expense of four pawns!</tt><br>
+</td>
+    </tr>
+</tbody></table>
+
+<br>
+
+
+<table class="wiki_table">
+    <tbody><tr>
+        <td><tt>Thus programs with a poor or inadequate quiescence search suffer more from the horizon effect.</tt><br>
+<br>
+<tt>The best way to provide automatic extension of non-quiescent 
+positions is still an open question, despite proposals such as bandwidth
+ heuristic search (<a class="wiki_link" href="https://chessprogramming.wikispaces.com/Larry+Harris">Larry Harris</a>, 1973 <!-- ws:start:WikiTextRefRule:30:&amp;lt;ref&amp;gt;&lt;a class=&quot;wiki_link&quot; href=&quot;/Larry+Harris&quot;&gt;Larry Harris&lt;/a&gt; (&lt;strong&gt;1973&lt;/strong&gt;). &lt;em&gt;The bandwidth heuristic search&lt;/em&gt;. &lt;a class=&quot;wiki_link_ext&quot; href=&quot;http://dblp.uni-trier.de/db/conf/ijcai/ijcai73.html&quot; rel=&quot;nofollow&quot;&gt;3. IJCAI 1973&lt;/a&gt;, &lt;a class=&quot;wiki_link_ext&quot; href=&quot;http://dli.iiit.ac.in/ijcai/IJCAI-73/PDF/004.pdf&quot; rel=&quot;nofollow&quot;&gt;pdf&lt;/a&gt;&amp;lt;/ref&amp;gt; --><sup id="cite_ref-5" class="reference"><a href="#cite_note-5">[5]</a></sup><!-- ws:end:WikiTextRefRule:30 --> ).</tt><br>
+</td>
+    </tr>
+</tbody></table>
+
+<br>
+<!-- ws:start:WikiTextRemoteImageRule:241:&lt;img src=&quot;http://webchess.freehostia.com/diag/chessdiag.php?fen=5r1k/4Qpq1/4p3/1p1p2P1/2p2P2/1p2P3/3P4/BK6%20b%20-%20-&amp;size=medium&amp;coord=yes&amp;cap=no&amp;stm=yes&amp;fb=no&amp;theme=classic&amp;color1=E3CEAA&amp;color2=635147&amp;color3=000000&quot; alt=&quot;5r1k/4Qpq1/4p3/1p1p2P1/2p2P2/1p2P3/3P4/BK6 b - -&quot; title=&quot;5r1k/4Qpq1/4p3/1p1p2P1/2p2P2/1p2P3/3P4/BK6 b - -&quot; /&gt; --><table class="captionBox"><tbody><tr><td class="captionedImage"><img src="chessprogramming%20-%20Horizon%20Effect_files/chessdiag.png" alt="5r1k/4Qpq1/4p3/1p1p2P1/2p2P2/1p2P3/3P4/BK6 b - -" title="5r1k/4Qpq1/4p3/1p1p2P1/2p2P2/1p2P3/3P4/BK6 b - -"></td></tr><tr><td class="imageCaption">5r1k/4Qpq1/4p3/1p1p2P1/2p2P2/1p2P3/3P4/BK6 b - -</td></tr></tbody></table><!-- ws:end:WikiTextRemoteImageRule:241 --><br>
+<br>
+<!-- ws:start:WikiTextHeadingRule:75:&lt;h2&gt; --><h2 id="toc2"><a name="Quotes-By Amir Ban"></a><!-- ws:end:WikiTextHeadingRule:75 -->By Amir Ban</h2>
+ <a class="wiki_link" href="https://chessprogramming.wikispaces.com/Amir+Ban">Amir Ban</a> in a reply to <a class="wiki_link" href="https://chessprogramming.wikispaces.com/Robert+Hyatt">Robert Hyatt</a> on Horizon Effect 1998 <!-- ws:start:WikiTextRefRule:34:&amp;lt;ref&amp;gt;&lt;a class=&quot;wiki_link_ext&quot; href=&quot;http://www.stmintz.com/ccc/index.php?id=31258&quot; rel=&quot;nofollow&quot;&gt;Re: What to do with Horizon effect?&lt;/a&gt; by &lt;a class=&quot;wiki_link&quot; href=&quot;/Amir+Ban&quot;&gt;Amir Ban&lt;/a&gt;, &lt;a class=&quot;wiki_link&quot; href=&quot;/CCC&quot;&gt;CCC&lt;/a&gt;, November 01, 1998&amp;lt;/ref&amp;gt; --><sup id="cite_ref-6" class="reference"><a href="#cite_note-6">[6]</a></sup><!-- ws:end:WikiTextRefRule:34 --> :<br>
+
+
+<table class="wiki_table">
+    <tbody><tr>
+        <td><tt>&gt;not much you can do... horizon effect happens anytime you stop the search</tt><br>
+<tt>&gt;in a non-quiet position... everybody sees it... just get faster.. :)</tt><br>
+<br>
+<tt>I don't agree with this statement. The exposure to horizon effects 
+is what usually limits a program's strength, more than the depth it can 
+reach. The fact that it cannot be totally overcome is irrelevant to the 
+fact that limiting its damage is a first priority. Just getting 
+generally deeper is a poor way to do that, and not very effective 
+either.</tt><br>
+</td>
+    </tr>
+</tbody></table>
+
+<br>
+<!-- ws:start:WikiTextHeadingRule:77:&lt;h2&gt; --><h2 id="toc3"><a name="Quotes-By Robert Hyatt"></a><!-- ws:end:WikiTextHeadingRule:77 -->By Robert Hyatt</h2>
+ <a class="wiki_link" href="https://chessprogramming.wikispaces.com/Robert+Hyatt">Robert Hyatt</a> states on Horizon Effect in 2006 <!-- ws:start:WikiTextRefRule:38:&amp;lt;ref&amp;gt;&lt;a class=&quot;wiki_link_ext&quot; href=&quot;http://www.stmintz.com/ccc/index.php?id=483474&quot; rel=&quot;nofollow&quot;&gt;Re: What is horizon effect?&lt;/a&gt; by &lt;a class=&quot;wiki_link&quot; href=&quot;/Robert+Hyatt&quot;&gt;Robert Hyatt&lt;/a&gt;, &lt;a class=&quot;wiki_link&quot; href=&quot;/CCC&quot;&gt;CCC&lt;/a&gt;, January 30, 2006&amp;lt;/ref&amp;gt; --><sup id="cite_ref-7" class="reference"><a href="#cite_note-7">[7]</a></sup><!-- ws:end:WikiTextRefRule:38 --> :<br>
+
+
+<table class="wiki_table">
+    <tbody><tr>
+        <td><tt>The "horizon effect" is something caused by a fixed 
+search horizon that the search can't penetrate. If the search can 
+therefore force something out beyond the horizon, in effect "delaying 
+the problem for a while" that delaying can appear to be a "permanent 
+solution" to the problem, since if the problem is pushed beyond the 
+horizon, so far as the search is concerned, the problem no longer 
+exists.</tt><br>
+<br>
+<tt>Search extensions are one way to mitigate this, but it is impossible to eliminate.</tt><br>
+</td>
+    </tr>
+</tbody></table>
+
+<br>
+<!-- ws:start:WikiTextHeadingRule:79:&lt;h2&gt; --><h2 id="toc4"><a name="Quotes-By Gerald Tripard"></a><!-- ws:end:WikiTextHeadingRule:79 -->By Gerald Tripard</h2>
+<a class="wiki_link" href="https://chessprogramming.wikispaces.com/Gerald+Tripard">Gerald Tripard</a> in a 2010 letter <!-- ws:start:WikiTextRefRule:41:&amp;lt;ref&amp;gt;&lt;a class=&quot;wiki_link_ext&quot; href=&quot;http://ljkrakauer.com/LJK/60s/tripardltr.htm&quot; rel=&quot;nofollow&quot;&gt;July 1, 2010 letter from Dr. Gerald Tripard&lt;/a&gt;, hosted by &lt;a class=&quot;wiki_link&quot; href=&quot;/Lawrence+J.+Krakauer&quot;&gt;Lawrence J. Krakauer&lt;/a&gt;&amp;lt;/ref&amp;gt; --><sup id="cite_ref-8" class="reference"><a href="#cite_note-8">[8]</a></sup><!-- ws:end:WikiTextRefRule:41 --> on his time at <a class="wiki_link" href="https://chessprogramming.wikispaces.com/ETH+Zurich">ETH Zurich</a>, his chess program <a class="wiki_link" href="https://chessprogramming.wikispaces.com/Charly">Charly</a>, and the match versus <a class="wiki_link" href="https://chessprogramming.wikispaces.com/Mac+Hack">Mac Hack VI</a> in 1968 <!-- ws:start:WikiTextRefRule:44:&amp;lt;ref&amp;gt;&lt;a class=&quot;wiki_link_ext&quot; href=&quot;http://ljkrakauer.com/LJK/60s/hamchess.htm&quot; rel=&quot;nofollow&quot;&gt;Computer chess via ham radio&lt;/a&gt; by &lt;a class=&quot;wiki_link&quot; href=&quot;/Lawrence+J.+Krakauer&quot;&gt;Lawrence J. Krakauer&lt;/a&gt;&amp;lt;/ref&amp;gt; --><sup id="cite_ref-9" class="reference"><a href="#cite_note-9">[9]</a></sup><!-- ws:end:WikiTextRefRule:44 -->:<br>
+
+
+<table class="wiki_table">
+    <tbody><tr>
+        <td><tt>One of the more interesting problems of <a class="wiki_link" href="https://chessprogramming.wikispaces.com/Artificial+Intelligence">artificial intelligence</a>
+ that I learned about in working on the chess program was called, "The 
+Horizon Effect". If a problem could be pushed "beyond the preprogrammed"
+ <a class="wiki_link" href="https://chessprogramming.wikispaces.com/Search">tree search</a> <a class="wiki_link" href="https://chessprogramming.wikispaces.com/Depth">limit</a>,
+ the program would make the "bad" choice of sacrificing material to 
+avoid losing, say, a queen "within" the horizon in the situation where 
+the queen was going to be lost eventually anyway. I see this as not just
+ a problem of "artificial" intelligence but human thinking in general, 
+especially of politicians. You can find wonderful examples of this in 
+today's headlines. For example politicians "buy" the favor of a certain 
+class of workers by offering them fabulous retirement benefits. That 
+effectively pushes an "accounting negative balance" beyond the horizon 
+of the politician's career. The politician gets the immediate benefit of
+ support from the affected workers but society will eventually have to 
+pay the bill after the politician is gone.</tt><br>
+</td>
+    </tr>
+</tbody></table>
+
+<!-- ws:start:WikiTextAnchorRule:115:&lt;img src=&quot;/i/anchor.gif&quot; class=&quot;WikiAnchor&quot; alt=&quot;Anchor&quot; id=&quot;wikitext@@anchor@@Crossovers&quot; title=&quot;Anchor: Crossovers&quot;/&gt; --><a name="Crossovers"></a><!-- ws:end:WikiTextAnchorRule:115 --><br>
+<!-- ws:start:WikiTextHeadingRule:81:&lt;h2&gt; --><h2 id="toc5"><a name="Quotes-Crossovers"></a><!-- ws:end:WikiTextHeadingRule:81 -->Crossovers</h2>
+<a class="wiki_link" href="https://chessprogramming.wikispaces.com/Lawrence+J.+Krakauer">Lawrence J. Krakauer</a> in an additional note on <a class="wiki_link" href="https://chessprogramming.wikispaces.com/Gerald+Tripard">Gerald Tripard's</a> letter <!-- ws:start:WikiTextRefRule:47:&amp;lt;ref&amp;gt;&lt;a class=&quot;wiki_link_ext&quot; href=&quot;http://ljkrakauer.com/LJK/60s/tripardltr.htm&quot; rel=&quot;nofollow&quot;&gt;July 1, 2010 letter from Dr. Gerald Tripard&lt;/a&gt;, hosted by &lt;a class=&quot;wiki_link&quot; href=&quot;/Lawrence+J.+Krakauer&quot;&gt;Lawrence J. Krakauer&lt;/a&gt;&amp;lt;/ref&amp;gt; --><sup id="cite_ref-10" class="reference"><a href="#cite_note-10">[10]</a></sup><!-- ws:end:WikiTextRefRule:47 -->:<br>
+
+
+<table class="wiki_table">
+    <tbody><tr>
+        <td><tt><a class="wiki_link" href="https://chessprogramming.wikispaces.com/Richard+Greenblatt">Richard Greenblatt</a> also noted the "Horizon Effect", of course, although I don't know if he called it by that name. One way that <a class="wiki_link" href="https://chessprogramming.wikispaces.com/Mac+Hack">Mac Hack VI</a> attempted to combat it was via a mechanism that I believe was called "<a class="wiki_link" href="https://chessprogramming.wikispaces.com/Quiescence+Search">crossovers</a>". If at the conclusion of the program's <a class="wiki_link" href="https://chessprogramming.wikispaces.com/Search">lookahead</a> (typically six <a class="wiki_link" href="https://chessprogramming.wikispaces.com/Ply">plies</a>
+ deep) there were still pieces under attack, the program extended the 
+lookahead, for those positions only, to an even greater depth. This 
+introduced some other problems, such as comparing board <a class="wiki_link" href="https://chessprogramming.wikispaces.com/Evaluation">evaluations</a> of different <a class="wiki_link" href="https://chessprogramming.wikispaces.com/Depth">depths</a>. However, this seemed better than working with a board evaluation based on a position that was still in a state of flux.</tt><br>
+</td>
+    </tr>
+</tbody></table>
+
+<br>
+<!-- ws:start:WikiTextHeadingRule:83:&lt;h2&gt; --><h2 id="toc6"><a name="Quotes-Ostrich Effect"></a><!-- ws:end:WikiTextHeadingRule:83 -->Ostrich Effect</h2>
+by <a class="wiki_link" href="https://chessprogramming.wikispaces.com/Gary+Boos">Gary J. Boos</a> on <a class="wiki_link" href="https://chessprogramming.wikispaces.com/Mr.+Turk">Mr. Turk</a> from <a class="wiki_link" href="https://chessprogramming.wikispaces.com/Ben+Mittman">Ben Mittman's</a> 1971 Panel <!-- ws:start:WikiTextRefRule:56:&amp;lt;ref&amp;gt;&lt;a class=&quot;wiki_link&quot; href=&quot;/Ben+Mittman&quot;&gt;Ben Mittman&lt;/a&gt; (&lt;strong&gt;1971&lt;/strong&gt;). &lt;em&gt;&lt;a class=&quot;wiki_link_ext&quot; href=&quot;http://www.computerhistory.org/chess/full_record.php?iid=doc-431614f6d1ee8&quot; rel=&quot;nofollow&quot;&gt;Computer Chess Programs (Panel)&lt;/a&gt;&lt;/em&gt;. &lt;a class=&quot;wiki_link_ext&quot; href=&quot;http://archive.computerhistory.org/projects/chess/related_materials/text/3-1%20and%203-3.computer_chess_panel.mittman/3-1%20and%203-3.computer_chess_panel.mittman_etc.1971.ACM.062303021.pdf&quot; rel=&quot;nofollow&quot;&gt;pdf&lt;/a&gt; from &lt;a class=&quot;wiki_link&quot; href=&quot;/The+Computer+History+Museum&quot;&gt;The Computer History Museum&lt;/a&gt;&amp;lt;/ref&amp;gt; --><sup id="cite_ref-11" class="reference"><a href="#cite_note-11">[11]</a></sup><!-- ws:end:WikiTextRefRule:56 --> <!-- ws:start:WikiTextRefRule:58:&amp;lt;ref&amp;gt;&lt;a class=&quot;wiki_link_ext&quot; href=&quot;https://en.wikipedia.org/wiki/Ostrich_effect&quot; rel=&quot;nofollow&quot;&gt;Ostrich effect from Wikipedia&lt;/a&gt;&amp;lt;/ref&amp;gt; --><sup id="cite_ref-12" class="reference"><a href="#cite_note-12">[12]</a></sup><!-- ws:end:WikiTextRefRule:58 -->:<br>
+
+
+<table class="wiki_table">
+    <tbody><tr>
+        <td><tt> <a class="wiki_link" href="https://chessprogramming.wikispaces.com/James+Mundstock">Mundstock</a> noticed an article by <a class="wiki_link" href="https://chessprogramming.wikispaces.com/James+R.+Slagle">Slagle</a> and <a class="wiki_link" href="https://chessprogramming.wikispaces.com/Philip+Bursky">Bursky</a> in the <a class="wiki_link" href="https://chessprogramming.wikispaces.com/ACM#Journal">Journal of the ACM</a></tt>  <!-- ws:start:WikiTextRefRule:66:&amp;lt;ref&amp;gt;&lt;a class=&quot;wiki_link&quot; href=&quot;/James+R.+Slagle&quot;&gt;James R. Slagle&lt;/a&gt;, &lt;a class=&quot;wiki_link&quot; href=&quot;/Philip+Bursky&quot;&gt;Philip Bursky&lt;/a&gt; (&lt;strong&gt;1968&lt;/strong&gt;). &lt;em&gt;Experiments With a Multipurpose, Theorem-Proving Heuristic Program&lt;/em&gt;. &lt;a class=&quot;wiki_link&quot; href=&quot;/ACM#Journal&quot;&gt;Journal of the ACM&lt;/a&gt;, Vol. 15, No. 1&amp;lt;/ref&amp;gt; --><sup id="cite_ref-13" class="reference"><a href="#cite_note-13">[13]</a></sup><!-- ws:end:WikiTextRefRule:66 --><tt>, that pointed toward an algorithm that seemed better than <a class="wiki_link" href="https://chessprogramming.wikispaces.com/Alpha-Beta">alpha-beta</a>
+ pruning. Based upon this article, and guided by Mundstock, I wrote a 
+lookahead routine whose main theme is that the best line is analyzed 
+until it is shown that it is no longer the best line.</tt><br>
+<br>
+<tt>This process eliminates many common problems that accompany a fixed depth search, one of which is the <strong>Ostrich Effect</strong> which existed in even <a class="wiki_link" href="https://chessprogramming.wikispaces.com/Northwestern+University">Northwestern University's</a>  <a class="wiki_link" href="https://chessprogramming.wikispaces.com/Chess+%28Program%29">Chess 3.0</a>. Tests showed that in a small set of positions, <em>Mr. Turk</em>
+ could find the main variation on the first try. We believe that the 
+basic theme of our lookahead routine is better than alpha-beta pruning.</tt> ...<br>
+</td>
+    </tr>
+</tbody></table>
+
+<br>
+<!-- ws:start:WikiTextHeadingRule:85:&lt;h1&gt; --><h1 id="toc7"><a name="See also"></a><!-- ws:end:WikiTextHeadingRule:85 -->See also</h1>
+ <ul><li><a class="wiki_link" href="https://chessprogramming.wikispaces.com/Check">Check</a></li><li><a class="wiki_link" href="https://chessprogramming.wikispaces.com/Check+Extensions">Check Extensions</a></li><li><a class="wiki_link" href="https://chessprogramming.wikispaces.com/Extensions">Extensions</a></li><li><a class="wiki_link" href="https://chessprogramming.wikispaces.com/Horizon+Node">Horizon Node</a></li><li><a class="wiki_link" href="https://chessprogramming.wikispaces.com/Quiescent+Node">Quiescent Node</a></li><li><a class="wiki_link" href="https://chessprogramming.wikispaces.com/Quiescence+Search">Quiescence Search</a></li></ul><br>
+<!-- ws:start:WikiTextHeadingRule:87:&lt;h1&gt; --><h1 id="toc8"><a name="Publications"></a><!-- ws:end:WikiTextHeadingRule:87 -->Publications</h1>
+ <ul><li><a class="wiki_link" href="https://chessprogramming.wikispaces.com/Richard+Greenblatt">Richard Greenblatt</a>, <a class="wiki_link" href="https://chessprogramming.wikispaces.com/Donald+Eastlake">Donald Eastlake</a>, <a class="wiki_link_ext" href="https://en.wikipedia.org/wiki/Steve_Crocker" rel="nofollow">Stephen D. Crocker</a> (<strong>1967</strong>). <em>The Greenblatt Chess Program</em>. Proceedings of the AfiPs Fall Joint Computer Conference, Vol. 31, pp. 801-810. Reprinted (<strong>1988</strong>) in <a class="wiki_link" href="https://chessprogramming.wikispaces.com/Computer+Chess+Compendium">Computer Chess Compendium</a>, <a class="wiki_link_ext" href="http://archive.computerhistory.org/projects/chess/related_materials/text/2-4.Greenblatt_Chess_Program/The_Greenblatt_Chess_Program.Greenblatt_Eastlake_Crocker.1967.Fall_Joint_Computer_Conference.062303060.sm.pdf" rel="nofollow">pdf</a> from <a class="wiki_link" href="https://chessprogramming.wikispaces.com/The+Computer+History+Museum">The Computer History Museum</a> or as <a class="wiki_link_ext" href="http://dspace.mit.edu/handle/1721.1/6176" rel="nofollow">pdf or ps</a> from <a class="wiki_link_ext" href="http://libraries.mit.edu/dspace-mit/" rel="nofollow">DSpace</a> at <a class="wiki_link" href="https://chessprogramming.wikispaces.com/Massachusetts+Institute+of+Technology">MIT</a></li><li><a class="wiki_link" href="https://chessprogramming.wikispaces.com/Hans+Berliner">Hans Berliner</a> (<strong>1973</strong>). <em>Some Necessary Conditions for a Master Chess Program.</em> <a class="wiki_link_ext" href="http://dblp.uni-trier.de/db/conf/ijcai/ijcai73.html" rel="nofollow">3. IJCAI 1973</a></li><li><a class="wiki_link" href="https://chessprogramming.wikispaces.com/Larry+Harris">Larry Harris</a> (<strong>1975</strong>) <em>The Heuristic Search And The Game Of Chess - A Study Of Quiescence, Sacrifices, And Plan Oriented Play</em>. <a class="wiki_link_ext" href="http://dblp.uni-trier.de/db/conf/ijcai/ijcai75.html" rel="nofollow">4. IJCAI 1975</a>, reprinted in <a class="wiki_link" href="https://chessprogramming.wikispaces.com/Computer+Chess+Compendium">Computer Chess Compendium</a> by <a class="wiki_link" href="https://chessprogramming.wikispaces.com/David+Levy">David Levy</a> (Editor) B.T. Batsford, London 1988, ISBN 0-7134-4914-4, Pages 136 - 142.</li><li><a class="wiki_link" href="https://chessprogramming.wikispaces.com/Hermann+Kaindl">Hermann Kaindl</a> (<strong>1982</strong>). <em>Dynamic Control of the <a class="wiki_link" href="https://chessprogramming.wikispaces.com/Quiescence+Search">Quiescence Search</a> in Computer Chess</em>. Cybernetics and Systems Research (ed. R. Trappl), pp. 973-977. North-Holland, Amsterdam.</li><li><a class="wiki_link" href="https://chessprogramming.wikispaces.com/Hermann+Kaindl">Hermann Kaindl</a> (<strong>1982</strong>). <em><a class="wiki_link" href="https://chessprogramming.wikispaces.com/Quiescence+Search">Quiescence Search</a> in Computer Chess.</em>
+ SIGART Newsletter, 80, pp. 124-131. Reprinted (1983) in 
+Computer-Game-Playing: Theory and Practice, pp. 39-52. Ellis Horwood 
+Ltd., Chichester.</li><li><a class="wiki_link" href="https://chessprogramming.wikispaces.com/Tony+Marsland">Tony Marsland</a> (<strong>1992</strong>). <em>Computer Chess and Search.</em>
+ Encyclopedia of Artificial Intelligence (2nd ed.) (ed. S.C. Shapiro) 
+pp. 224-241. John Wiley &amp; Sons, Inc., New York, NY. ISBN 
+0-471-50305-3. <a class="wiki_link_ext" href="http://www.cs.ualberta.ca/%7Etony/RecentPapers/report.mac.pdf" rel="nofollow">pdf</a></li><li><a class="wiki_link" href="https://chessprogramming.wikispaces.com/David+Levy">David Levy</a> (<strong>2015</strong>). <em>The "Horizon Effect" in Politics</em>. <a class="wiki_link" href="https://chessprogramming.wikispaces.com/ICGA+Journal#38_2">ICGA Journal, Vol. 38, No. 2</a></li></ul><br>
+<!-- ws:start:WikiTextHeadingRule:89:&lt;h1&gt; --><h1 id="toc9"><a name="Horizon Effect Elsewhere"></a><!-- ws:end:WikiTextHeadingRule:89 -->Horizon Effect Elsewhere</h1>
+ <ul><li><a class="wiki_link_ext" href="http://www.sigmod.org/dblp/db/indices/a-tree/l/Li:Guangjie.html" rel="nofollow">Guangjie Li</a> (<strong>2009</strong>). <em>The Horizon Effect of Stock Return Predictability and Model Uncertainty on Portfolio Choice</em>: UK Evidence, as <a class="wiki_link_ext" href="http://www.cardiff.ac.uk/carbs/econ/workingpapers/papers/E2009_4.pdf" rel="nofollow">pdf</a></li></ul><br>
+<!-- ws:start:WikiTextHeadingRule:91:&lt;h1&gt; --><h1 id="toc10"><a name="Forum Posts"></a><!-- ws:end:WikiTextHeadingRule:91 -->Forum Posts</h1>
+ <ul><li><a class="wiki_link_ext" href="http://groups.google.com/group/rec.games.chess.computer/browse_frm/thread/d323512ea63c7eb0" rel="nofollow">Horizon Effects in modern chess programs?</a> by Steve McCracken, <a class="wiki_link" href="https://chessprogramming.wikispaces.com/Computer+Chess+Forums">rgcc</a>, September 05, 1995, replies by <a class="wiki_link" href="https://chessprogramming.wikispaces.com/Brian+Sheppard">Brian Sheppard</a></li><li><a class="wiki_link_ext" href="http://www.stmintz.com/ccc/index.php?id=31199" rel="nofollow">What to do with Horizon effect?</a> by <a class="wiki_link" href="https://chessprogramming.wikispaces.com/Werner+Inmann">Werner Inmann</a>, <a class="wiki_link" href="https://chessprogramming.wikispaces.com/CCC">CCC</a>, October 31, 1998</li><li><a class="wiki_link_ext" href="http://www.stmintz.com/ccc/index.php?id=313206" rel="nofollow">real job of the qSearch? find quiet vs stop horizon effect</a> by <a class="wiki_link" href="https://chessprogramming.wikispaces.com/Scott+Farrell">Scott Farrell</a>, <a class="wiki_link" href="https://chessprogramming.wikispaces.com/CCC">CCC</a>, August 28, 2003</li><li><a class="wiki_link_ext" href="http://www.stmintz.com/ccc/index.php?id=483299" rel="nofollow">What is horizon effect?</a> by Masros Tukiran, <a class="wiki_link" href="https://chessprogramming.wikispaces.com/CCC">CCC</a>, January 29, 2006</li><li><a class="wiki_link_ext" href="http://www.talkchess.com/forum/viewtopic.php?t=19374" rel="nofollow">Good Example of Horizon effect in Eval</a> by <a class="wiki_link" href="https://chessprogramming.wikispaces.com/Ross+Boyd">Ross Boyd</a>, <a class="wiki_link" href="https://chessprogramming.wikispaces.com/CCC">CCC</a>, February 02, 2008</li><li><a class="wiki_link_ext" href="http://www.talkchess.com/forum/viewtopic.php?t=20070" rel="nofollow">Horizon Effect</a> by <a class="wiki_link" href="https://chessprogramming.wikispaces.com/Charles+Roberson">Charles Roberson</a>, <a class="wiki_link" href="https://chessprogramming.wikispaces.com/CCC">CCC</a>, March 09, 2008 <!-- ws:start:WikiTextRefRule:68:&amp;lt;ref&amp;gt;&lt;a class=&quot;wiki_link_ext&quot; href=&quot;https://en.wikipedia.org/wiki/Next_%282007_film%29&quot; rel=&quot;nofollow&quot;&gt;Next (2007 film) from Wikipedia&lt;/a&gt;&amp;lt;/ref&amp;gt; --><sup id="cite_ref-14" class="reference"><a href="#cite_note-14">[14]</a></sup><!-- ws:end:WikiTextRefRule:68 --></li><li><a class="wiki_link_ext" href="http://www.talkchess.com/forum/viewtopic.php?t=55782" rel="nofollow">Horizon detection</a> by <a class="wiki_link" href="https://chessprogramming.wikispaces.com/Harm+Geert+Muller">Harm Geert Muller</a>, <a class="wiki_link" href="https://chessprogramming.wikispaces.com/CCC">CCC</a>, March 25, 2015</li><li><a class="wiki_link_ext" href="http://www.talkchess.com/forum/viewtopic.php?t=56517" rel="nofollow">Ostrich tactics and pointless checks</a> by <a class="wiki_link" href="https://chessprogramming.wikispaces.com/Colin+Jenkins">Colin Jenkins</a>, <a class="wiki_link" href="https://chessprogramming.wikispaces.com/CCC">CCC</a>, May 29, 2015 » <a class="wiki_link" href="https://chessprogramming.wikispaces.com/Check">Check</a></li><li><a class="wiki_link_ext" href="http://www.talkchess.com/forum/viewtopic.php?t=56746" rel="nofollow">'Analogy grafting' and the horizon effect</a> by <a class="wiki_link" href="https://chessprogramming.wikispaces.com/Harm+Geert+Muller">Harm Geert Muller</a>, <a class="wiki_link" href="https://chessprogramming.wikispaces.com/CCC">CCC</a>, June 22, 2015</li></ul><br>
+<!-- ws:start:WikiTextHeadingRule:93:&lt;h1&gt; --><h1 id="toc11"><a name="External Links"></a><!-- ws:end:WikiTextHeadingRule:93 -->External Links</h1>
+ <ul><li><a class="wiki_link_ext" href="https://en.wikipedia.org/wiki/Horizon_effect" rel="nofollow">Horizon effect from Wikipedia</a></li><li><a class="wiki_link_ext" href="https://en.wikipedia.org/wiki/Horizon" rel="nofollow">Horizon from Wikipedia</a></li><li><a class="wiki_link_ext" href="http://www.ics.uci.edu/%7Eeppstein/180a/990204.html" rel="nofollow">Which nodes to search? Full-width vs. selective search</a>, Lecture notes for February 4, 1999 by <a class="wiki_link" href="https://chessprogramming.wikispaces.com/David+Eppstein">David Eppstein</a></li><li><a class="wiki_link" href="https://chessprogramming.wikispaces.com/Videos#Mezzoforte">Mezzoforte</a> - Beyond The Horizon, Live In Reykjavik, March 27, 2007, <a class="wiki_link_ext" href="https://en.wikipedia.org/wiki/YouTube" rel="nofollow">YouTube</a> Video<br>
+<!-- ws:start:WikiTextMediaRule:69:&lt;img src=&quot;http://www.wikispaces.com/site/embedthumbnail/custom/24785334?h=0&amp;w=0&quot; class=&quot;WikiMedia WikiMediaCustom&quot; id=&quot;wikitext@@media@@type=&amp;quot;custom&amp;quot; key=&amp;quot;24785334&amp;quot;&quot; title=&quot;Custom Media&quot;/&gt; --><iframe src="chessprogramming%20-%20Horizon%20Effect_files/1FrCxLMQ5eI.html" allowfullscreen="" frameborder="0" height="315" width="560"></iframe><!-- ws:end:WikiTextMediaRule:69 --></li></ul><br>
+<!-- ws:start:WikiTextHeadingRule:95:&lt;h1&gt; --><h1 id="toc12"><a name="References"></a><!-- ws:end:WikiTextHeadingRule:95 -->References</h1>
+ <!-- ws:start:WikiTextReferencesRule:469:&amp;lt;references /&amp;gt; --><ol class="references">
+<li id="cite_note-1"><a href="#cite_ref-1">^</a> <a class="wiki_link_ext" href="https://en.wikipedia.org/wiki/Horizon" rel="nofollow">Horizon from Wikipedia</a></li>
+<li id="cite_note-2"><a href="#cite_ref-2">^</a> <a class="wiki_link" href="https://chessprogramming.wikispaces.com/Tony+Marsland">Tony Marsland</a> (<strong>1992</strong>). <em>Computer Chess and Search.</em>
+ Encyclopedia of Artificial Intelligence (2nd ed.) (ed. S.C. Shapiro) 
+pp. 224-241. John Wiley &amp; Sons, Inc., New York, NY. ISBN 
+0-471-50305-3. <a class="wiki_link_ext" href="http://www.cs.ualberta.ca/%7Etony/RecentPapers/report.mac.pdf" rel="nofollow">pdf</a></li>
+<li id="cite_note-3"><a href="#cite_ref-3">^</a> <a class="wiki_link" href="https://chessprogramming.wikispaces.com/Hans+Berliner">Hans Berliner</a> (<strong>1973</strong>). <em>Some Necessary Conditions for a Master Chess Program.</em> <a class="wiki_link_ext" href="http://dblp.uni-trier.de/db/conf/ijcai/ijcai73.html" rel="nofollow">3. IJCAI 1973</a></li>
+<li id="cite_note-4"><a href="#cite_ref-4">^</a> <a class="wiki_link" href="https://chessprogramming.wikispaces.com/Hermann+Kaindl">Hermann Kaindl</a> (<strong>1982</strong>). <em><a class="wiki_link" href="https://chessprogramming.wikispaces.com/Quiescence+Search">Quiescence Search</a> in Computer Chess.</em>
+ SIGART Newsletter, 80, pp. 124-131. Reprinted (1983) in 
+Computer-Game-Playing: Theory and Practice, pp. 39-52. Ellis Horwood 
+Ltd., Chichester.</li>
+<li id="cite_note-5"><a href="#cite_ref-5">^</a> <a class="wiki_link" href="https://chessprogramming.wikispaces.com/Larry+Harris">Larry Harris</a> (<strong>1973</strong>). <em>The bandwidth heuristic search</em>. <a class="wiki_link_ext" href="http://dblp.uni-trier.de/db/conf/ijcai/ijcai73.html" rel="nofollow">3. IJCAI 1973</a>, <a class="wiki_link_ext" href="http://dli.iiit.ac.in/ijcai/IJCAI-73/PDF/004.pdf" rel="nofollow">pdf</a></li>
+<li id="cite_note-6"><a href="#cite_ref-6">^</a> <a class="wiki_link_ext" href="http://www.stmintz.com/ccc/index.php?id=31258" rel="nofollow">Re: What to do with Horizon effect?</a> by <a class="wiki_link" href="https://chessprogramming.wikispaces.com/Amir+Ban">Amir Ban</a>, <a class="wiki_link" href="https://chessprogramming.wikispaces.com/CCC">CCC</a>, November 01, 1998</li>
+<li id="cite_note-7"><a href="#cite_ref-7">^</a> <a class="wiki_link_ext" href="http://www.stmintz.com/ccc/index.php?id=483474" rel="nofollow">Re: What is horizon effect?</a> by <a class="wiki_link" href="https://chessprogramming.wikispaces.com/Robert+Hyatt">Robert Hyatt</a>, <a class="wiki_link" href="https://chessprogramming.wikispaces.com/CCC">CCC</a>, January 30, 2006</li>
+<li id="cite_note-8"><a href="#cite_ref-8">^</a> <a class="wiki_link_ext" href="http://ljkrakauer.com/LJK/60s/tripardltr.htm" rel="nofollow">July 1, 2010 letter from Dr. Gerald Tripard</a>, hosted by <a class="wiki_link" href="https://chessprogramming.wikispaces.com/Lawrence+J.+Krakauer">Lawrence J. Krakauer</a></li>
+<li id="cite_note-9"><a href="#cite_ref-9">^</a> <a class="wiki_link_ext" href="http://ljkrakauer.com/LJK/60s/hamchess.htm" rel="nofollow">Computer chess via ham radio</a> by <a class="wiki_link" href="https://chessprogramming.wikispaces.com/Lawrence+J.+Krakauer">Lawrence J. Krakauer</a></li>
+<li id="cite_note-10"><a href="#cite_ref-10">^</a> <a class="wiki_link_ext" href="http://ljkrakauer.com/LJK/60s/tripardltr.htm" rel="nofollow">July 1, 2010 letter from Dr. Gerald Tripard</a>, hosted by <a class="wiki_link" href="https://chessprogramming.wikispaces.com/Lawrence+J.+Krakauer">Lawrence J. Krakauer</a></li>
+<li id="cite_note-11"><a href="#cite_ref-11">^</a> <a class="wiki_link" href="https://chessprogramming.wikispaces.com/Ben+Mittman">Ben Mittman</a> (<strong>1971</strong>). <em><a class="wiki_link_ext" href="http://www.computerhistory.org/chess/full_record.php?iid=doc-431614f6d1ee8" rel="nofollow">Computer Chess Programs (Panel)</a></em>. <a class="wiki_link_ext" href="http://archive.computerhistory.org/projects/chess/related_materials/text/3-1%20and%203-3.computer_chess_panel.mittman/3-1%20and%203-3.computer_chess_panel.mittman_etc.1971.ACM.062303021.pdf" rel="nofollow">pdf</a> from <a class="wiki_link" href="https://chessprogramming.wikispaces.com/The+Computer+History+Museum">The Computer History Museum</a></li>
+<li id="cite_note-12"><a href="#cite_ref-12">^</a> <a class="wiki_link_ext" href="https://en.wikipedia.org/wiki/Ostrich_effect" rel="nofollow">Ostrich effect from Wikipedia</a></li>
+<li id="cite_note-13"><a href="#cite_ref-13">^</a> <a class="wiki_link" href="https://chessprogramming.wikispaces.com/James+R.+Slagle">James R. Slagle</a>, <a class="wiki_link" href="https://chessprogramming.wikispaces.com/Philip+Bursky">Philip Bursky</a> (<strong>1968</strong>). <em>Experiments With a Multipurpose, Theorem-Proving Heuristic Program</em>. <a class="wiki_link" href="https://chessprogramming.wikispaces.com/ACM#Journal">Journal of the ACM</a>, Vol. 15, No. 1</li>
+<li id="cite_note-14"><a href="#cite_ref-14">^</a> <a class="wiki_link_ext" href="https://en.wikipedia.org/wiki/Next_%282007_film%29" rel="nofollow">Next (2007 film) from Wikipedia</a></li>
+</ol><!-- ws:end:WikiTextReferencesRule:469 --><br>
+<!-- ws:start:WikiTextHeadingRule:97:&lt;h1&gt; --><h1 id="toc13"><a name="What links here?"></a><!-- ws:end:WikiTextHeadingRule:97 -->What links here?</h1>
+ <!-- ws:start:WikiTextIncludeRule:00:&lt;img src=&quot;https://www.wikispaces.com/site/embedthumbnail/include/backlinks?w=200&amp;h=100&quot; class=&quot;WikiMedia WikiMediaInclude&quot; id=&quot;wikitext@@include@@page=&amp;quot;Horizon Effect&amp;quot; component=&amp;quot;backlinks&amp;quot; limit=&amp;quot;90&amp;quot;&quot; title=&quot;Include backlinks: page=&amp;quot;Horizon Effect&amp;quot; component=&amp;quot;backlinks&amp;quot; limit=&amp;quot;90&amp;quot;&quot; /&gt; --><div class="includeBody-Horizon_Effect includeBody-Horizon%20Effect includeBody"><table class="includeBacklinks">
+  <thead>
+    <tr class="includeBacklinksHeading">
+      <th class="includeBacklinksPageHeading">Page</th>
+      <th class="includeBacklinksDateHeading">Date Edited</th>
+    </tr>
+  </thead>
+    <tbody>
+        <tr class="includeBacklinksLink">
+      <td class="includeBacklinksLinkPage">
+        <a href="https://chessprogramming.wikispaces.com/Advances+in+Computer+Chess+1" class="includeBacklinksLinkUrl">Advances in Computer Chess 1</a>
+      </td>
+      <td class="includeBacklinksLinkDate">Oct 22, 2015</td>
+    </tr>
+        <tr class="includeBacklinksLink">
+      <td class="includeBacklinksLinkPage">
+        <a href="https://chessprogramming.wikispaces.com/Amir+Ban" class="includeBacklinksLinkUrl">Amir Ban</a>
+      </td>
+      <td class="includeBacklinksLinkDate">Jan 24, 2016</td>
+    </tr>
+        <tr class="includeBacklinksLink">
+      <td class="includeBacklinksLinkPage">
+        <a href="https://chessprogramming.wikispaces.com/Atlas" class="includeBacklinksLinkUrl">Atlas</a>
+      </td>
+      <td class="includeBacklinksLinkDate">Jul 18, 2015</td>
+    </tr>
+        <tr class="includeBacklinksLink">
+      <td class="includeBacklinksLinkPage">
+        <a href="https://chessprogramming.wikispaces.com/Capture+Extensions" class="includeBacklinksLinkUrl">Capture Extensions</a>
+      </td>
+      <td class="includeBacklinksLinkDate">Oct 26, 2012</td>
+    </tr>
+        <tr class="includeBacklinksLink">
+      <td class="includeBacklinksLinkPage">
+        <a href="https://chessprogramming.wikispaces.com/Check" class="includeBacklinksLinkUrl">Check</a>
+      </td>
+      <td class="includeBacklinksLinkDate">Mar 16, 2016</td>
+    </tr>
+        <tr class="includeBacklinksLink">
+      <td class="includeBacklinksLinkPage">
+        <a href="https://chessprogramming.wikispaces.com/Check+Extensions" class="includeBacklinksLinkUrl">Check Extensions</a>
+      </td>
+      <td class="includeBacklinksLinkDate">May 15, 2015</td>
+    </tr>
+        <tr class="includeBacklinksLink">
+      <td class="includeBacklinksLinkPage">
+        <a href="https://chessprogramming.wikispaces.com/Crafty" class="includeBacklinksLinkUrl">Crafty</a>
+      </td>
+      <td class="includeBacklinksLinkDate">Apr 4, 2016</td>
+    </tr>
+        <tr class="includeBacklinksLink">
+      <td class="includeBacklinksLinkPage">
+        <a href="https://chessprogramming.wikispaces.com/David+Levy" class="includeBacklinksLinkUrl">David Levy</a>
+      </td>
+      <td class="includeBacklinksLinkDate">Jan 7, 2016</td>
+    </tr>
+        <tr class="includeBacklinksLink">
+      <td class="includeBacklinksLinkPage">
+        <a href="https://chessprogramming.wikispaces.com/Dictionary" class="includeBacklinksLinkUrl">Dictionary</a>
+      </td>
+      <td class="includeBacklinksLinkDate">Jan 6, 2016</td>
+    </tr>
+        <tr class="includeBacklinksLink">
+      <td class="includeBacklinksLinkPage">
+        <a href="https://chessprogramming.wikispaces.com/Extensions" class="includeBacklinksLinkUrl">Extensions</a>
+      </td>
+      <td class="includeBacklinksLinkDate">Mar 22, 2016</td>
+    </tr>
+        <tr class="includeBacklinksLink">
+      <td class="includeBacklinksLinkPage">
+        <a href="https://chessprogramming.wikispaces.com/Gerald+Tripard" class="includeBacklinksLinkUrl">Gerald Tripard</a>
+      </td>
+      <td class="includeBacklinksLinkDate">Oct 30, 2012</td>
+    </tr>
+        <tr class="includeBacklinksLink">
+      <td class="includeBacklinksLinkPage">
+        <a href="https://chessprogramming.wikispaces.com/Horizon" class="includeBacklinksLinkUrl">Horizon</a>
+      </td>
+      <td class="includeBacklinksLinkDate">Mar 17, 2013</td>
+    </tr>
+        <tr class="includeBacklinksLink">
+      <td class="includeBacklinksLinkPage">
+        <a href="https://chessprogramming.wikispaces.com/Horizon+Effect" class="includeBacklinksLinkUrl">Horizon Effect</a>
+      </td>
+      <td class="includeBacklinksLinkDate">Dec 17, 2015</td>
+    </tr>
+        <tr class="includeBacklinksLink">
+      <td class="includeBacklinksLinkPage">
+        <a href="https://chessprogramming.wikispaces.com/Horizon+Node" class="includeBacklinksLinkUrl">Horizon Node</a>
+      </td>
+      <td class="includeBacklinksLinkDate">Nov 8, 2014</td>
+    </tr>
+        <tr class="includeBacklinksLink">
+      <td class="includeBacklinksLinkPage">
+        <a href="https://chessprogramming.wikispaces.com/ICGA+Journal" class="includeBacklinksLinkUrl">ICGA Journal</a>
+      </td>
+      <td class="includeBacklinksLinkDate">Sunday</td>
+    </tr>
+        <tr class="includeBacklinksLink">
+      <td class="includeBacklinksLinkPage">
+        <a href="https://chessprogramming.wikispaces.com/KC+Chess" class="includeBacklinksLinkUrl">KC Chess</a>
+      </td>
+      <td class="includeBacklinksLinkDate">Jan 28, 2012</td>
+    </tr>
+        <tr class="includeBacklinksLink">
+      <td class="includeBacklinksLinkPage">
+        <a href="https://chessprogramming.wikispaces.com/Knowledge" class="includeBacklinksLinkUrl">Knowledge</a>
+      </td>
+      <td class="includeBacklinksLinkDate">Mar 25, 2016</td>
+    </tr>
+        <tr class="includeBacklinksLink">
+      <td class="includeBacklinksLinkPage">
+        <a href="https://chessprogramming.wikispaces.com/Mr.+Turk" class="includeBacklinksLinkUrl">Mr. Turk</a>
+      </td>
+      <td class="includeBacklinksLinkDate">Feb 21, 2015</td>
+    </tr>
+        <tr class="includeBacklinksLink">
+      <td class="includeBacklinksLinkPage">
+        <a href="https://chessprogramming.wikispaces.com/Passed+Pawn+Extensions" class="includeBacklinksLinkUrl">Passed Pawn Extensions</a>
+      </td>
+      <td class="includeBacklinksLinkDate">May 11, 2015</td>
+    </tr>
+        <tr class="includeBacklinksLink">
+      <td class="includeBacklinksLinkPage">
+        <a href="https://chessprogramming.wikispaces.com/Pepito" class="includeBacklinksLinkUrl">Pepito</a>
+      </td>
+      <td class="includeBacklinksLinkDate">Nov 27, 2014</td>
+    </tr>
+        <tr class="includeBacklinksLink">
+      <td class="includeBacklinksLinkPage">
+        <a href="https://chessprogramming.wikispaces.com/Planning" class="includeBacklinksLinkUrl">Planning</a>
+      </td>
+      <td class="includeBacklinksLinkDate">Feb 3, 2016</td>
+    </tr>
+        <tr class="includeBacklinksLink">
+      <td class="includeBacklinksLinkPage">
+        <a href="https://chessprogramming.wikispaces.com/Quiescence+Search" class="includeBacklinksLinkUrl">Quiescence Search</a>
+      </td>
+      <td class="includeBacklinksLinkDate">Apr 4, 2016</td>
+    </tr>
+        <tr class="includeBacklinksLink">
+      <td class="includeBacklinksLinkPage">
+        <a href="https://chessprogramming.wikispaces.com/Ross+Boyd" class="includeBacklinksLinkUrl">Ross Boyd</a>
+      </td>
+      <td class="includeBacklinksLinkDate">Feb 14, 2013</td>
+    </tr>
+        <tr class="includeBacklinksLink">
+      <td class="includeBacklinksLinkPage">
+        <a href="https://chessprogramming.wikispaces.com/Scott+Farrell" class="includeBacklinksLinkUrl">Scott Farrell</a>
+      </td>
+      <td class="includeBacklinksLinkDate">Jun 16, 2013</td>
+    </tr>
+        <tr class="includeBacklinksLink">
+      <td class="includeBacklinksLinkPage">
+        <a href="https://chessprogramming.wikispaces.com/Search" class="includeBacklinksLinkUrl">Search</a>
+      </td>
+      <td class="includeBacklinksLinkDate">Feb 23, 2016</td>
+    </tr>
+        <tr class="includeBacklinksLink">
+      <td class="includeBacklinksLinkPage">
+        <a href="https://chessprogramming.wikispaces.com/Szeregowiec" class="includeBacklinksLinkUrl">Szeregowiec</a>
+      </td>
+      <td class="includeBacklinksLinkDate">Apr 15, 2014</td>
+    </tr>
+      </tbody>
+</table></div><!-- ws:end:WikiTextIncludeRule:00 --><br>
+<strong><a class="wiki_link" href="https://chessprogramming.wikispaces.com/Search">Up one level</a></strong>
+  </div>
+
+<div id="pageEditor" class="editorWrapper editorLayer">
+  <iframe id="target_editor" name="target_editor" src="chessprogramming%20-%20Horizon%20Effect_files/blank.html" style="width:0px;height:0px;border:0"></iframe>
+    <form action="/page/edit/Horizon+Effect" method="post" class="editorForm" id="editorForm"><input name="wikispacesFormToken" value="1117ce90f6f3d2a5303de7287e9bfe66bb630e1c" type="hidden"><div class="wsh"><input class="form-control" name="wikispaces_user_id" value="user-1461738627" type="text"></div><div class="jowic"><input class="form-control" name="goto" autocomplete="off" type="text"></div><div class="jowic"><input class="form-control" name="mode" autocomplete="off" type="text"></div><div class="mimw"><input class="form-control" name="version" autocomplete="off" type="text"></div><div class="wsh"><input class="form-control" name="pageComments" autocomplete="off" type="text"></div><div class="wsh"><input class="form-control" name="saveAndContinue" autocomplete="off" type="text"></div><div class="jovise"><input class="form-control" name="comment" autocomplete="off" type="text"></div><div class="mimw"><input class="form-control" name="commentsDisabled" autocomplete="off" type="text"></div><div class="wsh"><input class="form-control" name="contentPresent" autocomplete="off" type="text"></div><div class="movkp"><input class="form-control" name="editorCleanup" autocomplete="off" type="text"></div><div class="movkp"><input class="form-control" name="WikispacesEditorContent" autocomplete="off" type="text"></div><input name="wikispacesASFormToken" value="eec29608183c9b67bd11915d845ddb2c40bb1410" type="hidden">
+    <input title="goto" name="501ad3a57a3c48918143570843f1779a2dd48958" value="" type="hidden">
+    <input title="mode" name="bdf11a559e3cf62a19d253b84875f1d64182cb8d" autocomplete="off" value="visual" type="hidden">
+    <input title="version" name="4a4cc7e9a0c4b3b5091d2718ab9e3b95bb0e7ee4" autocomplete="off" value="570372193" type="hidden">
+    <input title="pageComments" name="fec50f1c363d08fc2d04114478d0a7748bf3a58a" autocomplete="off" value="" type="hidden">
+    <input title="saveAndContinue" name="d098f795b3804484feee5458bbfd1a38973db32d" value="0" type="hidden">
+    <input title="comment" name="a57c966ab40c51b661754b3497f10a49afbbafc4" value="" type="hidden">
+    <input title="commentsDisabled" name="1db365b2dc301991186520de77903fac32e23195" autocomplete="off" value="" type="hidden">
+    <input title="contentPresent" name="e9d6ca3badabd0561821ca5bc1ba1c352cbb85c3" autocomplete="off" value="" type="hidden">
+    <input title="editorCleanup" name="bfe01a0ad948fd4b3c37d296da513db8652373b5" autocomplete="off" value="" type="hidden">
+
+    <textarea id="wsMainEditor" title="content" class="noContentHide" name="78347115392581bfcf2e0c61cb486445fc29bcfa" style="width: 100%; position: absolute; top: -50000px; left: -50000px;" autocomplete="off"></textarea>
+
+  <noscript>
+    <h2>Javascript Required</h2>
+    <p>You need to enable Javascript in your browser to edit pages.</p>
+  </noscript>
+
+  </form>
+  
+  
+  <div id="plainTextEditor" style="position:relative;display:none" class="editorLayer">
+    <textarea id="textEditor" class="autogrow"></textarea>
+    <p style="clear:both;" align="right"><a href="http://helpcenter.wikispaces.com/customer/portal/articles/1959131-wikitext">help on how to format text</a></p>
+  </div>
+</div>
+
+
+
+
+  </div>
+  <div class="commentColumn WikispacesStream"><div class="WikispacesContent WikispacesBs3"><div class="commentList"></div></div></div>
+</div>
+
+  
+
+
+
+
+<script type="text/template" id="js-event-template">
+  <small>
+    <%- startDateShortFormat %>
+    <a href="<%- ws.common.pathFor('event', 'view', id) %>" class="WikispacesDialogLink">
+      <%- ws.common.truncate(title, 15) %>
+    </a>
+  </small>
+</script>
+
+<script type="text/template" id="js-reply-template">
+  <div class="tc-timeline-comment media">
+
+    <a class="pull-left userLink" href="<%- userCreated.url %>">
+      <img src="<%- userCreated.imageUrl %>" width="30" height="30" class="author-avatar" alt="" />
+    </a>
+    <div class="media-body" data-id="<%= id %>">
+      <% if (ws.context.user.canAdministerWiki) { %>
+        <i class="tc-delete-comment fa fa-trash-o contextual-command destroy-message ws-tip" title="Delete reply"></i>
+      <% } %>
+      <div class="tc-box-name-date">
+        <span class="tc-commenter"><a href="<%- userCreated.url %>"><%- userCreated.username %></a></span>
+        <% if (smartDate == '__live__') { %>
+        <abbr style="border-bottom-style: none;" class="timeago tc-comment-date" title="<%- (new Date(parseInt(dateCreated) * 1000)).toISOString() %>">
+          <%- (new Date(parseInt(dateCreated) * 1000)).toDateString() %>
+        </abbr>
+        <% } else { %>
+          <abbr style="border-bottom-style: none;" class="tc-comment-date"><%- smartDate %></abbr>
+        <% } %>
+      </div>
+      <% if (body) { %>
+      <p>
+        <%= body %>
+      </p>
+      <% } %>
+    </div>
+  </div>
+</script>
+
+<script type="text/template" id="js-share-template">
+  <div class="tc-timeline-block tc-<%= ws.stream.typeToBlockType(sharedType) %>-block" <%= (ws.stream.hideTimeline ? 'style="padding-left: 0px;"' : '') %>>
+
+    <% if (!ws.stream.hideTimeline) { %>
+      <div class="tc-timeline-icon">
+        <i class="fa fa-<%= ws.stream.typeToIcon(sharedType) %>"></i>
+      </div>
+      <div class="tc-timeline-triangle-man"></div>
+    <% } %>
+
+    <div class="tc-timeline-box" data-id="<%= id %>">
+      <div class="media">
+        <a class="pull-left userLink" href="<%- userCreated.url %>">
+          <img src="<%- userCreated.imageUrl %>" width="48" height="48" class="author-avatar media-object" alt="" />
+        </a>
+
+        <div class="media-body">
+
+          <div class="tc-stream-dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              <i class="fa fa-chevron-down"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right" role="menu">
+              <% if (ws.context.user.id) { %>
+              <li>
+                <a class="js-toggle-monitor" tabindex="-1" href="#">
+                  <i class="fa-fw fa fa-eye"></i>
+                  <span><%= monitored ? 'Start Monitoring' : 'Stop Monitoring' %></span>
+                </a>
+              </li>
+              <% } %>
+
+              <% if (ws.context.user.canAdministerWiki) { %>
+              <li>
+                <a class="js-toggle-lock" tabindex="-1" href="#">
+                  <i class="fa-fw fa fa-lock"></i>
+                  <span><%= locked ? 'Unlock Replies' : 'Lock Replies' %></span>
+                </a>
+              </li>
+              <% if (sharedType == 'discussion' || sharedType == 'comment' || sharedType == 'event') { %>
+              <li>
+                <a class="js-destroy-share" tabindex="-1" href="#">
+                  <i class="fa-fw fa fa-trash-o"></i>
+                  Delete <%= ws.stream.typeToName(sharedType) %>
+                </a>
+              </li>
+              <% } %>
+              <% } %>
+            </ul>
+          </div>
+
+          <div class="tc-timeline-box-header ws-reveal media-heading">
+              <h3 class="tc-box-title">
+              <% if (typeof adminLink !== 'undefined' && adminLink && ws.context.user.canAdministerWiki) { %>
+                <a href="<%- adminLink %>"><%- title %></a>
+              <% } else { %>
+                <%- title %>
+              <% } %>
+              <% if (typeof startDate !== 'undefined' && startDate) { %> - <%= startDateShortFormat %> <%= ws.stream.getYearFromStartDate(startDate) %><% } %>
+              </h3>
+              <div class="tc-box-name-date">
+                <% if (ws.context.instance.isTesClassroom) { %>
+                  <%- userCreated.username %>
+                <% } else { %>
+                  <a class="author-name" href="<%- userCreated.url %>"><%- userCreated.username %></a>
+                <% } %>
+                <% if (typeof recipients !== 'undefined' && recipients) { %>
+                  <i class="fa fa-angle-right"></i>
+                  <% if (typeof recipientsLink !== 'undefined') { %>
+                    <a href="<%- recipientsLink %>"><%- recipients %></a>
+                  <% } else { %>
+                    <span class="recipients"><%- recipients %></span>
+                  <% } %>
+                <% } %>
+                <% if (smartDate == '__live__') { %>
+                  <abbr style="border-bottom-style: none;" class="timeago tc-block-date" title="<%= (new Date(parseInt(dateCreated) * 1000)).toISOString() %>">
+                    <%= (new Date(parseInt(dateCreated) * 1000)).toDateString() %>
+                  </abbr>
+                <% } else { %>
+                  <abbr style="border-bottom-style: none;" class="tc-block-date"><%- smartDate %></abbr>
+                <% } %>
+              </div>
+          </div>
+
+          <div class="<%= sharedType == 'comment' && !orphaned && !ws.stream.noCollapse ? 'hidden ' : '' %>tc-block-content">
+            <div class="clearfix">
+              <% if (typeof rangeActions !== 'undefined') { %>
+                <div class="tc-range-actions">
+                  <% for(var i = 0; i < rangeActions.length; i++) { %>
+                  <%= ws.stream.rangeActionTemplate(rangeActions[i]) %>
+                  <% } %>
+                </div>
+              <% } %>
+              <% if (description) { %>
+                <p><%= description %></p>
+              <% } %>
+            </div>
+          </div>
+
+          <% if (replyPages.length > 0 && !(replyPages.length === 1 && replyPages[0].digests.length === 0)) { %>
+            <div class="tc-timeline-comments">
+            <% for (var i = 0; i < replyPages.length; i++) { %>
+              <% if (i == 0 && replyPages[i].more) { %>
+                <a href="#" class="tc-show-more" onclick="ws.stream.pageReplies(<%= id %>, <%= replyPages[i].page + 1 %>); return false">Show more replies (<%= replyPages[i].more %> hidden) </a>
+              <% } else { %>
+                <div></div>
+              <% } %>
+              <% for (var j = 0; j < replyPages[i].digests.length; j++) { %>
+                <%= ws.stream.replyTemplate(replyPages[i].digests[j]) %>
+              <% } %>
+            <% } %>
+            </div>
+          <% } %>
+
+          <% if ((ws.stream.userCanPostMessage && !locked) || ws.context.user.canAdministerWiki) { %>
+          <div class="tc-add-comment media <%= ws.stream.noCollapse ? 'add-active' : ''%>">
+            <img src="<%- ws.context.user.imageUrlPrefix %>lg.jpg" width="30" height="30" class="pull-left author-avatar" alt="" />
+            <div class="media-body">
+              <textarea name="reply" placeholder="Comment" class="form-control form-control-tc ws-reveal <%= !ws.stream.noCollapse ? 'ws-unrevealed' : ''%> reply" /></textarea>
+              <button type="button" class="btn-tc btn-info-tc btn-sm-tc add-reply">Post</button>
+            </div>
+          </div>
+          <% } %>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</script>
+
+<script type="text/template" id="js-range-action-template">
+  <div>
+    <strong><%- name %></strong>
+    <% if (typeof(diffUrl) !== 'undefined') { %>
+      <a href="<%- diffUrl %>">
+    <% } %>
+    <%= new Date(dateCreated * 1000).toLocaleString() %>
+    <% if (typeof(diffUrl) !== 'undefined') { %>
+      </a>
+    <% } %>
+    <% if (typeof(rangeText) !== 'undefined') { %>
+      <div>
+        <span class="commentExtent">
+        <% if (typeof(diffUrl) !== 'undefined') { %>
+          <a href="<%- diffUrl %>">
+        <% } %>
+        <%= rangeText %>
+        <% if (typeof(diffUrl) !== 'undefined') { %>
+          </a>
+        <% } %>
+        </span>
+      </div>
+    <% } %>
+  </div>
+</script>
+
+<script type="text/template" id="js-stream-end-template">
+  <div class="tc-timeline-block tc-end-block">
+    <div class="tc-timeline-icon" style="margin-top: -10px;" />
+    <div class="tc-timeline-box" style="visibility: hidden;">
+      <p class="tc-box-title"></p>
+    </div>
+  </div>
+</script>
+
+<a name="discussion"></a>
+<div class="timeline WikispacesBs3 tc-timeline-embedded show-border">
+  <div class="timeline-line"></div>
+    <div id="js-share-list">
+    <div class="spinner hidden"><i class="fa fa-spinner fa-spin"></i></div>
+  </div>
+</div></div></div><div id="sentinel" style="clear:both"></div>        </div>
+      </main>
+    </div>
+  </div>
+</div>
+
+<footer class="ws-theme-footer" role="contentinfo">
+  <div class="ws-theme-container">
+    <div class="ws-theme-footer-inner">
+      <div class="WikiFooterNav WikiElement">
+<a href="http://helpcenter.wikispaces.com/" rel="nofollow" class="js-help-trigger">Help</a> ·
+<a href="https://www.wikispaces.com/about">About</a> ·
+<a href="http://blog.wikispaces.com/" target="_blank">Blog</a> ·
+<a href="https://www.wikispaces.com/content/pricing" rel="nofollow">Pricing</a> ·
+<a href="https://www.wikispaces.com/privacy" rel="nofollow">Privacy</a> ·
+<a href="https://www.wikispaces.com/terms" rel="nofollow">Terms</a> ·
+<a href="https://www.wikispaces.com/site/help?url=https%3A%2F%2Fchessprogramming.wikispaces.com%2FHorizon%2520Effect%3FresponseToken%3D047e878962069f3edefbf112bc5c3d50d" rel="nofollow"><strong>Support</strong></a> ·
+<a href="https://chessprogramming.wikispaces.com/space/subscribe/upgrade"><strong>Upgrade</strong></a>
+</div>      <div class="WikiLicense WikiElement">Contributions to https://chessprogramming.wikispaces.com/ are licensed under a <a rel="license" href="http://www.creativecommons.org/licenses/by-sa/3.0">Creative Commons Attribution Share-Alike 3.0 License</a>. <a rel="license" href="http://www.creativecommons.org/licenses/by-sa/3.0"><img src="chessprogramming%20-%20Horizon%20Effect_files/by-sa_3.png" alt="Creative Commons Attribution Share-Alike 3.0 License" height="15" width="85"></a><br>Portions not contributed by visitors are Copyright 2016 Tangient LLC<br><a href="https://www.tes.com/us/?utm_source=wikispaces&amp;utm_medium=link&amp;utm_campaign=US-52-footer">TES: The largest network of teachers in the world</a></div>    </div>
+  </div>
+</footer>
+
+
+<script type="text/template" id="dialog-template">
+<div class="modal fade" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
+        <h4 class="modal-title"><%= header %></h4>
+      </div>
+      <div class="modal-body">
+        <%= body %>
+      </div>
+    </div>
+  </div>
+</div>
+</script>
+
+
+<div id="js-help-template" class="hidden">
+  <div class="ws-help">
+    <div class="js-help-controls WikispacesContent WikispacesBs3">
+      <a href="https://www.wikispaces.com/site/gettingstarted/off" class="btn btn-default hidden js-getting-started-off pull-right">Turn off "Getting Started"</a>
+      <ol class="breadcrumb">
+        <li class="js-special-breadcrumb active">
+          <a href="http://helpcenter.wikispaces.com/" data-breadcrumb="0">Home</a>
+        </li>
+        <li class="js-ellipsis hidden js-special-breadcrumb">
+          ...
+        </li>
+        <li class="js-spinner hidden js-special-breadcrumb"><i class="fa fa-spinner fa-spin"></i></li>
+      </ol>
+    </div>
+    <div class="ws-help-content wiki">Loading...</div>
+  </div>
+</div>
+</div>
+<script src="chessprogramming%20-%20Horizon%20Effect_files/4z22682x-common.js" type="text/javascript"></script>
+<script src="chessprogramming%20-%20Horizon%20Effect_files/03083kx7-editorc.js" type="text/javascript"></script>
+<script src="chessprogramming%20-%20Horizon%20Effect_files/85k7018k-stream.js" type="text/javascript"></script>
+<script src="chessprogramming%20-%20Horizon%20Effect_files/91k8z207-contentbar.js" type="text/javascript"></script>
+<script src="chessprogramming%20-%20Horizon%20Effect_files/395j1vq7-component.js" type="text/javascript"></script>
+<script type="text/javascript">
+<!--
+ws.namespace('ws.attributes');
+ws.namespace('ws.stream');
+ws.attributes.DISCUSSION_COUNT = 0;
+ws.attributes.pageId = 10413291;
+ws.attributes.version = 570372193;
+ws.attributes.showEditor = true;
+ws.attributes.editUrl = "https:\/\/chessprogramming.wikispaces.com\/page\/edit\/Horizon+Effect?goto=https%3A%2F%2Fchessprogramming.wikispaces.com%2FHorizon%2520Effect";
+ws.attributes.userCanEdit = false;
+ws.stream.userCanPostMessage = false;
+ws.stream.hideTimeline = true;
+ws.stream.shareSource = "https:\/\/chessprogramming.wikispaces.com\/page\/shares\/Horizon+Effect";
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+jQuery(document).ready(function() {
+  ws.common.addJsonNotices({"warning":[],"error":[],"info":[],"success":[]});
+});
+
+jQuery(document).ready(function($) {
+  
+  function tipPlacement() {
+    return this.$element.closest('.ws-menu-bar .btn-group').is('.open') ? 'top' : 'bottom';
+  }
+
+  
+
+  $('.ws-menu-bar').each(function() {
+    var $menuBar = $(this);
+    var $tagDropdown = $menuBar.find('.ws-tag-dropdown-menu');
+    $menuBar.find('.tipme').tooltip({placement: tipPlacement, container: '.ws-menu-bar'});
+
+    
+    $menuBar.find('.ws-btn-more').click(ws.common.makeLinkClickFunction(function(e) {
+      if ($(this).closest('.ws-menu-bar .btn-group').is('.open')) {
+        ws.common.hideMorePageBar();
+      } else {
+        ws.common.showMorePageBar();
+      }
+    }));
+
+    $menuBar.on('click', '.ws-tag-dropdown-toggle', ws.common.makeLinkClickFunction(function(e) {
+      if ($(this).closest('.ws-menu-bar .dropdown').is('.open')) {
+        ws.common.hideTagDropdown();
+      } else {
+        ws.common.showTagDropdown();
+      }
+    }));
+
+    $(document.body).click(function(e) {
+      var $target = $(e.target);
+      if (!$target.closest('.ws-more-menu').closest('.ws-menu-bar').is($menuBar)
+          || $target.closest('a').is('.WikispacesDialogLink')) {
+        ws.common.hideMorePageBar();
+      }
+      if ($tagDropdown.length && !$target.closest('.ws-tag-dropdown-menu').is($tagDropdown)) {
+        ws.common.hideTagDropdown();
+      }
+    });
+    
+  });
+});
+
+
+jQuery(document).ready(function($) {
+  $('.ws-more-menu').on('click', 'a', function(e) {
+    if ($(this).is('.disabled')) {
+      e.preventDefault();
+    }
+  });
+});
+
+
+jQuery(document).ready(function() {
+  ws.editor.canEdit = false;
+  var editUrl = 'https://chessprogramming.wikispaces.com/page/edit/Horizon+Effect?goto=https%3A%2F%2Fchessprogramming.wikispaces.com%2FHorizon%2520Effect';
+
+  jQuery('#js-edit-from-template').change(function() {
+    window.location = ws.common.addUriParams(editUrl, [['template', jQuery(this).val()]]);
+  });
+});
+
+
+jQuery(document).ready(function() {
+  ws.editor.loadEditorLibs('https://www.wikispaces.com/site/editorlibs/en_US/07z93j80.gz.js');
+});
+
+
+ws.editor.startEditor = function (moreCoreOptions, moreMainOptions) {
+  ws.editor.canEdit = true;
+
+  var coreOptions = {
+    'content_css': ['https://www.wikispaces.com/stylesheet/editori/217420326D.gz.css']
+  };
+
+  // The stylesheet is passed in as a string, turn it into an array
+  // Add bootstrap styles to the editor, if we are in a theme that has full screen bootstrap
+  if (jQuery('body').is('.WikispacesBs3')) {
+    coreOptions.content_css.push('https://www.wikispaces.com//s/internal-bootstrap-body.css');
+  }
+
+  var mainOptions = {
+    'wssave_cancel_url': '/Horizon+Effect',
+    'wsimage_upload_url': 'https://chessprogramming.wikispaces.com/file/multiupload',
+    'wsimage_max_file_size_mb': '20',
+    'wsimage_page_view_group': ''
+  };
+
+  ws.editor.loadEditor(jQuery.extend(coreOptions, moreCoreOptions), jQuery.extend(mainOptions, moreMainOptions));
+};
+
+  var wikispaces_page_version = '570372193';
+
+  jQuery(document).ready(function() {
+    ws.editor.enableButtons();
+  });
+
+
+
+--></script><!-- w18 249 wki:148:149(2) dql:28:39(8) mem:2:14(27) tot:249:249(1) -->
+
+
+</body></html>

@@ -1,0 +1,90 @@
+# note this is in reverse order of importance
+
+$VAR1 = [
+          [
+            "have",
+            [
+              "contextFn ?X ?Y ?Z ..."
+            ],
+            "so that we can do complex contexts without filling up the FreeKBS2 Context list"
+          ],
+          [
+            "Make everything classified by default and have a declassification program written in prolog/perl."
+          ],
+          [
+            "Add to the free life planner a urls to visit as plan steps, and what to do at each of those. use c->uri_for or something wrapping it to generate the appropriate url"
+          ],
+          [
+            "Gourmet/WSM",
+            [
+              "add the ability to request a new food pantry inventory item"
+            ],
+            [
+              "add the ability to say that we've found a new product acquired that satisfies a particular inventory requirement"
+            ],
+            [
+              "add the ability to add a new instance of that product to our inventory, and to make notes as to the condition of that individual item"
+            ]
+          ],
+          [
+            "Create a KB Editor and Prolog Rule/Fact Editor - make them reusable"
+          ],
+          [
+            "Need to enforce good boundaries"
+          ],
+          [
+            "Inventory Manager",
+            [
+              "have an inventory interface which lists types of objects and instances of those types, with the ability to increment and decrement count etc."
+            ],
+            [
+              "Allow to list all the objects in a tree view consisting of containers and supporters such as rooms, tables, boxes and bags"
+            ]
+          ],
+          [
+            "Add the ability for a UniLang like",
+            [
+              "but private"
+            ],
+            "system for routing messages to the appropriate agents. Maybe have a completion grammar as with Dasher."
+          ],
+          [
+            "make a web-based suppositional reasoner using flux state, gdl or what not"
+          ],
+          [
+            "convert it from asserting things into the KB into using the state variables"
+          ],
+          [
+            "Add a life planner rules editor, so that people can edit, in English, various rules. Have them mined potentially from texts and have them edit them. Have the ability to submit texts for analysis to the life planner."
+          ],
+          [
+            "Make it so that it has a log-in for anyone who wishes to use it, based on lists of who I know exists and such, send them email with credentials to their account."
+          ],
+          [
+            "Add default due dates."
+          ],
+          [
+            "Akahige",
+            [
+              "add the ability to add a new question for any of the doctors"
+            ],
+            [
+              "add the ability to record the answer to a question, thus removing the question from the pending questions list"
+            ]
+          ],
+          [
+            "Add a QnA for asking people questions, e.g. Doug Miles: do you know of a way to do microtheories using modules"
+          ],
+          [
+            "Spending",
+            [
+              "add the ability to log loans and gifts, also expenses"
+            ]
+          ],
+          [
+            "create a thing of upcoming deadlines for us to keep an eye on, like a calendar, but better, with failure conditions in case we don't including costs, etc. Use FLUX to plan for contingencies, get suppositional reasoner going and have export to it for reasoning with. Finish life planner"
+          ],
+          [
+            "Add a system for asserting appointments and tasks with deadlines - have it be able to edit the task/appointment as well, using an edit all kind of feature."
+          ]
+        ];

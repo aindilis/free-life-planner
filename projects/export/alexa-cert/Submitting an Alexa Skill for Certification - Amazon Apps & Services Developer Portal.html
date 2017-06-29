@@ -1,0 +1,4310 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
+  <head>
+    <meta http-equiv="x-ua-compatible" content="IE=EDGE">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, maximum-width=1">
+    <meta name="keywords" content="amazon, appstore, developer portal"/>
+    
+    <meta name="description" content="Amazon Apps & Services Developer Portal"/>
+
+    <script type="text/javascript">var ue_t0=window.ue_t0||+new Date();</script><script type="text/javascript">(function(e){var c=e;var a=c.ue||{};a.main_scope="mainscopecsm";a.q=[];a.t0=c.ue_t0||+new Date();a.d=g;function g(h){return +new Date()-(h?0:a.t0)}function d(h){return function(){a.q.push({n:h,a:arguments,t:a.d()})}}function b(m,l,h,j,i){var k={m:m,f:l,l:h,c:""+j,err:i,fromOnError:1,args:arguments};c.ueLogError(k);return false}b.skipTrace=1;e.onerror=b;function f(){c.uex("ld")}if(e.addEventListener){e.addEventListener("load",f,false)}else{if(e.attachEvent){e.attachEvent("onload",f)}}a.tag=d("tag");a.log=d("log");a.reset=d("rst");c.ue_csm=c;c.ue=a;c.ueLogError=d("err");c.ues=d("ues");c.uet=d("uet");c.uex=d("uex");c.uet("ue")})(window);(function(e,d){var a=e.ue||{};function c(g){if(!g){return}var f=d.head||d.getElementsByTagName("head")[0]||d.documentElement,h=d.createElement("script");h.async="async";h.src=g;f.insertBefore(h,f.firstChild)}function b(){var k=e.ue_cdn||"z-ecx.images-amazon.com",g=e.ue_cdns||"images-na.ssl-images-amazon.com",j="/images/G/01/csminstrumentation/",h=e.ue_file||"ue-full-11e51f253e8ad9d145f4ed644b40f692._V1_.js",f,i;if(h.indexOf("NSTRUMENTATION_FIL")>=0){return}if("ue_https" in e){f=e.ue_https}else{f=e.location&&e.location.protocol=="https:"?1:0}i=f?"https://":"http://";i+=f?g:k;i+=j;i+=h;c(i)}if(!e.ue_inline){if(a.loadUEFull){a.loadUEFull()}else{b()}}a.uels=c;e.ue=a})(window,document);</script>
+
+    <script type="text/javascript">
+//<![CDATA[
+if (typeof h285083731 === 'undefined') {
+    h285083731 = {};
+}
+if (typeof h285083731.i285083731 === 'undefined') {
+    h285083731.i285083731 = {};
+}
+
+h285083731.i285083731.AsyncPage = {
+
+    load : function() {
+        var result,divs , i, length;
+        result = [];
+
+        if (document.getElementsByClassName) {
+            result = document.getElementsByClassName('j285083731Async');
+        } else {
+            divs = document.getElementsByTagName('div');
+            for (i=0, length=divs.length; i<length; i++) {
+                if (divs[i].className === 'j285083731Async') {
+                    result.push(divs[i]);
+                }
+            }
+        }
+
+        for (i=0, length=result.length; i< length; i++) {
+            (function(element) {
+                this.sendRequest(element.id, function(xmlHttp) {
+                    var fragment, tmpDiv, parent;
+                    fragment = document.createDocumentFragment();
+                    tmpDiv = document.createElement('div');
+                    tmpDiv.innerHTML = xmlHttp.responseText;
+                    while (tmpDiv.firstChild) {
+                        fragment.appendChild(tmpDiv.firstChild);
+                    }
+                    parent = element.parentNode;
+                    parent.replaceChild(fragment, element);
+                });
+            }).call(this, result[i]);
+        }
+    },
+
+    sendRequest : function(url, callback) {
+        var xmlHttpRequest;
+        try {
+            xmlHttpRequest = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
+            xmlHttpRequest.open("GET", url, true);
+            xmlHttpRequest.onreadystatechange = function () {
+                if (xmlHttpRequest.readyState !== 4) {
+                    return;
+                }
+                if (xmlHttpRequest.status !== 200 && xmlHttpRequest.status !== 304) {
+                    return;
+                }
+                callback(xmlHttpRequest);
+            };
+
+            xmlHttpRequest.send();
+        } catch (e) {
+            if (typeof window.console !== 'undefined') {
+                if (typeof console.error !== 'undefined') {
+                    console.error(e.name + ": " + e.message);
+                } else if (typeof console.log !== 'undefined') {
+                    console.log(e.name + ": " + e.message);
+                }
+            }
+        }
+    }
+};
+//]]>
+</script>
+<meta name="id" content="0a55088f-1def-4359-aa62-8db0c6d7a8e7"/>
+<title>
+            Submitting an Alexa Skill for Certification - Amazon Apps &amp; Services Developer Portal
+        </title>
+<meta name="description" content="Submit your new Alexa skill for certification so it can be published to end users"/>
+<meta name="keywords" content="submission,publication,certification,requirements,guidelines,alexa"/>
+
+
+    <link rel="stylesheet" href="https://images-na.ssl-images-amazon.com/images/G/01/AUIClients/MASAriaThemeAssets-cc1c91b11ab782aab8b8270cbcbd45db7345699d._V2_.css" />
+
+    <link href="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal2/res/css/webfonts._V326851759_.css" rel="stylesheet" type="text/css"/>
+    <link id="page_css" rel="stylesheet" href="" type="text/css"/>
+    <link href='https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/taas/jquery/widget/jquery-ui-1.10.3.custom.min.css' rel='stylesheet' type='text/css'/>
+
+    <script type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal2/public/resources/js/jquery-1.10.1.min._V352894325_.js"></script>
+    <script type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/taas/jquery/widget/jquery-ui-1.10.3.custom.min.js"></script>
+    
+    <script type="text/javascript" src="/public/js/jquery_cookie.js"></script>
+    
+    <script type="text/javascript" src="/public/js/mediatest.js"></script>
+    
+    <script type="text/javascript" src="/public/js/scroll_to.js"></script>
+    
+    <script type="text/javascript" src="/public/js/language_switcher.js"></script>
+  </head>
+  <body>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="header">
+  <div style="display:none;" id="/public/_hn:component-rendering%7Cr33_r2_r1/solutions/alexa/alexa-skills-kit/docs/publishing-an-alexa-skill" class="j285083731Async"></div>
+  <div id="lower-header">
+    <div id="lower-header-wrapper">
+      <ul id="header-menu">
+        
+        
+        
+        <li class="">
+          <a id="header-home" href="/public">Home</a>
+        </li>
+        
+        
+         
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   
+
+	 
+
+
+
+
+  
+    <li class="active">
+      <a href="/public/solutions/alexa">ALEXA</a>
+    </li>
+  
+  
+
+
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   
+
+	 
+
+
+
+
+  
+  
+    <li>
+      <a href="/public/apis">SERVICES &AMP; APIS</a>
+    </li>
+  
+
+
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   
+
+	 
+
+
+
+
+  
+  
+    <li>
+      <a href="/public/solutions/devices">DEVICES</a>
+    </li>
+  
+
+
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   
+
+	 
+
+
+
+
+  
+  
+    <li>
+      <a href="/public/resources">RESOURCES</a>
+    </li>
+  
+
+
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   
+
+	 
+
+
+
+
+  
+  
+    <li>
+      <a href="/public/community/blog">BLOGS</a>
+    </li>
+  
+
+
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   
+
+	 
+
+
+
+
+  
+  
+    <li>
+      <a href="/public/support">SUPPORT</a>
+    </li>
+  
+
+
+        
+      </ul>
+      <div id="search-box">
+        
+        
+        <form id="search-box-form" action="/public/search" method="get" onsubmit="sanitizeRequestParam(document.forms['searchSubmit']['query'], 'Search')">
+          
+          <input id="search-box-input" type="text" name="query" placeholder="Search..." value="" />
+          <input id="search-box-submit" type="image" src="/public/images/icon-search.png" name="image" width="18" height="18">
+        </form>
+        <button id="search-box-toggle-button" style="background-image: url('/public/images/icon-search.png')" onclick="javascript:toggleSearch()"></button>
+        
+		<script type="text/javascript" src="/public/js/searchbox_controller.js"></script>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="/public/js/header_scroller.js"></script>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="directory">
+    <div id="directory-wrapper">
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="/public">Home</a>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <span>&gt;</span>
+    
+      
+        
+      
+      
+    
+    <a href="/public/solutions/alexa">Alexa</a>
+  
+  
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <span>&gt;</span>
+    
+      
+        
+      
+      
+    
+    <a href="/public/solutions/alexa/alexa-skills-kit">Alexa Skills Kit</a>
+  
+  
+    
+  
+
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+</div>
+<div id="outer-wrapper">
+  <div id="inner-wrapper">
+    <div id="left-sidebar">
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<ul id="left-sidebar-list">
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+      
+    
+    
+  
+  
+  
+  
+  
+  	
+    
+  
+  
+    
+    
+      <li>
+        <a href="/public/solutions/alexa">Alexa </a>
+      </li>
+    
+  
+  
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+    
+  
+
+
+  
+    
+    
+  
+  
+
+
+
+  
+  
+  
+    <li class="active">
+      <a href="/public/solutions/alexa/alexa-skills-kit">Alexa Skills Kit</a>
+      
+    </li>
+  
+  
+  
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+    
+  
+
+
+  
+    
+    
+  
+  
+
+
+
+  
+  
+  
+  
+  
+    <li>
+      <a href="/public/solutions/alexa/alexa-voice-service">Alexa Voice Service</a>
+    </li>
+  
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+    
+  
+
+
+  
+    
+    
+  
+  
+
+
+
+  
+  
+  
+  
+  
+    <li>
+      <a href="/public/solutions/alexa/alexa-fund">Alexa Fund</a>
+    </li>
+  
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+    
+  
+
+
+  
+    
+    
+  
+  
+
+
+
+  
+  
+  
+  
+  
+    <li>
+      <a href="/public/solutions/alexa/rewards-for-skill-developers">Rewards for Skill Developers</a>
+    </li>
+  
+
+  
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</ul>
+    </div>
+    <div id="content">
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal2/content/sdk/js/shCore._V138392098_.js"></script>
+<script type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal2/content/sdk/js/shBrushPlain._V138254508_.js"></script>
+<script type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal2/content/sdk/js/shBrushJava._V138392099_.js"></script>
+<script type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal2/content/sdk/js/shBrushXml._V138392099_.js"></script>
+<script type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal2/content/sdk/js/shBrushJScript._V307911092_.js"></script>
+<script type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal2/content/sdk/js/shBrushCSharp._V307911161_.js"></script>
+<script type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal2/content/sdk/js/shBrushAS3._V307911115_.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+      SyntaxHighlighter.all();
+    });
+</script>
+
+
+  
+  
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        
+        
+    
+
+
+
+
+
+    
+    
+    <script type="text/javascript" src="/public/js/text_banner_modify.js"></script>
+    <div id="content-body" class="group">
+
+      
+
+      <div class="content-html-container tech-doc">
+      <div id="text-banner" class="tech-doc" style="border-bottom-style:none;">
+        <h2>Submitting an Alexa Skill for Certification</h2>
+      </div>
+        
+        
+          
+            
+            <a class="anchor" name="Introduction"></a>
+            
+            <h2>Introduction</h2>
+            <link rel="stylesheet" type="text/css" href="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal/hipposidebar._TTH_.css" />
+<script type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal/includescript.min._TTH_.js"></script>
+<!-- Bootstrap is used under the MIT license. -->
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<div class="rightMenu"> <span class="inc:https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal/menus/._TTH_.html"> </span></div>
+<script type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal/minitoc.min._TTH_.js"></script> 
+<!-- AnchorJS is used under the MIT license. -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/2.0.0/anchor.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<!-- Navgoco is used under the BSD license. -->
+<script src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal/jquery.navgoco.min._TTH_.js"></script>
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<script type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal/customscriptshippo._TTH_.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css" />
+<link rel="stylesheet" href="/public/binaries/content/assets/main/solutions/alexa/alexa-voice-service/styles/trans-tabs.css" />
+<!--[if IE]>
+<link rel="stylesheet" type="text/css" href="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal/navtabshippo._TTH_.css" />
+<![endif]-->
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+<script type="text/javascript">
+    var getQueryString = function ( field, url ) {
+        var href = url ? url : window.location.href;
+        var reg = new RegExp( '[?&]' + field + '=([^&#]*)', 'i' );
+        var string = reg.exec(href);
+        return string ? string[1] : null;
+    };
+
+    var language = getQueryString('language');
+
+</script>
+<script type="text/javascript"> $(function() {
+    if (language == "german") {
+        $( "#tabs" ).tabs({ active: 1 });
+    }
+    else {
+        $( "#tabs" ).tabs();
+    }
+});
+</script>
+<link rel="stylesheet" type="text/css" href="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal/highlighter.min._TTH_.css" />
+
+<link rel="stylesheet" type="text/css" href="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal/hipposidebarpage.min._TTH_.css" />
+
+<script type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal/includescript.min._TTH_.js">
+
+</script>
+<div class="rightMenu"> <span class="inc:https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal/menus/ask-customskills._TTH_.html"> </span>
+</div>
+
+<style>
+    #content-body > div > h2 {
+        display: none;
+    }
+
+    .ui-helper-clearfix:after {
+        margin-bottom: 25px;
+        display: inline-table;
+    }
+    .content-html-container.tech-doc h2:nth-child(3) {
+        display: block;
+    }
+    div#germanPages {
+        border: 1px solid #dedede;
+        padding: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    ul.germanMenu {
+        list-style-type: none !important;
+        margin-left: -30px;
+    }
+    a.active {
+        font-weight: bold;
+        color: black !important;
+        cursor: default;
+    }
+    @media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0) { @media {
+        .ui-helper-clearfix:after {
+            margin-bottom: 38px;
+        }
+    }}
+
+</style>
+
+<!--[if IE]>
+<style>
+    .ui-helper-clearfix:after {
+        margin-bottom: 38px;
+    }
+
+</style>
+<![endif]-->
+
+
+<div id="tabs">
+    <ul>
+        <li><a href="#english-version" data-toggle="tab">English</a></li>
+        <li><a href="#german-version" data-toggle="tab">Deutsch</a></li>
+    </ul>
+
+    <div id="english-version">
+
+        <script type="text/javascript">
+    $( document ).ready(function() {
+        var ToC =
+                "<nav role='navigation' class='table-of-contents'>" +
+                "<span class='minitocTitle'></span>" +
+                "<ul>";
+
+        var newLine, el, title, link;
+
+        $("#english-version>h2").each(function() {
+
+            el = $(this);
+            title = el.text();
+            link = "#" + el.attr("id");
+
+            newLine =
+                    "<li>" +
+                    "<a href='" + link + "'>" +
+                    title +
+                    "</a>" +
+                    "</li>";
+            ToC += newLine;
+        });
+
+        ToC +=
+                "</ul>" +
+                "</nav>";
+
+        $("#minitocenglish").prepend(ToC);
+    });
+
+</script>
+<!-- <div id="minitocenglish">
+</div> -->
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <!-- Submitting an Alexa Skill for Certification -->
+        <p>Once you have completed developing and testing a new skill for Alexa, choose to deploy your skill for <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/skills-beta-testing">beta testing</a> to a specified group of users, or you can submit it for certification for potential publication.</p>
+
+<p>In either case, users can see the skill in the Amazon Alexa App and enable it for use with their devices. The Amazon Alexa App is available for Fire OS, Android, iOS, and desktop web browsers.</p>
+
+<ul id="markdown-toc">
+  <li><a href="#testing-the-skill-and-completing-the-submission-checklist" id="markdown-toc-testing-the-skill-and-completing-the-submission-checklist">Testing the Skill and Completing the Submission Checklist</a></li>
+  <li><a href="#submitting-the-skill-for-certification" id="markdown-toc-submitting-the-skill-for-certification">Submitting the Skill for Certification</a></li>
+  <li><a href="#publication-status" id="markdown-toc-publication-status">Publication Status</a></li>
+  <li><a href="#continuing-to-work-on-your-skill-after-publication" id="markdown-toc-continuing-to-work-on-your-skill-after-publication">Continuing to Work on Your Skill after Publication</a></li>
+  <li><a href="#next-steps" id="markdown-toc-next-steps">Next Steps</a></li>
+</ul>
+
+<h2 id="testing-the-skill-and-completing-the-submission-checklist">Testing the Skill and Completing the Submission Checklist</h2>
+
+<p>When you submit your skill to the Alexa Store, it must pass a certification process before it can be published live to Amazon customers. To ensure that your skill will meet the certification requirements, complete all of the testing described in the <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/alexa-skills-kit-submission-checklist">Certification Requirements for Custom Skills</a>.</p>
+
+<p>This includes:</p>
+
+<ul>
+  <li><a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/alexa-skills-kit-policy-testing">Meeting policy guidelines</a></li>
+  <li><a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/alexa-skills-kit-security-testing">Meeting security requirements</a></li>
+  <li><a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/alexa-skills-kit-functional-testing">Functional testing</a></li>
+  <li><a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/alexa-skills-kit-voice-interface-and-user-experience-testing">Voice interface and user experience testing</a></li>
+</ul>
+
+<h2 id="submitting-the-skill-for-certification">Submitting the Skill for Certification</h2>
+
+<p>When your skill is ready for publication, you can submit it to Amazon for review. The <strong>Submit for Certification</strong> button becomes available once all required fields are completed.</p>
+
+<ol>
+  <li>Log on to the <a href="https://developer.amazon.com/home.html" title="Amazon Developer Portal Console">Developer Portal</a>.</li>
+  <li>Navigate to the <a href="https://developer.amazon.com/edw/home.html#/" title="Developer Portal - Alexa">Alexa section</a> by clicking <strong>Apps &amp; Services</strong> and then clicking <strong>Alexa</strong> in the top navigation. This displays a list of your existing Alexa skills.</li>
+  <li>
+    <p>Find the skill to submit in the list and choose <strong>Edit</strong>.</p>
+
+    <p>Note that there should be a green check mark next to each section. If any sections are missing the check mark, this means that at least one required field is not filled in. Review the section and complete all required fields.</p>
+  </li>
+  <li>Click the <strong>Submit for Certification</strong> button. When prompted to confirm, click <strong>Yes</strong>.</li>
+</ol>
+
+<p>Once you have submitted the skill, it shows “Certification” in the <strong>Status</strong> column on list of skills. While it is in the certification process, you cannot make any further edits to the configuration. If you change your mind, you can select the skill, then click the <strong>Withdraw from Certification</strong> button.</p>
+
+<p>After Amazon completes the review, you will receive an email at the address associated with your developer portal account:</p>
+
+<ul>
+  <li>If the skill has been certified, the email will provide an estimate for when it will become available to end users.</li>
+  <li>If the skill could not be certified, the email provides information about the issues you need to correct. You can make any necessary changes and then re-submit.</li>
+</ul>
+
+<h2 id="publication-status">Publication Status</h2>
+
+<p>The current publication status for a skill is displayed in the developer portal on your list of skills, in the <strong>Status</strong> column:</p>
+
+<ul>
+  <li><strong>Development</strong> The skill is available only to you. If you have enabled it for testing, you can test it on devices registered to your developer account.</li>
+  <li><strong>Certification</strong> Amazon is currently reviewing the skill for publication. During this time, you cannot edit the configuration.</li>
+  <li><strong>Live</strong> The skill has been published and is available to users. You cannot edit the configuration for live skills. To start development on an updated version, make your changes on the <em>development</em> version instead.</li>
+</ul>
+
+<h2 id="continuing-to-work-on-your-skill-after-publication">Continuing to Work on Your Skill after Publication</h2>
+
+<p>Once your skill is published to end users, your skill’s status changes to <em>live</em>. You cannot change the configuration for a live skill. A new <em>development</em> version is automatically created in the developer portal. This version has the same information as the original live version. You can use it to continue to work on your skill to improve it and add features.</p>
+
+<p>The live and development versions are displayed together in the list of skills in the developer portal. When collapsed, the skill shows the development version:</p>
+
+<figure><img class="docimage " src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/dex/ask-customskills/subm-published-skill-collapsed._TTH_.png" alt="Published skill with row collapsed" /><figcaption>Published skill with row collapsed</figcaption></figure>
+
+<p>If you expand the row, you can see both the development and live versions:</p>
+
+<figure><img class="docimage " src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/dex/ask-customskills/subm-published-skill-expanded._TTH_.png" alt="Published skill with row expanded" /><figcaption>Published skill with row expanded</figcaption></figure>
+
+<p>You can work on the new version independently of the original. For instance, you can add more intents and sample utterances to the interaction model, change the description, and so on. If you make code changes in your service, you should use a different endpoint or Lambda function to test those changes so you do not disrupt users who are using the live version.</p>
+
+<p>When you submit your new version for certification, both versions remain in your list until the new version is certified. Once the new version is certified, it becomes live and replaces the previous live version. A new development version is then created so that you can continue making updates.</p>
+
+<p>It is recommended that your update maintains backward compatibility with the previous version for a seamless user experience. For example, while your update may add new intents, you should continue to support the previous intents that users are already using.</p>
+
+<h2 id="next-steps">Next Steps</h2>
+
+<ul>
+  <li>Next: <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/alexa-skills-kit-submission-checklist">Certification Requirements for Custom Skills</a></li>
+  <li>Go back to: <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/testing-an-alexa-skill">Testing a Custom Skill</a></li>
+  <li>Return to: <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/overviews/steps-to-build-a-custom-skill">Steps to Build a Custom Skill</a></li>
+</ul>
+
+<!-- common links -->
+
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+    </div>
+
+    <div id="german-version">
+
+        <div id="germanPages">
+<p id="eventsHeader1" style="cursor:pointer; color:##0272c0">Auf Deutsch übersetzte Seiten<span id="expanderSign1">+</span>
+</p>
+<div id="eventsExample1" style="display:none">
+<ul class="germanMenu">
+
+<li><a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/defining-the-voice-interface?language=german">Definieren der Sprachschnittstelle</a></li>
+
+<li><a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/supported-phrases-to-begin-a-conversation?language=german">Wie Benutzer benutzerdefinierte Skills aufrufen</a></li>
+
+<li><a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/choosing-the-invocation-name-for-an-alexa-skill?language=german">Ausw&#228;hlen eines Aufrufsnamen f&#252;r einen benutzerdefinierten Skill</a></li>
+
+<li><a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/alexa-skills-kit-voice-design-handbook?language=german">Handbuch f&#252;r Sprachdesign</a></li>
+
+<li><a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/alexa-skills-kit-voice-design-best-practices?language=german">Best Practices f&#252;r Voice Design</a></li>
+
+<li><a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/linking-an-alexa-user-with-a-user-in-your-system?language=german">Verkn&#252;pfen eines Alexa-Benutzers mit einem Benutzer in Ihrem System</a></li>
+
+<li><a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/publishing-an-alexa-skill?language=german">&#220;bermitteln eines Alexa Skills zur Zertifizierung</a></li>
+
+<li><a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/alexa-skills-kit-submission-checklist?language=german">Alexa Skills Kit-Checkliste f&#252;r die Einreichung</a></li>
+
+<li><a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/alexa-skills-kit-voice-interface-and-user-experience-testing?language=german">Testen der Sprachschnittstelle und der Benutzererfahrung f&#252;r einen Alexa-Skill</a></li>
+</ul>
+
+</div>
+</div>
+
+<script type="text/javascript"> $(document).ready(function(){ $("#eventsHeader1").click(function(){ $("#eventsExample1").slideToggle(); if ($("#expanderSign1").text() == "+"){ $("#expanderSign1").html("−") } else { $("#expanderSign1").text("+") } }); });
+
+</script>
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <h1>&#220;bermitteln eines Alexa Skills zur Zertifizierung</h1>
+        <script type="text/javascript">
+    $( document ).ready(function() {
+        var ToCG =
+                "<nav role='navigation' class='table-of-contents'>" +
+                "<span class='minitocTitle'></span>" +
+                "<ul>";
+
+        var newLine, el, title, link;
+
+        $("#german-version>h2").each(function() {
+
+            el = $(this);
+            title = el.text();
+            link = "#" + el.attr("id");
+
+            newLine =
+                    "<li>" +
+                    "<a href='" + link + "'>" +
+                    title +
+                    "</a>" +
+                    "</li>";
+
+            ToCG += newLine;
+
+        });
+
+        ToCG +=
+                "</ul>" +
+                "</nav>";
+
+        $("#minitocgerman").prepend(ToCG);
+    });
+
+</script>
+
+<div id="minitocgerman">
+</div>
+        <h2 id="introduction_de">Einleitung</h2>
+
+<p>Sobald Sie einen neuen Skill f&#252;r Alexa entwickelt und getestet haben, k&#246;nnen Sie diesen Skill &#252;bermitteln und f&#252;r die Ver&#246;ffentlichung zertifzieren lassen. Zertifizierte und ver&#246;ffentlichte Skills k&#246;nnen von Benutzern in der Amazon Alexa App aufgerufen und zur Verwendung auf ihren Ger&#228;ten aktiviert werden. Die Amazon Alexa App ist f&#252;r Fire OS, Android, iOS und Desktop-Webbrowser verf&#252;gbar.</p>
+
+<h2 id="editing-the-detail-card-for-the-skill_de">Bearbeiten der Detail-Karte eines Skills</h2>
+
+<p>Benutzer der Alexa App k&#246;nnen eine Liste aller ver&#246;ffentlichten Skills durchsuchen und in den <em>Detail-Karten</em> Informationen zu den einzelnen Skills abrufen. Bevor Sie einen Skill &#252;bermitteln, m&#252;ssen Sie eine Detail-Karte f&#252;r diesen Skill definieren, indem Sie im Entwicklerportal die entsprechenden Felder ausf&#252;llen. Durch die Bereitstellung relevanter Inhalte f&#252;r die Detail-Karte machen Sie Ihren Skill f&#252;r Benutzer schnell auffindbar, leicht verst&#228;ndlich und einfach zu verwenden.</p>
+
+<p>Die Detail-Karte enth&#228;lt die folgenden Informationen:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>Beschreibung</th>
+      <th>Feld im Entwicklerportal</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>A.</td>
+      <td>Skillname, der oben auf der Detail-Karte angezeigt wird.</td>
+      <td><strong>Skill Information &gt; Name</strong></td>
+    </tr>
+    <tr>
+      <td>B.</td>
+      <td>Skillsymbol.</td>
+      <td><strong>Publishing Information &gt; Images</strong></td>
+    </tr>
+    <tr>
+      <td>C.</td>
+      <td>Drei Beispiels&#228;tze, die veranschaulichen, wie Benutzer Ihren Skill aufrufen k&#246;nnen. Diese S&#228;tze <em>m&#252;ssen</em> Ihren <em>Muster&#228;u&#223;erungen</em> entnommen werden, damit Konsistenz gew&#228;hrleistet wird.Weitere Informationen finden Sie nachfolgend unter <a href="#h3_trysaying_de">Definieren von Beispiels&#228;tzen (&#8222;Sagen Sie zum Beispiel&#8230;&#8220;)</a>.</td>
+      <td><strong>Publishing Information &gt; Example Phrases</strong></td>
+    </tr>
+    <tr>
+      <td>D.</td>
+      <td>Vollst&#228;ndige Beschreibung der Hauptfunktionen des Skills und s&#228;mtlicher Voraussetzungen f&#252;r seine Nutzung (zum Beispiel zus&#228;tzliche Hardware, Software oder Konten).<br /><br />Dar&#252;ber hinaus muss eine <strong>kurze Beschreibung</strong> eingegeben werden, die beim Aufrufen der Liste mit den Skills zu sehen ist.</td>
+      <td><strong>Publishing Information &gt; Full Skill Description</strong> <strong>Publishing Information &gt; Short Skill Description</strong></td>
+    </tr>
+    <tr>
+      <td>E.</td>
+      <td>Der <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/choosing-the-invocation-name-for-an-alexa-skill?language=german">Aufrufsname</a>, den Benutzer zum Aufrufen des Skills sagen. Wenn der Aufrufsname zum Beispiel &#8222;Wattl&#228;ufer&#8220; lautet, k&#246;nnen Benutzer die Interaktion mit dem Satz: &#8222;Frage den <strong>Wattl&#228;ufer</strong>&#8230;&#8220; beginnen.</td>
+      <td><strong>Skill Information &gt; Invocation Name</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<figure><img class="docimage " src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/dex/ask-customskills/subm-detail-card-labels._TTH_.png" alt="Detail-Karte f&#252;r einen Skill in der Alexa App"/><figcaption>Detail-Karte f&#252;r einen Skill in der Alexa App</figcaption></figure>
+
+<p>Die Liste der Skills zeigt au&#223;erdem kurze Informationen zu jedem Skill:</p>
+
+<ul>
+  <li>Skillname (<strong>Skill Information &gt; Name</strong>) und Symbol (<strong>Publishing Information &gt; Images</strong>)</li>
+  <li>Eine kurze Beschreibung (<strong>Publishing Information &gt; Short Skill Description</strong>)</li>
+  <li>Der <em>erste</em> von drei Beispiels&#228;tzen (<strong>Publishing Information &gt; Example Phrases</strong>)</li>
+</ul>
+
+<p>Das nachfolgende Beispiel zeigt, wie der Skill &#8222;Wattl&#228;ufer&#8220; in der Liste dargestellt wird. An dieser Stelle sind eine kurze Beschreibung sowie ein Beispielsatz zu sehen:</p>
+
+<figure><img class="docimage " src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/dex/ask-customskills/subm-skill-list._TTH_.png" alt="Darstellung eines Skills in der Liste"/><figcaption>Darstellung eines Skills in der Liste</figcaption></figure>
+
+<h3 id="h3_trysaying_de">Definieren von Beispiels&#228;tzen (&#8222;Sagen Sie zum Beispiel&#8230;&#8220;)</h3>
+
+<p>Anhand der drei Beispiels&#228;tze wird f&#252;r Benutzer ersichtlich, was sie sagen m&#252;ssen, um Ihrem Skill benutzen zu k&#246;nnen. Wie oben gezeigt, ist nur der erste Satz in der Liste der Skills zu sehen. Die Detail-Karte hingegen umfasst alle drei Beispiels&#228;tze. Diese S&#228;tze <em>m&#252;ssen Ihren Muster&#228;u&#223;erungen entnommen werden</em>, damit Konsistenz gew&#228;hrleistet wird.</p>
+
+<p>Erstellen der Beispiels&#228;tze f&#252;r die Detail-Karte:</p>
+
+<ol>
+  <li>W&#228;hlen Sie aus Ihren Muster&#228;u&#223;erungen <em>drei</em> S&#228;tze aus, die Benutzern den Einstieg erleichtern und schnellen Zugriff auf die Hauptfunktionen Ihres Skills erm&#246;glichen.</li>
+  <li>
+    <p>Geben Sie f&#252;r jeden Slot in diesen &#196;u&#223;erungen einen g&#252;ltigen Wert ein. Wenn die &#196;u&#223;erung einen Slot enth&#228;lt, der durch einen benutzerdefinierten Slottyp definiert wird, verwenden Sie einen explizit f&#252;r diesen benutzerdefinierten Slottyp definierten Wert.</p>
+
+    <ul>
+      <li>Beispiel: Der Slot <code class="highlighter-rouge"><span class="p">{</span><span class="err">City</span><span class="p">}</span></code> in der &#196;u&#223;erung <code class="highlighter-rouge">OneshotTideIntent wann ist Flut in {City}</code> verwendet den benutzerdefinierten Slottyp <code class="highlighter-rouge">LIST_OF_CITIES</code>. F&#252;r diesen Slot m&#252;sste eine in <code class="highlighter-rouge">LIST_OF_CITIES</code> verwendete Stadt verwendet werden.</li>
+      <li>Weitere Informationen &#252;ber benutzerdefinierte Slots finden Sie unter <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/defining-the-voice-interface?language=german">Definieren der Sprachschnittstelle</a>.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Kombinieren Sie mindestens f&#252;r den ersten Satz die &#196;u&#223;erung mit dem standardm&#228;&#223;igen Aktivierungswort (&#8222;Alexa&#8220;) und dem Aufrufsnamen Ihres Skills.</p>
+
+    <ul>
+      <li>Der Aufrufsname muss mit einem Gro&#223;buchstaben beginnen (zum Beispiel &#8222;Wattl&#228;ufer&#8220;, und nicht &#8222;wattl&#228;ufer&#8220;).</li>
+      <li>Stellen Sie sicher, dass der Satz grammatikalisch korrekt ist und die richtigen Satzzeichen enth&#228;lt.</li>
+      <li>Beispiel: Die &#196;u&#223;erung <code class="highlighter-rouge">wann ist Flut in {City}</code> wird zu &#8222;Alexa, <strong>frage</strong> <em>Wattl&#228;ufer</em>, wann in Bremen Flut ist.&#8220; In diesem Fall ist &#8222;frage&#8220; einer der <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/supported-phrases-to-begin-a-conversation?language=german">unterst&#252;tzten Begriffe zum Aufrufen eines Skills</a>, w&#228;hrend &#8222;Wattl&#228;ufer&#8220; der <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/choosing-the-invocation-name-for-an-alexa-skill?language=german">Aufrufsname</a> ist.</li>
+    </ul>
+  </li>
+  <li>Geben Sie die drei S&#228;tze auf der Registerkarte <strong>Publishing Information</strong> f&#252;r Ihren Skill in das Feld <strong>Example Phrases</strong> ein.</li>
+</ol>
+
+<p>Der <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/using-the-alexa-skills-kit-samples">Beispielskill &#8222;Wattl&#228;ufer&#8220;</a> enth&#228;lt die folgenden Muster&#228;u&#223;erungen:</p>
+
+<p><code class="highlighter-rouge">OneshotTideIntent</code> <mark>`Wann ist in {City} Flut?`</mark><br />
+<code class="highlighter-rouge">OneshotTideIntent wann ist Flut in {City} {State}</code><br />
+<code class="highlighter-rouge">OneshotTideIntent wann ist Flut in {City} Stadt</code><br />
+<code class="highlighter-rouge">OneshotTideIntent</code> <mark>`Wann ist in {City} am {Date} Flut?`</mark><br />
+<code class="highlighter-rouge">OneshotTideIntent wann ist Flut am {Date}</code><br />
+<code class="highlighter-rouge">OneshotTideIntent wann ist Flut {Date}</code><br />
+<code class="highlighter-rouge">SupportedCitiesIntent welche St&#228;dte</code><br />
+<code class="highlighter-rouge">SupportedCitiesIntent</code> <mark>`Welche St&#228;dte werden unterst&#252;tzt?`</mark><br />
+<code class="highlighter-rouge">SupportedCitiesIntent welche St&#228;dte</code><br />
+<code class="highlighter-rouge">OneshotTideIntent Gezeiten abrufen f&#252;r {Date}</code><br />
+<code class="highlighter-rouge">OneshotTideIntent rufe Gezeiten ab {Date}</code><br />
+<code class="highlighter-rouge">OneshotTideIntent wann ist Flut {Date}</code><br />
+<code class="highlighter-rouge">OneshotTideIntent Gezeiteninformationen</code><br />
+<code class="highlighter-rouge">OneshotTideIntent Gezeiteninformationen f&#252;r {City}</code></p>
+
+<p>F&#252;r diesen Skill hat der Entwickler die folgenden drei &#196;u&#223;erungen verwendet:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>OneshotTideIntent when is high tide in {City}
+OneshotTideIntent when is high tide in {City} on {Date}
+SupportedCitiesIntent what cities are supported
+</code></pre>
+</div>
+
+<p>Der Slot <code class="highlighter-rouge"><span class="p">{</span><span class="err">City</span><span class="p">}</span></code> wurde durch Ist-Werte des benutzerdefinierten Slottyps <code class="highlighter-rouge">LIST_OF_CITIES</code> ersetzt (&#8222;Seattle&#8220; und &#8222;San Diego&#8220;). F&#252;r die Detail-Karte hat der Entwickler die drei folgenden Beispiels&#228;tze eingegeben:</p>
+
+<ul>
+  <li>&#8222;Alexa, frage Wattl&#228;ufer, wann in Seattle Flut ist.&#8220;</li>
+  <li>&#8222;Alexa, frage Wattl&#228;ufer, wann in San Diego am Samstag Flut ist.&#8220;</li>
+  <li>&#8222;Alexa, frage Wattl&#228;ufer, welche St&#228;dte unterst&#252;tzt werden.&#8220;</li>
+</ul>
+
+<p>In diesem Beispiel werden die drei S&#228;tze jeweils als Frage dargestellt. Der Entwickler h&#228;tte aus den oben genannten &#196;u&#223;erungen auch eine andere Reihe von S&#228;tzen ausw&#228;hlen k&#246;nnen, wie zum Beispiel:</p>
+
+<ul>
+  <li>&#8222;Alexa, sage Wattl&#228;ufer, <strong>dass er Flutzeiten f&#252;r morgen abrufen soll</strong>.&#8220;</li>
+  <li>&#8222;Alexa, frage Wattl&#228;ufer nach <strong>Gezeiten f&#252;r Los Angeles</strong>.&#8220;</li>
+</ul>
+
+<p>Beachten Sie, dass auch diese Variationen aus der Liste der Muster&#228;u&#223;erungen stammen:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>OneshotTideIntent get high tide for {Date}
+OneshotTideIntent tide information for {City}
+</code></pre>
+</div>
+
+<h3 id="previewing-the-detail-card-in-the-alexa-app">Aufrufen einer Vorschau der Detail-Karte in der Alexa App</h3>
+
+<p>Nachdem Sie alle Informationen f&#252;r Ihre Detail-Karte eingegeben haben, &#246;ffnen Sie die Alexa App und rufen Sie eine Vorschau der Karte auf. Die App zeigt sowohl ver&#246;ffentlichte Skills als auch Ihre Skills, die Sie gerade entwickeln, sodass Sie jederzeit &#252;berpr&#252;fen k&#246;nnen, wie die Karte f&#252;r Benutzer dargestellt wird. Wenn Sie die Liste der Skills filtern m&#246;chten, geben Sie den Namen Ihres Skills in das Suchfeld ein.</p>
+
+<h2 id="testing-the-skill-and-completing-the-submission-checklist_de">Testen eines Skills und Ausf&#252;llen der Checkliste zur &#220;bermittlung</h2>
+
+<p>Wenn Sie Ihren Skill im Alexa Store einreichen, muss er einen Zertifizierungsprozess durchlaufen, bevor er f&#252;r Amazon-Kunden ver&#246;ffentlicht werden kann. F&#252;hren Sie alle Tests durch, die unter <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/alexa-skills-kit-submission-checklist?language=german">Zertifizierungsanforderungen f&#252;r benutzerdefinierte Skills</a> beschrieben werden, um sicherzustellen, dass Ihr Skill die Zertifizierungsanforderungen erf&#252;llt.</p>
+
+<p>Dazu geh&#246;ren die folgenden Tests:</p>
+
+<ul>
+  <li><a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/alexa-skills-kit-policy-testing">Einhaltung von Vorschriften</a></li>
+  <li><a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/alexa-skills-kit-security-testing">Einhaltung von Sicherheitsanforderungen</a></li>
+  <li><a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/alexa-skills-kit-functional-testing">Funktionstest</a></li>
+  <li><a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/alexa-skills-kit-voice-interface-and-user-experience-testing?language=german">Testen der Sprachschnittstelle und der Benutzererfahrung</a></li>
+</ul>
+
+<p>Eine Schritt-f&#252;r-Schritt-Anleitung zur Durchf&#252;hrung dieser Tests anhand eines Beispielskills finden Sie unter <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/submission-testing-walk-through-tide-pooler-skill">Schritt-f&#252;r-Schritt-Anleitung zum Testen eines Skills vor der &#220;bermittlung: Beispiel &#8222;Wattl&#228;ufer&#8220;</a>.</p>
+
+<h2 id="submitting-the-skill-for-certification_de">&#220;bermitteln eines Skills zur Zertifizierung</h2>
+
+<p>Wenn Ihr Skill f&#252;r die Ver&#246;ffentlichtung bereit ist, k&#246;nnen Sie ihn zur &#220;berpr&#252;fung an Amazon &#252;bermitteln. Sobald Sie alle Pflichtfelder ausgef&#252;llt haben, wird die Schaltfl&#228;che <strong>Submit for Certification</strong> verf&#252;gbar.</p>
+
+<ol>
+  <li>Melden Sie sich beim <a href="https://developer.amazon.com/home.html" title="Amazon-Entwicklerportal: Konsole">Entwicklerportal</a> an.</li>
+  <li>Klicken Sie auf <strong>Apps und Services</strong>, navigieren Sie zum <a href="https://developer.amazon.com/edw/home.html#/" title="Entwicklerportal &#8722; Alexa">Alexa-Bereich</a> und klicken Sie in der Navigationsleiste oben auf <strong>Alexa</strong>. Daraufhin sehen Sie eine Liste Ihrer bestehenden Alexa-Skills.</li>
+  <li>
+    <p>Suchen Sie in der Liste den Skill, der &#252;bermittelt werden soll, und klicken Sie auf <strong>Edit</strong>.</p>
+
+    <p>Achten Sie darauf, dass neben jedem Bereich ein gr&#252;nes H&#228;kchen ist.Wenn dieses H&#228;kchen neben einem oder mehreren Bereichen fehlt, wurde mindestens ein Pflichtfeld nicht ausgef&#252;llt. &#220;berpr&#252;fen Sie den Bereich und f&#252;llen Sie alle Pflichtfelder aus.</p>
+  </li>
+  <li>Klicken Sie auf die Schaltfl&#228;che <strong>Submit for Certification</strong>. Best&#228;tigen Sie den Vorgang mit <strong>Yes</strong>, wenn Sie dazu aufgefordert werden.</li>
+</ol>
+
+<p>In der Liste der Skills wird der &#252;bermittelte Skill mit dem <strong>Status</strong> &#8222;Certification&#8220; versehen. W&#228;hrend des Zertifizierungsprozesses k&#246;nnen Sie die Konfiguration nicht &#228;ndern. Wenn Sie den Skill doch nicht zertifizieren lassen m&#246;chten, klicken Sie auf die Schaltfl&#228;che <strong>Withdraw from Certification</strong>.</p>
+
+<p>Nachdem Amazon die &#220;berpr&#252;fung abgeschlossen hat, erhalten Sie eine E-Mail an die Adresse, die Ihrem Konto im Entwicklerportal zugeordnet ist.</p>
+
+<ul>
+  <li>Wenn der Skill zertifiziert wurde, werden Sie in dieser E-Mail dar&#252;ber informiert, wann der Skill f&#252;r Benutzer voraussichtlich verf&#252;gbar sein wird.</li>
+  <li>Wenn der Skill nicht zertifiziert werden konnte, werden Sie in dieser E-Mail auf die Probleme hingewiesen, die behoben werden m&#252;ssen. In diesem Fall k&#246;nnen Sie alle erforderlichen &#196;nderungen vornehmen und den Skill erneut &#252;bermitteln.</li>
+</ul>
+
+<h2 id="publication-status_de">Ver&#246;ffentlichungsstatus</h2>
+
+<p>Den aktuellen Ver&#246;ffentlichungsstatus eines Skills finden Sie im Entwicklerportal in der Liste der Skills in der Spalte <strong>Status</strong>:</p>
+
+<ul>
+  <li><strong>Development (Entwiklung)</strong> Der Skill ist nur f&#252;r Sie verf&#252;gbar. Wenn Sie den Skill f&#252;r Testzwecke aktiviert haben, k&#246;nnen Sie ihn auf Ger&#228;ten testen, die Sie &#252;ber Ihr Entwicklerkonto registriert haben.</li>
+  <li><strong>Certification (Zertifizierung)</strong> Amazon &#252;berpr&#252;ft derzeit, ob die Voraussetzungen f&#252;r die Ver&#246;ffentlichung des Skills erf&#252;llt werden. In dieser Phase kann die Konfiguration nicht ge&#228;ndert werden.</li>
+  <li><strong>Live</strong> Der Skill wurde ver&#246;ffentlicht und ist f&#252;r Benutzer verf&#252;gbar. Sobald ein Skill live verf&#252;gbar ist, kann seine Konfiguration nicht mehr ge&#228;ndert werden. Wenn Sie einen Skill aktualisieren m&#246;chten, bearbeiten Sie die f&#252;r diesen Zweck vorgesehene <em>Entwicklungsversion</em>.</li>
+</ul>
+
+<h2 id="continuing-to-work-on-your-skill-after-publication_de">Bearbeiten eines Skills nach seiner Ver&#246;ffentlichung</h2>
+
+<p>Sobald Sie Ihren Skill f&#252;r Benutzer ver&#246;ffentlicht haben, &#228;ndert sich sein Status zu <em>live</em>. Die Konfiguration f&#252;r einen Live-Skill kann nicht ge&#228;ndert werden. Im Entwicklerportal wurde jedoch eine neue <em>Entwicklungsversion</em> f&#252;r Sie erstellt. Diese Version umfasst dieselben Informationen wie die Live-Version. Mit dieser Version k&#246;nnen Sie Ihren Skill verbessern und durch neue Funktionen erweitern.</p>
+
+<p>Sowohl die Live-Version als auch die Entwicklungsversion werden in der Liste der Skills im Entwicklerportal aufgef&#252;hrt.Wenn die Zeile eingeklappt ist, sehen Sie nur die Entwicklungsversion.</p>
+
+<figure><img class="docimage " src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/dex/ask-customskills/subm-published-skill-collapsed._TTH_.png" alt="Ver&#246;ffentlichter Skill mit eingeklappter Zeile"/><figcaption>Ver&#246;ffentlichter Skill mit eingeklappter Zeile</figcaption></figure>
+
+<p>Wenn Sie die Zeile ausklappen, sind die Entwicklungs- und die Live-Version sichtbar:</p>
+
+<figure><img class="docimage " src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/dex/ask-customskills/subm-published-skill-expanded._TTH_.png" alt="Ver&#246;ffentlichter Skill mit ausgeklappter Zeile"/><figcaption>Ver&#246;ffentlichter Skill mit ausgeklappter Zeile</figcaption></figure>
+
+<p>Die neue Version l&#228;sst sich unabh&#228;ngig vom Original bearbeiten. Sie k&#246;nnen beispielsweise weitere Absichten und Muster&#228;u&#223;erungen zum Interaktionsmodell hinzuf&#252;gen oder die Beschreibung &#228;ndern. Wenn Sie &#196;nderungen am Code f&#252;r Ihren Dienst vornehmen, testen Sie diese &#196;nderungen mit einem anderen Endpunkt bzw. einer anderen Lambda-Funktion, sodass keine Unterbrechung f&#252;r Benutzer der Live-Version entsteht.</p>
+
+<p>Nach &#220;bermittlung Ihrer neuen Version bleiben beide Versionen bis zur Zertifizierung der neuen Version in der Liste erhalten. Sobald die neue Version zertifiziert  wurde, wird sie anstelle ihrer Vorg&#228;ngerversion live geschaltet. Gleichzeitig wird eine neue Entwicklungsversion erstellt, mit der Sie den Skill jederzeit aktualisieren k&#246;nnen.</p>
+
+<p>Damit eine reibungslose Benutzererfahrung gew&#228;hrleistet werden kann, wird empfohlen, bei jeder Aktualisierung R&#252;ckw&#228;rtskompatibilit&#228;t mit fr&#252;heren Versionen sicherzustellen. Wenn Ihr Update zum Beispiel neue Absichten enth&#228;lt, sollten Sie dennoch auch die fr&#252;heren Absichten unterst&#252;tzen, die von Benutzern bereits verwendet werden.</p>
+
+<h2 id="next-steps_de">N&#228;chste Schritte</h2>
+
+<ul>
+  <li>So geht es weiter: <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/alexa-skills-kit-submission-checklist?language=german">Zertifizierungsanforderungen f&#252;r benutzerdefinierte Skills</a></li>
+  <li>Zur&#252;ckgehen zu: <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/testing-an-alexa-skill">Testen eines benutzerdefinierten Skills</a></li>
+  <li>Zur&#252;ckkehren zu: <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/overviews/steps-to-build-a-custom-skill">Schritte zum Erstellen eines benutzerdefinierten Skill</a></li>
+</ul>
+
+<!-- common links -->
+
+
+
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+    </div>
+</div>
+
+<script type="text/javascript">
+    $( document ).ready(function() {
+        var pgurl = window.location.href;
+        $("ul.germanMenu li a").each(function(){
+            if($(this).attr("href") == pgurl || $(this).attr("href") == pgurl + "/")
+                $(this).addClass("active");
+        });
+    });
+
+</script>
+          
+        
+      </div>
+    </div>
+  
+
+
+<script type="text/javascript" src="/public/js/gamecircle.js"></script>
+    </div>
+    
+    <script type="text/javascript" src="/public/js/leftmenu_controller.js"></script>
+  </div>
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="footer">
+  <div id="upper-footer">
+    <div id="upper-footer-wrapper">
+      <span id="footer-sitemap-title">Sitemap</span>
+      
+      
+      
+      
+      <div id="socialmedia-icons">
+        <a href="https://www.facebook.com/AmazonAppDev"><img src="/public/images/logo-facebook.png" alt="facebook_logo" width="31" height="31" /></a>
+        <a href="https://twitter.com/AmazonAppDev"><img src="/public/images/logo-twitter.png" alt="twitter_logo" width="31" height="31" /></a>
+        <a href="/public/community/blog"><img src="/public/images/logo-blog.png" alt="blog_logo" width="31" height="31" /></a>
+      </div>
+      <span id="footer-followus-span">Follow us</span>
+    </div>
+  </div>
+  <div id="median-footer">
+    <div id="median-footer-wrapper">
+      <ul id="footer-sitemap">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+<li>
+  <a href="/public/solutions/alexa">Alexa</a>
+  
+    <ul>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/solutions/alexa/alexa-skills-kit">Alexa Skills Kit</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/solutions/alexa/alexa-voice-service">Alexa Voice Service</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/solutions/alexa/alexa-fund">Alexa Fund</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/solutions/alexa/rewards-for-skill-developers">Rewards for Skill Developers</a>
+	    </li>
+      
+    </ul>
+  
+</li>
+
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+<li>
+  <a href="/public/apis">Services &amp; APIs</a>
+  
+    <ul>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/apis/earn">Earn</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/apis/engage">Engage</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/apis/experience">Build</a>
+	    </li>
+      
+    </ul>
+  
+</li>
+
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+<li>
+  <a href="/public/solutions/devices">Devices</a>
+  
+    <ul>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/solutions/devices/fire-tablets">Fire Tablets</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/solutions/devices/fire-tv">Amazon Fire TV</a>
+	    </li>
+      
+        
+          
+	      
+	        
+	      
+	    
+	    <li>
+	      <a href="https://developer.amazon.com/dash-replenishment-service">Dash Replenishment Service</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/solutions/devices/fire-phone">Fire Phone</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/solutions/devices/echo">Amazon Echo</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/solutions/devices/amazon-tap">Amazon Tap</a>
+	    </li>
+      
+    </ul>
+  
+</li>
+
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+<li>
+  <a href="/public/resources">Resources</a>
+  
+    <ul>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/solutions/platforms">Platforms</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/resources/learning-center">Learning Center</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/resources/development-tools">Development Tools</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/resources/promotional-tools">Promotional Tools</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/resources/marketing-tools">Marketing Tips</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/resources/other">Other Resources</a>
+	    </li>
+      
+    </ul>
+  
+</li>
+
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+<li>
+  <a href="/public/community/blog">Blogs</a>
+  
+    <ul>
+      
+        
+          
+	      
+	        
+	      
+	    
+	    <li>
+	      <a href="https://developer.amazon.com/blogs/alexa/">Alexa Blog</a>
+	    </li>
+      
+        
+          
+	      
+	        
+	      
+	    
+	    <li>
+	      <a href="https://developer.amazon.com/blogs/appstore/">Appstore Blog</a>
+	    </li>
+      
+        
+          
+	      
+	        
+	      
+	    
+	    <li>
+	      <a href="https://aws.amazon.com/blogs/aws/">AWS Blog</a>
+	    </li>
+      
+    </ul>
+  
+</li>
+
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+<li>
+  <a href="/public/support">Support</a>
+  
+    <ul>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/support/submitting-your-app">Submitting Your Apps</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/support/faq">FAQs</a>
+	    </li>
+      
+        
+          
+	      
+	        
+	      
+	    
+	    <li>
+	      <a href="http://forums.developer.amazon.com">Forums</a>
+	    </li>
+      
+        
+          
+	      
+	        
+	      
+	    
+	    <li>
+	      <a href="https://developer.amazon.com/public/support/contact/contact-us?sc_channel=website&amp;sc_publisher=devportal&amp;sc_campaign=Conversion_Contact-Us&amp;sc_assettype=conversion&amp;sc_team=us&amp;sc_traffictype=organic&amp;sc_country=united-states&amp;sc_segment=all&amp;sc_itrackingcode=100020_us_website&amp;sc_detail=dp-sidebar">Contact Us</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/support/legal/da">App Distribution Agreement</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/support/mobileads/publisher-agreement.html">Mobile Ad Network Publisher Agreement</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/support/mobileads/participation-requirements.html">Mobile Ad Network Program Participation Requirements</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/support/advertise-your-app-agreement">Advertise Your App With Amazon Agreement</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/support/pml.html">Program Materials License Agreement</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/support/legal/tuabg">Trademark Guidelines</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/support/legal/tou">Terms of Use</a>
+	    </li>
+      
+    </ul>
+  
+</li>
+
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- SiteCatalyst code version: H.26.
+Copyright 1996-2013 Adobe, Inc. All Rights Reserved
+More info available at http://www.omniture.com -->
+<script language="JavaScript" type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal/s_code2.js"></script>
+
+<script type="text/javascript">var SiteCatalystId = ""</script>
+
+<script language="JavaScript" type="text/javascript"><!--
+/* You may give each page an identifying name, server, and channel on
+the next lines. */
+s.pageName="/public/solutions/alexa/alexa-skills-kit/docs/publishing-an-alexa-skill"
+s.server="developer.amazon.com"
+s.channel=""
+s.pageType=""
+s.prop1="173.165.36.107"
+s.prop2="Mozilla/5.0 (X11; Linux x86_64; rv:45.0) Gecko/20100101 Firefox/45.0"
+s.prop3=""
+s.prop4=""
+s.prop5=""
+/* Conversion Variables */
+s.campaign=""
+s.state=""
+s.zip=""
+s.events=""
+s.products=""
+s.purchaseID=""
+s.eVar1=""
+s.eVar2=""
+s.eVar3=""
+s.eVar4=""
+s.eVar5=""
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)//--></script>
+<script language="JavaScript" type="text/javascript"><!--
+if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+//--></script><noscript><img src="http://amazonservices.d2.sc.omtrdc.net/b/ss/amzna2z/1/H.22.1--NS/0"
+height="1" width="1" border="0" alt="" /></noscript><!--/DO NOT REMOVE/-->
+<!-- End SiteCatalyst code version: H.26. -->
+
+
+      </ul>
+    </div>
+  </div>
+  <div id="lower-footer">&copy; 2010-2016, Amazon.com, Inc. or its affiliates. All Rights Reserved.</div>
+</div> 
+
+
+    <script type="text/javascript">
+//<![CDATA[
+h285083731.i285083731.AsyncPage.load();
+//]]>
+</script>
+
+    <script type="text/javascript"> 
+    if (window.ue && window.ue.tag) { 
+        window.ue.tag("prelogin", ue.main_scope);
+    }
+    </script>
+    
+  </body>
+</html>

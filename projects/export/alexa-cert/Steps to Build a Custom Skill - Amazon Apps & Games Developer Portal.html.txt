@@ -1,0 +1,208 @@
+  • Home
+  • ALEXA
+  • SERVICES & APIS
+  • DEVICES
+  • RESOURCES
+  • BLOGS
+  • SUPPORT
+
+[                    ] ●
+Home > Alexa > Alexa Skills Kit
+
+  • Alexa
+  • Alexa Skills Kit
+  • Alexa Voice Service
+  • Alexa Fund
+  • Rewards for Skill Developers
+
+Steps to Build a Custom Skill
+
+Review a step-by-step guide to building a custom skill for Alexa.
+
+This guide provides the steps to create a new custom skill.
+
+Is a custom skill the right type of skill for what you want to build? See
+Understanding the Different Types of Skills to learn about other options like
+the Smart Home Skill API.
+
+  • Step 1: Design a Voice User Interface
+  • Step 2: Set Up the Skill in the Developer Portal
+  • Step 3: Use the Voice Design to Build Your Interaction Model
+  • Step 4: Write and Test the Code for Your Skill
+  • Step 5: Beta Test Your Skill (Optional)
+  • Step 6: Submit Your Skill For Certification
+  • Your Skill is Published, Now What?
+
+Step 1: Design a Voice User Interface
+
+Designing an effective voice user interface for your skill is a critical first
+step that you should do before writing any code. This is the primary way users
+will interact with your skill.
+
+ 1. Create a flow diagram that maps out how users will interact with the skill.
+    This flow diagram should show the requests users will make and the possible
+    outcomes of those requests. You use this diagram when designing the
+    detailed elements of your interface.
+ 2. Use the flow diagram to identify the user requests that your skill will
+    handle. These will become intents.
+
+Resources:
+
+  • Review Alexa Voice Design Guide as you plan out your voice user interface.
+  • Learn how users invoke custom skills.
+  • Review best practices for choosing your invocation name.
+
+Step 2: Set Up the Skill in the Developer Portal
+
+Create a new skill in the developer portal. At this point, you can enter a Name
+and Invocation Name for your new skill.
+
+Step 3: Use the Voice Design to Build Your Interaction Model
+
+The interaction model refers to your collection of intents, sample utterances,
+and the dialog model:
+
+  • The requests your skill can handle are represented as intents.
+  • Intents can optionally have arguments called slots.
+  • Sample utterances map the intents to the words and phrases users can say to
+    interact with your skill.
+  • A dialog model identifies information your skill requires and the prompts
+    Alexa can use to collect and confirm that information in a conversation
+    with the user.
+
+There are two different ways to create these components:
+
+  • Use the the skill builder (beta). The skill builder provides a visual
+    interface for defining all components of your interaction model.
+
+    You must use the skill builder (beta) to create a dialog model.
+
+  • Manually create an intent schema and sample utterances in JSON format.
+
+    This option does not include support for the dialog model.
+
+Also see our best practices for sample utterances as you write your utterances.
+
+Step 4: Write and Test the Code for Your Skill
+
+Your primary coding task for your skill is to create a service that can accept
+requests from the Alexa service and send back responses.
+
+ 1. For the quickest start, create an AWS Lambda function to host the service
+    for your skill. AWS Lambda (an Amazon Web Services offering) is a service
+    that lets you run code in the cloud without managing servers.
+
+    See: Create an AWS Lambda Function for a Skill.
+
+    Alternatively, you can build a web service for your skill and host it with
+    any cloud provider. See Hosting a Custom Skill as a Web Service.
+
+ 2. Write the code for your skill. If you are using Lambda, you can code in
+    Node.js, Java, Python, or C#. If you are hosting your skill as a web
+    service, you can use any programming language.
+
+      □ Handle Requests Sent by Alexa
+      □ Include a Card in Your Skill’s Response
+      □ Implement the Built-in Intents
+      □ Link an Alexa User with a User in Your System
+      □ Enhance Your Skills with Address Information
+      □ Access the Alexa Shopping and To-Do Lists
+ 3. In the developer portal, update your skill with your endpoint (for
+    instance, the Lambda ARN).
+
+    See Register and Manage Custom Skills in the Developer Portal
+
+ 4. Test your skill with the Service Simulator or an Alexa-enabled device.
+
+    See Test a Custom Skill
+
+ 5. Update the metadata about your skill that will appear in the Alexa Skills
+    Store in the Alexa app.
+
+    See: Define Skill Metadata
+
+Step 5: Beta Test Your Skill (Optional)
+
+Once your skill is finished, you have the option of setting up a beta test for
+your skill. With a beta test, you can make your skill available to a limited
+group of testers that you have personally selected, rather than to the general
+public.
+
+See: Skills Beta Testing
+
+Step 6: Submit Your Skill For Certification
+
+When you are ready to make your skill public, submit it for certification. If
+your skill is currently in a beta test, you can still proceed with
+certification.
+
+ 1. To proceed to certification, first test your skill against the submission
+    checklist. This checklist includes the tests performed by Amazon’s
+    certification team, so passing all of these tests can speed up the
+    certification process.
+
+    See: Certification Requirements for Custom Skills
+
+ 2. When you are ready for your skill to be made public, and you have ensured
+    that your skill fulfills the requirements on the certification checklist,
+    submit your skill for certification.
+
+    See: Submit an Alexa Skill for Certification
+
+Your Skill is Published, Now What?
+
+Once your skill is published, Amazon customers can see it in the Alexa App and
+choose to enable and use it.
+
+You can (and should) continue to work on your skill, enhancing its features,
+fixing any problems, and improving the experience for your end users. For
+recommendations for ongoing skill development and when you need to re-submit
+the skill, see the “Creating a New Version of a Live Skill” section in
+Submitting the Skill for Certification.
+
+Sitemap
+facebook_logo twitter_logo blog_logo
+Follow us
+
+  • Alexa
+      □ Alexa Skills Kit
+      □ Alexa Voice Service
+      □ Alexa Fund
+      □ Rewards for Skill Developers
+  • Services & APIs
+      □ Earn
+      □ Engage
+      □ Build
+  • Devices
+      □ Fire Tablets
+      □ Amazon Fire TV
+      □ Dash Replenishment Service
+      □ Fire Phone
+      □ Amazon Echo
+      □ Amazon Tap
+  • Resources
+      □ Platforms
+      □ Learning Center
+      □ Development Tools
+      □ Promotional Tools
+      □ Marketing Tips
+      □ Other Resources
+  • Blogs
+      □ Alexa Blog
+      □ Appstore Blog
+      □ AWS Blog
+  • Support
+      □ Submitting Your Apps
+      □ FAQs
+      □ Forums
+      □ Contact Us
+      □ App Distribution Agreement
+      □ Mobile Ad Network Publisher Agreement
+      □ Mobile Ad Network Program Participation Requirements
+      □ Advertise Your App With Amazon Agreement
+      □ Program Materials License Agreement
+      □ Trademark Guidelines
+      □ Terms of Use
+    *
+
+© 2010-2016, Amazon.com, Inc. or its affiliates. All Rights Reserved.

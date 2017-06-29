@@ -1,0 +1,37 @@
+#!/usr/bin/perl -w
+
+use BOSS::Config;
+use PerlLib::SwissArmyKnife;
+
+$specification = q(
+	-s		Start FLP
+	-r1		Reload FLP source files
+	-r2		Reload FLP
+	-r3		Restart FLP Emacs Session
+);
+
+my $config =
+  BOSS::Config->new
+  (Spec => $specification);
+my $conf = $config->CLIConfig;
+# $UNIVERSAL::systemdir = "/var/lib/myfrdcsa/codebases/minor/system";
+
+my $command;
+if ($conf->{'-s'}) {
+  $command = "start-screen-session holy emacs -nw -f flp-quick-start";
+}
+if ($conf->{'-r1'}) {
+  $command = "unilang-client -r Emacs-Client -c \"eval (flp-reload-all-modified-source-files)\"";
+}
+if ($conf->{'-r2'}) {
+  $command = "unilang-client -r Emacs-Client -c 'eval (flp-restart t)'";
+}
+if ($conf->{'-r3'}) {
+  NotYetImplemented();
+}
+print $command."\n";
+ApproveCommands
+  (
+   Commands => [$command],
+   AutoApprove => 1,
+  );

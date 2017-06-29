@@ -1,0 +1,3 @@
+planForContingency(whatIfTheCarBreaksDownDuringAVisit).
+planForContingency(whatIfTheHardDriveOfFLPProductionServerDies).
+planForContingency(whatIfWeRunOutOfMoneyDuringAVisit).

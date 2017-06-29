@@ -1,0 +1,94 @@
+/**
+ * This is the stylesheet for the footer of pages generated in plweb.
+ */
+
+/**
+ * The footer has a distinctive grey background, blue text, and padding.
+ */
+
+.footer {
+  background-color: #d8d8ce;
+  clear: both;
+  color: #0a3d6c;
+  font-size: 14px;
+  font-weight: plain;
+}
+.footer a:active,
+.footer a:focus,
+.footer a:hover {
+  color: #888888;
+  text-decoration: underline;
+}
+
+
+
+/**
+ * The footer contains community content.
+ */
+
+#community-content {
+  margin-bottom: 20px;
+  margin-left: 140px;
+  margin-right: 90px;
+  padding-top: 10px;
+}
+#community-content a {
+  color: #0a3d6c;
+  text-decoration: none;
+}
+#community-content a:active,
+#community-content a:focus,
+#community-content a:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+
+
+/**
+ * The footer-footer, i.e. `id=footer` inside `class-footer`,
+ *  appears underneath the community content.
+ *
+ * The footer contains text saying "Powered by SWI-Prolog ...".
+ * It provides a link to the SWI-Prolog home page,
+ *  but we do not want to highlight the link in any way,
+ *  unless it is hovered over (or active).
+ */
+#footer {
+  background: none repeat scroll 0 0 #666666;
+  color: white;
+  font-weight: bold;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+#footer a {
+  color: white;
+  text-decoration: none;
+}
+#footer a:active,
+#footer a:focus,
+#footer a:hover {
+  color: white;
+  text-decoration: underline;
+}
+#footer .current-user {
+  margin-right: 10px;
+}
+#footer #powered {
+  margin-left: 10px;
+}
+
+
+
+/**
+ * This is the login link at the bottom right of the footer.
+ * When a user is logged in, this displays her name
+ *  and a link to her profile page.
+ */
+
+.footer .current-user {
+  display: inline;
+  float: right;
+  text-decoration: none;
+}
+

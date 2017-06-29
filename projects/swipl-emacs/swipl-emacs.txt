@@ -1,0 +1,4 @@
+https://bruda.ca/emacs/prolog_mode_for_emacs
+https://www.metalevel.at/pceprolog/
+https://www.metalevel.at/ediprolog/
+https://www.metalevel.at/etrace/

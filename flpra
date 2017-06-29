@@ -1,0 +1,3 @@
+#!/bin/bash
+
+/var/lib/flora2/runflora -e "_load('free_life_planner')@_prolog()."

@@ -1,0 +1,5875 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
+  <head>
+    <meta http-equiv="x-ua-compatible" content="IE=EDGE">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, maximum-width=1">
+    <meta name="keywords" content="amazon, appstore, developer portal"/>
+    
+    <meta name="description" content="Amazon Apps & Services Developer Portal"/>
+
+    <script type="text/javascript">var ue_t0=window.ue_t0||+new Date();</script><script type="text/javascript">(function(e){var c=e;var a=c.ue||{};a.main_scope="mainscopecsm";a.q=[];a.t0=c.ue_t0||+new Date();a.d=g;function g(h){return +new Date()-(h?0:a.t0)}function d(h){return function(){a.q.push({n:h,a:arguments,t:a.d()})}}function b(m,l,h,j,i){var k={m:m,f:l,l:h,c:""+j,err:i,fromOnError:1,args:arguments};c.ueLogError(k);return false}b.skipTrace=1;e.onerror=b;function f(){c.uex("ld")}if(e.addEventListener){e.addEventListener("load",f,false)}else{if(e.attachEvent){e.attachEvent("onload",f)}}a.tag=d("tag");a.log=d("log");a.reset=d("rst");c.ue_csm=c;c.ue=a;c.ueLogError=d("err");c.ues=d("ues");c.uet=d("uet");c.uex=d("uex");c.uet("ue")})(window);(function(e,d){var a=e.ue||{};function c(g){if(!g){return}var f=d.head||d.getElementsByTagName("head")[0]||d.documentElement,h=d.createElement("script");h.async="async";h.src=g;f.insertBefore(h,f.firstChild)}function b(){var k=e.ue_cdn||"z-ecx.images-amazon.com",g=e.ue_cdns||"images-na.ssl-images-amazon.com",j="/images/G/01/csminstrumentation/",h=e.ue_file||"ue-full-11e51f253e8ad9d145f4ed644b40f692._V1_.js",f,i;if(h.indexOf("NSTRUMENTATION_FIL")>=0){return}if("ue_https" in e){f=e.ue_https}else{f=e.location&&e.location.protocol=="https:"?1:0}i=f?"https://":"http://";i+=f?g:k;i+=j;i+=h;c(i)}if(!e.ue_inline){if(a.loadUEFull){a.loadUEFull()}else{b()}}a.uels=c;e.ue=a})(window,document);</script>
+
+    <script type="text/javascript">
+//<![CDATA[
+if (typeof d754607316 === 'undefined') {
+    d754607316 = {};
+}
+if (typeof d754607316.e754607316 === 'undefined') {
+    d754607316.e754607316 = {};
+}
+
+d754607316.e754607316.AsyncPage = {
+
+    load : function() {
+        var result,divs , i, length;
+        result = [];
+
+        if (document.getElementsByClassName) {
+            result = document.getElementsByClassName('f754607316Async');
+        } else {
+            divs = document.getElementsByTagName('div');
+            for (i=0, length=divs.length; i<length; i++) {
+                if (divs[i].className === 'f754607316Async') {
+                    result.push(divs[i]);
+                }
+            }
+        }
+
+        for (i=0, length=result.length; i< length; i++) {
+            (function(element) {
+                this.sendRequest(element.id, function(xmlHttp) {
+                    var fragment, tmpDiv, parent;
+                    fragment = document.createDocumentFragment();
+                    tmpDiv = document.createElement('div');
+                    tmpDiv.innerHTML = xmlHttp.responseText;
+                    while (tmpDiv.firstChild) {
+                        fragment.appendChild(tmpDiv.firstChild);
+                    }
+                    parent = element.parentNode;
+                    parent.replaceChild(fragment, element);
+                });
+            }).call(this, result[i]);
+        }
+    },
+
+    sendRequest : function(url, callback) {
+        var xmlHttpRequest;
+        try {
+            xmlHttpRequest = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
+            xmlHttpRequest.open("GET", url, true);
+            xmlHttpRequest.onreadystatechange = function () {
+                if (xmlHttpRequest.readyState !== 4) {
+                    return;
+                }
+                if (xmlHttpRequest.status !== 200 && xmlHttpRequest.status !== 304) {
+                    return;
+                }
+                callback(xmlHttpRequest);
+            };
+
+            xmlHttpRequest.send();
+        } catch (e) {
+            if (typeof window.console !== 'undefined') {
+                if (typeof console.error !== 'undefined') {
+                    console.error(e.name + ": " + e.message);
+                } else if (typeof console.log !== 'undefined') {
+                    console.log(e.name + ": " + e.message);
+                }
+            }
+        }
+    }
+};
+//]]>
+</script>
+<meta name="id" content="94c5c2d6-6666-48fc-a285-cf39b8f71e34"/>
+<title>
+            Alexa Skills Kit Voice Interface and User Experience Testing for Custom Skills - Amazon Apps &amp; Services Developer Portal
+        </title>
+<meta name="description" content="Get detailed test cases for verifying the user interface and user experience for an Alexa skill."/>
+<meta name="keywords" content="checklist,certification,certify,testing,alexa,ask,submitting,quality,quality assurance,qa,test cases,vui,ux,voice user interface,user experience"/>
+
+
+    <link rel="stylesheet" href="https://images-na.ssl-images-amazon.com/images/G/01/AUIClients/MASAriaThemeAssets-cc1c91b11ab782aab8b8270cbcbd45db7345699d._V2_.css" />
+
+    <link href="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal2/res/css/webfonts._V326851759_.css" rel="stylesheet" type="text/css"/>
+    <link id="page_css" rel="stylesheet" href="" type="text/css"/>
+    <link href='https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/taas/jquery/widget/jquery-ui-1.10.3.custom.min.css' rel='stylesheet' type='text/css'/>
+
+    <script type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal2/public/resources/js/jquery-1.10.1.min._V352894325_.js"></script>
+    <script type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/taas/jquery/widget/jquery-ui-1.10.3.custom.min.js"></script>
+    
+    <script type="text/javascript" src="/public/js/jquery_cookie.js"></script>
+    
+    <script type="text/javascript" src="/public/js/mediatest.js"></script>
+    
+    <script type="text/javascript" src="/public/js/scroll_to.js"></script>
+    
+    <script type="text/javascript" src="/public/js/language_switcher.js"></script>
+  </head>
+  <body>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="header">
+  <div style="display:none;" id="/public/_hn:component-rendering%7Cr33_r2_r1/solutions/alexa/alexa-skills-kit/docs/alexa-skills-kit-voice-interface-and-user-experience-testing" class="f754607316Async"></div>
+  <div id="lower-header">
+    <div id="lower-header-wrapper">
+      <ul id="header-menu">
+        
+        
+        
+        <li class="">
+          <a id="header-home" href="/public">Home</a>
+        </li>
+        
+        
+         
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   
+
+	 
+
+
+
+
+  
+    <li class="active">
+      <a href="/public/solutions/alexa">ALEXA</a>
+    </li>
+  
+  
+
+
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   
+
+	 
+
+
+
+
+  
+  
+    <li>
+      <a href="/public/apis">SERVICES &AMP; APIS</a>
+    </li>
+  
+
+
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   
+
+	 
+
+
+
+
+  
+  
+    <li>
+      <a href="/public/solutions/devices">DEVICES</a>
+    </li>
+  
+
+
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   
+
+	 
+
+
+
+
+  
+  
+    <li>
+      <a href="/public/resources">RESOURCES</a>
+    </li>
+  
+
+
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   
+
+	 
+
+
+
+
+  
+  
+    <li>
+      <a href="/public/community/blog">BLOGS</a>
+    </li>
+  
+
+
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   
+
+	 
+
+
+
+
+  
+  
+    <li>
+      <a href="/public/support">SUPPORT</a>
+    </li>
+  
+
+
+        
+      </ul>
+      <div id="search-box">
+        
+        
+        <form id="search-box-form" action="/public/search" method="get" onsubmit="sanitizeRequestParam(document.forms['searchSubmit']['query'], 'Search')">
+          
+          <input id="search-box-input" type="text" name="query" placeholder="Search..." value="" />
+          <input id="search-box-submit" type="image" src="/public/images/icon-search.png" name="image" width="18" height="18">
+        </form>
+        <button id="search-box-toggle-button" style="background-image: url('/public/images/icon-search.png')" onclick="javascript:toggleSearch()"></button>
+        
+		<script type="text/javascript" src="/public/js/searchbox_controller.js"></script>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="/public/js/header_scroller.js"></script>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="directory">
+    <div id="directory-wrapper">
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="/public">Home</a>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <span>&gt;</span>
+    
+      
+        
+      
+      
+    
+    <a href="/public/solutions/alexa">Alexa</a>
+  
+  
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <span>&gt;</span>
+    
+      
+        
+      
+      
+    
+    <a href="/public/solutions/alexa/alexa-skills-kit">Alexa Skills Kit</a>
+  
+  
+    
+  
+
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+</div>
+<div id="outer-wrapper">
+  <div id="inner-wrapper">
+    <div id="left-sidebar">
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<ul id="left-sidebar-list">
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+      
+    
+    
+  
+  
+  
+  
+  
+  	
+    
+  
+  
+    
+    
+      <li>
+        <a href="/public/solutions/alexa">Alexa </a>
+      </li>
+    
+  
+  
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+    
+  
+
+
+  
+    
+    
+  
+  
+
+
+
+  
+  
+  
+    <li class="active">
+      <a href="/public/solutions/alexa/alexa-skills-kit">Alexa Skills Kit</a>
+      
+    </li>
+  
+  
+  
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+    
+  
+
+
+  
+    
+    
+  
+  
+
+
+
+  
+  
+  
+  
+  
+    <li>
+      <a href="/public/solutions/alexa/alexa-voice-service">Alexa Voice Service</a>
+    </li>
+  
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+    
+  
+
+
+  
+    
+    
+  
+  
+
+
+
+  
+  
+  
+  
+  
+    <li>
+      <a href="/public/solutions/alexa/alexa-fund">Alexa Fund</a>
+    </li>
+  
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+    
+  
+
+
+  
+    
+    
+  
+  
+
+
+
+  
+  
+  
+  
+  
+    <li>
+      <a href="/public/solutions/alexa/rewards-for-skill-developers">Rewards for Skill Developers</a>
+    </li>
+  
+
+  
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</ul>
+    </div>
+    <div id="content">
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal2/content/sdk/js/shCore._V138392098_.js"></script>
+<script type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal2/content/sdk/js/shBrushPlain._V138254508_.js"></script>
+<script type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal2/content/sdk/js/shBrushJava._V138392099_.js"></script>
+<script type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal2/content/sdk/js/shBrushXml._V138392099_.js"></script>
+<script type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal2/content/sdk/js/shBrushJScript._V307911092_.js"></script>
+<script type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal2/content/sdk/js/shBrushCSharp._V307911161_.js"></script>
+<script type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal2/content/sdk/js/shBrushAS3._V307911115_.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+      SyntaxHighlighter.all();
+    });
+</script>
+
+
+  
+  
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        
+        
+    
+
+
+
+
+
+    
+    
+    <script type="text/javascript" src="/public/js/text_banner_modify.js"></script>
+    <div id="content-body" class="group">
+
+      
+
+      <div class="content-html-container tech-doc">
+      <div id="text-banner" class="tech-doc" style="border-bottom-style:none;">
+        <h2>Alexa Skills Kit Voice Interface and User Experience Testing for Custom Skills</h2>
+      </div>
+        
+        
+          
+            
+            <a class="anchor" name="Introduction"></a>
+            
+            <h2>Introduction</h2>
+            <link rel="stylesheet" type="text/css" href="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal/hipposidebar._TTH_.css" />
+<script type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal/includescript.min._TTH_.js"></script>
+<!-- Bootstrap is used under the MIT license. -->
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<div class="rightMenu"> <span class="inc:https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal/menus/._TTH_.html"> </span></div>
+<script type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal/minitoc.min._TTH_.js"></script> 
+<!-- AnchorJS is used under the MIT license. -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/2.0.0/anchor.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<!-- Navgoco is used under the BSD license. -->
+<script src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal/jquery.navgoco.min._TTH_.js"></script>
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<script type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal/customscriptshippo._TTH_.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css" />
+<link rel="stylesheet" href="/public/binaries/content/assets/main/solutions/alexa/alexa-voice-service/styles/trans-tabs.css" />
+<!--[if IE]>
+<link rel="stylesheet" type="text/css" href="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal/navtabshippo._TTH_.css" />
+<![endif]-->
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+<script type="text/javascript">
+    var getQueryString = function ( field, url ) {
+        var href = url ? url : window.location.href;
+        var reg = new RegExp( '[?&]' + field + '=([^&#]*)', 'i' );
+        var string = reg.exec(href);
+        return string ? string[1] : null;
+    };
+
+    var language = getQueryString('language');
+
+</script>
+<script type="text/javascript"> $(function() {
+    if (language == "german") {
+        $( "#tabs" ).tabs({ active: 1 });
+    }
+    else {
+        $( "#tabs" ).tabs();
+    }
+});
+</script>
+<link rel="stylesheet" type="text/css" href="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal/highlighter.min._TTH_.css" />
+
+<link rel="stylesheet" type="text/css" href="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal/hipposidebarpage.min._TTH_.css" />
+
+<script type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal/includescript.min._TTH_.js">
+
+</script>
+<div class="rightMenu"> <span class="inc:https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal/menus/ask-customskills._TTH_.html"> </span>
+</div>
+
+<style>
+    #content-body > div > h2 {
+        display: none;
+    }
+
+    .ui-helper-clearfix:after {
+        margin-bottom: 25px;
+        display: inline-table;
+    }
+    .content-html-container.tech-doc h2:nth-child(3) {
+        display: block;
+    }
+    div#germanPages {
+        border: 1px solid #dedede;
+        padding: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    ul.germanMenu {
+        list-style-type: none !important;
+        margin-left: -30px;
+    }
+    a.active {
+        font-weight: bold;
+        color: black !important;
+        cursor: default;
+    }
+    @media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0) { @media {
+        .ui-helper-clearfix:after {
+            margin-bottom: 38px;
+        }
+    }}
+
+</style>
+
+<!--[if IE]>
+<style>
+    .ui-helper-clearfix:after {
+        margin-bottom: 38px;
+    }
+
+</style>
+<![endif]-->
+
+
+<div id="tabs">
+    <ul>
+        <li><a href="#english-version" data-toggle="tab">English</a></li>
+        <li><a href="#german-version" data-toggle="tab">Deutsch</a></li>
+    </ul>
+
+    <div id="english-version">
+
+        <script type="text/javascript">
+    $( document ).ready(function() {
+        var ToC =
+                "<nav role='navigation' class='table-of-contents'>" +
+                "<span class='minitocTitle'></span>" +
+                "<ul>";
+
+        var newLine, el, title, link;
+
+        $("#english-version>h2").each(function() {
+
+            el = $(this);
+            title = el.text();
+            link = "#" + el.attr("id");
+
+            newLine =
+                    "<li>" +
+                    "<a href='" + link + "'>" +
+                    title +
+                    "</a>" +
+                    "</li>";
+            ToC += newLine;
+        });
+
+        ToC +=
+                "</ul>" +
+                "</nav>";
+
+        $("#minitocenglish").prepend(ToC);
+    });
+
+</script>
+<!-- <div id="minitocenglish">
+</div> -->
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <!-- Voice Interface and User Experience Testing for Custom Skills -->
+        
+<p>Voice interface and user experience testing focuses on:</p>
+
+<ul>
+  <li>Testing the user experience to ensure that the skill is aligned with several key features of Alexa that help create a great experience for customers.</li>
+  <li>
+    <p>Reviewing the <em>intent schema</em>, the set of <em>sample utterances</em>, and the list of values for any <em>custom slot types</em> you have defined to ensure that they are correct, complete, and adhere to voice design best practices.</p>
+
+    <p>These components are defined on the <strong>Interaction Model</strong> page for your skill in the developer portal.</p>
+  </li>
+</ul>
+
+<p>These tests address the following goals:</p>
+
+<ul>
+  <li>Increase the different ways end users can phrase requests to your skill.</li>
+  <li>Evaluate the ease of speech recognition when using your skill (was Alexa able to recognize the right words?)</li>
+  <li>Improve language understanding (when Alexa recognizes the right words, did she understand what to do?).</li>
+  <li>Ensure that users can speak to Alexa naturally and spontaneously.</li>
+  <li>Ensure that Alexa understands most requests you make, within the context of a skill’s functionality.</li>
+  <li>Ensure that Alexa responds to users’ requests in an appropriate way, by either fulfilling them or explaining why she can’t.</li>
+</ul>
+
+<p>Many of these tests verify that your skill adheres to the design guidelines described in <a href="https://developer.amazon.com/designing-for-voice/" title="Alexa Voice Design Guide">Alexa Voice Design Guide</a>. You may want to review those guidelines while working through this section. For recommendations for sample utterances, see <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/ask-bp-sample-utterances">Best Practices for Sample Utterances and Custom Slot Type Values</a>.</p>
+
+<p>Note that many of these tests require that you have a device for voice testing. If you do not have an Alexa-enabled device, you can use third party Alexa-enabled services, such as <a href="https://echosim.io/" title="Alexa Skill Testing Tool">Echosim.io</a>, to test your Alexa skill.</p>
+
+<p>To return to the high-level testing checklist, see <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/alexa-skills-kit-submission-checklist">Certification Requirements for Custom Skills</a>.</p>
+
+<ul id="markdown-toc">
+  <li><a href="#session-management" id="markdown-toc-session-management">4.1. Session Management</a></li>
+  <li><a href="#intent-and-slot-combinations" id="markdown-toc-intent-and-slot-combinations">4.2. Intent and Slot Combinations</a></li>
+  <li><a href="#intent-response-design" id="markdown-toc-intent-response-design">4.3. Intent Response (Design)</a></li>
+  <li><a href="#supportive-prompting" id="markdown-toc-supportive-prompting">4.4. Supportive Prompting</a></li>
+  <li><a href="#invocation-name" id="markdown-toc-invocation-name">4.5. Invocation Name</a></li>
+  <li><a href="#one-shot-phrasing-for-sample-utterances" id="markdown-toc-one-shot-phrasing-for-sample-utterances">4.6. One-Shot Phrasing for Sample Utterances</a></li>
+  <li><a href="#variety-of-sample-utterances" id="markdown-toc-variety-of-sample-utterances">4.7. Variety of Sample Utterances</a></li>
+  <li><a href="#intents-and-slot-types" id="markdown-toc-intents-and-slot-types">4.8. Intents and Slot Types</a></li>
+  <li><a href="#custom-slot-type-values" id="markdown-toc-custom-slot-type-values">4.9. Custom Slot Type Values</a></li>
+  <li><a href="#writing-conventions-for-sample-utterances" id="markdown-toc-writing-conventions-for-sample-utterances">4.10. Writing Conventions for Sample Utterances</a></li>
+  <li><a href="#error-handling" id="markdown-toc-error-handling">4.11. Error Handling</a></li>
+  <li><a href="#providing-help" id="markdown-toc-providing-help">4.12. Providing Help</a></li>
+  <li><a href="#stopping-and-canceling" id="markdown-toc-stopping-and-canceling">4.13. Stopping and Canceling</a></li>
+  <li><a href="#appendix-deprecated-test-for-sample-utterances-slot-type-values" id="markdown-toc-appendix-deprecated-test-for-sample-utterances-slot-type-values">Appendix: Deprecated Test for Sample Utterances (Slot Type Values)</a></li>
+  <li><a href="#next-steps" id="markdown-toc-next-steps">Next Steps</a></li>
+</ul>
+
+<h2 id="session-management">4.1. Session Management</h2>
+
+<p>Every response sent from your skill to the Alexa service includes a flag indicating whether the conversation with the user (the <em>session</em>) should end or continue. If the flag is set to continue, Alexa then listens and waits for the user’s response. For Amazon devices such as Amazon Echo that have a blue light ring, the device lights up to give the user a visual cue that Alexa is listening for the user’s response.</p>
+
+<p>This test verifies that the text-to-speech provided by your skill and the session flag work together for a good user experience. Responses that ask questions leave the session open for a reply, while responses that fulfill the user’s request close the session.</p>
+
+<table>
+<colgroup>
+<col width="5%" />
+<col width="45%" />
+<col width="49%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">Test</th>
+<th align="left">Expected Results</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><p>1.</p></td>
+<td align="left">
+        <p>Invoke the skill without specifying an intent, for example:</p>
+
+        <ul>
+          <li>Open <em>&lt;Invocation Name&gt;</em>.</li>
+        </ul>
+
+        <p>Respond to the prompt provided by the skill and verify that you get a correct response.</p>
+
+      </td> 
+<td>
+        <p>After every response that <em>asks the user a question</em>, the session remains open and the device waits for your response.</p>
+
+        <p>After every response that <em>completes the user’s request</em>, the interaction ends.</p>
+      </td>
+</tr>
+<tr>
+<td align="left"><p>2.</p></td>
+<td align="left">
+        <p>Test a variety of intents – both those that ask questions and those complete the user’s request.</p>
+      </td> 
+<td>
+        <p>After every response that <em>asks the user a question</em>, the session remains open and the device waits for your response.</p>
+
+        <p>After every response that <em>completes the user’s request</em>, the interaction ends.</p>
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="intent-and-slot-combinations">4.2. Intent and Slot Combinations</h2>
+
+<p>A skill may have several intents and slots. This test verifies that each intent returns the expected response with different combinations of slots.</p>
+
+<table>
+<colgroup>
+<col width="5%" />
+<col width="45%" />
+<col width="49%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">Test</th>
+<th align="left">Expected Results</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><p>1.</p></td>
+<td align="left">
+        <p>Test the skill’s intent responses using different combinations of slot values.</p>
+
+        <p>You can use one of the one-shot phrases for starting the skill, for example:</p>
+
+        <ul>
+          <li><strong>Ask</strong> &lt;Invocation Name&gt; <strong>to</strong> <em>&lt;do something&gt;</em></li>
+        </ul>
+
+        <p>Be sure to invoke every intent, not just those that are typically used in a one-shot manner.</p>
+
+        <p>Evaluate the response for each intent</p>
+      </td> 
+<td>
+        <p>The response is appropriate for the context of the request.</p>
+
+        <p>For example, if the request includes a slot value, the response is relevant to that information. If a request to that same intent does not include the slot, the response uses a default or asks the user for clarification</p>
+      </td>
+</tr>
+</tbody>
+</table>
+
+<p>You may want to use a table of intent and slot values to track this test and ensure that you test <em>every intent and slot combination</em>. For example:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Intent</th>
+      <th>Slot Combination</th>
+      <th>Sample Utterance to Test</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">IntentName</code></td>
+      <td><code class="highlighter-rouge">SlotOne</code></td>
+      <td>This is an utterance to test this intent and slot one</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">IntentName</code></td>
+      <td><code class="highlighter-rouge">SlotTwo</code></td>
+      <td>This is an utterance to test this intent and slot two</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">IntentName</code></td>
+      <td><code class="highlighter-rouge">SlotOne</code><br /><code class="highlighter-rouge">SlotTwo</code></td>
+      <td>This is an utterance to test this intent with both slot one and slot two</td>
+    </tr>
+    <tr>
+      <td><em>Each additional valid intent and slot combination</em></td>
+      <td>-</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="intent-response-design">4.3. Intent Response (Design)</h2>
+
+<p>A good user experience for a skill depends on the skill having well-designed text-to-speech responses. <a href="https://developer.amazon.com/designing-for-voice/what-alexa-says/" title="Alexa Voice Design Guide: What Alexa Says">Alexa Voice Design Guide: What Alexa Says</a> provides recommendations for designing your skill’s responses. This test verifies that your skill’s responses meet these recommendations.</p>
+
+<p>You can use the same set of intent and slot combinations used for the <em>Intent and Slot Combinations</em> test.</p>
+
+<table>
+<colgroup>
+<col width="5%" />
+<col width="45%" />
+<col width="49%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">Test</th>
+<th align="left">Expected Results</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><p>1.</p></td>
+<td align="left">
+        <p>Test the skill’s intent responses using different combinations of slot values.</p>
+
+        <p>You can use one of the one-shot phrases for starting the skill, for example:</p>
+
+        <ul>
+          <li><strong>Ask</strong> &lt;Invocation Name&gt; <strong>to</strong> <em>&lt;do something&gt;</em></li>
+        </ul>
+
+        <p>Be sure to invoke every intent, not just those that are typically used in a one-shot manner.</p>
+
+        <p>Try a variety of sample utterances for each intent.</p>
+
+        <p>If the skill vocalizes any examples for users to try, use those examples exactly as instructed by the skill.</p>
+
+        <p>Evaluate the response for each intent</p>
+      </td> 
+<td>
+        <p>The response meets each of the following requirements:</p>
+
+        <ul>
+          <li>Answers the user’s request in a concise, terse manner.</li>
+          <li>Provides information in consumable chunks.</li>
+          <li>Does not include technical or legal jargon.</li>
+          <li>Responses from intents that are not typically used in a one-shot manner provide a relevant response or inform users how to begin using the skill.</li>
+          <li>The response is spoken in the same language used by the Alexa account. For instance, when testing with an account configured with German, the text-to-speech responses are in German. When testing with an account configured with English (US), the text-to-speech responses are in English.</li>
+        </ul>
+
+        <p>For a better user experience, the response should also meet these recommendations:</p>
+
+        <ul>
+          <li>Easy to understand</li>
+          <li>Written for the ear, not the eye</li>
+        </ul>
+      </td>
+</tr>
+</tbody>
+</table>
+
+<p>You can use the same set of intent and slot combinations used for the <em>Intent Response (Intent and Slot Combinations)</em> test.</p>
+
+<h2 id="supportive-prompting">4.4. Supportive Prompting</h2>
+
+<p>A user can begin an interaction with your skill without providing enough information to know what they want to do. 
+This might be either a <em>no intent</em> request (the user invokes the skill but does not specify any intent at all) or a <em>partial intent</em> request (the user specifies the intent but does not provide the slot values necessary to fulfill the request).</p>
+
+<p>In these cases, the skill must provide <em>supportive prompts</em> asking the user what they want to do. This test verifies that your skill provides useful prompts for these scenarios.</p>
+
+<table>
+<colgroup>
+<col width="5%" />
+<col width="45%" />
+<col width="49%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">Test</th>
+<th align="left">Expected Results</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><p>1.</p></td>
+<td align="left">
+        <p>Invoke the skill with <em>no intent</em>. You can do this by using a phrase that sends a <code class="highlighter-rouge">LaunchRequest</code> rather than an <code class="highlighter-rouge">IntentRequest</code>. For example:</p>
+
+        <ul>
+          <li>Open <em>&lt;Invocation Name&gt;</em>.</li>
+        </ul>
+
+        <p>Verify that you get a prompt, then respond to the prompt and verify that you get a correct response.</p>
+      </td> 
+<td>
+        <ul>
+          <li>The skill prompts you for information about what you want to do.</li>
+          <li>The prompt includes the skill’s name so you know you are in the right place.</li>
+          <li>The prompt gives you specific options about what to do, but is <em>brief</em>. If the skill has many functions, the prompt gives the most common.</li>
+          <li>The prompt does <em>not</em> give verbose instructions telling the user what to say (such as “to do xyz, say xyz”). The prompt is concise.</li>
+          <li>When you respond to the prompt, the skill continues prompting until all needed information is collected, then provides a contextualized, non-error response.</li>
+          <li>If no information is needed from users after launch, the skill completes a core function and closes the session.</li>
+        </ul>
+      </td>
+</tr>
+<tr>
+<td align="left"><p>2.</p></td>
+<td align="left">
+        <p>Invoke the skill with a <em>partial intent</em>. You can  do this by using a phrase that invokes the intent without including all the required slot data. For example:</p>
+
+        <ul>
+          <li><strong>Ask</strong> &lt;Invocation Name&gt; <strong>to</strong> <em>&lt;do something&gt;</em> (leave out slot data in the command)</li>
+        </ul>
+
+        <p>Verify that you get a prompt, then respond to the prompt and verify that you get a correct response.</p>
+
+        <p>If the skill does not define any slots, you can skip this test, as it is not possible to send a partial intent.</p>
+      </td> 
+<td>
+        <ul>
+          <li>The skill prompts you for the missing information.</li>
+          <li>The prompt gives you specific options about what to do, but is <em>brief</em>. If the skill has many functions, the prompt gives the most common.</li>
+          <li>The prompt does <em>not</em> give verbose instructions telling the user what to say (such as “to do xyz, say xyz”). The prompt is concise.</li>
+          <li>When you respond to the prompt, the skill continues prompting until all needed information is collected, then provides a contextualized, non-error response.</li>
+        </ul>
+      </td>
+</tr>
+</tbody>
+</table>
+
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Some very simple skills respond to all requests with a complete answer and do not ever prompt the user. For example, the Space Geek sample responds to every request (including a <code class="highlighter-rouge">LaunchRequest</code> with no intent) with a fact about space, then ends the session. For these skills, do the first test and verify that you get a complete response.</div>
+
+<p>See <a href="https://developer.amazon.com/designing-for-voice/what-alexa-says/" title="Alexa Voice Design Guide: What Alexa Says">What Alexa Says</a> for recommendations for designing prompts.</p>
+
+<h2 id="invocation-name">4.5. Invocation Name</h2>
+
+<p>Users say the <em>invocation name</em> for a skill to begin an interaction. Inspect the skill’s invocation name and verify that it meets the invocation name requirements described in <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/choosing-the-invocation-name-for-an-alexa-skill">Choosing the Invocation Name for a Custom Skill</a>.</p>
+
+<h2 id="one-shot-phrasing-for-sample-utterances">4.6. One-Shot Phrasing for Sample Utterances</h2>
+
+<p>Most skills provide quick, simple, “one-shot” interactions in which the user asks a question or gives a command, the skill responds with an answer or confirmation, and the interaction is complete. In these interactions, the user invokes your skill and states their intent all in a single phrase.</p>
+
+<p>The <em>ask</em> and <em>tell</em> phrases are the most natural phrases for starting these types of interactions. Therefore, it is critical that you write sample utterances that work well with these phrases and are easy and natural to say.</p>
+
+<p>In these tests, you review the sample utterances you’ve written for the skill, then test them by voice to ensure that they work as expected.</p>
+
+<table>
+<colgroup>
+<col width="5%" />
+<col width="45%" />
+<col width="49%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">Test</th>
+<th align="left">Expected Results</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><p>1.</p></td>
+<td align="left">
+        <p>Inspect the skill’s sample utterances to ensure that they contain the right phrasing to match the different phrases for invoking a skill with a specific intent.</p>
+
+        <p>Noun phrases: phrases that can follow                     <br />
+“<strong>ask</strong> &lt;invocation name&gt; <strong>for</strong> …” or              <br />
+“<strong>tell</strong> &lt;invocation name&gt; <strong>about</strong>…”</p>
+
+        <ul>
+          <li>“ask &lt;invocation name&gt; for <em>my favorite color</em>”</li>
+          <li>“tell &lt;invocation name&gt; about <em>my appointment today at 3 pm</em>”</li>
+        </ul>
+
+        <p>Questions, in both interrogative and inverted forms: phrases that can follow “<strong>ask</strong> &lt;invocation name&gt; …”</p>
+
+        <ul>
+          <li>“ask &lt;invocation name&gt; <em>where is my car</em>”</li>
+          <li>“ask &lt;invocation name&gt; <em>where my car is</em>”</li>
+        </ul>
+
+        <p>Commands: phrases that can follow “<strong>tell</strong> &lt;invocation name&gt; to…” or “<strong>ask</strong> &lt;invocation name&gt; to…”</p>
+
+        <ul>
+          <li>“ask &lt;invocation name&gt; to <em>get me a car</em>”</li>
+          <li>“tell &lt;invocation name&gt; to <em>find my favorite book</em>”</li>
+        </ul>
+
+        <p>(In the examples above, the <em>italic</em> phrase is the sample utterance).</p>
+      </td> 
+<td>
+        <ul>
+          <li>Noun, question, and command utterances are all included.</li>
+          <li>At least five varieties of these three types of phrases are present (five noun forms, five question forms, and five command forms)</li>
+          <li>When combined with the ask and tell phrases, the sample utterances are intuitive and natural.</li>
+        </ul>
+      </td>
+</tr>
+<tr>
+<td align="left"><p>2.</p></td>
+<td align="left">
+        <p>Launch the skill using <em>each</em> of the following common “ask” patterns (ideally do multiple variations for each pattern):</p>
+
+        <ul>
+          <li><strong>Ask</strong>  &lt;Invocation Name&gt; <strong>for</strong> <em>&lt;something&gt;</em></li>
+          <li><strong>Ask</strong>  &lt;Invocation Name&gt; <strong>about</strong> <em>&lt;something&gt;</em></li>
+          <li><strong>Ask</strong> &lt;Invocation Name&gt; <strong>to</strong> <em>&lt;do something&gt;</em></li>
+        </ul>
+      </td>
+<td>
+        <ul>
+          <li>Each of these common “ask” patterns works.</li>
+          <li>The skill successfully launches and completes the request.</li>
+          <li>The phrase is easy and natural to say.</li>
+        </ul>
+      </td>
+</tr>
+<tr>
+<td align="left"><p>3.</p></td>
+<td align="left">
+        <p>Launch the skill with the generic “ask” pattern (recommended test if this is a natural phrase for your skill):</p>
+
+        <ul>
+          <li><strong>Ask</strong> &lt;Invocation Name&gt; <em>&lt;question&gt;</em></li>
+        </ul>
+
+        <p>Test with questions starting with different question words (who, what, how, and so on).</p>
+
+        <p>The specific question words that sound natural with your skill may vary. For example, these types of questions do not flow well with “Space Geek.” A user is unlikely to say something like “Ask Space Geek what is a space fact?”</p>
+      </td> 
+<td>
+        <ul>
+          <li>The generic “ask” pattern works if appropriate for your skill.</li>
+          <li>The skill successfully launches and completes the request.</li>
+          <li>The phrase is easy and natural to say.</li>
+        </ul>
+      </td>
+</tr>
+<tr>
+<td align="left"><p>4.</p></td>
+<td align="left">
+        <p>Launch the skill using the following common “tell” pattern:</p>
+
+        <ul>
+          <li><strong>Tell</strong> &lt;Invocation Name&gt; <strong>to</strong> <em>&lt;do something&gt;</em></li>
+        </ul>
+      </td> 
+<td>
+        <ul>
+          <li>The common “tell” pattern works.</li>
+          <li>The skill successfully launches and completes the request.</li>
+          <li>The phrase is easy and natural to say.</li>
+        </ul>
+      </td>
+</tr>
+<tr>
+<td align="left"><p>5.</p></td>
+<td align="left">
+        <p>Review the “Invoking a Skill with a Specific Request (Intent)” section in <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/supported-phrases-to-begin-a-conversation">Understanding How Users Invoke Custom Skills</a> and test as many of the phrases as apply to your skill.</p>
+
+        <p>Note that not all of the phrases apply to all skills. For example, the “Ask…whether…” phrasing would probably not make sense for a skill asking about weather or tide information, so the skill would still pass this test even without this phrase.</p>
+      </td> 
+<td>
+        <ul>
+          <li>The skill successfully launches and completes the request.</li>
+          <li>The phrase is easy and natural to say.</li>
+        </ul>
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="variety-of-sample-utterances">4.7. Variety of Sample Utterances</h2>
+
+<p>Given the flexibility and variation of spoken language in the real world, there will often be many different ways to express the same request. Therefore, your sample utterances must include multiple ways to phrase the same intent.</p>
+
+<p>In this test, inspect the sample utterances for all intents, not just the “one shot” intents described in <em>One-Shot Phrasing for Sample Utterances</em>.</p>
+
+<table>
+<colgroup>
+<col width="5%" />
+<col width="45%" />
+<col width="49%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">Test</th>
+<th align="left">Expected Results</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><p>1.</p></td>
+<td align="left">
+        <p>Inspect the skill’s intent schema and sample utterances:</p>
+
+        <ol>
+          <li>For <em>each intent</em>, identify several ways a user could phrase a request for that intent.</li>
+          <li>Verify whether the sample utterances mapped to that intent cover those phrasings.</li>
+          <li>Examine any slots that appear in the sample utterances.</li>
+        </ol>
+      </td> 
+<td>
+        <p>The five most common synonyms for phrase patterns are present. For example, if the skill contains “get me &lt;some value&gt;”, then the utterances include synonyms such as “give me &lt;some value&gt;”, “tell me &lt;some value&gt;”, and so on.</p>
+
+        <p>Each sample utterance must be unique. There cannot be any duplicate sample utterances mapped to different intents.</p>
+
+        <p>Each slot is used only once within a sample utterance.</p>
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="intents-and-slot-types">4.8. Intents and Slot Types</h2>
+
+<p>Slots are defined with different <em>types</em>. Built-in types such as <code class="highlighter-rouge">AMAZON.DATE</code> convert the user’s spoken text into a different format (such as converting the spoken text “march fifth” into the date format “2017-03-05”). Custom slot types are used for items that are not covered by Amazon Alexa’s built-in types.</p>
+
+<p>For this test, review the intent schema and ensure that the correct slot types are used for the type of data the slot is intended to collect.</p>
+
+<p>Note that this test assumes you have migrated to the updated slot types as described in <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/migrating-to-the-improved-built-in-and-custom-slot-types">Migrating to the Improved Built-in and Custom Slot Types</a>. If you are still using the previous version (for instance, <code class="highlighter-rouge">DATE</code> instead of <code class="highlighter-rouge">AMAZON.DATE</code>), then you need to also perform the <em>Sample Utterances (Slot Type Values)</em> test.</p>
+
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Based on developer feedback, the <code class="highlighter-rouge">AMAZON.LITERAL</code> slot is not being removed as previously described. You can continue to submit new and updated English (US) skills with <code class="highlighter-rouge">AMAZON.LITERAL</code>. However, in many cases, custom slot types provide better accuracy than <code class="highlighter-rouge">AMAZON.LITERAL</code>, so we recommend that you consider <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/migrating-to-the-improved-built-in-and-custom-slot-types#literal">migrating to custom slot types</a> if possible.<br /><br />English (UK) and German skills do not support <code class="highlighter-rouge">AMAZON.LITERAL</code> and cannot use the <code class="highlighter-rouge">AMAZON.LITERAL</code> slot type.</div>
+
+<table>
+<colgroup>
+<col width="5%" />
+<col width="45%" />
+<col width="49%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">Test</th>
+<th align="left">Expected Results</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><p>1.</p></td>
+<td align="left">
+        <p>Inspect the skill’s intent schema to identify all slot types.</p>
+
+        <p>Verify that the types match the type of data to be collected.</p>
+      </td> 
+<td>
+        <ul>
+          <li>The slots for each intent match the recommended slot types listed in the <em>Slot Types</em> table below.</li>
+          <li>Slots that collect a value from a list use a custom slot type.</li>
+        </ul>
+      </td>
+</tr>
+</tbody>
+</table>
+
+<p>Slot Types:</p>
+
+<table>
+<colgroup>
+<col width="25%" />
+<col width="75%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Slot Type</th>
+<th align="left">Use for slots that collect...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">
+        <p><code class="highlighter-rouge">AMAZON.NUMBER</code></p>
+      </td>
+<td align="left">
+        <p>Integer numbers.</p>
+      </td> 
+</tr>
+
+<tr>
+<td align="left">
+        <p><code class="highlighter-rouge">AMAZON.DATE</code></p>
+      </td>
+<td align="left">
+        <p>Relative and absolute dates (“this weekend” and “august twenty sixth twenty fifteen”).</p>
+      </td> 
+</tr>
+
+<tr>
+<td align="left">
+        <p><code class="highlighter-rouge">AMAZON.TIME</code></p>
+      </td>
+<td align="left">
+        <p>The time of day (“three thirty p. m.”).</p>
+      </td> 
+</tr>
+
+<tr>
+<td align="left">
+        <p><code class="highlighter-rouge">AMAZON.DURATION</code></p>
+      </td>
+<td align="left">
+        <p>A period of time (“five minutes”).</p>
+      </td> 
+</tr>
+
+<tr>
+<td align="left">
+        <p><em>Custom Slot Types</em></p>
+      </td>
+<td align="left">
+        <p>A value from a list (horoscope signs, all NFL football teams, supported cities, recipe ingredients, and so on).</p>
+
+        <p>See <em>Custom Slot Types (Values)</em> for additional testing for your custom slot types.</p>
+      </td> 
+</tr>
+
+
+<tr>
+<td align="left">
+        <p><code class="highlighter-rouge">AMAZON.LITERAL</code></p>
+      </td>
+<td align="left">
+        <p>Not recommended, consider <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/migrating-to-the-improved-built-in-and-custom-slot-types#literal">replacing <code class="highlighter-rouge">AMAZON.LITERAL</code> with a custom slot type if possible</a>.</p>
+
+        <p>If your schema does include <code class="highlighter-rouge">AMAZON.LITERAL</code>, also review the sample utterances and make sure that appropriate sample slot values are provided for each instance of the slot:</p>
+
+        <ul>
+          <li>All values with a high likelihood of input</li>
+          <li>Appropriate distribution of word counts in the input (for instance, if only one-word values are possible, include only one-word values. If 5-6 word values are possible but rare, include only a handful of 5-6 word values).</li>
+        </ul>
+      </td> 
+</tr>
+
+
+</tbody>
+</table>
+
+<h2 id="custom-slot-type-values">4.9. Custom Slot Type Values</h2>
+
+<p>The custom slot type is used for items that are not covered by Amazon’s built-in types and is recommended for most use cases where a slot value is one of a set of possible values.</p>
+
+<table>
+<colgroup>
+<col width="5%" />
+<col width="45%" />
+<col width="49%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">Test</th>
+<th align="left">Expected Results</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><p>1.</p></td>
+<td align="left">
+        <p>Inspect the skill’s intent schema to identify all slots that use custom slot types.</p>
+
+        <p>For each custom slot type, review the set of values you provided for the type.</p>
+      </td> 
+<td>
+        <ul>
+          <li>If possible, the list of values includes all values you expect to be used. For example, a horoscope skill with a <code class="highlighter-rouge">LIST_OF_SIGNS</code> custom type would include all twelve Zodiac signs as values for the type.</li>
+          <li>If the list cannot cover every possible value, it covers as many <em>representative</em> values as possible.</li>
+          <li>If the list cannot cover every possible value, the values reflect the expected word counts. For instance, if values of one to four words are possible, use values of one to four words in your value list. But also be sure to distribute them proportionally. If a four-word value occurs in an estimated 10% of inputs, then include four-word values only in 10% of the values in your list.</li>
+          <li>All custom values are written in the selected language. For instance, all custom slot type values on the German tab must be in German.</li>
+        </ul>
+
+        <p>For guidelines for defining custom slot type values, see <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/ask-bp-sample-utterances#h3_custom_slot_values">Recommendations for Custom Slot Type Values</a>.</p>
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="writing-conventions-for-sample-utterances">4.10. Writing Conventions for Sample Utterances</h2>
+
+<p>Sample utterances must be written according to defined rules in order to successfully build a speech model for your skill.</p>
+
+<table>
+<colgroup>
+<col width="5%" />
+<col width="45%" />
+<col width="49%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">Test</th>
+<th align="left">Expected Results</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><p>1.</p></td>
+<td align="left">
+        <p>Review the text of all sample utterances.</p>
+      </td> 
+<td>
+        <p>All sample utterances adhere to the following            <br />
+writing conventions:</p>
+
+        <ul>
+          <li>Capital letters and punctuation are not used (periods can be used, but only in initialisms and spelling (e.g. “t. v.”). Hyphens can be used, but should be very infrequent. Apostrophes can be used in possessives).</li>
+          <li>Individual letters are followed by a period and a space before the next letter or word: “TV” is written as “t. v.”, “OK” is written as “o. k.”- Compounds are written similarly: “AccessHD” is written as “access h. d.”</li>
+          <li>The invocation name must not appear in isolation or within supported launch phrasing. For example, a skill with the invocation name “Daily Horoscopes”cannot contain any sample utterances that are just “daily horoscopes” or sample utterances containing launch phrases such as “tell daily horoscopes.”For a complete list of launch phrases see <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/supported-phrases-to-begin-a-conversation">Understanding How Users Invoke Custom Skills</a>.</li>
+          <li>All sample utterances are written in the selected language. For instance, the sample utterances on the German tab must be in German.</li>
+        </ul>
+
+        <p>For more information about syntax rules for sample utterances, see the <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/alexa-skills-kit-interaction-model-reference">Custom Interaction Model Reference</a> .</p>
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="error-handling">4.11. Error Handling</h2>
+
+<p>Unlike a visual interface, where the user can only interact with the objects presented on the screen, there is no way to limit what users can say in a speech interaction. Your skill needs to handle a variety of errors in an intelligent and user-friendly way. This test verifies your skill’s ability to handle common errors.</p>
+
+<p>For more information on validating user input, please see <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/handling-requests-sent-by-alexa#input-errors">Handling Possible Input Errors</a>.</p>
+
+<table>
+<colgroup>
+<col width="5%" />
+<col width="45%" />
+<col width="49%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">Test</th>
+<th align="left">Expected Results</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><p>1.</p></td>
+<td align="left">
+        <p>Invoke the skill without specifying an intent, for example:</p>
+
+        <ul>
+          <li>Open <em>&lt;Invocation Name&gt;</em>.</li>
+        </ul>
+
+        <p>When prompted to respond, say <em>nothing</em>.</p>
+      </td> 
+<td>
+        <ul>
+          <li>The skill responds with a prompt that clarifies the information you need to provide.</li>
+          <li>The prompt clearly indicates what you need to say.</li>
+          <li>The prompt ends with a question and keeps the session open for your response.</li>
+        </ul>
+
+        <p>Note that in this scenario, the prompt you hear is the <em>re-prompt</em> included in the previous response.</p>
+      </td>
+</tr>
+<tr>
+<td align="left"><p>2.</p></td>
+<td align="left">
+        <p>Invoke the skill using the following phrase:</p>
+
+        <ul>
+          <li>Open <em>&lt;Invocation Name&gt;</em>.</li>
+        </ul>
+
+        <p>When prompted to respond, say something that matches one of your skill’s intents, but with invalid slot data.</p>
+
+        <p>For instance, if the intent expects an <code class="highlighter-rouge">AMAZON.DATE</code> slot, say something that cannot be converted to a date.</p>
+
+        <p>Repeat this test for each slot.</p>
+      </td> 
+<td>
+        <ul>
+          <li>The skill responds with a prompt or help text that clarifies the information you need to provide.</li>
+          <li>The prompt clearly indicates what you need to say.</li>
+          <li>The prompt ends with a question and keeps the session open for your response.</li>
+        </ul>
+
+        <p>Note that in this scenario, the prompt is <em>not</em> the <em>re-prompt</em> included in the previous response. This prompt must come from error handling within the code that handles the intent.</p>
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="providing-help">4.12. Providing Help</h2>
+
+<p>A skill must have a help intent that can provide additional instructions for navigating and using the skill. Implement the <code class="highlighter-rouge">AMAZON.HelpIntent</code> to provide this. You do not need to provide your own sample utterances for this intent, but you do need to implement it in the code for your skill. For details, see <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/implementing-the-built-in-intents">Implementing the Built-in Intents</a>.</p>
+
+<p>This test verifies that this intent exists and provides useful information.</p>
+
+<table>
+<colgroup>
+<col width="5%" />
+<col width="45%" />
+<col width="49%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">Test</th>
+<th align="left">Expected Results</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><p>1.</p></td>
+<td align="left">
+        <p>Invoke the skill without specifying an intent, for example:</p>
+
+        <ul>
+          <li>Open <em>&lt;Invocation Name&gt;</em>.</li>
+        </ul>
+
+        <p>When prompted to respond, say “help”.</p>
+
+        <p>For a simple skill that gives a complete response even with no specific intent, (such as the Space Geek sample), invoke the help intent directly:</p>
+
+        <ul>
+          <li>Ask <em>&lt;Invocation Name&gt;</em> for help.</li>
+        </ul>
+      </td> 
+<td>
+        <p>The help response:</p>
+
+        <ul>
+          <li>Provides instructions to help the user navigate the skill’s core functionality.</li>
+          <li>Is more informative than the prompt users hear when launching the skill with no intent. For example, the help prompt could explain more about what the skill does or inform users how to exit the skill.</li>
+          <li>Educates users on what the skill can do, as opposed to what they need to say in order for the skill to function.</li>
+          <li>Ends with a question prompting the user to complete their request.</li>
+          <li>Leaves the session open to get a response from the user.</li>
+        </ul>
+      </td>
+</tr>
+</tbody>
+</table>
+
+<p>For more about designing help for your skill, see <a href="https://developer.amazon.com/designing-for-voice/what-alexa-says/" title="Alexa Voice Design Guide: What Alexa Says">What Alexa Says</a>.</p>
+
+<h2 id="stopping-and-canceling">4.13. Stopping and Canceling</h2>
+
+<p>Your skill must respond appropriately to common utterances for stopping and canceling actions (such as “stop,” “cancel,” “never mind,” and others). The built-in <code class="highlighter-rouge">AMAZON.StopIntent</code> and <code class="highlighter-rouge">AMAZON.CancelIntent</code> intents provide these utterances. In most cases, these intents should just exit the skill, but you can map them to alternate functionality if it makes sense for your particular skill. See <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/implementing-the-built-in-intents">Implementing the Built-in Intents</a>.</p>
+
+<table>
+<colgroup>
+<col width="5%" />
+<col width="45%" />
+<col width="49%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">Test</th>
+<th align="left">Expected Results</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><p>1.</p></td>
+<td align="left">
+        <p>Start the skill and invoke an intent that prompts the user for a response.</p>
+
+        <p>After hearing the prompt, say “stop.”</p>
+      </td> 
+<td>
+        <p><em>One</em> of the following occurs:</p>
+
+        <ul>
+          <li>The skill exits.</li>
+          <li>The skill returns a response that is appropriate to the skill’s functionality. The response also makes sense in the context of the request to “stop.” For example, a skill that places orders could send back a reply confirming that the user’s order has been canceled.</li>
+        </ul>
+
+        <p>If the skill responds to all requests with a complete response and never provides a prompt, skip this test.</p>
+      </td>
+</tr>
+<tr>
+<td align="left"><p>2.</p></td>
+<td align="left">
+        <p>Invoke an intent that responds with lengthy text-to-speech. As soon as Alexa begins speaking the response, say “Alexa, stop” to interrupt the response.</p>
+      </td> 
+<td>
+        <p>After the wake word interrupts Alexa, <em>one</em> of the following occurs.</p>
+
+        <ul>
+          <li>The skill exits.</li>
+          <li>The skill returns a response that is appropriate to the skill’s functionality. The response also makes sense in the context of the request to “stop.” For example, a skill that places orders could send back a reply confirming that the user’s order has been canceled.</li>
+        </ul>
+
+        <p>If all of the skill’s responses are too short to reasonably interrupt, skip this test.</p>
+      </td>
+</tr>
+<tr>
+<td align="left"><p>3.</p></td>
+<td align="left">
+        <p>Start the skill and invoke an intent that prompts the user for a response.</p>
+
+        <p>After hearing the prompt, say “cancel.”</p>
+      </td> 
+<td>
+        <p>One of the following occurs:</p>
+
+        <ul>
+          <li>The skill exits.</li>
+          <li>The skill returns a response that is appropriate to the skill’s functionality. The response also makes sense in the context of the request to “cancel.” For example, a skill that places orders could send back a reply confirming that the user’s order has been canceled.</li>
+        </ul>
+
+        <p>If the skill responds to all requests with a complete response and never provides a prompt, skip this test.</p>
+      </td>
+</tr>
+<tr>
+<td align="left"><p>4.</p></td>
+<td align="left">
+        <p>Invoke an intent that responds with lengthy text-to-speech. As soon as Alexa begins speaking the response, say “Alexa, cancel” to interrupt the response.</p>
+      </td> 
+<td>
+        <p>After the wake word interrupts Alexa, one of the following occurs.</p>
+
+        <ul>
+          <li>The skill exits.</li>
+          <li>The skill returns a response that is appropriate to the skill’s functionality. The response also makes sense in the context of the request to “cancel.” For example, a skill that places orders could send back a reply confirming that the user’s order has been canceled.</li>
+        </ul>
+
+        <p>If all of the skill’s responses are too short to reasonably interrupt, skip this test.</p>
+      </td>
+</tr>
+
+<tr>
+<td align="left"><p>5.</p></td>
+<td align="left">
+        <p>Invoke any intent that starts the skill session. While the session is open, say “Exit.” This ends the session and sends your skill a <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/custom-standard-request-types-reference#sessionendedrequest"><code class="highlighter-rouge">SessionEndedRequest</code></a>.</p>
+      </td> 
+<td>
+        <p>The skill closes without returning an error response.</p>
+      </td>
+</tr>
+
+</tbody>
+</table>
+
+<h2 id="appendix-deprecated-test-for-sample-utterances-slot-type-values">Appendix: Deprecated Test for Sample Utterances (Slot Type Values)</h2>
+
+<p>If all of your slots use the newer slot types with the <code class="highlighter-rouge">AMAZON</code> namespace (such as <code class="highlighter-rouge">AMAZON.DATE</code>), you do not need to do this test.</p>
+
+<p>In previous versions of the Alexa Skills Kit, it was necessary to include slot values showing different ways of phrasing the slot data in your sample utterances. For example, sample utterances for a <code class="highlighter-rouge">DATE</code> slot were written like this:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>OneshotTideIntent when is high tide on {january first|Date}
+OneshotTideIntent when is high tide {tomorrow|Date}
+OneshotTideIntent when is high tide {saturday|Date}
+...(many more utterances showing different ways to say the date)
+</code></pre>
+</div>
+
+<p>If your skill still uses this syntax for the built-in slot types, you need to review the sample slot values in your sample utterances. We strongly recommend <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/migrating-to-the-improved-built-in-and-custom-slot-types">migrating to the updated slot types</a> that no longer require the sample values.</p>
+
+<table>
+<colgroup>
+<col width="5%" />
+<col width="45%" />
+<col width="49%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">Test</th>
+<th align="left">Expected Results</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><p>1.</p></td>
+<td align="left">
+        <p>Inspect the skill’s intent schema to identify all slot types, then inspect the slot type values found in the sample utterances.</p>
+
+        <p>Verify that the slot type values provide sufficient variety for good recognition.</p>
+      </td> 
+<td>
+        <ul>
+          <li><code class="highlighter-rouge">NUMBER</code>: provide multiple ways of stating integer numbers, and include samples showing the full range of numbers you expect (for example, include “ten, “one hundred”, and several samples in between). If you expect the numbers used to only be within a small range, include every number within that range as a sample value in an utterance.</li>
+          <li><code class="highlighter-rouge">DATE</code>: provide both relative and absolute date samples (for example, “today”, “tomorrow”, “september first”, “june twenty sixth twenty fifteen”). If you expect a certain set of phrases to be more likely than others, include samples of those phrases.</li>
+          <li><code class="highlighter-rouge">TIME</code>: provide samples of stating the time (“three thirty p. m.”).</li>
+          <li><code class="highlighter-rouge">DURATION</code>: provide samples of indicating different time periods (“five minutes”, “ten days”, “four years”).</li>
+          <li><code class="highlighter-rouge">LITERAL</code>: see recommendations for <code class="highlighter-rouge">AMAZON.LITERAL</code>, above. The <code class="highlighter-rouge">LITERAL</code> and <code class="highlighter-rouge">AMAZON.LITERAL</code> slot types work the same way.</li>
+        </ul>
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="next-steps">Next Steps</h2>
+
+<ul>
+  <li><a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/alexa-skills-kit-policy-testing">1. Policy Testing</a></li>
+  <li><a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/alexa-skills-kit-security-testing">2. Security Testing</a></li>
+  <li><a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/alexa-skills-kit-functional-testing">3. Functional Testing</a></li>
+  <li>Go back to: <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/publishing-an-alexa-skill">Submitting an Alexa Skill for Certification</a>.</li>
+  <li>Return to: <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/overviews/steps-to-build-a-custom-skill">Steps to Build a Custom Skill</a></li>
+</ul>
+
+<!-- common links -->
+
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+    </div>
+
+    <div id="german-version">
+
+        <div id="germanPages">
+<p id="eventsHeader1" style="cursor:pointer; color:##0272c0">Auf Deutsch übersetzte Seiten<span id="expanderSign1">+</span>
+</p>
+<div id="eventsExample1" style="display:none">
+<ul class="germanMenu">
+
+<li><a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/defining-the-voice-interface?language=german">Definieren der Sprachschnittstelle</a></li>
+
+<li><a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/supported-phrases-to-begin-a-conversation?language=german">Wie Benutzer benutzerdefinierte Skills aufrufen</a></li>
+
+<li><a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/choosing-the-invocation-name-for-an-alexa-skill?language=german">Ausw&#228;hlen eines Aufrufsnamen f&#252;r einen benutzerdefinierten Skill</a></li>
+
+<li><a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/alexa-skills-kit-voice-design-handbook?language=german">Handbuch f&#252;r Sprachdesign</a></li>
+
+<li><a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/alexa-skills-kit-voice-design-best-practices?language=german">Best Practices f&#252;r Voice Design</a></li>
+
+<li><a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/linking-an-alexa-user-with-a-user-in-your-system?language=german">Verkn&#252;pfen eines Alexa-Benutzers mit einem Benutzer in Ihrem System</a></li>
+
+<li><a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/publishing-an-alexa-skill?language=german">&#220;bermitteln eines Alexa Skills zur Zertifizierung</a></li>
+
+<li><a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/alexa-skills-kit-submission-checklist?language=german">Alexa Skills Kit-Checkliste f&#252;r die Einreichung</a></li>
+
+<li><a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/alexa-skills-kit-voice-interface-and-user-experience-testing?language=german">Testen der Sprachschnittstelle und der Benutzererfahrung f&#252;r einen Alexa-Skill</a></li>
+</ul>
+
+</div>
+</div>
+
+<script type="text/javascript"> $(document).ready(function(){ $("#eventsHeader1").click(function(){ $("#eventsExample1").slideToggle(); if ($("#expanderSign1").text() == "+"){ $("#expanderSign1").html("−") } else { $("#expanderSign1").text("+") } }); });
+
+</script>
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <h1>Testen der Sprachschnittstelle und der Benutzererfahrung f&#252;r einen Alexa-Skill</h1>
+        <script type="text/javascript">
+    $( document ).ready(function() {
+        var ToCG =
+                "<nav role='navigation' class='table-of-contents'>" +
+                "<span class='minitocTitle'></span>" +
+                "<ul>";
+
+        var newLine, el, title, link;
+
+        $("#german-version>h2").each(function() {
+
+            el = $(this);
+            title = el.text();
+            link = "#" + el.attr("id");
+
+            newLine =
+                    "<li>" +
+                    "<a href='" + link + "'>" +
+                    title +
+                    "</a>" +
+                    "</li>";
+
+            ToCG += newLine;
+
+        });
+
+        ToCG +=
+                "</ul>" +
+                "</nav>";
+
+        $("#minitocgerman").prepend(ToCG);
+    });
+
+</script>
+
+<div id="minitocgerman">
+</div>
+        <h2 id="introduction_de">Einleitung</h2>
+
+<p>Das Testen der Sprachschnittstelle sowie der Benutzererfahrung fokussiert sich auf Folgendes:</p>
+
+<ul>
+  <li>Das Testen der Benutzererfahrung gew&#228;hrleistet, dass der Skill auf mehrere wichtige Funktionen von Alexa abgestimmt ist, die f&#252;r eine gro&#223;artige Erfahrung beim Kunden sorgen. </li>
+  <li>
+    <p>Das Pr&#252;fen des <em>Absichtsschemas</em>, die Reihe der <em>Beispiel&#228;u&#223;erungen</em> und die Liste der Werte f&#252;r <em>benutzerdefinierte Slot-Typen</em>, die Sie definiert haben, um sicherzustellen, dass sie korrekt sind, vervollst&#228;ndigen und respektieren die Best Practices f&#252;r das Voice Design.</p>
+
+    <p>Diese Komponenten werden auf der Seite <strong>Interaktionsmodell</strong> f&#252;r Ihren Skill im Entwicklerportal definiert.</p>
+  </li>
+</ul>
+
+<p>Die Tests verfolgen diese Ziele:</p>
+
+<ul>
+  <li>Anzahl der M&#246;glichkeiten erh&#246;hen, mit denen Endbenutzer sich an Ihren Skill wenden k&#246;nnen.</li>
+  <li>Die Leichtigkeit der Spracherkennung beim Benutzen Ihres Skills beurteilen (konnte Alexa die richtigen W&#246;rter erkennen?)</li>
+  <li>Sprachverst&#228;ndnis verbessern (Wenn Alexa die richtigen W&#246;rter erkannt hat, hat sie auch verstanden, was sie tun soll?).</li>
+  <li>Sicherstellen, dass die Benutzer nat&#252;rlich und spontan zu Alexa sprechen k&#246;nnen.</li>
+  <li>Sicherstellen, dass Alexa die meisten Ihrer Anfragen innerhalb des Kontexts der Funktionen Ihres Skills versteht.</li>
+  <li>Sicherstellen, dass Alexa angemessen auf Benutzeranfragen reagiert, indem sie sie entweder ausf&#252;hrt oder erkl&#228;rt, warum sie sie nicht ausf&#252;hren kann.</li>
+</ul>
+
+<p>In vielen dieser Tests wird gepr&#252;ft, ob Ihr Skill sich an das <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/alexa-skills-kit-voice-design-handbook?language=german">Voice Design-Handbuch</a> und die <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/alexa-skills-kit-voice-design-best-practices?language=german">Best Practices f&#252;r Voice Design</a> h&#228;lt. Sie m&#252;ssen diese Leitf&#228;den zurate ziehen, w&#228;hrend Sie diesen Abschnitt durcharbeiten. Empfehlungen f&#252;r Beispiel&#228;u&#223;erungen finden Sie unter <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/defining-the-voice-interface?language=german">Definieren der Sprachschnittstelle</a>.</p>
+
+<p>Beachten Sie, dass Sie f&#252;r viele dieser Tests ein Ger&#228;t f&#252;r Sprachtests ben&#246;tigen. Falls Sie kein Ger&#228;t haben, das den Alexa-Dienst unterst&#252;tzt, k&#246;nnen Sie Services anderer Anbieter verwenden, die den Alexa-Dienst unterst&#252;tzen, etwa <a href="https://echosim.io/" title="Test-Tool f&#252;r Alexa Skills">Echosim.io</a>, um Ihren Alexa-Skill zu testen.</p>
+
+<p>Die allgemeine Test-Checkliste finden Sie unter <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/alexa-skills-kit-submission-checklist?language=german">Zertifizierungsanforderungen f&#252;r benutzerdefinierte Skills</a>.</p>
+
+<h2 id="session-management_de">4.1. Sitzungsmanagement </h2>
+
+<p>Jede Antwort, die von Ihrem Skill zum Alexa-Dienst gesendet wird, beinhaltet eine Markierung, die darauf hinweist, ob die Konversation mit dem Benutzer (die <em>Sitzung</em>) beendet oder fortgef&#252;hrt werden soll. Wenn die Markierung auf &quot;Fortf&#252;hren&quot; gesetzt ist, h&#246;rt Alexa zu und wartet auf die Reaktion des Benutzers.Bei Amazon-Ger&#228;ten, wie etwa dem Amazon Echo mit einem blauen Lichtring, leuchtet das Ger&#228;t auf, damit der Benutzer einen visuellen Hinweis erh&#228;lt, dass Alexa auf eine Reaktion vom Benutzer wartet.</p>
+
+<p>Bei diesem Test wird gepr&#252;ft, ob die Umwandlung von Text in Sprache von Ihrem Skill und die Sitzungsmarkierung zusammenarbeiten, damit eine zufriedenstellende Benutzererfahrung erreicht wird. Reaktionen, bei denen Fragen gestellt werden, lassen eine Sitzung offen, damit geantwortet werden kann. Reaktionen, die die Benutzeranfrage beantworten, schlie&#223;en die Sitzung.</p>
+
+<table>
+<colgroup>
+<col width="5%" />
+<col width="45%" />
+<col width="49%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">Test</th>
+<th align="left">Erwartete Ergebnisse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><p>1.</p></td>
+<td align="left">
+        <p>Skill aufrufen, ohne eine Absicht zu &#228;u&#223;ern, zum Beispiel:</p>
+
+        <ul>
+          <li>&#214;ffne <em>&lt;Aufrufsname&gt;</em>.</li>
+        </ul>
+
+        <p>Auf die Aufforderung des Skills reagieren und pr&#252;fen, ob die Reaktion richtig ist.</p>
+
+      </td> 
+<td>
+        <p>Nach jeder Reaktion, die <em>dem Benutzer eine Frage stellt</em>, bleibt die Sitzung ge&#246;ffnet und das Ger&#228;t wartet auf Ihre Reaktion.</p>
+
+        <p>Nach jeder Reaktion, die <em>die Benutzeranfrage beantwortet</em>, endet die Interaktion.</p>
+      </td>
+</tr>
+<tr>
+<td align="left"><p>2.</p></td>
+<td align="left">
+        <p>Eine Reihe von Absichten testen, sowohl solche, in denen Fragen gestellt werden, als auch solche, die die Benutzeranfrage beantworten. </p>
+      </td> 
+<td>
+        <p>Nach jeder Reaktion, die <em>dem Benutzer eine Frage stellt</em>, bleibt die Sitzung ge&#246;ffnet und das Ger&#228;t wartet auf Ihre Reaktion.</p>
+
+        <p>Nach jeder Reaktion, <em>die die Benutzeranfrage beantwortet</em>, endet die Interaktion.</p>
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="intent-and-slot-combinations_de">4.2. Absichts- und Slot-Kombinationen</h2>
+
+<p>Ein Skill kann mehrere Absichten und Slots haben.In diesem Test wird gepr&#252;ft, ob jede einzelne Absicht bei verschiedenen Slot-Kombinationen die erwartete Reaktion zur&#252;ckgibt.</p>
+
+<table>
+<colgroup>
+<col width="5%" />
+<col width="45%" />
+<col width="49%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">Test</th>
+<th align="left">Erwartete Ergebnisse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><p>1.</p></td>
+<td align="left">
+        <p>Testen Sie die Absichtsreaktionen des Skills mit verschiedenen Kombinationen von Slot-Werten.</p>
+
+        <p>Sie k&#246;nnen einen der One-shot-S&#228;tze zum Starten des Skills verwenden, zum Beispiel:</p>
+
+        <ul>
+          <li><strong>Bitte</strong> &lt;Aufrufsname&gt;<strong>,</strong> <em>&lt;etwas zu tun&gt;</em></li>
+        </ul>
+
+        <p>Achten Sie darauf, jede Absicht aufzurufen, nicht nur jene, die normalerweise in One-shot-Manier verwendet werden.</p>
+
+        <p>Die Reaktion auf jede einzelne Absicht beurteilen</p>
+      </td> 
+<td>
+        <p>Die Reaktion ist f&#252;r den Kontext der Anfrage angemessen.</p>
+
+        <p>Zum Beispiel wenn die Anfrage einen Slot-Wert enth&#228;lt, ist die Reaktion f&#252;r diese Information relevant.Wenn eine Anfrage f&#252;r dieselbe Absicht den Slot nicht enth&#228;lt, verwendet die Reaktion einen Standardwert oder bittet den Benutzer um Kl&#228;rung.</p>
+      </td>
+</tr>
+</tbody>
+</table>
+
+<p>Sie sollten eine Tabelle mit Absichten und Slot-Werten verwenden, um diesen Test zu verfolgen und sicherzustellen, dass Sie <em>alle Absichts- und Slot-Kombinationen testen</em>. Zum Beispiel:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Absicht</th>
+      <th>Slot-Kombination</th>
+      <th>Zu testende Beispiel&#228;u&#223;erung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">IntentName</code></td>
+      <td><code class="highlighter-rouge">SlotOne</code></td>
+      <td>Diese ist eine &#196;u&#223;erung zum Testen von dieser Absicht und von Slot eins.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">IntentName</code></td>
+      <td><code class="highlighter-rouge">SlotTwo</code></td>
+      <td>Diese ist eine &#196;u&#223;erung zum Testen von dieser Absicht und von Slot zwei.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">IntentName</code></td>
+      <td><code class="highlighter-rouge">SlotOne</code><br /><code class="highlighter-rouge">SlotTwo</code></td>
+      <td>Diese ist eine &#196;u&#223;erung zum Testen von dieser Absicht sowie von Slot eins und Slot zwei</td>
+    </tr>
+    <tr>
+      <td><em>Jede weitere g&#252;ltige Absichts- und Slot-Kombination</em></td>
+      <td>-</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="intent-response-design_de">4.3. Absichtsreaktion (Design)</h2>
+
+<p>Eine gute Benutzererfahrung f&#252;r einen Skill ist abh&#228;ngig davon, dass der Skill gut konzipierte Text-zu-Sprache-Reaktionen umfasst. Im Abschnitt &#8222;Pr&#228;sentieren von Informationen f&#252;r den Benutzer&#8220; von <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/alexa-skills-kit-voice-design-best-practices?language=german">Best Practices f&#252;r Voice Design</a> finden Sie Empfehlungen zum Konzipieren der Reaktionen Ihres Skills. In diesem Test wird &#252;berpr&#252;ft, ob die Reaktionen Ihres Skills diesen Empfehlungen entsprechen.</p>
+
+<p>Sie k&#246;nnen die gleichen Absichts- und Slot-Kombinationen wie f&#252;r den Test der <em>Absichts- und Slot-Kombinationen verwenden</em>.</p>
+
+<table>
+<colgroup>
+<col width="5%" />
+<col width="45%" />
+<col width="49%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">Test</th>
+<th align="left">Erwartete Ergebnisse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><p>1.</p></td>
+<td align="left">
+        <p>Testen Sie die Reaktionen des Skills auf die Absichten mit verschiedenen Slot-Werten.</p>
+
+        <p>Sie k&#246;nnen einen der One-shot-S&#228;tze zum Starten des Skills verwenden, zum Beispiel:</p>
+
+        <ul>
+          <li><strong>Bitte</strong> &lt;Aufrufsname&gt;<strong>, </strong> <em>&lt;etwas zu tun&gt;</em></li>
+        </ul>
+
+        <p>Achten Sie darauf, jede einzelne Absicht aufzurufen, nicht nur jene, die normalerweise in One-shot-Manier verwendet werden. </p>
+
+        <p>Testen Sie verschiedene Beispiel&#228;u&#223;erungen f&#252;r jede einzelne Absicht. </p>
+
+        <p>Wenn der Skill Beispiele vokalisiert, die die Benutzer ausprobieren sollen, verwenden Sie diese genau gem&#228;&#223; den Anweisungen des Skills.</p>
+
+        <p>Bewerten Sie die Reaktion auf jede einzelne Absicht.</p>
+      </td> 
+<td>
+        <p>Die Reaktion erf&#252;llt jede der folgenden Anforderungen:</p>
+
+        <ul>
+          <li>Beantwortet die Anfrage des Benutzers kurz und knapp.</li>
+          <li>Liefert Informationen in praktischen Einheiten.</li>
+          <li>Verwendet weder technischen noch juristischen Jargon.</li>
+          <li>Reaktionen auf Absichten, die normalerweise nicht in One-shot-Manier verwendet werden, liefern eine relevante Reaktion oder informieren die Benutzer dar&#252;ber, wie sie den Skill starten k&#246;nnen. </li>
+        </ul>
+
+        <p>F&#252;r eine bessere Erfahrung sollte die Reaktion auch diesen Empfehlungen entsprechen:</p>
+
+        <ul>
+          <li>Einfach zu verstehen</li>
+          <li>F&#252;r die Ohren geschrieben, nicht f&#252;r die Augen</li>
+        </ul>
+      </td>
+</tr>
+</tbody>
+</table>
+
+<p>Sie k&#246;nnen die gleichen Absichts- und Slot-Kombinationen wie f&#252;r den Test <em>Absichtsreaktion (Absichts- und Slot-Kombinationen)</em> verwenden.</p>
+
+<h2 id="supportive-prompting_de">4.4. Unterst&#252;tzende Aufforderungen</h2>
+
+<p>Ein Benutzer kann eine Interaktion mit Ihrem Skill beginnen, ohne ausreichende Informationen &#252;ber die erwartete Handlung anzubieten. Dies kann entweder eine Anfrage <em>ohne Absicht</em> sein (der Benutzer ruft den Skill auf, &#228;u&#223;ert jedoch keine Absicht), oder eine Anfrage mit <em>Teilabsicht</em> (der Benutzer &#228;u&#223;ert die Absicht, jedoch keine Slot-Werte, die erforderlich sind, um die Anfrage auszuf&#252;hren).</p>
+
+<p>In diesen F&#228;llen muss der Skill <em>unterst&#252;tzende Aufforderungen</em> anbieten, die den Benutzer fragen, was er tun m&#246;chte. Bei diesem Test wird gepr&#252;ft, ob Ihr Skill n&#252;tzliche Aufforderungen f&#252;r diese Szenarien anbietet. </p>
+
+<table>
+<colgroup>
+<col width="5%" />
+<col width="45%" />
+<col width="49%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">Test</th>
+<th align="left">Erwartete Ergebnisse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><p>1.</p></td>
+<td align="left">
+        <p>Rufen Sie den Skill <em>ohne Absicht</em> auf. Sie k&#246;nnen dies mit einem Satz tun, der eine <code class="highlighter-rouge">LaunchRequest</code> sendet und keine <code class="highlighter-rouge">IntentRequest</code>. Zum Beispiel:</p>
+
+        <ul>
+          <li>&#214;ffne <em>&lt;Aufrufsname&gt;</em>.</li>
+        </ul>
+
+        <p>Vergewissern Sie sich, dass Sie eine Aufforderung erhalten, reagieren Sie auf diese Aufforderung und pr&#252;fen Sie, ob Sie eine korrekte Reaktion erhalten.</p>
+      </td> 
+<td>
+        <ul>
+          <li>Der Skill bittet Sie um Informationen dar&#252;ber, was Sie tun m&#246;chten.</li>
+          <li>Die Aufforderung enth&#228;lt den Namen des Skills, damit Sie wissen, dass Sie sich am richtigen Ort befinden.</li>
+          <li>Die Aufforderung liefert spezifische Optionen dar&#252;ber, was zu tun ist, fasst sich jedoch <em>kurz</em>. Wenn der Skill mehrere Funktionen hat, gibt die Aufforderung die g&#228;ngigste an.</li>
+          <li>Die Aufforderung gibt <em>keine</em> wortreichen Anweisungen dazu, was der Benutzer sagen soll (wie etwa &#8222;um xyz zu tun, sagen Sie xyz&#8220;). Die Aufforderung ist kurz.</li>
+          <li>Wenn Sie auf die Aufforderung reagieren, &#228;u&#223;ert der Skill weitere Aufforderungen, bis alle ben&#246;tigten Informationen gesammelt wurden, und liefert dann eine kontextbezogene Reaktion ohne Fehler.</li>
+          <li>Wenn nach dem Starten keine Informationen vom Benutzer ben&#246;tigt werden, f&#252;hrt der Skill eine Kernfunktion aus und schlie&#223;t die Sitzung.</li>
+        </ul>
+      </td>
+</tr>
+<tr>
+<td align="left"><p>2.</p></td>
+<td align="left">
+        <p>Rufen Sie den Skill mit einer <em>Teilabsicht</em> auf. Dies k&#246;nnen Sie mithilfe eines Satzes ausf&#252;hren, der die Absicht aufruft, jedoch nicht alle erforderlichen Slot-Daten enth&#228;lt. Zum Beispiel:</p>
+
+        <ul>
+          <li><strong>Bitte</strong> &lt;Aufrufsname&gt;<strong>, </strong> <em>&lt;etwas zu tun&gt;</em> (keine Slot-Daten im Befehl)</li>
+        </ul>
+
+        <p>Vergewissern Sie sich, dass Sie eine Aufforderung erhalten, reagieren Sie auf diese Aufforderung und pr&#252;fen Sie, ob Sie eine korrekte Reaktion erhalten.</p>
+
+        <p>Wenn der Skill keine Slots definiert, k&#246;nnen Sie diesen Test &#252;berspringen, weil es nicht m&#246;glich ist, eine Teilabsicht zu senden.</p>
+      </td> 
+<td>
+        <ul>
+          <li>Der Skill fordert Sie auf, die fehlenden Informationen anzugeben.</li>
+          <li>Die Aufforderung enth&#228;lt spezifische Optionen &#252;ber das, was zu tun ist, ist jedoch <em>kurz</em>. Wenn der Skill viele Funktionen hat, beinhaltet die Aufforderung die g&#228;ngigste.</li>
+          <li>Der Skill gibt <em>keine</em> wortreichen Anweisungen, die dem Benutzer mitteilen, was er sagen soll (wie etwa &#8222;um xyz zu tun, m&#252;ssen Sie xyz sagen&#8220;). Die Aufforderung ist kurz.</li>
+          <li>Wenn Sie auf die Aufforderung reagieren, gibt der Skill weitere Aufforderungen, bis er alle ben&#246;tigten Informationen gesammelt hat, dann gibt er eine kontextbezogene Reaktion ohne Fehler. </li>
+        </ul>
+      </td>
+</tr>
+</tbody>
+</table>
+
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Hinweis:</b> Einige sehr einfache Skills reagieren auf alle Anforderungen mit einer vollst&#228;ndigen Antwort und geben dem Benutzer keinerlei Aufforderungen. Das Space Geek-Beispiel reagiert auf alle Anfragen (einschlie&#223;lich einer <code class="highlighter-rouge">LaunchRequest</code> ohne Absicht) mit einer Aussage &#252;ber den Weltraum und beendet die Sitzung. F&#252;hren Sie f&#252;r solche Skills den ersten Test durch und vergewissern Sie sich, dass Sie eine vollst&#228;ndige Antwort bekommen. </div>
+
+<p>Unter <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/alexa-skills-kit-voice-design-best-practices?language=german">Best Practices f&#252;r Voice Design</a> finden Sie Empfehlungen zum Konzipieren von Aufforderungen.</p>
+
+<h2 id="invocation-name_de">4.5. Aufrufsname</h2>
+
+<p>Die Benutzer sprechen den <em>Aufrufsnamen</em> f&#252;r einen Skill aus, um eine Interaktion zu beginnen. Pr&#252;fen Sie den Aufrufsnamen gem&#228;&#223; <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/choosing-the-invocation-name-for-an-alexa-skill?language=german">Ausw&#228;hlen eines Aufrufsnamens f&#252;r einen benutzerdefinierten Skill</a>.</p>
+
+<h2 id="one-shot-phrasing-for-sample-utterances_de">4.6. One-shot-S&#228;tze f&#252;r Beispiel&#228;u&#223;erungen</h2>
+
+<p>Die meisten Skills bieten schnelle, einfache &quot;One-shot&quot;-Interaktionen, in denen der Benutzer eine Frage stellt oder einen Befehl gibt. Der Skill reagiert mit einer Antwort oder Best&#228;tigung und die Interaktion ist abgeschlossen.In diesen Interaktionen ruft der Benutzer Ihren Skill auf und &#228;u&#223;ert seine Absicht in nur einem Satz.</p>
+
+<p><em>Frage-</em> und <em>Sage-</em>S&#228;tze sind die nat&#252;rlichsten S&#228;tze zum Starten dieser Art von Interaktionen. Deshalb ist es von entscheidender Bedeutung, dass Sie Beispiel&#228;u&#223;erungen schreiben, die gut mit diesen S&#228;tzen funktionieren und sich einfach und nat&#252;rlich aussprechen lassen. </p>
+
+<p>In diesen Tests pr&#252;fen Sie die Beispiel&#228;u&#223;erungen, die Sie f&#252;r den Skill geschrieben haben, dann testen Sie diese mit der Stimme, um sicherzustellen, dass sie wie erwartet funktionieren.</p>
+
+<table>
+<colgroup>
+<col width="5%" />
+<col width="45%" />
+<col width="49%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">Test</th>
+<th align="left">Erwartete Ergebnisse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><p>1.</p></td>
+<td align="left">
+        <p>Pr&#252;fen Sie die Beispiel&#228;u&#223;erungen des Skills, um sicherzustellen, dass er die richtige Formulierung enth&#228;lt, die mit den verschiedenen S&#228;tzen zum Aufrufen eines Skills mit einer spezifischen Absicht &#252;bereinstimmen.</p>
+
+        <p>Substantivs&#228;tze: S&#228;tze, die auf diese &#196;u&#223;erungen folgen k&#246;nnen<br />&#8222;<strong>Bitte</strong> &lt; Aufrufsname&gt;<strong> um</strong> &#8230;&#8220; oder <br />&#8222;<strong>Erz&#228;hle</strong> &lt; Aufrufsname&gt; <strong>&#252;ber</strong>&#8230;&#8221;</p>
+
+        <ul>
+          <li>&#8222;Frage &lt;Aufrufsname&gt; nach <em>meiner Lieblingsfarbe</em>&#8220;</li>
+          <li>&#8222;Sage &lt; Aufrufsname&gt;, dass <em>ich heute um 15 Uhr einen Termin habe</em>&#8220;</li>
+        </ul>
+
+        <p>Fragen mit Fragewort oder umgekehrter Satzstellung: S&#228;tze nach <strong>Frage</strong> &lt;Aufrufsname&gt; &#8230;&#8220;</p>
+
+        <ul>
+          <li>&#8222;Frage &lt;Aufrufsname&gt;<em> wo ist mein Auto</em>&#8220;</li>
+          <li>&#8222;Frage &lt;Aufrufsname&gt;<em>, wo mein Auto ist</em>&#8220;</li>
+        </ul>
+
+        <p>Befehle: S&#228;tze, die folgen k&#246;nnen nach &#8222;<strong>Sage</strong> &lt;Aufrufsname&gt;, zu &#8230;&#8220; oder &#8222;<strong>Bitte</strong> &lt; Aufrufsname&gt;, zu &#8230;&#8220;</p>
+
+        <ul>
+          <li>&#8222;Bitte &lt; Aufrufsname&gt;, <em>mir ein Auto zu besorgen</em>&#8220;</li>
+          <li>&#8222;Sage &lt;Aufrufsname&gt;, <em>mein Lieblingsbuch zu suchen</em>&#8220;</li>
+        </ul>
+
+        <p>(In den obigen Beispielen sind die <em>kursiv</em> gedruckten S&#228;tze Beispiel&#228;u&#223;erungen).</p>
+      </td> 
+<td>
+        <ul>
+          <li>Substantiv-, Fragewort- und Befehls&#228;u&#223;erungen werden alle einbezogen.</li>
+          <li>Mindestens f&#252;nf Varianten dieser drei Satztypen sind vorhanden (f&#252;nf Substantivformen, f&#252;nf Fragewortformen und f&#252;nf Befehlsformen)</li>
+          <li>Die Beispiel&#228;u&#223;erungen sind intuitiv und nat&#252;rlich, wenn sie mit den Frage- und Sage-S&#228;tzen kombiniert werden.</li>
+        </ul>
+      </td>
+</tr>
+<tr>
+<td align="left"><p>2.</p></td>
+<td align="left">
+        <p>Starten Sie den Skill mit <em>jedem</em> der folgenden g&#228;ngigen Frage-Beispiele (wenden Sie nach M&#246;glichkeit mehrere Varianten f&#252;r jedes Beispiel an):</p>
+
+        <ul>
+          <li><strong>Frage</strong> &lt;Aufrufsname&gt; <strong>nach</strong> <em>&lt;etwas&gt;</em></li>
+          <li><strong>Frage</strong> &lt;Aufrufsname&gt; <strong>&#252;ber</strong> <em>&lt; etwas&gt;</em></li>
+          <li><strong>Bitte</strong> &lt;Aufrufsname&gt;<strong>, </strong> <em>&lt;etwas zu tun&gt;</em></li>
+        </ul>
+      </td>
+<td>
+        <ul>
+          <li>Jedes dieser allgemeinen Frage-Beispiele funktioniert.</li>
+          <li>Der Skill wird erfolgreich gestartet und f&#252;hrt die Anfrage aus.</li>
+          <li>Der Satz l&#228;sst sich einfach und nat&#252;rlich aussprechen.</li>
+        </ul>
+      </td>
+</tr>
+<tr>
+<td align="left"><p>3.</p></td>
+<td align="left">
+        <p>Starten Sie den Skill mit dem allgemeinen Frage-Beispiel (empfohlener Test um festzustellen, ob dies f&#252;r Ihren Skill ein nat&#252;rlicher Satz ist):</p>
+
+        <ul>
+          <li><strong>Frage </strong> &lt;Aufrufsname&gt; <em>&lt;Frage&gt;</em></li>
+        </ul>
+
+        <p>Testen Sie mit Fragen, die mit verschiedenen Fragew&#246;rtern beginnen (wer, was, wie usw.).</p>
+
+        <p>Die Fragew&#246;rter, die mit Ihrem Skill nat&#252;rlich klingen, k&#246;nnen variieren. Diese Fragetypen flie&#223;en zum Beispiel nicht gut mit &#8222;Space Geek&#8220;. Ein Benutzer wird wahrscheinlich nicht sagen &#8222;Frage Space Geek, was ein Weltraumfakt ist?&#8220;</p>
+      </td> 
+<td>
+        <ul>
+          <li>Das allgemeine Fragemuster funktioniert, wenn es f&#252;r Ihren Skill geeignet ist.</li>
+          <li>Der Skill wird erfolgreich gestartet und f&#252;hrt die Anfrage aus.</li>
+          <li>Der Satz l&#228;sst sich einfach und nat&#252;rlich aussprechen.</li>
+        </ul>
+      </td>
+</tr>
+<tr>
+<td align="left"><p>4.</p></td>
+<td align="left">
+        <p>Starten Sie den Skill mit den folgenden allgemeinen Sage-Beispielen:</p>
+
+        <ul>
+          <li><strong>Sage</strong> &lt;Aufrufsname&gt;<strong>, </strong> <em>&lt;etwas zu tun&gt;</em></li>
+        </ul>
+      </td> 
+<td>
+        <ul>
+          <li>Das allgemeine Sage-Beispiel funktioniert.</li>
+          <li>Der Skill wird erfolgreich gestartet und f&#252;hrt die Anfrage aus.</li>
+          <li>Der Satz l&#228;sst sich einfach und nat&#252;rlich aussprechen.</li>
+        </ul>
+      </td>
+</tr>
+<tr>
+<td align="left"><p>5.</p></td>
+<td align="left">
+        <p>Lesen Sie nochmals den Abschnitt &#8222;Einen Skill mit einer spezifischen Anfrage starten (Absicht)&#8220; in <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/supported-phrases-to-begin-a-conversation?language=german">Wie Benutzer benutzerdefinierte Skills aufrufen</a> und testen Sie so viele S&#228;tze wie m&#246;glich, die zu Ihrem Skill passen.</p>
+
+        <p>Beachten Sie, dass nicht alle S&#228;tze zu allen Skills passen. Der Satz &#8222;Frage&#8230;, ob&#8230;&#8220; w&#252;rde wahrscheinlich nicht zum Wattl&#228;ufer passen, obwohl der Skill diesen Test auch ohne diesen Satz bestehen w&#252;rde.</p>
+      </td> 
+<td>
+        <ul>
+          <li>Der Skill wird erfolgreich gestartet und f&#252;hrt die Anfrage aus.</li>
+          <li>Der Satz l&#228;sst sich einfach und nat&#252;rlich aussprechen.</li>
+        </ul>
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="variety-of-sample-utterances_de">4.7. Vielfalt der Beispiel&#228;u&#223;erungen </h2>
+
+<p>Angesichts der Flexibilit&#228;t und der Vielfalt der gesprochenen Sprache kann dieselbe Anforderung oft auf sehr unterschiedliche Weise ausgedr&#252;ckt werden. Deshalb m&#252;ssen ihre Beispiel&#228;u&#223;erungen mehrere M&#246;glichkeiten umfassen, die gleiche Absicht zu formulieren.</p>
+
+<p>Pr&#252;fen Sie in diesem Test die Beispiel&#228;u&#223;erungen f&#252;r alle Absichten, nicht nur die &quot;One-shot&quot;-Absichten in <em>One-shot-S&#228;tzen f&#252;r Beispiel&#228;u&#223;erungen</em>.</p>
+
+<table>
+<colgroup>
+<col width="5%" />
+<col width="45%" />
+<col width="49%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">Test</th>
+<th align="left">Erwartete Ergebnisse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><p>1.</p></td>
+<td align="left">
+        <p>Pr&#252;fen Sie das Absichtsschema und die Beispiel&#228;u&#223;erungen des Skills:</p>
+
+        <ol>
+          <li>Suchen Sie f&#252;r <em>jede Absicht</em> mehrere M&#246;glichkeiten, wie der Benutzer eine Anfrage f&#252;r diese Absicht formulieren k&#246;nnte. </li>
+          <li>Pr&#252;fen Sie, ob die Beispiel&#228;u&#223;erungen, die dieser Absicht zugeordnet wurden, diese Formulierungen abdecken.</li>
+          <li>Pr&#252;fen Sie alle Slots, die in den Beispiel&#228;u&#223;erungen vorkommen. </li>
+        </ol>
+      </td> 
+<td>
+        <p>Jeder Anfragetyp enth&#228;lt mindestens <em>f&#252;nf</em> verschiedene Beispiel&#228;u&#223;erungen (f&#252;r einfache Absichten). Mehr &#196;u&#223;erungen einzubeziehen, erh&#246;ht die Pr&#228;zision Ihres Skills.</p>
+
+        <p>Die f&#252;nf g&#228;ngigsten Synonyme f&#252;r Satzmuster sind vorhanden. Wenn der Skill zum Beispiel &#8222;Hol mir &lt;einen Wert&gt;&#8220; enth&#228;lt, umfassen die &#196;u&#223;erungen Synonyme wie &#8222;Gib mir &lt;einen Wert&gt;&#8220;, &#8222;Sage mir &lt;einen Wert&gt;&#8220; usw.</p>
+
+        <p>Jede Beispiel&#228;u&#223;erung muss eindeutig sein. Beispiel&#228;u&#223;erungen d&#252;rfen nicht mehrfach vorkommen und unterschiedlichen Absichten zugeordnet sein. </p>
+
+        <p>Jeder im Absichtsschema definierte Slot muss in mindestens einer Beispiel&#228;u&#223;erung vorkommen.</p>
+
+        <p>Jeder Slot wird nur einmal innerhalb einer Beispiel&#228;u&#223;erung verwendet. </p>
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="intents-and-slot-types_de">4.8. Absichten und Slot-Typen </h2>
+
+<p>Slots werden mit verschiedenen <em>Typen</em> definiert. Integrierte Typen wie <code class="highlighter-rouge">AMAZON.DATE</code> konvertieren den gesprochenen Text eines Benutzers in ein anderes Format (etwa den gesprochenen Text &#8222;f&#252;nfter M&#228;rz&#8220; in das Datumsformat &#8222;2017-03-05). Benutzerdefinierte Slot-Typen werden f&#252;r Elemente verwendet, die nicht von den integrierten Typen von Amazon Alexa abgedeckt sind.</p>
+
+<p>Pr&#252;fen Sie f&#252;r diesen Test das Absichtsschema und vergewissern Sie sich, dass die richtigen Slot-Typen f&#252;r den Datentyp verwendet werden, den der Slot sammeln soll.</p>
+
+<p>Beachten Sie, dass dieser Test davon ausgeht, dass Sie zu den aktualisierten Slot-Typen migriert haben, die unter <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/migrating-to-the-improved-built-in-and-custom-slot-types">Migration zu den verbesserten integrierten und benutzerdefinierten Slot-Typen</a> beschrieben sind. Wenn Sie noch die vorherige Version verwenden (zum Beispiel <code class="highlighter-rouge">DATE</code> anstelle von <code class="highlighter-rouge">AMAZON.DATE</code>), m&#252;ssen Sie au&#223;erdem den Test <em>Beispiel&#228;u&#223;erungen (Slot-Typ-Werte)</em> durchf&#252;hren.</p>
+
+<table>
+<colgroup>
+<col width="5%" />
+<col width="45%" />
+<col width="49%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">Test</th>
+<th align="left">Erwartete Ergebnisse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><p>1.</p></td>
+<td align="left">
+        <p>Pr&#252;fen Sie das Absichtsschema des Skills, um alle Slot-Typen zu ermitteln.</p>
+
+        <p>Pr&#252;fen Sie, ob die Typen mit dem zu sammelnden Datentyp &#252;bereinstimmen.</p>
+      </td> 
+<td>
+        <ul>
+          <li>Die Slots f&#252;r jede einzelne Absicht stimmen mit den empfohlenen Slot-Typen in der Tabelle <em>Slot-Typen</em> weiter unten &#252;berein.</li>
+          <li>Slots, die einen Wert aus einer Liste sammeln, verwenden einen benutzerdefinierten Slot-Typ. </li>          
+        </ul>        
+      </td>
+</tr>
+</tbody>
+</table>
+
+<p>Slot-Typen:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Slot-Typ</th>
+      <th>F&#252;r Slots verwenden, die&#8230; sammeln</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">AMAZON.NUMBER</code></td>
+      <td>Ganzzahlen</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">AMAZON.DATE</code></td>
+      <td>Relative und absolute Daten (&#8222;dieses Wochenende&#8220; und &#8222;sechsundzwanzigster August zweitausendf&#252;nfzehn&#8220;)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">AMAZON.TIME</code></td>
+      <td>Die Tageszeit (&#8222;f&#252;nfzehn Uhr drei&#223;ig&#8220;)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">AMAZON.DURATION</code></td>
+      <td>Eine Zeitdauer (&#8222;f&#252;nf Minuten&#8220;)</td>
+    </tr>
+    <tr>
+      <td><em>Benutzerdefinierte Slot-Typen</em></td>
+      <td>Ein Wert aus einer Liste (Sternzeichen, alle Bundesligateams, unterst&#252;tzte St&#228;dte, Rezeptzutaten usw.)<br /><br />Unter <em>Benutzerdefinierte Slot-Typen (Werte)</em> finden Sie weitere Tests f&#252;r Ihre benutzerdefinierten Slot-Typen. </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="custom-slot-type-values_de">4.9. Benutzerdefinierte Slot-Typ-Werte</h2>
+
+<p>Der benutzerdefinierte Slot-Typ wird f&#252;r Elemente verwendet, die nicht von den integrierten Amazon-Typen abgedeckt sind. Sie werden f&#252;r die meisten F&#228;lle empfohlen, wo ein Slot-Wert zu einer Reihe m&#246;glicher Werte geh&#246;rt.</p>
+
+<table>
+<colgroup>
+<col width="5%" />
+<col width="45%" />
+<col width="49%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">Test</th>
+<th align="left">Erwartete Ergebnisse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><p>1.</p></td>
+<td align="left">
+        <p>Pr&#252;fen Sie das Absichtsschema des Skills, um alle Slots ausfindig zu machen, die benutzerdefinierte Slot-Typen verwenden. </p>
+
+        <p>Pr&#252;fen Sie f&#252;r jeden benutzerdefinierten Slot-Typ den Wertesatz, den Sie f&#252;r den Typ angegeben haben. </p>
+      </td> 
+<td>
+        <ul>
+          <li>Falls m&#246;glich umfasst die Liste alle Werte, die Ihrer Meinung nach verwendet werden k&#246;nnen. Ein Horoskop-Skill mit dem benutzerdefinierten Typ <code class="highlighter-rouge">LIST_OF_SIGNS</code> w&#252;rde beispielsweise alle zw&#246;lf Sternzeichen als Werte f&#252;r den Typ enthalten.</li>
+          <li>Wenn die Liste nicht jeden einzelnen m&#246;glichen Wert abdecken kann, deckt sie so viele <em>repr&#228;sentative</em> Werte wie m&#246;glich ab. </li>
+          <li>Wenn die Liste nicht jeden einzelnen m&#246;glichen Wert abdecken kann, bringen die Werte die erwartete Wortanzahl zum Ausdruck. Wenn beispielsweise Werte von einem bis vier W&#246;rtern m&#246;glich sind, verwenden Sie Werte von einem bis vier W&#246;rtern in Ihrer Wertliste. Achten Sie auch darauf, sie gleichm&#228;&#223;ig zu verteilen. Wenn ein Wert aus vier W&#246;rtern in rund 10 % der Eingaben vorkommt, verwenden Sie Werte mit vier W&#246;rtern nur in 10 % der Werte in Ihrer Liste.</li>
+        </ul>
+
+        <p>Einen Leitfaden zum Definieren der Werte f&#252;r benutzerdefinierte Slot-Typen finden Sie im Abschnitt &#8222;Empfehlungen zum Definieren der Spracheingabedaten&#8220; unter <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/defining-the-voice-interface?language=german">Definieren der Sprachschnittstelle</a>. </p>
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="writing-conventions-for-sample-utterances_de">4.10. Schreibkonventionen f&#252;r Beispiel&#228;u&#223;erungen</h2>
+
+<p>Beispiel&#228;u&#223;erungen m&#252;ssen gem&#228;&#223; den festgelegten Regeln geschrieben werden, um ein Sprachmodell f&#252;r Ihren Skill erfolgreich aufzubauen. </p>
+
+<table>
+<colgroup>
+<col width="5%" />
+<col width="45%" />
+<col width="49%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">Test</th>
+<th align="left">Erwartete Ergebnisse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><p>1.</p></td>
+<td align="left">
+        <p>Pr&#252;fen Sie den Text aller Beispiel&#228;u&#223;erungen. </p>
+      </td> 
+<td>
+        <p>Alle Beispiel&#228;u&#223;erungen entsprechen den folgenden<br /> Schreibkonventionen:</p>
+
+        <ul>
+          <li>Es werden weder Gro&#223;buchstaben noch Satzzeichen verwendet (Punkte k&#246;nnen verwendet werden, jedoch nur f&#252;r Initiale und Schreibweisen (z.&#160;B. &#8222;t. v.&#8220;). Bindestriche k&#246;nnen verwendet werden, jedoch nur ausnahmsweise. Apostrophe k&#246;nnen f&#252;r Possessivausdr&#252;cke verwendet werden).</li>
+          <li>Ein Punkt kann nach Einzelbuchstaben stehen. Vor dem n&#228;chsten Buchstaben oder Wort steht eine Leerstelle: &#8222;TV&#8220; wird &#8222;t. v.&#8220; geschrieben &#8222;OK&#8220; als &#8222;o. k.&#8220; - Wortzusammensetzungen werden auf &#228;hnliche Weise geschrieben: &#8222;AccessHD&#8220; wird als &#8222;access h. d.&#8220; geschrieben </li>
+          <li>Der Aufrufsname darf weder isoliert noch innerhalb des unterst&#252;tzten Startausdrucks erscheinen. Ein Skill mit dem Aufrufsnamen &#8222;Horoskop Dienst&#8220; darf keine Beispiel&#228;u&#223;erungen enthalten, die nur &#8222;Horoskop Dienst&#8220; lauten. Beispiel&#228;u&#223;erungen d&#252;rfen keine Startausdr&#252;cke wie &#8222;Sag Horoskop Dienst&#8220; enthalten. Eine vollst&#228;ndige Liste der Startausdr&#252;cke finden Sie unter <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/supported-phrases-to-begin-a-conversation?language=german">Wie Benutzer benutzerdefinierte Skills aufrufen</a></li>
+        </ul>
+
+        <p>Weitere Informationen &#252;ber die Syntaxregeln f&#252;r Beispiel&#228;u&#223;erungen finden Sie unter <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/alexa-skills-kit-interaction-model-reference">Referenz f&#252;r das benutzerdefinierte Interaktionsmodell</a> .</p>
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="error-handling_de">4.11. Umgang mit Fehlern</h2>
+
+<p>Anders als bei einer visuellen Schnittstelle, wo der Benutzer nur mit auf dem Bildschirm dargestellten Objekten interagieren kann, gibt es hier keine M&#246;glichkeit einzuschr&#228;nken, was die Benutzer in einer Sprachinteraktion sagen k&#246;nnen.Ihr Skill muss auf intelligente und benutzerfreundliche Weise mit einer Vielzahl von Fehlern umgehen k&#246;nnen. In diesem Test wird gepr&#252;ft, wie Ihr Skill mit h&#228;ufig auftretenden Fehlern umgeht. </p>
+
+<p>Weitere Informationen zum Validieren von Benutzereingaben finden Sie unter <a href="https://developer.amazon.com/appsandservices/solutions/alexa/alexa-skills-kit/docs/handling-requests-sent-by-alexa#h2_input_errors">Verarbeitung m&#246;glicher Eingabefehler</a>.</p>
+
+<table>
+<colgroup>
+<col width="5%" />
+<col width="45%" />
+<col width="49%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">Test</th>
+<th align="left">Erwartete Ergebnisse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><p>1.</p></td>
+<td align="left">
+        <p>Rufen Sie den Skill auf, ohne eine Absicht anzugeben. Beispiel: </p>
+
+        <ul>
+          <li>&#214;ffne <em>&lt;Aufrufsname&gt;</em>.</li>
+        </ul>
+
+        <p>Bei Aufforderung zum Reagieren, <em>nichts</em> sagen.</p>
+      </td> 
+<td>
+        <ul>
+          <li>Der Skill reagiert mit einer Aufforderung, die kl&#228;rt, welche Informationen Sie angeben sollen. </li>
+          <li>Die Aufforderung gibt klar an, was Sie sagen m&#252;ssen. </li>
+          <li>Die Aufforderung endet mit einer Frage und l&#228;sst die Sitzung ge&#246;ffnet, damit Sie reagieren k&#246;nnen. </li>
+        </ul>
+
+        <p>Beachten Sie, dass es sich bei der Aufforderung, die Sie h&#246;ren, um eine <em>erneute Aufforderung</em> handelt, die in der vorherigen Reaktion enthalten ist. </p>
+      </td>
+</tr>
+<tr>
+<td align="left"><p>2.</p></td>
+<td align="left">
+        <p>Rufen Sie den Skill mithilfe des folgenden Satzes auf: </p>
+
+        <ul>
+          <li>&#214;ffne <em>&lt;Aufrufsname&gt;</em>.</li>
+        </ul>
+
+        <p>Wenn Sie zur Reaktion aufgefordert werden, sagen Sie etwas, das mit einer der Skill-Absichten &#252;bereinstimmt, jedoch mit ung&#252;ltigen Slot-Daten.</p>
+
+        <p>Wenn die Absicht zum Beispiel einen Slot mit <code class="highlighter-rouge">AMAZON.DATE</code> erwartet, sagen Sie etwas, was nicht in ein Datum umgewandelt werden kann.</p>
+
+        <p>Wiederholen Sie diesen Test f&#252;r jeden einzelnen Slot.</p>
+      </td> 
+<td>
+        <ul>
+          <li>Der Skill reagiert mit einer Aufforderung oder einem Hilfetext, der deutlich macht, welche Informationen Sie angeben m&#252;ssen.</li>
+          <li>Die Aufforderung weist klar darauf hin, was Sie sagen m&#252;ssen.</li>
+          <li>Die Aufforderung endet mit einer Frage und h&#228;lt die Sitzung ge&#246;ffnet, damit Sie reagieren k&#246;nnen.</li>
+        </ul>
+
+        <p>Beachten Sie, dass es sich bei der Aufforderung in diesem Szenario <em>nicht</em> um eine <em>erneute Aufforderung</em> handelt, die in der vorherigen Reaktion enthalten ist. Diese Aufforderung muss von der Fehlerbehandlung im Code stammen, der die Absicht steuert. </p>
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="providing-help_de">4.12. Hilfe anbieten</h2>
+
+<p>Ein Skill muss eine Hilfeabsicht haben, die zus&#228;tzliche Anweisungen zum Navigieren und f&#252;r den Umgang mit dem Skill anbietet. Implementieren Sie daf&#252;r <code class="highlighter-rouge">AMAZON.HelpIntent</code>. Sie brauchen f&#252;r diese Absicht keine eigenen Beispiel&#228;u&#223;erungen anzugeben, aber Sie m&#252;ssen sie in den Code f&#252;r Ihren Skill implementieren. Weitere Hinweise finden Sie unter <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/implementing-the-built-in-intents">Implementieren der integrierten Absichten</a>.</p>
+
+<p>Mit diesem Test wird gepr&#252;ft, ob diese Absicht vorhanden ist und n&#252;tzliche Informationen liefert. </p>
+
+<table>
+<colgroup>
+<col width="5%" />
+<col width="45%" />
+<col width="49%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">Test</th>
+<th align="left">Erwartete Ergebnisse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><p>1.</p></td>
+<td align="left">
+        <p>Rufen Sie den Skill auf, ohne eine Absicht anzugeben. Beispiel:</p>
+
+        <ul>
+          <li>&#214;ffne <em>&lt;Aufrufsname&gt;</em>.</li>
+        </ul>
+
+        <p>Wenn Sie zu einer Reaktion aufgefordert werden, sagen Sie &#8222;Hilfe&#8220;. </p>
+
+        <p>F&#252;r einen einfachen Skill, der auch ohne spezifische Absicht eine vollst&#228;ndige Antwort gibt, (wie im Beispiel &#8222;Space Geek&#8220;), rufen Sie die Hilfeabsicht direkt auf: </p>
+
+        <ul>
+          <li>Bitte <em>&lt;Aufrufsname&gt;</em> um Hilfe. </li>
+        </ul>
+      </td> 
+<td>
+        <p>Die Reaktion der Hilfe:</p>
+
+        <ul>
+          <li>Liefert Anweisungen, um dem Benutzer bei der Navigation in der Kernfunktion des Skills zu helfen. </li>
+          <li>Ist umfassender als die Aufforderung, die die Benutzer beim Starten des Skills ohne Absicht h&#246;ren. Die Hilfeaufforderung k&#246;nnte beispielsweise besser erkl&#228;ren, was der Skill tut, oder den Benutzer dar&#252;ber informieren, wie er den Skill beenden kann.</li>
+          <li>Informiert den Benutzer dar&#252;ber, was der Skill tun kann, im Gegensatz dazu, was der Benutzer sagen muss, damit der Skill funktioniert.</li>
+          <li>Endet mit einer Frage, die den Benutzer auffordert, die Anfrage auszuf&#252;hren. </li>
+          <li>L&#228;sst die Sitzung ge&#246;ffnet, damit der Benutzer reagieren kann. </li>
+        </ul>
+      </td>
+</tr>
+</tbody>
+</table>
+
+<p>Weitere Informationen &#252;ber das Implementieren der Hilfe f&#252;r Ihren Skill finden Sie im Abschnitt &#8222;Hilfe f&#252;r komplexe Skills anbieten&#8220; unter <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/alexa-skills-kit-voice-design-best-practices?language=german">Best Practices f&#252;r Voice Design</a>.</p>
+
+<h2 id="stopping-and-canceling_de">4.13. Stoppen und Abbrechen</h2>
+
+<p>Ihr Skill muss angemessen auf allgemeine &#196;u&#223;erungen zum Stoppen und Abbrechen reagieren (etwa &#8222;Stopp&#8220;, &#8222;Abbrechen&#8220;, &#8222;vergiss es&#8220; und andere). Die integrierten Absichten <code class="highlighter-rouge">AMAZON.StopIntent</code> und <code class="highlighter-rouge">AMAZON.CancelIntent</code> bieten diese &#196;u&#223;erungen. In den meisten F&#228;llen beenden diese Absichten den Skill einfach, aber Sie k&#246;nnen sie auch anderen Funktionen zuordnen, sofern das f&#252;r Ihren bestimmten Skill sinnvoll ist. Siehe <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/implementing-the-built-in-intents">Implementieren der integrierten Absichten</a>.</p>
+
+<table>
+<colgroup>
+<col width="5%" />
+<col width="45%" />
+<col width="49%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">Test</th>
+<th align="left">Erwartete Ergebnisse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><p>1.</p></td>
+<td align="left">
+        <p>Starten Sie den Skill und rufen Sie eine Absicht auf, die den Benutzer zu einer Reaktion auffordert.</p>
+
+        <p>Nachdem Sie die Aufforderung geh&#246;rt haben, sagen Sie &#8222;Stopp&#8220;.</p>
+      </td> 
+<td>
+        <p>Es folgt <em>eine</em> dieser Reaktionen:</p>
+
+        <ul>
+          <li>Der Skill ist vorhanden.</li>
+          <li>Der Skill gibt eine Reaktion zur&#252;ck, die der Funktion des Skills entspricht.  Die Reaktion ist ebenfalls sinnvoll im Kontext der Aufforderung &#8222;Stopp&#8220;. Ein Skill, der Bestellungen aufgibt, k&#246;nnte zum Beispiel mit der Best&#228;tigung reagieren, dass die Bestellung des Benutzers storniert wurde.</li>
+        </ul>
+
+        <p>Wenn der Skill auf alle Anfragen mit einer vollst&#228;ndigen Antwort reagiert und niemals eine Aufforderung abgibt, &#252;berspringen Sie diesen Test.</p>
+      </td>
+</tr>
+<tr>
+<td align="left"><p>2.</p></td>
+<td align="left">
+        <p>Rufen Sie eine Absicht auf, die mit l&#228;ngeren Text-zu-Sprache-Umwandlungen reagiert. Sobald Alexa beginnt, die Antwort auszusprechen, sagen Sie &#8222;Alexa Stopp&#8220;, um die Antwort zu unterbrechen. </p>
+      </td> 
+<td>
+        <p>Nachdem ein Aktivierungswort Alexa unterbrochen hat, erfolgt <em>eine</em> dieser Aktionen.</p>
+
+        <ul>
+          <li>Der Skill ist vorhanden.</li>
+          <li>Der Skill gibt eine Reaktion zur&#252;ck, die der Funktion des Skills entspricht.  Die Reaktion ist ebenfalls sinnvoll im Kontext der Aufforderung &#8222;Stopp&#8220;. Ein Skill, der Bestellungen aufgibt, k&#246;nnte zum Beispiel mit der Best&#228;tigung reagieren, dass die Bestellung des Benutzers storniert wurde.</li>
+        </ul>
+
+        <p>Wenn alle Skill-Reaktionen zu kurz sind, um sie zu unterbrechen, &#252;berspringen Sie diesen Test. </p>
+      </td>
+</tr>
+<tr>
+<td align="left"><p>3.</p></td>
+<td align="left">
+        <p>Starten Sie den Skill und rufen Sie eine Absicht auf, die den Benutzer zu einer Reaktion auffordert.</p>
+
+        <p>Nachdem Sie die Aufforderung geh&#246;rt haben, sagen Sie &#8222;Abbrechen&#8220;.</p>
+      </td> 
+<td>
+        <p>Es folgt eine dieser Reaktionen:</p>
+
+        <ul>
+          <li>Der Skill ist vorhanden.</li>
+          <li>Der Skill gibt eine Reaktion zur&#252;ck, die der Funktion des Skills entspricht.  Die Reaktion ist ebenfalls sinnvoll im Kontext der Aufforderung &#8222;Abbrechen&#8220;. Ein Skill, der Bestellungen aufgibt, k&#246;nnte zum Beispiel mit der Best&#228;tigung reagieren, dass die Bestellung des Benutzers storniert wurde.</li>
+        </ul>
+
+        <p>Wenn der Skill auf alle Anfragen mit einer vollst&#228;ndigen Antwort reagiert und niemals eine Aufforderung abgibt, &#252;berspringen Sie diesen Test.</p>
+      </td>
+</tr>
+<tr>
+<td align="left"><p>4.</p></td>
+<td align="left">
+        <p>Rufen Sie eine Absicht auf, die mit l&#228;ngeren Text-zu-Sprache-Umwandlungen reagiert. Sobald Alexa beginnt, die Antwort auszusprechen, sagen Sie &#8222;Alexa abbrechen&#8220;, um die Antwort zu unterbrechen. </p>
+      </td> 
+<td>
+        <p>Nachdem ein Aktivierungswort Alexa unterbrochen hat, erfolgt eine dieser Aktionen.</p>
+
+        <ul>
+          <li>Der Skill ist vorhanden.</li>
+          <li>Der Skill gibt eine Reaktion zur&#252;ck, die der Funktion des Skills entspricht.  Die Reaktion ist ebenfalls sinnvoll im Kontext der Aufforderung &#8222;Abbrechen&#8220;. Ein Skill, der Bestellungen aufgibt, k&#246;nnte zum Beispiel mit der Best&#228;tigung reagieren, dass die Bestellung des Benutzers storniert wurde.</li>
+        </ul>
+
+        <p>Wenn alle Skill-Reaktionen zu kurz sind, um sie zu unterbrechen, &#252;berspringen Sie diesen Test. </p>
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="appendix-deprecated-test-for-sample-utterances-slot-type-values_de">Anhang:Aus dem Verkehr gezogener Test f&#252;r Beispiel&#228;u&#223;erungen (Slot-Typ-Werte)</h2>
+
+<p>Wenn alle Ihre Slots die neueren Slot-Typen mit dem Namensraum <code class="highlighter-rouge">AMAZON</code> verwenden (etwa <code class="highlighter-rouge">AMAZON.DATE</code>), brauchen Sie diesen Test nicht durchzuf&#252;hren.</p>
+
+<p>In fr&#252;heren Versionen des Alexa Skills Kits war es erforderlich, Slot-Werte einzubeziehen, um die verschiedenen Formulierungen der Slot-Daten in Ihre Beispiel&#228;u&#223;erungen einzubeziehen. Zum Beispiel wurden Beispiel&#228;u&#223;erungen f&#252;r einen <code class="highlighter-rouge">DATE</code>-Slot wie folgt geschrieben:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>OneshotTideIntent when is high tide on {january first|Date}
+OneshotTideIntent when is high tide {tomorrow|Date}
+OneshotTideIntent when is high tide {saturday|Date}
+...(many more utterances showing different ways to say the date)
+</code></pre>
+</div>
+
+<p>Wenn Ihr Skill diese Syntax noch f&#252;r die integrierten Slot-Typen verwendet, m&#252;ssen Sie die Beispiel-Slot-Werte in Ihren Beispiel&#228;u&#223;erungen &#252;berarbeiten. Wir empfehlen dringend, <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/migrating-to-the-improved-built-in-and-custom-slot-types">zu den aktualisierten Slot-Typen zu migrieren</a>, die keine Beispielwerte mehr erfordern.</p>
+
+<table>
+<colgroup>
+<col width="5%" />
+<col width="45%" />
+<col width="49%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">Test</th>
+<th align="left">Erwartete Ergebnisse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><p>1.</p></td>
+<td align="left">
+        <p>Pr&#252;fen Sie das Absichtsschema des Skills, um alle Slots ausfindig zu machen. Untersuchen Sie dann die Slot-Typ-Werte in den Beispiel&#228;u&#223;erungen. </p>
+
+        <p>Pr&#252;fen Sie, ob die Slot-Typ-Werte ausreichend viele Varianten bieten, damit sie gut erkannt werden.</p>
+      </td> 
+<td>
+        <ul>
+          <li><code class="highlighter-rouge">NUMBER</code>: Geben Sie mehrere M&#246;glichkeiten an, Ganzzahlen anzugeben und beziehen Sie Beispiele ein, aus denen der vollst&#228;ndige Zahlenbereich ersichtlich ist, den Sie erwarten (geben Sie z.&#160;B. &#8222;zehn&#8220;, &#8222;ein Hundert&#8220; und mehrere Beispiele dazwischen an). Wenn Sie erwarten, dass die verwendeten Zahlen nur in einem engen Bereich liegen, beziehen Sie jede einzelne Zahl in diesem Bereich als Beispielwerte in eine &#196;u&#223;erung ein.</li>
+          <li><code class="highlighter-rouge">DATE</code>: Geben Sie sowohl Beispiele f&#252;r relative als auch f&#252;r absolute Kalenderdaten an (zum Beispiel &#8222;heute&#8220;, &#8222;morgen&#8220;, &#8222;erster september&#8220;, &#8222;sechsundzwanzigster Juni zwanzig f&#252;nfzehn&#8220;). Wenn Sie eine bestimmte Gruppe von S&#228;tzen eher als andere erwarten, geben Sie Beispiele f&#252;r diese S&#228;tze an. </li>
+          <li><code class="highlighter-rouge">TIME</code>: Geben Sie Beispiele f&#252;r Zeitangaben an (&#8222;f&#252;nfzehn Uhr drei&#223;ig&#8220;).</li>
+          <li><code class="highlighter-rouge">DURATION</code>: Geben Sie Beispiele f&#252;r die Angabe verschiedener Zeitr&#228;ume an (&#8222;f&#252;nf Minuten&#8220;, &#8222;zehn Tage&#8220;, &#8222;vier Jahre&#8220;).</li>
+        </ul>
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="next-steps_de">N&#228;chste Schritte</h2>
+
+<ul>
+  <li><a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/alexa-skills-kit-policy-testing">1. Richtlinientests</a></li>
+  <li><a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/alexa-skills-kit-security-testing">2. Sicherheitstests</a></li>
+  <li><a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/alexa-skills-kit-functional-testing">3. Funktionstests</a></li>
+  <li>Zur&#252;ckgehen zu: <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/publishing-an-alexa-skill?language=german">&#220;bermitteln eines Alexa-Skills zur Zertifizierung</a>.</li>
+  <li>Zur&#252;ckkehren zu: <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/overviews/steps-to-build-a-custom-skill">Schritte zum Erstellen eines benutzerdefinierten Skill</a></li>
+</ul>
+
+<!-- common links -->
+
+
+
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+    </div>
+</div>
+
+<script type="text/javascript">
+    $( document ).ready(function() {
+        var pgurl = window.location.href;
+        $("ul.germanMenu li a").each(function(){
+            if($(this).attr("href") == pgurl || $(this).attr("href") == pgurl + "/")
+                $(this).addClass("active");
+        });
+    });
+
+</script>
+          
+        
+      </div>
+    </div>
+  
+
+
+<script type="text/javascript" src="/public/js/gamecircle.js"></script>
+    </div>
+    
+    <script type="text/javascript" src="/public/js/leftmenu_controller.js"></script>
+  </div>
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="footer">
+  <div id="upper-footer">
+    <div id="upper-footer-wrapper">
+      <span id="footer-sitemap-title">Sitemap</span>
+      
+      
+      
+      
+      <div id="socialmedia-icons">
+        <a href="https://www.facebook.com/AmazonAppDev"><img src="/public/images/logo-facebook.png" alt="facebook_logo" width="31" height="31" /></a>
+        <a href="https://twitter.com/AmazonAppDev"><img src="/public/images/logo-twitter.png" alt="twitter_logo" width="31" height="31" /></a>
+        <a href="/public/community/blog"><img src="/public/images/logo-blog.png" alt="blog_logo" width="31" height="31" /></a>
+      </div>
+      <span id="footer-followus-span">Follow us</span>
+    </div>
+  </div>
+  <div id="median-footer">
+    <div id="median-footer-wrapper">
+      <ul id="footer-sitemap">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+<li>
+  <a href="/public/solutions/alexa">Alexa</a>
+  
+    <ul>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/solutions/alexa/alexa-skills-kit">Alexa Skills Kit</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/solutions/alexa/alexa-voice-service">Alexa Voice Service</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/solutions/alexa/alexa-fund">Alexa Fund</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/solutions/alexa/rewards-for-skill-developers">Rewards for Skill Developers</a>
+	    </li>
+      
+    </ul>
+  
+</li>
+
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+<li>
+  <a href="/public/apis">Services &amp; APIs</a>
+  
+    <ul>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/apis/earn">Earn</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/apis/engage">Engage</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/apis/experience">Build</a>
+	    </li>
+      
+    </ul>
+  
+</li>
+
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+<li>
+  <a href="/public/solutions/devices">Devices</a>
+  
+    <ul>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/solutions/devices/fire-tablets">Fire Tablets</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/solutions/devices/fire-tv">Amazon Fire TV</a>
+	    </li>
+      
+        
+          
+	      
+	        
+	      
+	    
+	    <li>
+	      <a href="https://developer.amazon.com/dash-replenishment-service">Dash Replenishment Service</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/solutions/devices/fire-phone">Fire Phone</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/solutions/devices/echo">Amazon Echo</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/solutions/devices/amazon-tap">Amazon Tap</a>
+	    </li>
+      
+    </ul>
+  
+</li>
+
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+<li>
+  <a href="/public/resources">Resources</a>
+  
+    <ul>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/solutions/platforms">Platforms</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/resources/learning-center">Learning Center</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/resources/development-tools">Development Tools</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/resources/promotional-tools">Promotional Tools</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/resources/marketing-tools">Marketing Tips</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/resources/other">Other Resources</a>
+	    </li>
+      
+    </ul>
+  
+</li>
+
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+<li>
+  <a href="/public/community/blog">Blogs</a>
+  
+    <ul>
+      
+        
+          
+	      
+	        
+	      
+	    
+	    <li>
+	      <a href="https://developer.amazon.com/blogs/alexa/">Alexa Blog</a>
+	    </li>
+      
+        
+          
+	      
+	        
+	      
+	    
+	    <li>
+	      <a href="https://developer.amazon.com/blogs/appstore/">Appstore Blog</a>
+	    </li>
+      
+        
+          
+	      
+	        
+	      
+	    
+	    <li>
+	      <a href="https://aws.amazon.com/blogs/aws/">AWS Blog</a>
+	    </li>
+      
+    </ul>
+  
+</li>
+
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+<li>
+  <a href="/public/support">Support</a>
+  
+    <ul>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/support/submitting-your-app">Submitting Your Apps</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/support/faq">FAQs</a>
+	    </li>
+      
+        
+          
+	      
+	        
+	      
+	    
+	    <li>
+	      <a href="http://forums.developer.amazon.com">Forums</a>
+	    </li>
+      
+        
+          
+	      
+	        
+	      
+	    
+	    <li>
+	      <a href="https://developer.amazon.com/public/support/contact/contact-us?sc_channel=website&amp;sc_publisher=devportal&amp;sc_campaign=Conversion_Contact-Us&amp;sc_assettype=conversion&amp;sc_team=us&amp;sc_traffictype=organic&amp;sc_country=united-states&amp;sc_segment=all&amp;sc_itrackingcode=100020_us_website&amp;sc_detail=dp-sidebar">Contact Us</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/support/legal/da">App Distribution Agreement</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/support/mobileads/publisher-agreement.html">Mobile Ad Network Publisher Agreement</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/support/mobileads/participation-requirements.html">Mobile Ad Network Program Participation Requirements</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/support/advertise-your-app-agreement">Advertise Your App With Amazon Agreement</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/support/pml.html">Program Materials License Agreement</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/support/legal/tuabg">Trademark Guidelines</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/support/legal/tou">Terms of Use</a>
+	    </li>
+      
+    </ul>
+  
+</li>
+
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- SiteCatalyst code version: H.26.
+Copyright 1996-2013 Adobe, Inc. All Rights Reserved
+More info available at http://www.omniture.com -->
+<script language="JavaScript" type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal/s_code2.js"></script>
+
+<script type="text/javascript">var SiteCatalystId = ""</script>
+
+<script language="JavaScript" type="text/javascript"><!--
+/* You may give each page an identifying name, server, and channel on
+the next lines. */
+s.pageName="/public/solutions/alexa/alexa-skills-kit/docs/alexa-skills-kit-voice-interface-and-user-experience-testing"
+s.server="developer.amazon.com"
+s.channel=""
+s.pageType=""
+s.prop1="173.165.36.107"
+s.prop2="Mozilla/5.0 (X11; Linux x86_64; rv:45.0) Gecko/20100101 Firefox/45.0"
+s.prop3=""
+s.prop4=""
+s.prop5=""
+/* Conversion Variables */
+s.campaign=""
+s.state=""
+s.zip=""
+s.events=""
+s.products=""
+s.purchaseID=""
+s.eVar1=""
+s.eVar2=""
+s.eVar3=""
+s.eVar4=""
+s.eVar5=""
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)//--></script>
+<script language="JavaScript" type="text/javascript"><!--
+if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+//--></script><noscript><img src="http://amazonservices.d2.sc.omtrdc.net/b/ss/amzna2z/1/H.22.1--NS/0"
+height="1" width="1" border="0" alt="" /></noscript><!--/DO NOT REMOVE/-->
+<!-- End SiteCatalyst code version: H.26. -->
+
+
+      </ul>
+    </div>
+  </div>
+  <div id="lower-footer">&copy; 2010-2016, Amazon.com, Inc. or its affiliates. All Rights Reserved.</div>
+</div> 
+
+
+    <script type="text/javascript">
+//<![CDATA[
+d754607316.e754607316.AsyncPage.load();
+//]]>
+</script>
+
+    <script type="text/javascript"> 
+    if (window.ue && window.ue.tag) { 
+        window.ue.tag("prelogin", ue.main_scope);
+    }
+    </script>
+    
+  </body>
+</html>

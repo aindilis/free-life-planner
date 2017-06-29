@@ -1,0 +1,65 @@
+
+
+14:38:57 <dmiles> i think the CHR part handles that .. so yes .. a little
+14:39:59 <dmiles> CHR conververts normal prolog variables to attributed vars
+14:43:48 <aindilis> well basically the issue is with fd, because I need to do
+      like go_meet(3,2,1351531515) instead of
+      go_meet(andrewDougherty,room301,1351531515).
+14:44:22 <aindilis> and so if it's room(301) and such.  I convert between
+      nested terms and a relational db and that might be the key, kind of like
+      logic forms
+14:44:43 <aindilis> as I'm not sure you can have fluents like
+      go_meet(3,2,room(6))
+14:44:55 <aindilis> it may have to be go_meet(3,2,12)
+14:45:14 <aindilis> er go_meet(3,room(6),1351531515) go_meet(3,12,1351531515)
+14:45:37 <dmiles> you;d prefer go_meet(andrewDougherty,room(301),1351531515).
+      and not want i make number proxies you meant?
+14:45:46 <aindilis> yes
+14:45:55 <aindilis> I want a convert_term_to_fluents function
+14:45:58 <aindilis> and vice versa
+14:46:08 <aindilis> with assert(*mapping*) for 
+14:46:10 <aindilis> .
+14:46:25 <aindilis> i.e. mapping(andrewDougherty,3).
+14:46:27 <dmiles> yeah.. i see .. hrrm i could code something like that pretty
+      easy 
+14:46:36 <aindilis> okay well I may do it as an exercise
+14:46:46 <dmiles> yeah its easy enough you dhould
+14:46:48 <aindilis> I'm not sure how it would handle
+      go_meet(3,room(X),1351531515).
+14:47:03 <aindilis> ideas? or am I missing something
+14:47:07 <dmiles> you mean becqsue4 you dont know if 3 was already a fd
+      number?
+14:47:19 <aindilis> no cause X is a var and thus isn't ground
+14:47:40 <aindilis> oh nm
+14:47:42 <dmiles> oh .. well in this case you want to leave it as a variabler
+      .. but yes you have to convert bavck
+14:47:45 <aindilis> it would get converted to a fluents
+14:48:07 <dmiles> yeah
+14:48:21 <dmiles> and then you might have to make up a reverse interpretation
+      for yourself
+14:48:31 <dmiles> so if it cam back with  room(3434)
+14:48:34 <aindilis> so at some point there would be a:
+      and(p1(1,3,12),p2(3,15,X),p3(1,3)) or something
+14:48:44 <aindilis> s/p/f/
+14:48:50 <dmiles> you'd heopfully already know what room(3434) was
+14:48:54 <aindilis> k
+14:49:04 <dmiles> that it meant room(6)
+14:49:09 <aindilis> ah yeah
+14:49:15 <aindilis> thanks Doug!
+14:49:22 <aindilis> hey I got julian integrated with FLUX
+14:49:26 <aindilis> poorly but it works
+14:49:44 <aindilis> also the life planner is coming along
+14:49:52 <dmiles> pretty neat
+14:50:01 <aindilis> I'm working on doing everything as a Z0 =
+      [fluent1(,,),fluent2(,), etc].
+14:50:11 <aindilis> hey I have two more questions for you
+14:50:33 <aindilis> srry can't find them
+14:50:36 <aindilis> ty!
+14:50:48 <dmiles> i'll be here
+14:50:51 <aindilis> k :)
+14:50:58 <aindilis> have a great day!
+14:51:01 <aindilis> bbiab
+14:51:52 <dmiles> kk
+18:50:52 *** dmiles (~dmiles@c-73-164-203-95.hsd1.wa.comcast.net) has quit:
+      Ping timeout: 260 seconds
+dmiles> 

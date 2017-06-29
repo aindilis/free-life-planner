@@ -1,0 +1,35 @@
+Content-Type: text/enriched
+Text-Width: 70
+
+<x-color><param>green</param>16:06:00 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>dmiles</x-color><x-color><param>brown</param>: here is an example of disjunctive head:
+      </x-color><x-color><param>brown</param>http://frdcsa.org/~andrewdo/projects/dmiles-example.txt</x-color>
+<x-color><param>green</param>16:07:51 </x-color><x-color><param>blue</param>*** joneshf-laptop (~joneshf@c-73-220-86-28.hsd1.ca.comcast.net) has
+      quit: Ping timeout: 246 seconds</x-color>
+<x-color><param>green</param>16:10:00 </x-color><x-color><param>blue</param>*** </x-color><x-color><param>blue</param>JuanDaugherty</x-color><x-color><param>blue</param> (~juan@cpe-108-183-102-223.buffalo.res.rr.com) has
+      joined channel ##prolog</x-color>
+<x-color><param>green</param>16:15:07 </x-color><<<x-color><param>DarkTurquoise</param>dmiles</x-color>> <x-color><param>Orchid</param>aindilis:</x-color> so system/1 ,,  yes that is acceptable way to do
+      it
+<x-color><param>green</param>16:15:39 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>is there an easier, for things where you have a larger
+      body</x-color>
+<x-color><param>green</param>16:16:16 </x-color><<dmiles> though of course you can write it as:  system(X):-
+      related(X,_); related(_,X).
+<x-color><param>green</param>16:16:51 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>is there anything like (system(X);system(Y)) :-
+      related(X,Y).</x-color>
+<x-color><param>green</param>16:16:58 </x-color><<dmiles> once i get to about 4 ;s i tend to break it into multple
+      clauses
+<x-color><param>green</param>16:17:39 </x-color><<dmiles> oh cute i see..  that was equiv to   system(X):-
+      related(X,_); related(_,X).
+<x-color><param>green</param>16:17:55 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>yeah but I don't think that works</x-color>
+<x-color><param>green</param>16:17:58 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>mine</x-color>
+<x-color><param>green</param>16:18:15 </x-color><<dmiles> noaw i did add that to loigcmoo thiugh ;P
+<x-color><param>green</param>16:18:22 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>:)!!</x-color>
+<x-color><param>green</param>16:18:25 </x-color><<dmiles> nope i did add that to loigcmoo though ;P
+<x-color><param>green</param>16:18:47 </x-color><<dmiles> isEach(system(X),system(Y)) :- related(X,Y).
+<x-color><param>green</param>16:18:54 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>awesome</x-color>
+<x-color><param>green</param>16:19:00 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>metaprogramming to implement?</x-color>
+<x-color><param>green</param>16:19:00 </x-color><<dmiles> isEach is a varainble arity macro
+<x-color><param>green</param>16:19:48 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>okay I'll not take up your time thought because I'm aware
+      you are belling the cat, and we'll talk per the date we set.  Thanks
+      then!</x-color>
+<x-color><param>green</param>16:19:55 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>*though</x-color>
+<x-bg-color><param>lightBlue2</param><x-color><param>Black</param>##prolog></x-color></x-bg-color> 

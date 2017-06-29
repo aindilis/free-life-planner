@@ -1,0 +1,245 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Derived From /var/lib/myfrdcsa/codebases/minor/suppositional-reasoner/data-git/rule-languages/gdl/rules/dresden/blobwars/rulesheet.kif
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Roles
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(role user)
+(role environment)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Initial State
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; Need to import state from the WSM
+
+(init (alive user))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Constant Definitions
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Dynamic Components
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; MOVE COUNT
+(<= (next (step ?y))
+    (true (step ?x))
+    (succ ?x ?y))
+
+;;; (if someone goes to work (expect that there's a chance that they
+;;;  might vent))
+(<= (next (exists ?chance (chance ?chance (vent ?person))))
+ (person ?person)
+ (work ?work)
+ (goes-to ?person ?work))
+
+;;; (if I stay up all night (I won't get anything done that day or the
+;;;  next))
+(<= (and
+     (next (not (exists ?thing (getDone ?person ?thing))))
+     (next (next (not (exists ?thing (getDone ?person ?thing))))))
+ (person ?person)
+ (does ?person (stay-up-all-night ?person)))
+
+;;; (if I am tired (I will have difficulty initiating tasks))
+(<= (next (forall ?task (<= (have-difficulty-initiating ?person ?task) (task ?task))))
+ (person ?person)
+ (tired ?person))
+
+;;; (if I have Asperger's Syndrome (I will have difficulty initiating
+;;;  tasks))
+(<= (next (forall ?task (<= (have-difficulty-initiating ?person ?task) (task ?task))))
+ (person ?person)
+ (has ?person aspergers-syndrome))
+
+;;; (There was another rule I thought of but don't remember now)
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Legal Moves
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; (<= (legal redduper (dupe ?fx ?fy ?tx ?ty))
+;;  (true (control redduper))
+;;  (true (cell ?fx ?fy r))
+;;  (true (cell ?tx ?ty o))
+;;  (in1range ?fx ?tx)
+;;  (in1range ?fy ?ty)
+;;  (or (distinct ?fx ?tx) (distinct ?fy ?ty)))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Terminal States
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; (<= open
+;;    (true (a b)))
+
+(<= terminal
+ (true (not (alive user))))
+
+;;; Try to code for self-sacrifice, have a model for a cause, and the
+;;; causes death should be the terminal condition, not the user.
+;;; think things like "As long as doubt remains the cause of Irish
+;;; freedom is safe"
+(<= terminal
+ (true (not (doubt-remains user))))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Goals
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; Try to find notions from the literature that describe victory
+;;; conditions for various situations, especially, life (like
+;;; everyone's dreams coming true), or conflict scenarios (32 counties
+;;; reunited)
+(<= (goal user 100)
+ (true (winning user ?count)))
+
+(<= (goal environment 100)
+ (true (winning environment ?count)))
+
+(<= (goal user 100)
+ (true (reunited counties-32)))
+
+(<= (goal user 100)
+ (forall ?person
+  (true (reunited counties-32))))
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(<= (addemup ?x n0 ?x)
+	(succ ?x ?tx))
+(<= (addemup ?x n1 ?z)
+	(succ ?x ?z))
+(<= (addemup ?x ?y ?z)
+	(succ ?yp ?y)
+	(addemup ?x ?yp ?oz)
+	(succ ?oz ?z))
+	
+(<= (subtractem ?x n0 ?x)
+	(succ ?x ?tx))
+(<= (subtractem ?x n1 ?z)
+	(succ ?z ?x))
+(<= (subtractem ?x ?y ?z)
+	(succ ?yp ?y)
+	(subtractem ?x ?yp ?oz)
+	(succ ?z ?oz))	
+
+(<= (greater ?a ?b)
+    (succ ?b ?a))
+(<= (greater ?a ?b)
+    (distinct ?a ?b)
+    (succ ?c ?a)
+    (greater ?c ?b))
+
+; MOVE COUNT SUCCESSOR
+(succ n0 n1)
+(succ n1 n2)
+(succ n2 n3)
+(succ n3 n4)
+(succ n4 n5)
+(succ n5 n6)
+(succ n6 n7)
+(succ n7 n8)
+(succ n8 n9)
+(succ n9 n10)
+(succ n10 n11)
+(succ n11 n12)
+(succ n12 n13)
+(succ n13 n14)
+(succ n14 n15)
+(succ n15 n16)
+(succ n16 n17)
+(succ n17 n18)
+(succ n18 n19)
+(succ n19 n20)
+(succ n20 n21)
+(succ n21 n22)
+(succ n22 n23)
+(succ n23 n24)
+(succ n24 n25)
+(succ n25 n26)
+(succ n26 n27)
+(succ n27 n28)
+(succ n28 n29)
+(succ n29 n30)
+(succ n30 n31)
+(succ n31 n32)
+(succ n32 n33)
+(succ n33 n34)
+(succ n34 n35)
+(succ n35 n36)
+(succ n36 n37)
+(succ n37 n38)
+(succ n38 n39)
+(succ n39 n40)
+(succ n40 n41)
+(succ n41 n42)
+(succ n42 n43)
+(succ n43 n44)
+(succ n44 n45)
+(succ n45 n46)
+(succ n46 n47)
+(succ n47 n48)
+(succ n48 n49)
+(succ n49 n50)
+(succ n50 n51)
+(succ n51 n52)
+(succ n52 n53)
+(succ n53 n54)
+(succ n54 n55)
+(succ n55 n56)
+(succ n56 n57)
+(succ n57 n58)
+(succ n58 n59)
+(succ n59 n60)
+(succ n60 n61)
+(succ n61 n62)
+(succ n62 n63)
+(succ n63 n64)
+(succ n64 n65)
+(succ n65 n66)
+(succ n66 n67)
+(succ n67 n68)
+(succ n68 n69)
+(succ n69 n70)
+(succ n70 n71)
+(succ n71 n72)
+(succ n72 n73)
+(succ n73 n74)
+(succ n74 n75)
+(succ n75 n76)
+(succ n76 n77)
+(succ n77 n78)
+(succ n78 n79)
+(succ n79 n80)
+(succ n80 n81)
+(succ n81 n82)
+(succ n82 n83)
+(succ n83 n84)
+(succ n84 n85)
+(succ n85 n86)
+(succ n86 n87)
+(succ n87 n88)
+(succ n88 n89)
+(succ n89 n90)
+(succ n90 n91)
+(succ n91 n92)
+(succ n92 n93)
+(succ n93 n94)
+(succ n94 n95)
+(succ n95 n96)
+(succ n96 n97)
+(succ n97 n98)
+(succ n98 n99)
+(succ n99 n100)
+(succ n100 n101)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+

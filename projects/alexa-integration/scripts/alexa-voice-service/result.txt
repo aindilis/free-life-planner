@@ -1,0 +1,5 @@
+https://localhost:9745/authresponse?code=<CODE>&scope=alexa%3Aall
+
+CODE="<CODE>"
+
+{"access_token":"<ACCESSTOKEN>","refresh_token":"<REFRESHTOKEN>","token_type":"bearer","expires_in":3600}

@@ -1,0 +1,39 @@
+Format: 1.8
+Date: Thu, 28 May 2015 21:35:00 +0200
+Source: swi-prolog
+Binary: swi-prolog swi-prolog-nox swi-prolog-x swi-prolog-java swi-prolog-odbc
+Architecture: amd64
+Version: 7.2.0-2
+Distribution: unstable
+Urgency: medium
+Maintainer: Євгеній Мещеряков <eugen@debian.org>
+Changed-By: Євгеній Мещеряков <eugen@debian.org>
+Description:
+ swi-prolog - ISO/Edinburgh-style Prolog interpreter
+ swi-prolog-java - Bidirectional interface between SWI-Prolog and Java
+ swi-prolog-nox - ISO/Edinburgh-style Prolog interpreter (without X support)
+ swi-prolog-odbc - ODBC library for SWI-Prolog
+ swi-prolog-x - User interface library for SWI-Prolog (with X support)
+Changes:
+ swi-prolog (7.2.0-2) unstable; urgency=medium
+ .
+   * Upload to unstable
+   * Set Java target to 1.5
+Checksums-Sha1:
+ 2fd0a3e3a685445fb64cf3358ad44424a45ec449 96084 swi-prolog-java_7.2.0-2_amd64.deb
+ dd30e83eb78b8ac3f03f91f5df7d882c48ae89b3 3052320 swi-prolog-nox_7.2.0-2_amd64.deb
+ a9fa52709765c76b63ca5f1d070fdbd14283e0d6 123998 swi-prolog-odbc_7.2.0-2_amd64.deb
+ 13f984a574af97218277330921a1b2a48d9a9d0b 2002328 swi-prolog-x_7.2.0-2_amd64.deb
+ 6bf87f9904d44f1f58fff0d6245cdd9933c1a3a5 16190 swi-prolog_7.2.0-2_amd64.deb
+Checksums-Sha256:
+ 4fcdbb5b789f9c4f2d939f84a838abea089ea9d837cd41e87ee0c223a799f1c0 96084 swi-prolog-java_7.2.0-2_amd64.deb
+ 32a36c4e2e93ca3af943bbc3d0e56fdc7e14bcfe1ad9e474dc78ba2b6ea30739 3052320 swi-prolog-nox_7.2.0-2_amd64.deb
+ d934d87d3713502d0c01bc22b5b4d8896685e1a3b498372828a6fb124c2e7b71 123998 swi-prolog-odbc_7.2.0-2_amd64.deb
+ e402a21b588602f87cd0eb6aec62bad1bb2ade0da0f5319ba6724a45f23b131d 2002328 swi-prolog-x_7.2.0-2_amd64.deb
+ 38193668b0bee0a9e0ef1a667fc58fcdb4be661d5492b15253d6247dc2541a59 16190 swi-prolog_7.2.0-2_amd64.deb
+Files:
+ 78a36b52e6371df7196280919f6f140c 96084 interpreters optional swi-prolog-java_7.2.0-2_amd64.deb
+ d42d5e49a1b2e595ed560142a9ece9a7 3052320 interpreters optional swi-prolog-nox_7.2.0-2_amd64.deb
+ fa4544a1855fa8a60ab4cf376d17ac43 123998 interpreters optional swi-prolog-odbc_7.2.0-2_amd64.deb
+ aff566ab9c4ca731021739b61bb2f595 2002328 interpreters optional swi-prolog-x_7.2.0-2_amd64.deb
+ ab6a30a1206bb6bd8db58a3c37dd8868 16190 interpreters optional swi-prolog_7.2.0-2_amd64.deb

@@ -1,0 +1,211 @@
+div.indent {
+	padding-left: 30px;
+}
+
+/*--------IMAGES--------------------------------------
+------------------------------------------------------
+----------------------------------------------------*/
+
+img {
+	border-style: none;
+}
+
+table img {
+	border-style: none;
+}
+
+p img {
+	border-style: none;
+}
+
+/*-----------TABLES--------------------------------------
+---------------------------------------------------------
+--------------------------------------------------------*/
+
+/*-------------ADDED BY Dnadeau------------------------*/
+
+table.center_table{
+	margin:0 auto;
+}
+
+table.grey_line_between_row{
+	margin:0 auto;
+	border-spacing: 0px;
+	border-collapse: collapse;
+	width:55%;
+}
+table.grey_line_between_row td{
+	border-bottom:2px solid #F0EDF4;
+	padding:1px 0px 1px 10px;
+}
+table.grey_line_between_row th{
+	background-color:#F0EDF4;
+	font-weight:900;
+	border-bottom:3px double #421C69;
+	padding:3px 0px 3px 10px;
+	
+}
+table.grey_line_between_row p{
+	margin:0;
+}
+ 
+/*--------BULLET LISTS--------------------------------
+------------------------------------------------------
+----------------------------------------------------*/
+
+ul.bullet-space li ,ol.bullet-space li{
+padding-bottom:8px;
+}
+ul.no-margin-left li ,ol.no-margin-left li{
+margin-left:-15px;
+}
+
+ol.lower-alpha{
+	list-style:lower-alpha;
+}
+ol.lower-roman{
+	list-style:lower-roman;
+}
+ol.upper-alpha{
+	list-style:upper-alpha;
+}
+ol.upper-roman{
+	list-style:upper-roman;
+}
+
+/*--------HIGHLIGHT BOXES-----------------------------
+------------------------------------------------------
+----------------------------------------------------*/
+
+div.highlight_sb{
+	background-color:#EBEBEB;
+	border:1px solid #421C69;
+	margin:10px auto;
+	padding:5px;
+	width:265px;
+	text-align:center;
+}
+
+div.highlight{
+	background-color:#EBEBEB;
+	border:2px dashed #33CC33;
+	padding:4px;
+	margin-top:15px;
+}
+
+div.highlight a:link {
+	color:#505050;
+	text-decoration:underline;
+}
+
+div.highlight a:visited, a:active {
+	color:#505050;
+	text-decoration:underline;
+}
+
+div.highlight a:hover {
+	color:#ffffff;
+	text-decoration:none;
+	background-color:#33cc33;
+}
+
+div.highlight_ys{
+	background-color:#FFFF00;
+	border:2px solid #000000;
+	color:#000000;
+	padding:2px 5px 2px 6px;
+	margin:10px 0px 0px 0px;
+}
+
+div.highlight_ys p {
+	text-align:center;
+}
+
+div.highlight_ys a:link {
+	color:#505050;
+	text-decoration:underline;
+}
+
+div.highlight_ys a:visited, a:active {
+	color:#505050;
+	text-decoration:underline;
+}
+
+div.highlight_ys a:hover {
+	color:#ffffff;
+	text-decoration:none;
+	background-color:#33cc33;
+}
+
+span.highlight_tt {
+	background-color:#EBEBEB;
+	border:1px dashed #33CC33;
+	font-size:1.2em;
+	font-weight:bold;
+	padding:4px;
+}
+
+span.highlight_yellow {
+	background-color:#FF0;
+}
+
+
+p.highlight_tt a:link {
+	color:#505050;
+	text-decoration:underline;
+}
+
+p.highlight_tt a:visited, a:active {
+	color:#505050;
+	text-decoration:underline;
+}
+
+p.highlight_tt a:hover {
+	color:#ffffff;
+	text-decoration:none;
+	background-color:#33cc33;
+}
+div.dashed_grey_box {
+	border:1px dashed #000;
+	background-color:#EBEBEB;
+	margin:0 auto;
+	width:90%;
+	padding:3px 10px 3px 10px;
+	margin-bottom:10px;
+	margin-top:10px;
+}
+
+/*--------GENERAL CSS---------------------------------
+------------------------------------------------------
+----------------------------------------------------*/
+
+div.indent {
+	padding-left: 30px;
+}
+
+p.clearAll{
+	clear:both;
+}
+
+p.red{
+	color:#CC0000;
+}
+p.white {
+	color:#fff;
+}
+p.white a{
+	color:#fff;
+}
+span.red{
+	color:#CC0000;
+}
+
+p.purple{
+	color:#421C69;
+	font-weight:bold;
+}
+
+span.purple{
+	color:#421C69;
+	font-weight:bold;
+}

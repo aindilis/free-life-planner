@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html><head>
+<title>SWI-Prolog -- process_create/3</title>
+
+<link rel="stylesheet" type="text/css" href="SWI-Prolog%20--%20process_create_3_files/footer.css">
+<link rel="stylesheet" type="text/css" href="SWI-Prolog%20--%20process_create_3_files/plweb.css">
+<link rel="stylesheet" type="text/css" href="SWI-Prolog%20--%20process_create_3_files/post.css">
+<link rel="stylesheet" type="text/css" href="SWI-Prolog%20--%20process_create_3_files/annotation.css">
+<link rel="stylesheet" type="text/css" href="SWI-Prolog%20--%20process_create_3_files/swipl.css">
+<link rel="stylesheet" type="text/css" href="SWI-Prolog%20--%20process_create_3_files/tags.css">
+<script type="text/javascript" src="SWI-Prolog%20--%20process_create_3_files/jquery-1.js">
+
+</script>
+<script type="text/javascript" src="SWI-Prolog%20--%20process_create_3_files/pldoc.js">
+
+</script>
+<script type="text/javascript" src="SWI-Prolog%20--%20process_create_3_files/jquery.js">
+
+</script>
+<script type="text/javascript" src="SWI-Prolog%20--%20process_create_3_files/jquery-ui.js">
+
+</script>
+<script type="text/javascript" src="SWI-Prolog%20--%20process_create_3_files/menu.js">
+
+</script>
+<link rel="stylesheet" type="text/css" href="SWI-Prolog%20--%20process_create_3_files/jquery-ui.css">
+<script type="text/javascript" src="SWI-Prolog%20--%20process_create_3_files/tag-it-min-2.js">
+
+</script>
+<link rel="stylesheet" type="text/css" href="SWI-Prolog%20--%20process_create_3_files/jquery.css">
+<link rel="stylesheet" type="text/css" href="SWI-Prolog%20--%20process_create_3_files/tagit.css">
+<link rel="stylesheet" type="text/css" href="SWI-Prolog%20--%20process_create_3_files/style.css">
+<link rel="stylesheet" type="text/css" href="SWI-Prolog%20--%20process_create_3_files/style_002.css">
+<script type="text/javascript" src="SWI-Prolog%20--%20process_create_3_files/set.js">
+
+</script>
+<link rel="stylesheet" type="text/css" href="SWI-Prolog%20--%20process_create_3_files/pldoc.css">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<link rel="shortcut icon" href="http://www.swi-prolog.org/icons/favicon.ico">
+<link rel="apple-touch-icon" href="http://www.swi-prolog.org/apple-touch-icon.png">
+
+</head>
+<body>
+<div class="outer-container">
+<div id="upper-header">
+<div id="upper-header-contents"><span id="dyknow-container">Did you know ... 
+<script type="text/javascript">
+
+		   $(function() {
+		     $.ajax({ url: "/dyk",
+			      success: function(data) {
+			        $("#"+"dyknow-container").html(data);
+			      }
+		            });
+		   });
+		  
+</script>
+</span><span id="search-container"><span class="lbl">Search Documentation:</span>
+
+<form action="/search" id="search-form">
+<input name="for" id="for"><input id="submit-for" value="Search" type="submit">
+<script type="text/javascript">
+
+    $(function() {
+        $("#"+"for").autocomplete({
+        minLength: 1,
+        delay: 0.3,
+        source: "/autocomplete/ac_predicate",
+        focus: function(event,ui) {
+          $("#"+"for").val(ui.item.label);
+          return false;
+        },
+        select: function(event,ui) {
+          $("#"+"for").val(ui.item.label);
+          window.location.href = ui.item.href;
+          return false;
+        }
+        })
+        .data("ui-autocomplete")._renderItem = function(ul,item) {
+        var label = String(item.label).replace(
+            new RegExp(this.term),
+            "<span class=\"acmatch\">$&</span>");
+        var tag = item.tag ? " <i>["+item.tag+"]</i>" : "";
+        return $("<li>")
+          .append("<a class=\""+item.class+"\">"+label+tag+"</a>")
+          .appendTo(ul)
+        };
+        });
+
+</script>
+</form>
+
+</span></div>
+</div>
+<div id="header-line-area"><a href="http://www.swi-prolog.org/"><img class="owl" src="SWI-Prolog%20--%20process_create_3_files/swipl.png" alt="SWI-Prolog owl logo" title="SWI-Prolog owl logo"></a><span class="primary-header">Predicate process_create/3</span></div>
+
+<div id="menubar">
+<div class="menubar fixed-width">
+<ul class="menubar-container">
+<li><a href="http://www.swi-prolog.org/">Home</a></li>
+<li>DOWNLOAD
+<ul>
+<li><a href="http://www.swi-prolog.org/Download.html">SWI-Prolog</a></li>
+<li><a href="http://www.swi-prolog.org/build/">Sources/building</a></li>
+<li><a href="http://www.swi-prolog.org/pack/list">Add-ons</a></li>
+<li><a href="https://github.com/SWI-Prolog">Browse GIT</a><img class="ext-link" src="SWI-Prolog%20--%20process_create_3_files/ext-link.png" alt="External"></li>
+</ul>
+</li>
+<li>DOCUMENTATION
+<ul>
+<li><a href="http://www.swi-prolog.org/pldoc/refman/">Manual</a></li>
+<li><a href="http://www.swi-prolog.org/pldoc/package/">Packages</a></li>
+<li><a href="http://www.swi-prolog.org/FAQ/">FAQ</a></li>
+<li><a href="http://www.swi-prolog.org/pldoc/man?section=cmdline">Command line</a></li>
+<li><a href="http://www.swi-prolog.org/pldoc/package/pldoc.html">PlDoc</a></li>
+<li>Bluffers<span class="arrow">▶</span>
+<ul>
+<li><a href="http://www.swi-prolog.org/pldoc/man?section=syntax">Prolog syntax</a></li>
+<li><a href="http://www.swi-prolog.org/pldoc/man?section=emacsbluff">PceEmacs</a></li>
+<li><a href="http://www.swi-prolog.org/pldoc/man?section=htmlwrite">HTML generation</a></li>
+</ul>
+</li>
+<li><a href="http://www.swi-prolog.org/license.html">License</a></li>
+<li><a href="http://www.swi-prolog.org/Publications.html">Publications</a></li>
+</ul>
+</li>
+<li>TUTORIALS
+<ul>
+<li>Beginner<span class="arrow">▶</span>
+<ul>
+<li><a href="http://www.swi-prolog.org/pldoc/man?section=quickstart">Getting started</a></li>
+<li><a href="http://michael.richter.name/tutorials/swiplmod">Modules</a><img class="ext-link" src="SWI-Prolog%20--%20process_create_3_files/ext-link.png" alt="External"></li>
+<li><a href="http://www.swi-prolog.org/pldoc/man?section=debugoverview">Debugger</a></li>
+<li><a href="http://www.swi-prolog.org/IDE.html">Development tools</a></li>
+<li><a href="http://lpn.swi-prolog.org/">Learn Prolog Now!</a><img class="ext-link" src="SWI-Prolog%20--%20process_create_3_files/ext-link.png" alt="External"></li>
+</ul>
+</li>
+<li>Intermediate<span class="arrow">▶</span>
+<ul>
+<li><a href="http://www.swi-prolog.org/howto/http/">Web service</a></li>
+<li><a href="http://www.pathwayslms.com/swipltuts/html/index.html">Web applications</a><img class="ext-link" src="SWI-Prolog%20--%20process_create_3_files/ext-link.png" alt="External"></li>
+<li><a href="http://www.pathwayslms.com/swipltuts/dcg/">DCGs</a><img class="ext-link" src="SWI-Prolog%20--%20process_create_3_files/ext-link.png" alt="External"></li>
+<li><a href="http://www.pathwayslms.com/swipltuts/clpfd/clpfd.html">clp(fd)</a><img class="ext-link" src="SWI-Prolog%20--%20process_create_3_files/ext-link.png" alt="External"></li>
+<li><a href="http://www.swi-prolog.org/swipltuts/pldoc/index.html">PlDoc</a></li>
+<li><a href="http://www.swi-prolog.org/download/xpce/doc/coursenotes/coursenotes.pdf">XPCE</a></li>
+<li><a href="http://www.swi-prolog.org/Graphics.html">GUI options</a></li>
+</ul>
+</li>
+<li>Advanced<span class="arrow">▶</span>
+<ul>
+<li><a href="http://www.swi-prolog.org/howto/UseRdfMeta.html">RDF namespaces</a></li>
+<li><a href="http://www.swi-prolog.org/build/guidelines.txt">Linux packages</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>COMMUNITY
+<ul>
+<li><a href="http://webchat.freenode.net/?channels=##prolog">IRC</a><img class="ext-link" src="SWI-Prolog%20--%20process_create_3_files/ext-link.png" alt="External"></li>
+<li><a href="http://www.swi-prolog.org/forum">Forum</a></li>
+<li><a href="http://www.swi-prolog.org/news/archive">News</a></li>
+<li><a href="http://www.swi-prolog.org/Mailinglist.txt">Mail list</a></li>
+<li><a href="http://www.swi-prolog.org/bug.html">Report a bug</a></li>
+<li><a href="http://www.swi-prolog.org/howto/SubmitPatch.html">Submit a patch</a></li>
+<li><a href="http://www.swi-prolog.org/howto/Pack.html">Submit an add-on</a></li>
+<li><a href="http://www.swi-prolog.org/Roadmap.html">Roadmap</a></li>
+<li><a href="http://www.swi-prolog.org/Links.html">External links</a></li>
+<li><a href="http://www.swi-prolog.org/Contributors.html">Contributors</a></li>
+<li><a href="http://www.swi-prolog.org/loot.html">SWI-Prolog items</a></li>
+</ul>
+</li>
+<li>USERS
+<ul>
+<li><a href="http://www.swi-prolog.org/web/index.html">Semantic web</a></li>
+<li><a href="http://www.swi-prolog.org/students/index.html">Students</a></li>
+<li><a href="http://www.swi-prolog.org/research/index.html">Researchers</a></li>
+<li><a href="http://www.swi-prolog.org/commercial/index.html">Commercial users</a></li>
+<li><a href="http://www.swi-prolog.org/dogfood.html">Dog food</a></li>
+<li><a href="http://www.swi-prolog.org/pldoc/pldoc/man?section=swiorother">Is SWIPL right for me?</a></li>
+</ul>
+</li>
+<li>WIKI
+<ul>
+<li><a href="http://www.swi-prolog.org/openid/login?openid.return_to=/pldoc/man?predicate%3Dprocess_create/3">Login</a></li>
+<li><a href="http://www.swi-prolog.org/wiki/changes">View changes</a></li>
+<li><a href="http://www.swi-prolog.org/wiki/sandbox">Sandbox</a></li>
+<li><a href="http://www.swi-prolog.org/wiki/">Wiki help</a></li>
+<li><a href="http://www.swi-prolog.org/list-tags">All tags</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="breadcrumb"></div>
+<div class="inner-contents pldoc">
+<div id="contents" class="contents pldoc">
+<div class="navtree">
+<div class="navwindow">
+<ul class="nav">
+<li class="nav"><a href="http://www.swi-prolog.org/pldoc/doc_for?object=root">Documentation</a>
+<ul class="nav">
+<li class="obj nav"><a href="http://www.swi-prolog.org/pldoc/doc_for?object=manual">Reference manual</a></li>
+<li class="nav"><a href="http://www.swi-prolog.org/pldoc/doc_for?object=packages">Packages</a>
+<ul class="nav">
+<li class="nav"><a href="http://www.swi-prolog.org/pldoc/doc_for?object=section%28%27packages/clib.html%27%29">SWI-Prolog C-library</a>
+<ul class="nav">
+<li class="nav"><a href="http://www.swi-prolog.org/pldoc/man?section=process">library(process): Create processes and redirect I/O</a>
+<ul class="nav">
+<li class="obj nav current"><a href="http://www.swi-prolog.org/pldoc/doc_for?object=process_create/3">process_create/3</a></li>
+<li class="obj nav"><a href="http://www.swi-prolog.org/pldoc/doc_for?object=process_id/1">process_id/1</a></li>
+<li class="obj nav"><a href="http://www.swi-prolog.org/pldoc/doc_for?object=process_id/2">process_id/2</a></li>
+<li class="obj nav"><a href="http://www.swi-prolog.org/pldoc/doc_for?object=is_process/1">is_process/1</a></li>
+<li class="obj nav"><a href="http://www.swi-prolog.org/pldoc/doc_for?object=process_release/1">process_release/1</a></li>
+<li class="obj nav"><a href="http://www.swi-prolog.org/pldoc/doc_for?object=process_wait/2">process_wait/2</a></li>
+<li class="obj nav"><a href="http://www.swi-prolog.org/pldoc/doc_for?object=process_kill/1">process_kill/1</a></li>
+<li class="obj nav"><a href="http://www.swi-prolog.org/pldoc/doc_for?object=process_group_kill/1">process_group_kill/1</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="navcontent">
+<dt>
+<div class="synopsis"><span class="synopsis-hdr">Availability:</span><code>:- use_module(<a href="http://www.swi-prolog.org/pldoc/man?section=process">library(process)</a>).</code><span class="autoload">(can be autoloaded)</span></div>
+</dt>
+<dt class="pubdef"><span style="float:right;margin-left:5px;"><a href="http://www.swi-prolog.org/pldoc/doc/home/swipl/lib/swipl/library/process.pl?show=src#process_create/3"><img class="action" alt="Source" title="Show source" src="SWI-Prolog%20--%20process_create_3_files/source.png"></a></span><span class="pred-tag">[det]</span><a id="process_create/3"><strong>process_create</strong>(<var>+Exe, 
++Args:list, +Options</var>)</a></dt><dd class="defbody">Create a new process running the file <var>Exe</var> and using arguments 
+from the given list. <var>Exe</var> is a file specification as handed to
+<a href="http://www.swi-prolog.org/pldoc/man?predicate=absolute_file_name/3">absolute_file_name/3</a>. Typically one use 
+the <code>path</code> file alias to specify an executable file on the 
+current PATH. <var>Args</var> is a list of arguments that are handed to 
+the new process. On Unix systems, each element in the list becomes a 
+seperate argument in the new process. In Windows, the arguments are 
+simply concatenated to form the commandline. Each argument itself is 
+either a primitive or a list of primitives. A primitive is either atomic 
+or a term <code>file(Spec)</code>. Using <code>file(Spec)</code>, the 
+system inserts a filename using the OS filename conventions which is 
+properly quoted if needed.
+
+
+
+<p>
+<var>Options</var>:
+</p>
+
+<dl class="latex">
+<dt><strong>stdin</strong>(<var>Spec</var>)</dt>
+<dt><strong>stdout</strong>(<var>Spec</var>)</dt>
+<dt><strong>stderr</strong>(<var>Spec</var>)</dt><dd class="defbody">Bind the standard streams of the new process. <var>Spec</var> is one of 
+the terms below. If <code>pipe(Pipe)</code> is used, the Prolog stream 
+is a stream in text-mode using the encoding of the default locale. The 
+encoding can be changed using <a href="http://www.swi-prolog.org/pldoc/man?predicate=set_stream/2">set_stream/2</a>. 
+The options <code>stdout</code> and <code>stderr</code> may use the same 
+stream, in which case both output streams are connected to the same 
+Prolog stream.
+
+
+
+<dl class="latex">
+<dt><strong>std</strong></dt><dd class="defbody">Just share with the Prolog I/O streams</dd>
+<dt><strong>null</strong></dt><dd class="defbody">Bind to a <i>null</i> stream. Reading from such a stream returns 
+end-of-file, writing produces no output</dd>
+<dt><strong>pipe</strong>(<var>-Stream</var>)</dt><dd class="defbody">Attach input and/or output to a Prolog stream.</dd>
+</dl>
+
+
+</dd>
+<dt><strong>cwd</strong>(<var>+Directory</var>)</dt><dd class="defbody">Run the new process in <var>Directory</var>. <var>Directory</var> can be 
+a compound specification, which is converted using
+<a href="http://www.swi-prolog.org/pldoc/man?predicate=absolute_file_name/3">absolute_file_name/3</a>.</dd>
+<dt><strong>env</strong>(<var>+List</var>)</dt><dd class="defbody">Specify the environment for the new process. <var>List</var> is a list 
+of Name=Value terms. Note that the current implementation does not pass 
+any environment variables. If unspecified, the environment is inherited 
+from the Prolog process.</dd>
+<dt><strong>process</strong>(<var>-PID</var>)</dt><dd class="defbody">Unify <var>PID</var> with the process id of the created process.</dd>
+<dt><strong>detached</strong>(<var>+Bool</var>)</dt><dd class="defbody">In Unix: If <code>true</code>, detach the process from the terminal 
+Currently mapped to <code>setsid()</code>; Also creates a new process 
+group for the child In Windows: If <code>true</code>, detach the process 
+from the current job via the CREATE_BREAKAWAY_FROM_JOB flag. In Vista 
+and beyond, processes launched from the shell directly have the 
+'compatibility assistant' attached to them automatically unless they 
+have a UAC manifest embedded in them. This means that you will get a 
+permission denied error if you try and assign the newly-created PID to a 
+job you create yourself.</dd>
+<dt><strong>window</strong>(<var>+Bool</var>)</dt><dd class="defbody">If <code>true</code>, create a window for the process (Windows only)</dd>
+<dt><strong>priority</strong>(<var>+Priority</var>)</dt><dd class="defbody">In Unix: specifies the process priority for the newly created process. <var>Priority</var> 
+must be an integer between -20 and 19. Positive values are nicer to 
+others, and negative values are less so. The default is zero. Users are 
+free to lower their own priority. Only the super-user may <i>raise</i> 
+it to less-than zero.</dd>
+</dl>
+
+
+
+
+
+<p>
+If the user specifies the <code>process(-PID)</code> option, he <b>must</b> 
+call
+<a href="http://www.swi-prolog.org/pldoc/man?predicate=process_wait/2">process_wait/2</a> to reclaim the 
+process. Without this option, the system will wait for completion of the 
+process after the last pipe stream is closed.
+</p>
+
+<p>
+If the process is not waited for, it must succeed with status 0. If 
+not, an process_error is raised.
+</p>
+
+<p>
+<b>Windows notes</b>
+</p>
+
+<p>
+On Windows this call is an interface to the CreateProcess() API. The 
+commandline consists of the basename of <var>Exe</var> and the arguments 
+formed from <var>Args</var>. Arguments are separated by a single space. 
+If all characters satisfy <code>iswalnum()</code> it is unquoted. If the 
+argument contains a double-quote it is quoted using single quotes. If 
+both single and double quotes appear a domain_error is raised, otherwise 
+double-quote are used.
+</p>
+
+<p>
+The CreateProcess() API has many options. Currently only the
+<code>CREATE_NO_WINDOW</code> options is supported through the
+<code>window(+Bool)</code> option. If omitted, the default is to use 
+this option if the application has no console. Future versions are 
+likely to support more window specific options and replace
+<a href="http://www.swi-prolog.org/pldoc/man?predicate=win_exec/2">win_exec/2</a>.
+</p>
+
+<p>
+<b>Examples</b>
+</p>
+
+<p>
+First, a very simple example that behaves the same as
+<code>shell('ls -l')</code>, except for error handling:
+</p>
+
+<pre class="code">?- process_create(path(ls), ['-l'], []).</pre>
+
+
+
+
+
+<p>
+The following example uses grep to find all matching lines in a file.
+</p>
+
+<pre class="code">grep(File, Pattern, Lines) :-
+        process_create(path(grep), [ Pattern, file(File) ],
+                       [ stdout(pipe(Out))
+                       ]),
+        read_lines(Out, Lines).
+
+read_lines(Out, Lines) :-
+        read_line_to_codes(Out, Line1),
+        read_lines(Line1, Out, Lines).
+
+read_lines(end_of_file, _, []) :- !.
+read_lines(Codes, Out, [Line|Lines]) :-
+        atom_codes(Line, Codes),
+        read_line_to_codes(Out, Line2),
+        read_lines(Line2, Out, Lines).</pre>
+
+
+
+
+
+<dl class="tags">
+<dt class="tag">Errors</dt><dd><code>process_error(Exe, Status)</code> where Status is one of
+<code>exit(Code)</code> or <code>killed(Signal)</code>. Raised if the 
+process does not exit with status 0.</dd>
+</dl>
+
+
+</dd></div>
+</div>
+</div>
+<div id="dialog" style="display:none;"></div>
+<div class="footer newstyle">
+<div class="footer">
+<div id="community-content">
+<div id="tags-component">
+<div id="tags-notes">Tag confusing pages with <b>doc-needs-help</b><span class="separator">|</span>Tags are associated to your profile if you are logged in<span class="separator">|</span><a href="http://www.swi-prolog.org/tag-abuse?obj=d05ef49ecb39372335f37a5f3aecb861bfb6edb7">Report abuse</a></div>
+<div id="tags-label">Tags:</div>
+<div id="tags-bar">
+<ul id="tags">
+<li>doc-needs-help</li>
+</ul>
+</div>
+<div id="tags-warnings"></div>
+</div>
+
+<script type="text/javascript">
+
+		    function tagInfo(text) {
+		      $("#tags-warnings").text(text);
+		      $("#tags-warnings").removeClass("warning");
+		      $("#tags-warnings").addClass("informational");
+		    }
+		    function tagWarning(text) {
+		      $("#tags-warnings").text(text);
+		      $("#tags-warnings").addClass("warning");
+		      $("#tags-warnings").removeClass("informational");
+		    }
+
+		    $(document).ready(function() {
+		      $("#tags").tagit({
+			  autocomplete: { delay: 0.3,
+					  minLength: 1,
+					  source: "/complete-tag"
+					},
+			  onTagClicked: function(event, ui) {
+			    window.location.href = "/show-tag"+"?tag="+
+			      encodeURIComponent(ui.tagLabel);
+			  },
+			  beforeTagAdded: function(event, ui) {
+			    if ( !ui.duringInitialization ) {
+			      var result = false;
+			      tagInfo("Submitting ...");
+			      $.ajax({ dataType: "json",
+				       url: "/add-tag",
+				       data: { tag: ui.tagLabel,
+					       obj: "d05ef49ecb39372335f37a5f3aecb861bfb6edb7"
+					     },
+				       async: false,
+				       success: function(data) {
+					if ( data.status == true ) {
+					  tagInfo("Added: "+ui.tagLabel);
+					  result = true;
+					} else {
+					  tagWarning(data.message);
+					}
+				      }
+				     });
+			      return result;
+			    }
+			  },
+			  beforeTagRemoved: function(event, ui) {
+			    var result = false;
+			    if ( !ui.tagLabel ) {
+			      return false;
+			    }
+			    tagInfo("Submitting ...");
+			    $.ajax({ dataType: "json",
+				     url: "/remove-tag",
+				     data: { tag: ui.tagLabel,
+					     obj: "d05ef49ecb39372335f37a5f3aecb861bfb6edb7"
+					   },
+				     async: false,
+				     success: function(data) {
+					if ( data.status == true ) {
+					  tagInfo("Removed: "+ui.tagLabel);
+					  result = true;
+					} else {
+					  tagWarning(data.message);
+					}
+				      }
+				   });
+			    return result;
+			  },
+			  placeholderText: "Tag predicate process_create/3"
+			});
+		      });
+		  
+</script>
+
+<div class="posts annotation-component"><article class="post annotation" id="2b9a8000-cee2-11e3-8c10-00144fee017c"><header><span class="post-meta"><a class="user" href="http://www.swi-prolog.org/user/view_profile?user=2d662cba-d116-11e2-9898-00144fee017c">Wouter Beek</a> said (<span class="date" title="1398695654.072355">2014-04-28T16:34:14</span>):</span><span class="post-links-and-votes"><a class="post-vote-up" href=""><img alt="1 upvotes" src="SWI-Prolog%20--%20process_create_3_files/vote_up.gif" title="1"></a> <span class="post-vote-amount">1</span> <a class="post-vote-down" href=""><img alt="0 downvotes" src="SWI-Prolog%20--%20process_create_3_files/vote_down.gif" title="0"></a></span></header><section><a href="http://www.swi-prolog.org/user/view_profile?user=2d662cba-d116-11e2-9898-00144fee017c"><img alt="Picture of user Wouter Beek." class="post-avatar" src="SWI-Prolog%20--%20process_create_3_files/3109e3bc44b885b83ca49bc39e591153.png" title="Wouter Beek"></a>
+<div class="read-post">
+
+<p>
+This predicate can use some examples, e.g. [1] will not work, but [2] will.</p>
+
+<pre class="code" ext="">[1] process_create(path(cat), ['*.nt','&gt;&gt;','input.nt'], []).
+[2] process_create(path(sh), ['-c','cat *.nt &gt;&gt; input.nt'], []).</pre>
+
+</div>
+</section></article><article class="post annotation" id="ebdaab4e-e389-11e4-aed3-00163e357fe2"><header><span class="post-meta"><a class="user" href="http://www.swi-prolog.org/user/view_profile?user=4d5d9fb0-ea0e-11e2-9118-00144fee017c">Boris</a> said (<span class="date" title="1429114223.495888">2015-04-15T18:10:23</span>):</span><span class="post-links-and-votes"><a class="post-vote-up" href=""><img alt="0 upvotes" src="SWI-Prolog%20--%20process_create_3_files/vote_up.gif" title="0"></a> <span class="post-vote-amount">0</span> <a class="post-vote-down" href=""><img alt="0 downvotes" src="SWI-Prolog%20--%20process_create_3_files/vote_down.gif" title="0"></a></span></header><section><a href="http://www.swi-prolog.org/user/view_profile?user=4d5d9fb0-ea0e-11e2-9118-00144fee017c"><img alt="Picture of user Boris." class="post-avatar" src="SWI-Prolog%20--%20process_create_3_files/4c3d6389239f89ff029c5f456e73fcae.jpeg" title="Boris"></a>
+<div class="read-post">
+
+<p>
+Another example, capturing output:</p>
+
+<pre class="code" ext="">bash_command(Command, Output) :-
+        process_create(path(bash),
+                ['-c', Command],
+                [stdout(pipe(Out))]),
+        read_string(Out, _, Output),
+        close(Out).</pre>
+
+<p>
+And with this:</p>
+
+<pre class="code" ext="">?- bash_command("echo banana | tr na bo", Output).
+Output = "bobobo\n".</pre>
+
+</div>
+</section></article></div>
+<div class="post-login"><b><a class="signin" href="http://www.swi-prolog.org/openid/login?openid.return_to=/pldoc/man?predicate%3Dprocess_create/3">login</a></b> to add a new annotation post.</div>
+</div>
+<div id="footer">
+<div class="current-user"><a class="signin" href="http://www.swi-prolog.org/openid/login?openid.return_to=/pldoc/man?predicate%3Dprocess_create/3">login</a></div>
+<a id="powered" href="http://www.swi-prolog.org/">Powered by SWI-Prolog 7.3.20</a></div>
+</div>
+<script type="text/javascript">
+
+		   $().ready(function()
+	           { var $navtree = $(".navwindow");
+		     var $navcontent = $(".navcontent");
+		     if ( $navtree.length > 0 && $navcontent.length > 0 )
+		     { var $window = $(window).on("resize", function()
+		       { var ch = $navcontent.height();
+			 var nh = $navtree.height();
+			 if ( nh > 400 && nh > ch + 200 )
+			 { if ( ch < 300 ) ch = 300;
+			   $navtree.height(ch);
+			   $navtree.css('overflow-y', 'scroll');
+
+			   var current = $navtree.find("li.nav.current");
+			   if ( current.position().top > ch-40 )
+			   { $navtree.scrollTop(current.position().top - (ch-40));
+			   }
+			 }
+		       }).trigger("resize")
+		     }
+		   });
+		  
+</script>
+</div>
+<div id="tail-end">&nbsp;</div>
+</div>
+
+
+
+</body></html>

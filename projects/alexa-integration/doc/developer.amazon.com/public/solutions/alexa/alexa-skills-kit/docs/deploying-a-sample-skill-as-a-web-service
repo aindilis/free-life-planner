@@ -1,0 +1,2200 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
+  <head>
+    <meta http-equiv="x-ua-compatible" content="IE=EDGE">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, maximum-width=1">
+    <meta name="keywords" content="amazon, appstore, developer portal"/>
+    
+    <meta name="description" content="Amazon Apps & Services Developer Portal"/>
+
+    <script type="text/javascript">var ue_t0=window.ue_t0||+new Date();</script><script type="text/javascript">(function(e){var c=e;var a=c.ue||{};a.main_scope="mainscopecsm";a.q=[];a.t0=c.ue_t0||+new Date();a.d=g;function g(h){return +new Date()-(h?0:a.t0)}function d(h){return function(){a.q.push({n:h,a:arguments,t:a.d()})}}function b(m,l,h,j,i){var k={m:m,f:l,l:h,c:""+j,err:i,fromOnError:1,args:arguments};c.ueLogError(k);return false}b.skipTrace=1;e.onerror=b;function f(){c.uex("ld")}if(e.addEventListener){e.addEventListener("load",f,false)}else{if(e.attachEvent){e.attachEvent("onload",f)}}a.tag=d("tag");a.log=d("log");a.reset=d("rst");c.ue_csm=c;c.ue=a;c.ueLogError=d("err");c.ues=d("ues");c.uet=d("uet");c.uex=d("uex");c.uet("ue")})(window);(function(e,d){var a=e.ue||{};function c(g){if(!g){return}var f=d.head||d.getElementsByTagName("head")[0]||d.documentElement,h=d.createElement("script");h.async="async";h.src=g;f.insertBefore(h,f.firstChild)}function b(){var k=e.ue_cdn||"z-ecx.images-amazon.com",g=e.ue_cdns||"images-na.ssl-images-amazon.com",j="/images/G/01/csminstrumentation/",h=e.ue_file||"ue-full-11e51f253e8ad9d145f4ed644b40f692._V1_.js",f,i;if(h.indexOf("NSTRUMENTATION_FIL")>=0){return}if("ue_https" in e){f=e.ue_https}else{f=e.location&&e.location.protocol=="https:"?1:0}i=f?"https://":"http://";i+=f?g:k;i+=j;i+=h;c(i)}if(!e.ue_inline){if(a.loadUEFull){a.loadUEFull()}else{b()}}a.uels=c;e.ue=a})(window,document);</script>
+
+    <script type="text/javascript">
+//<![CDATA[
+if (typeof g1916332420 === 'undefined') {
+    g1916332420 = {};
+}
+if (typeof g1916332420.h1916332420 === 'undefined') {
+    g1916332420.h1916332420 = {};
+}
+
+g1916332420.h1916332420.AsyncPage = {
+
+    load : function() {
+        var result,divs , i, length;
+        result = [];
+
+        if (document.getElementsByClassName) {
+            result = document.getElementsByClassName('i1916332420Async');
+        } else {
+            divs = document.getElementsByTagName('div');
+            for (i=0, length=divs.length; i<length; i++) {
+                if (divs[i].className === 'i1916332420Async') {
+                    result.push(divs[i]);
+                }
+            }
+        }
+
+        for (i=0, length=result.length; i< length; i++) {
+            (function(element) {
+                this.sendRequest(element.id, function(xmlHttp) {
+                    var fragment, tmpDiv, parent;
+                    fragment = document.createDocumentFragment();
+                    tmpDiv = document.createElement('div');
+                    tmpDiv.innerHTML = xmlHttp.responseText;
+                    while (tmpDiv.firstChild) {
+                        fragment.appendChild(tmpDiv.firstChild);
+                    }
+                    parent = element.parentNode;
+                    parent.replaceChild(fragment, element);
+                });
+            }).call(this, result[i]);
+        }
+    },
+
+    sendRequest : function(url, callback) {
+        var xmlHttpRequest;
+        try {
+            xmlHttpRequest = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
+            xmlHttpRequest.open("GET", url, true);
+            xmlHttpRequest.onreadystatechange = function () {
+                if (xmlHttpRequest.readyState !== 4) {
+                    return;
+                }
+                if (xmlHttpRequest.status !== 200 && xmlHttpRequest.status !== 304) {
+                    return;
+                }
+                callback(xmlHttpRequest);
+            };
+
+            xmlHttpRequest.send();
+        } catch (e) {
+            if (typeof window.console !== 'undefined') {
+                if (typeof console.error !== 'undefined') {
+                    console.error(e.name + ": " + e.message);
+                } else if (typeof console.log !== 'undefined') {
+                    console.log(e.name + ": " + e.message);
+                }
+            }
+        }
+    }
+};
+//]]>
+</script>
+<meta name="id" content="8157f6b6-ab32-45e9-8ae5-c08944d8f6dd"/>
+<title>
+            Deploying a Sample Custom Skill as a Web Service - Amazon Apps &amp; Services Developer Portal
+        </title>
+<meta name="description" content="Set up the Java Alexa Skills Kit samples on the command line and in AWS Elastic Beanstalk."/>
+<meta name="keywords" content="java,samples,sample code,self-hosting,elastic beanstalk, curl,hello world, session sample, speechlet sample,walkthrough"/>
+
+
+    <link rel="stylesheet" href="https://m.media-amazon.com/images/G/01/AUIClients/MASAriaThemeAssets-cc1c91b11ab782aab8b8270cbcbd45db7345699d._V2_.css" />
+
+    <link href="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal2/res/css/webfonts._V326851759_.css" rel="stylesheet" type="text/css"/>
+    <link id="page_css" rel="stylesheet" href="" type="text/css"/>
+    <link href='https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/taas/jquery/widget/jquery-ui-1.10.3.custom.min.css' rel='stylesheet' type='text/css'/>
+
+    <script type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal2/public/resources/js/jquery-1.10.1.min._V352894325_.js"></script>
+    <script type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/taas/jquery/widget/jquery-ui-1.10.3.custom.min.js"></script>
+    
+    <script type="text/javascript" src="/public/js/jquery_cookie.js"></script>
+    
+    <script type="text/javascript" src="/public/js/mediatest.js"></script>
+    
+    <script type="text/javascript" src="/public/js/scroll_to.js"></script>
+    
+    <script type="text/javascript" src="/public/js/language_switcher.js"></script>
+  </head>
+  <body>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="header">
+  <div style="display:none;" id="/public/_hn:component-rendering%7Cr33_r2_r1/solutions/alexa/alexa-skills-kit/docs/deploying-a-sample-skill-as-a-web-service" class="i1916332420Async"></div>
+  <div id="lower-header">
+    <div id="lower-header-wrapper">
+      <ul id="header-menu">
+        
+        
+        
+        <li class="">
+          <a id="header-home" href="/public">Home</a>
+        </li>
+        
+        
+         
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   
+
+	 
+
+
+
+
+  
+    <li class="active">
+      <a href="/public/solutions/alexa">ALEXA</a>
+    </li>
+  
+  
+
+
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   
+
+	 
+
+
+
+
+  
+  
+    <li>
+      <a href="/public/apis">SERVICES &AMP; APIS</a>
+    </li>
+  
+
+
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   
+
+	 
+
+
+
+
+  
+  
+    <li>
+      <a href="/public/solutions/devices">DEVICES</a>
+    </li>
+  
+
+
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   
+
+	 
+
+
+
+
+  
+  
+    <li>
+      <a href="/public/resources">RESOURCES</a>
+    </li>
+  
+
+
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   
+
+	 
+
+
+
+
+  
+  
+    <li>
+      <a href="/public/community/blog">BLOG</a>
+    </li>
+  
+
+
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   
+
+	 
+
+
+
+
+  
+  
+    <li>
+      <a href="/public/support">SUPPORT</a>
+    </li>
+  
+
+
+        
+      </ul>
+      <div id="search-box">
+        
+        
+        <form id="search-box-form" action="/public/search" method="get" onsubmit="sanitizeRequestParam(document.forms['searchSubmit']['query'], 'Search')">
+          
+          <input id="search-box-input" type="text" name="query" placeholder="Search..." value="" />
+          <input id="search-box-submit" type="image" src="/public/images/icon-search.png" name="image" width="18" height="18">
+        </form>
+        <button id="search-box-toggle-button" style="background-image: url('/public/images/icon-search.png')" onclick="javascript:toggleSearch()"></button>
+        
+		<script type="text/javascript" src="/public/js/searchbox_controller.js"></script>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="/public/js/header_scroller.js"></script>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="directory">
+    <div id="directory-wrapper">
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="/public">Home</a>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <span>&gt;</span>
+    
+      
+        
+      
+      
+    
+    <a href="/public/solutions/alexa">Alexa</a>
+  
+  
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <span>&gt;</span>
+    
+      
+        
+      
+      
+    
+    <a href="/public/solutions/alexa/alexa-skills-kit">Alexa Skills Kit</a>
+  
+  
+    
+  
+
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+</div>
+<div id="outer-wrapper">
+  <div id="inner-wrapper">
+    <div id="left-sidebar">
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<ul id="left-sidebar-list">
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+      
+    
+    
+  
+  
+  
+  
+  
+  	
+    
+  
+  
+    
+    
+      <li>
+        <a href="/public/solutions/alexa">Alexa </a>
+      </li>
+    
+  
+  
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+    
+  
+
+
+  
+    
+    
+  
+  
+
+
+
+  
+  
+  
+    <li class="active">
+      <a href="/public/solutions/alexa/alexa-skills-kit">Alexa Skills Kit</a>
+      
+    </li>
+  
+  
+  
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+    
+  
+
+
+  
+    
+    
+  
+  
+
+
+
+  
+  
+  
+  
+  
+    <li>
+      <a href="/public/solutions/alexa/alexa-voice-service">Alexa Voice Service</a>
+    </li>
+  
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+    
+  
+
+
+  
+    
+    
+  
+  
+
+
+
+  
+  
+  
+  
+  
+    <li>
+      <a href="/public/solutions/alexa/alexa-fund">Alexa Fund</a>
+    </li>
+  
+
+  
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</ul>
+    </div>
+    <div id="content">
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal2/content/sdk/js/shCore._V138392098_.js"></script>
+<script type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal2/content/sdk/js/shBrushPlain._V138254508_.js"></script>
+<script type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal2/content/sdk/js/shBrushJava._V138392099_.js"></script>
+<script type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal2/content/sdk/js/shBrushXml._V138392099_.js"></script>
+<script type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal2/content/sdk/js/shBrushJScript._V307911092_.js"></script>
+<script type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal2/content/sdk/js/shBrushCSharp._V307911161_.js"></script>
+<script type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal2/content/sdk/js/shBrushAS3._V307911115_.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+      SyntaxHighlighter.all();
+    });
+</script>
+
+
+  
+  
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        
+        
+    
+
+
+
+
+
+    
+    
+    <script type="text/javascript" src="/public/js/text_banner_modify.js"></script>
+    <div id="content-body" class="group">
+
+      
+
+      <div class="content-html-container tech-doc">
+      <div id="text-banner" class="tech-doc" style="border-bottom-style:none;">
+        <h2>Deploying a Sample Custom Skill as a Web Service</h2>
+      </div>
+        
+        
+          
+            
+            <a class="anchor" name="Introduction"></a>
+            
+            <h2>Introduction</h2>
+            <link rel="stylesheet" type="text/css" href="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal/highlighter.min._TTH_.css" />
+<link rel="stylesheet" type="text/css" href="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal/hipposidebarpage.min._TTH_.css" />
+<script type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal/includescript.min._TTH_.js"></script>
+<div class="rightMenu"> <span class="inc:https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal/menus/askcustomskillmenu._TTH_.html"> </span></div>
+<script type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal/minitoc.min._TTH_.js"></script>
+<div class="summary"></div>
+<div id="minitoc"></div>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>The Java samples provided with the Alexa Skills Kit can be hosted as <em>web services</em>. This document provides the steps this scenario – both running as sample on the command line, as well as deploying a sample as a web service with <a href="http://aws.amazon.com/elasticbeanstalk/" title="AWS Elastic Beanstalk">AWS Elastic Beanstalk</a>, a service offering by <a href="http://aws.amazon.com/" title="Amazon Web Services">Amazon Web Services</a>.</p>
+
+<p>Note that it is generally faster and easier to deploy and test the samples as <em>AWS Lambda functions</em> on <a href="http://aws.amazon.com/lambda/" title="AWS Lambda">AWS Lambda</a> (a service offering by <a href="http://aws.amazon.com/" title="Amazon Web Services">Amazon Web Services</a>). You can use Lambda with either the Java or Node.js samples. See <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/using-the-alexa-skills-kit-samples">Deploying a Sample Custom Skill to AWS Lambda</a> for detailed steps.</p>
+
+<p>The samples are available in GitHub repositories. For details about getting the samples and the specific samples included, see <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/using-the-alexa-skills-kit-samples">Using the Alexa Skills Kit Samples (Custom Skills)</a>.</p>
+
+<h3 id="system-requirements">System Requirements</h3>
+
+<p>Setting up and running the samples requires the following:</p>
+
+<ul>
+  <li>The Java library (<code class="highlighter-rouge">alexa-skills-kit-x.x.jar</code>), provided in the <code class="highlighter-rouge">repo</code> directory.</li>
+  <li>Java SE Development Kit (JDK) 7 or later. To download the JDK, visit <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">http://www.oracle.com/technetwork/java/javase/downloads/index.html</a>.</li>
+  <li><a href="http://maven.apache.org/index.html" title="Apache Maven Project">Maven</a> for dependency management and building the samples.</li>
+</ul>
+
+<p>Additional requirements depend on how you want to test the samples. See the relevant sections below:</p>
+
+<ul>
+  <li><a href="#h2_build_cmdline">Building and Running Hello World from the Command Line</a></li>
+  <li><a href="#h2_setupEB">Setting up Hello World on Elastic Beanstalk</a></li>
+</ul>
+
+<h2 id="h2_build_cmdline">Building and Running a Sample from the Command Line</h2>
+
+<p>These steps show how to build and run the Hello World sample from the command line on the Linux platform. Doing this lets you send HTTP requests using a command line tool such as <code class="highlighter-rouge">cURL</code>.</p>
+
+<p>The <code class="highlighter-rouge">Launcher</code> class provided in the <code class="highlighter-rouge">src/main/java</code> folder starts a Jetty server that can host a <code class="highlighter-rouge">Speechlet</code> for one of the samples, such as the <code class="highlighter-rouge">HelloWorldSpeechlet</code>. This is a convenient way to run the samples from the command line.</p>
+
+<p>Note that running the sample in this way does not normally make it available through an Internet-accessible endpoint, so you cannot test your code with an actual device in this way. Testing on the command line can still be useful for understanding the requests and responses used by the web service for an Alexa skill. For an example of deploying the sample to the cloud instead, see <a href="#h2_setupEB">Setting up Hello World on Elastic Beanstalk</a>, below.</p>
+
+<p>Running Hello World from the command line requires these tools, in addition to the Java requirements noted earlier:</p>
+
+<ul>
+  <li><a href="https://www.openssl.org/source/" title="Open SSL">OpenSSL</a></li>
+  <li><a href="http://curl.haxx.se/download.html" title="Download cURL">cURL</a></li>
+</ul>
+
+<p>To run a sample from the command line, do the following:</p>
+
+<ol>
+  <li>Download or clone the <a href="https://github.com/amzn/alexa-skills-kit-java">amzn/alexa-skills-kit-java GitHub repository</a>.</li>
+  <li>Create a self-signed certificate, as described in <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/testing-an-alexa-skill">Testing a Custom Skill</a>.</li>
+  <li>Use the private key and certificate to set up a Java KeyStore and include information about the KeyStore in the <code class="highlighter-rouge">pom.xml</code> file for the samples. See <a href="#h3_keystore">Setting Up an SSL/TLS Java KeyStore</a>.</li>
+  <li>Build and run the sample using Maven, then use <code class="highlighter-rouge">cURL</code> to send requests to the sample and note the responses. See <a href="#h3_run_cmdline">Running the Sample from the Command Line</a>.</li>
+</ol>
+
+<p>In these instructions, <em><code class="highlighter-rouge">&lt;alexa-skills-kit-folder&gt;</code></em> is the folder you cloned from the GitHub repository.</p>
+
+<h3 id="h3_keystore">Setting Up an SSL/TLS Java KeyStore</h3>
+
+<p>Follow these steps to create a Java KeyStore and to configure the Hello World sample to build using that KeyStore:</p>
+
+<ol>
+  <li>Create a <em>private key</em> and <em>self-signed certificate</em>. See the detailed instructions in <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/testing-an-alexa-skill">Testing a Custom Skill</a>.</li>
+  <li>
+    <p>Use the following <code class="highlighter-rouge">openssl</code> command to create a PKCS #12 archive file from your private key and certificate.Replace the <code class="highlighter-rouge">private-key.pem</code> and <code class="highlighter-rouge">certificate.pem</code> values shown here with the filenames for your key and certificate. Specify a password for the archive when prompted.</p>
+
+    <div class="language-shell highlighter-rouge"><pre class="highlight"><code>openssl pkcs12 <span class="se">\</span>
+     -keypbe PBE-SHA1-3DES <span class="se">\</span>
+     -certpbe PBE-SHA1-3DES <span class="se">\</span>
+     -inkey private-key.pem <span class="se">\</span>
+     -in certificate.pem -export <span class="se">\</span>
+     -out keystore.pkcs12 <span class="se">\</span>
+</code></pre>
+    </div>
+
+    <p>Indented para…</p>
+  </li>
+  <li>
+    <p>Use the following <code class="highlighter-rouge">keytool</code> command to import the PKCS #12 file into a <em>Java KeyStore</em>, specifying a password for both the destination KeyStore and source PKCS #12 archive:</p>
+
+    <div class="language-shell highlighter-rouge"><pre class="highlight"><code><span class="nv">$JAVA_HOME</span>/bin/keytool <span class="se">\</span>
+     -importkeystore <span class="se">\</span>
+     -destkeystore java-keystore.jks <span class="se">\</span>
+     -srckeystore keystore.pkcs12 <span class="se">\</span>
+     -srcstoretype PKCS12 <span class="se">\</span>
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>Edit the <code class="highlighter-rouge">pom.xml</code> file in <em><code class="highlighter-rouge">&lt;alexa-skills-kit-folder&gt;</code></em><code class="highlighter-rouge">/samples</code> to provide settings for the <code class="highlighter-rouge">javax.net.ssl.keyStore</code> and <code class="highlighter-rouge">javax.net.ssl.keyStorePassword</code> system properties. Set the values to the path to the KeyStore and password created in the previous step.</p>
+
+    <div class="language-xml highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;java</span> <span class="na">classname=</span><span class="s">"Launcher"</span> 
+      <span class="na">classpathref=</span><span class="s">"java.sdk.classpath"</span> <span class="na">fork=</span><span class="s">"true"</span><span class="nt">&gt;</span>         
+    <span class="nt">&lt;sysproperty</span> <span class="na">key=</span><span class="s">"javax.net.ssl.keyStore"</span>
+                 <span class="na">value=</span><span class="s">"/insert/your/path/java-keystore.jks"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;sysproperty</span> <span class="na">key=</span><span class="s">"javax.net.ssl.keyStorePassword"</span> 
+                 <span class="na">value=</span><span class="s">"insert_your_password"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/java&gt;</span>
+</code></pre>
+    </div>
+  </li>
+</ol>
+
+<h3 id="h3_run_cmdline">Running the Sample from the Command Line</h3>
+
+<p>Build and run the sample using Maven (<code class="highlighter-rouge">mvn</code>):</p>
+
+<ol>
+  <li>In a command-line terminal, navigate to <em><code class="highlighter-rouge">&lt;alexa-skills-kit-folder&gt;</code></em><code class="highlighter-rouge">/samples</code>. This folder contains the <code class="highlighter-rouge">pom.xml</code> file you previously edited.</li>
+  <li>Build the samples with the following Maven command:</li>
+</ol>
+
+<p>mvn assembly:assembly -DdescriptorId=jar-with-dependencies package</p>
+
+<ol>
+  <li>Once the samples are successfully built, run the sample with the following Maven command:</li>
+</ol>
+
+<p>mvn exec:java -Dexec.executable=”java” -DdisableRequestSignatureCheck=true</p>
+
+<p>The sample starts a server using the <code class="highlighter-rouge">Launcher</code> class. You can then use the command-line utility <code class="highlighter-rouge">cURL</code> to transmit <code class="highlighter-rouge">HTTPS</code> requests to the sample to test its behavior. Note that the <code class="highlighter-rouge">Maven</code> command to run the samples includes the <code class="highlighter-rouge">disableRequestSignature</code> flag. This is because the <code class="highlighter-rouge">SpeechletServlet</code> included in the Java library only accepts incoming HTTPS requests that are signed by Alexa. The <code class="highlighter-rouge">disableRequestSignature</code> flag temporarily disables this signature verification.</p>
+
+<div class="alert alert-warning" role="alert"><i class="fa fa-warning"></i> <b>Important:</b> Signature verification should never be disabled when handling real user requests.</div>
+
+<p>To send a request using <code class="highlighter-rouge">cURL</code>, open a new terminal window and transmit a request to <code class="highlighter-rouge">https://localhost:8888/hello</code> formatted as JSON. For example (JSON shown on multiple lines for clarity):</p>
+
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code>curl -v -k https://localhost:8888/hello --data-binary  <span class="s1">'{
+  "version": "1.0",
+  "session": {
+    "new": true,
+    "sessionId": "session1234",
+    "application": {
+      "applicationId": "amzn1.echo-sdk-ams.app.1234"
+    },
+    "attributes": {},
+    "user": {
+      "userId": null
+    }
+  },
+  "request": {
+    "type": "LaunchRequest",
+    "requestId": "request5678",
+    "timestamp": "2015-05-13T12:34:56Z"
+  }
+}'</span>
+</code></pre>
+</div>
+
+<p>For details about the JSON syntax for a launch request, see <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/alexa-skills-kit-interface-reference">JSON Interface Reference for Custom Skills</a>.</p>
+
+<p>The Hello World sample generates a simple response to all requests that includes text meant to be spoken back by Alexa and a card displayed in the Alexa App. The body of this response is in JSON format, similar to the following:</p>
+
+<div class="language-json highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.0"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"response"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"outputSpeech"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PlainText"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Welcome to the Alexa Skills Kit, you can say hello"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"card"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Simple"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HelloWorld"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Welcome to the Alexa Skills Kit, you can say hello"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"reprompt"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"outputSpeech"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+ </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PlainText"</span><span class="p">,</span><span class="w">
+ </span><span class="nt">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Welcome to the Alexa Skills Kit, you can say hello"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"shouldEndSession"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nt">"sessionAttributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+
+<h2 id="h2_setupEB">Setting up Hello World on Elastic Beanstalk</h2>
+
+<p>To test a skill with the Service Simulator or an Alexa-enabled device, you need to host the web service for the Alexa skill at an Internet-accessible endpoint. There are many different ways you can accomplish this. One possible method is to host the skill on <a href="http://aws.amazon.com/elasticbeanstalk/" title="AWS Elastic Beanstalk">AWS Elastic Beanstalk</a> (a service offering by <a href="http://aws.amazon.com/" title="Amazon Web Services">Amazon Web Services</a>). These steps walk you through setting up the Hello World sample on Elastic Beanstalk.</p>
+
+<p>Deploying Hello World to AWS Elastic Beanstalk requires the following tools, in addition to the Java requirements noted earlier:</p>
+
+<ul>
+  <li><a href="https://www.openssl.org/source/" title="Open SSL">OpenSSL</a></li>
+  <li><a href="http://aws.amazon.com/" title="Amazon Web Services">An account on Amazon Web Services (AWS)</a></li>
+  <li><a href="https://aws.amazon.com/eclipse/" title="AWS Toolkit for Eclipse">AWS Toolkit for Eclipse</a> (note that this plug-in requires Eclipse Java EE)</li>
+  <li><a href="http://aws.amazon.com/cli/" title="AWS Command Line Interface">AWS Command Line Interface</a></li>
+  <li><a href="http://maven.apache.org/index.html" title="Apache Maven Project">Maven</a> and <a href="https://marketplace.eclipse.org/content/maven-integration-eclipse-luna-and-newer" title="Maven Integration for Eclipse">Maven Integration for Eclipse</a></li>
+</ul>
+
+<p>In these instructions, <em><code class="highlighter-rouge">&lt;alexa-skills-kit-folder&gt;</code></em> is the folder you cloned from the GitHub repository.</p>
+
+<p>To deploy a sample to Elastic Beanstalk, do the following:</p>
+
+<ol>
+  <li>Download or clone the <a href="https://github.com/amzn/alexa-skills-kit-java">amzn/alexa-skills-kit-java GitHub repository</a>.</li>
+  <li>If you do not already have an account on AWS, go to <a href="http://aws.amazon.com/" title="Amazon Web Services">Amazon Web Services</a> and create an account.</li>
+  <li>Install the <a href="https://aws.amazon.com/eclipse/" title="AWS Toolkit for Eclipse">AWS Toolkit for Eclipse</a>.</li>
+  <li>
+    <p>Configure the AWS Toolkit for Eclipse with your account credentials:
+ a. Log in to the <a href="http://aws.amazon.com/" title="Amazon Web Services">AWS Console</a> and navigate to <strong>Identity and Access Management (IAM)</strong>.
+ b. Create a new IAM user and grant the user full access to Elastic Beanstalk. 
+ c. Select the option to generate an access key for the new user. Choose to download these credentials.
+ d. In Eclipse, click on <strong>Window</strong> and then <strong>Preferences</strong>. In the <strong>AWS Toolkit</strong> section, enter your <strong>Access Key ID</strong> and <strong>Secret Access Key</strong>.</p>
+  </li>
+  <li>
+    <p>Run Maven once to add the Alexa Skills Kit Java library (<code class="highlighter-rouge">alexa-skills-kit-x.x.jar</code>) to your local repository:
+ a. In a command line, navigate to <em><code class="highlighter-rouge">&lt;alexa-skills-kit-folder&gt;</code></em><code class="highlighter-rouge">/samples</code>.
+ b. Run the command: <code class="highlighter-rouge">mvn install</code>.</p>
+
+    <p>This copies the compiled <code class="highlighter-rouge">jar</code> file from <em><code class="highlighter-rouge">&lt;alexa-skills-kit-folder&gt;</code></em><code class="highlighter-rouge">/repo</code> into your local Maven repository, so it will be available when you build the sample later.</p>
+  </li>
+  <li>Create a new Maven project using the <code class="highlighter-rouge">maven-archetype-webapp</code> archetype and import the sample code. See <a href="#h3_mavenproj">Creating the Maven Webapp Project and Importing the Code</a>.</li>
+  <li>Add a class that extends <code class="highlighter-rouge">SpeechletServlet</code> to host the <code class="highlighter-rouge">HelloWorldSpeechlet</code> and set up servlet mapping in <code class="highlighter-rouge">web.xml</code>. See <a href="#h3_speechlet_servlet">Adding a SpeechletServlet and Setting up Servlet Mapping</a>.</li>
+  <li>Deploy the project to AWS Elastic Beanstalk. See <a href="#h3_deployEB">Deploying the Sample to Elastic Beanstalk</a>.</li>
+  <li>Configure the new Elastic Beanstalk environment to use HTTPS. See <a href="#h3_ebHTTPS">Configuring the Elastic Beanstalk Environment to Use HTTPS</a>.</li>
+  <li>Register the sample in the <a href="https://developer.amazon.com/edw/home.html#/" title="Developer Portal - Alexa">Developer Portal</a>. See <a href="#h3_register">Registering the Sample in  the Developer Portal</a>.</li>
+  <li>Test the skill with either the Service Simulator on the developer portal, or an Alexa-enabled device registered to your developer portal account. See <a href="#h3_testing">Testing the Sample</a>.</li>
+</ol>
+
+<h3 id="h3_mavenproj">Creating the Maven Webapp Project and Importing the Code</h3>
+
+<p>The Maven <code class="highlighter-rouge">maven-archetype-webapp</code> archetype creates a new project that is structured as a web application and set up to build with Maven.</p>
+
+<p>When setting up your project, note that you can drag files and folders from your file system  into Eclipse. When prompted, select the option to <em>copy</em> the files into the project.</p>
+
+<ol>
+  <li>In Eclipse, click <strong>File &gt; New &gt; Maven Project</strong>.
+    <ul>
+      <li>If this option is not available, choose <strong>File &gt;  New &gt; Project</strong>, expand <strong>Maven</strong> and select the <strong>Maven Project</strong> option.</li>
+      <li>If <strong>Maven</strong> is not shown in the New Project dialog box, make sure that your version of Eclipse includes <a href="https://marketplace.eclipse.org/content/maven-integration-eclipse-luna-and-newer" title="Maven Integration for Eclipse">Maven Integration for Eclipse</a>.</li>
+    </ul>
+  </li>
+  <li>Select a location for the project. Make sure the <strong>Create simple project</strong> option is <em>not</em> selected.</li>
+  <li>When prompted to select an archetype, select <strong>maven-archetype-webapp</strong>. Note that the list of archetypes is long, so you may want to filter it by typing “webapp” in the filter box.</li>
+  <li>Enter a <strong>Group Id</strong> and <strong>Artifact Id</strong> for the project. For instance, you can set both of these fields to <strong>alexa-skills-kit-samples</strong>.</li>
+</ol>
+
+<p>This creates a new, blank project set up as a web app. You now need to add the sample source code and dependencies:</p>
+
+<ol>
+  <li>The project should have a <code class="highlighter-rouge">src/main</code> folder. If <code class="highlighter-rouge">main</code> does not already contain a <code class="highlighter-rouge">java</code> folder, create a new folder called <code class="highlighter-rouge">java</code>. The end result should be a structure like this: <code class="highlighter-rouge">src/main/java</code>.</li>
+  <li>Copy the <code class="highlighter-rouge">helloworld</code> folder from <em><code class="highlighter-rouge">&lt;alexa-skills-kit-folder&gt;</code></em><code class="highlighter-rouge">/samples/src/main/java</code> into the <code class="highlighter-rouge">src/main/java</code> folder in the new project.
+    <ul>
+      <li>You can do this either by dragging <code class="highlighter-rouge">helloworld</code> into eclipse and selecting the <strong>Copy files and folders</strong> option, or copying the folder within the file system.</li>
+      <li>The project should now contain a single package called <code class="highlighter-rouge">helloworld</code>, containing two classes (<code class="highlighter-rouge">HelloWorldSpeechlet</code> and <code class="highlighter-rouge">HelloWorldSpeechletRequestStreamHandler</code>. Note that the second class is provided for Lambda and not used in this example).</li>
+    </ul>
+  </li>
+  <li>Copy the file <em><code class="highlighter-rouge">&lt;alexa-skills-kit-folder&gt;</code></em><code class="highlighter-rouge">/samples/pom.xml</code> into the root of the Maven project, replacing the <code class="highlighter-rouge">pom.xml</code> that was generated when creating the project.
+ The <code class="highlighter-rouge">pom.xml</code> provided with the samples is already setup with all of the dependencies necessary to build the sample. However, it is set up to build a JAR file rather than a WAR.</li>
+  <li>Edit the <code class="highlighter-rouge">pom.xml</code> file and make the following changes:
+    <ul>
+      <li>Change the <code class="highlighter-rouge">&lt;packaging&gt;</code> setting to <code class="highlighter-rouge">war</code>.</li>
+      <li>Under <code class="highlighter-rouge">&lt;build&gt;</code>, add the following line:
+ <code class="highlighter-rouge">&lt;finalName&gt;alexa-skills-kit-samples&lt;/finalName&gt;</code></li>
+    </ul>
+  </li>
+  <li>Right-click on the project, click <strong>Maven</strong> and then click <strong>Update Project</strong>.</li>
+</ol>
+
+<h3 id="h3_speechlet_servlet">Adding a SpeechletServlet and Setting up Servlet Mapping</h3>
+
+<p>The Java library includes a <code class="highlighter-rouge">SpeechletServlet</code> class. This implementation of a Java EE servlet handles serializing and deserializing the body of the HTTP request and calls the appropriate <code class="highlighter-rouge">Speechlet</code> methods based on the request (<code class="highlighter-rouge">onLaunch()</code>, <code class="highlighter-rouge">onIntent</code>, and so on).</p>
+
+<p>To host your web service on Elastic Beanstalk, you need to extend this class and add a constructor that instantiates the appropriate <code class="highlighter-rouge">Speechlet</code> class in the sample (<code class="highlighter-rouge">HelloWorldSpeechlet</code>). Then, set up servlet mapping in the <code class="highlighter-rouge">web.xml</code> file for the project.</p>
+
+<p>To create the <code class="highlighter-rouge">SpeechletServlet</code>:</p>
+
+<ol>
+  <li>In the <code class="highlighter-rouge">helloworld</code> package, create a new class that extends <code class="highlighter-rouge">com.amazon.speech.speechlet.servlet.SpeechletServlet</code>. For this example, name the new class <code class="highlighter-rouge">HelloWorldServlet</code>.</li>
+  <li>Implement a default constructor for the new class that instantiates <code class="highlighter-rouge">HelloWorldSpeechlet</code> by calling <code class="highlighter-rouge">setSpeechlet()</code>.</li>
+</ol>
+
+<p>The <code class="highlighter-rouge">HelloWorldServlet</code> class should look like this:</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kn">package</span> <span class="n">helloworld</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">com.amazon.speech.speechlet.servlet.SpeechletServlet</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">HelloWorldServlet</span> <span class="kd">extends</span> <span class="n">SpeechletServlet</span> <span class="o">{</span>
+
+  <span class="kd">public</span> <span class="n">HelloWorldServlet</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">setSpeechlet</span><span class="o">(</span><span class="k">new</span> <span class="n">HelloWorldSpeechlet</span><span class="o">());</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+
+<p>To set up the  servlet mapping:</p>
+
+<ol>
+  <li>Open the <code class="highlighter-rouge">src/main/webapp/WEB-INF/web.xml</code> file in the project.</li>
+  <li>Add the <code class="highlighter-rouge">&lt;servlet&gt;</code> and  <code class="highlighter-rouge">&lt;servlet-mapping&gt;</code> tags to identify the servlet class and map the class to a URL.</li>
+</ol>
+
+<p>The <code class="highlighter-rouge">&lt;servlet&gt;</code> and <code class="highlighter-rouge">&lt;servlet-mapping&gt;</code> sections should look like this:</p>
+
+<div class="language-xml highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;servlet&gt;</span>
+  <span class="nt">&lt;servlet-name&gt;</span>HelloWorldServlet<span class="nt">&lt;/servlet-name&gt;</span>
+  <span class="nt">&lt;servlet-class&gt;</span>helloworld.HelloWorldServlet<span class="nt">&lt;/servlet-class&gt;</span>
+<span class="nt">&lt;/servlet&gt;</span>
+<span class="nt">&lt;servlet-mapping&gt;</span>
+  <span class="nt">&lt;servlet-name&gt;</span>HelloWorldServlet<span class="nt">&lt;/servlet-name&gt;</span>
+  <span class="nt">&lt;url-pattern&gt;</span>/hello<span class="nt">&lt;/url-pattern&gt;</span>
+<span class="nt">&lt;/servlet-mapping&gt;</span>
+</code></pre>
+</div>
+
+<p>After making all of these updates, save all files, then right-click on the project, click <strong>Maven</strong> and then click <strong>Update Project</strong>.</p>
+
+<p>At this point, the project should be fully set up. Do a build just to ensure that everything builds correctly. Right-click the project, click <strong>Run As</strong> and then click <strong>Maven install</strong>. Verify that a <code class="highlighter-rouge">war</code> file is created in the <code class="highlighter-rouge">target</code> folder for the project.</p>
+
+<h3 id="h3_deployEB">Deploying the Sample to Elastic Beanstalk</h3>
+
+<p>You can deploy web project directly from Eclipse if you are using the AWS Toolkit for Eclipse. The initial deployment creates a new <em>application</em> and <em>environment</em>. An environment represents a particular version of a web service, deployed onto AWS resources. The environment name is used to determine the endpoint for the web service. See <a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.components.html" title="AWS - Elastic Beanstalk Components">Elastic Beanstalk Components</a> for more information.</p>
+
+<p>Once the web service is deployed, you can make code changes in Eclipse and re-deploy to the same environment. This updates the environment with a new version of your web service.</p>
+
+<p><strong>AWS Pricing:</strong> There is no extra charge to use Elastic Beanstalk. You pay for the actual AWS resources your application uses (such as EC2). Note that pricing for EC2 usage differs between regions – see <a href="http://aws.amazon.com/ec2/pricing/" title="Amazon EC2 Pricing">Amazon EC2 Pricing</a> for details.</p>
+
+<p>To deploy the Hello World sample to Elastic Beanstalk:</p>
+
+<ol>
+  <li>Use Maven to build a <code class="highlighter-rouge">war</code> file for the project:  Right-click the project, click <strong>Run As</strong> and then click <strong>Maven install</strong>. Verify that a <code class="highlighter-rouge">war</code> file is created in the <code class="highlighter-rouge">target</code> folder for the project.</li>
+  <li>In the Eclipse Project Explorer, right-click the project and click <strong>Amazon Web Services</strong> then <strong>Deploy to AWS Elastic Beanstalk</strong>.</li>
+  <li>Select the <strong>Manually define a new server</strong> option.</li>
+  <li>For the <strong>server type</strong>, select <strong>AWS Elastic Beanstalk for Tomcat 8</strong>, then click <strong>Next</strong>.</li>
+  <li>
+    <p>Select the <strong>Region</strong> where you want to deploy the application.</p>
+
+    <p><strong>Note:</strong> All calls from Alexa come from the <strong>US East (N. Virginia)</strong> AWS region. Therefore, for best performance and reduced cost, create your Elastic Beanstalk environment in the US East (N. Virginia) region.</p>
+  </li>
+  <li>Enter an <strong>Application Name</strong> and <strong>Environment Name</strong> and click <strong>Finish</strong>.</li>
+</ol>
+
+<p>Deploying the application to Elastic Beanstalk may take several minutes.</p>
+
+<p>At this point, you should be able to connect to the environment in a browser. However, your service cannot take requests from Alexa until you configure the environment to use HTTPS.</p>
+
+<h3 id="h3_ebHTTPS">Configuring the Elastic Beanstalk Environment to Use HTTPS</h3>
+
+<p>To meet the security requirements of Alexa, the endpoint for your web service must present a valid SSL certificate. When testing on Elastic Beanstalk, you can use a self-signed certificate for this. You need to configure the Elastic Beanstalk environment to present the signed certificate.</p>
+
+<p>You do this by uploading your certificate as a server certificate and then configuring the Elastic Beanstalk Load Balancer for your environment to use HTTPS.</p>
+
+<ol>
+  <li>Create a <em>private key</em> and <em>self-signed certificate</em>.
+    <ul>
+      <li>See the detailed instructions in <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/testing-an-alexa-skill">Testing a Custom Skill</a>. Be sure to specify the <em>domain name</em> for your new Elastic Beanstalk endpoint when creating the certificate.</li>
+      <li>Make a note of the <code class="highlighter-rouge">.pem</code> files for your certificate and private key.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Install and configure the <a href="http://aws.amazon.com/cli/" title="AWS Command Line Interface">AWS Command Line Interface</a> if you have not already done so.</p>
+  </li>
+  <li>
+    <p>Use the following AWS command to upload your self-signed certificate to AWS as a <em>server certificate</em>.</p>
+
+    <div class="language-text highlighter-rouge"><pre class="highlight"><code> aws iam upload-server-certificate \
+   --server-certificate-name CertificateName \
+   --certificate-body file://path/to/certificate.pem \
+   --private-key file://path/to/private-key.pem
+</code></pre>
+    </div>
+
+    <ul>
+      <li>For the <code class="highlighter-rouge">server-certificate-name</code>, specify a name to identify the certificate in AWS.</li>
+      <li>For the <code class="highlighter-rouge">certificate-body</code>, specify the path and filename of the <code class="highlighter-rouge">.pem</code> file for the certificate.</li>
+      <li>For the <code class="highlighter-rouge">private-key</code>, specify the path and filename of the <code class="highlighter-rouge">.pem</code> file for your private key.</li>
+    </ul>
+  </li>
+  <li>Log in to the <a href="http://aws.amazon.com/" title="Amazon Web Services">AWS Management Console</a>. Navigate to Elastic Beanstalk and then navigate to your new environment.</li>
+  <li>In the left menu, click <strong>Configuration</strong>, then open  the <strong>Load Balancing</strong> section.</li>
+  <li>
+    <p>Make the following changes:</p>
+
+    <ul>
+      <li>Set <strong>Secure listener</strong> port to <strong>443</strong>.</li>
+      <li>Set <strong>Protocol</strong> to <strong>HTTPS</strong>.</li>
+      <li>From the <strong>SSL Certificate ID</strong> drop-down list, select the name of the server certificate you uploaded in step 3.</li>
+    </ul>
+  </li>
+  <li>Save your changes. Elastic Beanstalk automatically updates your environment.</li>
+  <li>Verify you can connect to your environment’s URL from a browser using the <code class="highlighter-rouge">https://</code> protocol.</li>
+</ol>
+
+<h3 id="h3_register">Registering the Sample in the Developer Portal</h3>
+
+<p>Finally, you need to register the sample in the <a href="https://developer.amazon.com/edw/home.html#/" title="Developer Portal - Alexa">developer portal</a>. This makes it possible for you to test it. You don’t need to fully complete all registration fields. For testing, you must enter at a minimum:</p>
+
+<ul>
+  <li><strong>Skill Information</strong>: <strong>Skill Type</strong> (Custom Interaction Model), <strong>Name</strong>, and <strong>Invocation Name</strong>.</li>
+  <li><strong>Interaction Model</strong>: <strong>Intent Schema</strong>, <strong>Sample Utterances</strong>, and <strong>Custom Slot Types</strong>.</li>
+  <li><strong>Configuration</strong>: <strong>Endpoint</strong>. Select the <strong>HTTPS</strong> option and enter the URL for your service’s endpoint.</li>
+  <li><strong>SSL Certificate</strong>: Select one of the options. If you want to use a self-signed SSL certificate for testing, create that certificate and upload it to the Developer Portal.</li>
+  <li><strong>Test</strong>: Set to <strong>Enabled</strong>.</li>
+</ul>
+
+<p>For the steps to register the skill, see <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/registering-and-managing-alexa-skills-in-the-developer-portal">Registering and Managing Custom Skills in the Developer Portal</a>. Use the values in the following table.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Setting</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Name</strong></td>
+      <td>Any valid skill name</td>
+    </tr>
+    <tr>
+      <td><strong>Invocation Name</strong></td>
+      <td>Any valid invocation name. For instance, you can use “greeter.”</td>
+    </tr>
+    <tr>
+      <td><strong>Interaction Model</strong></td>
+      <td>Each sample includes a <code class="highlighter-rouge">speechAssets</code> folder that contains a sample interaction model. Copy the JSON from <code class="highlighter-rouge">IntentSchema.json</code> into the <strong>Intent Schema</strong> box and copy the text from <code class="highlighter-rouge">SampleUtterances.txt</code> into the <strong>Sample Utterances</strong> box.<br /><br /> For details about how these are used in the sample skills, see <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/using-the-alexa-skills-kit-samples">Using the Alexa Skills Kit Samples (Custom Skills)</a>.</td>
+    </tr>
+    <tr>
+      <td><strong>Endpoint</strong></td>
+      <td>Select the <strong>HTTPS</strong> option and then enter the endpoint defined by your Elastic Beanstalk environment. Be sure to include the full path based on the  <code class="highlighter-rouge">&lt;url-pattern&gt;</code> you set in your servlet mapping.<br /><br /> For example, if <code class="highlighter-rouge">&lt;url-pattern&gt;</code> is <code class="highlighter-rouge">/hello</code> and your Elastic Beanstalk environment endpoint is <code class="highlighter-rouge">https://myhelloworldskill.elasticbeanstalk.com</code>, set the <strong>Endpoint</strong> to:<br /><br /> <code class="highlighter-rouge">https://myhelloworldskill.elasticbeanstalk.com/hello</code></td>
+    </tr>
+    <tr>
+      <td><strong>SSL Certificate</strong></td>
+      <td>Select the <strong>I will upload a self-signed certificate</strong> option. Then open the certificate you previously generated in a text editor and copy the entire contents into the text box</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="h3_testing">Testing the Sample</h3>
+
+<p>Once the sample is deployed to Elastic Beanstalk, configured for HTTPS, and registered on the developer portal, you should be able to invoke the skill by saying one of the phrases for interacting with skills:</p>
+
+<ul>
+  <li>“Alexa, ask <em>&lt;invocation name&gt;</em> to <em>&lt;command&gt;</em>.”</li>
+  <li>“Alexa, tell <em>&lt;invocation name&gt;</em> to <em>&lt;command&gt;</em>.”</li>
+  <li>“Alexa, talk to <em>&lt;invocation name&gt;</em>”</li>
+</ul>
+
+<p>For a list of supported phrases, see <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/supported-phrases-to-begin-a-conversation">Supported Phrases to Begin a Conversation</a>. For details about the provided samples and possible intents, see <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/using-the-alexa-skills-kit-samples">Using the Alexa Skills Kit Samples (Custom Skills)</a>.</p>
+
+<p>If you want to experiment with changes, make your code changes in the project and then re-deploy the code to Elastic Beanstalk. You can re-deploy to the same Elastic Beanstalk environment:</p>
+
+<ol>
+  <li>In the Eclipse Project Explorer, right-click the project and choose <strong>Amazon Web Services &gt; Deploy to AWS Elastic Beanstalk</strong>.</li>
+  <li>In the <strong>Run On Server</strong> dialog box, select <strong>Choose an Existing Server</strong>, select the existing environment to which you want to deploy the web service, then click <strong>Finish</strong>.</li>
+</ol>
+
+<h3 id="accessing-log-files">Accessing Log Files</h3>
+
+<p>Log files can be very useful when debugging and troubleshooting. In an Elastic Beanstalk configuration set up as described here, you can access log files for the web service in three ways:</p>
+
+<ol>
+  <li>View a snapshot of the log files from the AWS Console. This snapshot includes the last 100 lines from each log file, all in a single view or download.</li>
+  <li>Download all the logs from AWS Console.</li>
+  <li>Configure your Beanstalk environment to automatically publish the logs to AWS S3 bucket.</li>
+</ol>
+
+<p>For details about these different options, see <a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/using-features.loggingS3.title.html" title="AWS - Working with Logs">Working with Logs</a>.</p>
+
+<p>The provided samples use <a href="http://www.slf4j.org/" title="Simple Logging Facade for Java">SLF4J</a> and <a href="http://logging.apache.org/log4j/1.2/" title="Apache log4j 1.2">log4j</a> for logging. By default this writes log messages to the console terminal. To write log messages to a log file stored with your Elastic Beanstalk environment, you need to configure the logger with a <code class="highlighter-rouge">log4j.properties</code> configuration file. Add this file to the <code class="highlighter-rouge">Java Resources\src</code> directory in your Java Web Project.</p>
+
+<p>For example, the following <code class="highlighter-rouge">log4j.properties</code> file configures the logger to write log entries to a file called <code class="highlighter-rouge">/var/log/tomcat8/helloworld.log</code>:</p>
+
+<div class="language-text highlighter-rouge"><pre class="highlight"><code>log4j.logger.helloworld=info
+log4j.rootLogger=info, tail
+
+log4j.appender.tail=org.apache.log4j.FileAppender
+log4j.appender.tail.File=${catalina.base}/logs/helloworld.log
+log4j.appender.tail.layout=org.apache.log4j.PatternLayout
+log4j.appender.tail.layout.ConversionPattern=%d: %-5p %c{1} - %m%n
+</code></pre>
+</div>
+
+<p>See <a href="http://www.slf4j.org/" title="Simple Logging Facade for Java">SLF4J</a> and <a href="http://logging.apache.org/log4j/1.2/" title="Apache log4j 1.2">log4j</a> for information about configuring logging.</p>
+
+<p>The <code class="highlighter-rouge">HelloWorldSpeechlet</code> writes a log entry for each type of request the service receives:</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">Logger</span> <span class="n">log</span> <span class="o">=</span> <span class="n">LoggerFactory</span><span class="o">.</span><span class="na">getLogger</span><span class="o">(</span><span class="n">HelloWorldSpeechlet</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+<span class="o">...</span>
+
+<span class="nd">@Override</span>
+<span class="kd">public</span> <span class="n">SpeechletResponse</span> <span class="nf">onLaunch</span><span class="p">(</span><span class="kd">final</span> <span class="n">LaunchRequest</span> <span class="n">request</span><span class="o">,</span> <span class="kd">final</span> <span class="n">Session</span> <span class="n">session</span><span class="o">)</span>
+      <span class="kd">throws</span> <span class="n">SpeechletException</span> <span class="o">{</span>
+    <span class="n">log</span><span class="o">.</span><span class="na">info</span><span class="o">(</span><span class="s">"onLaunch requestId={}, sessionId={}"</span><span class="o">,</span> <span class="n">request</span><span class="o">.</span><span class="na">getRequestId</span><span class="o">(),</span>
+     <span class="n">session</span><span class="o">.</span><span class="na">getSessionId</span><span class="o">());</span>
+    <span class="o">...</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+
+<p>Using the above configuration and launching Hello World generates log entries similar to the following (as viewed in the snapshot of the last 100 lines of logs in Elastic Beanstalk):</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>-------------------------------------
+/var/log/tomcat8/helloworld.log
+-------------------------------------
+2015-03-27 18:06:48,976: INFO  HelloWorldSpeechlet - onSessionStarted requestId=amzn1.echo-api.request.affeb267-c275-4f43-91ed-620fce5851ab, sessionId=amzn1.echo-api.session.8767a9df-45b2-4525-a376-5b3c8ba3f715
+2015-03-27 18:06:49,087: INFO  HelloWorldSpeechlet - onLaunch requestId=amzn1.echo-api.request.affeb267-c275-4f43-91ed-620fce5851ab, sessionId=amzn1.echo-api.session.8767a9df-45b2-4525-a376-5b3c8ba3f715
+</code></pre>
+</div>
+
+<h2 id="next-steps">Next Steps</h2>
+
+<ul>
+  <li>Next: <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/defining-the-voice-interface">Defining the Voice Interface</a></li>
+  <li>Go back to: <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/using-the-alexa-skills-kit-samples">Using the Alexa Skills Kit Samples (Custom Skills)</a></li>
+  <li>Return to: <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/overviews/steps-to-build-a-custom-skill">Steps to Build a Custom Skill</a></li>
+</ul>
+
+<!-- common links -->
+          
+        
+      </div>
+    </div>
+  
+
+
+<script type="text/javascript" src="/public/js/gamecircle.js"></script>
+    </div>
+    
+    <script type="text/javascript" src="/public/js/leftmenu_controller.js"></script>
+  </div>
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="footer">
+  <div id="upper-footer">
+    <div id="upper-footer-wrapper">
+      <span id="footer-sitemap-title">Sitemap</span>
+      
+      
+      
+      
+      <div id="socialmedia-icons">
+        <a href="https://www.facebook.com/AmazonAppDev"><img src="/public/images/logo-facebook.png" alt="facebook_logo" width="31" height="31" /></a>
+        <a href="https://twitter.com/AmazonAppDev"><img src="/public/images/logo-twitter.png" alt="twitter_logo" width="31" height="31" /></a>
+        <a href="/public/community/blog"><img src="/public/images/logo-blog.png" alt="blog_logo" width="31" height="31" /></a>
+      </div>
+      <span id="footer-followus-span">Follow us</span>
+    </div>
+  </div>
+  <div id="median-footer">
+    <div id="median-footer-wrapper">
+      <ul id="footer-sitemap">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+<li>
+  <a href="/public/solutions/alexa">Alexa</a>
+  
+    <ul>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/solutions/alexa/alexa-skills-kit">Alexa Skills Kit</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/solutions/alexa/alexa-voice-service">Alexa Voice Service</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/solutions/alexa/alexa-fund">Alexa Fund</a>
+	    </li>
+      
+    </ul>
+  
+</li>
+
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+<li>
+  <a href="/public/apis">Services &amp; APIs</a>
+  
+    <ul>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/apis/earn">Earn</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/apis/engage">Engage</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/apis/experience">Build</a>
+	    </li>
+      
+    </ul>
+  
+</li>
+
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+<li>
+  <a href="/public/solutions/devices">Devices</a>
+  
+    <ul>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/solutions/devices/fire-tablets">Fire Tablets</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/solutions/devices/fire-tv">Amazon Fire TV</a>
+	    </li>
+      
+        
+          
+	      
+	        
+	      
+	    
+	    <li>
+	      <a href="https://developer.amazon.com/dash-replenishment-service">Dash Replenishment Service</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/solutions/devices/fire-phone">Fire Phone</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/solutions/devices/echo">Amazon Echo</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/solutions/devices/amazon-tap">Amazon Tap</a>
+	    </li>
+      
+    </ul>
+  
+</li>
+
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+<li>
+  <a href="/public/resources">Resources</a>
+  
+    <ul>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/solutions/platforms">Platforms</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/resources/learning-center">Learning Center</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/resources/development-tools">Development Tools</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/resources/promotional-tools">Promotional Tools</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/resources/marketing-tools">Marketing Tips</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/resources/other">Other Resources</a>
+	    </li>
+      
+    </ul>
+  
+</li>
+
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+<li>
+  <a href="/public/community/blog">Blog</a>
+  
+    <ul>
+      
+        
+          
+	      
+	        
+	      
+	    
+	    <li>
+	      <a href="http://dev.amazonappservices.com/BlogSubscription.html">Subscribe to the Blog</a>
+	    </li>
+      
+        
+          
+	      
+	        
+	      
+	    
+	    <li>
+	      <a href="https://developer.amazon.com/public/community/blog/tag/Announcements">#Announcements</a>
+	    </li>
+      
+        
+          
+	      
+	        
+	      
+	    
+	    <li>
+	      <a href="https://developer.amazon.com/public/community/blog/tag/Amazon+Underground">#AmazonUnderground</a>
+	    </li>
+      
+        
+          
+	      
+	        
+	      
+	    
+	    <li>
+	      <a href="https://developer.amazon.com/public/community/blog/tag/Alexa">#Alexa</a>
+	    </li>
+      
+        
+          
+	      
+	        
+	      
+	    
+	    <li>
+	      <a href="https://developer.amazon.com/public/community/blog/tag/Amazon+Fire+TV">#AmazonFireTV</a>
+	    </li>
+      
+        
+          
+	      
+	        
+	      
+	    
+	    <li>
+	      <a href="https://developer.amazon.com/public/community/blog/tag/Fire+Tablets">#FireTablets</a>
+	    </li>
+      
+        
+          
+	      
+	        
+	      
+	    
+	    <li>
+	      <a href="https://developer.amazon.com/public/community/blog/tag/How+to">#How To</a>
+	    </li>
+      
+        
+          
+	      
+	        
+	      
+	    
+	    <li>
+	      <a href="https://developer.amazon.com/public/community/blog/tag/Monetization">#Monetization</a>
+	    </li>
+      
+        
+          
+	      
+	        
+	      
+	    
+	    <li>
+	      <a href="https://developer.amazon.com/public/community/blog/tag/API">#APIs</a>
+	    </li>
+      
+        
+          
+	      
+	        
+	      
+	    
+	    <li>
+	      <a href="https://developer.amazon.com/public/community/blog/tag/Marketing">#Marketing</a>
+	    </li>
+      
+        
+          
+	      
+	        
+	      
+	    
+	    <li>
+	      <a href="https://developer.amazon.com/public/community/blog/search?q=game">#Gamedev</a>
+	    </li>
+      
+        
+          
+	      
+	        
+	      
+	    
+	    <li>
+	      <a href="https://developer.amazon.com/public/community/blog/tag/Case+Studies">#Developer Spotlight</a>
+	    </li>
+      
+    </ul>
+  
+</li>
+
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+<li>
+  <a href="/public/support">Support</a>
+  
+    <ul>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/support/submitting-your-app">Submitting Your Apps</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/support/faq">FAQs</a>
+	    </li>
+      
+        
+          
+	      
+	        
+	      
+	    
+	    <li>
+	      <a href="http://forums.developer.amazon.com">Forums</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/support/contact/contact-us">Contact Us</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/support/legal/da">App Distribution Agreement</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/support/mobileads/publisher-agreement.html">Mobile Ad Network Publisher Agreement</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/support/mobileads/participation-requirements.html">Mobile Ad Network Program Participation Requirements</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/support/advertise-your-app-agreement">Advertise Your App With Amazon Agreement</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/support/pml.html">Program Materials License Agreement</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/support/legal/tuabg">Trademark Guidelines</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/support/legal/tou">Terms of Use</a>
+	    </li>
+      
+    </ul>
+  
+</li>
+
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- SiteCatalyst code version: H.26.
+Copyright 1996-2013 Adobe, Inc. All Rights Reserved
+More info available at http://www.omniture.com -->
+<script language="JavaScript" type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal/s_code2.js"></script>
+
+<script type="text/javascript">var SiteCatalystId = "amzn1.account.AFWK7KFQLKQH6LGWKGX5CVCE6P6A"</script>
+
+<script language="JavaScript" type="text/javascript"><!--
+/* You may give each page an identifying name, server, and channel on
+the next lines. */
+s.pageName="/public/solutions/alexa/alexa-skills-kit/docs/deploying-a-sample-skill-as-a-web-service"
+s.server="developer.amazon.com"
+s.channel=""
+s.pageType=""
+s.prop1="96.93.191.69"
+s.prop2="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36"
+s.prop3=""
+s.prop4=""
+s.prop5=""
+/* Conversion Variables */
+s.campaign=""
+s.state=""
+s.zip=""
+s.events=""
+s.products=""
+s.purchaseID=""
+s.eVar1=""
+s.eVar2=""
+s.eVar3=""
+s.eVar4=""
+s.eVar5=""
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)//--></script>
+<script language="JavaScript" type="text/javascript"><!--
+if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+//--></script><noscript><img src="http://amazonservices.d2.sc.omtrdc.net/b/ss/amzna2z/1/H.22.1--NS/0"
+height="1" width="1" border="0" alt="" /></noscript><!--/DO NOT REMOVE/-->
+<!-- End SiteCatalyst code version: H.26. -->
+
+
+      </ul>
+    </div>
+  </div>
+  <div id="lower-footer">&copy; 2010-2016, Amazon.com, Inc. or its affiliates. All Rights Reserved.</div>
+</div> 
+
+
+    <script type="text/javascript">
+//<![CDATA[
+g1916332420.h1916332420.AsyncPage.load();
+//]]>
+</script>
+
+    <script type="text/javascript"> 
+    if (window.ue && window.ue.tag) { 
+        window.ue.tag("prelogin", ue.main_scope);
+    }
+    </script>
+    
+  </body>
+</html>

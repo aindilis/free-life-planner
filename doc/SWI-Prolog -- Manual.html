@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html><head>
+<title>SWI-Prolog -- Manual</title>
+
+<link rel="stylesheet" type="text/css" href="SWI-Prolog%20--%20Manual_files/footer.css">
+<link rel="stylesheet" type="text/css" href="SWI-Prolog%20--%20Manual_files/plweb.css">
+<link rel="stylesheet" type="text/css" href="SWI-Prolog%20--%20Manual_files/post.css">
+<link rel="stylesheet" type="text/css" href="SWI-Prolog%20--%20Manual_files/annotation.css">
+<link rel="stylesheet" type="text/css" href="SWI-Prolog%20--%20Manual_files/swipl.css">
+<link rel="stylesheet" type="text/css" href="SWI-Prolog%20--%20Manual_files/tags.css">
+<script type="text/javascript" src="SWI-Prolog%20--%20Manual_files/jquery-1.js">
+
+</script>
+<script type="text/javascript" src="SWI-Prolog%20--%20Manual_files/pldoc.html">
+
+</script>
+<script type="text/javascript" src="SWI-Prolog%20--%20Manual_files/jquery.html">
+
+</script>
+<script type="text/javascript" src="SWI-Prolog%20--%20Manual_files/jquery-ui.html">
+
+</script>
+<script type="text/javascript" src="SWI-Prolog%20--%20Manual_files/menu.html">
+
+</script>
+<link rel="stylesheet" type="text/css" href="SWI-Prolog%20--%20Manual_files/jquery-ui.css">
+<script type="text/javascript" src="SWI-Prolog%20--%20Manual_files/tag-it-min-2.js">
+
+</script>
+<link rel="stylesheet" type="text/css" href="SWI-Prolog%20--%20Manual_files/jquery.css">
+<link rel="stylesheet" type="text/css" href="SWI-Prolog%20--%20Manual_files/tagit.css">
+<link rel="stylesheet" type="text/css" href="SWI-Prolog%20--%20Manual_files/style.css">
+<link rel="stylesheet" type="text/css" href="SWI-Prolog%20--%20Manual_files/style_002.css">
+<script type="text/javascript" src="SWI-Prolog%20--%20Manual_files/set.html">
+
+</script>
+<link rel="stylesheet" type="text/css" href="SWI-Prolog%20--%20Manual_files/pldoc.css">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<link rel="shortcut icon" href="http://www.swi-prolog.org/icons/favicon.ico">
+<link rel="apple-touch-icon" href="http://www.swi-prolog.org/apple-touch-icon.png">
+
+</head>
+<body>
+<div class="outer-container">
+<div id="upper-header">
+<div id="upper-header-contents"><span id="dyknow-container">Did you know ... 
+<script type="text/javascript">
+
+		   $(function() {
+		     $.ajax({ url: "/dyk",
+			      success: function(data) {
+			        $("#"+"dyknow-container").html(data);
+			      }
+		            });
+		   });
+		  
+</script>
+</span><span id="search-container"><span class="lbl">Search Documentation:</span>
+
+<form action="/search" id="search-form">
+<input name="for" id="for"><input id="submit-for" value="Search" type="submit">
+<script type="text/javascript">
+
+    $(function() {
+        $("#"+"for").autocomplete({
+        minLength: 1,
+        delay: 0.3,
+        source: "/autocomplete/ac_predicate",
+        focus: function(event,ui) {
+          $("#"+"for").val(ui.item.label);
+          return false;
+        },
+        select: function(event,ui) {
+          $("#"+"for").val(ui.item.label);
+          window.location.href = ui.item.href;
+          return false;
+        }
+        })
+        .data("ui-autocomplete")._renderItem = function(ul,item) {
+        var label = String(item.label).replace(
+            new RegExp(this.term),
+            "<span class=\"acmatch\">$&</span>");
+        var tag = item.tag ? " <i>["+item.tag+"]</i>" : "";
+        return $("<li>")
+          .append("<a class=\""+item.class+"\">"+label+tag+"</a>")
+          .appendTo(ul)
+        };
+        });
+
+</script>
+</form>
+
+</span></div>
+</div>
+<div id="header-line-area"><a href="http://www.swi-prolog.org/"><img class="owl" src="SWI-Prolog%20--%20Manual_files/swipl.png" alt="SWI-Prolog owl logo" title="SWI-Prolog owl logo"></a><span class="primary-header">Dealing with time and date</span></div>
+
+<div id="menubar">
+<div class="menubar fixed-width">
+<ul class="menubar-container">
+<li><a href="http://www.swi-prolog.org/">Home</a></li>
+<li>DOWNLOAD
+<ul>
+<li><a href="http://www.swi-prolog.org/Download.html">SWI-Prolog</a></li>
+<li><a href="http://www.swi-prolog.org/build/">Sources/building</a></li>
+<li><a href="http://www.swi-prolog.org/pack/list">Add-ons</a></li>
+<li><a href="https://github.com/SWI-Prolog">Browse GIT</a><img class="ext-link" src="SWI-Prolog%20--%20Manual_files/ext-link.png" alt="External"></li>
+</ul>
+</li>
+<li>DOCUMENTATION
+<ul>
+<li><a href="http://www.swi-prolog.org/pldoc/refman/">Manual</a></li>
+<li><a href="http://www.swi-prolog.org/pldoc/package/">Packages</a></li>
+<li><a href="http://www.swi-prolog.org/FAQ/">FAQ</a></li>
+<li><a href="http://www.swi-prolog.org/pldoc/man?section=cmdline">Command line</a></li>
+<li><a href="http://www.swi-prolog.org/pldoc/package/pldoc.html">PlDoc</a></li>
+<li>Bluffers<span class="arrow">▶</span>
+<ul>
+<li><a href="http://www.swi-prolog.org/pldoc/man?section=syntax">Prolog syntax</a></li>
+<li><a href="http://www.swi-prolog.org/pldoc/man?section=emacsbluff">PceEmacs</a></li>
+<li><a href="http://www.swi-prolog.org/pldoc/man?section=htmlwrite">HTML generation</a></li>
+</ul>
+</li>
+<li><a href="http://www.swi-prolog.org/license.html">License</a></li>
+<li><a href="http://www.swi-prolog.org/Publications.html">Publications</a></li>
+</ul>
+</li>
+<li>TUTORIALS
+<ul>
+<li>Beginner<span class="arrow">▶</span>
+<ul>
+<li><a href="http://www.swi-prolog.org/pldoc/man?section=quickstart">Getting started</a></li>
+<li><a href="http://michael.richter.name/tutorials/swiplmod">Modules</a><img class="ext-link" src="SWI-Prolog%20--%20Manual_files/ext-link.png" alt="External"></li>
+<li><a href="http://www.swi-prolog.org/pldoc/man?section=debugoverview">Debugger</a></li>
+<li><a href="http://www.swi-prolog.org/IDE.html">Development tools</a></li>
+<li><a href="http://lpn.swi-prolog.org/">Learn Prolog Now!</a><img class="ext-link" src="SWI-Prolog%20--%20Manual_files/ext-link.png" alt="External"></li>
+</ul>
+</li>
+<li>Intermediate<span class="arrow">▶</span>
+<ul>
+<li><a href="http://www.swi-prolog.org/howto/http/">Web service</a></li>
+<li><a href="http://www.pathwayslms.com/swipltuts/html/index.html">Web applications</a><img class="ext-link" src="SWI-Prolog%20--%20Manual_files/ext-link.png" alt="External"></li>
+<li><a href="http://www.pathwayslms.com/swipltuts/dcg/">DCGs</a><img class="ext-link" src="SWI-Prolog%20--%20Manual_files/ext-link.png" alt="External"></li>
+<li><a href="http://www.pathwayslms.com/swipltuts/clpfd/clpfd.html">clp(fd)</a><img class="ext-link" src="SWI-Prolog%20--%20Manual_files/ext-link.png" alt="External"></li>
+<li><a href="http://www.swi-prolog.org/swipltuts/pldoc/index.html">PlDoc</a></li>
+<li><a href="http://www.swi-prolog.org/download/xpce/doc/coursenotes/coursenotes.pdf">XPCE</a></li>
+<li><a href="http://www.swi-prolog.org/Graphics.html">GUI options</a></li>
+</ul>
+</li>
+<li>Advanced<span class="arrow">▶</span>
+<ul>
+<li><a href="http://www.swi-prolog.org/howto/UseRdfMeta.html">RDF namespaces</a></li>
+<li><a href="http://www.swi-prolog.org/build/guidelines.txt">Linux packages</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>COMMUNITY
+<ul>
+<li><a href="http://webchat.freenode.net/?channels=##prolog">IRC</a><img class="ext-link" src="SWI-Prolog%20--%20Manual_files/ext-link.png" alt="External"></li>
+<li><a href="http://www.swi-prolog.org/forum">Forum</a></li>
+<li><a href="http://www.swi-prolog.org/news/archive">News</a></li>
+<li><a href="http://www.swi-prolog.org/Mailinglist.txt">Mail list</a></li>
+<li><a href="http://www.swi-prolog.org/bug.html">Report a bug</a></li>
+<li><a href="http://www.swi-prolog.org/howto/SubmitPatch.html">Submit a patch</a></li>
+<li><a href="http://www.swi-prolog.org/howto/Pack.html">Submit an add-on</a></li>
+<li><a href="http://www.swi-prolog.org/Roadmap.html">Roadmap</a></li>
+<li><a href="http://www.swi-prolog.org/Links.html">External links</a></li>
+<li><a href="http://www.swi-prolog.org/Contributors.html">Contributors</a></li>
+<li><a href="http://www.swi-prolog.org/loot.html">SWI-Prolog items</a></li>
+</ul>
+</li>
+<li>USERS
+<ul>
+<li><a href="http://www.swi-prolog.org/web/index.html">Semantic web</a></li>
+<li><a href="http://www.swi-prolog.org/students/index.html">Students</a></li>
+<li><a href="http://www.swi-prolog.org/research/index.html">Researchers</a></li>
+<li><a href="http://www.swi-prolog.org/commercial/index.html">Commercial users</a></li>
+<li><a href="http://www.swi-prolog.org/dogfood.html">Dog food</a></li>
+<li><a href="http://www.swi-prolog.org/pldoc/pldoc/man?section=swiorother">Is SWIPL right for me?</a></li>
+</ul>
+</li>
+<li>WIKI
+<ul>
+<li><a href="http://www.swi-prolog.org/openid/login?openid.return_to=/pldoc/man?section%3Dtimedate">Login</a></li>
+<li><a href="http://www.swi-prolog.org/wiki/changes">View changes</a></li>
+<li><a href="http://www.swi-prolog.org/wiki/sandbox">Sandbox</a></li>
+<li><a href="http://www.swi-prolog.org/wiki/">Wiki help</a></li>
+<li><a href="http://www.swi-prolog.org/list-tags">All tags</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="breadcrumb"></div>
+<div class="inner-contents pldoc">
+<div id="contents" class="contents pldoc">
+<div class="navtree">
+<div class="navwindow">
+<ul class="nav">
+<li class="nav"><a href="http://www.swi-prolog.org/pldoc/doc_for?object=root">Documentation</a>
+<ul class="nav">
+<li class="nav"><a href="http://www.swi-prolog.org/pldoc/doc_for?object=manual">Reference manual</a>
+<ul class="nav">
+<li class="nav"><a href="http://www.swi-prolog.org/pldoc/man?section=builtin">Built-in Predicates</a>
+<ul class="nav">
+<li class="nav"><a href="http://www.swi-prolog.org/pldoc/man?section=system">Operating System Interaction</a>
+<ul class="nav">
+<li class="obj nav"><a href="http://www.swi-prolog.org/pldoc/doc_for?object=shell/2">shell/2</a></li>
+<li class="obj nav"><a href="http://www.swi-prolog.org/pldoc/doc_for?object=shell/1">shell/1</a></li>
+<li class="obj nav"><a href="http://www.swi-prolog.org/pldoc/doc_for?object=shell/0">shell/0</a></li>
+<li class="obj nav"><a href="http://www.swi-prolog.org/pldoc/doc_for?object=getenv/2">getenv/2</a></li>
+<li class="obj nav"><a href="http://www.swi-prolog.org/pldoc/doc_for?object=setenv/2">setenv/2</a></li>
+<li class="obj nav"><a href="http://www.swi-prolog.org/pldoc/doc_for?object=unsetenv/1">unsetenv/1</a></li>
+<li class="obj nav"><a href="http://www.swi-prolog.org/pldoc/doc_for?object=setlocale/3">setlocale/3</a></li>
+<li class="obj nav"><a href="http://www.swi-prolog.org/pldoc/doc_for?object=unix/1">unix/1</a></li>
+<li class="obj nav"><a href="http://www.swi-prolog.org/pldoc/man?section=winsystem">Windows-specific Operating System Interaction</a></li>
+<li class="nav current"><a href="http://www.swi-prolog.org/pldoc/man?section=timedate">Dealing with time and date</a>
+<ul class="nav">
+<li class="obj nav"><a href="http://www.swi-prolog.org/pldoc/man?section=dattimedata">Time and date data structures</a></li>
+<li class="obj nav"><a href="http://www.swi-prolog.org/pldoc/man?section=datimepreds">Time and date predicates</a></li>
+</ul>
+</li>
+<li class="obj nav"><a href="http://www.swi-prolog.org/pldoc/man?section=plwin">Controlling the swipl-win.exe console window</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="obj nav"><a href="http://www.swi-prolog.org/pldoc/doc_for?object=packages">Packages</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="navcontent">
+
+<h3 id="sec:timedate"><a id="sec:4.33.2"><span class="sec-nr">4.33.2</span> <span class="sec-title">Dealing 
+with time and date</span></a></h3>
+
+<p>
+Representing time in a computer system is surprisingly complicated. 
+There are a large number of time representations in use, and the correct 
+choice depends on factors such as compactness, resolution and desired 
+operations. Humans tend to think about time in hours, days, months, 
+years or centuries. Physicists think about time in seconds. But, a month 
+does not have a defined number of seconds. Even a day does not have a 
+defined number of seconds as sometimes a leap-second is introduced to 
+synchronise properly with our earth's rotation. At the same time, 
+resolution demands a range from better than pico-seconds to millions of 
+years. Finally, civilizations have a wide range of calendars. Although 
+there exist libraries dealing with most if this complexity, our desire 
+to keep Prolog clean and lean stops us from fully supporting these.
+
+
+
+</p><p>
+For human-oriented tasks, time can be broken into years, months, 
+days, hours, minutes, seconds and a timezone. Physicists prefer to have 
+time in an arithmetic type representing seconds or fraction thereof, so 
+basic arithmetic deals with comparison and durations. An additional 
+advantage of the physicist's approach is that it requires much less 
+space. For these reasons, SWI-Prolog uses an arithmetic type as its 
+prime time representation.
+
+
+
+</p><p>
+Many C libraries deal with time using fixed-point arithmetic, dealing 
+with a large but finite time interval at constant resolution. In our 
+opinion, using a floating point number is a more natural choice as we 
+can use a natural unit and the interface does not need to be changed if 
+a higher resolution is required in the future. Our unit of choice is the 
+second as it is the scientific unit.<sup class="fn">120<span class="fn-text">Using 
+Julian days is a choice made by the Eclipse team. As conversion to dates 
+is needed for a human readable notation of time and Julian days cannot 
+deal naturally with leap seconds, we decided for the second as our unit.</span></sup> 
+We have placed our origin at 1970-1-1T0:0:0Z for compatibility with the 
+POSIX notion of time as well as with older time support provided by 
+SWI-Prolog.
+
+
+
+</p><p>
+Where older versions of SWI-Prolog relied on the POSIX conversion 
+functions, the current implementation uses
+<a class="url" href="http://cr.yp.to/libtai.html">libtai</a> to realise 
+conversion between time-stamps and calendar dates for a period of 10 
+million years.
+
+
+
+</p><p>
+
+</p><h4 id="sec:dattimedata"><a id="sec:4.33.2.1"><span class="sec-nr">4.33.2.1</span> <span class="sec-title">Time 
+and date data structures</span></a></h4>
+
+
+
+
+
+
+
+<p>
+We use the following time representations
+
+
+
+</p><dl class="latex">
+<dt><b>TimeStamp</b></dt><dd class="defbody">A TimeStamp is a floating point number expressing the time in seconds 
+since the Epoch at 1970-1-1.</dd>
+<dt><strong>date</strong>(<var>Y,M,D,H,Mn,S,Off,TZ,DST</var>)</dt><dd class="defbody">We call this term a <em>date-time</em> structure. The first 5 fields are 
+integers expressing the year, month (1..12), day (1..31), hour (0..23) 
+and minute (0..59). The <var>S</var> field holds the seconds as a 
+floating point number between 0.0 and 60.0. <var>Off</var> is an integer 
+representing the offset relative to UTC in seconds, where positive 
+values are west of Greenwich. If converted from local time (see <a href="http://www.swi-prolog.org/pldoc/man?predicate=stamp_date_time/3">stamp_date_time/3</a>),
+<var>TZ</var> holds the name of the local timezone. If the timezone is 
+not known, <var>TZ</var> is the atom <code><code>-</code></code>. <var>DST</var> 
+is <code>true</code> if daylight saving time applies to the current 
+time, <code>false</code> if daylight saving time is relevant but not 
+effective, and <code><code>-</code></code> if unknown or the timezone 
+has no daylight saving time.</dd>
+<dt><strong>date</strong>(<var>Y,M,D</var>)</dt><dd class="defbody">Date using the same values as described above. Extracted using
+<a href="http://www.swi-prolog.org/pldoc/man?predicate=date_time_value/3">date_time_value/3</a>.</dd>
+<dt><strong>time</strong>(<var>H,Mn,S</var>)</dt><dd class="defbody">Time using the same values as described above. Extracted using
+<a href="http://www.swi-prolog.org/pldoc/man?predicate=date_time_value/3">date_time_value/3</a>.</dd>
+</dl>
+
+
+
+
+
+<p>
+
+</p><h4 id="sec:datimepreds"><a id="sec:4.33.2.2"><span class="sec-nr">4.33.2.2</span> <span class="sec-title">Time 
+and date predicates</span></a></h4>
+
+
+
+
+
+
+
+<dl class="latex">
+<dt class="pubdef"><a id="get_time/1"><strong>get_time</strong>(<var>-TimeStamp</var>)</a></dt><dd class="defbody">Return the current time as a <var>TimeStamp</var>. The granularity is 
+system-dependent. See <a href="http://www.swi-prolog.org/pldoc/man?section=system">section 4.33.2.1</a>.</dd>
+<dt class="pubdef"><a id="stamp_date_time/3"><strong>stamp_date_time</strong>(<var>+TimeStamp, 
+-DateTime, +TimeZone</var>)</a></dt><dd class="defbody">Convert a <var>TimeStamp</var> to a <var>DateTime</var> in the given 
+timezone. See <a href="http://www.swi-prolog.org/pldoc/man?section=system">section 4.33.2.1</a> for 
+details on the data types. <var>TimeZone</var> describes the timezone 
+for the conversion. It is one of <code>local</code> to extract the local 
+time, <code>'UTC'</code> to extract a UTC time or an integer describing 
+the seconds west of Greenwich.</dd>
+<dt class="pubdef"><a id="date_time_stamp/2"><strong>date_time_stamp</strong>(<var>+DateTime, 
+-TimeStamp</var>)</a></dt><dd class="defbody">Compute the timestamp from a date/9 term. Values for month, day, hour, 
+minute or second need not be normalized. This flexibility allows for 
+easy computation of the time at any given number of these units from a 
+given timestamp. Normalization can be achieved following this call with <a href="http://www.swi-prolog.org/pldoc/man?predicate=stamp_date_time/3">stamp_date_time/3</a>. 
+This example computes the date 200 days after 2006-7-14:
+
+
+
+<pre class="code">?- date_time_stamp(date(2006,7,214,0,0,0,0,-,-), Stamp),
+   stamp_date_time(Stamp, D, 0),
+   date_time_value(date, D, Date).
+Date = date(2007, 1, 30)</pre>
+
+
+
+
+
+<p>
+When computing a time stamp from a local time specification, the UTC 
+offset (arg&nbsp;7), TZ (arg&nbsp;8) and DST (arg&nbsp;9) argument may 
+be left unbound and are unified with the proper information. The example 
+below, executed in Amsterdam, illustrates this behaviour. On the 25th of 
+March at 01:00, DST does not apply. At 02.00, the clock is advanced by 
+one hour and thus both 02:00 and 03:00 represent the same time stamp.
+</p>
+
+<pre class="code">1 ?- date_time_stamp(date(2012,3,25,1,0,0,UTCOff,TZ,DST),
+                     Stamp).
+UTCOff = -3600,
+TZ = 'CET',
+DST = false,
+Stamp = 1332633600.0.
+
+2 ?- date_time_stamp(date(2012,3,25,2,0,0,UTCOff,TZ,DST),
+                     Stamp).
+UTCOff = -7200,
+TZ = 'CEST',
+DST = true,
+Stamp = 1332637200.0.
+
+3 ?- date_time_stamp(date(2012,3,25,3,0,0,UTCOff,TZ,DST),
+                     Stamp).
+UTCOff = -7200,
+TZ = 'CEST',
+DST = true,
+Stamp = 1332637200.0.</pre>
+
+
+
+
+
+<p>
+Note that DST and offset calculation are based on the POSIX function 
+mktime(). If mktime() returns an error, a representation_error
+<code>dst</code> is generated.</p></dd>
+<dt class="pubdef"><a id="date_time_value/3"><strong>date_time_value</strong>(<var>?Key, 
++DateTime, ?Value</var>)</a></dt><dd class="defbody">Extract values from a date/9 term. Provided keys are:
+
+
+
+<p>
+</p>
+
+<table class="latex frame-hsides center">
+<tbody><tr><td><b>key</b></td><td><b>value </b></td></tr>
+<tr class="hline"><td><code>year</code> </td><td>Calendar year as an 
+integer </td></tr>
+<tr><td><code>month</code> </td><td>Calendar month as an integer 1..12 </td></tr>
+<tr><td><code>day</code> </td><td>Calendar day as an integer 1..31 </td></tr>
+<tr><td><code>hour</code> </td><td>Clock hour as an integer 0..23 </td></tr>
+<tr><td><code>minute</code> </td><td>Clock minute as an integer 0..59 </td></tr>
+<tr><td><code>second</code> </td><td>Clock second as a float 0.0..60.0 </td></tr>
+<tr><td><code>utc_offset</code> </td><td>Offset to UTC in seconds 
+(positive is west) </td></tr>
+<tr><td><code>time_zone</code> </td><td>Name of timezone; fails if 
+unknown </td></tr>
+<tr><td><code>daylight_saving</code> </td><td>Bool <code>daylight_saving</code>true) 
+if dst is in effect </td></tr>
+<tr><td><code>date</code> </td><td>Term <code>date(Y,M,D)</code> </td></tr>
+<tr><td><code>time</code> </td><td>Term <code>time(H,M,S)</code> </td></tr>
+</tbody></table>
+
+</dd>
+<dt class="pubdef"><a id="format_time/3"><strong>format_time</strong>(<var>+Out, 
++Format, +StampOrDateTime</var>)</a></dt><dd class="defbody">Modelled after POSIX strftime(), using GNU extensions. <var>Out</var> is 
+a destination as specified with <a href="http://www.swi-prolog.org/pldoc/man?predicate=with_output_to/2">with_output_to/2</a>. <var>Format</var> 
+is an atom or string with the following conversions. Conversions start 
+with a tilde (%) character.<sup class="fn">121<span class="fn-text">Descriptions 
+taken from Linux Programmer's Manual</span></sup>
+<var>StampOrDateTime</var> is either a numeric time-stamp, a term
+<code>date(Y,M,D,H,M,S,O,TZ,DST)</code> or a term <code>date(Y,M,D)</code>.
+
+
+
+<p>
+</p>
+<ul class="latex">
+<li><code>a</code><br>
+
+The abbreviated weekday name according to the current locale. Use
+<a href="http://www.swi-prolog.org/pldoc/man?predicate=format_time/4">format_time/4</a> 
+for POSIX locale.</li>
+<li><code>A</code><br>
+
+The full weekday name according to the current locale. Use
+<a href="http://www.swi-prolog.org/pldoc/man?predicate=format_time/4">format_time/4</a> 
+for POSIX locale.</li>
+<li><code>b</code><br>
+
+The abbreviated month name according to the current locale. Use
+<a href="http://www.swi-prolog.org/pldoc/man?predicate=format_time/4">format_time/4</a> 
+for POSIX locale.</li>
+<li><code>B</code><br>
+
+The full month name according to the current locale. Use
+<a href="http://www.swi-prolog.org/pldoc/man?predicate=format_time/4">format_time/4</a> 
+for POSIX locale.</li>
+<li><code>c</code><br>
+
+The preferred date and time representation for the current locale.</li>
+<li><code>C</code><br>
+
+The century number (year/100) as a 2-digit integer.</li>
+<li><code>d</code><br>
+
+The day of the month as a decimal number (range 01 to 31).</li>
+<li><code>D</code><br>
+
+Equivalent to %m/%d/%y. (For Americans only. Americans should note that 
+in other countries %d/%m/%y is rather common. This means that in an 
+international context this format is ambiguous and should not be used.)</li>
+<li><code>e</code><br>
+
+Like %d, the day of the month as a decimal number, but a leading zero is 
+replaced by a space.</li>
+<li><code>E</code><br>
+
+Modifier. Not implemented.</li>
+<li><code>f</code><br>
+
+Number of microseconds. The <code>f</code> can be prefixed by an integer 
+to print the desired number of digits. E.g., <code>%3f</code> prints 
+milliseconds. This format is not covered by any standard, but available 
+with different format specifiers in various incarnations of the 
+strftime() function.</li>
+<li><code>F</code><br>
+
+Equivalent to %Y-%m-%d (the ISO 8601 date format).</li>
+<li><code>g</code><br>
+
+Like %G, but without century, i.e., with a 2-digit year (00-99).</li>
+<li><code>G</code><br>
+
+The ISO 8601 year with century as a decimal number. The 4-digit year 
+corresponding to the ISO week number (see %V). This has the same format 
+and value as %y, except that if the ISO week number belongs to the 
+previous or next year, that year is used instead.</li>
+<li><code>V</code><br>
+
+The ISO 8601:1988 week number of the current year as a decimal number, 
+range 01 to 53, where week 1 is the first week that has at least 4 days 
+in the current year, and with Monday as the first day of the week. See 
+also %U and %W.</li>
+<li><code>h</code><br>
+
+Equivalent to %b.</li>
+<li><code>H</code><br>
+
+The hour as a decimal number using a 24-hour clock (range 00 to 23).</li>
+<li><code>I</code><br>
+
+The hour as a decimal number using a 12-hour clock (range 01 to 12).</li>
+<li><code>j</code><br>
+
+The day of the year as a decimal number (range 001 to 366).</li>
+<li><code>k</code><br>
+
+The hour (24-hour clock) as a decimal number (range 0 to 23); single 
+digits are preceded by a blank. (See also %H.)</li>
+<li><code>l</code><br>
+
+The hour (12-hour clock) as a decimal number (range 1 to 12); single 
+digits are preceded by a blank. (See also %I.)</li>
+<li><code>m</code><br>
+
+The month as a decimal number (range 01 to 12).</li>
+<li><code>M</code><br>
+
+The minute as a decimal number (range 00 to 59).</li>
+<li><code>n</code><br>
+
+A newline character.</li>
+<li><code>O</code><br>
+
+Modifier to select locale-specific output. Not implemented.</li>
+<li><code>p</code><br>
+
+Either `AM' or `PM' according to the given time value, or the 
+corresponding strings for the current locale. Noon is treated as `pm' 
+and midnight as `am'.</li>
+<li><code>P</code><br>
+
+Like %p but in lowercase: `am' or `pm' or a corresponding string for the 
+current locale.</li>
+<li><code>r</code><br>
+
+The time in a.m. or p.m. notation. In the POSIX locale this is 
+equivalent to `%I:%M:%S %p'.</li>
+<li><code>R</code><br>
+
+The time in 24-hour notation (%H:%M). For a version including the 
+seconds, see %T below.</li>
+<li><code>s</code><br>
+
+The number of seconds since the Epoch, i.e., since 1970-01-01 00:00:00 
+UTC.</li>
+<li><code>S</code><br>
+
+The second as a decimal number (range 00 to 60). (The range is up to 60 
+to allow for occasional leap seconds.)</li>
+<li><code>t</code><br>
+
+A tab character.</li>
+<li><code>T</code><br>
+
+The time in 24-hour notation (%H:%M:%S).</li>
+<li><code>u</code><br>
+
+The day of the week as a decimal, range 1 to 7, Monday being 1. See also %w.</li>
+<li><code>U</code><br>
+
+The week number of the current year as a decimal number, range 00 to 53, 
+starting with the first Sunday as the first day of week 01. See also %V 
+and %W.</li>
+<li><code>w</code><br>
+
+The day of the week as a decimal, range 0 to 6, Sunday being 0. See also %u.</li>
+<li><code>W</code><br>
+
+The week number of the current year as a decimal number, range 00 to 53, 
+starting with the first Monday as the first day of week 01.</li>
+<li><code>x</code><br>
+
+The preferred date representation for the current locale without the 
+time.</li>
+<li><code>X</code><br>
+
+The preferred time representation for the current locale without the 
+date.</li>
+<li><code>y</code><br>
+
+The year as a decimal number without a century (range 00 to 99).</li>
+<li><code>Y</code><br>
+
+The year as a decimal number including the century.</li>
+<li><code>z</code><br>
+
+The timezone as hour offset from GMT using the format HHmm. Required to 
+emit RFC822-conforming dates (using
+<code>'%a,&nbsp;%d&nbsp;%b&nbsp;%Y&nbsp;%T&nbsp;%z'</code>). Our 
+implementation supports
+<code>%:z</code>, which modifies the output to HH:mm as required by 
+XML-Schema. Note that both notations are valid in ISO 8601. The sequence <code>%:z</code> 
+is compatible to the GNU date(1) command.</li>
+<li><code>Z</code><br>
+
+The timezone or name or abbreviation.</li>
+<li><code><code>+</code></code><br>
+
+The date and time in date(1) format.</li>
+<li><code>%</code><br>
+
+A literal `%' character.</li>
+</ul>
+
+
+
+
+<p>
+The table below gives some format strings for popular time 
+representations. RFC1123 is used by HTTP. The full implementation of
+<a href="http://www.swi-prolog.org/pldoc/man?predicate=http_timestamp/2">http_timestamp/2</a> 
+as available from <code>library(http/http_header)</code> is here.
+</p>
+
+<pre class="code">http_timestamp(Time, Atom) :-
+        stamp_date_time(Time, Date, 'UTC'),
+        format_time(atom(Atom),
+                    '%a, %d %b %Y %T GMT',
+                    Date, posix).</pre>
+
+
+
+
+
+<p>
+</p>
+
+<table class="latex frame-hsides center">
+<tbody><tr><td><b>Standard</b> </td><td><b>Format string</b> </td></tr>
+<tr class="hline"><td><b>xsd</b> </td><td><code>'%FT%T%:z'</code> </td></tr>
+<tr><td><b>ISO8601</b> </td><td><code>'%FT%T%z'</code> </td></tr>
+<tr><td><b>RFC822</b> </td><td><code>'%a, %d %b %Y %T %z'</code> </td></tr>
+<tr><td><b>RFC1123</b> </td><td><code>'%a, %d %b %Y %T GMT'</code> </td></tr>
+</tbody></table>
+
+</dd>
+<dt class="pubdef"><a id="format_time/4"><strong>format_time</strong>(<var>+Out, 
++Format, +StampOrDateTime, +Locale</var>)</a></dt><dd class="defbody">Format time given a specified <var>Locale</var>. This predicate is a 
+work-around for lacking proper portable and thread-safe time and locale 
+handling in current C libraries. In its current implementation the only 
+value allowed for <var>Locale</var> is <code>posix</code>, which 
+currently only modifies the behaviour of the <code>a</code>, <code>A</code>, <code>b</code> 
+and <code>B</code> format specifiers. The predicate is used to be able 
+to emit POSIX locale week and month names for emitting standardised 
+time-stamps such as RFC1123.</dd>
+<dt class="pubdef"><a id="parse_time/2"><strong>parse_time</strong>(<var>+Text, 
+-Stamp</var>)</a></dt><dd class="defbody">Same as <code>parse_time(Text, _Format, Stamp)</code>. See <a href="http://www.swi-prolog.org/pldoc/man?predicate=parse_time/3">parse_time/3</a>.</dd>
+<dt class="pubdef"><a id="parse_time/3"><strong>parse_time</strong>(<var>+Text, 
+?Format, -Stamp</var>)</a></dt><dd class="defbody">Parse a textual time representation, producing a time-stamp. Supported 
+formats for <var>Text</var> are in the table below. If the format is 
+known, it may be given to reduce parse time and avoid ambiguities. 
+Otherwise,
+<var>Format</var> is unified with the format encountered.
+
+
+
+<p>
+</p>
+
+<table class="latex frame-box center">
+<tbody><tr><td><b>Name</b></td><td><b>Example </b></td></tr>
+<tr class="hline"><td>rfc_1123</td><td><code>Fri, 08 Dec 2006 15:29:44 
+GMT </code></td></tr>
+<tr><td></td><td><code>Fri, 08 Dec 2006 15:29:44 +0000 </code></td></tr>
+<tr class="hline"><td>iso_8601</td><td><code>2006-12-08T17:29:44+02:00 </code></td></tr>
+<tr><td></td><td><code>20061208T172944+0200 </code></td></tr>
+<tr><td></td><td><code>2006-12-08T15:29Z </code></td></tr>
+<tr><td></td><td><code>2006-12-08 </code></td></tr>
+<tr><td></td><td><code>20061208 </code></td></tr>
+<tr><td></td><td><code>2006-12 </code></td></tr>
+<tr><td></td><td><code>2006-W49-5 </code></td></tr>
+<tr><td></td><td><code>2006-342 </code></td></tr>
+</tbody></table>
+
+</dd>
+<dt class="pubdef"><a id="day_of_the_week/2"><strong>day_of_the_week</strong>(<var>+Date,-DayOfTheWeek</var>)</a></dt><dd class="defbody">Computes the day of the week for a given date.
+<code><var>Date</var> = date(<var>Year</var>,<var>Month</var>,<var>Day</var>)</code>. 
+Days of the week are numbered from one to seven: Monday = 1, Tuesday = 
+2, ... , Sunday = 7.</dd>
+</dl>
+
+
+
+
+
+<p>
+</p><p></p><p></p><p></p><p></p><p></p><p></p><p></p></div>
+</div>
+</div>
+<div id="dialog" style="display:none;"></div>
+<div class="footer newstyle">
+<div class="footer">
+<div id="community-content">
+<div id="tags-component">
+<div id="tags-notes">Tag confusing pages with <b>doc-needs-help</b><span class="separator">|</span>Tags are associated to your profile if you are logged in</div>
+<div id="tags-label">Tags:</div>
+<div id="tags-bar">
+<ul id="tags">
+</ul>
+</div>
+<div id="tags-warnings"></div>
+</div>
+
+<script type="text/javascript">
+
+		    function tagInfo(text) {
+		      $("#tags-warnings").text(text);
+		      $("#tags-warnings").removeClass("warning");
+		      $("#tags-warnings").addClass("informational");
+		    }
+		    function tagWarning(text) {
+		      $("#tags-warnings").text(text);
+		      $("#tags-warnings").addClass("warning");
+		      $("#tags-warnings").removeClass("informational");
+		    }
+
+		    $(document).ready(function() {
+		      $("#tags").tagit({
+			  autocomplete: { delay: 0.3,
+					  minLength: 1,
+					  source: "/complete-tag"
+					},
+			  onTagClicked: function(event, ui) {
+			    window.location.href = "/show-tag"+"?tag="+
+			      encodeURIComponent(ui.tagLabel);
+			  },
+			  beforeTagAdded: function(event, ui) {
+			    if ( !ui.duringInitialization ) {
+			      var result = false;
+			      tagInfo("Submitting ...");
+			      $.ajax({ dataType: "json",
+				       url: "/add-tag",
+				       data: { tag: ui.tagLabel,
+					       obj: "64135685d3f4025ca4ebc9cbacd59049dd037334"
+					     },
+				       async: false,
+				       success: function(data) {
+					if ( data.status == true ) {
+					  tagInfo("Added: "+ui.tagLabel);
+					  result = true;
+					} else {
+					  tagWarning(data.message);
+					}
+				      }
+				     });
+			      return result;
+			    }
+			  },
+			  beforeTagRemoved: function(event, ui) {
+			    var result = false;
+			    if ( !ui.tagLabel ) {
+			      return false;
+			    }
+			    tagInfo("Submitting ...");
+			    $.ajax({ dataType: "json",
+				     url: "/remove-tag",
+				     data: { tag: ui.tagLabel,
+					     obj: "64135685d3f4025ca4ebc9cbacd59049dd037334"
+					   },
+				     async: false,
+				     success: function(data) {
+					if ( data.status == true ) {
+					  tagInfo("Removed: "+ui.tagLabel);
+					  result = true;
+					} else {
+					  tagWarning(data.message);
+					}
+				      }
+				   });
+			    return result;
+			  },
+			  placeholderText: "Tag Section \"Dealing with time and date\""
+			});
+		      });
+		  
+</script>
+
+<div class="posts annotation-component"></div>
+<div class="post-login"><b><a class="signin" href="http://www.swi-prolog.org/openid/login?openid.return_to=/pldoc/man?section%3Dtimedate">login</a></b> to add a new annotation post.</div>
+</div>
+<div id="footer">
+<div class="current-user"><a class="signin" href="http://www.swi-prolog.org/openid/login?openid.return_to=/pldoc/man?section%3Dtimedate">login</a></div>
+<a id="powered" href="http://www.swi-prolog.org/">Powered by SWI-Prolog 7.3.20</a></div>
+</div>
+<script type="text/javascript">
+
+		   $().ready(function()
+	           { var $navtree = $(".navwindow");
+		     var $navcontent = $(".navcontent");
+		     if ( $navtree.length > 0 && $navcontent.length > 0 )
+		     { var $window = $(window).on("resize", function()
+		       { var ch = $navcontent.height();
+			 var nh = $navtree.height();
+			 if ( nh > 400 && nh > ch + 200 )
+			 { if ( ch < 300 ) ch = 300;
+			   $navtree.height(ch);
+			   $navtree.css('overflow-y', 'scroll');
+
+			   var current = $navtree.find("li.nav.current");
+			   if ( current.position().top > ch-40 )
+			   { $navtree.scrollTop(current.position().top - (ch-40));
+			   }
+			 }
+		       }).trigger("resize")
+		     }
+		   });
+		  
+</script>
+</div>
+<div id="tail-end">&nbsp;</div>
+</div>
+
+
+
+</body></html>

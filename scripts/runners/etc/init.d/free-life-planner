@@ -1,0 +1,38 @@
+#!/bin/sh -e
+
+### BEGIN INIT INFO
+# Provides:          free-life-planner
+# Required-Start:    
+# Required-Stop:     
+# Default-Start:     
+# Default-Stop:      0 6
+# Short-Description: (FRDCSA) Free Life Planner
+### END INIT INFO
+
+PATH="/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin"
+FLPUSER="andrewdo"
+
+[ -x /var/lib/myfrdcsa/codebases/minor/free-life-planner/scripts/runners/start-flp.sh ] || exit 0
+
+. /lib/lsb/init-functions
+
+case "$1" in
+start)
+	setuid $FLPUSER /var/lib/myfrdcsa/codebases/minor/free-life-planner/scripts/runners/start-flp.sh &
+	;;
+
+stop)
+	setuid $FLPUSER /var/lib/myfrdcsa/codebases/minor/free-life-planner/scripts/runners/stop-flp.sh &
+	;;
+
+force-reload|restart)
+	setuid $FLPUSER /var/lib/myfrdcsa/codebases/minor/free-life-planner/scripts/runners/restart-flp.sh &
+	;;
+
+*)
+	echo "Usage: /etc/init.d/free-life-planner {start|stop|restart|force-reload}"
+	exit 1
+	;;
+esac
+
+exit 0

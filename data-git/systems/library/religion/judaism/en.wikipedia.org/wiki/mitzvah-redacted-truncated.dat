@@ -1,0 +1,562 @@
+$VAR1 = [
+          {
+            'C' => 'ID=1
+(<T S[dcl] 1 2> (<T S/S 0 1> (<T S[to]\\NP 0 2> (<L (S[to]\\NP)/(S[b]\\NP) POS POS To (S[to]\\NP)/(S[b]\\NP)>) (<L S[b]\\NP POS POS know S[b]\\NP>) ) ) (<T S[dcl] 1 2> (<L NP[thr] POS POS there NP[thr]>) (<T S[dcl]\\NP[thr] 0 2> (<L (S[dcl]\\NP[thr])/NP POS POS is (S[dcl]\\NP[thr])/NP>) (<T NP[nb] 0 2> (<T NP[nb] 0 2> (<L NP[nb]/N POS POS a NP[nb]/N>) (<L N POS POS God N>) ) (<L . POS POS . .>) ) ) ) ) ',
+            'Parse' => [
+                         '((To)(know))(there(is((a)(God))(.)))'
+                       ],
+            'Sentence' => 'To know there is a God.'
+          },
+          {
+            'Parse' => [
+                         '((Not)(to))(even(think(that(there(are(((other)(gods))(besides(Him)(.))))))))'
+                       ],
+            'Sentence' => 'Not to even think that there are other gods besides Him.',
+            'C' => 'ID=2
+(<T S[dcl] 1 2> (<T S/S 0 1> (<T S[to]\\NP 1 2> (<L (S\\NP)/(S\\NP) POS POS Not (S\\NP)/(S\\NP)>) (<L S[to]\\NP POS POS to S[to]\\NP>) ) ) (<T S[dcl] 1 2> (<L NP POS POS even NP>) (<T S[dcl]\\NP 0 2> (<L (S[dcl]\\NP)/S[em] POS POS think (S[dcl]\\NP)/S[em]>) (<T S[em] 0 2> (<L S[em]/S[dcl] POS POS that S[em]/S[dcl]>) (<T S[dcl] 1 2> (<L NP[thr] POS POS there NP[thr]>) (<T S[dcl]\\NP[thr] 0 2> (<L (S[dcl]\\NP[thr])/NP POS POS are (S[dcl]\\NP[thr])/NP>) (<T NP 0 2> (<T NP 0 1> (<T N 1 2> (<L N/N POS POS other N/N>) (<L N POS POS gods N>) ) ) (<T NP\\NP 0 2> (<L (NP\\NP)/NP POS POS besides (NP\\NP)/NP>) (<T NP 0 2> (<L NP POS POS Him NP>) (<L . POS POS . .>) ) ) ) ) ) ) ) ) ) '
+          },
+          {
+            'C' => 'ID=3
+(<T S[dcl] 1 2> (<T S/S 0 1> (<T S[to]\\NP 0 2> (<L (S[to]\\NP)/(S[b]\\NP) POS POS To (S[to]\\NP)/(S[b]\\NP)>) (<T S[b]\\NP 0 2> (<L (S[b]\\NP)/NP POS POS know (S[b]\\NP)/NP>) (<T (S[X]\\NP)\\((S[X]\\NP)/NP) 0 1> (<L NP POS POS that NP>) ) ) ) ) (<T S[dcl] 1 2> (<T NP 0 1> (<L N POS POS God N>) ) (<T S[dcl]\\NP 0 2> (<L (S[dcl]\\NP)/NP POS POS is (S[dcl]\\NP)/NP>) (<T NP 0 2> (<T NP 0 1> (<L N POS POS One N>) ) (<L . POS POS . .>) ) ) ) ) ',
+            'Parse' => [
+                         '((To(know(that))))(God(is(One)(.)))'
+                       ],
+            'Sentence' => 'To know that God is One.'
+          },
+          {
+            'Sentence' => 'To love God.',
+            'Parse' => [
+                         '((To(love)(God))))(.'
+                       ],
+            'C' => 'ID=4
+(<T NP 0 2> (<T NP 0 1> (<T N 1 2> (<L N/N POS POS To N/N>) (<T N 1 2> (<L N/N POS POS love N/N>) (<L N POS POS God N>) ) ) ) (<L . POS POS . .>) ) '
+          },
+          {
+            'C' => 'ID=5
+(<T NP 0 2> (<T NP 0 1> (<T N 1 2> (<L N/N POS POS To N/N>) (<T N 1 2> (<L N/N POS POS fear N/N>) (<L N POS POS God N>) ) ) ) (<L . POS POS . .>) ) ',
+            'Parse' => [
+                         '((To(fear)(God))))(.'
+                       ],
+            'Sentence' => 'To fear God.'
+          },
+          {
+            'Sentence' => 'To sanctify God\'s Name.',
+            'Parse' => [
+                         '((To)(sanctify))(God(\'s(Name)(.)))'
+                       ],
+            'C' => 'ID=6
+(<T S[dcl] 1 2> (<T S/S 0 1> (<T S[to]\\NP 0 2> (<L (S[to]\\NP)/(S[b]\\NP) POS POS To (S[to]\\NP)/(S[b]\\NP)>) (<L S[b]\\NP POS POS sanctify S[b]\\NP>) ) ) (<T S[dcl] 1 2> (<T NP 0 1> (<L N POS POS God N>) ) (<T S[dcl]\\NP 0 2> (<L (S[dcl]\\NP)/NP POS POS \'s (S[dcl]\\NP)/NP>) (<T NP 0 2> (<T NP 0 1> (<L N POS POS Name N>) ) (<L . POS POS . .>) ) ) ) ) '
+          },
+          {
+            'Parse' => [
+                         'Not((to(profane(((God)(\'s))(Name))(.))))'
+                       ],
+            'Sentence' => 'Not to profane God\'s Name.',
+            'C' => 'ID=7
+(<T NP 0 2> (<T NP 0 1> (<L N POS POS Not N>) ) (<T NP\\NP 0 1> (<T S[to]\\NP 0 2> (<L (S[to]\\NP)/(S[b]\\NP) POS POS to (S[to]\\NP)/(S[b]\\NP)>) (<T S[b]\\NP 0 2> (<L (S[b]\\NP)/NP POS POS profane (S[b]\\NP)/NP>) (<T NP[nb] 0 2> (<T NP[nb] 0 2> (<T NP[nb]/N 1 2> (<T NP 0 1> (<L N POS POS God N>) ) (<L (NP[nb]/N)\\NP POS POS \'s (NP[nb]/N)\\NP>) ) (<L N POS POS Name N>) ) (<L . POS POS . .>) ) ) ) ) ) '
+          },
+          {
+            'C' => 'ID=8
+(<T NP 0 2> (<L NP POS POS Not NP>) (<T NP\\NP 0 1> (<T S[to]\\NP 0 2> (<L (S[to]\\NP)/(S[b]\\NP) POS POS to (S[to]\\NP)/(S[b]\\NP)>) (<T S[b]\\NP 0 2> (<L (S[b]\\NP)/NP POS POS destroy (S[b]\\NP)/NP>) (<T NP 0 2> (<T NP 0 1> (<L N POS POS objects N>) ) (<T NP\\NP 0 1> (<T S[pss]\\NP 0 2> (<L (S[pss]\\NP)/PP POS POS associated (S[pss]\\NP)/PP>) (<T PP 0 2> (<L PP/NP POS POS with PP/NP>) (<T NP[nb] 0 2> (<T NP[nb] 0 2> (<T NP[nb]/N 1 2> (<T NP 0 1> (<L N POS POS God N>) ) (<L (NP[nb]/N)\\NP POS POS \'s (NP[nb]/N)\\NP>) ) (<L N POS POS Name N>) ) (<L . POS POS . .>) ) ) ) ) ) ) ) ) ) ',
+            'Sentence' => 'Not to destroy objects associated with God\'s Name.',
+            'Parse' => [
+                         'Not((to(destroy(objects((associated(with(((God)(\'s))(Name))(.))))))))'
+                       ]
+          },
+          {
+            'Sentence' => 'To listen to the prophet speaking in God\'s Name.',
+            'Parse' => [
+                         '((To(listen(to((the)(prophet(speaking)(in)))))))(God(\'s(Name)(.)))'
+                       ],
+            'C' => 'ID=9
+(<T S[dcl] 1 2> (<T S/S 0 1> (<T S[to]\\NP 0 2> (<L (S[to]\\NP)/(S[b]\\NP) POS POS To (S[to]\\NP)/(S[b]\\NP)>) (<T S[b]\\NP 0 2> (<L (S[b]\\NP)/PP POS POS listen (S[b]\\NP)/PP>) (<T PP 0 2> (<L PP/NP POS POS to PP/NP>) (<T NP[nb] 0 2> (<T NP[nb] 0 2> (<L NP[nb]/N POS POS the NP[nb]/N>) (<L N POS POS prophet N>) ) (<T NP\\NP 0 1> (<T S[ng]\\NP 0 2> (<L S[ng]\\NP POS POS speaking S[ng]\\NP>) (<L (S\\NP)\\(S\\NP) POS POS in (S\\NP)\\(S\\NP)>) ) ) ) ) ) ) ) (<T S[dcl] 1 2> (<T NP 0 1> (<L N POS POS God N>) ) (<T S[dcl]\\NP 0 2> (<L (S[dcl]\\NP)/NP POS POS \'s (S[dcl]\\NP)/NP>) (<T NP 0 2> (<T NP 0 1> (<L N POS POS Name N>) ) (<L . POS POS . .>) ) ) ) ) '
+          },
+          {
+            'Parse' => [
+                         'Not((to((try(the)(LORD))(unduly)(.))))'
+                       ],
+            'Sentence' => 'Not to try the LORD unduly.',
+            'C' => 'ID=10
+(<T NP 0 2> (<T NP 0 1> (<L N POS POS Not N>) ) (<T NP\\NP 0 1> (<T S[to]\\NP 0 2> (<L (S[to]\\NP)/(S[b]\\NP) POS POS to (S[to]\\NP)/(S[b]\\NP)>) (<T S[b]\\NP 0 2> (<T S[b]\\NP 0 2> (<L (S[b]\\NP)/NP POS POS try (S[b]\\NP)/NP>) (<T NP[nb] 0 2> (<L NP[nb]/N POS POS the NP[nb]/N>) (<L N POS POS LORD N>) ) ) (<T (S\\NP)\\(S\\NP) 0 2> (<L (S\\NP)\\(S\\NP) POS POS unduly (S\\NP)\\(S\\NP)>) (<L . POS POS . .>) ) ) ) ) ) '
+          },
+          {
+            'C' => 'ID=11
+(<T S[dcl] 1 2> (<T S/S 0 1> (<T S[to]\\NP 0 2> (<L (S[to]\\NP)/(S[b]\\NP) POS POS To (S[to]\\NP)/(S[b]\\NP)>) (<L S[b]\\NP POS POS emulate S[b]\\NP>) ) ) (<T S[dcl] 1 2> (<T NP 0 1> (<L N POS POS God N>) ) (<T S[dcl]\\NP 0 2> (<L (S[dcl]\\NP)/NP POS POS \'s (S[dcl]\\NP)/NP>) (<T (S[X]\\NP)\\((S[X]\\NP)/NP) 0 1> (<T NP 0 2> (<T NP 0 1> (<L N POS POS ways N>) ) (<L . POS POS . .>) ) ) ) ) ) ',
+            'Sentence' => 'To emulate God\'s ways.',
+            'Parse' => [
+                         '((To)(emulate))(God(\'s((ways)(.))))'
+                       ]
+          },
+          {
+            'C' => 'ID=12
+(<T S[qem] 1 2> (<T S/S 0 1> (<T S[to]\\NP 0 2> (<L (S[to]\\NP)/(S[b]\\NP) POS POS To (S[to]\\NP)/(S[b]\\NP)>) (<T S[b]\\NP 0 2> (<L (S[b]\\NP)/PP POS POS cleave (S[b]\\NP)/PP>) (<T PP 0 2> (<L PP/NP POS POS to PP/NP>) (<L NP POS POS those NP>) ) ) ) ) (<T S[qem] 0 2> (<L S[qem]/(S[dcl]\\NP) POS POS who S[qem]/(S[dcl]\\NP)>) (<T S[dcl]\\NP 0 2> (<L (S[dcl]\\NP)/NP POS POS know (S[dcl]\\NP)/NP>) (<T NP 0 2> (<T NP 0 1> (<L N POS POS God N>) ) (<L . POS POS . .>) ) ) ) ) ',
+            'Parse' => [
+                         '((To(cleave(to)(those)))(know(God)(.)))'
+                       ],
+            'Sentence' => 'To cleave to those who know God.'
+          },
+          {
+            'C' => 'ID=13
+(<T NP 0 2> (<T NP 0 1> (<T N 1 2> (<L N/N POS POS To N/N>) (<T N 1 2> (<L N/N POS POS love N/N>) (<T N 1 2> (<L N/N POS POS other N/N>) (<L N POS POS Jews N>) ) ) ) ) (<L . POS POS . .>) ) ',
+            'Parse' => [
+                         '((To(love(other)(Jews)))))(.'
+                       ],
+            'Sentence' => 'To love other Jews.'
+          },
+          {
+            'C' => 'ID=14
+(<T NP 0 2> (<T NP 0 1> (<T N 1 2> (<L N/N POS POS To N/N>) (<T N 1 2> (<L N/N POS POS love N/N>) (<L N POS POS converts N>) ) ) ) (<L . POS POS . .>) ) ',
+            'Sentence' => 'To love converts.',
+            'Parse' => [
+                         '((To(love)(converts))))(.'
+                       ]
+          },
+          {
+            'C' => 'ID=15
+(<T NP 0 2> (<L NP POS POS Not NP>) (<T NP\\NP 0 1> (<T S[to]\\NP 0 2> (<L (S[to]\\NP)/(S[b]\\NP) POS POS to (S[to]\\NP)/(S[b]\\NP)>) (<T S[b]\\NP 0 2> (<L (S[b]\\NP)/NP POS POS embarrass (S[b]\\NP)/NP>) (<T NP 0 2> (<T NP 0 1> (<L N POS POS others N>) ) (<L . POS POS . .>) ) ) ) ) ) ',
+            'Sentence' => 'Not to embarrass others.',
+            'Parse' => [
+                         'Not((to(embarrass(others)(.))))'
+                       ]
+          },
+          {
+            'Sentence' => 'Not to oppress the weak.',
+            'Parse' => [
+                         'Not((to(oppress((the)(weak))(.))))'
+                       ],
+            'C' => 'ID=16
+(<T NP 0 2> (<T NP 0 1> (<L N POS POS Not N>) ) (<T NP\\NP 0 1> (<T S[to]\\NP 0 2> (<L (S[to]\\NP)/(S[b]\\NP) POS POS to (S[to]\\NP)/(S[b]\\NP)>) (<T S[b]\\NP 0 2> (<L (S[b]\\NP)/NP POS POS oppress (S[b]\\NP)/NP>) (<T NP[nb] 0 2> (<T NP[nb] 0 2> (<L NP[nb]/N POS POS the NP[nb]/N>) (<L N POS POS weak N>) ) (<L . POS POS . .>) ) ) ) ) ) '
+          },
+          {
+            'Sentence' => 'Not to speak derogatorily of others.',
+            'Parse' => [
+                         '(Not((to(speak)(derogatorily))))(of(others)(.))'
+                       ],
+            'C' => 'ID=17
+(<T NP 0 2> (<T NP 0 2> (<L NP POS POS Not NP>) (<T NP\\NP 0 1> (<T S[to]\\NP 0 2> (<L (S[to]\\NP)/(S[b]\\NP) POS POS to (S[to]\\NP)/(S[b]\\NP)>) (<T S[b]\\NP 0 2> (<L S[b]\\NP POS POS speak S[b]\\NP>) (<L (S\\NP)\\(S\\NP) POS POS derogatorily (S\\NP)\\(S\\NP)>) ) ) ) ) (<T NP\\NP 0 2> (<L (NP\\NP)/NP POS POS of (NP\\NP)/NP>) (<T NP 0 2> (<T NP 0 1> (<L N POS POS others N>) ) (<L . POS POS . .>) ) ) ) '
+          },
+          {
+            'C' => 'ID=18
+(<T NP 0 2> (<T NP 0 1> (<L N POS POS Not N>) ) (<T NP\\NP 0 1> (<T S[to]\\NP 0 2> (<L (S[to]\\NP)/(S[b]\\NP) POS POS to (S[to]\\NP)/(S[b]\\NP)>) (<T S[b]\\NP 0 2> (<L (S[b]\\NP)/NP POS POS take (S[b]\\NP)/NP>) (<T NP 0 2> (<T NP 0 1> (<L N POS POS revenge N>) ) (<L . POS POS . .>) ) ) ) ) ) ',
+            'Parse' => [
+                         'Not((to(take(revenge)(.))))'
+                       ],
+            'Sentence' => 'Not to take revenge.'
+          },
+          {
+            'Parse' => [
+                         'Not((to(bear((a)(grudge))(.))))'
+                       ],
+            'Sentence' => 'Not to bear a grudge.',
+            'C' => 'ID=19
+(<T NP 0 2> (<T NP 0 1> (<L N POS POS Not N>) ) (<T NP\\NP 0 1> (<T S[to]\\NP 0 2> (<L (S[to]\\NP)/(S[b]\\NP) POS POS to (S[to]\\NP)/(S[b]\\NP)>) (<T S[b]\\NP 0 2> (<L (S[b]\\NP)/NP POS POS bear (S[b]\\NP)/NP>) (<T NP[nb] 0 2> (<T NP[nb] 0 2> (<L NP[nb]/N POS POS a NP[nb]/N>) (<L N POS POS grudge N>) ) (<L . POS POS . .>) ) ) ) ) ) '
+          },
+          {
+            'C' => 'ID=20
+(<T NP 0 2> (<T NP 0 1> (<T N 1 2> (<T N/N 1 2> (<L (N/N)/(N/N) POS POS To (N/N)/(N/N)>) (<L N/N POS POS learn N/N>) ) (<L N POS POS Torah N>) ) ) (<L . POS POS . .>) ) ',
+            'Parse' => [
+                         '(((To)(learn))(Torah)))(.'
+                       ],
+            'Sentence' => 'To learn Torah.'
+          },
+          {
+            'Parse' => [
+                         '((To(honor)(those))(teach(and(know(Torah)(.)))))'
+                       ],
+            'Sentence' => 'To honor those who teach and know Torah.',
+            'C' => 'ID=21
+(<T S[wq] 1 2> (<T S/S 0 1> (<T S[to]\\NP 0 2> (<L (S[to]\\NP)/(S[b]\\NP) POS POS To (S[to]\\NP)/(S[b]\\NP)>) (<T S[b]\\NP 0 2> (<L (S[b]\\NP)/NP POS POS honor (S[b]\\NP)/NP>) (<L NP POS POS those NP>) ) ) ) (<T S[wq] 0 2> (<L S[wq]/(S[dcl]\\NP) POS POS who S[wq]/(S[dcl]\\NP)>) (<T S[dcl]\\NP 0 2> (<L S[dcl]\\NP POS POS teach S[dcl]\\NP>) (<T (S[dcl]\\NP)\\(S[dcl]\\NP) 1 2> (<L conj POS POS and conj>) (<T S[dcl]\\NP 0 2> (<L (S[dcl]\\NP)/NP POS POS know (S[dcl]\\NP)/NP>) (<T NP 0 2> (<T NP 0 1> (<L N POS POS Torah N>) ) (<L . POS POS . .>) ) ) ) ) ) ) '
+          },
+          {
+            'Sentence' => 'Not to inquire into idolatry.',
+            'Parse' => [
+                         'Not((to(inquire(into(idolatry)(.)))))'
+                       ],
+            'C' => 'ID=22
+(<T NP 0 2> (<L NP POS POS Not NP>) (<T NP\\NP 0 1> (<T S[to]\\NP 0 2> (<L (S[to]\\NP)/(S[b]\\NP) POS POS to (S[to]\\NP)/(S[b]\\NP)>) (<T S[b]\\NP 0 2> (<L (S[b]\\NP)/PP POS POS inquire (S[b]\\NP)/PP>) (<T PP 0 2> (<L PP/NP POS POS into PP/NP>) (<T NP 0 2> (<T NP 0 1> (<L N POS POS idolatry N>) ) (<L . POS POS . .>) ) ) ) ) ) ) '
+          },
+          {
+            'C' => 'ID=23
+(<T S[dcl] 1 2> (<T S/S 0 1> (<T S[to]\\NP 1 2> (<L (S\\NP)/(S\\NP) POS POS Not (S\\NP)/(S\\NP)>) (<T S[to]\\NP 0 2> (<L (S[to]\\NP)/(S[b]\\NP) POS POS to (S[to]\\NP)/(S[b]\\NP)>) (<T S[b]\\NP 0 2> (<L (S[b]\\NP)/NP POS POS follow (S[b]\\NP)/NP>) (<T NP[nb] 0 2> (<T NP[nb] 0 2> (<L NP[nb]/N POS POS the NP[nb]/N>) (<L N POS POS whims N>) ) (<T NP\\NP 0 2> (<L (NP\\NP)/NP POS POS of (NP\\NP)/NP>) (<T NP[nb] 0 2> (<T NP[nb] 0 2> (<L NP[nb]/N POS POS your NP[nb]/N>) (<L N POS POS heart N>) ) (<T NP\\NP 1 2> (<L conj POS POS or conj>) (<T NP 1 2> (<L NP/NP POS POS what NP/NP>) (<L NP POS POS your NP>) ) ) ) ) ) ) ) ) ) (<T S[dcl] 1 2> (<T NP 0 1> (<L N POS POS eyes N>) ) (<T S[dcl]\\NP 0 2> (<L S[dcl]\\NP POS POS see S[dcl]\\NP>) (<L . POS POS . .>) ) ) ) ',
+            'Sentence' => 'Not to follow the whims of your heart or what your eyes see.',
+            'Parse' => [
+                         '((Not(to(follow((the)(whims)(of((your)(heart)(or(what)(your)))))))))(eyes(see)(.))'
+                       ]
+          },
+          {
+            'Parse' => [
+                         'Not((to(blaspheme)(.)))'
+                       ],
+            'Sentence' => 'Not to blaspheme.',
+            'C' => 'ID=24
+(<T NP 0 2> (<L NP POS POS Not NP>) (<T NP\\NP 0 1> (<T S[to]\\NP 0 2> (<L (S[to]\\NP)/(S[b]\\NP) POS POS to (S[to]\\NP)/(S[b]\\NP)>) (<T S[b]\\NP 0 2> (<L S[b]\\NP POS POS blaspheme S[b]\\NP>) (<L . POS POS . .>) ) ) ) ) '
+          },
+          {
+            'C' => 'ID=25
+(<T S[dcl] 1 2> (<T S/S 0 1> (<T S[to]\\NP 1 2> (<L (S\\NP)/(S\\NP) POS POS Not (S\\NP)/(S\\NP)>) (<T S[to]\\NP 0 2> (<L (S[to]\\NP)/(S[b]\\NP) POS POS to (S[to]\\NP)/(S[b]\\NP)>) (<T S[b]\\NP 0 2> (<T S[b]\\NP 0 2> (<L (S[b]\\NP)/NP POS POS worship (S[b]\\NP)/NP>) (<T NP 0 1> (<L N POS POS idols N>) ) ) (<T (S\\NP)\\(S\\NP) 0 2> (<L ((S\\NP)\\(S\\NP))/NP POS POS in ((S\\NP)\\(S\\NP))/NP>) (<T NP[nb] 0 2> (<L NP[nb]/N POS POS the NP[nb]/N>) (<L N POS POS manner N>) ) ) ) ) ) ) (<T S[dcl] 1 2> (<L NP POS POS they NP>) (<T S[dcl]\\NP 0 2> (<L (S[dcl]\\NP)/(S[adj]\\NP) POS POS are (S[dcl]\\NP)/(S[adj]\\NP)>) (<T S[adj]\\NP 0 2> (<L S[adj]\\NP POS POS worshiped S[adj]\\NP>) (<L . POS POS . .>) ) ) ) ) ',
+            'Sentence' => 'Not to worship idols in the manner they are worshiped.',
+            'Parse' => [
+                         '((Not(to((worship)(idols)(in(the)(manner))))))(they(are(worshiped)(.)))'
+                       ]
+          },
+          {
+            'Sentence' => 'Not to worship idols in the four ways we worship God.',
+            'Parse' => [
+                         '((Not(to((worship(idols))(in(the(four)(ways)))))))(we(worship(God)(.)))'
+                       ],
+            'C' => 'ID=26
+(<T S[dcl] 1 2> (<T S/S 0 1> (<T S[to]\\NP 1 2> (<L (S\\NP)/(S\\NP) POS POS Not (S\\NP)/(S\\NP)>) (<T S[to]\\NP 0 2> (<L (S[to]\\NP)/(S[b]\\NP) POS POS to (S[to]\\NP)/(S[b]\\NP)>) (<T S[b]\\NP 0 2> (<T S[b]\\NP 0 2> (<L (S[b]\\NP)/NP POS POS worship (S[b]\\NP)/NP>) (<T (S[X]\\NP)\\((S[X]\\NP)/NP) 0 1> (<T NP 0 1> (<L N POS POS idols N>) ) ) ) (<T (S\\NP)\\(S\\NP) 0 2> (<L ((S\\NP)\\(S\\NP))/NP POS POS in ((S\\NP)\\(S\\NP))/NP>) (<T NP[nb] 0 2> (<L NP[nb]/N POS POS the NP[nb]/N>) (<T N 1 2> (<L N/N POS POS four N/N>) (<L N POS POS ways N>) ) ) ) ) ) ) ) (<T S[dcl] 1 2> (<L NP POS POS we NP>) (<T S[dcl]\\NP 0 2> (<L (S[dcl]\\NP)/NP POS POS worship (S[dcl]\\NP)/NP>) (<T NP 0 2> (<T NP 0 1> (<L N POS POS God N>) ) (<L . POS POS . .>) ) ) ) ) '
+          },
+          {
+            'Sentence' => 'Not to make an idol for yourself.',
+            'Parse' => [
+                         'Not((to((make(an)(idol))(for(yourself)(.)))))'
+                       ],
+            'C' => 'ID=27
+(<T NP 0 2> (<T NP 0 1> (<L N POS POS Not N>) ) (<T NP\\NP 0 1> (<T S[to]\\NP 0 2> (<L (S[to]\\NP)/(S[b]\\NP) POS POS to (S[to]\\NP)/(S[b]\\NP)>) (<T S[b]\\NP 0 2> (<T (S[b]\\NP)/PP 0 2> (<L ((S[b]\\NP)/PP)/NP POS POS make ((S[b]\\NP)/PP)/NP>) (<T NP[nb] 0 2> (<L NP[nb]/N POS POS an NP[nb]/N>) (<L N POS POS idol N>) ) ) (<T PP 0 2> (<L PP/NP POS POS for PP/NP>) (<T NP 0 2> (<L NP POS POS yourself NP>) (<L . POS POS . .>) ) ) ) ) ) ) '
+          },
+          {
+            'C' => 'ID=28
+(<T NP 0 2> (<T NP 0 1> (<L N POS POS Not N>) ) (<T NP\\NP 0 1> (<T S[to]\\NP 0 2> (<L (S[to]\\NP)/(S[b]\\NP) POS POS to (S[to]\\NP)/(S[b]\\NP)>) (<T S[b]\\NP 0 2> (<L (S[b]\\NP)/NP POS POS make (S[b]\\NP)/NP>) (<T NP[nb] 0 2> (<T NP[nb] 0 2> (<L NP[nb]/N POS POS an NP[nb]/N>) (<L N POS POS idol N>) ) (<T NP\\NP 0 2> (<L (NP\\NP)/NP POS POS for (NP\\NP)/NP>) (<T NP 0 2> (<T NP 0 1> (<L N POS POS others N>) ) (<L . POS POS . .>) ) ) ) ) ) ) ) ',
+            'Sentence' => 'Not to make an idol for others.',
+            'Parse' => [
+                         'Not((to(make((an)(idol)(for(others)(.))))))'
+                       ]
+          },
+          {
+            'Sentence' => 'Not to make human forms even for decorative purposes.',
+            'Parse' => [
+                         'Not((to((make((human)(forms)))(even(for(((decorative)(purposes)))(.))))))'
+                       ],
+            'C' => 'ID=29
+(<T NP 0 2> (<T NP 0 1> (<L N POS POS Not N>) ) (<T NP\\NP 0 1> (<T S[to]\\NP 0 2> (<L (S[to]\\NP)/(S[b]\\NP) POS POS to (S[to]\\NP)/(S[b]\\NP)>) (<T S[b]\\NP 0 2> (<T S[b]\\NP 0 2> (<L (S[b]\\NP)/NP POS POS make (S[b]\\NP)/NP>) (<T NP 0 1> (<T N 1 2> (<L N/N POS POS human N/N>) (<L N POS POS forms N>) ) ) ) (<T (S\\NP)\\(S\\NP) 1 2> (<L ((S\\NP)\\(S\\NP))/((S\\NP)\\(S\\NP)) POS POS even ((S\\NP)\\(S\\NP))/((S\\NP)\\(S\\NP))>) (<T (S\\NP)\\(S\\NP) 0 2> (<L ((S\\NP)\\(S\\NP))/NP POS POS for ((S\\NP)\\(S\\NP))/NP>) (<T NP 0 2> (<T NP 0 1> (<T N 1 2> (<L N/N POS POS decorative N/N>) (<L N POS POS purposes N>) ) ) (<L . POS POS . .>) ) ) ) ) ) ) ) '
+          },
+          {
+            'Parse' => [
+                         'Not((to((turn(a)(city))(to(idolatry)(.)))))'
+                       ],
+            'Sentence' => 'Not to turn a city to idolatry.',
+            'C' => 'ID=30
+(<T NP 0 2> (<T NP 0 1> (<L N POS POS Not N>) ) (<T NP\\NP 0 1> (<T S[to]\\NP 0 2> (<L (S[to]\\NP)/(S[b]\\NP) POS POS to (S[to]\\NP)/(S[b]\\NP)>) (<T S[b]\\NP 0 2> (<T (S[b]\\NP)/PP 0 2> (<L ((S[b]\\NP)/PP)/NP POS POS turn ((S[b]\\NP)/PP)/NP>) (<T NP[nb] 0 2> (<L NP[nb]/N POS POS a NP[nb]/N>) (<L N POS POS city N>) ) ) (<T PP 0 2> (<L PP/NP POS POS to PP/NP>) (<T NP 0 2> (<T NP 0 1> (<L N POS POS idolatry N>) ) (<L . POS POS . .>) ) ) ) ) ) ) '
+          },
+          {
+            'Sentence' => 'To burn a city that has turned to idol worship.',
+            'Parse' => [
+                         '((To(burn(a)(city))))(that(has(turned(to(((idol)(worship)))(.)))))'
+                       ],
+            'C' => 'ID=31
+(<T S[dcl] 1 2> (<T S/S 0 1> (<T S[to]\\NP 0 2> (<L (S[to]\\NP)/(S[b]\\NP) POS POS To (S[to]\\NP)/(S[b]\\NP)>) (<T S[b]\\NP 0 2> (<L (S[b]\\NP)/NP POS POS burn (S[b]\\NP)/NP>) (<T NP[nb] 0 2> (<L NP[nb]/N POS POS a NP[nb]/N>) (<L N POS POS city N>) ) ) ) ) (<T S[dcl] 1 2> (<T NP 0 1> (<L N POS POS that N>) ) (<T S[dcl]\\NP 0 2> (<L (S[dcl]\\NP)/(S[pt]\\NP) POS POS has (S[dcl]\\NP)/(S[pt]\\NP)>) (<T S[pt]\\NP 0 2> (<L (S[pt]\\NP)/PP POS POS turned (S[pt]\\NP)/PP>) (<T PP 0 2> (<L PP/NP POS POS to PP/NP>) (<T NP 0 2> (<T NP 0 1> (<T N 1 2> (<L N/N POS POS idol N/N>) (<L N POS POS worship N>) ) ) (<L . POS POS . .>) ) ) ) ) ) ) '
+          },
+          {
+            'C' => 'ID=32
+(<T NP 0 2> (<T NP 0 1> (<L N POS POS Not N>) ) (<T NP\\NP 0 1> (<T S[to]\\NP 0 2> (<L (S[to]\\NP)/(S[b]\\NP) POS POS to (S[to]\\NP)/(S[b]\\NP)>) (<T S[b]\\NP 0 2> (<T (S[b]\\NP)/PP 0 2> (<L ((S[b]\\NP)/PP)/NP POS POS rebuild ((S[b]\\NP)/PP)/NP>) (<L NP POS POS it NP>) ) (<T PP 0 2> (<L PP/NP POS POS as PP/NP>) (<T NP[nb] 0 2> (<T NP[nb] 0 2> (<L NP[nb]/N POS POS a NP[nb]/N>) (<L N POS POS city N>) ) (<L . POS POS . .>) ) ) ) ) ) ) ',
+            'Parse' => [
+                         'Not((to((rebuild)(it)(as((a)(city))(.)))))'
+                       ],
+            'Sentence' => 'Not to rebuild it as a city.'
+          },
+          {
+            'Parse' => [
+                         'Not((to((derive)(benefit)(from(it)(.)))))'
+                       ],
+            'Sentence' => 'Not to derive benefit from it.',
+            'C' => 'ID=33
+(<T NP 0 2> (<L NP POS POS Not NP>) (<T NP\\NP 0 1> (<T S[to]\\NP 0 2> (<L (S[to]\\NP)/(S[b]\\NP) POS POS to (S[to]\\NP)/(S[b]\\NP)>) (<T S[b]\\NP 0 2> (<T (S[b]\\NP)/PP 0 2> (<L ((S[b]\\NP)/PP)/NP POS POS derive ((S[b]\\NP)/PP)/NP>) (<T NP 0 1> (<L N POS POS benefit N>) ) ) (<T PP 0 2> (<L PP/NP POS POS from PP/NP>) (<T NP 0 2> (<L NP POS POS it NP>) (<L . POS POS . .>) ) ) ) ) ) ) '
+          },
+          {
+            'Parse' => [
+                         'Not((to((missionize(an)(individual))(to(((idol)(worship)))(.)))))'
+                       ],
+            'Sentence' => 'Not to missionize an individual to idol worship.',
+            'C' => 'ID=34
+(<T NP 0 2> (<T NP 0 1> (<L N POS POS Not N>) ) (<T NP\\NP 0 1> (<T S[to]\\NP 0 2> (<L (S[to]\\NP)/(S[b]\\NP) POS POS to (S[to]\\NP)/(S[b]\\NP)>) (<T S[b]\\NP 0 2> (<T (S[b]\\NP)/PP 0 2> (<L ((S[b]\\NP)/PP)/NP POS POS missionize ((S[b]\\NP)/PP)/NP>) (<T NP[nb] 0 2> (<L NP[nb]/N POS POS an NP[nb]/N>) (<L N POS POS individual N>) ) ) (<T PP 0 2> (<L PP/NP POS POS to PP/NP>) (<T NP 0 2> (<T NP 0 1> (<T N 1 2> (<L N/N POS POS idol N/N>) (<L N POS POS worship N>) ) ) (<L . POS POS . .>) ) ) ) ) ) ) '
+          },
+          {
+            'C' => 'ID=35
+(<T NP 0 2> (<T NP 0 1> (<L N POS POS Not N>) ) (<T NP\\NP 0 1> (<T S[to]\\NP 0 2> (<L (S[to]\\NP)/(S[b]\\NP) POS POS to (S[to]\\NP)/(S[b]\\NP)>) (<T S[b]\\NP 0 2> (<L (S[b]\\NP)/NP POS POS love (S[b]\\NP)/NP>) (<T NP[nb] 0 2> (<T NP[nb] 0 2> (<L NP[nb]/N POS POS the NP[nb]/N>) (<L N POS POS idolater N>) ) (<L . POS POS . .>) ) ) ) ) ) ',
+            'Parse' => [
+                         'Not((to(love((the)(idolater))(.))))'
+                       ],
+            'Sentence' => 'Not to love the idolater.'
+          },
+          {
+            'C' => 'ID=36
+(<T NP 0 2> (<T NP 0 2> (<L NP/((S[to]\\NP)/NP) POS POS Not NP/((S[to]\\NP)/NP)>) (<T (S[to]\\NP)/NP 0 2> (<L (S[to]\\NP)/(S[b]\\NP) POS POS to (S[to]\\NP)/(S[b]\\NP)>) (<L (S[b]\\NP)/NP POS POS cease (S[b]\\NP)/NP>) ) ) (<T NP\\NP 0 1> (<T S[ng]\\NP 0 2> (<L (S[ng]\\NP)/NP POS POS hating (S[ng]\\NP)/NP>) (<T NP[nb] 0 2> (<T NP[nb] 0 2> (<L NP[nb]/N POS POS the NP[nb]/N>) (<L N POS POS idolater N>) ) (<L . POS POS . .>) ) ) ) ) ',
+            'Sentence' => 'Not to cease hating the idolater.',
+            'Parse' => [
+                         '((to)(cease)(hating((the)(idolater))(.)))'
+                       ]
+          },
+          {
+            'Parse' => [
+                         'Not((to(save((the)(idolater))(.))))'
+                       ],
+            'Sentence' => 'Not to save the idolater.',
+            'C' => 'ID=37
+(<T NP 0 2> (<T NP 0 1> (<L N POS POS Not N>) ) (<T NP\\NP 0 1> (<T S[to]\\NP 0 2> (<L (S[to]\\NP)/(S[b]\\NP) POS POS to (S[to]\\NP)/(S[b]\\NP)>) (<T S[b]\\NP 0 2> (<L (S[b]\\NP)/NP POS POS save (S[b]\\NP)/NP>) (<T NP[nb] 0 2> (<T NP[nb] 0 2> (<L NP[nb]/N POS POS the NP[nb]/N>) (<L N POS POS idolater N>) ) (<L . POS POS . .>) ) ) ) ) ) '
+          },
+          {
+            'C' => 'ID=38
+(<T NP 0 2> (<T NP 0 1> (<L N POS POS Not N>) ) (<T NP\\NP 0 1> (<T S[to]\\NP 0 2> (<L (S[to]\\NP)/(S[b]\\NP) POS POS to (S[to]\\NP)/(S[b]\\NP)>) (<T S[b]\\NP 0 2> (<T S[b]\\NP 0 2> (<L (S[b]\\NP)/NP POS POS say (S[b]\\NP)/NP>) (<L NP POS POS anything NP>) ) (<T (S\\NP)\\(S\\NP) 0 2> (<L ((S\\NP)\\(S\\NP))/NP POS POS in ((S\\NP)\\(S\\NP))/NP>) (<T NP[nb] 0 2> (<T NP[nb] 0 2> (<T NP[nb]/N 1 2> (<T NP[nb] 0 2> (<L NP[nb]/N POS POS the NP[nb]/N>) (<L N POS POS idolater N>) ) (<L (NP[nb]/N)\\NP POS POS \'s (NP[nb]/N)\\NP>) ) (<L N POS POS defense N>) ) (<L . POS POS . .>) ) ) ) ) ) ) ',
+            'Sentence' => 'Not to say anything in the idolater\'s defense.',
+            'Parse' => [
+                         'Not((to((say)(anything)(in((((the)(idolater))(\'s))(defense))(.)))))'
+                       ]
+          },
+          {
+            'C' => 'ID=39
+(<T NP 0 2> (<L NP POS POS Not NP>) (<T NP\\NP 0 1> (<T S[to]\\NP 0 2> (<L (S[to]\\NP)/(S[b]\\NP) POS POS to (S[to]\\NP)/(S[b]\\NP)>) (<T S[b]\\NP 0 2> (<L (S[b]\\NP)/PP POS POS refrain (S[b]\\NP)/PP>) (<T PP 0 2> (<L PP/(S[ng]\\NP) POS POS from PP/(S[ng]\\NP)>) (<T S[ng]\\NP 0 2> (<L (S[ng]\\NP)/NP POS POS incriminating (S[ng]\\NP)/NP>) (<T NP[nb] 0 2> (<T NP[nb] 0 2> (<L NP[nb]/N POS POS the NP[nb]/N>) (<L N POS POS idolater N>) ) (<L . POS POS . .>) ) ) ) ) ) ) ) ',
+            'Parse' => [
+                         'Not((to(refrain((incriminating((the)(idolater))(.))))))'
+                       ],
+            'Sentence' => 'Not to refrain from incriminating the idolater.'
+          },
+          {
+            'C' => 'ID=40
+(<T NP 0 2> (<T NP 0 1> (<L N POS POS Not N>) ) (<T NP\\NP 0 1> (<T S[to]\\NP 0 2> (<L (S[to]\\NP)/(S[b]\\NP) POS POS to (S[to]\\NP)/(S[b]\\NP)>) (<T S[b]\\NP 0 2> (<L S[b]\\NP POS POS prophesy S[b]\\NP>) (<T (S\\NP)\\(S\\NP) 0 2> (<L ((S\\NP)\\(S\\NP))/NP POS POS in ((S\\NP)\\(S\\NP))/NP>) (<T NP[nb] 0 2> (<T NP[nb] 0 2> (<L NP[nb]/N POS POS the NP[nb]/N>) (<L N POS POS name N>) ) (<T NP\\NP 0 2> (<L (NP\\NP)/NP POS POS of (NP\\NP)/NP>) (<T NP 0 2> (<T NP 0 1> (<L N POS POS idolatry N>) ) (<L . POS POS . .>) ) ) ) ) ) ) ) ) ',
+            'Parse' => [
+                         'Not((to(prophesy(in((the)(name)(of(idolatry)(.)))))))'
+                       ],
+            'Sentence' => 'Not to prophesy in the name of idolatry.'
+          },
+          {
+            'C' => 'ID=41
+(<T NP 0 2> (<L NP POS POS Not NP>) (<T NP\\NP 0 1> (<T S[to]\\NP 0 2> (<L (S[to]\\NP)/(S[b]\\NP) POS POS to (S[to]\\NP)/(S[b]\\NP)>) (<T S[b]\\NP 0 2> (<L (S[b]\\NP)/PP POS POS listen (S[b]\\NP)/PP>) (<T PP 0 2> (<L PP/NP POS POS to PP/NP>) (<T NP[nb] 0 2> (<T NP[nb] 0 2> (<L NP[nb]/N POS POS a NP[nb]/N>) (<T N 1 2> (<L N/N POS POS false N/N>) (<L N POS POS prophet N>) ) ) (<L . POS POS . .>) ) ) ) ) ) ) ',
+            'Sentence' => 'Not to listen to a false prophet.',
+            'Parse' => [
+                         'Not((to(listen(to((a(false)(prophet)))(.)))))'
+                       ]
+          },
+          {
+            'Parse' => [
+                         'Not((to((prophesy)(falsely)(in((the)(name)(of(God)(.)))))))'
+                       ],
+            'Sentence' => 'Not to prophesy falsely in the name of God.',
+            'C' => 'ID=42
+(<T NP 0 2> (<L NP POS POS Not NP>) (<T NP\\NP 0 1> (<T S[to]\\NP 0 2> (<L (S[to]\\NP)/(S[b]\\NP) POS POS to (S[to]\\NP)/(S[b]\\NP)>) (<T S[b]\\NP 0 2> (<T S[b]\\NP 0 2> (<L S[b]\\NP POS POS prophesy S[b]\\NP>) (<L (S\\NP)\\(S\\NP) POS POS falsely (S\\NP)\\(S\\NP)>) ) (<T (S\\NP)\\(S\\NP) 0 2> (<L ((S\\NP)\\(S\\NP))/NP POS POS in ((S\\NP)\\(S\\NP))/NP>) (<T NP[nb] 0 2> (<T NP[nb] 0 2> (<L NP[nb]/N POS POS the NP[nb]/N>) (<L N POS POS name N>) ) (<T NP\\NP 0 2> (<L (NP\\NP)/NP POS POS of (NP\\NP)/NP>) (<T NP 0 2> (<T NP 0 1> (<L N POS POS God N>) ) (<L . POS POS . .>) ) ) ) ) ) ) ) ) '
+          },
+          {
+            'Sentence' => 'Not to be afraid of the false prophet.',
+            'Parse' => [
+                         'Not((to(be(afraid(of((the(false)(prophet)))(.))))))'
+                       ],
+            'C' => 'ID=43
+(<T NP 0 2> (<L NP POS POS Not NP>) (<T NP\\NP 0 1> (<T S[to]\\NP 0 2> (<L (S[to]\\NP)/(S[b]\\NP) POS POS to (S[to]\\NP)/(S[b]\\NP)>) (<T S[b]\\NP 0 2> (<L (S[b]\\NP)/(S[adj]\\NP) POS POS be (S[b]\\NP)/(S[adj]\\NP)>) (<T S[adj]\\NP 0 2> (<L (S[adj]\\NP)/PP POS POS afraid (S[adj]\\NP)/PP>) (<T PP 0 2> (<L PP/NP POS POS of PP/NP>) (<T NP[nb] 0 2> (<T NP[nb] 0 2> (<L NP[nb]/N POS POS the NP[nb]/N>) (<T N 1 2> (<L N/N POS POS false N/N>) (<L N POS POS prophet N>) ) ) (<L . POS POS . .>) ) ) ) ) ) ) ) '
+          },
+          {
+            'Sentence' => 'Not to swear in the name of an idol.',
+            'Parse' => [
+                         'Not((to(swear(in((the)(name)(of((an)(idol))(.)))))))'
+                       ],
+            'C' => 'ID=44
+(<T NP 0 2> (<T NP 0 1> (<L N POS POS Not N>) ) (<T NP\\NP 0 1> (<T S[to]\\NP 0 2> (<L (S[to]\\NP)/(S[b]\\NP) POS POS to (S[to]\\NP)/(S[b]\\NP)>) (<T S[b]\\NP 0 2> (<L S[b]\\NP POS POS swear S[b]\\NP>) (<T (S\\NP)\\(S\\NP) 0 2> (<L ((S\\NP)\\(S\\NP))/NP POS POS in ((S\\NP)\\(S\\NP))/NP>) (<T NP[nb] 0 2> (<T NP[nb] 0 2> (<L NP[nb]/N POS POS the NP[nb]/N>) (<L N POS POS name N>) ) (<T NP\\NP 0 2> (<L (NP\\NP)/NP POS POS of (NP\\NP)/NP>) (<T NP[nb] 0 2> (<T NP[nb] 0 2> (<L NP[nb]/N POS POS an NP[nb]/N>) (<L N POS POS idol N>) ) (<L . POS POS . .>) ) ) ) ) ) ) ) ) '
+          },
+          {
+            'C' => 'ID=45
+(<T NP 0 2> (<L NP POS POS Not NP>) (<T NP\\NP 0 1> (<T S[to]\\NP 0 2> (<L (S[to]\\NP)/(S[b]\\NP) POS POS to (S[to]\\NP)/(S[b]\\NP)>) (<T S[b]\\NP 0 2> (<L (S[b]\\NP)/NP POS POS perform (S[b]\\NP)/NP>) (<T NP 0 2> (<T NP 0 1> (<L N POS POS ov N>) ) (<T NP\\NP 0 2> (<L (NP\\NP)/NP POS POS -LRB- (NP\\NP)/NP>) (<T NP 0 2> (<T NP 0 2> (<T NP 0 1> (<L N POS POS medium N>) ) (<L RRB POS POS -RRB- RRB>) ) (<L . POS POS . .>) ) ) ) ) ) ) ) ',
+            'Sentence' => 'Not to perform ov (medium).',
+            'Parse' => [
+                         'Not((to(perform(ov(-LRB-((medium)(-RRB-))(.))))))'
+                       ]
+          },
+          {
+            'Sentence' => 'Not to derive benefit from idols and their accessories.',
+            'Parse' => [
+                         'Not((to((derive)(benefit)(from(idols((and(their)(accessories)))(.))))))'
+                       ],
+            'C' => 'ID=46
+(<T NP 0 2> (<L NP POS POS Not NP>) (<T NP\\NP 0 1> (<T S[to]\\NP 0 2> (<L (S[to]\\NP)/(S[b]\\NP) POS POS to (S[to]\\NP)/(S[b]\\NP)>) (<T S[b]\\NP 0 2> (<T (S[b]\\NP)/PP 0 2> (<L ((S[b]\\NP)/PP)/NP POS POS derive ((S[b]\\NP)/PP)/NP>) (<T NP 0 1> (<L N POS POS benefit N>) ) ) (<T PP 0 2> (<L PP/NP POS POS from PP/NP>) (<T NP 0 2> (<T NP 0 1> (<L N POS POS idols N>) ) (<T NP[nb]\\NP[nb] 0 2> (<T NP[nb]\\NP[nb] 1 2> (<L conj POS POS and conj>) (<T NP[nb] 0 2> (<L NP[nb]/N POS POS their NP[nb]/N>) (<L N POS POS accessories N>) ) ) (<L . POS POS . .>) ) ) ) ) ) ) ) '
+          },
+          {
+            'Parse' => [
+                         'Not((to((derive)(benefit)(from(ornaments(of(idols)(.)))))))'
+                       ],
+            'Sentence' => 'Not to derive benefit from ornaments of idols.',
+            'C' => 'ID=47
+(<T NP 0 2> (<L NP POS POS Not NP>) (<T NP\\NP 0 1> (<T S[to]\\NP 0 2> (<L (S[to]\\NP)/(S[b]\\NP) POS POS to (S[to]\\NP)/(S[b]\\NP)>) (<T S[b]\\NP 0 2> (<T (S[b]\\NP)/PP 0 2> (<L ((S[b]\\NP)/PP)/NP POS POS derive ((S[b]\\NP)/PP)/NP>) (<T NP 0 1> (<L N POS POS benefit N>) ) ) (<T PP 0 2> (<L PP/NP POS POS from PP/NP>) (<T NP 0 2> (<T NP 0 1> (<L N POS POS ornaments N>) ) (<T NP\\NP 0 2> (<L (NP\\NP)/NP POS POS of (NP\\NP)/NP>) (<T NP 0 2> (<T NP 0 1> (<L N POS POS idols N>) ) (<L . POS POS . .>) ) ) ) ) ) ) ) ) '
+          },
+          {
+            'Sentence' => 'Not to make a covenant with idolaters.',
+            'Parse' => [
+                         'Not((to(make((a)(covenant)(with(idolaters)(.))))))'
+                       ],
+            'C' => 'ID=48
+(<T NP 0 2> (<T NP 0 1> (<L N POS POS Not N>) ) (<T NP\\NP 0 1> (<T S[to]\\NP 0 2> (<L (S[to]\\NP)/(S[b]\\NP) POS POS to (S[to]\\NP)/(S[b]\\NP)>) (<T S[b]\\NP 0 2> (<L (S[b]\\NP)/NP POS POS make (S[b]\\NP)/NP>) (<T NP[nb] 0 2> (<T NP[nb] 0 2> (<L NP[nb]/N POS POS a NP[nb]/N>) (<L N POS POS covenant N>) ) (<T NP\\NP 0 2> (<L (NP\\NP)/NP POS POS with (NP\\NP)/NP>) (<T NP 0 2> (<T NP 0 1> (<L N POS POS idolaters N>) ) (<L . POS POS . .>) ) ) ) ) ) ) ) '
+          },
+          {
+            'Parse' => [
+                         'Not((to((show)(favor)(to(them)(.)))))'
+                       ],
+            'Sentence' => 'Not to show favor to them.',
+            'C' => 'ID=49
+(<T NP 0 2> (<T NP 0 1> (<L N POS POS Not N>) ) (<T NP\\NP 0 1> (<T S[to]\\NP 0 2> (<L (S[to]\\NP)/(S[b]\\NP) POS POS to (S[to]\\NP)/(S[b]\\NP)>) (<T S[b]\\NP 0 2> (<T S[b]\\NP 0 2> (<L (S[b]\\NP)/NP POS POS show (S[b]\\NP)/NP>) (<T NP 0 1> (<L N POS POS favor N>) ) ) (<T (S\\NP)\\(S\\NP) 0 2> (<L ((S\\NP)\\(S\\NP))/NP POS POS to ((S\\NP)\\(S\\NP))/NP>) (<T NP 0 2> (<L NP POS POS them NP>) (<L . POS POS . .>) ) ) ) ) ) ) '
+          },
+          {
+            'Sentence' => 'Not to let them dwell in the Land of Israel.',
+            'Parse' => [
+                         'Not((to(((let)(them))(dwell)(in((the)(Land)(of(Israel)(.)))))))'
+                       ],
+            'C' => 'ID=50
+(<T NP 0 2> (<L NP POS POS Not NP>) (<T NP\\NP 0 1> (<T S[to]\\NP 0 2> (<L (S[to]\\NP)/(S[b]\\NP) POS POS to (S[to]\\NP)/(S[b]\\NP)>) (<T S[b]\\NP 0 2> (<T S[b]\\NP 1 2> (<T (S[b]\\NP)/(S[b]\\NP) 0 2> (<L ((S[b]\\NP)/(S[b]\\NP))/NP POS POS let ((S[b]\\NP)/(S[b]\\NP))/NP>) (<L NP POS POS them NP>) ) (<L S[b]\\NP POS POS dwell S[b]\\NP>) ) (<T (S\\NP)\\(S\\NP) 0 2> (<L ((S\\NP)\\(S\\NP))/NP POS POS in ((S\\NP)\\(S\\NP))/NP>) (<T NP[nb] 0 2> (<T NP[nb] 0 2> (<L NP[nb]/N POS POS the NP[nb]/N>) (<L N POS POS Land N>) ) (<T NP\\NP 0 2> (<L (NP\\NP)/NP POS POS of (NP\\NP)/NP>) (<T NP 0 2> (<T NP 0 1> (<L N POS POS Israel N>) ) (<L . POS POS . .>) ) ) ) ) ) ) ) ) '
+          },
+          {
+            'C' => 'ID=51
+(<T NP 0 2> (<L NP POS POS Not NP>) (<T NP\\NP 0 1> (<T S[to]\\NP 0 2> (<L (S[to]\\NP)/(S[b]\\NP) POS POS to (S[to]\\NP)/(S[b]\\NP)>) (<T S[b]\\NP 0 2> (<T S[b]\\NP 0 2> (<L (S[b]\\NP)/NP POS POS imitate (S[b]\\NP)/NP>) (<L NP POS POS them NP>) ) (<T (S\\NP)\\(S\\NP) 0 2> (<L ((S\\NP)\\(S\\NP))/NP POS POS in ((S\\NP)\\(S\\NP))/NP>) (<T NP 0 2> (<T NP 0 1> (<L N POS POS customs N>) ) (<T NP\\NP 1 2> (<L conj POS POS and conj>) (<T NP 0 2> (<T NP 0 1> (<L N POS POS clothing N>) ) (<L . POS POS . .>) ) ) ) ) ) ) ) ) ',
+            'Parse' => [
+                         'Not((to((imitate)(them)(in(customs(and(clothing)(.)))))))'
+                       ],
+            'Sentence' => 'Not to imitate them in customs and clothing.'
+          },
+          {
+            'C' => 'ID=52
+(<T NP 0 2> (<L NP POS POS Not NP>) (<T NP\\NP 0 1> (<T S[to]\\NP 0 2> (<L (S[to]\\NP)/(S[b]\\NP) POS POS to (S[to]\\NP)/(S[b]\\NP)>) (<T S[b]\\NP 0 2> (<L (S[b]\\NP)/(S[adj]\\NP) POS POS be (S[b]\\NP)/(S[adj]\\NP)>) (<T S[adj]\\NP 0 2> (<L S[adj]\\NP POS POS superstitious S[adj]\\NP>) (<L . POS POS . .>) ) ) ) ) ) ',
+            'Parse' => [
+                         'Not((to(be(superstitious)(.))))'
+                       ],
+            'Sentence' => 'Not to be superstitious.'
+          },
+          {
+            'C' => 'ID=53
+(<T NP 0 2> (<T NP 0 1> (<L N POS POS Not N>) ) (<T NP\\NP 0 1> (<T S[to]\\NP 0 2> (<L (S[to]\\NP)/(S[b]\\NP) POS POS to (S[to]\\NP)/(S[b]\\NP)>) (<T S[b]\\NP 0 2> (<L S[b]\\NP POS POS go S[b]\\NP>) (<T (S\\NP)\\(S\\NP) 0 2> (<L ((S\\NP)\\(S\\NP))/NP POS POS into ((S\\NP)\\(S\\NP))/NP>) (<T NP[nb] 0 2> (<L NP[nb]/N POS POS a NP[nb]/N>) (<T N 0 2> (<L N POS POS trance N>) (<T N\\N 0 1> (<T S[to]\\NP 0 2> (<L (S[to]\\NP)/(S[b]\\NP) POS POS to (S[to]\\NP)/(S[b]\\NP)>) (<T S[b]\\NP 0 2> (<L (S[b]\\NP)/NP POS POS foresee (S[b]\\NP)/NP>) (<T NP 0 2> (<T NP 0 1> (<L N POS POS events N>) ) (<T NP\\NP 1 2> (<L , POS POS , ,>) (<T NP 0 1> (<L N POS POS etc.. N>) ) ) ) ) ) ) ) ) ) ) ) ) ) ',
+            'Parse' => [
+                         'Not((to(go(into(a(trance((to(foresee(events(,)(etc..)))))))))))'
+                       ],
+            'Sentence' => 'Not to go into a trance to foresee events, etc..'
+          },
+          {
+            'C' => 'ID=54
+(<T NP 0 2> (<L NP POS POS Not NP>) (<T NP\\NP 0 1> (<T S[to]\\NP 0 2> (<L (S[to]\\NP)/(S[b]\\NP) POS POS to (S[to]\\NP)/(S[b]\\NP)>) (<T S[b]\\NP 0 2> (<L (S[b]\\NP)/PP POS POS engage (S[b]\\NP)/PP>) (<T PP 0 2> (<L PP/NP POS POS in PP/NP>) (<T NP 0 2> (<T NP 0 1> (<L N POS POS divination N>) ) (<T NP\\NP 1 2> (<L conj POS POS or conj>) (<T NP 0 2> (<T NP 0 1> (<L N POS POS soothsaying N>) ) (<L . POS POS . .>) ) ) ) ) ) ) ) ) ',
+            'Parse' => [
+                         'Not((to(engage(in(divination(or(soothsaying)(.)))))))'
+                       ],
+            'Sentence' => 'Not to engage in divination or soothsaying.'
+          },
+          {
+            'C' => 'ID=55
+(<T NP 0 2> (<L NP POS POS Not NP>) (<T NP\\NP 0 1> (<T S[to]\\NP 0 2> (<L (S[to]\\NP)/(S[b]\\NP) POS POS to (S[to]\\NP)/(S[b]\\NP)>) (<T S[b]\\NP 0 2> (<L (S[b]\\NP)/NP POS POS mutter (S[b]\\NP)/NP>) (<T NP 0 2> (<T NP 0 1> (<L N POS POS incantations N>) ) (<L . POS POS . .>) ) ) ) ) ) ',
+            'Sentence' => 'Not to mutter incantations.',
+            'Parse' => [
+                         'Not((to(mutter(incantations)(.))))'
+                       ]
+          },
+          {
+            'Parse' => [
+                         'Not((to(attempt(to(contact((the)(dead))(.))))))'
+                       ],
+            'Sentence' => 'Not to attempt to contact the dead.',
+            'C' => 'ID=56
+(<T NP 0 2> (<T NP 0 1> (<L N POS POS Not N>) ) (<T NP\\NP 0 1> (<T S[to]\\NP 0 2> (<L (S[to]\\NP)/(S[b]\\NP) POS POS to (S[to]\\NP)/(S[b]\\NP)>) (<T S[b]\\NP 0 2> (<L (S[b]\\NP)/(S[to]\\NP) POS POS attempt (S[b]\\NP)/(S[to]\\NP)>) (<T S[to]\\NP 0 2> (<L (S[to]\\NP)/(S[b]\\NP) POS POS to (S[to]\\NP)/(S[b]\\NP)>) (<T S[b]\\NP 0 2> (<L (S[b]\\NP)/NP POS POS contact (S[b]\\NP)/NP>) (<T NP[nb] 0 2> (<T NP[nb] 0 2> (<L NP[nb]/N POS POS the NP[nb]/N>) (<L N POS POS dead N>) ) (<L . POS POS . .>) ) ) ) ) ) ) ) '
+          },
+          {
+            'Sentence' => 'Not to consult the ov.',
+            'Parse' => [
+                         'Not((to(consult((the)(ov))(.))))'
+                       ],
+            'C' => 'ID=57
+(<T NP 0 2> (<T NP 0 1> (<L N POS POS Not N>) ) (<T NP\\NP 0 1> (<T S[to]\\NP 0 2> (<L (S[to]\\NP)/(S[b]\\NP) POS POS to (S[to]\\NP)/(S[b]\\NP)>) (<T S[b]\\NP 0 2> (<L (S[b]\\NP)/NP POS POS consult (S[b]\\NP)/NP>) (<T NP[nb] 0 2> (<T NP[nb] 0 2> (<L NP[nb]/N POS POS the NP[nb]/N>) (<L N POS POS ov N>) ) (<L . POS POS . .>) ) ) ) ) ) '
+          },
+          {
+            'C' => 'ID=58
+(<T NP 0 2> (<T NP 0 1> (<L N POS POS Not N>) ) (<T NP\\NP 0 1> (<T S[to]\\NP 0 2> (<L (S[to]\\NP)/(S[b]\\NP) POS POS to (S[to]\\NP)/(S[b]\\NP)>) (<T S[b]\\NP 0 2> (<L (S[b]\\NP)/NP POS POS consult (S[b]\\NP)/NP>) (<T NP[nb] 0 2> (<T NP[nb] 0 2> (<L NP[nb]/N POS POS the NP[nb]/N>) (<L N POS POS yidoni N>) ) (<L . POS POS . .>) ) ) ) ) ) ',
+            'Sentence' => 'Not to consult the yidoni.',
+            'Parse' => [
+                         'Not((to(consult((the)(yidoni))(.))))'
+                       ]
+          },
+          {
+            'Parse' => [
+                         'Not((to(perform(acts(of(magic)(.))))))'
+                       ],
+            'Sentence' => 'Not to perform acts of magic.',
+            'C' => 'ID=59
+(<T NP 0 2> (<L NP POS POS Not NP>) (<T NP\\NP 0 1> (<T S[to]\\NP 0 2> (<L (S[to]\\NP)/(S[b]\\NP) POS POS to (S[to]\\NP)/(S[b]\\NP)>) (<T S[b]\\NP 0 2> (<L (S[b]\\NP)/NP POS POS perform (S[b]\\NP)/NP>) (<T NP 0 2> (<T NP 0 1> (<L N POS POS acts N>) ) (<T NP\\NP 0 2> (<L (NP\\NP)/NP POS POS of (NP\\NP)/NP>) (<T NP 0 2> (<T NP 0 1> (<L N POS POS magic N>) ) (<L . POS POS . .>) ) ) ) ) ) ) ) '
+          },
+          {
+            'Sentence' => 'Men must not shave the hair off the sides of their head.',
+            'Parse' => [
+                         'Men((must)(not)(shave((the)(hair)(off((the)(sides)(of((their)(head))(.)))))))'
+                       ],
+            'C' => 'ID=60
+(<T S[dcl] 1 2> (<T NP 0 1> (<L N POS POS Men N>) ) (<T S[dcl]\\NP 0 2> (<T (S[dcl]\\NP)/(S[b]\\NP) 0 2> (<L (S[dcl]\\NP)/(S[b]\\NP) POS POS must (S[dcl]\\NP)/(S[b]\\NP)>) (<L (S\\NP)\\(S\\NP) POS POS not (S\\NP)\\(S\\NP)>) ) (<T S[b]\\NP 0 2> (<L (S[b]\\NP)/NP POS POS shave (S[b]\\NP)/NP>) (<T NP[nb] 0 2> (<T NP[nb] 0 2> (<L NP[nb]/N POS POS the NP[nb]/N>) (<L N POS POS hair N>) ) (<T NP\\NP 0 2> (<L (NP\\NP)/NP POS POS off (NP\\NP)/NP>) (<T NP[nb] 0 2> (<T NP[nb] 0 2> (<L NP[nb]/N POS POS the NP[nb]/N>) (<L N POS POS sides N>) ) (<T NP\\NP 0 2> (<L (NP\\NP)/NP POS POS of (NP\\NP)/NP>) (<T NP[nb] 0 2> (<T NP[nb] 0 2> (<L NP[nb]/N POS POS their NP[nb]/N>) (<L N POS POS head N>) ) (<L . POS POS . .>) ) ) ) ) ) ) ) ) '
+          },
+          {
+            'Parse' => [
+                         'Men((must)(not(shave(their)(beards))(with((a)(razor))(.))))'
+                       ],
+            'Sentence' => 'Men must not shave their beards with a razor.',
+            'C' => 'ID=61
+(<T S[dcl] 1 2> (<T NP 0 1> (<L N POS POS Men N>) ) (<T S[dcl]\\NP 0 2> (<T (S[dcl]\\NP)/(S[b]\\NP) 0 2> (<L (S[dcl]\\NP)/(S[b]\\NP) POS POS must (S[dcl]\\NP)/(S[b]\\NP)>) (<L (S\\NP)\\(S\\NP) POS POS not (S\\NP)\\(S\\NP)>) ) (<T S[b]\\NP 0 2> (<T (S[b]\\NP)/PP 0 2> (<L ((S[b]\\NP)/PP)/NP POS POS shave ((S[b]\\NP)/PP)/NP>) (<T NP[nb] 0 2> (<L NP[nb]/N POS POS their NP[nb]/N>) (<L N POS POS beards N>) ) ) (<T PP 0 2> (<L PP/NP POS POS with PP/NP>) (<T NP[nb] 0 2> (<T NP[nb] 0 2> (<L NP[nb]/N POS POS a NP[nb]/N>) (<L N POS POS razor N>) ) (<L . POS POS . .>) ) ) ) ) ) '
+          },
+          {
+            'Parse' => [
+                         'Men((must)(not)(wear(women(\'\'(((s)(clothing)))(.)))))'
+                       ],
+            'Sentence' => 'Men must not wear women"s clothing.',
+            'C' => 'ID=62
+(<T S[dcl] 1 2> (<T NP 0 1> (<L N POS POS Men N>) ) (<T S[dcl]\\NP 0 2> (<T (S[dcl]\\NP)/(S[b]\\NP) 0 2> (<L (S[dcl]\\NP)/(S[b]\\NP) POS POS must (S[dcl]\\NP)/(S[b]\\NP)>) (<L (S\\NP)\\(S\\NP) POS POS not (S\\NP)\\(S\\NP)>) ) (<T S[b]\\NP 0 2> (<L (S[b]\\NP)/NP POS POS wear (S[b]\\NP)/NP>) (<T NP 0 2> (<T NP 0 1> (<L N POS POS women N>) ) (<T NP\\NP 1 2> (<L , POS POS \'\' ,>) (<T NP 0 2> (<T NP 0 1> (<T N 1 2> (<L N/N POS POS s N/N>) (<L N POS POS clothing N>) ) ) (<L . POS POS . .>) ) ) ) ) ) ) '
+          },
+          {
+            'C' => 'ID=63
+(<T S[dcl] 1 2> (<T NP 0 1> (<L N POS POS Women N>) ) (<T S[dcl]\\NP 0 2> (<T (S[dcl]\\NP)/(S[b]\\NP) 0 2> (<L (S[dcl]\\NP)/(S[b]\\NP) POS POS must (S[dcl]\\NP)/(S[b]\\NP)>) (<L (S\\NP)\\(S\\NP) POS POS not (S\\NP)\\(S\\NP)>) ) (<T S[b]\\NP 0 2> (<L (S[b]\\NP)/NP POS POS wear (S[b]\\NP)/NP>) (<T NP 0 2> (<T NP 0 1> (<L N POS POS men N>) ) (<T NP\\NP 1 2> (<L , POS POS \'\' ,>) (<T NP 0 2> (<T NP 0 1> (<T N 1 2> (<L N/N POS POS s N/N>) (<L N POS POS clothing N>) ) ) (<L . POS POS . .>) ) ) ) ) ) ) ',
+            'Sentence' => 'Women must not wear men"s clothing.',
+            'Parse' => [
+                         'Women((must)(not)(wear(men(\'\'(((s)(clothing)))(.)))))'
+                       ]
+          },
+          {
+            'Parse' => [
+                         'Not((to(tattoo((the)(skin))(.))))'
+                       ],
+            'Sentence' => 'Not to tattoo the skin.',
+            'C' => 'ID=64
+(<T NP 0 2> (<T NP 0 1> (<L N POS POS Not N>) ) (<T NP\\NP 0 1> (<T S[to]\\NP 0 2> (<L (S[to]\\NP)/(S[b]\\NP) POS POS to (S[to]\\NP)/(S[b]\\NP)>) (<T S[b]\\NP 0 2> (<L (S[b]\\NP)/NP POS POS tattoo (S[b]\\NP)/NP>) (<T NP[nb] 0 2> (<T NP[nb] 0 2> (<L NP[nb]/N POS POS the NP[nb]/N>) (<L N POS POS skin N>) ) (<L . POS POS . .>) ) ) ) ) ) '
+          },
+          {
+            'Sentence' => 'Not to tear the skin in mourning.',
+            'Parse' => [
+                         'Not((to((tear(the)(skin))(in(mourning)(.)))))'
+                       ],
+            'C' => 'ID=65
+(<T NP 0 2> (<T NP 0 1> (<L N POS POS Not N>) ) (<T NP\\NP 0 1> (<T S[to]\\NP 0 2> (<L (S[to]\\NP)/(S[b]\\NP) POS POS to (S[to]\\NP)/(S[b]\\NP)>) (<T S[b]\\NP 0 2> (<T S[b]\\NP 0 2> (<L (S[b]\\NP)/NP POS POS tear (S[b]\\NP)/NP>) (<T NP[nb] 0 2> (<L NP[nb]/N POS POS the NP[nb]/N>) (<L N POS POS skin N>) ) ) (<T (S\\NP)\\(S\\NP) 0 2> (<L ((S\\NP)\\(S\\NP))/NP POS POS in ((S\\NP)\\(S\\NP))/NP>) (<T NP 0 2> (<T NP 0 1> (<L N POS POS mourning N>) ) (<L . POS POS . .>) ) ) ) ) ) ) '
+          },
+          {
+            'Parse' => [
+                         'Not((to(make((a(bald)(spot))(in(mourning)(.))))))'
+                       ],
+            'Sentence' => 'Not to make a bald spot in mourning.',
+            'C' => 'ID=66
+(<T NP 0 2> (<T NP 0 1> (<L N POS POS Not N>) ) (<T NP\\NP 0 1> (<T S[to]\\NP 0 2> (<L (S[to]\\NP)/(S[b]\\NP) POS POS to (S[to]\\NP)/(S[b]\\NP)>) (<T S[b]\\NP 0 2> (<L (S[b]\\NP)/NP POS POS make (S[b]\\NP)/NP>) (<T NP[nb] 0 2> (<T NP[nb] 0 2> (<L NP[nb]/N POS POS a NP[nb]/N>) (<T N 1 2> (<L N/N POS POS bald N/N>) (<L N POS POS spot N>) ) ) (<T NP\\NP 0 2> (<L (NP\\NP)/NP POS POS in (NP\\NP)/NP>) (<T NP 0 2> (<T NP 0 1> (<L N POS POS mourning N>) ) (<L . POS POS . .>) ) ) ) ) ) ) ) '
+          },
+          {
+            'C' => 'ID=67
+(<T NP 0 2> (<T NP 0 1> (<T N 1 2> (<L N/N POS POS To N/N>) (<L N POS POS repent N>) ) ) (<T NP\\NP 1 2> (<L conj POS POS and conj>) (<T NP 0 2> (<T NP 0 1> (<T N 1 2> (<L N/N POS POS confess N/N>) (<L N POS POS wrongdoings N>) ) ) (<L . POS POS . .>) ) ) ) ',
+            'Sentence' => 'To repent and confess wrongdoings.',
+            'Parse' => [
+                         '((To)(repent))(and(((confess)(wrongdoings)))(.))'
+                       ]
+          },
+          {
+            'C' => 'ID=68
+(<T S[dcl] 1 2> (<T NP[nb] 0 2> (<L NP[nb]/N POS POS The NP[nb]/N>) (<L N POS POS Kohanim N>) ) (<T S[dcl]\\NP 0 2> (<L (S[dcl]\\NP)/(S[b]\\NP) POS POS must (S[dcl]\\NP)/(S[b]\\NP)>) (<T S[b]\\NP 0 2> (<T S[b]\\NP 0 2> (<L (S[b]\\NP)/NP POS POS bless (S[b]\\NP)/NP>) (<T NP[nb] 0 2> (<L NP[nb]/N POS POS the NP[nb]/N>) (<T N 1 2> (<L N/N POS POS Jewish N/N>) (<L N POS POS nation N>) ) ) ) (<T (S\\NP)\\(S\\NP) 0 2> (<L (S\\NP)\\(S\\NP) POS POS daily (S\\NP)\\(S\\NP)>) (<L . POS POS . .>) ) ) ) ) ',
+            'Parse' => [
+                         '(The)(Kohanim)(must((bless(the(Jewish)(nation)))(daily)(.)))'
+                       ],
+            'Sentence' => 'The Kohanim must bless the Jewish nation daily.'
+          },
+          {
+            'C' => 'ID=69
+(<T NP 0 2> (<T NP 0 1> (<T N 1 2> (<T N/N 1 2> (<L (N/N)/(N/N) POS POS To (N/N)/(N/N)>) (<L N/N POS POS wear N/N>) ) (<L N POS POS tefillin N>) ) ) (<T NP\\NP 0 2> (<L (NP\\NP)/NP POS POS -LRB- (NP\\NP)/NP>) (<T NP 0 2> (<T NP 0 2> (<T NP 0 1> (<L N POS POS phylacteries N>) ) (<L RRB POS POS -RRB- RRB>) ) (<T NP\\NP 0 2> (<L (NP\\NP)/NP POS POS on (NP\\NP)/NP>) (<T NP[nb] 0 2> (<T NP[nb] 0 2> (<L NP[nb]/N POS POS the NP[nb]/N>) (<L N POS POS head N>) ) (<L . POS POS . .>) ) ) ) ) ) ',
+            'Sentence' => 'To wear tefillin (phylacteries) on the head.',
+            'Parse' => [
+                         '(((To)(wear))(tefillin))(-LRB-((phylacteries)(-RRB-)(on((the)(head))(.))))'
+                       ]
+          },
+          {
+            'C' => 'ID=70
+(<T NP 0 2> (<T NP 0 1> (<T N 1 2> (<L N/N POS POS To N/N>) (<T N 1 2> (<L N/N POS POS bind N/N>) (<L N POS POS tefillin N>) ) ) ) (<T NP\\NP 0 2> (<L (NP\\NP)/NP POS POS on (NP\\NP)/NP>) (<T NP[nb] 0 2> (<T NP[nb] 0 2> (<L NP[nb]/N POS POS the NP[nb]/N>) (<L N POS POS arm N>) ) (<L . POS POS . .>) ) ) ) ',
+            'Parse' => [
+                         '((To(bind)(tefillin)))(on((the)(arm))(.))'
+                       ],
+            'Sentence' => 'To bind tefillin on the arm.'
+          }
+        ];

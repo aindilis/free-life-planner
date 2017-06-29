@@ -1,0 +1,52 @@
+Directories & files
+-------------------
+
+* HillClimbingSearch:
+Contains Hoffmann's functions for best first search
+relax.c
+search.c
+
+* Parser:
+Contains functions for the parser
+inst_easy.c
+inst_final.c
+inst_hard.c
+inst_pre.c
+memory.c
+parse.c
+scan-fct_pddl.y
+scan-ops_pddl.y
+lex-fct_pddl.l
+lex-ops_pddl.l
+
+* LocalSearch:
+Contains functions for local search
+walkplan.c
+dg_heuristics.c
+levels.c
+numeric.c
+time.c
+
+* Utilities:
+Contains functions for the output, debug and various utilities 
+check.c
+output.c
+utilities.c
+
+* Headers:
+adapt.h          
+functions.h  
+inst_final.h  
+memory.h     
+parse.h   
+walkplan.h
+dg_heuristics.h  
+gpg.h        
+inst_hard.h   
+orderings.h  
+relax.h
+ff.h             
+inst_easy.h  
+inst_pre.h    
+output.h     
+search.h

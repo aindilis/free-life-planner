@@ -1,0 +1,471 @@
+  • Home
+  • ALEXA
+  • SERVICES & APIS
+  • DEVICES
+  • RESOURCES
+  • BLOGS
+  • SUPPORT
+
+[                    ] ●
+Home > Alexa > Alexa Skills Kit
+
+  • Alexa
+  • Alexa Skills Kit
+  • Alexa Voice Service
+  • Alexa Fund
+  • Rewards for Skill Developers
+
+Alexa Skills Kit Functional Testing for Custom Skills
+
+Introduction
+
+The functional tests verify that:
+
+  • The skill’s basic functionality matches the information displayed on the
+    skill’s detail card in the Amazon Alexa app. You enter this data on the
+    Publishing Information page for the skill on the developer portal.
+
+    See Define Skill Metadata for more details about defining this card.
+
+  • The skill’s core functionality works and provides useful home cards to the
+    Amazon Alexa app.
+
+Use the Amazon Alexa app for these tests. The Alexa app is available for Fire
+OS, Android, iOS, and web browsers. The Alexa app displays all of your skills
+currently under development, as well as all published skills.
+
+To return to the high-level testing checklist, see Certification Requirements
+for Custom Skills.
+
+  • 3.1. Review and Test Example Phrases
+  • 3.2. Skill Description and Detail Page
+  • 3.3. Home Cards
+  • 3.4. Account Linking
+  • 3.5. Audio Playback
+  • 3.6. Duplicates of Samples or Templates
+  • 3.7 Device Location API
+  • Next Steps
+
+3.1. Review and Test Example Phrases
+
+Example phrases are shown on the skill’s detail card in the Alexa app to help
+users understand how to interact with the skill. You select these phrases from
+your sample utterances to ensure accuracy.
+
+These are the phrases users are most likely to try the first time they interact
+with the skill. Therefore, make sure that they work well and provide a good
+user experience.
+
+Detail Card for a Skill in the Alexa AppDetail Card for a Skill in the Alexa
+App
+Important: If you are using any of the intents in the built-in intent library,
+you may want to also use utterances for those intents in your example phrases.
+In this case, you can use the exact phrase provided in the documentation for
+the intent. Alternatively, you can use a variation of this phrase. Be sure to
+fully test the utterance and verify that it works and your skill returns a
+valid response. If the example utterances you provide fail to return a valid
+response during certification, your skill will fail certification.
+
+   Test                                  Expected Results
+                                           • At least one example phrase has
+                                             been provided.
+                                           • The first phrase clearly indicates
+                                             how to begin using the skill, and
+                                             includes both the wake word and
+                                             invocation name.
+                                           • Example phrases containing the
+                                             wake word and invocation name must
+                                             use a supported format for
+                                             invoking a skill. For a list of
+                                             supported formats, see
+                                             Understanding How Users Invoke
+                                             Custom Skills.
+                                           • The example phrases do not contain
+                                             any additional information that is
+                                             not intended to be spoken by
+                                             users. The example phrases must
+   Open the Alexa app, click Skills and      function exactly as they are
+   then scroll or search to find your        written.
+   skill.                                  • The invocation name uses title
+1.                                           case.
+   Review the skill’s detail page.         • The example phrases do not contain
+   Inspect all example phrases listed in     any emoticons, symbols, or
+   the skill’s detail card.                  grammatical errors.
+                                           • Each example phrase ends with
+                                             punctuation. Exclamation points
+                                             are not used, as they may misguide
+                                             users into thinking they must
+                                             express enthusiasm.
+                                           • The example phrases show how to
+                                             launch the skill. They do not
+                                             illustrate enabling the skill by
+                                             voice. For example, the phrase
+                                             must not be something like “Alexa,
+                                             enable <skill name>.”
+                                           • The example phrases are all
+                                             written in the same language used
+                                             by the Alexa account. For
+                                             instance, when using an account
+                                             configured with German, the
+                                             phrases are written in German.
+
+                                         Each example phrase is explicitly
+   Open the developer portal, edit the   included in the sample utterances.
+   skill, and go to the Interaction
+   Model page. Review the sample         For instance, if you have this example
+   utterances for your skill and verify  phrase:
+   that each example phrase is included
+   as a sample utterance.                  • Alexa, ask Tide Pooler when is
+                                             high tide in Seattle.
+   For more about defining example
+   phrases, see the “Defining your       Then you must also have this
+2. Example Phrases (“Try Saying”)”       utterance:
+   section of Define Skill Metadata.
+                                           • OneshotTideIntent when is high
+   If you are using the utterance for a      tide in {City}
+   built-in intent for an example
+   phrase, the utterance does not need   Any slots in the example phrase (such
+   to be in your sample utterances.      as Seattle in this example) must be
+   However, fully test the utterance and filled with an example of a valid slot
+   verify that your skill returns a      value. In this example, City is a
+   valid response.                       custom slot type, and “Seattle” is a
+                                         value explicitly defined for the City
+                                         type.
+
+3. Launch the skill using each of the    Each example phrase renders a
+   provided example phrases.             contextualized, non-error response.
+
+3.2. Skill Description and Detail Page
+
+The skill description teaches users about what your skill can do and how to use
+it.
+
+   Test                                   Expected Results
+                                            • The short description describes
+                                              the skill’s core functionality.
+   Open the Alexa app, click Skills and     • The short description is written
+   then scroll to your skill. Review the      in the same language used by the
+1. short description shown in the list of     Alexa account. For instance, when
+   skills                                     using an account configured with
+                                              German, the skill short
+                                              description is displayed in
+                                              German.
+
+                                            • The skill description captures
+                                              any prerequisites needed to use
+                                              the skill (such as additional
+                                              hardware, software, or accounts).
+                                            • The description describes the
+                                              skill’s core functionality.
+                                            • The description does not
+                                              misrepresent the skill’s
+                                              functionality.
+                                            • The description is written in the
+                                              same language used by the Alexa
+                                              account. For instance, when using
+                                              an account configured with
+   Open the detail card for the skill.        German, the skill description is
+2. Review the skill’s full description        displayed in German.
+   shown on the skill’s detail card.        • If the skill integrates with
+                                              Raspberry Pi or a similar device,
+                                              the description must:
+                                               1. Mention that a Raspberry Pi
+                                                  (or similar device) is
+                                                  required to access core
+                                                  functionality of the skill.
+                                               2. Include links to
+                                                  documentation explaining how
+                                                  to configure the Raspberry Pi
+                                                  with the skill.
+                                            • The description must not claim
+                                              that the skill has any anti-virus
+                                              features.
+
+   If either the short description or       • The page referenced by the
+   full description includes any URLs         description opens without error.
+3. (such as directing users to more         • The page is displayed in a
+   information about the skill), visit        language supported by Alexa. The
+   the URL in a browser and verify the        current supported languages are
+   page opens without error.                  English and German.
+
+                                            • The privacy policy / terms of use
+                                              links shown on the skill detail
+                                              page open without error.
+   If your skill’s detail page includes     • The pages are displayed in the
+4. links to a privacy policy or terms of      same language used by the Alexa
+   use, open the links in a browser.          account. For instance, when using
+                                              an account configured with
+                                              German, the privacy policy and
+                                              terms of use must be in German.
+
+   Review the skill title and icon and    Both the title and icon are relevant
+5. ensure they are relevant to the core   to the skill description and are not
+   functionality of the skill.            misleading.
+
+3.3. Home Cards
+
+Home cards are graphical cards displayed in the Alexa app to describe or
+enhance the voice interaction.
+
+   Test                                   Expected Results
+                                          For each card:
+
+                                            • The card title and content are
+                                              appropriate in the context of the
+   Walk through the skill’s                   skill’s functionality.
+   functionality, invoking each intent.     • The card title and content do not
+1. For each response that includes a home     contain any code references or
+   card, review the card in the Alexa         grammatical errors.
+   app.                                     • The card title and content are
+                                              written in a language supported
+                                              by Alexa. The current supported
+                                              languages are English and German.
+                                            • If the card includes an image,
+                                              the image is correctly displayed.
+
+                                          For each URL displayed in a home
+                                          card:
+
+   If any home cards include URLs, visit    • The page opens in a browser
+2. each URL in a browser and verify the       without error.
+   page opens without error.                • The page is displayed in a
+                                              language supported by Alexa. The
+                                              current supported languages are
+                                              English and German.
+
+Note that skills normally only return home cards when responding with the
+information the user requested. Supportive prompts to ask the user for more
+information do not normally include home cards.
+
+Home cards can be a useful tool when developing and debugging a skill, but be
+sure to remove any extraneous debug-type cards before submitting the skill.
+
+3.4. Account Linking
+
+If your skill needs to connect the identity of the end user with a user in
+another system (account linking), this test verifies that the skill implements
+the solution described in Linking an Alexa User with a User in Your System
+correctly. When submitting your skill, be sure to provide a valid set of
+account credentials with your testing instructions so our certification team
+can verify the account linking and functionality of your skill.
+
+If your skill does not use account linking, you can skip this test.
+
+   Test                                   Expected Results
+   In the developer portal, review the      • The Account Linking or Creation
+1. Configuration page for the skill and       option is set to Yes.
+   verify that account linking has been     • The Authorization URL is set to
+   configured correctly.                      the login page for your service.
+
+   In the Alexa app, review the detail
+   card for your skill. Verify that the   The description clearly explains the
+2. skill description explains that you    steps and information necessary to
+   must log in to the other system to use successfully link the accounts.
+   the skill.
+
+   Log in to the Alexa app as an Alexa
+   user who has not yet enabled the
+   skill.
+                                            • Each intent that does not require
+   Enable the skill, but do not complete      authentication works correctly
+   the account linking process, leaving       even when accounts are not linked.
+3. the skill enabled but not linked.        • Each intent that does require
+                                              authentication returns output
+    1. Invoke any intents that do not         speech telling the user what to
+       require authentication and verify      do, and a link account card.
+       that they work.                        Verify the card in the Alexa app.
+    2. Invoke the intents that do require
+       authentication and verify the
+       response.
+
+   Disable the skill or log in to the
+   Alexa app as an Alexa user who has not   • All clickable links on the login
+   yet enabled the skill.                     page navigate to new pages.
+4.                                          • None of the clickable links open
+   Enable the skill. Once the login page      JavaScript alerts or popup
+   for your skill is displayed, click all     windows.
+   links and verify that they navigate to
+   new pages.
+
+   Disable the skill or log in to the       • The login page for your skill is
+   Alexa app as an Alexa user who has not     displayed correctly.
+   yet enabled the skill.                   • You can successfully log in using
+5.                                            an account with the service.
+   Enable the skill. Once the login page    • After connecting the accounts, you
+   for your skill is displayed, log in        can successfully invoke each
+   and verify the account linking flow.       intent that requires
+                                              authentication.
+
+3.5. Audio Playback
+
+Complete these tests if your skill uses the AudioPlayer interface to stream
+audio.
+
+   Test                           Expected Results
+                                    • The audio playback is audible at volume
+                                      level 3.
+                                    • The volume of the audio playback does not
+                                      vary significantly from normal Alexa
+   Set the volume on the device       text-to-speech. The volume remains
+1. to 3 and invoke an intent that     consistent while playing for several
+   streams the audio. Listen for      minutes.
+   several minutes.                 • If the audio content includes words or
+                                      speech, the content is spoken in a
+                                      language supported by Alexa. The current
+                                      supported languages are English and
+                                      German.
+
+   While listening to the audio
+   playback, invoke the following
+   built-in intents:                • The “pause” utterance stops the audio
+2.                                    playback.
+     • AMAZON.PauseIntent (say      • The “resume” utterance resumes the audio
+       “pause”)                       playback.
+     • AMAZON.ResumeIntent (say
+       “resume”)
+
+   While listening to the audio     • Pressing a pause button while audio is
+3. playback, use a remote control     playing stops the playback.
+   or other hardware device to      • Pressing a play button while the audio is
+   pause and resume the audio.        stopped resumes the playback.
+
+   While listening to the audio
+   playback, invoke the following
+   built-in intents:
+
+     • AMAZON.CancelIntent (say
+       “cancel”)
+     • AMAZON.LoopOffIntent (say
+       “loop off”)
+     • AMAZON.LoopOnIntent (say
+       “loop on”)                 Each command either does something that makes
+     • AMAZON.NextIntent (say     sense for your skill (such as “next”
+4.     “next”)                    advancing to the next track in a playlist) or
+     • AMAZON.PreviousIntent (say is handled gracefully. No unexpected errors
+       “previous”)                occur. See Configuring Your Skill for the
+     • AMAZON.RepeatIntent (say   AudioPlayer Directives.
+       “repeat that”)
+     • AMAZON.ShuffleOffIntent
+       (say “shuffle off”)
+     • AMAZON.ShuffleOnIntent
+       (say “shuffle”)
+     • AMAZON.StartOverIntent
+       (say “start over”)
+     • AMAZON.StopIntent (say
+       “stop”)
+
+3.6. Duplicates of Samples or Templates
+
+Make sure your skill is not an exact duplicate of any of the Amazon-provided
+samples or templates. You can use the samples and templates as a starting point
+for your skill, but the finished skill must be different.
+
+For example, if you use the Trivia sample to create a trivia skill, your skill
+must have:
+
+  • A different name
+  • A different set of questions
+
+The samples and templates are available on GitHub:
+
+  • Javascript/Node.js: Alexa organization
+  • Java: amzn/alexa-skills-kit-java
+
+3.7 Device Location API
+
+Complete these tests if your skill uses the Device Address API to obtain the
+location of the user’s device.
+
+   Test                               Expected Results
+                                        • All skill responses are appropriate
+                                          with regards to the device location.
+   Enable the skill and grant the         For example, a weather skill that
+   skill the requested permissions        uses the device location is expected
+   for the device location. Test the      to give weather information for the
+1. functionality that is dependent on     city specified in the device location
+   the device location and note the       (unless the user provides a different
+   responses.                             location in an utterance).
+                                        • If the skill communicates the device
+                                          location back to the user, it matches
+                                          the specified device location.
+
+   Enable the skill, but do not grant   • Each intent that does not require the
+   the device location permissions.       device location works correctly even
+                                          the user has not granted the
+    1. Invoke any intents that do not     permissions.
+2.     require the location and         • Each intent that does require the
+       verify that they work.             device location returns output speech
+    2. Invoke the intents that do         telling the user to grant the
+       require the location and           permissions, and a permissions card.
+       verify the response.               Verify the card in the Alexa app.
+
+   If applicable, change the device
+   location to a location or address
+   that is not supported by the
+   skill, then enable the skill and
+   grant permissions. Invoke the
+   intents that require the device
+   location.                          The skill informs the user that skill
+3.                                    does not support their location. No
+   For example, if your skill         errors are returned.
+   provides food delivery in a
+   particular city, set the device
+   location to an address far outside
+   your delivery area, then invoke
+   the intents to place a delivery
+   order.
+
+Next Steps
+
+  • 1. Policy Testing
+  • 2. Security Testing
+  • 4. Voice Interface and User Experience Testing
+  • Go back to: Submitting an Alexa Skill for Certification.
+  • Return to: Steps to Build a Custom Skill
+
+Sitemap
+facebook_logo twitter_logo blog_logo
+Follow us
+
+  • Alexa
+      □ Alexa Skills Kit
+      □ Alexa Voice Service
+      □ Alexa Fund
+      □ Rewards for Skill Developers
+  • Services & APIs
+      □ Earn
+      □ Engage
+      □ Build
+  • Devices
+      □ Fire Tablets
+      □ Amazon Fire TV
+      □ Dash Replenishment Service
+      □ Fire Phone
+      □ Amazon Echo
+      □ Amazon Tap
+  • Resources
+      □ Platforms
+      □ Learning Center
+      □ Development Tools
+      □ Promotional Tools
+      □ Marketing Tips
+      □ Other Resources
+  • Blogs
+      □ Alexa Blog
+      □ Appstore Blog
+      □ AWS Blog
+  • Support
+      □ Submitting Your Apps
+      □ FAQs
+      □ Forums
+      □ Contact Us
+      □ App Distribution Agreement
+      □ Mobile Ad Network Publisher Agreement
+      □ Mobile Ad Network Program Participation Requirements
+      □ Advertise Your App With Amazon Agreement
+      □ Program Materials License Agreement
+      □ Trademark Guidelines
+      □ Terms of Use
+    *
+
+© 2010-2016, Amazon.com, Inc. or its affiliates. All Rights Reserved.

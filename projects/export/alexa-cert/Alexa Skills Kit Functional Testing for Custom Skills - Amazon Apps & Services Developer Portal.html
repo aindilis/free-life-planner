@@ -1,0 +1,2240 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
+  <head>
+    <meta http-equiv="x-ua-compatible" content="IE=EDGE">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, maximum-width=1">
+    <meta name="keywords" content="amazon, appstore, developer portal"/>
+    
+    <meta name="description" content="Amazon Apps & Services Developer Portal"/>
+
+    <script type="text/javascript">var ue_t0=window.ue_t0||+new Date();</script><script type="text/javascript">(function(e){var c=e;var a=c.ue||{};a.main_scope="mainscopecsm";a.q=[];a.t0=c.ue_t0||+new Date();a.d=g;function g(h){return +new Date()-(h?0:a.t0)}function d(h){return function(){a.q.push({n:h,a:arguments,t:a.d()})}}function b(m,l,h,j,i){var k={m:m,f:l,l:h,c:""+j,err:i,fromOnError:1,args:arguments};c.ueLogError(k);return false}b.skipTrace=1;e.onerror=b;function f(){c.uex("ld")}if(e.addEventListener){e.addEventListener("load",f,false)}else{if(e.attachEvent){e.attachEvent("onload",f)}}a.tag=d("tag");a.log=d("log");a.reset=d("rst");c.ue_csm=c;c.ue=a;c.ueLogError=d("err");c.ues=d("ues");c.uet=d("uet");c.uex=d("uex");c.uet("ue")})(window);(function(e,d){var a=e.ue||{};function c(g){if(!g){return}var f=d.head||d.getElementsByTagName("head")[0]||d.documentElement,h=d.createElement("script");h.async="async";h.src=g;f.insertBefore(h,f.firstChild)}function b(){var k=e.ue_cdn||"z-ecx.images-amazon.com",g=e.ue_cdns||"images-na.ssl-images-amazon.com",j="/images/G/01/csminstrumentation/",h=e.ue_file||"ue-full-11e51f253e8ad9d145f4ed644b40f692._V1_.js",f,i;if(h.indexOf("NSTRUMENTATION_FIL")>=0){return}if("ue_https" in e){f=e.ue_https}else{f=e.location&&e.location.protocol=="https:"?1:0}i=f?"https://":"http://";i+=f?g:k;i+=j;i+=h;c(i)}if(!e.ue_inline){if(a.loadUEFull){a.loadUEFull()}else{b()}}a.uels=c;e.ue=a})(window,document);</script>
+
+    <script type="text/javascript">
+//<![CDATA[
+if (typeof e1476588001 === 'undefined') {
+    e1476588001 = {};
+}
+if (typeof e1476588001.f1476588001 === 'undefined') {
+    e1476588001.f1476588001 = {};
+}
+
+e1476588001.f1476588001.AsyncPage = {
+
+    load : function() {
+        var result,divs , i, length;
+        result = [];
+
+        if (document.getElementsByClassName) {
+            result = document.getElementsByClassName('g1476588001Async');
+        } else {
+            divs = document.getElementsByTagName('div');
+            for (i=0, length=divs.length; i<length; i++) {
+                if (divs[i].className === 'g1476588001Async') {
+                    result.push(divs[i]);
+                }
+            }
+        }
+
+        for (i=0, length=result.length; i< length; i++) {
+            (function(element) {
+                this.sendRequest(element.id, function(xmlHttp) {
+                    var fragment, tmpDiv, parent;
+                    fragment = document.createDocumentFragment();
+                    tmpDiv = document.createElement('div');
+                    tmpDiv.innerHTML = xmlHttp.responseText;
+                    while (tmpDiv.firstChild) {
+                        fragment.appendChild(tmpDiv.firstChild);
+                    }
+                    parent = element.parentNode;
+                    parent.replaceChild(fragment, element);
+                });
+            }).call(this, result[i]);
+        }
+    },
+
+    sendRequest : function(url, callback) {
+        var xmlHttpRequest;
+        try {
+            xmlHttpRequest = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
+            xmlHttpRequest.open("GET", url, true);
+            xmlHttpRequest.onreadystatechange = function () {
+                if (xmlHttpRequest.readyState !== 4) {
+                    return;
+                }
+                if (xmlHttpRequest.status !== 200 && xmlHttpRequest.status !== 304) {
+                    return;
+                }
+                callback(xmlHttpRequest);
+            };
+
+            xmlHttpRequest.send();
+        } catch (e) {
+            if (typeof window.console !== 'undefined') {
+                if (typeof console.error !== 'undefined') {
+                    console.error(e.name + ": " + e.message);
+                } else if (typeof console.log !== 'undefined') {
+                    console.log(e.name + ": " + e.message);
+                }
+            }
+        }
+    }
+};
+//]]>
+</script>
+<meta name="id" content="e080b91f-d152-4767-a4ca-19e39fa3bb45"/>
+<title>
+            Alexa Skills Kit Functional Testing for Custom Skills - Amazon Apps &amp; Services Developer Portal
+        </title>
+<meta name="description" content="Get detailed test cases for performing functional testing on an Alexa skill."/>
+<meta name="keywords" content="checklist,certification,certify,testing,alexa,ask,submitting,quality,quality assurance,qa,functional,test cases"/>
+
+
+    <link rel="stylesheet" href="https://images-na.ssl-images-amazon.com/images/G/01/AUIClients/MASAriaThemeAssets-cc1c91b11ab782aab8b8270cbcbd45db7345699d._V2_.css" />
+
+    <link href="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal2/res/css/webfonts._V326851759_.css" rel="stylesheet" type="text/css"/>
+    <link id="page_css" rel="stylesheet" href="" type="text/css"/>
+    <link href='https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/taas/jquery/widget/jquery-ui-1.10.3.custom.min.css' rel='stylesheet' type='text/css'/>
+
+    <script type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal2/public/resources/js/jquery-1.10.1.min._V352894325_.js"></script>
+    <script type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/taas/jquery/widget/jquery-ui-1.10.3.custom.min.js"></script>
+    
+    <script type="text/javascript" src="/public/js/jquery_cookie.js"></script>
+    
+    <script type="text/javascript" src="/public/js/mediatest.js"></script>
+    
+    <script type="text/javascript" src="/public/js/scroll_to.js"></script>
+    
+    <script type="text/javascript" src="/public/js/language_switcher.js"></script>
+  </head>
+  <body>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="header">
+  <div style="display:none;" id="/public/_hn:component-rendering%7Cr33_r2_r1/solutions/alexa/alexa-skills-kit/docs/alexa-skills-kit-functional-testing" class="g1476588001Async"></div>
+  <div id="lower-header">
+    <div id="lower-header-wrapper">
+      <ul id="header-menu">
+        
+        
+        
+        <li class="">
+          <a id="header-home" href="/public">Home</a>
+        </li>
+        
+        
+         
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   
+
+	 
+
+
+
+
+  
+    <li class="active">
+      <a href="/public/solutions/alexa">ALEXA</a>
+    </li>
+  
+  
+
+
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   
+
+	 
+
+
+
+
+  
+  
+    <li>
+      <a href="/public/apis">SERVICES &AMP; APIS</a>
+    </li>
+  
+
+
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   
+
+	 
+
+
+
+
+  
+  
+    <li>
+      <a href="/public/solutions/devices">DEVICES</a>
+    </li>
+  
+
+
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   
+
+	 
+
+
+
+
+  
+  
+    <li>
+      <a href="/public/resources">RESOURCES</a>
+    </li>
+  
+
+
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   
+
+	 
+
+
+
+
+  
+  
+    <li>
+      <a href="/public/community/blog">BLOGS</a>
+    </li>
+  
+
+
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   
+
+	 
+
+
+
+
+  
+  
+    <li>
+      <a href="/public/support">SUPPORT</a>
+    </li>
+  
+
+
+        
+      </ul>
+      <div id="search-box">
+        
+        
+        <form id="search-box-form" action="/public/search" method="get" onsubmit="sanitizeRequestParam(document.forms['searchSubmit']['query'], 'Search')">
+          
+          <input id="search-box-input" type="text" name="query" placeholder="Search..." value="" />
+          <input id="search-box-submit" type="image" src="/public/images/icon-search.png" name="image" width="18" height="18">
+        </form>
+        <button id="search-box-toggle-button" style="background-image: url('/public/images/icon-search.png')" onclick="javascript:toggleSearch()"></button>
+        
+		<script type="text/javascript" src="/public/js/searchbox_controller.js"></script>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="/public/js/header_scroller.js"></script>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="directory">
+    <div id="directory-wrapper">
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="/public">Home</a>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <span>&gt;</span>
+    
+      
+        
+      
+      
+    
+    <a href="/public/solutions/alexa">Alexa</a>
+  
+  
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <span>&gt;</span>
+    
+      
+        
+      
+      
+    
+    <a href="/public/solutions/alexa/alexa-skills-kit">Alexa Skills Kit</a>
+  
+  
+    
+  
+
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+</div>
+<div id="outer-wrapper">
+  <div id="inner-wrapper">
+    <div id="left-sidebar">
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<ul id="left-sidebar-list">
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+      
+    
+    
+  
+  
+  
+  
+  
+  	
+    
+  
+  
+    
+    
+      <li>
+        <a href="/public/solutions/alexa">Alexa </a>
+      </li>
+    
+  
+  
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+    
+  
+
+
+  
+    
+    
+  
+  
+
+
+
+  
+  
+  
+    <li class="active">
+      <a href="/public/solutions/alexa/alexa-skills-kit">Alexa Skills Kit</a>
+      
+    </li>
+  
+  
+  
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+    
+  
+
+
+  
+    
+    
+  
+  
+
+
+
+  
+  
+  
+  
+  
+    <li>
+      <a href="/public/solutions/alexa/alexa-voice-service">Alexa Voice Service</a>
+    </li>
+  
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+    
+  
+
+
+  
+    
+    
+  
+  
+
+
+
+  
+  
+  
+  
+  
+    <li>
+      <a href="/public/solutions/alexa/alexa-fund">Alexa Fund</a>
+    </li>
+  
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+    
+  
+
+
+  
+    
+    
+  
+  
+
+
+
+  
+  
+  
+  
+  
+    <li>
+      <a href="/public/solutions/alexa/rewards-for-skill-developers">Rewards for Skill Developers</a>
+    </li>
+  
+
+  
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</ul>
+    </div>
+    <div id="content">
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal2/content/sdk/js/shCore._V138392098_.js"></script>
+<script type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal2/content/sdk/js/shBrushPlain._V138254508_.js"></script>
+<script type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal2/content/sdk/js/shBrushJava._V138392099_.js"></script>
+<script type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal2/content/sdk/js/shBrushXml._V138392099_.js"></script>
+<script type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal2/content/sdk/js/shBrushJScript._V307911092_.js"></script>
+<script type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal2/content/sdk/js/shBrushCSharp._V307911161_.js"></script>
+<script type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal2/content/sdk/js/shBrushAS3._V307911115_.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+      SyntaxHighlighter.all();
+    });
+</script>
+
+
+  
+  
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        
+        
+    
+
+
+
+
+
+    
+    
+    <script type="text/javascript" src="/public/js/text_banner_modify.js"></script>
+    <div id="content-body" class="group">
+
+      
+
+      <div class="content-html-container tech-doc">
+      <div id="text-banner" class="tech-doc" style="border-bottom-style:none;">
+        <h2>Alexa Skills Kit Functional Testing for Custom Skills</h2>
+      </div>
+        
+        
+          
+            
+            <a class="anchor" name="Introduction"></a>
+            
+            <h2>Introduction</h2>
+            <link rel="stylesheet" type="text/css" href="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal/highlighter.min._TTH_.css" />
+<link rel="stylesheet" type="text/css" href="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal/hipposidebarpage.min._TTH_.css" />
+<link rel="stylesheet" type="text/css" href="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal/hipposidebar._TTH_.css" />
+<script type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal/includescript.min._TTH_.js"></script>
+<!-- Bootstrap is used under the MIT license. -->
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<div class="rightMenu"> <span class="inc:https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal/menus/ask-customskills._TTH_.html"> </span></div>
+
+<!-- AnchorJS is used under the MIT license. -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/2.0.0/anchor.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<!-- Navgoco is used under the BSD license. -->
+<script src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal/jquery.navgoco.min._TTH_.js"></script>
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<script type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal/customscriptshippo._TTH_.js"></script>
+<!--[if IE]>
+<link rel="stylesheet" type="text/css" href="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal/navtabshippo._TTH_.css" />
+<![endif]-->
+<style>
+ul#markdown-toc::before  {
+content: "Table of Contents"
+ }
+ </style>
+
+
+
+
+<p>The functional tests verify that:</p>
+
+<ul>
+  <li>
+    <p>The skill’s basic functionality matches the information displayed on the skill’s detail card in the Amazon Alexa app. You enter this data on the <strong>Publishing Information</strong> page for the skill on the developer portal.</p>
+
+    <p>See <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/define-skill-metadata">Define Skill Metadata</a> for more details about defining this card.</p>
+  </li>
+  <li>
+    <p>The skill’s core functionality works and provides useful home cards to the Amazon Alexa app.</p>
+  </li>
+</ul>
+
+<p>Use the Amazon Alexa app for these tests. The Alexa app is available for Fire OS, Android, iOS, and web browsers. The Alexa app displays all of your skills currently under development, as well as all published skills.</p>
+
+<p>To return to the high-level testing checklist, see <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/alexa-skills-kit-submission-checklist">Certification Requirements for Custom Skills</a>.</p>
+
+<ul id="markdown-toc">
+  <li><a href="#review-and-test-example-phrases" id="markdown-toc-review-and-test-example-phrases">3.1. Review and Test Example Phrases</a></li>
+  <li><a href="#skill-description" id="markdown-toc-skill-description">3.2. Skill Description and Detail Page</a></li>
+  <li><a href="#home-cards" id="markdown-toc-home-cards">3.3. Home Cards</a></li>
+  <li><a href="#account-linking" id="markdown-toc-account-linking">3.4. Account Linking</a></li>
+  <li><a href="#audio-playback" id="markdown-toc-audio-playback">3.5. Audio Playback</a></li>
+  <li><a href="#duplicates-of-samples-or-templates" id="markdown-toc-duplicates-of-samples-or-templates">3.6. Duplicates of Samples or Templates</a></li>
+  <li><a href="#device-location-api" id="markdown-toc-device-location-api">3.7 Device Location API</a></li>
+  <li><a href="#next-steps" id="markdown-toc-next-steps">Next Steps</a></li>
+</ul>
+
+<h2 id="review-and-test-example-phrases">3.1. Review and Test Example Phrases</h2>
+
+<p>Example phrases are shown on the skill’s detail card in the Alexa app to help users understand how to interact with the skill. You select these phrases from your sample utterances to ensure accuracy.</p>
+
+<p>These are the phrases users are most likely to try the first time they interact with the skill. Therefore, make sure that they work well and provide a good user experience.</p>
+
+<figure><img class="docimage " src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/dex/ask-customskills/tide-pooler-detail-card._TTH_.png" alt="Detail Card for a Skill in the Alexa App" /><figcaption>Detail Card for a Skill in the Alexa App</figcaption></figure>
+
+<div class="alert alert-warning" role="alert"><i class="fa fa-warning"></i> <b>Important:</b> If you are using any of the intents in the <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/built-in-intent-ref/built-in-intent-library">built-in intent library</a>, you may want to also use utterances for those intents in your example phrases. In this case, you can use the exact phrase provided in the documentation for the intent. Alternatively, you can use a variation of this phrase. <em>Be sure to fully test the utterance and verify that it works and your skill returns a valid response</em>. If the example utterances you provide fail to return a valid response during certification, your skill will fail certification.</div>
+
+<table>
+<colgroup>
+<col width="5%" />
+<col width="45%" />
+<col width="49%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">Test</th>
+<th align="left">Expected Results</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p>1.</p></td>
+<td align="left">
+        <p>Open the Alexa app, click <strong>Skills</strong> and then scroll or search to find your skill.</p>
+
+        <p>Review the skill’s detail page. Inspect all example phrases listed in the skill’s detail card.</p>
+      </td>
+<td align="left">
+        <ul>
+          <li>At least one example phrase has been provided.</li>
+          <li>The first phrase clearly indicates how to begin using the skill, and includes both the wake word and invocation name.</li>
+          <li>Example phrases containing the wake word and invocation name must use a supported format for invoking a skill. For a list of supported formats, see <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/supported-phrases-to-begin-a-conversation">Understanding How Users Invoke Custom Skills</a>.</li>
+          <li>The example phrases do not contain any additional information that is not intended to be spoken by users. The example phrases must function exactly as they are written.</li>
+          <li>The invocation name uses title case.</li>
+          <li>The example phrases do not contain any emoticons, symbols, or grammatical errors.</li>
+          <li>Each example phrase ends with punctuation. Exclamation points are <em>not</em> used, as they may misguide users into thinking they must express enthusiasm.</li>
+          <li>The example phrases show how to launch the skill. They do not illustrate enabling the skill by voice. For example, the phrase must not be something like “Alexa, enable <em>&lt;skill name&gt;</em>.”</li>
+          <li>The example phrases are all written in the same language used by the Alexa account. For instance, when using an account configured with German, the phrases are written in German.</li>
+        </ul>
+      </td>
+</tr>
+<tr class="even">
+<td align="left"><p>2.</p></td>
+<td align="left">
+        <p>Open the developer portal, edit the skill, and go to the Interaction Model page. Review the <em>sample utterances</em> for your skill and verify that each example phrase is included as a sample utterance.</p>
+
+        <p>For more about defining example phrases, see the “Defining your Example Phrases (“Try Saying”)” section of <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/define-skill-metadata">Define Skill Metadata</a>.</p>
+
+        <p>If you are using the utterance for a <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/built-in-intent-ref/built-in-intent-library">built-in intent</a> for an example phrase, the utterance does <em>not</em> need to be in your sample utterances. However, fully test the utterance and verify that your skill returns a valid response.</p>
+      </td>
+<td align="left">
+        <p>Each example phrase is explicitly included in the sample utterances.</p>
+
+        <p>For instance, if you have this example phrase:</p>
+
+        <ul>
+          <li>Alexa, ask Tide Pooler when is high tide in Seattle.</li>
+        </ul>
+
+        <p>Then you must also have this utterance:</p>
+
+        <ul>
+          <li><code class="highlighter-rouge">OneshotTideIntent when is high tide in {City}</code></li>
+        </ul>
+
+        <p>Any slots in the example phrase (such as Seattle in this example) must be filled with an example of a valid slot value. In this example, <code class="highlighter-rouge">City</code> is a custom slot type, and “Seattle” is a value explicitly defined for the <code class="highlighter-rouge">City</code> type.</p>
+      </td>
+</tr>
+<tr class="odd">
+<td align="left"><p>3.</p></td>
+<td align="left">
+        <p>Launch the skill using <em>each</em> of the provided example phrases.</p>
+      </td>
+<td align="left">
+        <p>Each example phrase  renders a contextualized, non-error response.</p>
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="skill-description">3.2. Skill Description and Detail Page</h2>
+
+<p>The skill description teaches users about what your skill can do and how to use it.</p>
+
+<table>
+<colgroup>
+<col width="5%" />
+<col width="45%" />
+<col width="49%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">Test</th>
+<th align="left">Expected Results</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><p>1.</p></td>
+<td align="left">
+        <p>Open the Alexa app, click <strong>Skills</strong> and then scroll to your skill. Review the <strong>short description</strong> shown in the list of skills</p>
+      </td> 
+<td>
+        <ul>
+          <li>The short description describes the skill’s core functionality.</li>
+          <li>The short description is written in the same language used by the Alexa account. For instance, when using an account configured with German, the skill short description is displayed in German.</li>
+        </ul>
+      </td>
+</tr>
+<tr>
+<td align="left"><p>2.</p></td>
+<td align="left">
+        <p>Open the detail card  for the skill. Review the skill’s <strong>full description</strong> shown on the skill’s detail card.</p>
+      </td> 
+<td>
+        <ul>
+          <li>The skill description captures any prerequisites needed to use the skill (such as additional hardware, software, or accounts).</li>
+          <li>The description describes the skill’s core functionality.</li>
+          <li>The description does not misrepresent the skill’s functionality.</li>
+          <li>The description is written in the same language used by the Alexa account. For instance, when using an account configured with German, the skill  description is displayed in German.</li>
+          <li>If the skill integrates with Raspberry Pi or a similar device, the description must:
+            <ol>
+              <li>Mention that a Raspberry Pi (or similar device) is required to access core functionality of the skill.</li>
+              <li>Include links to documentation explaining how to configure the Raspberry Pi with the skill.</li>
+            </ol>
+          </li>
+          <li>The description must not claim that the skill has any anti-virus features.</li>
+        </ul>
+      </td>
+</tr>
+
+<tr>
+<td align="left"><p>3.</p></td>
+<td align="left">
+        <p>If either the short description or full description includes any URLs (such as directing users to more information about the skill), visit the URL in a browser and verify the page opens without error.</p>
+      </td> 
+<td>
+        <ul>
+          <li>The page referenced by the description opens without error.</li>
+          <li>The page is displayed in a language supported by Alexa. The current supported languages are English and German.</li>
+        </ul>
+      </td>
+</tr>
+
+<tr>
+<td align="left"><p>4.</p></td>
+<td align="left">
+        <p>If your skill’s detail page includes links to a privacy policy or terms of use, open the links in a browser.</p>
+      </td> 
+<td>
+        <ul>
+          <li>The privacy policy / terms of use links shown on the skill detail page open without error.</li>
+          <li>The pages are displayed in the same language used by the Alexa account. For instance, when using an account configured with German, the privacy policy and terms of use must be in German.</li>
+        </ul>
+      </td>
+</tr>
+
+<tr>
+<td align="left"><p>5.</p></td>
+<td align="left">
+        <p>Review the skill title and icon and ensure they are relevant to the core functionality of the skill.</p>
+      </td> 
+<td>
+        <p>Both the title and icon are relevant to the skill description and are not misleading.</p>
+      </td>
+</tr>
+
+</tbody>
+</table>
+
+<h2 id="home-cards">3.3. Home Cards</h2>
+
+<p>Home cards are graphical cards displayed in the Alexa app to describe or enhance the voice interaction.</p>
+
+<table>
+<colgroup>
+<col width="5%" />
+<col width="45%" />
+<col width="49%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">Test</th>
+<th align="left">Expected Results</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><p>1.</p></td>
+<td align="left">
+        <p>Walk through the skill’s functionality, invoking each intent. For each response that includes a home card, review the card in the Alexa app.</p>
+      </td> 
+<td>
+        <p>For each card:</p>
+
+        <ul>
+          <li>The card title and content are appropriate in the context of the skill’s functionality.</li>
+          <li>The card title and content do not contain any code references or grammatical errors.</li>
+          <li>The card title and content are written in a language supported by Alexa. The current supported languages are English and German.</li>
+          <li>If the card includes an image, the image is correctly displayed.</li>
+        </ul>
+      </td>
+</tr>
+
+<tr>
+<td align="left"><p>2.</p></td>
+<td align="left">
+        <p>If any home cards include URLs, visit each URL in a browser and verify the page opens without error.</p>
+      </td> 
+<td>
+        <p>For each URL displayed in a home card:</p>
+
+        <ul>
+          <li>The page opens in a browser without error.</li>
+          <li>The page is displayed in a language supported by Alexa. The current supported languages are English and German.</li>
+        </ul>
+      </td>
+</tr>
+
+</tbody>
+</table>
+
+<p>Note that skills normally only return home cards when responding with the information the user requested. Supportive prompts to ask the user for more information do not normally include home cards.</p>
+
+<p>Home cards can be a useful tool when developing and debugging a skill, but be sure to remove any extraneous debug-type cards before submitting the skill.</p>
+
+<h2 id="account-linking">3.4. Account Linking</h2>
+
+<p>If your skill needs to connect the identity of the end user with a user in another system (<em>account linking</em>), this test verifies that the skill implements the solution described in <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/linking-an-alexa-user-with-a-user-in-your-system">Linking an Alexa User with a User in Your System</a> correctly. When submitting your skill, be sure to provide a valid set of account credentials with your testing instructions so our certification team can verify the account linking and functionality of your skill.</p>
+
+<p>If your skill does not use account linking, you can skip this test.</p>
+
+<table>
+<colgroup>
+<col width="5%" />
+<col width="45%" />
+<col width="49%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">Test</th>
+<th align="left">Expected Results</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><p>1.</p></td>
+<td align="left">
+        <p>In the developer portal, review the <strong>Configuration</strong> page for the skill and verify that account linking has been configured correctly.</p>
+      </td>
+<td>
+        <ul>
+          <li>The <strong>Account Linking or Creation</strong> option is set to <strong>Yes</strong>.</li>
+          <li>The <strong>Authorization URL</strong> is set to the login page for your service.</li>
+        </ul>
+      </td>
+</tr>
+<tr>
+<td align="left"><p>2.</p></td>
+<td align="left">
+        <p>In the Alexa app, review the detail card for your skill. Verify that the skill description explains that you must log in to the other system to use the skill.</p>
+      </td> 
+<td>
+        <p>The description clearly explains the steps and information necessary to successfully link the accounts.</p>
+      </td>
+</tr>
+<tr>
+<td align="left"><p>3.</p></td>
+<td align="left">
+        <p>Log in to the Alexa app as an Alexa user who has not yet enabled the skill.</p>
+
+        <p>Enable the skill, but do not complete the account linking process, leaving the skill enabled but not linked.</p>
+
+        <ol>
+          <li>Invoke any intents that do <em>not</em> require authentication and verify that they work.</li>
+          <li>Invoke the intents that <em>do</em> require authentication and verify the response.</li>
+        </ol>
+
+      </td> 
+<td>
+        <ul>
+          <li>Each intent that <em>does not</em> require authentication works correctly even when accounts are not linked.</li>
+          <li>Each intent that <em>does</em> require authentication returns output speech telling the user what to do, and a <em>link account card</em>. Verify the card in the Alexa app.</li>
+        </ul>
+      </td>
+</tr>
+
+<tr>
+<td align="left"><p>4.</p></td>
+<td align="left">
+        <p>Disable the skill or log in to the Alexa app as an Alexa user who has not yet enabled the skill.</p>
+
+        <p>Enable the skill. Once the login page for your skill is displayed, click all links and verify that they navigate to new pages.</p>
+      </td> 
+<td>
+        <ul>
+          <li>All clickable links on the login page navigate to new pages.</li>
+          <li>None of the clickable links open JavaScript alerts or popup windows.</li>
+        </ul>
+      </td>
+</tr>
+
+<tr>
+<td align="left"><p>5.</p></td>
+<td align="left">
+        <p>Disable the skill or log in to the Alexa app as an Alexa user who has not yet enabled the skill.</p>
+
+        <p>Enable the skill. Once the login page for your skill is displayed, log in and verify the account linking flow.</p>
+      </td> 
+<td>
+        <ul>
+          <li>The login page for your skill is displayed correctly.</li>
+          <li>You can successfully log in using an account with the service.</li>
+          <li>After connecting the accounts, you can successfully invoke each intent that requires authentication.</li>
+        </ul>
+      </td>
+</tr>
+
+</tbody>
+</table>
+
+<h2 id="audio-playback">3.5. Audio Playback</h2>
+
+<p>Complete these tests if your skill uses the <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/custom-audioplayer-interface-reference">AudioPlayer interface</a> to stream audio.</p>
+
+<table>
+<colgroup>
+<col width="5%" />
+<col width="45%" />
+<col width="49%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">Test</th>
+<th align="left">Expected Results</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><p>1.</p></td>
+<td align="left">
+        <p>Set the volume on the device to <strong>3</strong> and invoke an intent that streams the audio. Listen for several minutes.</p>
+      </td> 
+<td>
+        <ul>
+          <li>The audio playback is audible at volume level 3.</li>
+          <li>The volume of the audio playback does not vary significantly from normal Alexa text-to-speech. The volume remains consistent while playing for several minutes.</li>
+          <li>If the audio content includes words or speech, the content is spoken in a language supported by Alexa. The current supported languages are English and German.</li>
+        </ul>
+      </td>
+</tr>
+
+<tr>
+<td align="left"><p>2.</p></td>
+<td align="left">
+        <p>While listening to the audio playback, invoke the following built-in intents:</p>
+
+        <ul>
+          <li><code class="highlighter-rouge">AMAZON.PauseIntent</code> (say “pause”)</li>
+          <li><code class="highlighter-rouge">AMAZON.ResumeIntent</code> (say “resume”)</li>
+        </ul>
+      </td> 
+<td>
+        <ul>
+          <li>The “pause” utterance stops the audio playback.</li>
+          <li>The “resume” utterance resumes the audio playback.</li>
+        </ul>
+      </td>
+</tr>
+
+<tr>
+<td align="left"><p>3.</p></td>
+<td align="left">
+        <p>While listening to the audio playback, use a remote control or other hardware device to pause and resume the audio.</p>
+      </td> 
+<td>
+        <ul>
+          <li>Pressing a pause button while audio is playing stops the playback.</li>
+          <li>Pressing a play button while the audio is stopped resumes the playback.</li>
+        </ul>
+
+      </td>
+</tr>
+
+<tr>
+<td align="left"><p>4.</p></td>
+<td align="left">
+        <p>While listening to the audio playback, invoke the following built-in intents:</p>
+
+        <ul>
+          <li><code class="highlighter-rouge">AMAZON.CancelIntent</code> (say “cancel”)</li>
+          <li><code class="highlighter-rouge">AMAZON.LoopOffIntent</code> (say “loop off”)</li>
+          <li><code class="highlighter-rouge">AMAZON.LoopOnIntent</code> (say “loop on”)</li>
+          <li><code class="highlighter-rouge">AMAZON.NextIntent</code> (say “next”)</li>
+          <li><code class="highlighter-rouge">AMAZON.PreviousIntent</code> (say “previous”)</li>
+          <li><code class="highlighter-rouge">AMAZON.RepeatIntent</code> (say “repeat that”)</li>
+          <li><code class="highlighter-rouge">AMAZON.ShuffleOffIntent</code>(say “shuffle off”)</li>
+          <li><code class="highlighter-rouge">AMAZON.ShuffleOnIntent</code> (say “shuffle”)</li>
+          <li><code class="highlighter-rouge">AMAZON.StartOverIntent</code> (say “start over”)</li>
+          <li><code class="highlighter-rouge">AMAZON.StopIntent</code> (say “stop”)</li>
+        </ul>
+
+      </td> 
+<td>
+        <p>Each command either does something that makes sense for your skill (such as “next” advancing to the next track in a playlist) or is handled gracefully. No unexpected errors occur. See <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/custom-audioplayer-interface-reference#config">Configuring Your Skill for the AudioPlayer Directives</a>.</p>
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="duplicates-of-samples-or-templates">3.6. Duplicates of Samples or Templates</h2>
+
+<p>Make sure your skill is not an <em>exact duplicate</em> of any of the Amazon-provided samples or templates. You can use the samples and templates as a <em>starting point</em> for your skill, but the finished skill must be different.</p>
+
+<p>For example, if you use the <a href="https://github.com/alexa/skill-sample-nodejs-trivia" title="Step-by-Step Guide to Build a Trivia Skill">Trivia</a> sample to create a trivia skill, your skill must have:</p>
+
+<ul>
+  <li>A different name</li>
+  <li>A different set of questions</li>
+</ul>
+
+<p>The samples and templates are available on GitHub:</p>
+
+<ul>
+  <li>Javascript/Node.js: <a href="https://github.com/alexa" title="Alexa Organization on GitHub">Alexa organization</a></li>
+  <li>Java: <a href="https://github.com/amzn/alexa-skills-kit-java" title="Java Library and Java samples on GitHub">amzn/alexa-skills-kit-java</a></li>
+</ul>
+
+<h2 id="device-location-api">3.7 Device Location API</h2>
+
+<p>Complete these tests if your skill uses the <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/device-address-api">Device Address API</a> to obtain the location of the user’s device.</p>
+
+<table>
+<colgroup>
+<col width="5%" />
+<col width="45%" />
+<col width="49%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">Test</th>
+<th align="left">Expected Results</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td align="left"><p>1.</p></td>
+<td align="left">
+        <p>Enable the skill and grant the skill the requested permissions for the device location. Test the functionality that is dependent on the device location and note the responses.</p>
+
+      </td> 
+<td>
+        <ul>
+          <li>All skill responses are appropriate with regards to the device location. For example, a weather skill that uses the device location is expected to give weather information for the city specified in the device location (unless the user provides a different location in an utterance).</li>
+          <li>If the skill communicates the device location back to the user, it matches the specified device location.</li>
+        </ul>
+      </td> 
+
+</tr>
+
+<tr>
+<td align="left"><p>2.</p></td>
+<td>
+        <p>Enable the skill, but do not grant the device location permissions.</p>
+
+        <ol>
+          <li>Invoke any intents that do <em>not</em> require the location and verify that they work.</li>
+          <li>Invoke the intents that <em>do</em> require the location and verify the response.</li>
+        </ol>
+
+      </td>
+<td align="left">
+
+        <ul>
+          <li>Each intent that <em>does not</em> require the device location works correctly even the user has not granted the permissions.</li>
+          <li>Each intent that <em>does</em> require the device location returns output speech telling the user to grant the permissions, and a <em>permissions card</em>. Verify the card in the Alexa app.</li>
+        </ul>
+      </td>
+</tr>
+
+<tr>
+<td align="left"><p>3.</p></td>
+<td>
+
+        <p>If applicable, change the device location to a location or address that is not supported by the skill, then enable the skill and grant permissions. Invoke the intents that require the device location.</p>
+
+        <p>For example, if your skill provides food delivery in a particular city, set the device location to an address far outside your delivery area, then invoke the intents to place a delivery order.</p>
+
+      </td>
+<td align="left">
+        <p>The skill informs the user that skill does not support their location. No errors are returned.</p>
+
+      </td>
+</tr>
+
+
+</tbody>
+</table>
+
+<h2 id="next-steps">Next Steps</h2>
+
+<ul>
+  <li><a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/alexa-skills-kit-policy-testing">1. Policy Testing</a></li>
+  <li><a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/alexa-skills-kit-security-testing">2. Security Testing</a></li>
+  <li><a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/alexa-skills-kit-voice-interface-and-user-experience-testing">4. Voice Interface and User Experience Testing</a></li>
+  <li>Go back to: <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/publishing-an-alexa-skill">Submitting an Alexa Skill for Certification</a>.</li>
+  <li>Return to: <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/overviews/steps-to-build-a-custom-skill">Steps to Build a Custom Skill</a></li>
+</ul>
+
+<!-- common links -->
+          
+        
+      </div>
+    </div>
+  
+
+
+<script type="text/javascript" src="/public/js/gamecircle.js"></script>
+    </div>
+    
+    <script type="text/javascript" src="/public/js/leftmenu_controller.js"></script>
+  </div>
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="footer">
+  <div id="upper-footer">
+    <div id="upper-footer-wrapper">
+      <span id="footer-sitemap-title">Sitemap</span>
+      
+      
+      
+      
+      <div id="socialmedia-icons">
+        <a href="https://www.facebook.com/AmazonAppDev"><img src="/public/images/logo-facebook.png" alt="facebook_logo" width="31" height="31" /></a>
+        <a href="https://twitter.com/AmazonAppDev"><img src="/public/images/logo-twitter.png" alt="twitter_logo" width="31" height="31" /></a>
+        <a href="/public/community/blog"><img src="/public/images/logo-blog.png" alt="blog_logo" width="31" height="31" /></a>
+      </div>
+      <span id="footer-followus-span">Follow us</span>
+    </div>
+  </div>
+  <div id="median-footer">
+    <div id="median-footer-wrapper">
+      <ul id="footer-sitemap">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+<li>
+  <a href="/public/solutions/alexa">Alexa</a>
+  
+    <ul>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/solutions/alexa/alexa-skills-kit">Alexa Skills Kit</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/solutions/alexa/alexa-voice-service">Alexa Voice Service</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/solutions/alexa/alexa-fund">Alexa Fund</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/solutions/alexa/rewards-for-skill-developers">Rewards for Skill Developers</a>
+	    </li>
+      
+    </ul>
+  
+</li>
+
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+<li>
+  <a href="/public/apis">Services &amp; APIs</a>
+  
+    <ul>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/apis/earn">Earn</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/apis/engage">Engage</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/apis/experience">Build</a>
+	    </li>
+      
+    </ul>
+  
+</li>
+
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+<li>
+  <a href="/public/solutions/devices">Devices</a>
+  
+    <ul>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/solutions/devices/fire-tablets">Fire Tablets</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/solutions/devices/fire-tv">Amazon Fire TV</a>
+	    </li>
+      
+        
+          
+	      
+	        
+	      
+	    
+	    <li>
+	      <a href="https://developer.amazon.com/dash-replenishment-service">Dash Replenishment Service</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/solutions/devices/fire-phone">Fire Phone</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/solutions/devices/echo">Amazon Echo</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/solutions/devices/amazon-tap">Amazon Tap</a>
+	    </li>
+      
+    </ul>
+  
+</li>
+
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+<li>
+  <a href="/public/resources">Resources</a>
+  
+    <ul>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/solutions/platforms">Platforms</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/resources/learning-center">Learning Center</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/resources/development-tools">Development Tools</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/resources/promotional-tools">Promotional Tools</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/resources/marketing-tools">Marketing Tips</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/resources/other">Other Resources</a>
+	    </li>
+      
+    </ul>
+  
+</li>
+
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+<li>
+  <a href="/public/community/blog">Blogs</a>
+  
+    <ul>
+      
+        
+          
+	      
+	        
+	      
+	    
+	    <li>
+	      <a href="https://developer.amazon.com/blogs/alexa/">Alexa Blog</a>
+	    </li>
+      
+        
+          
+	      
+	        
+	      
+	    
+	    <li>
+	      <a href="https://developer.amazon.com/blogs/appstore/">Appstore Blog</a>
+	    </li>
+      
+        
+          
+	      
+	        
+	      
+	    
+	    <li>
+	      <a href="https://aws.amazon.com/blogs/aws/">AWS Blog</a>
+	    </li>
+      
+    </ul>
+  
+</li>
+
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+<li>
+  <a href="/public/support">Support</a>
+  
+    <ul>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/support/submitting-your-app">Submitting Your Apps</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/support/faq">FAQs</a>
+	    </li>
+      
+        
+          
+	      
+	        
+	      
+	    
+	    <li>
+	      <a href="http://forums.developer.amazon.com">Forums</a>
+	    </li>
+      
+        
+          
+	      
+	        
+	      
+	    
+	    <li>
+	      <a href="https://developer.amazon.com/public/support/contact/contact-us?sc_channel=website&amp;sc_publisher=devportal&amp;sc_campaign=Conversion_Contact-Us&amp;sc_assettype=conversion&amp;sc_team=us&amp;sc_traffictype=organic&amp;sc_country=united-states&amp;sc_segment=all&amp;sc_itrackingcode=100020_us_website&amp;sc_detail=dp-sidebar">Contact Us</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/support/legal/da">App Distribution Agreement</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/support/mobileads/publisher-agreement.html">Mobile Ad Network Publisher Agreement</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/support/mobileads/participation-requirements.html">Mobile Ad Network Program Participation Requirements</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/support/advertise-your-app-agreement">Advertise Your App With Amazon Agreement</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/support/pml.html">Program Materials License Agreement</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/support/legal/tuabg">Trademark Guidelines</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/support/legal/tou">Terms of Use</a>
+	    </li>
+      
+    </ul>
+  
+</li>
+
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- SiteCatalyst code version: H.26.
+Copyright 1996-2013 Adobe, Inc. All Rights Reserved
+More info available at http://www.omniture.com -->
+<script language="JavaScript" type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal/s_code2.js"></script>
+
+<script type="text/javascript">var SiteCatalystId = ""</script>
+
+<script language="JavaScript" type="text/javascript"><!--
+/* You may give each page an identifying name, server, and channel on
+the next lines. */
+s.pageName="/public/solutions/alexa/alexa-skills-kit/docs/alexa-skills-kit-functional-testing"
+s.server="developer.amazon.com"
+s.channel=""
+s.pageType=""
+s.prop1="173.165.36.107"
+s.prop2="Mozilla/5.0 (X11; Linux x86_64; rv:45.0) Gecko/20100101 Firefox/45.0"
+s.prop3=""
+s.prop4=""
+s.prop5=""
+/* Conversion Variables */
+s.campaign=""
+s.state=""
+s.zip=""
+s.events=""
+s.products=""
+s.purchaseID=""
+s.eVar1=""
+s.eVar2=""
+s.eVar3=""
+s.eVar4=""
+s.eVar5=""
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)//--></script>
+<script language="JavaScript" type="text/javascript"><!--
+if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+//--></script><noscript><img src="http://amazonservices.d2.sc.omtrdc.net/b/ss/amzna2z/1/H.22.1--NS/0"
+height="1" width="1" border="0" alt="" /></noscript><!--/DO NOT REMOVE/-->
+<!-- End SiteCatalyst code version: H.26. -->
+
+
+      </ul>
+    </div>
+  </div>
+  <div id="lower-footer">&copy; 2010-2016, Amazon.com, Inc. or its affiliates. All Rights Reserved.</div>
+</div> 
+
+
+    <script type="text/javascript">
+//<![CDATA[
+e1476588001.f1476588001.AsyncPage.load();
+//]]>
+</script>
+
+    <script type="text/javascript"> 
+    if (window.ue && window.ue.tag) { 
+        window.ue.tag("prelogin", ue.main_scope);
+    }
+    </script>
+    
+  </body>
+</html>

@@ -1,0 +1,1 @@
+:- load_all_files_having_extension_in_directory_and_all_subdirectories('/var/lib/myfrdcsa/codebases/minor/free-life-planner/projects/module-system/modules','-pack.pl').

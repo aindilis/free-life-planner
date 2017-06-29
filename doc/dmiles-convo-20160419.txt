@@ -1,0 +1,251 @@
+Content-Type: text/enriched
+Text-Width: 70
+
+<x-color><param>green</param>13:55:07 </x-color><<dmiles> i just cant share Setup vars with Goal is all
+<x-color><param>green</param>13:55:55 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>dmiles</x-color><x-color><param>brown</param>, I have a few questions for you if you have a
+      moment</x-color>
+<x-color><param>green</param>13:56:43 </x-color><<dmiles> i can write
+      scce(asserta(foo,REF),(between(1,3,X),writeln(X)),erase(REF)).  
+<x-color><param>green</param>13:57:13 </x-color><<dmiles> i cant write
+      scce(asserta(foo,REF),(between(1,3,X),writeln(X:REF)),erase(REF)).  
+<x-color><param>green</param>13:57:38 </x-color><<<x-color><param>DarkTurquoise</param>dmiles</x-color>> <x-color><param>Orchid</param>aindilis:</x-color> go ahead.. awesoem i might acutalyl be usefull
+      today
+<x-color><param>green</param>13:59:45 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>suppose I have a predicate
+      ask(andrewDougherty,douglasMiles,'How do I ...?').  With the obvious
+      meaning.  Suppose I want to then provide an answer for it.
+      answer(ask(andrewDougherty,douglasMiles,'How do I ...?'),'Well you do
+      ...').  That's a bit strange.  Isn't there something of a skolem
+      function.  Like ask(ask1,andrewDougherty,douglasMiles,'How do I ...?').
+      And then I can say answer(ask1,answer1) and answerNL(answer1,'Well you
+      do</x-color>
+<x-color><param>green</param>13:59:45 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>...').  Or something.  In general does LogicMoo use these?
+      How can this be accomplished easily?  I sort of have a solution but in
+      general I'm wondering how LogicMoo identifies assertions without having
+      to have them contained as subterms.  That's the first question.</x-color>
+<x-color><param>green</param>14:01:57 </x-color><x-color><param>blue</param>*** Zekka (~zekka@ip24-251-69-145.ph.ph.cox.net) has quit: Ping
+      timeout: 260 seconds</x-color>
+<x-color><param>green</param>14:02:15 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>skolem something, maybe constant, not function</x-color>
+<x-color><param>green</param>14:02:54 </x-color><<dmiles> right now i have been opting to have them in subterms .. but
+      if ina skolem the skolem ends up needing the substerms anyways
+<x-color><param>green</param>14:03:18 </x-color><<RLa> alternatively you can identify by using uuids
+<x-color><param>green</param>14:03:27 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>okay, do you have ways to represent them easily in
+      subterms for display purposes?  oh, interesting?</x-color>
+<x-color><param>green</param>14:04:08 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>so you don't really follow the patient(Event1,Patient),
+      actedOn(Event1,Object) etc kind of model that SigmaKEE Does?</x-color>
+<x-color><param>green</param>14:04:18 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>are those neodavidson lfs?</x-color>
+<x-color><param>green</param>14:04:24 </x-color><<dmiles> thereExists(Q, ask(Q,andrewDougherty,douglasMiles,'How do I
+      ...?')).
+<x-color><param>green</param>14:04:54 </x-color><<dmiles> that makes a Q variable that is an attribtues variable that
+      contains the question inside
+<x-color><param>green</param>14:05:08 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>does this currently work in swipl?</x-color>
+<x-color><param>green</param>14:05:36 </x-color><<dmiles> put_attr(Q,cond( ask(Q,andrewDougherty,douglasMiles,'How do
+      I ...?')).
+<x-color><param>green</param>14:05:37 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>my second question is does </x-color><x-color><param>brown</param>PrologMUD</x-color><x-color><param>brown</param> or any other
+      available system have performatives I can borrow?</x-color>
+<x-color><param>green</param>14:05:44 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>thanks!</x-color>
+<x-color><param>green</param>14:06:08 </x-color><<dmiles> ... put_attr(Q,cond,ask(Q,andrewDougherty,douglasMiles,'How
+      do I ...?')).     thus Q is a single variable
+<x-color><param>green</param>14:07:13 </x-color><<dmiles> i ended up making a way to add mutples iof the same attrbute
+<x-color><param>green</param>14:07:15 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>also, I found some difficulty representing and and or
+      statements.  I think I asked you about this.  I tried to implement a
+      representation like IndiGolog with some kind of holds, but I found it
+      was always going "the wrong way".</x-color>
+<x-color><param>green</param>14:07:57 </x-color><<dmiles> put_attr(Q,cond,ask(Q,andrewDougherty,douglasMiles,'How do I
+      ...?')) ,  put_attr(Q,cond,answer(Q,douglasMiles,andrewDougherty,'By
+      doing foo')). 
+<x-color><param>green</param>14:08:13 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>so these work in swipl without </x-color><x-color><param>brown</param>PrologMUD</x-color><x-color><param>brown</param>?</x-color>
+<x-color><param>green</param>14:08:22 </x-color><<dmiles> (the Q that you have will then contain the asnweR)
+<x-color><param>green</param>14:08:33 </x-color><x-color><param>blue</param>*** T_K (~Tambet@82.131.16.51.cable.starman.ee) has quit: Quit:
+      Leaving.</x-color>
+<x-color><param>green</param>14:08:50 </x-color><<dmiles> erm sort of
+<x-color><param>green</param>14:09:21 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>hey btw, I am available to collaborate in the next week
+      and on for the indefinite future</x-color>
+<x-color><param>green</param>14:09:32 </x-color><<dmiles> i edited up making it so a person can assert attrubuted
+      variables to the proog database
+<x-color><param>green</param>14:09:49 </x-color><<dmiles> and also read/write attvars
+<x-color><param>green</param>14:09:55 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>sweet!</x-color>
+<x-color><param>green</param>14:10:08 </x-color><<dmiles> this functionally i been putting into logicmoo_utils
+<x-color><param>green</param>14:10:26 </x-color><<dmiles>  logicmoo_utils so far seems to always be stable
+<x-color><param>green</param>14:10:48 </x-color><<dmiles> uiit expected prolog fnctionally
+<x-color><param>green</param>14:11:05 </x-color><<dmiles> it extends nornal prolog fnctionally
+<x-color><param>green</param>14:11:06 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>well because LogicMOO is changing so frequently, I have
+      started writing my own system which I plan to mate to LogicMOO at some
+      point</x-color>
+<x-color><param>green</param>14:11:19 </x-color><<dmiles> logicmoo_base though is what is needed to use the cond
+      attribute though
+<x-color><param>green</param>14:11:34 </x-color><<dmiles> yeah.. that does not at all sound bad to me
+<x-color><param>green</param>14:11:49 </x-color><<dmiles> since integration is my forte
+<x-color><param>green</param>14:11:57 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>I am glad it is your forte</x-color>
+<x-color><param>green</param>14:13:09 </x-color><<dmiles> i am trying to separate things to this level:
+      logicmoo_utils, logicmoo_base, logicmoo_user, logicmoo_plarkc, prologmud
+<x-color><param>green</param>14:13:10 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>so Doug do you have time in the next week to collaborate?
+      Like is there a way I can get a notification when you have a new
+      screenshare about to go up, or finished</x-color>
+<x-color><param>green</param>14:13:56 </x-color><<dmiles> what i need to do is soeate "logicmoo_base, logicmoo_user"
+      into what works and doesnt leaving base with with works and user with
+      things buggy
+<x-color><param>green</param>14:14:07 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>ah interesting</x-color>
+<x-color><param>green</param>14:15:06 </x-color><<dmiles> the goal would be to make it so things like "logicmoo_utils,
+      logicmoo_base" are always possible to be used
+<x-color><param>green</param>14:15:53 </x-color><<dmiles> i folow the ollow the patient(Event1,Patient),
+      actedOn(Event1,Object)  buyt they are storted in the Q individually
+<x-color><param>green</param>14:16:02 </x-color><<dmiles> erm stored in Event1
+<x-color><param>green</param>14:16:21 </x-color><<dmiles> kinda like a hashmap.. 
+<x-color><param>green</param>14:16:43 </x-color><<dmiles> in cases that Event1 needs to be a skelom
+<x-color><param>green</param>14:16:51 </x-color><<dmiles> skollem
+<x-color><param>green</param>14:17:01 </x-color><<dmiles> so yes for sure next week we can collab
+<x-color><param>green</param>14:17:09 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>oh, how does LogicMOO do Fn s</x-color>
+<x-color><param>green</param>14:17:11 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>?</x-color>
+<x-color><param>green</param>14:17:24 </x-color><<dmiles> i dentical to skolems again
+<x-color><param>green</param>14:17:37 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>like agentFn(freeWopr).</x-color>
+<x-color><param>green</param>14:17:55 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>which denotes the unilang agent for the frdcsa free-wopr
+      system</x-color>
+<x-color><param>green</param>14:18:02 </x-color><<<x-color><param>brown</param>aindilis</x-color>>
+      <x-color><param>brown</param>http://frdcsa.org/~andrewdo/writings/FreeLifePlannerProgress-20160419.txt</x-color>
+<x-color><param>green</param>14:18:13 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>not super important, but an update on the life planner</x-color>
+<x-color><param>green</param>14:18:14 </x-color><<dmiles> yeah that put_attr(X,cond,equals(X,agentFn(freeWopr))
+<x-color><param>green</param>14:18:27 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>where does that get invoked?</x-color>
+<x-color><param>green</param>14:18:28 </x-color><<dmiles> and X goes where that function was
+<x-color><param>green</param>14:18:35 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>ah</x-color>
+<x-color><param>green</param>14:19:04 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>that's another thing, how do you do things where you need
+      to qualify some variables first, like agentFn((X \= freeWopr,X)) or
+      something</x-color>
+<x-color><param>green</param>14:19:14 </x-color><<dmiles> jumps(agentFn(freeWopr)).   is seen as
+      put_attr(X,cond,equals(X,agentFn(freeWopr))),jumps(X).
+<x-color><param>green</param>14:19:18 </x-color><x-color><param>blue</param>*** </x-color><x-color><param>blue</param>Zekka</x-color><x-color><param>blue</param> (~</x-color><x-color><param>blue</param>zekka</x-color><x-color><param>blue</param>@150.135.210.116) has joined channel ##prolog</x-color>
+<x-color><param>green</param>14:19:23 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>so your system interprets?</x-color>
+<x-color><param>green</param>14:20:16 </x-color><<dmiles> agentFn(X)/dif(X,freeWopr)
+<x-color><param>green</param>14:20:44 </x-color><<dmiles> which is  the same as  {dif(X,freeWopr)},agentFn(X)
+<x-color><param>green</param>14:21:04 </x-color><<dmiles> oh oh.. acctuly here is the power.. of this..
+<x-color><param>green</param>14:21:05 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>here let me look for a case where I've had to do this</x-color>
+<x-color><param>green</param>14:21:08 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>k</x-color>
+<x-color><param>green</param>14:21:16 </x-color><<dmiles> i do an intial read/1
+<x-color><param>green</param>14:21:25 </x-color><<dmiles> well a very spial read
+<x-color><param>green</param>14:21:29 </x-color><<dmiles> special
+<x-color><param>green</param>14:22:13 </x-color><<dmiles>  jumps(agentFn(_{dif:freeWopr})). 
+<x-color><param>green</param>14:22:27 </x-color><x-color><param>blue</param>*** mindCrime__ (~prhodes@rrcs-98-101-159-194.midsouth.biz.rr.com) is
+      now known as </x-color><x-color><param>blue</param>mindCrime</x-color>
+<x-color><param>green</param>14:22:34 </x-color><<dmiles> wheni read that i attrubte the Var
+<x-color><param>green</param>14:23:00 </x-color><x-color><param>blue</param>*** </x-color><x-color><param>blue</param>eazar001</x-color><x-color><param>blue</param> (~idpispopd@2602:306:3970:760:7d71:253:eb80:1565) has
+      joined channel ##prolog</x-color>
+<x-color><param>green</param>14:23:39 </x-color><<dmiles>
+      https://github.com/TeamSPoon/PrologMUD/blob/master/pack/logicmoo_base/t/examples/sanity/attvar_02.pfc
+<x-color><param>green</param>14:23:39 </x-color><<yesbot> Title: PrologMUD/attvar_02.pfc at master ·
+      TeamSPoon/PrologMUD · GitHub (0.49s)
+<x-color><param>green</param>14:23:39 </x-color><<yesbot> http://tinyurl.com/jusekrj (0.35s)
+<x-color><param>green</param>14:24:33 </x-color><<dmiles> sk_in(avar([vn='Ex',sk='SKF-666'])). ===
+      sk_in(_{vn:'Ex',sk:'SKF-666'})).
+<x-color><param>green</param>14:25:06 </x-color><<dmiles>  ===  sk_in(Ex{sk:'SKF-666'}).
+<x-color><param>green</param>14:25:24 </x-color><<dmiles> vn = varable name
+<x-color><param>green</param>14:26:07 </x-color><<dmiles> any term witha fooFn(..) i also read as attvars
+<x-color><param>green</param>14:27:31 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>what is dif?</x-color>
+<x-color><param>green</param>14:27:44 </x-color><<dmiles> it enforces not equals to
+<x-color><param>green</param>14:27:51 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>well I mean where is it from?</x-color>
+<x-color><param>green</param>14:27:57 </x-color><<dmiles> ?search dif/2
+<x-color><param>green</param>14:27:57 </x-color><<yesbot> dif(@A, @B)
+<x-color><param>green</param>14:27:57 </x-color><<yesbot> The dif/2 predicate provides a constraint stating that A and
+      B are different terms.
+<x-color><param>green</param>14:27:57 </x-color><<yesbot> http://www.swi-prolog.org/pldoc/doc_for?object=dif/2
+<x-color><param>green</param>14:28:05 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>ah clpfd?</x-color>
+<x-color><param>green</param>14:28:14 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>what day next week should I reach out to you?</x-color>
+<x-color><param>green</param>14:28:20 </x-color><<dmiles> from  when/2
+<x-color><param>green</param>14:28:20 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>and what time</x-color>
+<x-color><param>green</param>14:28:23 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>k</x-color>
+<x-color><param>green</param>14:28:44 </x-color><<dmiles> monday 9am
+<x-color><param>green</param>14:28:50 </x-color><<dmiles> (your time zone)
+<x-color><param>green</param>14:28:53 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>awesome!  adding it to my life planner</x-color>
+<x-color><param>green</param>14:28:55 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>thanks</x-color>
+<x-color><param>green</param>14:29:08 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>Doug things have really sped up since I started emulating
+      LogicMOO</x-color>
+<x-color><param>green</param>14:29:14 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>you are years ahead of me</x-color>
+<x-color><param>green</param>14:29:22 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>I appreciate all that you do</x-color>
+<x-color><param>green</param>14:29:32 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>everything you've ever said to me has gotten me so much
+      further along</x-color>
+<x-color><param>green</param>14:30:19 </x-color><x-color><param>blue</param>*** </x-color><x-color><param>blue</param>RossJH</x-color><x-color><param>blue</param> (~textual@unaffiliated/rossjh) has joined channel ##prolog</x-color>
+<x-color><param>green</param>14:30:30 </x-color><<dmiles> goodd.. also the nice things about dif/2 is its an
+      annotation to a variable
+<x-color><param>green</param>14:30:37 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>right</x-color>
+<x-color><param>green</param>14:31:49 </x-color><<dmiles> it takes ou trying to coerce ingigolog into doing things for
+      you to best see what sorts of things are missing
+<x-color><param>green</param>14:32:11 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>well I'm not interested in indigolog really, it was just
+      an idea to solve that particular problem</x-color>
+<x-color><param>green</param>14:32:34 </x-color><<dmiles> well what is missing from all these systems is a KR 
+<x-color><param>green</param>14:32:47 </x-color><<dmiles> whether that be CycL or whatnot
+<x-color><param>green</param>14:33:20 </x-color><<dmiles> missing from prolog .. missing from everyting but Cyc
+<x-color><param>green</param>14:33:33 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>how much of CycL does </x-color><x-color><param>brown</param>PrologMUD</x-color><x-color><param>brown</param> cover?</x-color>
+<x-color><param>green</param>14:33:37 </x-color><<dmiles> though SUO-KIF i guess isnt missing it
+<x-color><param>green</param>14:34:42 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>one sec</x-color>
+<x-color><param>green</param>14:35:29 </x-color><x-color><param>blue</param>*** </x-color><x-color><param>blue</param>x77686d</x-color><x-color><param>blue</param> (~whm@150.135.210.140) has joined channel ##prolog</x-color>
+<x-color><param>green</param>14:36:14 </x-color><<dmiles> this file is
+      https://github.com/TeamSPoon/PrologMUD/blob/master/pack/logicmoo_base/prolog/logicmoo/pfc/system_base.pfc.pl
+      inital coverage
+<x-color><param>green</param>14:36:15 </x-color><<yesbot> Title: PrologMUD/system_base.pfc.pl at master ·
+      TeamSPoon/PrologMUD · GitHub (0.80s)
+<x-color><param>green</param>14:36:15 </x-color><<yesbot> http://tinyurl.com/z9fjsy3 (0.05s)
+<x-color><param>green</param>14:37:54 </x-color><<dmiles> but in less than 30 days this is what is supposed ot be in
+      it:  
+<x-color><param>green</param>14:38:41 </x-color><<dmiles>
+      https://raw.githubusercontent.com/TeamSPoon/PrologMUD/master/pack/logicmoo_base/prolog/logicmoo/plarkc/logicmoo_i_cyc_kb_tinykb.pfc
+<x-color><param>green</param>14:38:43 </x-color><<yesbot> http://tinyurl.com/huj8y5d (0.15s)
+<x-color><param>green</param>14:41:17 </x-color><<dmiles> (thats the first 8000 assertions that cyc loads)
+<x-color><param>green</param>14:45:06 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>quick question, what is the best way to have disjunctive
+      heads?</x-color>
+<x-color><param>green</param>14:45:40 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>a(X) :- c(X).  b(X) :- c(X).  without rewriting
+      everything, and possibly besides saying a(X) :- b(X).?</x-color>
+<x-color><param>green</param>14:45:47 </x-color><<dmiles> multiple choices or exclusive choices?
+<x-color><param>green</param>14:45:54 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>difference?</x-color>
+<x-color><param>green</param>14:46:06 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>oh both ways</x-color>
+<x-color><param>green</param>14:46:30 </x-color><<dmiles> your exmaple looked like multiple choices (when you add cuts
+      that mmight be an example of exclusive cchoices)
+<x-color><param>green</param>14:46:46 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>yeah, can you tell me how to do both ways</x-color>
+<x-color><param>green</param>14:47:39 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>also where might I read about choice points?</x-color>
+<x-color><param>green</param>14:48:07 </x-color><<dmiles>  a(X) :- c(X).   b(X) :- c(X).     is to achive  ?
+<x-color><param>green</param>14:48:31 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>well it comes up periodically, here I'll find an example</x-color>
+<x-color><param>green</param>14:48:41 </x-color><<dmiles> a/1 and b/1 see c/2 but they dont see each other
+<x-color><param>green</param>14:48:51 </x-color><<dmiles> ok exmaple will be better
+<x-color><param>green</param>14:49:56 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>I can't readily find it</x-color>
+<x-color><param>green</param>14:50:04 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>I'll get back to you</x-color>
+<x-color><param>green</param>14:50:25 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>btw, did you have any performatives in LP I could use?</x-color>
+<x-color><param>green</param>14:52:17 </x-color><<dmiles> oh about choice points .. well they are an impl detail that
+      when you study them specifically you are studying the impl of prlog
+<x-color><param>green</param>14:53:05 </x-color><<dmiles> i was asking thinking you wanted to have serval answers vs
+      one answer to a predicate
+<x-color><param>green</param>14:53:24 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>k</x-color>
+<x-color><param>green</param>14:53:26 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>thanks</x-color>
+<x-color><param>green</param>14:54:16 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>okay well you've given me a lot to go on, I appreciate
+      this</x-color>
+<x-color><param>green</param>14:54:43 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>do you think I could load that system_base.pfc.pl into the
+      free life planner to get it started more?</x-color>
+<x-color><param>green</param>14:55:55 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>nm, looks to have a lot of prereqs</x-color>
+<x-color><param>green</param>14:56:23 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>alright, sorry I have to leave, but thanks for your help?
+      How can I repay you?</x-color>
+<x-color><param>green</param>14:56:43 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>s/help?/help!/</x-color>
+<x-color><param>green</param>14:57:04 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>anticipatory mistake</x-color>
+<x-color><param>green</param>14:57:15 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>as opposed to perseveratory</x-color>
+<x-color><param>green</param>14:57:35 </x-color><<dmiles> just your awesome patience
+<x-color><param>green</param>14:57:41 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>ah now I know why they call my obsession with AI a
+      perseveration</x-color>
+<x-color><param>green</param>14:57:54 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>thanks!</x-color>
+<x-color><param>green</param>14:58:03 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>I appreciate yours as well</x-color>
+<x-color><param>green</param>14:58:35 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>I *really* appreciate this!  TTYL!</x-color>
+<x-color><param>green</param>14:58:51 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>It's literally saving my life in case you didn't know.</x-color>
+<x-color><param>green</param>14:58:59 </x-color><<dmiles> these ablkes wirk in logicmoo_base
+      https://github.com/TeamSPoon/PrologMUD/tree/master/pack/logicmoo_base/t/examples/pfc
+<x-color><param>green</param>14:59:00 </x-color><<yesbot> Title: PrologMUD/pack/logicmoo_base/t/examples/pfc at master
+      · TeamSPoon/PrologMUD · GitHub (0.60s)
+<x-color><param>green</param>14:59:16 </x-color><<dmiles> those examples work at least
+<x-color><param>green</param>14:59:30 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>yes I did want to flesh out the test cases</x-color>
+<x-color><param>green</param>14:59:43 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>I'm going to add that to my tasks in the life planner</x-color>
+<x-color><param>green</param>15:00:18 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>which with this info I'll be closer to getting proper
+      microtheories working for those microtheory for user functions</x-color>
+<x-color><param>green</param>15:00:22 </x-color><<dmiles> oh yeah.. actualy what would help a lot.. is some examples
+      of what we expect the system to do from your persppective
+<x-color><param>green</param>15:00:58 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>okay I will work on that first thing when I wake tomorrow,
+      it's actually my bedtime - crazy sleeping schedule</x-color>
+<x-color><param>green</param>15:01:33 </x-color><<dmiles> even if i have to go thru and resytax the examples to how
+      logicmoo would do it
+<x-color><param>green</param>15:01:42 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>great</x-color>
+<x-color><param>green</param>15:01:44 </x-color><<dmiles> re-syntax.. that would be fine
+<x-color><param>green</param>15:02:28 </x-color><<dmiles> yep.. ttys
+<x-color><param>green</param>15:30:47 </x-color><x-color><param>blue</param>*** x77686d (~whm@150.135.210.140) has quit: Quit: x77686d</x-color>
+

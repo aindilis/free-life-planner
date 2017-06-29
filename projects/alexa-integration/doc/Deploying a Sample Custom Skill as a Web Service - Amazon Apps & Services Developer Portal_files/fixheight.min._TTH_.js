@@ -1,0 +1,1 @@
+    var before=$("#content-body").height(),neededHeight;if(neededHeight=$(".dropdown-menu").height(),neededHeight+=75,neededHeight>before){$("div#content-body").height(neededHeight);var after=$("div#content-body").height()}

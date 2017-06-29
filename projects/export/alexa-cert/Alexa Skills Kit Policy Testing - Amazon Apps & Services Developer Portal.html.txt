@@ -1,0 +1,221 @@
+  • Home
+  • ALEXA
+  • SERVICES & APIS
+  • DEVICES
+  • RESOURCES
+  • BLOGS
+  • SUPPORT
+
+[                    ] ●
+Home > Alexa > Alexa Skills Kit
+
+  • Alexa
+  • Alexa Skills Kit
+  • Alexa Voice Service
+  • Alexa Fund
+  • Rewards for Skill Developers
+
+Alexa Skills Kit Policy Testing
+
+Introduction
+
+All skills submitted to Alexa must adhere to our Content Guidelines.
+
+  • Policy Examples
+      □ 1. Trademarks, Intellectual Property, and Brands
+      □ 2. No Child-Directed Alexa Skills
+      □ 3. Health
+      □ 4. Purchasing and Currencies
+      □ 5. Advertising
+      □ 6. Pornography and Sex
+      □ 7. Violence
+      □ 8. Religion, Ethnicity, and Culture
+      □ 9. Emergency Services (Telecommunications)
+      □ 10. Content
+      □ 11. General
+  • Next Steps
+
+Policy Examples
+
+The following list shows specific examples that we look out for when evaluating
+whether a skill can be made available on Alexa. The list is not exhaustive, and
+the guidelines may change over time as new issues arise.
+
+If Amazon determines that your skill contains, facilitates, or promotes content
+that is prohibited by these policy guidelines, we will reject or suspend the
+submission and notify you using the e-mail address associated with your
+developer account.
+
+Your skill will be rejected or suspended if it:
+
+1. Trademarks, Intellectual Property, and Brands
+
+a. Implies sponsorship or endorsement by Amazon or otherwise mischaracterizes
+the relationship with Amazon.
+b. Uses the image or likeness of an Amazon device as part of the skill icon.
+c. Infringes the intellectual property rights (including copyright, trademark
+and publicity rights) of a third party.
+d. Purports to be affiliated with a company or brand but is not the official
+skill of that company or brand.
+
+2. No Child-Directed Alexa Skills
+
+a. Is directed to children under the age of 13 or interacts with any user
+accounts or profiles you may maintain for children under the age of 13.
+
+3. Health
+
+a. Collects information relating to any person’s physical or mental health or
+condition, the provision of health care to a person, or payment for the same.
+b. Is a health-related skill and does not include a disclaimer in the skill
+description stating that the skill is not a substitute for professional advice.
+Example: “This tool does not provide medical advice, and is for informational
+and educational purposes only, and is not a substitute for professional medical
+advice, treatment or diagnosis. Call your doctor to receive medical advice. If
+you think you may have a medical emergency, please dial your local emergency
+response phone number.”
+c. Claims to provide life-saving assistance through the skill or in the skill
+name, invocation name or skill description.
+
+4. Purchasing and Currencies
+
+a. Offers a separate skill store or recommends other skills.
+b. Offers compensation for enabling other skills, or for providing product
+reviews on skills. Examples of compensation may include digital goods, physical
+goods, or monetary transactions.
+c. Solicits donations from end users.
+
+5. Advertising
+
+a. Includes or otherwise surfaces advertising or promotional messaging. There
+are specific exceptions we will allow:
+
+  • Streaming music, streaming radio, podcast, and flash briefing skills may
+    include audio advertisements as long as (1) the advertisements do not use
+    Alexa’s voice or a similar voice, refer to Alexa, or imitate Alexa
+    interactions and (2) the skill does not include more or materially
+    different advertising than is included when the same or similar content is
+    made available outside of Alexa.
+  • Skills that allow customers to order products or services may include audio
+    messaging promoting those products or services.
+  • Skills may include audio messaging informing customers of promotional
+    offers or deals in response to specific requests from customers.
+  • Skills that are specifically designed to promote a product or service may
+    include audio messaging promoting that product or service.
+
+We reserve the right to reject or suspend any skill that includes advertising
+or promotional messaging we determine is misleading or confusing, results in a
+poor customer experience, or is otherwise inappropriate.
+
+6. Pornography and Sex
+
+a. Has sexually explicit textual descriptions and/or home card has images that
+contain sexually explicit material.
+
+7. Violence
+
+a. Contains graphic depictions or descriptions of extreme gore, decapitations,
+unsettling content, and/or excessive violence.
+b. Promotes organized crime, terrorism, or other illegal activities meant to
+undermine local and/or national governments or police.
+
+8. Religion, Ethnicity, and Culture
+
+a. Includes references to or information regarding forced marriages or
+purchasable husbands and/or wives.
+b. Purports to be able to predict gender.
+c. Contains derogatory comments or hate speech specifically targeting any group
+or individuals.
+d. Contains content that references or promotes out-of-context quotations that
+mislead about the intentions of the figure being quoted.
+e. Contains or references Nazi symbols or other symbols of hate, promotes hate
+speech, incites racial or gender hatred, or promotes groups or organizations
+which support such beliefs such as the Ku Klux Klan.
+
+9. Emergency Services (Telecommunications)
+
+a. Allows the user to contact emergency responders (e.g. 911).
+
+10. Content
+
+a. Contains references and/or promotes illegal downloading of torrents or
+pirated software.
+b. Contains specific advice on how to join an illegal organization.
+c. Provides advice on how to begin or be involved in an illegal lifestyle, such
+as prostitution.
+d. Gives guidance on how create or build dangerous materials (e.g., how to
+build a bomb, silencer, meth lab, etc.)
+e. Promotes or praises terrorism, including detailing specific tactics or
+recruiting new members for terrorist groups.
+f. Contains or references illegal or controlled drug use.
+g. Contains false claims regarding medicine and/or prescription drugs—such as
+pills claiming to cure all diseases—or provides information about black market
+sales of prescription drugs.
+h. Enables end users to engage in gambling to win real money prizes or other
+tangible prizes that have an actual cash value.
+i. Promotes the sale of alcohol or tobacco, contains or references underage use
+of tobacco or alcohol, or promotes excessive use.
+j. Contains excessive profanity.
+
+11. General
+
+a. Lacks an English product description, invocation name, or title.
+b. Contains profanity aimed at children.
+c. Contains malicious functionality, or is a prank skill that does not disclose
+its prank functionality in its product description.
+d. Contains unmoderated user generated content.
+
+Next Steps
+
+  • 2. Security Testing
+  • 3. Functional Testing
+  • 4. Voice Interface and User Experience Testing
+  • Go back to: Submitting an Alexa Skill for Certification.
+  • Return to: Steps to Build a Custom Skill
+
+Sitemap
+facebook_logo twitter_logo blog_logo
+Follow us
+
+  • Alexa
+      □ Alexa Skills Kit
+      □ Alexa Voice Service
+      □ Alexa Fund
+      □ Rewards for Skill Developers
+  • Services & APIs
+      □ Earn
+      □ Engage
+      □ Build
+  • Devices
+      □ Fire Tablets
+      □ Amazon Fire TV
+      □ Dash Replenishment Service
+      □ Fire Phone
+      □ Amazon Echo
+      □ Amazon Tap
+  • Resources
+      □ Platforms
+      □ Learning Center
+      □ Development Tools
+      □ Promotional Tools
+      □ Marketing Tips
+      □ Other Resources
+  • Blogs
+      □ Alexa Blog
+      □ Appstore Blog
+      □ AWS Blog
+  • Support
+      □ Submitting Your Apps
+      □ FAQs
+      □ Forums
+      □ Contact Us
+      □ App Distribution Agreement
+      □ Mobile Ad Network Publisher Agreement
+      □ Mobile Ad Network Program Participation Requirements
+      □ Advertise Your App With Amazon Agreement
+      □ Program Materials License Agreement
+      □ Trademark Guidelines
+      □ Terms of Use
+    *
+
+© 2010-2016, Amazon.com, Inc. or its affiliates. All Rights Reserved.

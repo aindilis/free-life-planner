@@ -1,0 +1,101 @@
+Content-Type: text/enriched
+Text-Width: 70
+
+<x-color><param>green</param>22:24:55 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>this is a really simple question: suppose I have a list of
+      names, and I want to do a findall to get all the facts matching that,
+      and return a list of lists of matches, one for each findall.  what is
+      the quick n dirty way and what is the correct way</x-color>
+<x-color><param>green</param>22:27:43 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>i.e. I have a(x,a),a(x,b), a(y,c) and a(y,d) and I do
+      setof(Name,Second^a(Name,Second),List).  then do a getLOL(List,Result),
+      which has a findall(X,a(x,X),List), how do I get [[x,[a,b]],[y,[c,d]]]</x-color>
+<x-color><param>green</param>22:29:00 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>also: (how to check which file a particular rule/fact
+      comes from)</x-color>
+<x-color><param>green</param>22:29:11 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>(how to list which files have been loaded)</x-color>
+<x-color><param>green</param>22:29:32 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>would a diff list or accumulator be proper</x-color>
+<x-color><param>green</param>22:30:53 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>btw the freelifeplanner.org is really coming along</x-color>
+<x-color><param>green</param>22:32:09 </x-color><<eazar001> okay ..
+<x-color><param>green</param>22:32:49 </x-color><<eazar001> setof([Name,Second], Second^a(Name,Second),
+      ListofListofMatches).
+<x-color><param>green</param>22:32:55 </x-color><<eazar001> that should be something like what you want
+<x-color><param>green</param>22:33:07 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>k great!</x-color>
+<x-color><param>green</param>22:33:18 </x-color><<eazar001> ( i haven't tested, but it could be slightly off )
+<x-color><param>green</param>22:33:46 </x-color><<eazar001> for your second question ...
+<x-color><param>green</param>22:34:00 </x-color><<eazar001> predicate_property(Predicate, imported_from(Module))
+<x-color><param>green</param>22:34:23 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>sweet :)</x-color>
+<x-color><param>green</param>22:35:20 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>does that work with consult and include in addition to
+      modules?</x-color>
+<x-color><param>green</param>22:35:24 </x-color><<eazar001> yea, but you basically can bind anything in setof
+<x-color><param>green</param>22:35:31 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>nice</x-color>
+<x-color><param>green</param>22:35:37 </x-color><<eazar001> include ... i do'nt think so
+<x-color><param>green</param>22:35:42 </x-color><<eazar001> wait lemme think
+<x-color><param>green</param>22:36:03 </x-color><<eazar001> if you're including text, and eventually the source file
+      gets compiled ...
+<x-color><param>green</param>22:36:18 </x-color><<eazar001> as long as its loaded before you run that query, YES it
+      _should_
+<x-color><param>green</param>22:36:23 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>nice</x-color>
+<x-color><param>green</param>22:36:30 </x-color><<eazar001> but it would be time-dependent i think, so be very
+      cautious
+<x-color><param>green</param>22:36:34 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>k</x-color>
+<x-color><param>green</param>22:39:25 </x-color><<eazar001> i would usually avoid difference lists
+<x-color><param>green</param>22:39:57 </x-color><<eazar001> if findall, setof, bagof, are getting the job done, then
+      it's faster and more efficient and cleaner than diff lists
+<x-color><param>green</param>22:40:13 </x-color><<eazar001> even then, there are some cases where DCG representations
+      can replace diff lists
+<x-color><param>green</param>22:40:25 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>?- setof([Name,Second],
+      Second^Third^setof(Second2,Third^hasInventory(Name,Second2,Third),Second),ListofListofMatches),see(ListofListofMatches).</x-color>
+<x-color><param>green</param>22:40:27 </x-color><<<x-color><param>brown</param>aindilis</x-color>>
+      <x-color><param>brown</param>[[andrewDougherty,[cash,paypal]],[townhome,[beefRamen,chickenRamen,flavoredWater,jugs5Gallon,progressoSoup]],[townhomeUpstairsFridge,[ripItEnergyDrink]]]</x-color>
+<x-color><param>green</param>22:40:52 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>hadn't thought of doing setof inside iteself</x-color>
+<x-color><param>green</param>22:40:59 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>*I</x-color>
+<x-color><param>green</param>22:41:00 </x-color><<eazar001> hah, ripit ... i know that drink =]
+<x-color><param>green</param>22:41:04 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>:)</x-color>
+<x-color><param>green</param>22:41:08 </x-color><<eazar001> ?stop prolog_eval
+<x-color><param>green</param>22:41:09 </x-color><<yesbot> Okay, stopping prolog_eval
+<x-color><param>green</param>22:41:13 </x-color><<eazar001> that's ultra cheap
+<x-color><param>green</param>22:41:17 </x-color><<eazar001> dollar store product hehe
+<x-color><param>green</param>22:41:21 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>yeah</x-color>
+<x-color><param>green</param>22:41:54 </x-color><<eazar001> yea it's extremely flexible, the aggregators
+<x-color><param>green</param>22:42:05 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>is there a summation one?</x-color>
+<x-color><param>green</param>22:42:06 </x-color><<eazar001> you could even say [_,_]
+<x-color><param>green</param>22:42:09 </x-color><<eazar001> yep
+<x-color><param>green</param>22:42:15 </x-color><<eazar001> ?start prolog_eval
+<x-color><param>green</param>22:42:15 </x-color><<yesbot> Okay, starting prolog_eval
+<x-color><param>green</param>22:42:38 </x-color><<eazar001> ?- aggregate_all(sum, member(1, [1,2,1,3,4]), Total)
+<x-color><param>green</param>22:42:41 </x-color><<eazar001> ?- aggregate_all(sum, member(1, [1,2,1,3,4]), Total).
+<x-color><param>green</param>22:42:47 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>nice!</x-color>
+<x-color><param>green</param>22:43:00 </x-color><<eazar001> hold on
+<x-color><param>green</param>22:43:04 </x-color><<eazar001> i think i entered the wrong command
+<x-color><param>green</param>22:43:11 </x-color><<eazar001> ?- aggregate_all(count, member(1, [1,2,1,3,4]), Total).
+<x-color><param>green</param>22:43:11 </x-color><<yesbot> 'Total'=2
+<x-color><param>green</param>22:43:14 </x-color><<eazar001> there we go
+<x-color><param>green</param>22:43:26 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>sweet</x-color>
+<x-color><param>green</param>22:43:38 </x-color><<eazar001> ?- aggregate_all(sum(10), member(1, [1,2,1,3,4]), Total).
+<x-color><param>green</param>22:43:38 </x-color><<yesbot> 'Total'=20
+<x-color><param>green</param>22:43:39 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>saving that for future reference</x-color>
+<x-color><param>green</param>22:43:43 </x-color><<eazar001> you could do other variants too
+<x-color><param>green</param>22:43:59 </x-color><<eazar001> ?search manual(aggregate)
+<x-color><param>green</param>22:43:59 </x-color><<yesbot> library(aggregate): Aggregation operators on backtrackable
+      predicates
+<x-color><param>green</param>22:43:59 </x-color><<yesbot> http://www.swi-prolog.org/pldoc/man?section=aggregate
+<x-color><param>green</param>22:44:07 </x-color><<eazar001> ?stop prolog_eval
+<x-color><param>green</param>22:44:07 </x-color><<yesbot> Okay, stopping prolog_eval
+<x-color><param>green</param>22:46:35 </x-color><<eazar001> so ... aggregate_all corresponds to findall
+<x-color><param>green</param>22:46:45 </x-color><<eazar001> and aggregate/N corresponds to bagof
+<x-color><param>green</param>22:46:59 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>great that's really handy</x-color>
+<x-color><param>green</param>22:47:21 </x-color><<eazar001> also aggregate_all/3 is all in-place, and aggregate/N is
+      linear
+<x-color><param>green</param>22:47:43 </x-color><<eazar001> just in case you were wondering.
+<x-color><param>green</param>22:48:00 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>thanks!</x-color>
+<x-color><param>green</param>22:48:06 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>yeah this was a big help</x-color>
+<x-color><param>green</param>22:48:13 </x-color><<eazar001> cool
+<x-color><param>green</param>22:48:22 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>working on the inventory management portion of the system</x-color>
+<x-color><param>green</param>22:48:30 </x-color><<eazar001> ahh nice
+<x-color><param>green</param>22:48:52 </x-color><<eazar001> i'm moving spaceships around in a top-down shooter =P
+<x-color><param>green</param>22:49:06 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>great!</x-color>
+<x-color><param>green</param>22:49:13 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>I can't wait to see your game</x-color>
+<x-color><param>green</param>22:49:14 </x-color><<eazar001> by bullets look like spit hahaha
+<x-color><param>green</param>22:49:20 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>hehe</x-color>
+<x-color><param>green</param>22:49:30 </x-color><<eazar001> alright, back to my C# for now
+<x-color><param>green</param>22:49:38 </x-color><<<x-color><param>DarkTurquoise</param>eazar001</x-color>> happy hacking <x-color><param>Orchid</param>aindilis</x-color> 
+<x-color><param>green</param>22:49:41 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>:)  thanks again!  ditto!</x-color>
+<x-bg-color><param>lightBlue2</param><x-color><param>Black</param>##prolog></x-color></x-bg-color> 

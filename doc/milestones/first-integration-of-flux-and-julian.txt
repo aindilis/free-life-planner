@@ -1,0 +1,38 @@
+andrewdo@ai:/var/lib/myfrdcsas/versions/myfrdcsa-1.0/codebases/minor/free-life-planner$ ./scripts/assistant.sh 
+Warning: /var/lib/myfrdcsas/versions/myfrdcsa-1.0/codebases/minor/free-life-planner/lib/calendaring/calendaring.pl:59:
+	Singleton variables: [Date1,Date2]
+Warning: /var/lib/myfrdcsas/versions/myfrdcsa-1.0/codebases/minor/free-life-planner/lib/calendaring/calendaring.pl:59:
+	Singleton variable in branch: Date1
+	Singleton variable in branch: Date2
+Warning: /var/lib/myfrdcsas/versions/myfrdcsa-1.0/codebases/minor/free-life-planner/lib/calendaring/calendaring.pl:85:
+	Singleton variables: [H,M,S]
+Warning: /var/lib/myfrdcsas/versions/myfrdcsa-1.0/codebases/minor/free-life-planner/lib/calendaring/calendaring.pl:91:
+	Singleton variable in branch: Instruments
+Warning: /var/lib/myfrdcsas/versions/myfrdcsa-1.0/codebases/minor/free-life-planner/lib/flux/assistant-1.pl:24:
+	Singleton variables: [Nanoseconds]
+ERROR: /var/lib/myfrdcsas/versions/myfrdcsa-1.0/codebases/minor/free-life-planner/lib/flux/assistant-1.pl:58:26: Syntax error: Operator priority clash
+Warning: /var/lib/myfrdcsas/versions/myfrdcsa-1.0/codebases/minor/free-life-planner/lib/flux/assistant-1.pl:171:
+	Singleton variables: [Duration,T]
+Welcome to SWI-Prolog (Multi-threaded, 64 bits, Version 7.2.0)
+Copyright (c) 1990-2015 University of Amsterdam, VU Amsterdam
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software,
+and you are welcome to redistribute it under certain conditions.
+Please visit http://www.swi-prolog.org for details.
+
+For help, use ?- help(Topic). or ?- apropos(Word).
+
+?- main.
+[at(1,4962850200000000000),request(1,1800000000000),request(2,2700000000000),request(3,3600000000000),available(1,1,4962852000000000000),available(1,2,4962859200000000000),available(2,3,4962854700000000000),available(2,3,4962861900000000000),available(3,2,4962853800000000000),available(3,3,4962861900000000000)]
+[go_meet(3,2,4962853800000000000),go_meet(1,2,4962859200000000000),go_meet(2,3,4962861900000000000)]
+true.
+
+?-   C-c C-c
+Action (h for help) ? e
+exit
+
++ FIX DYFETS COMPUTER
++ BRUSH YOUR TEETH, FLOSS AND MOUTHWASH NOW
++ RECORD MEALS/VITAMIN-D
++ TAKE VITAMIN-D/ANTI-TRIGLYCERIDE MEDICATION
+ - Guard...
+andrewdo@ai:/var/lib/myfrdcsas/versions/myfrdcsa-1.0/codebases/minor/free-life-planner$ 

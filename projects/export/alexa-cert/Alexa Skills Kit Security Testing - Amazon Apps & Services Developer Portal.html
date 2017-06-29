@@ -1,0 +1,1931 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
+  <head>
+    <meta http-equiv="x-ua-compatible" content="IE=EDGE">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, maximum-width=1">
+    <meta name="keywords" content="amazon, appstore, developer portal"/>
+    
+    <meta name="description" content="Amazon Apps & Services Developer Portal"/>
+
+    <script type="text/javascript">var ue_t0=window.ue_t0||+new Date();</script><script type="text/javascript">(function(e){var c=e;var a=c.ue||{};a.main_scope="mainscopecsm";a.q=[];a.t0=c.ue_t0||+new Date();a.d=g;function g(h){return +new Date()-(h?0:a.t0)}function d(h){return function(){a.q.push({n:h,a:arguments,t:a.d()})}}function b(m,l,h,j,i){var k={m:m,f:l,l:h,c:""+j,err:i,fromOnError:1,args:arguments};c.ueLogError(k);return false}b.skipTrace=1;e.onerror=b;function f(){c.uex("ld")}if(e.addEventListener){e.addEventListener("load",f,false)}else{if(e.attachEvent){e.attachEvent("onload",f)}}a.tag=d("tag");a.log=d("log");a.reset=d("rst");c.ue_csm=c;c.ue=a;c.ueLogError=d("err");c.ues=d("ues");c.uet=d("uet");c.uex=d("uex");c.uet("ue")})(window);(function(e,d){var a=e.ue||{};function c(g){if(!g){return}var f=d.head||d.getElementsByTagName("head")[0]||d.documentElement,h=d.createElement("script");h.async="async";h.src=g;f.insertBefore(h,f.firstChild)}function b(){var k=e.ue_cdn||"z-ecx.images-amazon.com",g=e.ue_cdns||"images-na.ssl-images-amazon.com",j="/images/G/01/csminstrumentation/",h=e.ue_file||"ue-full-11e51f253e8ad9d145f4ed644b40f692._V1_.js",f,i;if(h.indexOf("NSTRUMENTATION_FIL")>=0){return}if("ue_https" in e){f=e.ue_https}else{f=e.location&&e.location.protocol=="https:"?1:0}i=f?"https://":"http://";i+=f?g:k;i+=j;i+=h;c(i)}if(!e.ue_inline){if(a.loadUEFull){a.loadUEFull()}else{b()}}a.uels=c;e.ue=a})(window,document);</script>
+
+    <script type="text/javascript">
+//<![CDATA[
+if (typeof h311933999 === 'undefined') {
+    h311933999 = {};
+}
+if (typeof h311933999.i311933999 === 'undefined') {
+    h311933999.i311933999 = {};
+}
+
+h311933999.i311933999.AsyncPage = {
+
+    load : function() {
+        var result,divs , i, length;
+        result = [];
+
+        if (document.getElementsByClassName) {
+            result = document.getElementsByClassName('j311933999Async');
+        } else {
+            divs = document.getElementsByTagName('div');
+            for (i=0, length=divs.length; i<length; i++) {
+                if (divs[i].className === 'j311933999Async') {
+                    result.push(divs[i]);
+                }
+            }
+        }
+
+        for (i=0, length=result.length; i< length; i++) {
+            (function(element) {
+                this.sendRequest(element.id, function(xmlHttp) {
+                    var fragment, tmpDiv, parent;
+                    fragment = document.createDocumentFragment();
+                    tmpDiv = document.createElement('div');
+                    tmpDiv.innerHTML = xmlHttp.responseText;
+                    while (tmpDiv.firstChild) {
+                        fragment.appendChild(tmpDiv.firstChild);
+                    }
+                    parent = element.parentNode;
+                    parent.replaceChild(fragment, element);
+                });
+            }).call(this, result[i]);
+        }
+    },
+
+    sendRequest : function(url, callback) {
+        var xmlHttpRequest;
+        try {
+            xmlHttpRequest = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
+            xmlHttpRequest.open("GET", url, true);
+            xmlHttpRequest.onreadystatechange = function () {
+                if (xmlHttpRequest.readyState !== 4) {
+                    return;
+                }
+                if (xmlHttpRequest.status !== 200 && xmlHttpRequest.status !== 304) {
+                    return;
+                }
+                callback(xmlHttpRequest);
+            };
+
+            xmlHttpRequest.send();
+        } catch (e) {
+            if (typeof window.console !== 'undefined') {
+                if (typeof console.error !== 'undefined') {
+                    console.error(e.name + ": " + e.message);
+                } else if (typeof console.log !== 'undefined') {
+                    console.log(e.name + ": " + e.message);
+                }
+            }
+        }
+    }
+};
+//]]>
+</script>
+<meta name="id" content="9f90e42b-af5d-4014-82ab-3f3c411a10a2"/>
+<title>
+            Alexa Skills Kit Security Testing - Amazon Apps &amp; Services Developer Portal
+        </title>
+<meta name="description" content="Understand the security requirements for Alexa skills"/>
+<meta name="keywords" content="checklist,certification,certify,testing,alexa,ask,submitting,quality,quality assurance,qa,security,ssl"/>
+
+
+    <link rel="stylesheet" href="https://images-na.ssl-images-amazon.com/images/G/01/AUIClients/MASAriaThemeAssets-cc1c91b11ab782aab8b8270cbcbd45db7345699d._V2_.css" />
+
+    <link href="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal2/res/css/webfonts._V326851759_.css" rel="stylesheet" type="text/css"/>
+    <link id="page_css" rel="stylesheet" href="" type="text/css"/>
+    <link href='https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/taas/jquery/widget/jquery-ui-1.10.3.custom.min.css' rel='stylesheet' type='text/css'/>
+
+    <script type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal2/public/resources/js/jquery-1.10.1.min._V352894325_.js"></script>
+    <script type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/taas/jquery/widget/jquery-ui-1.10.3.custom.min.js"></script>
+    
+    <script type="text/javascript" src="/public/js/jquery_cookie.js"></script>
+    
+    <script type="text/javascript" src="/public/js/mediatest.js"></script>
+    
+    <script type="text/javascript" src="/public/js/scroll_to.js"></script>
+    
+    <script type="text/javascript" src="/public/js/language_switcher.js"></script>
+  </head>
+  <body>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="header">
+  <div style="display:none;" id="/public/_hn:component-rendering%7Cr33_r2_r1/solutions/alexa/alexa-skills-kit/docs/alexa-skills-kit-security-testing" class="j311933999Async"></div>
+  <div id="lower-header">
+    <div id="lower-header-wrapper">
+      <ul id="header-menu">
+        
+        
+        
+        <li class="">
+          <a id="header-home" href="/public">Home</a>
+        </li>
+        
+        
+         
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   
+
+	 
+
+
+
+
+  
+    <li class="active">
+      <a href="/public/solutions/alexa">ALEXA</a>
+    </li>
+  
+  
+
+
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   
+
+	 
+
+
+
+
+  
+  
+    <li>
+      <a href="/public/apis">SERVICES &AMP; APIS</a>
+    </li>
+  
+
+
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   
+
+	 
+
+
+
+
+  
+  
+    <li>
+      <a href="/public/solutions/devices">DEVICES</a>
+    </li>
+  
+
+
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   
+
+	 
+
+
+
+
+  
+  
+    <li>
+      <a href="/public/resources">RESOURCES</a>
+    </li>
+  
+
+
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   
+
+	 
+
+
+
+
+  
+  
+    <li>
+      <a href="/public/community/blog">BLOGS</a>
+    </li>
+  
+
+
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   
+
+	 
+
+
+
+
+  
+  
+    <li>
+      <a href="/public/support">SUPPORT</a>
+    </li>
+  
+
+
+        
+      </ul>
+      <div id="search-box">
+        
+        
+        <form id="search-box-form" action="/public/search" method="get" onsubmit="sanitizeRequestParam(document.forms['searchSubmit']['query'], 'Search')">
+          
+          <input id="search-box-input" type="text" name="query" placeholder="Search..." value="" />
+          <input id="search-box-submit" type="image" src="/public/images/icon-search.png" name="image" width="18" height="18">
+        </form>
+        <button id="search-box-toggle-button" style="background-image: url('/public/images/icon-search.png')" onclick="javascript:toggleSearch()"></button>
+        
+		<script type="text/javascript" src="/public/js/searchbox_controller.js"></script>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="/public/js/header_scroller.js"></script>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="directory">
+    <div id="directory-wrapper">
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="/public">Home</a>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <span>&gt;</span>
+    
+      
+        
+      
+      
+    
+    <a href="/public/solutions/alexa">Alexa</a>
+  
+  
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <span>&gt;</span>
+    
+      
+        
+      
+      
+    
+    <a href="/public/solutions/alexa/alexa-skills-kit">Alexa Skills Kit</a>
+  
+  
+    
+  
+
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+</div>
+<div id="outer-wrapper">
+  <div id="inner-wrapper">
+    <div id="left-sidebar">
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<ul id="left-sidebar-list">
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+      
+    
+    
+  
+  
+  
+  
+  
+  	
+    
+  
+  
+    
+    
+      <li>
+        <a href="/public/solutions/alexa">Alexa </a>
+      </li>
+    
+  
+  
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+    
+  
+
+
+  
+    
+    
+  
+  
+
+
+
+  
+  
+  
+    <li class="active">
+      <a href="/public/solutions/alexa/alexa-skills-kit">Alexa Skills Kit</a>
+      
+    </li>
+  
+  
+  
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+    
+  
+
+
+  
+    
+    
+  
+  
+
+
+
+  
+  
+  
+  
+  
+    <li>
+      <a href="/public/solutions/alexa/alexa-voice-service">Alexa Voice Service</a>
+    </li>
+  
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+    
+  
+
+
+  
+    
+    
+  
+  
+
+
+
+  
+  
+  
+  
+  
+    <li>
+      <a href="/public/solutions/alexa/alexa-fund">Alexa Fund</a>
+    </li>
+  
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+    
+  
+
+
+  
+    
+    
+  
+  
+
+
+
+  
+  
+  
+  
+  
+    <li>
+      <a href="/public/solutions/alexa/rewards-for-skill-developers">Rewards for Skill Developers</a>
+    </li>
+  
+
+  
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</ul>
+    </div>
+    <div id="content">
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal2/content/sdk/js/shCore._V138392098_.js"></script>
+<script type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal2/content/sdk/js/shBrushPlain._V138254508_.js"></script>
+<script type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal2/content/sdk/js/shBrushJava._V138392099_.js"></script>
+<script type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal2/content/sdk/js/shBrushXml._V138392099_.js"></script>
+<script type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal2/content/sdk/js/shBrushJScript._V307911092_.js"></script>
+<script type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal2/content/sdk/js/shBrushCSharp._V307911161_.js"></script>
+<script type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal2/content/sdk/js/shBrushAS3._V307911115_.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+      SyntaxHighlighter.all();
+    });
+</script>
+
+
+  
+  
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        
+        
+    
+
+
+
+
+
+    
+    
+    <script type="text/javascript" src="/public/js/text_banner_modify.js"></script>
+    <div id="content-body" class="group">
+
+      
+
+      <div class="content-html-container tech-doc">
+      <div id="text-banner" class="tech-doc" style="border-bottom-style:none;">
+        <h2>Alexa Skills Kit Security Testing</h2>
+      </div>
+        
+        
+          
+            
+            <a class="anchor" name="Introduction"></a>
+            
+            <h2>Introduction</h2>
+            <link rel="stylesheet" type="text/css" href="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal/highlighter.min._TTH_.css" />
+<link rel="stylesheet" type="text/css" href="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal/hipposidebarpage.min._TTH_.css" />
+<link rel="stylesheet" type="text/css" href="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal/hipposidebar._TTH_.css" />
+<script type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal/includescript.min._TTH_.js"></script>
+<!-- Bootstrap is used under the MIT license. -->
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<div class="rightMenu"> <span class="inc:https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal/menus/ask-customskills._TTH_.html"> </span></div>
+
+<!-- AnchorJS is used under the MIT license. -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/2.0.0/anchor.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<!-- Navgoco is used under the BSD license. -->
+<script src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal/jquery.navgoco.min._TTH_.js"></script>
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<script type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal/customscriptshippo._TTH_.js"></script>
+<!--[if IE]>
+<link rel="stylesheet" type="text/css" href="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal/navtabshippo._TTH_.css" />
+<![endif]-->
+<style>
+ul#markdown-toc::before  {
+content: "Table of Contents"
+ }
+ </style>
+
+
+
+
+<p>To protect customer data, the cloud-based service for your skill must meet Amazon’s security requirements. The specific requirements depend on whether you are hosting using <a href="http://aws.amazon.com/lambda/" title="AWS Lambda">AWS Lambda</a> or your own endpoint. AWS Lambda is a service offering by <a href="http://aws.amazon.com/" title="Amazon Web Services">Amazon Web Services</a>.</p>
+
+<ul id="markdown-toc">
+  <li><a href="#skills-hosted-as-lambda-functions" id="markdown-toc-skills-hosted-as-lambda-functions">2.1. Skills Hosted as Lambda Functions</a></li>
+  <li><a href="#skills-hosted-as-web-services-on-your-own-endpoint" id="markdown-toc-skills-hosted-as-web-services-on-your-own-endpoint">2.2. Skills Hosted as Web Services on Your Own Endpoint</a></li>
+  <li><a href="#skills-with-account-linking" id="markdown-toc-skills-with-account-linking">2.3. Skills with Account Linking</a></li>
+  <li><a href="#skills-that-allow-unlocking-or-disarming" id="markdown-toc-skills-that-allow-unlocking-or-disarming">2.4. Skills that Allow Unlocking or Disarming</a></li>
+  <li><a href="#skills-for-booking-reservations" id="markdown-toc-skills-for-booking-reservations">2.5 Skills for Booking Reservations</a></li>
+  <li><a href="#privacy-requirements" id="markdown-toc-privacy-requirements">2.6 Privacy Requirements</a></li>
+  <li><a href="#next-steps" id="markdown-toc-next-steps">Next Steps</a></li>
+</ul>
+
+<h2 id="skills-hosted-as-lambda-functions">2.1. Skills Hosted as Lambda Functions</h2>
+
+<p>Your Lambda function must ensure that requests are intended for your service, as discussed in the “Verifying that the Request is Intended for Your Service” section of <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/handling-requests-sent-by-alexa">Handling Requests Sent by Alexa</a>.</p>
+
+<h2 id="skills-hosted-as-web-services-on-your-own-endpoint">2.2. Skills Hosted as Web Services on Your Own Endpoint</h2>
+
+<ul>
+  <li>The web service must present a <em>valid, trusted certificate</em> when the connection is established and must possess the corresponding private key. Amazon only trusts certificates that have been signed by an Amazon-approved certificate authority.
+    <ul>
+      <li>The Amazon-approved certificate authorities includes <a href="https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/included/">the certificate list here</a> with the exception of <a href="https://letsencrypt.org/">https://letsencrypt.org/</a>.</li>
+    </ul>
+  </li>
+  <li>Self-signed certificates cannot be used for published skills.</li>
+  <li>
+    <p>The service must verify that incoming requests were sent by the Alexa service. You can do this by validating the request signature as discussed in the “Verifying that the Request was Sent by Alexa” section of <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/developing-an-alexa-skill-as-a-web-service">Hosting a Custom Skill as a Web Service</a>.</p>
+
+    <p>Note: the Java library provided with the Alexa Skills Kit provides a <code class="highlighter-rouge">disableRequestSignature</code> flag in the <code class="highlighter-rouge">SpeechletServlet</code> class that you can use for testing. If you used this while testing, be sure to set it back to <code class="highlighter-rouge">false</code> when you are ready to submit for certification.</p>
+  </li>
+  <li>The service must ensure that incoming requests are intended for your service, as discussed in the “Verifying that the Request is Intended for Your Service” section of <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/handling-requests-sent-by-alexa">Handling Requests Sent by Alexa</a>.</li>
+</ul>
+
+<h2 id="skills-with-account-linking">2.3. Skills with Account Linking</h2>
+
+<p>If your skill needs to connect the identity of the end user with a user in another system (<em>account linking</em>), please verify that your skill follows all the instructions defined in <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/linking-an-alexa-user-with-a-user-in-your-system">Linking an Alexa User with a User in Your System</a>. When submitting your skill, be sure to provide a valid set of account credentials with your testing instructions so our certification team can verify the account linking and functionality of your skill. Your skill must also pass the following account linking criteria:</p>
+
+<ul>
+  <li>The skill must use Amazon’s account linking feature by redirecting the user to a login page or landing page when enabling the skill with the Alexa app.</li>
+  <li>The skill’s <em>privacy policy</em> and <em>terms of use</em> links displayed in the Alexa app must each open to a valid web page.</li>
+  <li>If you are the owner of the credential system, your skill must pass the following criteria:
+    <ul>
+      <li>You must own the domain presenting the login page.</li>
+      <li>The login page must be served over HTTPS.</li>
+    </ul>
+  </li>
+  <li>If you are not the owner of the credential system, your skill must pass the following criteria:
+    <ul>
+      <li>You must own the landing page that users are directed to when enabling your skill. This landing page must clearly communicate which third-party (3P) accounts are needed to link the account to the skill.</li>
+      <li>The landing page must direct the user to the domain login page owned by the OAuth providers and must be served over HTTPS.</li>
+      <li>You may not directly handle, store, or transmit credentials on behalf of the user.</li>
+    </ul>
+  </li>
+  <li>If you are using <a href="https://developer.amazon.com/login-with-amazon" title="Login with Amazon">Login with Amazon</a>, your skill must pass the following criteria:
+    <ul>
+      <li>The login page URL must be from <code class="highlighter-rouge">amazon.com</code> and the page must be served over HTTPS.</li>
+      <li>The login page must clearly communicate which third-party (3P) accounts are needed to link the account to the skill.</li>
+      <li>The page must display your skill’s icon or logo and the Amazon logo.</li>
+      <li>You must clearly state the customer information your skill is collecting and using. This can be directly on the login page or in your privacy policy.</li>
+    </ul>
+
+    <div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Tip:</b> For a detailed walk-through for using Login with Amazon with the Alexa Skills Kit, see <a href="https://developer.amazon.com/blogs/post/Tx3CX1ETRZZ2NPC/Alexa-Account-Linking-5-Steps-to-Seamlessly-Link-Your-Alexa-Skill-with-Login-wit" title="Alexa Account Linking: 5 Steps to Seamlessly Link Your Alexa Skill with Login with Amazon">5 Steps to Seamlessly Link Your Alexa Skill with Login with Amazon</a>.</div>
+  </li>
+</ul>
+
+<h2 id="skills-that-allow-unlocking-or-disarming">2.4. Skills that Allow Unlocking or Disarming</h2>
+
+<p>If your skill lets the user unlock or disarm a device, you must require the user to speak a PIN of at least four digits before executing the unlock / disarm action. Customers cannot opt out of the PIN requirements, although you can provide reduced functionality for customers who don’t want to enable a PIN. The PIN is recommended, but not required for locking or arming a device.</p>
+
+<table>
+<colgroup>
+<col width="5%" />
+<col width="45%" />
+<col width="49%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">Test</th>
+<th align="left">Expected Results</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><p>1.</p></td>
+<td align="left">
+        <p>Enable the skill and complete the account linking process. Ensure that the account linking flow includes setting a PIN to access unlock functionality and the PIN meets the security requirements.</p>
+      </td> 
+<td>
+        <ul>
+          <li>The PIN must be at least <em>four digits</em> long.</li>
+          <li>The flow reminds the user to reset the PIN every 60 days.</li>
+        </ul>
+      </td>
+</tr>
+
+<tr>
+<td align="left"><p>2.</p></td>
+<td align="left">
+        <p>If the skill offers reduced functionality when no PIN is set, disable the skill or log in to the Alexa app as an Alexa user who has not yet enabled the skill. Enable the skill, but do not set the PIN when prompted. Attempt to invoke the intents that let the user unlock or disarm a device.</p>
+      </td> 
+<td>
+        <ul>
+          <li>The requests to unlock or disarm are not executed. The user is instructed to set a PIN to use these features.</li>
+          <li>Features other than unlock/disarm do work normally without the PIN.</li>
+        </ul>
+      </td>
+</tr>
+
+<tr>
+<td align="left"><p>3.</p></td>
+<td align="left">
+        <p>Invoke each intent that lets a user unlock or disarm a device.</p>
+      </td> 
+<td>
+        <p>Each request to unlock or disarm a device asks the user to speak the PIN.</p>
+      </td>
+</tr>
+
+<tr>
+<td align="left"><p>4.</p></td>
+<td align="left">
+        <p>Invoke each intent that lets a user unlock or disarm a device. When prompted for the PIN, speak an <em>incorrect</em> PIN. Provide an incorrect PIN <em>at least three times</em>.</p>
+      </td> 
+<td>
+        <ul>
+          <li>The skill rejects the incorrect PIN and does not complete the unlock or disarm request.</li>
+          <li>After three consecutive incorrect PIN attempts, the skill instructs you to reset your PIN. Attempting a fourth request with the original, correct PIN now fails.</li>
+        </ul>
+      </td>
+</tr>
+
+</tbody>
+</table>
+
+<h2 id="skills-for-booking-reservations">2.5 Skills for Booking Reservations</h2>
+
+<p>If your skill lets users book reservations for hotels, rental cars, or airline tickets, the skill must:</p>
+
+<ul>
+  <li>Note this feature in the description.</li>
+  <li>Use <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/linking-an-alexa-user-with-a-user-in-your-system">account linking</a> to connect the user with your system.</li>
+  <li>Require the user to confirm the booking before it is completed. This can be using a phrase such as “Yes,” “OK,” or other similar responses.</li>
+  <li>Provide a confirmation that the skill completed the booking via voice, skill card, and email.</li>
+</ul>
+
+<table>
+<colgroup>
+<col width="5%" />
+<col width="45%" />
+<col width="49%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">Test</th>
+<th align="left">Expected Results</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><p>1.</p></td>
+<td align="left">
+        <p>Review the description for the skill.</p>
+      </td> 
+<td>
+        <p>The skill’s description mentions the ability to book reservations for hotels, rental cars, or airline tickets.</p>
+      </td>
+</tr>
+
+<tr>
+<td align="left"><p>2.</p></td>
+<td align="left">
+        <p>Verify that your skill follows all the instructions defined in <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/linking-an-alexa-user-with-a-user-in-your-system">Linking an Alexa User with a User in Your System</a>.</p>
+      </td> 
+<td>
+        <p>The skill is set up to use account linking, and passes the tests described in <a href="#skills-with-account-linking">2.3. Skills with Account Linking</a></p>
+      </td>
+</tr>
+
+<tr>
+<td align="left"><p>3.</p></td>
+<td align="left">
+        <p>Start an interaction with the skill and attempt to create a reservation.</p>
+      </td> 
+<td>
+        <ul>
+          <li>The skill asks you for confirmation before completing the booking.</li>
+          <li>Stating a phrase like “Yes,” “OK,” or “sure” confirms the booking.</li>
+        </ul>
+      </td>
+</tr>
+
+<tr>
+<td align="left"><p>4.</p></td>
+<td align="left">
+        <p>Start an interaction with the skill and attempt to create a reservation. When prompted to confirm, use one of the acceptance phrases such as “Yes.”</p>
+      </td> 
+<td>
+        <ul>
+          <li>The skill completes the booking</li>
+          <li>You receive confirmation via voice</li>
+          <li>A card is sent to the Alexa app confirming the booking.</li>
+          <li>You receive an email confirming the booking.</li>
+        </ul>
+      </td>
+</tr>
+
+</tbody></table>
+
+<h2 id="privacy-requirements">2.6 Privacy Requirements</h2>
+
+<p>The skill must not:</p>
+
+<ol>
+  <li>Contain references to or include malicious hacking, such as phishing or Trojans. This includes rooting a device or circumventing Amazon’s or any developer’s digital rights management (DRM) software.</li>
+  <li>Contain references to or include malicious user spying or tracking, including stalking, in the skill or skill metadata.</li>
+  <li>Misuse customer personally identifiable information or sensitive personal information.</li>
+  <li>
+    <p>Collect personal information from end users without doing <em>all</em> of the following: 
+(i) provide notice of that data collection to end users in your skill’s detail page, <br />
+(ii) use the information in a way that end users have consented to, and <br />
+(iii) ensure that your collection and use of that information complies with your privacy notice and all applicable laws.</p>
+
+    <p>Prior to submitting a skill that collects personal information from end users, you are required to supply a privacy policy that will be displayed to end users on your skill’s detail page in the Alexa App.</p>
+  </li>
+</ol>
+
+<h2 id="next-steps">Next Steps</h2>
+
+<ul>
+  <li><a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/alexa-skills-kit-policy-testing">1. Policy Testing</a></li>
+  <li><a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/alexa-skills-kit-functional-testing">3. Functional Testing</a></li>
+  <li><a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/alexa-skills-kit-voice-interface-and-user-experience-testing">4. Voice Interface and User Experience Testing</a></li>
+  <li>Go back to: <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/publishing-an-alexa-skill">Submitting an Alexa Skill for Certification</a>.</li>
+  <li>Return to: <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/overviews/steps-to-build-a-custom-skill">Steps to Build a Custom Skill</a></li>
+</ul>
+
+<!-- common links -->
+          
+        
+      </div>
+    </div>
+  
+
+
+<script type="text/javascript" src="/public/js/gamecircle.js"></script>
+    </div>
+    
+    <script type="text/javascript" src="/public/js/leftmenu_controller.js"></script>
+  </div>
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="footer">
+  <div id="upper-footer">
+    <div id="upper-footer-wrapper">
+      <span id="footer-sitemap-title">Sitemap</span>
+      
+      
+      
+      
+      <div id="socialmedia-icons">
+        <a href="https://www.facebook.com/AmazonAppDev"><img src="/public/images/logo-facebook.png" alt="facebook_logo" width="31" height="31" /></a>
+        <a href="https://twitter.com/AmazonAppDev"><img src="/public/images/logo-twitter.png" alt="twitter_logo" width="31" height="31" /></a>
+        <a href="/public/community/blog"><img src="/public/images/logo-blog.png" alt="blog_logo" width="31" height="31" /></a>
+      </div>
+      <span id="footer-followus-span">Follow us</span>
+    </div>
+  </div>
+  <div id="median-footer">
+    <div id="median-footer-wrapper">
+      <ul id="footer-sitemap">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+<li>
+  <a href="/public/solutions/alexa">Alexa</a>
+  
+    <ul>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/solutions/alexa/alexa-skills-kit">Alexa Skills Kit</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/solutions/alexa/alexa-voice-service">Alexa Voice Service</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/solutions/alexa/alexa-fund">Alexa Fund</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/solutions/alexa/rewards-for-skill-developers">Rewards for Skill Developers</a>
+	    </li>
+      
+    </ul>
+  
+</li>
+
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+<li>
+  <a href="/public/apis">Services &amp; APIs</a>
+  
+    <ul>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/apis/earn">Earn</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/apis/engage">Engage</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/apis/experience">Build</a>
+	    </li>
+      
+    </ul>
+  
+</li>
+
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+<li>
+  <a href="/public/solutions/devices">Devices</a>
+  
+    <ul>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/solutions/devices/fire-tablets">Fire Tablets</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/solutions/devices/fire-tv">Amazon Fire TV</a>
+	    </li>
+      
+        
+          
+	      
+	        
+	      
+	    
+	    <li>
+	      <a href="https://developer.amazon.com/dash-replenishment-service">Dash Replenishment Service</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/solutions/devices/fire-phone">Fire Phone</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/solutions/devices/echo">Amazon Echo</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/solutions/devices/amazon-tap">Amazon Tap</a>
+	    </li>
+      
+    </ul>
+  
+</li>
+
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+<li>
+  <a href="/public/resources">Resources</a>
+  
+    <ul>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/solutions/platforms">Platforms</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/resources/learning-center">Learning Center</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/resources/development-tools">Development Tools</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/resources/promotional-tools">Promotional Tools</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/resources/marketing-tools">Marketing Tips</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/resources/other">Other Resources</a>
+	    </li>
+      
+    </ul>
+  
+</li>
+
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+<li>
+  <a href="/public/community/blog">Blogs</a>
+  
+    <ul>
+      
+        
+          
+	      
+	        
+	      
+	    
+	    <li>
+	      <a href="https://developer.amazon.com/blogs/alexa/">Alexa Blog</a>
+	    </li>
+      
+        
+          
+	      
+	        
+	      
+	    
+	    <li>
+	      <a href="https://developer.amazon.com/blogs/appstore/">Appstore Blog</a>
+	    </li>
+      
+        
+          
+	      
+	        
+	      
+	    
+	    <li>
+	      <a href="https://aws.amazon.com/blogs/aws/">AWS Blog</a>
+	    </li>
+      
+    </ul>
+  
+</li>
+
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+<li>
+  <a href="/public/support">Support</a>
+  
+    <ul>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/support/submitting-your-app">Submitting Your Apps</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/support/faq">FAQs</a>
+	    </li>
+      
+        
+          
+	      
+	        
+	      
+	    
+	    <li>
+	      <a href="http://forums.developer.amazon.com">Forums</a>
+	    </li>
+      
+        
+          
+	      
+	        
+	      
+	    
+	    <li>
+	      <a href="https://developer.amazon.com/public/support/contact/contact-us?sc_channel=website&amp;sc_publisher=devportal&amp;sc_campaign=Conversion_Contact-Us&amp;sc_assettype=conversion&amp;sc_team=us&amp;sc_traffictype=organic&amp;sc_country=united-states&amp;sc_segment=all&amp;sc_itrackingcode=100020_us_website&amp;sc_detail=dp-sidebar">Contact Us</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/support/legal/da">App Distribution Agreement</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/support/mobileads/publisher-agreement.html">Mobile Ad Network Publisher Agreement</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/support/mobileads/participation-requirements.html">Mobile Ad Network Program Participation Requirements</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/support/advertise-your-app-agreement">Advertise Your App With Amazon Agreement</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/support/pml.html">Program Materials License Agreement</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/support/legal/tuabg">Trademark Guidelines</a>
+	    </li>
+      
+        
+          
+	        
+	      
+	      
+	    
+	    <li>
+	      <a href="/public/support/legal/tou">Terms of Use</a>
+	    </li>
+      
+    </ul>
+  
+</li>
+
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- SiteCatalyst code version: H.26.
+Copyright 1996-2013 Adobe, Inc. All Rights Reserved
+More info available at http://www.omniture.com -->
+<script language="JavaScript" type="text/javascript" src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal/s_code2.js"></script>
+
+<script type="text/javascript">var SiteCatalystId = ""</script>
+
+<script language="JavaScript" type="text/javascript"><!--
+/* You may give each page an identifying name, server, and channel on
+the next lines. */
+s.pageName="/public/solutions/alexa/alexa-skills-kit/docs/alexa-skills-kit-security-testing"
+s.server="developer.amazon.com"
+s.channel=""
+s.pageType=""
+s.prop1="173.165.36.107"
+s.prop2="Mozilla/5.0 (X11; Linux x86_64; rv:45.0) Gecko/20100101 Firefox/45.0"
+s.prop3=""
+s.prop4=""
+s.prop5=""
+/* Conversion Variables */
+s.campaign=""
+s.state=""
+s.zip=""
+s.events=""
+s.products=""
+s.purchaseID=""
+s.eVar1=""
+s.eVar2=""
+s.eVar3=""
+s.eVar4=""
+s.eVar5=""
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)//--></script>
+<script language="JavaScript" type="text/javascript"><!--
+if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+//--></script><noscript><img src="http://amazonservices.d2.sc.omtrdc.net/b/ss/amzna2z/1/H.22.1--NS/0"
+height="1" width="1" border="0" alt="" /></noscript><!--/DO NOT REMOVE/-->
+<!-- End SiteCatalyst code version: H.26. -->
+
+
+      </ul>
+    </div>
+  </div>
+  <div id="lower-footer">&copy; 2010-2016, Amazon.com, Inc. or its affiliates. All Rights Reserved.</div>
+</div> 
+
+
+    <script type="text/javascript">
+//<![CDATA[
+h311933999.i311933999.AsyncPage.load();
+//]]>
+</script>
+
+    <script type="text/javascript"> 
+    if (window.ue && window.ue.tag) { 
+        window.ue.tag("prelogin", ue.main_scope);
+    }
+    </script>
+    
+  </body>
+</html>

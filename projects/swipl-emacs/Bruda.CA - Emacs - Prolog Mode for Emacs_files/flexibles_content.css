@@ -1,0 +1,451 @@
+/***************************************************************/
+/*  Flexible content --- Block                */
+/***************************************************************/
+#fc_block{
+	margin: 0px 0px 10px 0px;
+	padding: 2px 5px 5px 10px;
+	background-image: url(/images/back-rightmenu-sec.png);
+	background-repeat: repeat-x;
+}
+#fc_block_title{
+	font-weight: 600;
+	font-size: 1.2em;
+	color: #5D3825;
+	margin-top:10px;
+	margin-bottom:20px;
+}
+#fc_block1{
+	margin: 0px 0px 10px 0px;
+	padding: 2px 5px 5px 10px;
+	background-image: url(/images/back-rightmenu-sec.png);
+	background-repeat: repeat-x;
+}
+#fc_block_title1{
+	font-weight: 600;
+	font-size: 1.2em;
+	color: #5D3825;
+	margin-top:10px;
+	margin-bottom:20px;
+}
+#fc_block2{
+	margin: 0px 0px 10px 0px;
+	padding: 2px 5px 5px 10px;
+	background-image: url(/images/back-rightmenu-sec.png);
+	background-repeat: repeat-x;
+}
+#fc_block_title2{
+	font-weight: 600;
+	font-size: 1.2em;
+	color: #5D3825;
+	margin-top:10px;
+	margin-bottom:20px;
+}
+
+/***************************************************************/
+/*  Flexible content --- Two column equal FLUID                */
+/***************************************************************/
+#flex-two-equal-columns #fx-column-right,#flex-two-equal-columns #fx-column-left{
+	width:46%;	
+}
+#flex-two-equal-columns #fx-column-right{
+	padding-left:25px;
+}
+#flex-two-equal-columns #fx-column-left{
+	padding-left:20px;
+}
+/***************************************************************/
+/*  Flexible content --- Two column Red line              */
+/***************************************************************/
+#flex-two-columns-red-line {
+	background-image: url(/images/back-secondary-content.png);
+	background-repeat: repeat-y;
+	background-position: 723px 0px;
+	margin-top:-34px;
+	margin-bottom:15px;
+}
+#flex-two-columns-red-line #redline-column-left{
+	width:75%;
+	padding-top:34px;
+}
+#flex-two-columns-red-line #redline-column-right{
+	width:23%;
+	padding-left:15px;
+}
+
+/***************************************************************/
+/*  Flexible content --- International Students                */
+/***************************************************************/
+
+#fc_istudents{
+	margin:0 auto;
+	width:500px;
+}
+.fc_istudents_arrow{
+	margin-left:8px;
+}
+.fc_istudents_title{
+	height:110px;
+}
+
+.fc_istudents_title p{
+	text-align:center;
+}
+
+.fc_istudents_title p a{
+	background-color:transparent;
+	color:#FFFFFF;
+	text-decoration:none;
+	font-weight:bold;
+	font-size:1.2em;
+}
+
+.fc_istudents_title p a:hover{
+	text-decoration:underline;
+}
+
+#fc_istudents_incoming{
+	float:left;
+	padding:10px;
+	width:145px;
+}
+
+#fc_istudents_incoming .fc_istudents_title{
+	background-color:#339999;
+	padding:5px;
+}
+
+#fc_istudents_incoming .fc_istudents_arrow{
+	background:url("/images/triangle-exch-in.gif") no-repeat scroll 0 0 transparent;
+	height:26px;
+	margin-top:8px;
+	width:128px;
+}
+
+#fc_istudents_incoming .fc_istudents_link{
+
+}
+.fc_istudents_link p {
+	text-align:center;
+}
+#fc_istudents_int{
+	float:left;
+	padding:10px;
+	width:145px;
+}
+
+#fc_istudents_int .fc_istudents_title{
+	background-color:#660000;
+	padding:5px;
+}
+
+#fc_istudents_int .fc_istudents_arrow{
+	background:url("/images/triangle-int.gif") no-repeat scroll 0 0 transparent;
+	height:26px;
+	margin-top:8px;
+	width:128px;
+}
+
+#fc_istudents_int .fc_istudents_link{
+
+}
+
+#fc_istudents_outgoing{
+float:left;
+padding:10px;
+width:145px;
+}
+
+#fc_istudents_outgoing .fc_istudents_title{
+background-color:#33cc33;
+padding:5px;
+}
+
+#fc_istudents_outgoing .fc_istudents_arrow{
+background:url("/images/triangle-exch-out.gif") no-repeat scroll 0 0 transparent;
+height:26px;
+margin-top:8px;
+width:128px;
+}
+
+#fc_istudents_outgoing .fc_istudents_link{
+
+}
+
+/***************************************************************/
+/*  Flexible content --- Japanese Box                         */
+/***************************************************************/
+div.japanese-box{
+	text-align:left;
+	width:200px;
+	padding:5px;
+}
+/***************************************************************/
+/*  Flexible content --- Beige Box                          */
+/***************************************************************/
+
+.fc-beige-contour {
+	background-color:#EAE5C7;
+	border:1px solid #666666;
+	margin:5px;
+	text-align:left;
+	float:right;
+}
+
+.fc-beige-pic {
+
+	padding:4px;
+	text-align:center;
+	margin:5px 5px 0px 5px;
+}
+
+.fc-beige-text {
+	color:#505050;
+	text-align:left;
+	margin:0px 10px 5px 10px;
+}
+
+div.fc-beige-text a{
+	color:#421C69;
+	text-decoration:none;
+}
+
+div.fc-beige-text a:hover{
+	color:#ffffff;
+	background-color:#33CC33;
+}
+/***************************************************************/
+/*  Flexible content --- On your marks              */
+/***************************************************************/
+table.tbl-onyourmark{
+	width:410px;
+	margin:auto;
+}
+td.tlcontent-red,td.tlcontent-yellow,td.tlcontent-green,td.tlcontent-finish{
+	padding-top:10px;
+}
+td.tlimage-red{
+	background:url("/images/tl-red.jpg") no-repeat scroll 0 0 transparent;
+	width:78px;
+	padding-top:10px;
+	height:140px;
+	background-position:0px 20px;
+}
+td.tlimage-yellow{
+	background:url("/images/tl-yellow.jpg") no-repeat scroll 0 0 transparent;
+	padding-top:10px;
+	background-position:0px 20px;
+	height:140px;
+}
+td.tlimage-green{
+	background:url("/images/tl-green.jpg") no-repeat scroll 0 0 transparent;
+	padding-top:10px;
+	background-position:0px 20px;
+	height:140px;
+}
+td.traffic-light-container{
+	font-size:23px;
+	padding-left:10px;
+	padding-top:5px;
+	padding-right:10px;
+	padding-bottom:5px;	
+	font-weight:900;
+}
+td.traffic-light-red{
+	background-color:#CC0000;
+	color:#000;
+}
+td.traffic-light-yellow{
+	background-color:#FFFF66;
+	color:#000;
+}
+td.traffic-light-green{
+	background-color:#336633;
+	color:#fff;
+}
+td.traffic-light-finish{
+	background-color:#391C5A;
+	color:#fff;
+}
+/***************************************************************/
+/*  Flexible content --- Did you know?                         */
+/***************************************************************/
+
+#fc_didyouknow {
+	margin:10px auto;
+	width:404px;
+}
+
+#fc_didyouknow_main {
+	background-image:url(/images/back_lined-green2.gif);
+	width:404px;
+}
+
+#fc_didyouknow_content {
+	padding:10px;
+}
+
+
+#fc_didyouknow_content p, #fc_didyouknow_content ul{
+	line-height:1.45em;
+	color:#421C69;
+
+}
+
+#fc_didyouknow_content li{
+	font-size:1.2em;
+	line-height:1.45em;
+}
+
+#fc_didyouknow_content h2{
+	margin:10px 0 14px;
+}
+
+
+/***************************************************************/
+/*  Flexible content --- Opinion                               */
+/***************************************************************/
+
+#fc_opinion {
+	clear:both;
+	margin:10px auto;
+	width:550px;
+}
+
+#fc_opinion_main {
+	background-image:url(/images/back_lined-green2.gif);
+	width:550px;
+}
+
+#fc_opinion_content {
+	padding:10px;
+}
+
+#fc_opinion_content h2{
+	font-family:"Courier New", Courier, monospace;
+}
+
+#fc_opinion_content p{
+	line-height:1.57em;
+	color:#505050;
+	font-family:"Courier New", Courier, monospace;
+	margin-bottom:19px;
+}
+
+#fc_opinion_content ul.csc-menu3{
+	margin:0;
+	padding:0;
+}
+#fc_opinion_content li{
+	line-height:1.7em;
+}
+
+#fc_opinion_content h2{
+	margin:10px 0 20px;
+}
+
+/***************************************************************/
+/*  Flexible content --- clipboard                             */
+/***************************************************************/
+
+#fc_clipboard{
+width:200px;
+margin:auto;
+}
+#fc_clipboard ul{
+	padding:0;
+}
+
+.fc_clipboard_middle{
+background:transparent url(/images/clipboard_fond.jpg) repeat-y scroll 0 0;
+padding:0 30px;
+}
+
+.fc_clipboard_middle * {
+margin:0px;
+}
+
+#fc_clipboard .csc-menu-3 li {
+border:medium none;
+display:block;
+}
+
+#fc_clipboard .csc-menu-3 li a{
+color:#421C69;
+}
+
+#fc_clipboard .csc-menu-3 li a:hover {
+	color:#ffffff;
+}
+
+/***************************************************************/
+/*  Flexible content --- HighlightBox                          */
+/***************************************************************/
+
+.highlight {
+	background-color:#EBEBEB;
+	border:2px dashed #33CC33;
+	padding:4px;
+	text-align:left;
+}
+
+.highlight p{
+	text-align:left;
+	color:#421C69;
+}
+
+.highlight ul{
+	color:#421C69;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+div.highlight li{
+	background-image: url(/images/bullet.gif);
+	background-repeat: no-repeat;
+	background-position: 0 .2em;
+	padding-left:1.3em;
+	margin-bottom:0px;
+}
+
+div.highlight a{
+	color:#421C69;
+	text-decoration:none;
+}
+
+div.highlight a:hover{
+	color:#ffffff;
+	background-color:#33CC33;
+}
+/***************************************************************/
+/*  Flexible content --- 2 col                                 */
+/***************************************************************/
+
+#fc_2col_left{
+	float:left;
+	width:407px;
+}
+
+#fc_2col_right{
+	float:left;
+	width:180px;
+	padding:5px;
+	text-align:center;
+}
+/***************************************************************/
+/*  Flexible content --- 2 equal columns                       */
+/***************************************************************/
+
+#fc_2col_equal_right{
+	width:50%;
+	float:left;
+}
+
+#fc_2col_equal_left{
+	width:50%;
+	float:left;
+}
+
+#fc_2col_equal_main{
+	clear:both;
+}

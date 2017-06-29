@@ -1,0 +1,1 @@
+/var/lib/myfrdcsa/repositories/external/git/guides/published/node-js/amazon-alexa-skill-tutorial/article.md

@@ -1,0 +1,17 @@
+li { padding: 4pt; }
+a:link { text-decoration: none; }
+a:hover { text-decoration: underline; }
+h2 { padding-top: 30pt; }
+h1 { font-size: 300%; }
+pre { padding-left: 5%; }
+.query { padding-top: 2pt;
+         background-color: #eeeeee;
+         width: 100%; }
+.box { padding-top: 10pt;
+       padding-left: 5%;
+       padding-bottom: 10pt;
+       background-color: #eeeeee;
+       margin-left: 5%;
+       padding-right: 5%;
+       display: inline-block;
+     }

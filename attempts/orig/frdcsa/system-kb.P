@@ -1,0 +1,2 @@
+isa(freeLifePlanner,personalSoftwareAssistant).
+isa(freeLifePlanner,smartVirtualPersonalAssistantsSVPAs).

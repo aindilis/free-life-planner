@@ -1,0 +1,62 @@
+Content-Type: text/enriched
+Text-Width: 70
+
+andrewdo@ai:/var/lib/myfrdcsa/codebases/minor/free-life-planner$ ./eclipse -f free_life_planner.pl
+procedure already dynamic in dynamic prolog_files / 3, prolog_files / 2 in module eclipse
+<x-color><param>green</param>ERROR: util.pl:1:</x-color>
+  Query exited (abort): :- dynamic prolog_files / 3, prolog_files / 2
+file util.pl, line 8: syntax error: postfix/infix operator expected
+| :- multifile classifiedTerm/1.
+|                           ^ here
+File util.pl, line 92: Singleton variable Project
+File util.pl, line 167: Singleton variable Dir
+File util.pl, line 181: Singleton variable Project
+File util.pl, line 186: Singleton variable Project
+File util.pl, line 186: Singleton variable Dir
+File util.pl, line 209: Singleton variable Project
+File util.pl, line 214: Singleton variable Project
+File util.pl, line 214: Singleton variable Dir
+File util.pl, line 222: Singleton variable FileProlog
+File util.pl, line 239: Singleton variable Dir
+File util.pl, line 233: Singleton variable Thing
+<x-color><param>green</param>Prolog-Loading: /var/lib/myfrdcsa/codebases/minor/free-life-planner/lib/util/shell-utils.pl</x-color>
+File util.pl, line 256: Singleton variable File
+Error(s) occurred while compiling /var/lib/myfrdcsas/versions/myfrdcsa-1.0/codebases/minor/free-life-planner/lib/util/util.pl
+Aborting execution ...
+<x-color><param>green</param>ERROR: free_life_planner.pl:3:</x-color>
+  Query exited (abort): :- ensure_loaded(/var/lib/myfrdcsa/codebases/minor/free-life-planner/lib/util/util.pl)
+<x-color><param>green</param>Prolog-Loading: /var/lib/myfrdcsa/codebases/minor/free-life-planner/lib/multifile-and-dynamic-directives.pl</x-color>
+calling an undefined procedure consult('/var/lib/myfrdcsa/codebases/minor/free-life-planner/lib/multifile-and-dynamic-directives.pl') in module eclipse
+<x-color><param>green</param>ERROR: free_life_planner.pl:5:</x-color>
+  Query exited (abort): :- prolog_consult(/var/lib/myfrdcsa/codebases/minor/free-life-planner/lib/multifile-and-dynamic-directives.pl)
+<x-color><param>green</param>Prolog-Loading: /var/lib/myfrdcsa/codebases/minor/free-life-planner/lib/calendaring/calendaring.pl</x-color>
+calling an undefined procedure consult('/var/lib/myfrdcsa/codebases/minor/free-life-planner/lib/calendaring/calendaring.pl') in module eclipse
+<x-color><param>green</param>ERROR: free_life_planner.pl:7:</x-color>
+  Query exited (abort): :- prolog_consult(/var/lib/myfrdcsa/codebases/minor/free-life-planner/lib/calendaring/calendaring.pl)
+<x-color><param>green</param>Prolog-Loading: /var/lib/myfrdcsa/codebases/minor/free-life-planner/lib/flux/swipl_flux/flux_swi.pl</x-color>
+calling an undefined procedure consult('/var/lib/myfrdcsa/codebases/minor/free-life-planner/lib/flux/swipl_flux/flux_swi.pl') in module eclipse
+<x-color><param>green</param>ERROR: free_life_planner.pl:8:</x-color>
+  Query exited (abort): :- prolog_consult(/var/lib/myfrdcsa/codebases/minor/free-life-planner/lib/flux/swipl_flux/flux_swi.pl)
+<x-color><param>green</param>Prolog-Loading: /var/lib/myfrdcsa/codebases/minor/free-life-planner/data-git/systems/planning/data.pl</x-color>
+calling an undefined procedure consult('/var/lib/myfrdcsa/codebases/minor/free-life-planner/data-git/systems/planning/data.pl') in module eclipse
+<x-color><param>green</param>ERROR: free_life_planner.pl:9:</x-color>
+  Query exited (abort): :- prolog_consult(/var/lib/myfrdcsa/codebases/minor/free-life-planner/data-git/systems/planning/data.pl)
+<x-color><param>green</param>Prolog-Loading: /var/lib/myfrdcsa/codebases/internal/cso/comprehensive-software-ontology.pl</x-color>
+calling an undefined procedure consult('/var/lib/myfrdcsa/codebases/internal/cso/comprehensive-software-ontology.pl') in module eclipse
+<x-color><param>green</param>ERROR: free_life_planner.pl:10:</x-color>
+  Query exited (abort): :- prolog_consult(/var/lib/myfrdcsa/codebases/internal/cso/comprehensive-software-ontology.pl)
+<x-color><param>green</param>Prolog-Loading: /var/lib/myfrdcsa/codebases/minor/free-life-planner/t/test.pl</x-color>
+calling an undefined procedure consult('/var/lib/myfrdcsa/codebases/minor/free-life-planner/t/test.pl') in module eclipse
+<x-color><param>green</param>ERROR: free_life_planner.pl:11:</x-color>
+  Query exited (abort): :- prolog_consult(/var/lib/myfrdcsa/codebases/minor/free-life-planner/t/test.pl)
+Error(s) occurred while compiling /var/lib/myfrdcsas/versions/myfrdcsa-1.0/codebases/minor/free-life-planner/free_life_planner.pl
+Aborting execution ...
+abort
+
+
++ FIX DYFETS COMPUTER
++ BRUSH YOUR TEETH, FLOSS AND MOUTHWASH NOW
++ RECORD MEALS/VITAMIN-D
++ TAKE VITAMIN-D/ANTI-TRIGLYCERIDE MEDICATION
+ - Guard...
+

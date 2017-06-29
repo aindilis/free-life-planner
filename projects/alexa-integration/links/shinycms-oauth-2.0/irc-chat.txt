@@ -1,0 +1,27 @@
+Content-Type: text/enriched
+Text-Width: 70
+
+<x-color><param>green</param>23:03:58 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>hi, I was wondering if oauth2.0 integration is planned?</x-color>
+<x-color><param>green</param>23:57:49 </x-color><x-color><param>blue</param>*** willthechill
+      (~willthech@107-217-160-207.lightspeed.austtx.sbcglobal.net) has quit:
+      Ping timeout: 240 seconds</x-color>
+<x-color><param>green</param>00:11:08 </x-color><x-color><param>blue</param>*** </x-color><x-color><param>blue</param>willthechill</x-color><x-color><param>blue</param> (~willthech@2602:306:bd9a:cf0:3948:7f48:8b5b:5305)
+      has joined channel #shinycms</x-color>
+<x-color><param>green</param>00:12:28 </x-color><<<x-color><param>DarkTurquoise</param>willthechill</x-color>> <x-color><param>Orchid</param>aindilis:</x-color> yes it is, jnap_ is currently working on it,
+      I already a working demo at cloudforfree.org
+<x-color><param>green</param>00:12:43 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>awesome, is there a link?</x-color>
+<x-color><param>green</param>00:13:25 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>willthechill</x-color><x-color><param>brown</param>: </x-color>
+<x-color><param>green</param>00:13:59 </x-color><<willthechill> my current cloudforfree.org implementation uses
+      https://metacpan.org/pod/Plack::Middleware::DoormanAuth0
+<x-color><param>green</param>00:14:11 </x-color><<willthechill> you can see my implementation here:
+      https://github.com/wbraswell/cloudforfree.org/blob/master/modified/Auth0.pm
+<x-color><param>green</param>00:14:15 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>:)</x-color>
+<x-color><param>green</param>00:14:20 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>thanks so much, this really helps.</x-color>
+<x-color><param>green</param>00:14:24 </x-color><<willthechill> additional files here:
+      https://github.com/wbraswell/cloudforfree.org/tree/master/modified/auth0
+<x-color><param>green</param>00:14:30 </x-color><<willthechill> you are very welcome!  :-)
+<x-color><param>green</param>00:14:33 </x-color><<<x-color><param>brown</param>aindilis</x-color>> <x-color><param>brown</param>:)</x-color>
+<x-color><param>green</param>00:14:52 </x-color><<willthechill> like I said, jnap_ is working on a longer-term
+      solution, but this one definitely works for now, as seen live on
+      cloudforfree.org
+<x-bg-color><param>lightBlue2</param><x-color><param>Black</param>#shinycms></x-color></x-bg-color> 

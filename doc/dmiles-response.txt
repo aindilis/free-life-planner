@@ -1,0 +1,63 @@
+On Thu, Mar 17, 2016 at 2:28 PM, Andrew Dougherty
+<adougher9@gmail.com> wrote:
+
+Do you have any recommendations as to how to do MultiUser support for
+the FreeLifePlanner?  Basically, I don't know that it can do like
+(microtheoryFn #$AndrewDougherty), although I could try to implement
+it.
+
+
+​​(#$MicrotheoryForUserFn #$AndrewDougherty) is the most correct way.
+Though would in this instance be ok if you could created a
+#$MtForUserAndrewDougherty ..  I've at times created constants to get
+around impl issues (in Cyc) where MicrotheoryDenotingFunctions did not
+build all the data structure supports needed to operate fully.  But
+hopefully we are not going to have the same bugs.
+
+For future scalability, should I have everything in one microtheory
+with arguments for the user, or different microtheories with self
+assumed?
+
+​I think it will end up looking like we would need/have:
+
+UserDimensionedMicrotheory:
+
+Some microtheories that at least one user was supplied in the
+(GoalsForUserMtFn ?USER) that contain content that refer to a constant
+like UserSelfFn that evaluates to the supplied ?USER upon entry into
+the microtheory.
+
+BroadMicrotheory:
+Some microtheories that do not contain any need for UserSelfFn s
+
+UserDimensionedMicrotheory, AssertionExpansionMicrotheory: Some
+microtheories that every assertion is about one user and it'd be too
+redundant to specify at each assertion.
+
+yet has a helper expander (mtExpandEach (belivesIsTrue UserSelfFn
+:assertion))
+
+So "Different microtheories with self assumed"
+
+
+
+
+and basically, do I do multiple prolog processes each with a certain
+number of users, etc?
+
+
+​I think each prolog process should be set up to ​work with more than
+one user.  But how many is a hard guess.
+
+Though prototyping stage I do think it is OK (though I suppose not
+many people believe it) to have data structures that make single user
+assumptions (but as long as these can be corrected in fell swoops)
+
+
+The "UserDimensionedMicrotheory" and "AssertionExpansionMicrotheory"s
+are examples of fell swoops
+
+
+I don't know anything about complex deployments for high traffic
+
+​I only have low traffic experience

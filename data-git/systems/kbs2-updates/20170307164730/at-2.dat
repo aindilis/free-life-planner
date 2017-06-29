@@ -1,0 +1,3 @@
+at('0',inaccessible(walmart_oswego)).
+at('0',isolated(living_room)).
+at('23',isolated(living_room)).

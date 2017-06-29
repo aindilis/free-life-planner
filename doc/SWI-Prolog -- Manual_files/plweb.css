@@ -1,0 +1,193 @@
+/*
+    CSS for PlWeb
+   For a tutorial on CSS, see
+   <http://www.htmldog.com/guides/cssbeginner/selectors/>
+*/
+
+#dyknow a {
+  color: #FFFFFF;
+}
+
+div.sidebar
+{ float: left;
+  width: 180px;
+  background-color: #F0F0F0;
+}
+
+body.wiki div.navhdr
+{ margin-left: 180px;
+  padding-left: 5px;
+}
+
+div.content
+{ padding-left: 5px;
+}
+
+div.logo
+{ text-align: center;
+}
+
+div.menu
+{ background-color: #f0f0f0;
+}
+
+div.menu ul
+{ list-style-type: none;
+  padding: 0px;
+}
+
+table.downloads
+{ margin-left: auto;
+  margin-right: auto;
+  border-width: 1px;
+  border-style: outset;
+  border-color: black;
+}
+
+table.downloads td
+{ border-width: 1px;
+  border-style: inset;
+  border-color: black;
+}
+
+table.downloads th
+{ text-align: center;
+  background-color: yellow;
+  font-weight: bold;
+  border-width: 1px;
+  border-style: inset;
+  border-color: black;
+}
+
+td.toggle
+{ text-align: right;
+  font-size: 80%;
+}
+
+td.dl_file p
+{ margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+/* Messages */
+
+div.silent
+{ display: none;
+}
+
+div.error
+{ color: #ff0000;
+}
+
+pre.informational
+{ background-color: #b0ffb0;
+}
+
+pre.error
+{ color: #ff0000;
+}
+
+/* Auto-complete */
+
+span.acmatch
+{ background-color: #bbf;
+}
+
+#search-container
+{ padding-right: 0.5em;
+}
+
+li.ui-menu-item
+{ font-size: initial;
+  font-family: Source Sans Pro, sans;
+}
+
+#forenhanced
+{ font-size: 18px;
+}
+
+.ui-menu li.ui-menu-item a     /* Make list more compact */
+{ padding-top: 0;
+  line-height: 1;
+}
+
+.ui-menu-item a.tag            /* Style auto-completion hits */
+{ font-style: italic;
+}
+
+.ui-menu-item a.builtin
+{ color: blue;
+}
+
+.ui-menu-item a i
+{ font-size: 80%;
+  color: #888;
+  float: right;
+}
+
+/* Wiki editing */
+
+#git_msg, #git_comment
+{ width: 100%;
+}
+
+table.wiki_edit td.label
+{ text-align: right;
+  font-weight: bold;
+  font-size: 80%;
+}
+
+/* Logon */
+
+div.openid-title
+{ display: none;
+}
+
+div.smallprint
+{ margin-left: 30%;
+  margin-top: 2ex;
+  border-top: 1pt solid;
+  text-align: right;
+  font-size: 80%;
+  color: #888;
+}
+
+div.private-profile
+{ margin-left: 1.5em;
+}
+
+a.list-other-users:visited { color:#fff; }
+a.list-other-users
+{ font-size:60%;
+  font-style:italic;
+  font-weight:normal;
+  color: #fff;
+}
+
+div.private-profile th
+{ text-align: right;
+  color: #888;
+  font-size: 80%;
+}
+
+span.openid-url-pattern
+{ color: #000;
+}
+
+.informational
+{ color: #080;
+}
+
+.warning
+{ color: red;
+}
+
+.error
+{ color: red;
+  font-weight: bold;
+}
+
+.menu-item {
+  text-transform:uppercase;
+}
+

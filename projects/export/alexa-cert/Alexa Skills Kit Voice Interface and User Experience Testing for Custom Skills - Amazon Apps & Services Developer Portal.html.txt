@@ -1,0 +1,1505 @@
+  • Home
+  • ALEXA
+  • SERVICES & APIS
+  • DEVICES
+  • RESOURCES
+  • BLOGS
+  • SUPPORT
+
+[                    ] ●
+Home > Alexa > Alexa Skills Kit
+
+  • Alexa
+  • Alexa Skills Kit
+  • Alexa Voice Service
+  • Alexa Fund
+  • Rewards for Skill Developers
+
+Alexa Skills Kit Voice Interface and User Experience Testing for Custom Skills
+
+Introduction
+
+  • English
+  • Deutsch
+
+Voice interface and user experience testing focuses on:
+
+  • Testing the user experience to ensure that the skill is aligned with
+    several key features of Alexa that help create a great experience for
+    customers.
+  • Reviewing the intent schema, the set of sample utterances, and the list of
+    values for any custom slot types you have defined to ensure that they are
+    correct, complete, and adhere to voice design best practices.
+
+    These components are defined on the Interaction Model page for your skill
+    in the developer portal.
+
+These tests address the following goals:
+
+  • Increase the different ways end users can phrase requests to your skill.
+  • Evaluate the ease of speech recognition when using your skill (was Alexa
+    able to recognize the right words?)
+  • Improve language understanding (when Alexa recognizes the right words, did
+    she understand what to do?).
+  • Ensure that users can speak to Alexa naturally and spontaneously.
+  • Ensure that Alexa understands most requests you make, within the context of
+    a skill’s functionality.
+  • Ensure that Alexa responds to users’ requests in an appropriate way, by
+    either fulfilling them or explaining why she can’t.
+
+Many of these tests verify that your skill adheres to the design guidelines
+described in Alexa Voice Design Guide. You may want to review those guidelines
+while working through this section. For recommendations for sample utterances,
+see Best Practices for Sample Utterances and Custom Slot Type Values.
+
+Note that many of these tests require that you have a device for voice testing.
+If you do not have an Alexa-enabled device, you can use third party
+Alexa-enabled services, such as Echosim.io, to test your Alexa skill.
+
+To return to the high-level testing checklist, see Certification Requirements
+for Custom Skills.
+
+  • 4.1. Session Management
+  • 4.2. Intent and Slot Combinations
+  • 4.3. Intent Response (Design)
+  • 4.4. Supportive Prompting
+  • 4.5. Invocation Name
+  • 4.6. One-Shot Phrasing for Sample Utterances
+  • 4.7. Variety of Sample Utterances
+  • 4.8. Intents and Slot Types
+  • 4.9. Custom Slot Type Values
+  • 4.10. Writing Conventions for Sample Utterances
+  • 4.11. Error Handling
+  • 4.12. Providing Help
+  • 4.13. Stopping and Canceling
+  • Appendix: Deprecated Test for Sample Utterances (Slot Type Values)
+  • Next Steps
+
+4.1. Session Management
+
+Every response sent from your skill to the Alexa service includes a flag
+indicating whether the conversation with the user (the session) should end or
+continue. If the flag is set to continue, Alexa then listens and waits for the
+user’s response. For Amazon devices such as Amazon Echo that have a blue light
+ring, the device lights up to give the user a visual cue that Alexa is
+listening for the user’s response.
+
+This test verifies that the text-to-speech provided by your skill and the
+session flag work together for a good user experience. Responses that ask
+questions leave the session open for a reply, while responses that fulfill the
+user’s request close the session.
+
+   Test                                Expected Results
+   Invoke the skill without specifying
+   an intent, for example:             After every response that asks the user
+                                       a question, the session remains open and
+1.   • Open <Invocation Name>.         the device waits for your response.
+
+   Respond to the prompt provided by   After every response that completes the
+   the skill and verify that you get a user’s request, the interaction ends.
+   correct response.
+
+                                       After every response that asks the user
+   Test a variety of intents – both    a question, the session remains open and
+2. those that ask questions and those  the device waits for your response.
+   complete the user’s request.
+                                       After every response that completes the
+                                       user’s request, the interaction ends.
+
+4.2. Intent and Slot Combinations
+
+A skill may have several intents and slots. This test verifies that each intent
+returns the expected response with different combinations of slots.
+
+   Test                        Expected Results
+   Test the skill’s intent
+   responses using different
+   combinations of slot
+   values.
+
+   You can use one of the
+   one-shot phrases for        The response is appropriate for the context of
+   starting the skill, for     the request.
+   example:
+1.                             For example, if the request includes a slot
+     • Ask <Invocation Name>   value, the response is relevant to that
+       to <do something>       information. If a request to that same intent
+                               does not include the slot, the response uses a
+   Be sure to invoke every     default or asks the user for clarification
+   intent, not just those that
+   are typically used in a
+   one-shot manner.
+
+   Evaluate the response for
+   each intent
+
+You may want to use a table of intent and slot values to track this test and
+ensure that you test every intent and slot combination. For example:
+
+          Intent               Slot            Sample Utterance to Test
+                            Combination
+IntentName                  SlotOne     This is an utterance to test this
+                                        intent and slot one
+IntentName                  SlotTwo     This is an utterance to test this
+                                        intent and slot two
+IntentName                  SlotOne     This is an utterance to test this
+                            SlotTwo     intent with both slot one and slot two
+Each additional valid       -            
+intent and slot combination
+
+4.3. Intent Response (Design)
+
+A good user experience for a skill depends on the skill having well-designed
+text-to-speech responses. Alexa Voice Design Guide: What Alexa Says provides
+recommendations for designing your skill’s responses. This test verifies that
+your skill’s responses meet these recommendations.
+
+You can use the same set of intent and slot combinations used for the Intent
+and Slot Combinations test.
+
+   Test                        Expected Results
+   Test the skill’s intent
+   responses using different
+   combinations of slot        The response meets each of the following
+   values.                     requirements:
+
+   You can use one of the        • Answers the user’s request in a concise,
+   one-shot phrases for            terse manner.
+   starting the skill, for       • Provides information in consumable chunks.
+   example:                      • Does not include technical or legal jargon.
+                                 • Responses from intents that are not
+     • Ask <Invocation Name>       typically used in a one-shot manner provide
+       to <do something>           a relevant response or inform users how to
+                                   begin using the skill.
+1. Be sure to invoke every       • The response is spoken in the same language
+   intent, not just those that     used by the Alexa account. For instance,
+   are typically used in a         when testing with an account configured with
+   one-shot manner.                German, the text-to-speech responses are in
+                                   German. When testing with an account
+   Try a variety of sample         configured with English (US), the
+   utterances for each intent.     text-to-speech responses are in English.
+
+   If the skill vocalizes any  For a better user experience, the response
+   examples for users to try,  should also meet these recommendations:
+   use those examples exactly
+   as instructed by the skill.   • Easy to understand
+                                 • Written for the ear, not the eye
+   Evaluate the response for
+   each intent
+
+You can use the same set of intent and slot combinations used for the Intent
+Response (Intent and Slot Combinations) test.
+
+4.4. Supportive Prompting
+
+A user can begin an interaction with your skill without providing enough
+information to know what they want to do. This might be either a no intent
+request (the user invokes the skill but does not specify any intent at all) or
+a partial intent request (the user specifies the intent but does not provide
+the slot values necessary to fulfill the request).
+
+In these cases, the skill must provide supportive prompts asking the user what
+they want to do. This test verifies that your skill provides useful prompts for
+these scenarios.
+
+   Test                                  Expected Results
+                                           • The skill prompts you for
+                                             information about what you want to
+                                             do.
+                                           • The prompt includes the skill’s
+                                             name so you know you are in the
+                                             right place.
+                                           • The prompt gives you specific
+   Invoke the skill with no intent. You      options about what to do, but is
+   can do this by using a phrase that        brief. If the skill has many
+   sends a LaunchRequest rather than an      functions, the prompt gives the
+   IntentRequest. For example:               most common.
+                                           • The prompt does not give verbose
+1.   • Open <Invocation Name>.               instructions telling the user what
+                                             to say (such as “to do xyz, say
+   Verify that you get a prompt, then        xyz”). The prompt is concise.
+   respond to the prompt and verify that   • When you respond to the prompt,
+   you get a correct response.               the skill continues prompting
+                                             until all needed information is
+                                             collected, then provides a
+                                             contextualized, non-error
+                                             response.
+                                           • If no information is needed from
+                                             users after launch, the skill
+                                             completes a core function and
+                                             closes the session.
+
+   Invoke the skill with a partial         • The skill prompts you for the
+   intent. You can do this by using a        missing information.
+   phrase that invokes the intent          • The prompt gives you specific
+   without including all the required        options about what to do, but is
+   slot data. For example:                   brief. If the skill has many
+                                             functions, the prompt gives the
+     • Ask <Invocation Name> to <do          most common.
+       something> (leave out slot data     • The prompt does not give verbose
+2.     in the command)                       instructions telling the user what
+                                             to say (such as “to do xyz, say
+   Verify that you get a prompt, then        xyz”). The prompt is concise.
+   respond to the prompt and verify that   • When you respond to the prompt,
+   you get a correct response.               the skill continues prompting
+                                             until all needed information is
+   If the skill does not define any          collected, then provides a
+   slots, you can skip this test, as it      contextualized, non-error
+   is not possible to send a partial         response.
+   intent.
+
+Note: Some very simple skills respond to all requests with a complete answer
+and do not ever prompt the user. For example, the Space Geek sample responds to
+every request (including a LaunchRequest with no intent) with a fact about
+space, then ends the session. For these skills, do the first test and verify
+that you get a complete response.
+
+See What Alexa Says for recommendations for designing prompts.
+
+4.5. Invocation Name
+
+Users say the invocation name for a skill to begin an interaction. Inspect the
+skill’s invocation name and verify that it meets the invocation name
+requirements described in Choosing the Invocation Name for a Custom Skill.
+
+4.6. One-Shot Phrasing for Sample Utterances
+
+Most skills provide quick, simple, “one-shot” interactions in which the user
+asks a question or gives a command, the skill responds with an answer or
+confirmation, and the interaction is complete. In these interactions, the user
+invokes your skill and states their intent all in a single phrase.
+
+The ask and tell phrases are the most natural phrases for starting these types
+of interactions. Therefore, it is critical that you write sample utterances
+that work well with these phrases and are easy and natural to say.
+
+In these tests, you review the sample utterances you’ve written for the skill,
+then test them by voice to ensure that they work as expected.
+
+   Test                                         Expected Results
+   Inspect the skill’s sample utterances to
+   ensure that they contain the right phrasing
+   to match the different phrases for invoking
+   a skill with a specific intent.
+
+   Noun phrases: phrases that can follow
+   “ask <invocation name> for …” or
+   “tell <invocation name> about…”
+
+     • “ask <invocation name> for my favorite     • Noun, question, and command
+       color”                                       utterances are all
+     • “tell <invocation name> about my             included.
+       appointment today at 3 pm”                 • At least five varieties of
+                                                    these three types of
+   Questions, in both interrogative and             phrases are present (five
+1. inverted forms: phrases that can follow “ask     noun forms, five question
+   <invocation name> …”                             forms, and five command
+                                                    forms)
+     • “ask <invocation name> where is my car”    • When combined with the ask
+     • “ask <invocation name> where my car is”      and tell phrases, the
+                                                    sample utterances are
+   Commands: phrases that can follow “tell          intuitive and natural.
+   <invocation name> to…” or “ask <invocation
+   name> to…”
+
+     • “ask <invocation name> to get me a car”
+     • “tell <invocation name> to find my
+       favorite book”
+
+   (In the examples above, the italic phrase is
+   the sample utterance).
+
+   Launch the skill using each of the following   • Each of these common “ask”
+   common “ask” patterns (ideally do multiple       patterns works.
+   variations for each pattern):                  • The skill successfully
+2.                                                  launches and completes the
+     • Ask <Invocation Name> for <something>        request.
+     • Ask <Invocation Name> about <something>    • The phrase is easy and
+     • Ask <Invocation Name> to <do something>      natural to say.
+
+   Launch the skill with the generic “ask”
+   pattern (recommended test if this is a
+   natural phrase for your skill):
+                                                  • The generic “ask” pattern
+     • Ask <Invocation Name> <question>             works if appropriate for
+                                                    your skill.
+   Test with questions starting with different    • The skill successfully
+3. question words (who, what, how, and so on).      launches and completes the
+                                                    request.
+   The specific question words that sound         • The phrase is easy and
+   natural with your skill may vary. For            natural to say.
+   example, these types of questions do not
+   flow well with “Space Geek.” A user is
+   unlikely to say something like “Ask Space
+   Geek what is a space fact?”
+
+                                                  • The common “tell” pattern
+   Launch the skill using the following common      works.
+   “tell” pattern:                                • The skill successfully
+4.                                                  launches and completes the
+     • Tell <Invocation Name> to <do something>     request.
+                                                  • The phrase is easy and
+                                                    natural to say.
+
+   Review the “Invoking a Skill with a Specific
+   Request (Intent)” section in Understanding
+   How Users Invoke Custom Skills and test as
+   many of the phrases as apply to your skill.    • The skill successfully
+                                                    launches and completes the
+5. Note that not all of the phrases apply to        request.
+   all skills. For example, the “Ask…whether…”    • The phrase is easy and
+   phrasing would probably not make sense for a     natural to say.
+   skill asking about weather or tide
+   information, so the skill would still pass
+   this test even without this phrase.
+
+4.7. Variety of Sample Utterances
+
+Given the flexibility and variation of spoken language in the real world, there
+will often be many different ways to express the same request. Therefore, your
+sample utterances must include multiple ways to phrase the same intent.
+
+In this test, inspect the sample utterances for all intents, not just the “one
+shot” intents described in One-Shot Phrasing for Sample Utterances.
+
+   Test                        Expected Results
+   Inspect the skill’s intent
+   schema and sample           The five most common synonyms for phrase
+   utterances:                 patterns are present. For example, if the skill
+                               contains “get me <some value>”, then the
+    1. For each intent,        utterances include synonyms such as “give me
+       identify several ways a <some value>”, “tell me <some value>”, and so
+       user could phrase a     on.
+1.     request for that
+       intent.                 Each sample utterance must be unique. There
+    2. Verify whether the      cannot be any duplicate sample utterances mapped
+       sample utterances       to different intents.
+       mapped to that intent
+       cover those phrasings.  Each slot is used only once within a sample
+    3. Examine any slots that  utterance.
+       appear in the sample
+       utterances.
+
+4.8. Intents and Slot Types
+
+Slots are defined with different types. Built-in types such as AMAZON.DATE
+convert the user’s spoken text into a different format (such as converting the
+spoken text “march fifth” into the date format “2017-03-05”). Custom slot types
+are used for items that are not covered by Amazon Alexa’s built-in types.
+
+For this test, review the intent schema and ensure that the correct slot types
+are used for the type of data the slot is intended to collect.
+
+Note that this test assumes you have migrated to the updated slot types as
+described in Migrating to the Improved Built-in and Custom Slot Types. If you
+are still using the previous version (for instance, DATE instead of
+AMAZON.DATE), then you need to also perform the Sample Utterances (Slot Type
+Values) test.
+
+Note: Based on developer feedback, the AMAZON.LITERAL slot is not being removed
+as previously described. You can continue to submit new and updated English
+(US) skills with AMAZON.LITERAL. However, in many cases, custom slot types
+provide better accuracy than AMAZON.LITERAL, so we recommend that you consider
+migrating to custom slot types if possible.
+
+English (UK) and German skills do not support AMAZON.LITERAL and cannot use the
+AMAZON.LITERAL slot type.
+
+   Test                          Expected Results
+   Inspect the skill’s intent
+   schema to identify all slot     • The slots for each intent match the
+   types.                            recommended slot types listed in the Slot
+1.                                   Types table below.
+   Verify that the types match     • Slots that collect a value from a list use
+   the type of data to be            a custom slot type.
+   collected.
+
+Slot Types:
+
+Slot Type       Use for slots that collect...
+AMAZON.NUMBER   Integer numbers.
+
+AMAZON.DATE     Relative and absolute dates (“this weekend” and “august twenty
+                sixth twenty fifteen”).
+
+AMAZON.TIME     The time of day (“three thirty p. m.”).
+
+AMAZON.DURATION A period of time (“five minutes”).
+
+                A value from a list (horoscope signs, all NFL football teams,
+Custom Slot     supported cities, recipe ingredients, and so on).
+Types
+                See Custom Slot Types (Values) for additional testing for your
+                custom slot types.
+
+                Not recommended, consider replacing AMAZON.LITERAL with a
+                custom slot type if possible.
+
+                If your schema does include AMAZON.LITERAL, also review the
+                sample utterances and make sure that appropriate sample slot
+AMAZON.LITERAL  values are provided for each instance of the slot:
+
+                  • All values with a high likelihood of input
+                  • Appropriate distribution of word counts in the input (for
+                    instance, if only one-word values are possible, include
+                    only one-word values. If 5-6 word values are possible but
+                    rare, include only a handful of 5-6 word values).
+
+4.9. Custom Slot Type Values
+
+The custom slot type is used for items that are not covered by Amazon’s
+built-in types and is recommended for most use cases where a slot value is one
+of a set of possible values.
+
+   Test                   Expected Results
+                            • If possible, the list of values includes all
+                              values you expect to be used. For example, a
+                              horoscope skill with a LIST_OF_SIGNS custom type
+                              would include all twelve Zodiac signs as values
+                              for the type.
+   Inspect the skill’s      • If the list cannot cover every possible value, it
+   intent schema to           covers as many representative values as possible.
+   identify all slots       • If the list cannot cover every possible value,
+   that use custom slot       the values reflect the expected word counts. For
+   types.                     instance, if values of one to four words are
+1.                            possible, use values of one to four words in your
+   For each custom slot       value list. But also be sure to distribute them
+   type, review the set       proportionally. If a four-word value occurs in an
+   of values you provided     estimated 10% of inputs, then include four-word
+   for the type.              values only in 10% of the values in your list.
+                            • All custom values are written in the selected
+                              language. For instance, all custom slot type
+                              values on the German tab must be in German.
+
+                          For guidelines for defining custom slot type values,
+                          see Recommendations for Custom Slot Type Values.
+
+4.10. Writing Conventions for Sample Utterances
+
+Sample utterances must be written according to defined rules in order to
+successfully build a speech model for your skill.
+
+   Test         Expected Results
+                All sample utterances adhere to the following
+                writing conventions:
+
+                  • Capital letters and punctuation are not used (periods can
+                    be used, but only in initialisms and spelling (e.g. “t.
+                    v.”). Hyphens can be used, but should be very infrequent.
+                    Apostrophes can be used in possessives).
+                  • Individual letters are followed by a period and a space
+                    before the next letter or word: “TV” is written as “t. v.”,
+                    “OK” is written as “o. k.”- Compounds are written
+   Review the       similarly: “AccessHD” is written as “access h. d.”
+1. text of all    • The invocation name must not appear in isolation or within
+   sample           supported launch phrasing. For example, a skill with the
+   utterances.      invocation name “Daily Horoscopes”cannot contain any sample
+                    utterances that are just “daily horoscopes” or sample
+                    utterances containing launch phrases such as “tell daily
+                    horoscopes.”For a complete list of launch phrases see
+                    Understanding How Users Invoke Custom Skills.
+                  • All sample utterances are written in the selected language.
+                    For instance, the sample utterances on the German tab must
+                    be in German.
+
+                For more information about syntax rules for sample utterances,
+                see the Custom Interaction Model Reference .
+
+4.11. Error Handling
+
+Unlike a visual interface, where the user can only interact with the objects
+presented on the screen, there is no way to limit what users can say in a
+speech interaction. Your skill needs to handle a variety of errors in an
+intelligent and user-friendly way. This test verifies your skill’s ability to
+handle common errors.
+
+For more information on validating user input, please see Handling Possible
+Input Errors.
+
+   Test                             Expected Results
+                                      • The skill responds with a prompt that
+                                        clarifies the information you need to
+   Invoke the skill without             provide.
+   specifying an intent, for          • The prompt clearly indicates what you
+   example:                             need to say.
+1.                                    • The prompt ends with a question and
+     • Open <Invocation Name>.          keeps the session open for your
+                                        response.
+   When prompted to respond, say
+   nothing.                         Note that in this scenario, the prompt you
+                                    hear is the re-prompt included in the
+                                    previous response.
+
+   Invoke the skill using the
+   following phrase:                  • The skill responds with a prompt or
+                                        help text that clarifies the
+     • Open <Invocation Name>.          information you need to provide.
+                                      • The prompt clearly indicates what you
+   When prompted to respond, say        need to say.
+   something that matches one of      • The prompt ends with a question and
+2. your skill’s intents, but with       keeps the session open for your
+   invalid slot data.                   response.
+
+   For instance, if the intent      Note that in this scenario, the prompt is
+   expects an AMAZON.DATE slot, say not the re-prompt included in the previous
+   something that cannot be         response. This prompt must come from error
+   converted to a date.             handling within the code that handles the
+                                    intent.
+   Repeat this test for each slot.
+
+4.12. Providing Help
+
+A skill must have a help intent that can provide additional instructions for
+navigating and using the skill. Implement the AMAZON.HelpIntent to provide
+this. You do not need to provide your own sample utterances for this intent,
+but you do need to implement it in the code for your skill. For details, see
+Implementing the Built-in Intents.
+
+This test verifies that this intent exists and provides useful information.
+
+   Test                               Expected Results
+                                      The help response:
+   Invoke the skill without
+   specifying an intent, for example:   • Provides instructions to help the
+                                          user navigate the skill’s core
+     • Open <Invocation Name>.            functionality.
+                                        • Is more informative than the prompt
+   When prompted to respond, say          users hear when launching the skill
+   “help”.                                with no intent. For example, the help
+                                          prompt could explain more about what
+1. For a simple skill that gives a        the skill does or inform users how to
+   complete response even with no         exit the skill.
+   specific intent, (such as the        • Educates users on what the skill can
+   Space Geek sample), invoke the         do, as opposed to what they need to
+   help intent directly:                  say in order for the skill to
+                                          function.
+     • Ask <Invocation Name> for        • Ends with a question prompting the
+       help.                              user to complete their request.
+                                        • Leaves the session open to get a
+                                          response from the user.
+
+For more about designing help for your skill, see What Alexa Says.
+
+4.13. Stopping and Canceling
+
+Your skill must respond appropriately to common utterances for stopping and
+canceling actions (such as “stop,” “cancel,” “never mind,” and others). The
+built-in AMAZON.StopIntent and AMAZON.CancelIntent intents provide these
+utterances. In most cases, these intents should just exit the skill, but you
+can map them to alternate functionality if it makes sense for your particular
+skill. See Implementing the Built-in Intents.
+
+   Test                             Expected Results
+                                    One of the following occurs:
+
+                                      • The skill exits.
+                                      • The skill returns a response that is
+   Start the skill and invoke an        appropriate to the skill’s
+   intent that prompts the user for     functionality. The response also makes
+   a response.                          sense in the context of the request to
+1.                                      “stop.” For example, a skill that
+   After hearing the prompt, say        places orders could send back a reply
+   “stop.”                              confirming that the user’s order has
+                                        been canceled.
+
+                                    If the skill responds to all requests with
+                                    a complete response and never provides a
+                                    prompt, skip this test.
+
+                                    After the wake word interrupts Alexa, one
+                                    of the following occurs.
+
+                                      • The skill exits.
+                                      • The skill returns a response that is
+   Invoke an intent that responds       appropriate to the skill’s
+   with lengthy text-to-speech. As      functionality. The response also makes
+2. soon as Alexa begins speaking        sense in the context of the request to
+   the response, say “Alexa, stop”      “stop.” For example, a skill that
+   to interrupt the response.           places orders could send back a reply
+                                        confirming that the user’s order has
+                                        been canceled.
+
+                                    If all of the skill’s responses are too
+                                    short to reasonably interrupt, skip this
+                                    test.
+
+                                    One of the following occurs:
+
+                                      • The skill exits.
+                                      • The skill returns a response that is
+   Start the skill and invoke an        appropriate to the skill’s
+   intent that prompts the user for     functionality. The response also makes
+   a response.                          sense in the context of the request to
+3.                                      “cancel.” For example, a skill that
+   After hearing the prompt, say        places orders could send back a reply
+   “cancel.”                            confirming that the user’s order has
+                                        been canceled.
+
+                                    If the skill responds to all requests with
+                                    a complete response and never provides a
+                                    prompt, skip this test.
+
+                                    After the wake word interrupts Alexa, one
+                                    of the following occurs.
+
+                                      • The skill exits.
+                                      • The skill returns a response that is
+   Invoke an intent that responds       appropriate to the skill’s
+   with lengthy text-to-speech. As      functionality. The response also makes
+4. soon as Alexa begins speaking        sense in the context of the request to
+   the response, say “Alexa,            “cancel.” For example, a skill that
+   cancel” to interrupt the             places orders could send back a reply
+   response.                            confirming that the user’s order has
+                                        been canceled.
+
+                                    If all of the skill’s responses are too
+                                    short to reasonably interrupt, skip this
+                                    test.
+
+   Invoke any intent that starts
+   the skill session. While the
+5. session is open, say “Exit.”     The skill closes without returning an error
+   This ends the session and sends  response.
+   your skill a SessionEndedRequest
+   .
+
+Appendix: Deprecated Test for Sample Utterances (Slot Type Values)
+
+If all of your slots use the newer slot types with the AMAZON namespace (such
+as AMAZON.DATE), you do not need to do this test.
+
+In previous versions of the Alexa Skills Kit, it was necessary to include slot
+values showing different ways of phrasing the slot data in your sample
+utterances. For example, sample utterances for a DATE slot were written like
+this:
+
+OneshotTideIntent when is high tide on {january first|Date}
+OneshotTideIntent when is high tide {tomorrow|Date}
+OneshotTideIntent when is high tide {saturday|Date}
+...(many more utterances showing different ways to say the date)
+
+If your skill still uses this syntax for the built-in slot types, you need to
+review the sample slot values in your sample utterances. We strongly recommend
+migrating to the updated slot types that no longer require the sample values.
+
+   Test                         Expected Results
+                                  • NUMBER: provide multiple ways of stating
+                                    integer numbers, and include samples
+                                    showing the full range of numbers you
+                                    expect (for example, include “ten, “one
+                                    hundred”, and several samples in between).
+                                    If you expect the numbers used to only be
+                                    within a small range, include every number
+   Inspect the skill’s intent       within that range as a sample value in an
+   schema to identify all slot      utterance.
+   types, then inspect the slot   • DATE: provide both relative and absolute
+   type values found in the         date samples (for example, “today”,
+   sample utterances.               “tomorrow”, “september first”, “june twenty
+1.                                  sixth twenty fifteen”). If you expect a
+   Verify that the slot type        certain set of phrases to be more likely
+   values provide sufficient        than others, include samples of those
+   variety for good                 phrases.
+   recognition.                   • TIME: provide samples of stating the time
+                                    (“three thirty p. m.”).
+                                  • DURATION: provide samples of indicating
+                                    different time periods (“five minutes”,
+                                    “ten days”, “four years”).
+                                  • LITERAL: see recommendations for
+                                    AMAZON.LITERAL, above. The LITERAL and
+                                    AMAZON.LITERAL slot types work the same
+                                    way.
+
+Next Steps
+
+  • 1. Policy Testing
+  • 2. Security Testing
+  • 3. Functional Testing
+  • Go back to: Submitting an Alexa Skill for Certification.
+  • Return to: Steps to Build a Custom Skill
+
+Auf Deutsch übersetzte Seiten+
+
+  • Definieren der Sprachschnittstelle
+  • Wie Benutzer benutzerdefinierte Skills aufrufen
+  • Auswählen eines Aufrufsnamen für einen benutzerdefinierten Skill
+  • Handbuch für Sprachdesign
+  • Best Practices für Voice Design
+  • Verknüpfen eines Alexa-Benutzers mit einem Benutzer in Ihrem System
+  • Übermitteln eines Alexa Skills zur Zertifizierung
+  • Alexa Skills Kit-Checkliste für die Einreichung
+  • Testen der Sprachschnittstelle und der Benutzererfahrung für einen
+    Alexa-Skill
+
+Testen der Sprachschnittstelle und der Benutzererfahrung für einen Alexa-Skill
+
+Einleitung
+
+Das Testen der Sprachschnittstelle sowie der Benutzererfahrung fokussiert sich
+auf Folgendes:
+
+  • Das Testen der Benutzererfahrung gewährleistet, dass der Skill auf mehrere
+    wichtige Funktionen von Alexa abgestimmt ist, die für eine großartige
+    Erfahrung beim Kunden sorgen.
+  • Das Prüfen des Absichtsschemas, die Reihe der Beispieläußerungen und die
+    Liste der Werte für benutzerdefinierte Slot-Typen, die Sie definiert haben,
+    um sicherzustellen, dass sie korrekt sind, vervollständigen und
+    respektieren die Best Practices für das Voice Design.
+
+    Diese Komponenten werden auf der Seite Interaktionsmodell für Ihren Skill
+    im Entwicklerportal definiert.
+
+Die Tests verfolgen diese Ziele:
+
+  • Anzahl der Möglichkeiten erhöhen, mit denen Endbenutzer sich an Ihren Skill
+    wenden können.
+  • Die Leichtigkeit der Spracherkennung beim Benutzen Ihres Skills beurteilen
+    (konnte Alexa die richtigen Wörter erkennen?)
+  • Sprachverständnis verbessern (Wenn Alexa die richtigen Wörter erkannt hat,
+    hat sie auch verstanden, was sie tun soll?).
+  • Sicherstellen, dass die Benutzer natürlich und spontan zu Alexa sprechen
+    können.
+  • Sicherstellen, dass Alexa die meisten Ihrer Anfragen innerhalb des Kontexts
+    der Funktionen Ihres Skills versteht.
+  • Sicherstellen, dass Alexa angemessen auf Benutzeranfragen reagiert, indem
+    sie sie entweder ausführt oder erklärt, warum sie sie nicht ausführen kann.
+
+In vielen dieser Tests wird geprüft, ob Ihr Skill sich an das Voice
+Design-Handbuch und die Best Practices für Voice Design hält. Sie müssen diese
+Leitfäden zurate ziehen, während Sie diesen Abschnitt durcharbeiten.
+Empfehlungen für Beispieläußerungen finden Sie unter Definieren der
+Sprachschnittstelle.
+
+Beachten Sie, dass Sie für viele dieser Tests ein Gerät für Sprachtests
+benötigen. Falls Sie kein Gerät haben, das den Alexa-Dienst unterstützt, können
+Sie Services anderer Anbieter verwenden, die den Alexa-Dienst unterstützen,
+etwa Echosim.io, um Ihren Alexa-Skill zu testen.
+
+Die allgemeine Test-Checkliste finden Sie unter Zertifizierungsanforderungen
+für benutzerdefinierte Skills.
+
+4.1. Sitzungsmanagement
+
+Jede Antwort, die von Ihrem Skill zum Alexa-Dienst gesendet wird, beinhaltet
+eine Markierung, die darauf hinweist, ob die Konversation mit dem Benutzer (die
+Sitzung) beendet oder fortgeführt werden soll. Wenn die Markierung auf
+"Fortführen" gesetzt ist, hört Alexa zu und wartet auf die Reaktion des
+Benutzers.Bei Amazon-Geräten, wie etwa dem Amazon Echo mit einem blauen
+Lichtring, leuchtet das Gerät auf, damit der Benutzer einen visuellen Hinweis
+erhält, dass Alexa auf eine Reaktion vom Benutzer wartet.
+
+Bei diesem Test wird geprüft, ob die Umwandlung von Text in Sprache von Ihrem
+Skill und die Sitzungsmarkierung zusammenarbeiten, damit eine
+zufriedenstellende Benutzererfahrung erreicht wird. Reaktionen, bei denen
+Fragen gestellt werden, lassen eine Sitzung offen, damit geantwortet werden
+kann. Reaktionen, die die Benutzeranfrage beantworten, schließen die Sitzung.
+
+   Test                                   Erwartete Ergebnisse
+   Skill aufrufen, ohne eine Absicht zu   Nach jeder Reaktion, die dem Benutzer
+   äußern, zum Beispiel:                  eine Frage stellt, bleibt die Sitzung
+                                          geöffnet und das Gerät wartet auf
+1.   • Öffne <Aufrufsname>.               Ihre Reaktion.
+
+   Auf die Aufforderung des Skills        Nach jeder Reaktion, die die
+   reagieren und prüfen, ob die Reaktion  Benutzeranfrage beantwortet, endet
+   richtig ist.                           die Interaktion.
+
+                                          Nach jeder Reaktion, die dem Benutzer
+                                          eine Frage stellt, bleibt die Sitzung
+   Eine Reihe von Absichten testen,       geöffnet und das Gerät wartet auf
+2. sowohl solche, in denen Fragen         Ihre Reaktion.
+   gestellt werden, als auch solche, die
+   die Benutzeranfrage beantworten.       Nach jeder Reaktion, die die
+                                          Benutzeranfrage beantwortet, endet
+                                          die Interaktion.
+
+4.2. Absichts- und Slot-Kombinationen
+
+Ein Skill kann mehrere Absichten und Slots haben.In diesem Test wird geprüft,
+ob jede einzelne Absicht bei verschiedenen Slot-Kombinationen die erwartete
+Reaktion zurückgibt.
+
+   Test                          Erwartete Ergebnisse
+   Testen Sie die
+   Absichtsreaktionen des Skills
+   mit verschiedenen
+   Kombinationen von
+   Slot-Werten.
+
+   Sie können einen der          Die Reaktion ist für den Kontext der Anfrage
+   One-shot-Sätze zum Starten    angemessen.
+   des Skills verwenden, zum
+   Beispiel:                     Zum Beispiel wenn die Anfrage einen Slot-Wert
+1.                               enthält, ist die Reaktion für diese
+     • Bitte <Aufrufsname>,      Information relevant.Wenn eine Anfrage für
+       <etwas zu tun>            dieselbe Absicht den Slot nicht enthält,
+                                 verwendet die Reaktion einen Standardwert oder
+   Achten Sie darauf, jede       bittet den Benutzer um Klärung.
+   Absicht aufzurufen, nicht nur
+   jene, die normalerweise in
+   One-shot-Manier verwendet
+   werden.
+
+   Die Reaktion auf jede
+   einzelne Absicht beurteilen
+
+Sie sollten eine Tabelle mit Absichten und Slot-Werten verwenden, um diesen
+Test zu verfolgen und sicherzustellen, dass Sie alle Absichts- und
+Slot-Kombinationen testen. Zum Beispiel:
+
+        Absicht         Slot-Kombination      Zu testende Beispieläußerung
+IntentName              SlotOne          Diese ist eine Äußerung zum Testen von
+                                         dieser Absicht und von Slot eins.
+IntentName              SlotTwo          Diese ist eine Äußerung zum Testen von
+                                         dieser Absicht und von Slot zwei.
+                        SlotOne          Diese ist eine Äußerung zum Testen von
+IntentName              SlotTwo          dieser Absicht sowie von Slot eins und
+                                         Slot zwei
+Jede weitere gültige
+Absichts- und           -
+Slot-Kombination
+
+4.3. Absichtsreaktion (Design)
+
+Eine gute Benutzererfahrung für einen Skill ist abhängig davon, dass der Skill
+gut konzipierte Text-zu-Sprache-Reaktionen umfasst. Im Abschnitt „Präsentieren
+von Informationen für den Benutzer“ von Best Practices für Voice Design finden
+Sie Empfehlungen zum Konzipieren der Reaktionen Ihres Skills. In diesem Test
+wird überprüft, ob die Reaktionen Ihres Skills diesen Empfehlungen entsprechen.
+
+Sie können die gleichen Absichts- und Slot-Kombinationen wie für den Test der
+Absichts- und Slot-Kombinationen verwenden.
+
+   Test                              Erwartete Ergebnisse
+   Testen Sie die Reaktionen des
+   Skills auf die Absichten mit
+   verschiedenen Slot-Werten.        Die Reaktion erfüllt jede der folgenden
+                                     Anforderungen:
+   Sie können einen der
+   One-shot-Sätze zum Starten des      • Beantwortet die Anfrage des Benutzers
+   Skills verwenden, zum Beispiel:       kurz und knapp.
+                                       • Liefert Informationen in praktischen
+     • Bitte <Aufrufsname>, <etwas       Einheiten.
+       zu tun>                         • Verwendet weder technischen noch
+                                         juristischen Jargon.
+   Achten Sie darauf, jede einzelne    • Reaktionen auf Absichten, die
+   Absicht aufzurufen, nicht nur         normalerweise nicht in One-shot-Manier
+1. jene, die normalerweise in            verwendet werden, liefern eine
+   One-shot-Manier verwendet werden.     relevante Reaktion oder informieren
+                                         die Benutzer darüber, wie sie den
+   Testen Sie verschiedene               Skill starten können.
+   Beispieläußerungen für jede
+   einzelne Absicht.                 Für eine bessere Erfahrung sollte die
+                                     Reaktion auch diesen Empfehlungen
+   Wenn der Skill Beispiele          entsprechen:
+   vokalisiert, die die Benutzer
+   ausprobieren sollen, verwenden      • Einfach zu verstehen
+   Sie diese genau gemäß den           • Für die Ohren geschrieben, nicht für
+   Anweisungen des Skills.               die Augen
+
+   Bewerten Sie die Reaktion auf
+   jede einzelne Absicht.
+
+Sie können die gleichen Absichts- und Slot-Kombinationen wie für den Test
+Absichtsreaktion (Absichts- und Slot-Kombinationen) verwenden.
+
+4.4. Unterstützende Aufforderungen
+
+Ein Benutzer kann eine Interaktion mit Ihrem Skill beginnen, ohne ausreichende
+Informationen über die erwartete Handlung anzubieten. Dies kann entweder eine
+Anfrage ohne Absicht sein (der Benutzer ruft den Skill auf, äußert jedoch keine
+Absicht), oder eine Anfrage mit Teilabsicht (der Benutzer äußert die Absicht,
+jedoch keine Slot-Werte, die erforderlich sind, um die Anfrage auszuführen).
+
+In diesen Fällen muss der Skill unterstützende Aufforderungen anbieten, die den
+Benutzer fragen, was er tun möchte. Bei diesem Test wird geprüft, ob Ihr Skill
+nützliche Aufforderungen für diese Szenarien anbietet.
+
+   Test                                  Erwartete Ergebnisse
+                                           • Der Skill bittet Sie um
+                                             Informationen darüber, was Sie tun
+                                             möchten.
+                                           • Die Aufforderung enthält den Namen
+                                             des Skills, damit Sie wissen, dass
+                                             Sie sich am richtigen Ort
+                                             befinden.
+                                           • Die Aufforderung liefert
+                                             spezifische Optionen darüber, was
+   Rufen Sie den Skill ohne Absicht auf.     zu tun ist, fasst sich jedoch kurz
+   Sie können dies mit einem Satz tun,       . Wenn der Skill mehrere
+   der eine LaunchRequest sendet und         Funktionen hat, gibt die
+   keine IntentRequest. Zum Beispiel:        Aufforderung die gängigste an.
+                                           • Die Aufforderung gibt keine
+1.   • Öffne <Aufrufsname>.                  wortreichen Anweisungen dazu, was
+                                             der Benutzer sagen soll (wie etwa
+   Vergewissern Sie sich, dass Sie eine      „um xyz zu tun, sagen Sie xyz“).
+   Aufforderung erhalten, reagieren Sie      Die Aufforderung ist kurz.
+   auf diese Aufforderung und prüfen       • Wenn Sie auf die Aufforderung
+   Sie, ob Sie eine korrekte Reaktion        reagieren, äußert der Skill
+   erhalten.                                 weitere Aufforderungen, bis alle
+                                             benötigten Informationen gesammelt
+                                             wurden, und liefert dann eine
+                                             kontextbezogene Reaktion ohne
+                                             Fehler.
+                                           • Wenn nach dem Starten keine
+                                             Informationen vom Benutzer
+                                             benötigt werden, führt der Skill
+                                             eine Kernfunktion aus und schließt
+                                             die Sitzung.
+
+   Rufen Sie den Skill mit einer           • Der Skill fordert Sie auf, die
+   Teilabsicht auf. Dies können Sie          fehlenden Informationen anzugeben.
+   mithilfe eines Satzes ausführen, der    • Die Aufforderung enthält
+   die Absicht aufruft, jedoch nicht         spezifische Optionen über das, was
+   alle erforderlichen Slot-Daten            zu tun ist, ist jedoch kurz. Wenn
+   enthält. Zum Beispiel:                    der Skill viele Funktionen hat,
+                                             beinhaltet die Aufforderung die
+     • Bitte <Aufrufsname>, <etwas zu        gängigste.
+       tun> (keine Slot-Daten im Befehl)   • Der Skill gibt keine wortreichen
+                                             Anweisungen, die dem Benutzer
+2. Vergewissern Sie sich, dass Sie eine      mitteilen, was er sagen soll (wie
+   Aufforderung erhalten, reagieren Sie      etwa „um xyz zu tun, müssen Sie
+   auf diese Aufforderung und prüfen         xyz sagen“). Die Aufforderung ist
+   Sie, ob Sie eine korrekte Reaktion        kurz.
+   erhalten.                               • Wenn Sie auf die Aufforderung
+                                             reagieren, gibt der Skill weitere
+   Wenn der Skill keine Slots definiert,     Aufforderungen, bis er alle
+   können Sie diesen Test überspringen,      benötigten Informationen gesammelt
+   weil es nicht möglich ist, eine           hat, dann gibt er eine
+   Teilabsicht zu senden.                    kontextbezogene Reaktion ohne
+                                             Fehler.
+
+Hinweis: Einige sehr einfache Skills reagieren auf alle Anforderungen mit einer
+vollständigen Antwort und geben dem Benutzer keinerlei Aufforderungen. Das
+Space Geek-Beispiel reagiert auf alle Anfragen (einschließlich einer
+LaunchRequest ohne Absicht) mit einer Aussage über den Weltraum und beendet die
+Sitzung. Führen Sie für solche Skills den ersten Test durch und vergewissern
+Sie sich, dass Sie eine vollständige Antwort bekommen.
+
+Unter Best Practices für Voice Design finden Sie Empfehlungen zum Konzipieren
+von Aufforderungen.
+
+4.5. Aufrufsname
+
+Die Benutzer sprechen den Aufrufsnamen für einen Skill aus, um eine Interaktion
+zu beginnen. Prüfen Sie den Aufrufsnamen gemäß Auswählen eines Aufrufsnamens
+für einen benutzerdefinierten Skill.
+
+4.6. One-shot-Sätze für Beispieläußerungen
+
+Die meisten Skills bieten schnelle, einfache "One-shot"-Interaktionen, in denen
+der Benutzer eine Frage stellt oder einen Befehl gibt. Der Skill reagiert mit
+einer Antwort oder Bestätigung und die Interaktion ist abgeschlossen.In diesen
+Interaktionen ruft der Benutzer Ihren Skill auf und äußert seine Absicht in nur
+einem Satz.
+
+Frage- und Sage-Sätze sind die natürlichsten Sätze zum Starten dieser Art von
+Interaktionen. Deshalb ist es von entscheidender Bedeutung, dass Sie
+Beispieläußerungen schreiben, die gut mit diesen Sätzen funktionieren und sich
+einfach und natürlich aussprechen lassen.
+
+In diesen Tests prüfen Sie die Beispieläußerungen, die Sie für den Skill
+geschrieben haben, dann testen Sie diese mit der Stimme, um sicherzustellen,
+dass sie wie erwartet funktionieren.
+
+   Test                                        Erwartete Ergebnisse
+   Prüfen Sie die Beispieläußerungen des
+   Skills, um sicherzustellen, dass er die
+   richtige Formulierung enthält, die mit den
+   verschiedenen Sätzen zum Aufrufen eines
+   Skills mit einer spezifischen Absicht
+   übereinstimmen.
+
+   Substantivsätze: Sätze, die auf diese
+   Äußerungen folgen können
+   „Bitte < Aufrufsname> um …“ oder
+   „Erzähle < Aufrufsname> über…”                • Substantiv-, Fragewort- und
+                                                   Befehlsäußerungen werden
+     • „Frage <Aufrufsname> nach meiner            alle einbezogen.
+       Lieblingsfarbe“                           • Mindestens fünf Varianten
+     • „Sage < Aufrufsname>, dass ich heute um     dieser drei Satztypen sind
+       15 Uhr einen Termin habe“                   vorhanden (fünf
+                                                   Substantivformen, fünf
+1. Fragen mit Fragewort oder umgekehrter           Fragewortformen und fünf
+   Satzstellung: Sätze nach Frage                  Befehlsformen)
+   <Aufrufsname> …“                              • Die Beispieläußerungen sind
+                                                   intuitiv und natürlich, wenn
+     • „Frage <Aufrufsname> wo ist mein Auto“      sie mit den Frage- und
+     • „Frage <Aufrufsname>, wo mein Auto ist“     Sage-Sätzen kombiniert
+                                                   werden.
+   Befehle: Sätze, die folgen können nach „
+   Sage <Aufrufsname>, zu …“ oder „Bitte <
+   Aufrufsname>, zu …“
+
+     • „Bitte < Aufrufsname>, mir ein Auto zu
+       besorgen“
+     • „Sage <Aufrufsname>, mein Lieblingsbuch
+       zu suchen“
+
+   (In den obigen Beispielen sind die kursiv
+   gedruckten Sätze Beispieläußerungen).
+
+   Starten Sie den Skill mit jedem der           • Jedes dieser allgemeinen
+   folgenden gängigen Frage-Beispiele (wenden      Frage-Beispiele
+   Sie nach Möglichkeit mehrere Varianten für      funktioniert.
+2. jedes Beispiel an):                           • Der Skill wird erfolgreich
+                                                   gestartet und führt die
+     • Frage <Aufrufsname> nach <etwas>            Anfrage aus.
+     • Frage <Aufrufsname> über < etwas>         • Der Satz lässt sich einfach
+     • Bitte <Aufrufsname>, <etwas zu tun>         und natürlich aussprechen.
+
+   Starten Sie den Skill mit dem allgemeinen
+   Frage-Beispiel (empfohlener Test um
+   festzustellen, ob dies für Ihren Skill ein
+   natürlicher Satz ist):
+                                                 • Das allgemeine Fragemuster
+     • Frage <Aufrufsname> <Frage>                 funktioniert, wenn es für
+                                                   Ihren Skill geeignet ist.
+   Testen Sie mit Fragen, die mit                • Der Skill wird erfolgreich
+3. verschiedenen Fragewörtern beginnen (wer,       gestartet und führt die
+   was, wie usw.).                                 Anfrage aus.
+                                                 • Der Satz lässt sich einfach
+   Die Fragewörter, die mit Ihrem Skill            und natürlich aussprechen.
+   natürlich klingen, können variieren. Diese
+   Fragetypen fließen zum Beispiel nicht gut
+   mit „Space Geek“. Ein Benutzer wird
+   wahrscheinlich nicht sagen „Frage Space
+   Geek, was ein Weltraumfakt ist?“
+
+                                                 • Das allgemeine Sage-Beispiel
+   Starten Sie den Skill mit den folgenden         funktioniert.
+   allgemeinen Sage-Beispielen:                  • Der Skill wird erfolgreich
+4.                                                 gestartet und führt die
+     • Sage <Aufrufsname>, <etwas zu tun>          Anfrage aus.
+                                                 • Der Satz lässt sich einfach
+                                                   und natürlich aussprechen.
+
+   Lesen Sie nochmals den Abschnitt „Einen
+   Skill mit einer spezifischen Anfrage
+   starten (Absicht)“ in Wie Benutzer
+   benutzerdefinierte Skills aufrufen und        • Der Skill wird erfolgreich
+   testen Sie so viele Sätze wie möglich, die      gestartet und führt die
+5. zu Ihrem Skill passen.                          Anfrage aus.
+                                                 • Der Satz lässt sich einfach
+   Beachten Sie, dass nicht alle Sätze zu          und natürlich aussprechen.
+   allen Skills passen. Der Satz „Frage…, ob…“
+   würde wahrscheinlich nicht zum Wattläufer
+   passen, obwohl der Skill diesen Test auch
+   ohne diesen Satz bestehen würde.
+
+4.7. Vielfalt der Beispieläußerungen
+
+Angesichts der Flexibilität und der Vielfalt der gesprochenen Sprache kann
+dieselbe Anforderung oft auf sehr unterschiedliche Weise ausgedrückt werden.
+Deshalb müssen ihre Beispieläußerungen mehrere Möglichkeiten umfassen, die
+gleiche Absicht zu formulieren.
+
+Prüfen Sie in diesem Test die Beispieläußerungen für alle Absichten, nicht nur
+die "One-shot"-Absichten in One-shot-Sätzen für Beispieläußerungen.
+
+   Test                             Erwartete Ergebnisse
+                                    Jeder Anfragetyp enthält mindestens fünf
+                                    verschiedene Beispieläußerungen (für
+                                    einfache Absichten). Mehr Äußerungen
+   Prüfen Sie das Absichtsschema    einzubeziehen, erhöht die Präzision Ihres
+   und die Beispieläußerungen des   Skills.
+   Skills:
+                                    Die fünf gängigsten Synonyme für Satzmuster
+    1. Suchen Sie für jede Absicht  sind vorhanden. Wenn der Skill zum Beispiel
+       mehrere Möglichkeiten, wie   „Hol mir <einen Wert>“ enthält, umfassen
+       der Benutzer eine Anfrage    die Äußerungen Synonyme wie „Gib mir <einen
+       für diese Absicht            Wert>“, „Sage mir <einen Wert>“ usw.
+1.     formulieren könnte.
+    2. Prüfen Sie, ob die           Jede Beispieläußerung muss eindeutig sein.
+       Beispieläußerungen, die      Beispieläußerungen dürfen nicht mehrfach
+       dieser Absicht zugeordnet    vorkommen und unterschiedlichen Absichten
+       wurden, diese Formulierungen zugeordnet sein.
+       abdecken.
+    3. Prüfen Sie alle Slots, die   Jeder im Absichtsschema definierte Slot
+       in den Beispieläußerungen    muss in mindestens einer Beispieläußerung
+       vorkommen.                   vorkommen.
+
+                                    Jeder Slot wird nur einmal innerhalb einer
+                                    Beispieläußerung verwendet.
+
+4.8. Absichten und Slot-Typen
+
+Slots werden mit verschiedenen Typen definiert. Integrierte Typen wie
+AMAZON.DATE konvertieren den gesprochenen Text eines Benutzers in ein anderes
+Format (etwa den gesprochenen Text „fünfter März“ in das Datumsformat
+„2017-03-05). Benutzerdefinierte Slot-Typen werden für Elemente verwendet, die
+nicht von den integrierten Typen von Amazon Alexa abgedeckt sind.
+
+Prüfen Sie für diesen Test das Absichtsschema und vergewissern Sie sich, dass
+die richtigen Slot-Typen für den Datentyp verwendet werden, den der Slot
+sammeln soll.
+
+Beachten Sie, dass dieser Test davon ausgeht, dass Sie zu den aktualisierten
+Slot-Typen migriert haben, die unter Migration zu den verbesserten integrierten
+und benutzerdefinierten Slot-Typen beschrieben sind. Wenn Sie noch die
+vorherige Version verwenden (zum Beispiel DATE anstelle von AMAZON.DATE),
+müssen Sie außerdem den Test Beispieläußerungen (Slot-Typ-Werte) durchführen.
+
+   Test                          Erwartete Ergebnisse
+   Prüfen Sie das Absichtsschema   • Die Slots für jede einzelne Absicht
+   des Skills, um alle               stimmen mit den empfohlenen Slot-Typen in
+   Slot-Typen zu ermitteln.          der Tabelle Slot-Typen weiter unten
+1.                                   überein.
+   Prüfen Sie, ob die Typen mit    • Slots, die einen Wert aus einer Liste
+   dem zu sammelnden Datentyp        sammeln, verwenden einen
+   übereinstimmen.                   benutzerdefinierten Slot-Typ.
+
+Slot-Typen:
+
+     Slot-Typ                   Für Slots verwenden, die… sammeln
+AMAZON.NUMBER      Ganzzahlen
+AMAZON.DATE        Relative und absolute Daten („dieses Wochenende“ und
+                   „sechsundzwanzigster August zweitausendfünfzehn“)
+AMAZON.TIME        Die Tageszeit („fünfzehn Uhr dreißig“)
+AMAZON.DURATION    Eine Zeitdauer („fünf Minuten“)
+                   Ein Wert aus einer Liste (Sternzeichen, alle
+Benutzerdefinierte Bundesligateams, unterstützte Städte, Rezeptzutaten usw.)
+Slot-Typen
+                   Unter Benutzerdefinierte Slot-Typen (Werte) finden Sie
+                   weitere Tests für Ihre benutzerdefinierten Slot-Typen.
+
+4.9. Benutzerdefinierte Slot-Typ-Werte
+
+Der benutzerdefinierte Slot-Typ wird für Elemente verwendet, die nicht von den
+integrierten Amazon-Typen abgedeckt sind. Sie werden für die meisten Fälle
+empfohlen, wo ein Slot-Wert zu einer Reihe möglicher Werte gehört.
+
+   Test                       Erwartete Ergebnisse
+                                • Falls möglich umfasst die Liste alle Werte,
+                                  die Ihrer Meinung nach verwendet werden
+                                  können. Ein Horoskop-Skill mit dem
+                                  benutzerdefinierten Typ LIST_OF_SIGNS würde
+                                  beispielsweise alle zwölf Sternzeichen als
+                                  Werte für den Typ enthalten.
+                                • Wenn die Liste nicht jeden einzelnen
+   Prüfen Sie das                 möglichen Wert abdecken kann, deckt sie so
+   Absichtsschema des Skills,     viele repräsentative Werte wie möglich ab.
+   um alle Slots ausfindig zu   • Wenn die Liste nicht jeden einzelnen
+   machen, die                    möglichen Wert abdecken kann, bringen die
+   benutzerdefinierte             Werte die erwartete Wortanzahl zum Ausdruck.
+1. Slot-Typen verwenden.          Wenn beispielsweise Werte von einem bis vier
+                                  Wörtern möglich sind, verwenden Sie Werte von
+   Prüfen Sie für jeden           einem bis vier Wörtern in Ihrer Wertliste.
+   benutzerdefinierten            Achten Sie auch darauf, sie gleichmäßig zu
+   Slot-Typ den Wertesatz,        verteilen. Wenn ein Wert aus vier Wörtern in
+   den Sie für den Typ            rund 10 % der Eingaben vorkommt, verwenden
+   angegeben haben.               Sie Werte mit vier Wörtern nur in 10 % der
+                                  Werte in Ihrer Liste.
+
+                              Einen Leitfaden zum Definieren der Werte für
+                              benutzerdefinierte Slot-Typen finden Sie im
+                              Abschnitt „Empfehlungen zum Definieren der
+                              Spracheingabedaten“ unter Definieren der
+                              Sprachschnittstelle.
+
+4.10. Schreibkonventionen für Beispieläußerungen
+
+Beispieläußerungen müssen gemäß den festgelegten Regeln geschrieben werden, um
+ein Sprachmodell für Ihren Skill erfolgreich aufzubauen.
+
+   Test                Erwartete Ergebnisse
+                       Alle Beispieläußerungen entsprechen den folgenden
+                       Schreibkonventionen:
+
+                         • Es werden weder Großbuchstaben noch Satzzeichen
+                           verwendet (Punkte können verwendet werden, jedoch
+                           nur für Initiale und Schreibweisen (z. B. „t. v.“).
+                           Bindestriche können verwendet werden, jedoch nur
+                           ausnahmsweise. Apostrophe können für
+                           Possessivausdrücke verwendet werden).
+                         • Ein Punkt kann nach Einzelbuchstaben stehen. Vor dem
+                           nächsten Buchstaben oder Wort steht eine Leerstelle:
+                           „TV“ wird „t. v.“ geschrieben „OK“ als „o. k.“ -
+   Prüfen Sie den Text     Wortzusammensetzungen werden auf ähnliche Weise
+1. aller                   geschrieben: „AccessHD“ wird als „access h. d.“
+   Beispieläußerungen.     geschrieben
+                         • Der Aufrufsname darf weder isoliert noch innerhalb
+                           des unterstützten Startausdrucks erscheinen. Ein
+                           Skill mit dem Aufrufsnamen „Horoskop Dienst“ darf
+                           keine Beispieläußerungen enthalten, die nur
+                           „Horoskop Dienst“ lauten. Beispieläußerungen dürfen
+                           keine Startausdrücke wie „Sag Horoskop Dienst“
+                           enthalten. Eine vollständige Liste der
+                           Startausdrücke finden Sie unter Wie Benutzer
+                           benutzerdefinierte Skills aufrufen
+
+                       Weitere Informationen über die Syntaxregeln für
+                       Beispieläußerungen finden Sie unter Referenz für das
+                       benutzerdefinierte Interaktionsmodell .
+
+4.11. Umgang mit Fehlern
+
+Anders als bei einer visuellen Schnittstelle, wo der Benutzer nur mit auf dem
+Bildschirm dargestellten Objekten interagieren kann, gibt es hier keine
+Möglichkeit einzuschränken, was die Benutzer in einer Sprachinteraktion sagen
+können.Ihr Skill muss auf intelligente und benutzerfreundliche Weise mit einer
+Vielzahl von Fehlern umgehen können. In diesem Test wird geprüft, wie Ihr Skill
+mit häufig auftretenden Fehlern umgeht.
+
+Weitere Informationen zum Validieren von Benutzereingaben finden Sie unter
+Verarbeitung möglicher Eingabefehler.
+
+   Test                             Erwartete Ergebnisse
+                                      • Der Skill reagiert mit einer
+                                        Aufforderung, die klärt, welche
+   Rufen Sie den Skill auf, ohne        Informationen Sie angeben sollen.
+   eine Absicht anzugeben.            • Die Aufforderung gibt klar an, was Sie
+   Beispiel:                            sagen müssen.
+                                      • Die Aufforderung endet mit einer Frage
+1.   • Öffne <Aufrufsname>.             und lässt die Sitzung geöffnet, damit
+                                        Sie reagieren können.
+   Bei Aufforderung zum Reagieren,
+   nichts sagen.                    Beachten Sie, dass es sich bei der
+                                    Aufforderung, die Sie hören, um eine
+                                    erneute Aufforderung handelt, die in der
+                                    vorherigen Reaktion enthalten ist.
+
+   Rufen Sie den Skill mithilfe des
+   folgenden Satzes auf:              • Der Skill reagiert mit einer
+                                        Aufforderung oder einem Hilfetext, der
+     • Öffne <Aufrufsname>.             deutlich macht, welche Informationen
+                                        Sie angeben müssen.
+   Wenn Sie zur Reaktion              • Die Aufforderung weist klar darauf hin,
+   aufgefordert werden, sagen Sie       was Sie sagen müssen.
+   etwas, das mit einer der           • Die Aufforderung endet mit einer Frage
+   Skill-Absichten übereinstimmt,       und hält die Sitzung geöffnet, damit
+2. jedoch mit ungültigen                Sie reagieren können.
+   Slot-Daten.
+                                    Beachten Sie, dass es sich bei der
+   Wenn die Absicht zum Beispiel    Aufforderung in diesem Szenario nicht um
+   einen Slot mit AMAZON.DATE       eine erneute Aufforderung handelt, die in
+   erwartet, sagen Sie etwas, was   der vorherigen Reaktion enthalten ist.
+   nicht in ein Datum umgewandelt   Diese Aufforderung muss von der
+   werden kann.                     Fehlerbehandlung im Code stammen, der die
+                                    Absicht steuert.
+   Wiederholen Sie diesen Test für
+   jeden einzelnen Slot.
+
+4.12. Hilfe anbieten
+
+Ein Skill muss eine Hilfeabsicht haben, die zusätzliche Anweisungen zum
+Navigieren und für den Umgang mit dem Skill anbietet. Implementieren Sie dafür
+AMAZON.HelpIntent. Sie brauchen für diese Absicht keine eigenen
+Beispieläußerungen anzugeben, aber Sie müssen sie in den Code für Ihren Skill
+implementieren. Weitere Hinweise finden Sie unter Implementieren der
+integrierten Absichten.
+
+Mit diesem Test wird geprüft, ob diese Absicht vorhanden ist und nützliche
+Informationen liefert.
+
+   Test                              Erwartete Ergebnisse
+                                     Die Reaktion der Hilfe:
+
+   Rufen Sie den Skill auf, ohne       • Liefert Anweisungen, um dem Benutzer
+   eine Absicht anzugeben. Beispiel:     bei der Navigation in der Kernfunktion
+                                         des Skills zu helfen.
+     • Öffne <Aufrufsname>.            • Ist umfassender als die Aufforderung,
+                                         die die Benutzer beim Starten des
+   Wenn Sie zu einer Reaktion            Skills ohne Absicht hören. Die
+   aufgefordert werden, sagen Sie        Hilfeaufforderung könnte
+   „Hilfe“.                              beispielsweise besser erklären, was
+1.                                       der Skill tut, oder den Benutzer
+   Für einen einfachen Skill, der        darüber informieren, wie er den Skill
+   auch ohne spezifische Absicht         beenden kann.
+   eine vollständige Antwort gibt,     • Informiert den Benutzer darüber, was
+   (wie im Beispiel „Space Geek“),       der Skill tun kann, im Gegensatz dazu,
+   rufen Sie die Hilfeabsicht direkt     was der Benutzer sagen muss, damit der
+   auf:                                  Skill funktioniert.
+                                       • Endet mit einer Frage, die den
+     • Bitte <Aufrufsname> um Hilfe.     Benutzer auffordert, die Anfrage
+                                         auszuführen.
+                                       • Lässt die Sitzung geöffnet, damit der
+                                         Benutzer reagieren kann.
+
+Weitere Informationen über das Implementieren der Hilfe für Ihren Skill finden
+Sie im Abschnitt „Hilfe für komplexe Skills anbieten“ unter Best Practices für
+Voice Design.
+
+4.13. Stoppen und Abbrechen
+
+Ihr Skill muss angemessen auf allgemeine Äußerungen zum Stoppen und Abbrechen
+reagieren (etwa „Stopp“, „Abbrechen“, „vergiss es“ und andere). Die
+integrierten Absichten AMAZON.StopIntent und AMAZON.CancelIntent bieten diese
+Äußerungen. In den meisten Fällen beenden diese Absichten den Skill einfach,
+aber Sie können sie auch anderen Funktionen zuordnen, sofern das für Ihren
+bestimmten Skill sinnvoll ist. Siehe Implementieren der integrierten Absichten.
+
+   Test                               Erwartete Ergebnisse
+                                      Es folgt eine dieser Reaktionen:
+
+                                        • Der Skill ist vorhanden.
+                                        • Der Skill gibt eine Reaktion zurück,
+                                          die der Funktion des Skills
+   Starten Sie den Skill und rufen        entspricht. Die Reaktion ist
+   Sie eine Absicht auf, die den          ebenfalls sinnvoll im Kontext der
+   Benutzer zu einer Reaktion             Aufforderung „Stopp“. Ein Skill, der
+1. auffordert.                            Bestellungen aufgibt, könnte zum
+                                          Beispiel mit der Bestätigung
+   Nachdem Sie die Aufforderung           reagieren, dass die Bestellung des
+   gehört haben, sagen Sie „Stopp“.       Benutzers storniert wurde.
+
+                                      Wenn der Skill auf alle Anfragen mit
+                                      einer vollständigen Antwort reagiert und
+                                      niemals eine Aufforderung abgibt,
+                                      überspringen Sie diesen Test.
+
+                                      Nachdem ein Aktivierungswort Alexa
+                                      unterbrochen hat, erfolgt eine dieser
+                                      Aktionen.
+
+                                        • Der Skill ist vorhanden.
+   Rufen Sie eine Absicht auf, die      • Der Skill gibt eine Reaktion zurück,
+   mit längeren                           die der Funktion des Skills
+   Text-zu-Sprache-Umwandlungen           entspricht. Die Reaktion ist
+2. reagiert. Sobald Alexa beginnt,        ebenfalls sinnvoll im Kontext der
+   die Antwort auszusprechen, sagen       Aufforderung „Stopp“. Ein Skill, der
+   Sie „Alexa Stopp“, um die Antwort      Bestellungen aufgibt, könnte zum
+   zu unterbrechen.                       Beispiel mit der Bestätigung
+                                          reagieren, dass die Bestellung des
+                                          Benutzers storniert wurde.
+
+                                      Wenn alle Skill-Reaktionen zu kurz sind,
+                                      um sie zu unterbrechen, überspringen Sie
+                                      diesen Test.
+
+                                      Es folgt eine dieser Reaktionen:
+
+                                        • Der Skill ist vorhanden.
+                                        • Der Skill gibt eine Reaktion zurück,
+   Starten Sie den Skill und rufen        die der Funktion des Skills
+   Sie eine Absicht auf, die den          entspricht. Die Reaktion ist
+   Benutzer zu einer Reaktion             ebenfalls sinnvoll im Kontext der
+   auffordert.                            Aufforderung „Abbrechen“. Ein Skill,
+3.                                        der Bestellungen aufgibt, könnte zum
+   Nachdem Sie die Aufforderung           Beispiel mit der Bestätigung
+   gehört haben, sagen Sie                reagieren, dass die Bestellung des
+   „Abbrechen“.                           Benutzers storniert wurde.
+
+                                      Wenn der Skill auf alle Anfragen mit
+                                      einer vollständigen Antwort reagiert und
+                                      niemals eine Aufforderung abgibt,
+                                      überspringen Sie diesen Test.
+
+                                      Nachdem ein Aktivierungswort Alexa
+                                      unterbrochen hat, erfolgt eine dieser
+                                      Aktionen.
+
+                                        • Der Skill ist vorhanden.
+   Rufen Sie eine Absicht auf, die      • Der Skill gibt eine Reaktion zurück,
+   mit längeren                           die der Funktion des Skills
+   Text-zu-Sprache-Umwandlungen           entspricht. Die Reaktion ist
+4. reagiert. Sobald Alexa beginnt,        ebenfalls sinnvoll im Kontext der
+   die Antwort auszusprechen, sagen       Aufforderung „Abbrechen“. Ein Skill,
+   Sie „Alexa abbrechen“, um die          der Bestellungen aufgibt, könnte zum
+   Antwort zu unterbrechen.               Beispiel mit der Bestätigung
+                                          reagieren, dass die Bestellung des
+                                          Benutzers storniert wurde.
+
+                                      Wenn alle Skill-Reaktionen zu kurz sind,
+                                      um sie zu unterbrechen, überspringen Sie
+                                      diesen Test.
+
+Anhang:Aus dem Verkehr gezogener Test für Beispieläußerungen (Slot-Typ-Werte)
+
+Wenn alle Ihre Slots die neueren Slot-Typen mit dem Namensraum AMAZON verwenden
+(etwa AMAZON.DATE), brauchen Sie diesen Test nicht durchzuführen.
+
+In früheren Versionen des Alexa Skills Kits war es erforderlich, Slot-Werte
+einzubeziehen, um die verschiedenen Formulierungen der Slot-Daten in Ihre
+Beispieläußerungen einzubeziehen. Zum Beispiel wurden Beispieläußerungen für
+einen DATE-Slot wie folgt geschrieben:
+
+OneshotTideIntent when is high tide on {january first|Date}
+OneshotTideIntent when is high tide {tomorrow|Date}
+OneshotTideIntent when is high tide {saturday|Date}
+...(many more utterances showing different ways to say the date)
+
+Wenn Ihr Skill diese Syntax noch für die integrierten Slot-Typen verwendet,
+müssen Sie die Beispiel-Slot-Werte in Ihren Beispieläußerungen überarbeiten.
+Wir empfehlen dringend, zu den aktualisierten Slot-Typen zu migrieren, die
+keine Beispielwerte mehr erfordern.
+
+   Test                         Erwartete Ergebnisse
+                                  • NUMBER: Geben Sie mehrere Möglichkeiten an,
+                                    Ganzzahlen anzugeben und beziehen Sie
+                                    Beispiele ein, aus denen der vollständige
+                                    Zahlenbereich ersichtlich ist, den Sie
+                                    erwarten (geben Sie z. B. „zehn“, „ein
+                                    Hundert“ und mehrere Beispiele dazwischen
+   Prüfen Sie das                   an). Wenn Sie erwarten, dass die
+   Absichtsschema des Skills,       verwendeten Zahlen nur in einem engen
+   um alle Slots ausfindig zu       Bereich liegen, beziehen Sie jede einzelne
+   machen. Untersuchen Sie dann     Zahl in diesem Bereich als Beispielwerte in
+   die Slot-Typ-Werte in den        eine Äußerung ein.
+1. Beispieläußerungen.            • DATE: Geben Sie sowohl Beispiele für
+                                    relative als auch für absolute
+   Prüfen Sie, ob die               Kalenderdaten an (zum Beispiel „heute“,
+   Slot-Typ-Werte ausreichend       „morgen“, „erster september“,
+   viele Varianten bieten,          „sechsundzwanzigster Juni zwanzig
+   damit sie gut erkannt            fünfzehn“). Wenn Sie eine bestimmte Gruppe
+   werden.                          von Sätzen eher als andere erwarten, geben
+                                    Sie Beispiele für diese Sätze an.
+                                  • TIME: Geben Sie Beispiele für Zeitangaben
+                                    an („fünfzehn Uhr dreißig“).
+                                  • DURATION: Geben Sie Beispiele für die
+                                    Angabe verschiedener Zeiträume an („fünf
+                                    Minuten“, „zehn Tage“, „vier Jahre“).
+
+Nächste Schritte
+
+  • 1. Richtlinientests
+  • 2. Sicherheitstests
+  • 3. Funktionstests
+  • Zurückgehen zu: Übermitteln eines Alexa-Skills zur Zertifizierung.
+  • Zurückkehren zu: Schritte zum Erstellen eines benutzerdefinierten Skill
+
+Sitemap
+facebook_logo twitter_logo blog_logo
+Follow us
+
+  • Alexa
+      □ Alexa Skills Kit
+      □ Alexa Voice Service
+      □ Alexa Fund
+      □ Rewards for Skill Developers
+  • Services & APIs
+      □ Earn
+      □ Engage
+      □ Build
+  • Devices
+      □ Fire Tablets
+      □ Amazon Fire TV
+      □ Dash Replenishment Service
+      □ Fire Phone
+      □ Amazon Echo
+      □ Amazon Tap
+  • Resources
+      □ Platforms
+      □ Learning Center
+      □ Development Tools
+      □ Promotional Tools
+      □ Marketing Tips
+      □ Other Resources
+  • Blogs
+      □ Alexa Blog
+      □ Appstore Blog
+      □ AWS Blog
+  • Support
+      □ Submitting Your Apps
+      □ FAQs
+      □ Forums
+      □ Contact Us
+      □ App Distribution Agreement
+      □ Mobile Ad Network Publisher Agreement
+      □ Mobile Ad Network Program Participation Requirements
+      □ Advertise Your App With Amazon Agreement
+      □ Program Materials License Agreement
+      □ Trademark Guidelines
+      □ Terms of Use
+    *
+
+© 2010-2016, Amazon.com, Inc. or its affiliates. All Rights Reserved.

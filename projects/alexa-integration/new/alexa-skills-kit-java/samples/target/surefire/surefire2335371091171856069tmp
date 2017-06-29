@@ -1,0 +1,6 @@
+#surefire
+#Fri Feb 03 01:51:16 CST 2017
+descriptorId=jar-with-dependencies
+user.dir=/var/lib/myfrdcsas/versions/myfrdcsa-1.0/codebases/minor/free-life-planner/projects/alexa-integration/sample-custom-skill-as-web-service/alexa-skills-kit-java/samples
+localRepository=/home/andrewdo/.m2/repository
+basedir=/var/lib/myfrdcsas/versions/myfrdcsa-1.0/codebases/minor/free-life-planner/projects/alexa-integration/sample-custom-skill-as-web-service/alexa-skills-kit-java/samples

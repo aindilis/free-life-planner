@@ -1,0 +1,87 @@
+/**
+ * This is the stylesheet for tags in plweb.
+ */
+
+/**
+ * Tag bars have a white background and a shadowy border.
+ * The margin top is needed in order to constraint
+ * the amount of space above the tag bar.
+ */
+
+#tags-component {
+  margin-bottom: 30px;
+}
+
+#tags {
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  margin-top: 3px;
+}
+
+/* FIXME: Should flush to the width of the containing <li>
+*/
+
+#tags input[type="text"] {
+  width: 700px;
+}
+
+
+/**
+ * UNKNOWN
+ */
+
+.tagit-new {
+  list-style-type: none;
+}
+
+
+
+/**
+ * While filling in / creating tags, a user may receive feedback
+ *  from the tagging system.
+ * This feedback is displayed underneath the tag bar and is colored
+ *  to indicate the kind of message displayed (green for informational;
+ *  red for warning).
+ * Since this element takes up a lot of vertical space,
+ *  we use negative vertical margins.
+ */
+
+#tags-warnings {
+  margin-bottom: -15px;
+  margin-top: -10px;
+}
+
+
+
+/**
+ * A label to the left of the tag bar displaying "Tags:".
+ * We position this relative to the tag bar, using a negative offset.
+ */
+
+#tags-label {
+  color: #0a3d6c;
+  font-family: Source Sans Pro, sans;
+  font-size: 18px;
+  margin-left: -50px;
+  margin-top: 9px;
+  position: absolute;
+}
+
+
+
+/**
+ * Tag notes appear above a tagging area.
+ * The provide the user with some information about the tagging process.
+ */
+
+#tags-notes {
+  color: #0a3d6c;
+  font-family: Source Sans Pro, sans;
+  font-size: 14px;
+  font-weight: plain;
+  text-align: right;
+}
+#tags-notes b {
+  font-weight: bold;
+}
+

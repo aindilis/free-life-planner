@@ -1,0 +1,20 @@
+html {
+  background: none; }
+
+body {
+  background: #f3f3f3;
+  color: #333; }
+
+.main-section {
+  font-size: .9em; }
+  .main-section ul {
+    margin: 0;
+    padding: 0 0 0 20px;
+    position: relative;
+    top: 1px; }
+  .main-section h3 {
+    margin-top: 0; }
+  .main-section h5 {
+    margin-bottom: 0; }
+
+/*# sourceMappingURL=citation-learn-more.css.map */

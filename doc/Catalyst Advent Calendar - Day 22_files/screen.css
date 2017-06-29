@@ -1,0 +1,197 @@
+body {
+    color: #000;
+    background: #977;
+    font-family: verdana, tahoma, sans-serif;
+}
+
+#contentwrapper {
+    width: 75%;
+    min-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: #d9d9d9;
+    border: 1px solid #aaa;
+    -moz-border-radius: 10px;
+}
+
+h1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 1.6em;
+    text-align: center;
+}
+
+dt {
+    margin: 0.5em 0 0.5em 0;
+}
+
+#content, #note{
+    font-size: 0.9em;
+    padding: 8px 20px;
+    margin: 10px;
+    -moz-border-radius: 10px;
+}
+
+#content {
+    border: 1px solid #aaa;
+    background: #fff;
+}
+
+#note {
+    background: #797;
+    border: 1px solid #575;
+    color: #fff;
+}
+
+.pod h1, .pod h2 {
+    text-align: left;
+    color: #b00;
+}
+
+a {
+    color: #b00;
+    text-decoration: none;
+}
+
+a:hover {
+        color: #d00;
+}
+
+#content a:link,
+#content a:visited {
+    border-bottom: 1px dotted #DD0000;
+}
+
+#content a:hover,
+#content a:focus {
+    border-bottom-style: solid;
+}
+
+h2 {
+    text-align: center;
+    color: #b00;
+}
+
+h4 {
+    text-align: center;
+    color: #b00;
+}
+
+#content .calendar {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+}
+
+#content .calendar td {
+    text-align: center;
+}
+
+#content .calendar th {
+    padding: 5px;
+    border: 1px solid #ddd;
+    background: #f0f0f0;
+}
+
+#content .calendar td {
+    padding: 5px;
+}
+
+#content .calendar td.link {
+    padding: 0;
+}
+
+#content .calendar td.today {
+    background: #797;
+}
+
+#content .calendar td.today a {
+    border: 1px solid #575;
+    color: #fff;
+}
+
+#content .calendar td.today a:hover {
+    background: #bdb;
+    color: #444;
+}
+
+#content .calendar a {
+    display: block;
+    padding: 5px;
+    border: 1px solid #eee;
+    text-decoration: none;
+    color: #444;
+}
+
+#content .calendar a:hover {
+    background: #f0f0f0;
+}
+
+#notes {
+    border-top: 1px solid #ddd;
+    clear: both;
+}
+
+#notes h2 {
+    margin-top: 0.5em;
+    text-align: left;
+}
+
+#links {
+    border-top: 1px solid #ddd;
+    clear: both;
+}
+
+#links h2 {
+    margin-top: 0.5em;
+    text-align: left;
+}
+
+.rss {
+    font-size: x-small;
+    text-align: right;
+}
+
+a img {
+    border: 0;
+}
+
+#pager {
+    border-top: 1px solid #e0e0e0;
+    list-style-type: none;
+    margin-left: 0;
+    padding: 0.4em;
+    position: relative;
+    width: 100%;
+}
+
+#pager li {
+    color: #c0c0c0;
+}
+
+#pager .next {
+    position: absolute;
+    right: 0.4em;
+    text-align: right;
+    width: 33%;
+}
+
+#pager .previous {
+    left: 0.4em;
+    position: absolute;
+    width: 33%;
+}
+
+.center {
+    text-align: center;
+}
+
+@media print {
+    a {
+        color: black !important;
+        border: 0 !important;
+    }
+}

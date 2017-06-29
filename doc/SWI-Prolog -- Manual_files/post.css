@@ -1,0 +1,100 @@
+article {
+  clear: both;
+}
+
+.post-category {
+  background: none repeat scroll 0 0 #999999;
+  color: #FFFFFF;
+  margin: 0 0.1em;
+  padding: 0.3em 1em;
+}
+
+.post-category-news {
+  background: none repeat scroll 0 0 #1F085E;
+}
+
+.content {
+  color: #444444;
+  line-height: 1.8em;
+}
+
+.post-meta {
+  font-weight: bold;
+}
+
+.post-title a {
+  color: #222222;
+  font-size: 140%;
+  text-decoration: none;
+}
+
+.post-links-and-votes {
+  float: right;
+  margin-right: 75px;
+  text-align: right;
+}
+
+section {
+  clear: both;
+}
+
+#add-post {
+  clear: both;
+}
+
+#add-post-submit {
+  float: left;
+}
+#add-post-cancel {
+  float: right;
+}
+
+.save-post-links {
+  margin-bottom: 30px;
+}
+
+.save-post-submit {
+  float: left;
+}
+.save-post-cancel {
+  float: right;
+}
+
+#add-post-links {
+  margin-bottom: 40px;
+}
+
+
+
+/**
+ * This displays the contents of a post that is read-only.
+ * The right margin is chosen so as to allow a right floating author avatar.
+ */
+
+.read-post {
+  background-color: #FFFFFF;
+  border: 1px solid #0a3d6c;
+  color: black;
+  font-size: 14px;
+  font-weight: plain;
+  margin-bottom: 8px;
+  margin-right: 75px;
+  margin-top: 3px;
+  min-height: 60px;
+  padding: 5px 10px;
+}
+
+
+/**
+ * An avatar of the author appear to the right of a post's content.
+ * The avatar has a circular shape has the exact same height as
+ * the minimum required post content height.
+ */
+
+.post-avatar {
+  border-radius: 45px;
+  float: right;
+  height: 70px;
+  width: 70px;
+}
+

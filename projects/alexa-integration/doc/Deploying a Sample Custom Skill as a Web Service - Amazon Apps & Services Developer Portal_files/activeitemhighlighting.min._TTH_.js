@@ -1,0 +1,1 @@
+$(document).ready(function(){var t=window.location.href.split("#")[0];$("ul.mysidemenu li a").each(function(){($(this).attr("href")==t||$(this).attr("href")==t+"/")&&$(this).addClass("active")})});

@@ -1,0 +1,30 @@
+/**
+ * This is the stylesheet for plweb annotations.
+ * This requires stylesheet `post.css`.
+ */
+
+/**
+ * The content of an annotation
+ */
+
+.annotation>.content {
+  background: none repeat scroll 0 0 #FFFFFF;
+  margin: 0 0 20px;
+  overflow: hidden;
+  padding: 20px;
+  position: relative;
+}
+
+
+
+/**
+ * A collection of annotations, typically appearing underneath
+ * an object documentation page, has additional horizontal margin.
+ */
+
+.annotation-component {
+  color: #0A3D6C;
+  font-family: Source Sans Pro,sans;
+  font-size: 14px;
+}
+

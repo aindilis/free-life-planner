@@ -1,0 +1,259 @@
+  • Home
+  • ALEXA
+  • SERVICES & APIS
+  • DEVICES
+  • RESOURCES
+  • BLOGS
+  • SUPPORT
+
+[                    ] ●
+Home > Alexa > Alexa Skills Kit
+
+  • Alexa
+  • Alexa Skills Kit
+  • Alexa Voice Service
+  • Alexa Fund
+  • Rewards for Skill Developers
+
+Alexa Skills Kit Security Testing
+
+Introduction
+
+To protect customer data, the cloud-based service for your skill must meet
+Amazon’s security requirements. The specific requirements depend on whether you
+are hosting using AWS Lambda or your own endpoint. AWS Lambda is a service
+offering by Amazon Web Services.
+
+  • 2.1. Skills Hosted as Lambda Functions
+  • 2.2. Skills Hosted as Web Services on Your Own Endpoint
+  • 2.3. Skills with Account Linking
+  • 2.4. Skills that Allow Unlocking or Disarming
+  • 2.5 Skills for Booking Reservations
+  • 2.6 Privacy Requirements
+  • Next Steps
+
+2.1. Skills Hosted as Lambda Functions
+
+Your Lambda function must ensure that requests are intended for your service,
+as discussed in the “Verifying that the Request is Intended for Your Service”
+section of Handling Requests Sent by Alexa.
+
+2.2. Skills Hosted as Web Services on Your Own Endpoint
+
+  • The web service must present a valid, trusted certificate when the
+    connection is established and must possess the corresponding private key.
+    Amazon only trusts certificates that have been signed by an Amazon-approved
+    certificate authority.
+      □ The Amazon-approved certificate authorities includes the certificate
+        list here with the exception of https://letsencrypt.org/.
+  • Self-signed certificates cannot be used for published skills.
+  • The service must verify that incoming requests were sent by the Alexa
+    service. You can do this by validating the request signature as discussed
+    in the “Verifying that the Request was Sent by Alexa” section of Hosting a
+    Custom Skill as a Web Service.
+
+    Note: the Java library provided with the Alexa Skills Kit provides a
+    disableRequestSignature flag in the SpeechletServlet class that you can use
+    for testing. If you used this while testing, be sure to set it back to
+    false when you are ready to submit for certification.
+
+  • The service must ensure that incoming requests are intended for your
+    service, as discussed in the “Verifying that the Request is Intended for
+    Your Service” section of Handling Requests Sent by Alexa.
+
+2.3. Skills with Account Linking
+
+If your skill needs to connect the identity of the end user with a user in
+another system (account linking), please verify that your skill follows all the
+instructions defined in Linking an Alexa User with a User in Your System. When
+submitting your skill, be sure to provide a valid set of account credentials
+with your testing instructions so our certification team can verify the account
+linking and functionality of your skill. Your skill must also pass the
+following account linking criteria:
+
+  • The skill must use Amazon’s account linking feature by redirecting the user
+    to a login page or landing page when enabling the skill with the Alexa app.
+  • The skill’s privacy policy and terms of use links displayed in the Alexa
+    app must each open to a valid web page.
+  • If you are the owner of the credential system, your skill must pass the
+    following criteria:
+      □ You must own the domain presenting the login page.
+      □ The login page must be served over HTTPS.
+  • If you are not the owner of the credential system, your skill must pass the
+    following criteria:
+      □ You must own the landing page that users are directed to when enabling
+        your skill. This landing page must clearly communicate which
+        third-party (3P) accounts are needed to link the account to the skill.
+      □ The landing page must direct the user to the domain login page owned by
+        the OAuth providers and must be served over HTTPS.
+      □ You may not directly handle, store, or transmit credentials on behalf
+        of the user.
+  • If you are using Login with Amazon, your skill must pass the following
+    criteria:
+      □ The login page URL must be from amazon.com and the page must be served
+        over HTTPS.
+      □ The login page must clearly communicate which third-party (3P) accounts
+        are needed to link the account to the skill.
+      □ The page must display your skill’s icon or logo and the Amazon logo.
+      □ You must clearly state the customer information your skill is
+        collecting and using. This can be directly on the login page or in your
+        privacy policy.
+    Tip: For a detailed walk-through for using Login with Amazon with the Alexa
+    Skills Kit, see 5 Steps to Seamlessly Link Your Alexa Skill with Login with
+    Amazon.
+
+2.4. Skills that Allow Unlocking or Disarming
+
+If your skill lets the user unlock or disarm a device, you must require the
+user to speak a PIN of at least four digits before executing the unlock /
+disarm action. Customers cannot opt out of the PIN requirements, although you
+can provide reduced functionality for customers who don’t want to enable a PIN.
+The PIN is recommended, but not required for locking or arming a device.
+
+   Test                                        Expected Results
+   Enable the skill and complete the account     • The PIN must be at least
+   linking process. Ensure that the account        four digits long.
+1. linking flow includes setting a PIN to        • The flow reminds the user to
+   access unlock functionality and the PIN         reset the PIN every 60 days.
+   meets the security requirements.
+
+   If the skill offers reduced functionality     • The requests to unlock or
+   when no PIN is set, disable the skill or        disarm are not executed. The
+   log in to the Alexa app as an Alexa user        user is instructed to set a
+2. who has not yet enabled the skill. Enable       PIN to use these features.
+   the skill, but do not set the PIN when        • Features other than unlock/
+   prompted. Attempt to invoke the intents         disarm do work normally
+   that let the user unlock or disarm a            without the PIN.
+   device.
+
+   Invoke each intent that lets a user unlock  Each request to unlock or disarm
+3. or disarm a device.                         a device asks the user to speak
+                                               the PIN.
+
+                                                 • The skill rejects the
+                                                   incorrect PIN and does not
+                                                   complete the unlock or
+   Invoke each intent that lets a user unlock      disarm request.
+   or disarm a device. When prompted for the     • After three consecutive
+4. PIN, speak an incorrect PIN. Provide an         incorrect PIN attempts, the
+   incorrect PIN at least three times.             skill instructs you to reset
+                                                   your PIN. Attempting a
+                                                   fourth request with the
+                                                   original, correct PIN now
+                                                   fails.
+
+2.5 Skills for Booking Reservations
+
+If your skill lets users book reservations for hotels, rental cars, or airline
+tickets, the skill must:
+
+  • Note this feature in the description.
+  • Use account linking to connect the user with your system.
+  • Require the user to confirm the booking before it is completed. This can be
+    using a phrase such as “Yes,” “OK,” or other similar responses.
+  • Provide a confirmation that the skill completed the booking via voice,
+    skill card, and email.
+
+   Test                                      Expected Results
+                                             The skill’s description mentions
+1. Review the description for the skill.     the ability to book reservations
+                                             for hotels, rental cars, or
+                                             airline tickets.
+
+   Verify that your skill follows all the    The skill is set up to use account
+2. instructions defined in Linking an Alexa  linking, and passes the tests
+   User with a User in Your System.          described in 2.3. Skills with
+                                             Account Linking
+
+                                               • The skill asks you for
+                                                 confirmation before completing
+3. Start an interaction with the skill and       the booking.
+   attempt to create a reservation.            • Stating a phrase like “Yes,”
+                                                 “OK,” or “sure” confirms the
+                                                 booking.
+
+                                               • The skill completes the
+                                                 booking
+   Start an interaction with the skill and     • You receive confirmation via
+4. attempt to create a reservation. When         voice
+   prompted to confirm, use one of the         • A card is sent to the Alexa
+   acceptance phrases such as “Yes.”             app confirming the booking.
+                                               • You receive an email
+                                                 confirming the booking.
+
+2.6 Privacy Requirements
+
+The skill must not:
+
+ 1. Contain references to or include malicious hacking, such as phishing or
+    Trojans. This includes rooting a device or circumventing Amazon’s or any
+    developer’s digital rights management (DRM) software.
+ 2. Contain references to or include malicious user spying or tracking,
+    including stalking, in the skill or skill metadata.
+ 3. Misuse customer personally identifiable information or sensitive personal
+    information.
+ 4. Collect personal information from end users without doing all of the
+    following: (i) provide notice of that data collection to end users in your
+    skill’s detail page,
+    (ii) use the information in a way that end users have consented to, and
+    (iii) ensure that your collection and use of that information complies with
+    your privacy notice and all applicable laws.
+
+    Prior to submitting a skill that collects personal information from end
+    users, you are required to supply a privacy policy that will be displayed
+    to end users on your skill’s detail page in the Alexa App.
+
+Next Steps
+
+  • 1. Policy Testing
+  • 3. Functional Testing
+  • 4. Voice Interface and User Experience Testing
+  • Go back to: Submitting an Alexa Skill for Certification.
+  • Return to: Steps to Build a Custom Skill
+
+Sitemap
+facebook_logo twitter_logo blog_logo
+Follow us
+
+  • Alexa
+      □ Alexa Skills Kit
+      □ Alexa Voice Service
+      □ Alexa Fund
+      □ Rewards for Skill Developers
+  • Services & APIs
+      □ Earn
+      □ Engage
+      □ Build
+  • Devices
+      □ Fire Tablets
+      □ Amazon Fire TV
+      □ Dash Replenishment Service
+      □ Fire Phone
+      □ Amazon Echo
+      □ Amazon Tap
+  • Resources
+      □ Platforms
+      □ Learning Center
+      □ Development Tools
+      □ Promotional Tools
+      □ Marketing Tips
+      □ Other Resources
+  • Blogs
+      □ Alexa Blog
+      □ Appstore Blog
+      □ AWS Blog
+  • Support
+      □ Submitting Your Apps
+      □ FAQs
+      □ Forums
+      □ Contact Us
+      □ App Distribution Agreement
+      □ Mobile Ad Network Publisher Agreement
+      □ Mobile Ad Network Program Participation Requirements
+      □ Advertise Your App With Amazon Agreement
+      □ Program Materials License Agreement
+      □ Trademark Guidelines
+      □ Terms of Use
+    *
+
+© 2010-2016, Amazon.com, Inc. or its affiliates. All Rights Reserved.
