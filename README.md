@@ -4,6 +4,9 @@ The Free Life Planner is the flagship application of the FRDCSA Project.  It pro
 Here are some links about it:
 
 http://frdcsa.org/~andrewdo/writings/News-Challenge-2.html
+
 https://frdcsa.org/~andrewdo/WebWiki/FreeLifePlanningCoachSoftware.html
+
 https://frdcsa.org/~andrewdo/WebWiki/FreeLifePlanningCoachSoftwareUpdate.html
+
 http://dev.freelifeplanner.org
