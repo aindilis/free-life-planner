@@ -1,0 +1,202 @@
+The AI I work on has  nothing to do with human intelligence, or trying
+to  make a  sentient being.   If you  make that  assumption  about me,
+that's  like hearing  that  someone  is a  religious  person and  then
+chastising them  for believing in Buddha  (when in fact  they might be
+Christian).  There are many aspects  to the field of AI.  Probably the
+best way for you to think of this is that I work on IA, or intelligent
+agents.  These are programs which are capable of solving problems that
+are considered useful by people.
+
+AI concerns itself with minimizing unnecessary psychological suffering
+due to  avoidable accidents.  We  use techniques from logic,  the same
+techniques that,  for instance,  make optimal chess  playing programs,
+etc,  and treat  the world  as a  game  and try  to win  the game,  by
+mathematical optimizations  and proofs  that bad things  don't happen.
+You can do this, you can make certain guarantees that certain failures
+don't happen for reasons that you are in control of - of course no one
+can yet control certain things, but  at least you do the best you know
+how to  do with what you have  all the time.  For  instance, you won't
+make  bad moves  at chess,  you  won't not  know the  definition of  a
+certain word, etc.
+
+Anyone who thinks AI is  about taking control away from people doesn't
+really realize  that a person  and an AI  together are still  going to
+face difficult problems, it will  make us better able to avoid certain
+common, unnecessary  mistakes, and to help us  mount higher challenges
+by  providing   rigour  in  situations  where   it  wasn't  previously
+available.  It will not make us lazier, it will in fact make us harder
+working  because we won't  be burned  and worn  out and  feel helpless
+towards mistakes we know ought not happen.
+
+People  are good  at learning  complex systems  but  sacrifice perfect
+memory  in  exchange  for  other  skills suited  to  learning  complex
+systems,  but some  problems require  specialized solutions,  and this
+solution is the computer.
+
+We can look at a world with AI  in the same way we look at the current
+world, and we can introduce AI  in a way such that no requirements any
+person may  have are rendered  invalid by the  AI.  That is  the goal,
+actually, to  satisfy everyone's requirements.   We model requirements
+in the usual logical way.
+
+A requirement is something that a person could express in English, and
+is  represented  by  association  to  the intended  semantics  of  the
+statement (as opposed to misreads  of the requirement).  The goal then
+is   for  the   system  to   make  as   many  of   these  requirements
+simulataneously  true  based on  its  laws  (the  requirements of  all
+people) and its algorithm.
+
+algorithm
+     n : a precise rule (or set of rules) specifying how to solve
+         some problem [syn: {algorithmic rule}, {algorithmic
+         program}]
+
+When I say that AI solves problems,  it is in the sense of problems of
+logic.  However,  many real world  problems may be solved  by reducing
+them to problems of logic and the interpretting the solution.
+
+----------------------------------------------------------------------
+
+Let me describe  to you in perhaps the clearest  way possible the goal
+of what I work on.
+
+I realize that EVERY FAILED DEDUCTION LEADS TO FUTURE ACCIDENTS.
+
+Let me describe an accident.  This is by no means pleasant.  So if the
+accident  I am about  to describe  were avoidable,  it would  make the
+world more pleasant.
+
+This accident involves a young boy  being hit by a train.  I know that
+what  I work  on would  be  capable of  preventing his  death and  the
+consequent psychological suffering of all that knew him.
+
+While  we cannot  protect one  hundred percent  of people  against one
+hundred percent of  the hazards and vissicitudes of  life, we can make
+relative improvements.  We  can in a formal sense  make 100% safety in
+restricted systems, and  of course the goal is to  grow that safety to
+larger  and  larger  systems.    It  is  exactly  the  consistency  of
+computers, which don't  make them rigid thinkers, but  which make them
+conditional and highly reliable system, that allows computers to solve
+with  100% completeness  subclasses  of existing  problems.  That  is,
+prevent whole categories of accidents.
+
+The accident  involving the  boy follows a  template that I  have seen
+multiple times  in videos of  accidents, and even  experienced myself.
+In a  different video, the exact  same failure situation  leads to the
+death of a gazelle.
+
+This failure  situation is one that I  am aware now and  which to some
+extent motivates unswerving commitment to the completion of my task.
+
+Since it will be easier to describe the gazelle scenario, I will start
+with that.  The typical feature is that it is two animals, two deer in
+this case,  and a  threat which  is perceived by  one of  the animals,
+which steps clear without thinking  to alert the other.  In this case,
+the deer are  drinking from a water hole.  The  first deer is blocking
+the view  of the second deer of  the water hole.  The  first deer sees
+something approaching  at it (an alligator), and  quietly turns around
+and leaves the water.  From the  point of view of the second dear, the
+movement of  the first  deer conceals the  movement of  the alligator,
+which proceeds to jump up and trap and kill the second deer.
+
+I am  very offended by the  existence of such scenarios  in nature.  I
+think they should be stopped.  I understand methods that would prevent
+this and a great many other classes of accidents.
+
+Now we will describe the death of the boy, which parallels closely the
+death of the deer.  Two young  boys are walking towards a train track.
+There is  a stationary train on  the track which  conceals an oncoming
+train.  A  train horn is blowing,  and the boys fatally  presume it is
+the stationary  train.  From the point  of view of the  camera, as the
+boys near the  tracks we see that the second train  moving at about 80
+MPH is the  real source of the horn sound.  The  boys are walking side
+by side, let us call the first boy the boy who is closer to the train.
+The first  boy blocks the view of  the second boy.  When  the train is
+now within about  80 feet the first boy perceives it  and stops on the
+very  edge of  track.  He  turns around  and steps  back automatically
+(clearly is not thinking at  all about the second boy), barely missing
+the train.  The second  boy is now about 4 feet in  front of the first
+boy, and his head  may be seen to hesitate for about  a 6th of second,
+an short moment of  psychological confusion before his hopelessly lost
+position is  impacted by the  approaching train.  Needless to  say the
+child's body is instantly  accelerated and rockets about three hundred
+feet  in a  second actually  hitting the  cameraman at  a  velocity of
+roughly 75 MPH.
+
+This  death   may  have  been   prevented  as  a  matter   of  logical
+completeness.  All that is needing is a facility to alert the child to
+avoid  that position.   A  deduction was  necessary  which would  have
+triggered a communication that the child should stop, we in advance of
+the precipitious  accident.  I understand  how to implement  this, and
+how to set up the correspondances between the mind and the system.
+
+It is  in this spirit  that I pursue  the development of AI,  a system
+which I know can prevent large classes of accidents.  It is sufficient
+to prevent an accident to have  a proof that it will not happen.  Here
+we  take proof  in  the formal  mathematical  sense.  By  establishing
+correspondances between the physical  world and the simulated computer
+world, simulation  occuring with knowledge based  systems, etc, (which
+is more akin  to a very precise, somewhat  accurate human mental model
+than to  say a simple  physics simulation), correspondences  that take
+place through  input output devices  like mind to  machine interfaces,
+cameras,  etc.,  we  will  be  able to  eliminate  large  ammounts  of
+psychological  suffering   as  the   result  of  accidents   that  are
+preventable by these systems.
+
+To give a  simple account of a simple  implementation, suppose that we
+have image  understanding routines.  <Show  video of VSAM>  The camera
+agent, an IA (intelligent  agent) with image understanding intelligent
+software, would be creating and  forwarding live information to an AI,
+perhaps in the camera, perhaps  at a nearby station, across a wireless
+adhoc  network, etc.   The information  would be  complex, but  in the
+spirit of the existing technology,  would look about equal to a length
+novel worth of statements of the following form.
+
+(#$approaching #$OurPoorFriendForWhomWeGrieve #$railtrack-39423)
+(#$approaching #$OurUnfortunateSurvivor #$railtrack-39423)
+(#$emittingSound #$train-32488)
+
+Of course, there would be  optimizations, etc, such as dialogs between
+the camera and the IA.
+
+Now, when  the camera reports  the approaching train (or  even before,
+there might be a system  which is devoted to general purpose collision
+avoidance, which has already contacted  the IA with information of the
+approaching train), the IA makes the inference that there is 
+
+(#$likelyEvent
+	(#$and
+		(#$dies OurPoorFriendForWhomWeGrieve)
+		(#$collisionWith #$train-32488)))
+
+I.E. It is  able to prove this.  <Show cyc  knowledge base>.  In which
+case  the IA contacts  the agent  present with  the child.   The agent
+advises  the child to  stop, 100  feet in  advance of  the approaching
+train.  This child, if contacted in advance, would not have died.
+
+Here  we have shown  how this  child's death  may have  been prevented
+using existing technology.  Now, people might make the claim that this
+is a pathological singular point and that in reality we cannot prevent
+such things in  all cases.  Their argument is  overly general and, for
+what?!   The fact is  that it  is both  obviously highly  important to
+protect people from accidents, and it is also not a singular point, it
+is the rigour and completeness  of the search procedures of logic that
+make this  possible, and it does  not rely on  serendipity.  It cannot
+prove everything, but it could have saved the lives of everyone I have
+personally known who has died, and it can do much more than that.
+
+I am  motivated on account of  the horrible experience  of the similar
+way in which my beloved  sister died and an intuitive understanding of
+the underlying  technology to pursue without  hesitation or disruption
+the development of  this technology, and I sincerely  hope that people
+will join me in this effort.  (Cruelly, she alone would have supported
+my work  unconditionally.)  I  have obtained what  I feel is  the main
+necessary result, that we may  consider for the purposes of our system
+the world  as a large set of  problems, which need to  be decided, but
+for any  program offered as a  solution, there are  always much larger
+fragments  of the  problems that  are  not solvable  by that  program.
+Therefore  I  believe  it  to  be  the case  that  by  collecting  and
+distributing complex and intelligent software via the Debian GNU/Linux
+system, we will be rapidly  reducing the number of unsolvable problems
+of logic,  which when they remain  unsolved, are exactly  the cause of
+every accident in the world and a majority of psychological suffering.

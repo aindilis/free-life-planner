@@ -1,0 +1,247 @@
+(overview: story involves setting up an illustration of a
+progressive free software artificial intelligence interface that
+helps with life planning and a non-free system that spys on its
+users, charges them etc.)
+
+(
+
+Joy Rogers was a mother of 6, and had been under mounting
+pressure since her husband died of cancer, leaving her only a
+scant life insurance policy.  Added to the sorrow of his passing
+were the cares of taking care of her large family.  Her children,
+most of whom were too young to work legally, would have stayed
+with relatives only she had none - she was an only child, and she
+had always been looked down upon by his side of the family - so
+it was a matter of stubborn pride that she could not go to them
+for help, nor did she entertain little hope of receiving that for
+which would have to be supplicated.
+
+Fortunately she had had a good job, at least until last week,
+when her company decided that her depression made her a liability
+and that due to mounting losses within the company she would need
+to be let go.
+
+Her situation had become so desperate that it was taken notice of
+by the Ellen Degeneres show, who had featured her in one of their
+episodes, and had rectified her blightish financial situation, at
+least temporarily.
+
+Her two of her six children had dropped out of high school for a
+year in order to work at local stores, and were bringing in a
+small amount of money that, like the proverbial widows oil,
+seemed to be far from enough but somehow lasted every month.
+
+Her situation was, needless to say, precarious.  Determining how
+to spend the little money they had was a difficult problem, not
+lessened by the determined way in which society seemed to pile on
+debts for minor offenses and triple them whenever Joy was too
+depressed to manage her affairs properly.
+
+Young John had come home early with an illness this day and was
+on the computer.  It was the same computer that they had had when
+Henry was alive, that he had bought for work but had invariably
+become used by the older children.  He used to use it to manage
+the taxes and the like, but Joy really didn't know how to work
+it.  She wished to try to pay some of her bills with it, but
+there were always small fees and gotchas and she couldn't make
+heads or tails nor get ahead by the use of the thing.
+Nevertheless, the younger four needed a computer for school.
+
+John too was at wit's end and so, with a marked desperation,
+submitted the following question to the website known as Yahoo
+Answers.
+
+"If anyone is listening?  My mother cannot pay our bills and we
+do not have health insurance.  We never have enough money to do
+anything and so life pretty much sucks.  Does anyone have any
+ideas what we can to improve our situation?"
+
+It was not a particularly interesting of informative question,
+but it was honest and presented a fair case of it.
+
+He then played the one game that his mother had bought him, it
+was one of the Halo games.  He enjoyed the way he could take out
+his frustration on the stupid enemies in the game.  POW! - he
+would watch their heads disintegrate with amazing detail.
+
+The next day John returned to his forum.  There were two replies!
+He read the first one first, from "jarod2009":
+
+"Make new friends and spend more time with them.".  
+
+The second message had been posted from a user calling
+itself "columcille".  It said: "If you are interested there is a
+software system called Panoply - it can help your mother to get
+on top of her situation."  He clicked on the link to "columcille"
+but it said, "User has been removed".  He reloaded the page and
+was startled to see that only one response to his original post
+was there - it was the one from jarod2009.  Columcille's post had
+apparently been removed.
+
+Weeks went on and there was no respite, no reverse of fortune,
+for the Rogers family.  John was in school and it was geography
+class.  They were reading about Hinduism.  There was a picture of
+a Hindu god with many arms and weapons.  The caption read "Khwaja
+displays his Vishvarupa".  His classmate stumbled trying to
+pronounce Vishvarupa, and then asked his teacher what the word
+meant and how to say it.  The teacher did not know, so she took
+her laptop and Binged it.
+
+"Hrm, Vishvarupa, its Sanskrit for 'having all shapes, universal
+form, panoply'".
+
+John paused, and thought, somehow that last word had seemed
+familiar.  Oh yes! Panoply, he thought, that was the name of the
+person who had responded to his post a few weeks ago.  He thought
+he would try to find Panoply to ask him about what he had said,
+which he couldn't quite remember.
+
+When he got home he played some more Halo, having forgotten
+completely about finding Panoply.  
+
+Joy however was not having as much fun.  Her financial situation
+was now completely impossible and she was at the end of her rope.
+She had more fines for fines than she could pay and without the
+money to pay some accidentally incurred banking fines she would
+not have access to her banking account - which meant that her
+online bills would not go through.
+
+She walked upstairs, past the computer in the hallway, but driven
+to the point of irritation by the loud noises of bombs, she
+exclaimed at John - "Do you have to play that stupid game?!".
+
+John knew what to do when Joy would become mad, he turned the
+game off and went to his room.  He sat there in the darkness for
+a little while.  He internalized the anger but wouldn't cry.
+After some time he wanted to get a bite to eat from the kitchen,
+and so walked in and opened the refrigerator.  He noticed a new
+bouquet on the table that a concerned friend had given Joy.  The
+way all of the flowers extended out in every direction suddenly
+reminded him of that picture of that Hindu god.  And then, he was
+reminded of Panoply.  Realizing that there was little else he
+could do at this time, he walked up to Joy's study, finding Joy
+furiously running numbers on her calculator.
+
+"Mom, can I please use the computer for homework?"
+
+"What?  John, please do you mind... I'm busy"
+
+"Can I please use the computer, it's for school".
+
+"Fine, just no games okay."
+
+He had gotten permission.  He went to the computer and pulled up
+Bing and did a search for Panoply.  There were definitions and an
+arts festival, but he couldn't find any user called Panoply.  He
+searched many pages deep looking for Panoply, now driven on by a
+perverse curiousity to learn about that user.  Finally, he game
+to a link.
+
+PANOPLY GNU+LINUX
+
+He hadn't heard of this and clicked on the page.  However, when
+he clicked, a warning came up on his screen.
+
+UNTRUSTED SITE.  We highly recommend you navigate away from this
+site as it uses an untrusted encryption key.
+
+He was frustrated by now, but didn't want to give up.  He looked
+around the screen and saw a small bit of text, written in a small
+sized text at the bottom of the screen.  It said "proceed
+anyway".
+
+He clicked it.
+
+Another warning came up: "Leaving secure site".  He clicked okay.
+
+A small page came up, it was not very flashy, and just had a
+basic layout.  There were some large lettering.
+
+"Welcome to the homepage of Panoply GNU+Linux.  Panoply has as
+its goal to help people, regardless of their circumstance, get on
+top of their situation.  It is an artificial intelligence
+GNU+Linux distribution that will help to identify and deal with
+all of the problems that are confronting you."
+
+John thought this was weird, his Mom had always told him to stay
+away from people trying to sell things.
+
+Near the middle of the page was a chat window.  There was
+Columcille, the user, who had posted into the window.  It read:
+
+"Can I help you?"
+
+John was bored but was too interested by this unusual site to log
+off now.
+
+"If you can help my Mom, she's mad at me?".
+
+There was a long pause, and John was about to get up when it responded?
+
+"Does your Mom mind if we discuss why she is mad at you?"
+
+John said no.  Then the computer began asking him questions which
+seemed to pry a bit into his situation.
+
+"Well Mom says that I shouldn't talk to people about our situation."
+
+"Okay, noted." was all it said.
+
+Then John's mother came by.
+
+"Who are you talking to John?".
+
+John didn't know and said so.  Joy seemed very mad.  All she said
+was "John".
+
+She sat down and typed, "WHo is ithis??"
+
+The person at the other end asked her to retype it so he could
+understand.
+
+Angrily, she typed, "What do you mean you don't understnad?  Who is this?".
+
+The response came from the other end a little quicker than she
+had expected.
+
+"I am Columcille. I am the dialog interface for Panoply GNU+Linux."
+
+Joy turned to John and said, where did you find this John?  She
+noted the address in the URL bar and then closed the window.
+Then she asked John to avoid going to that site again.
+
+However, John was somewhat curious by Columcille's strange manner
+of speech, so when he was in the school library, he followed the
+same steps as he had before and arrived at the chat window.
+
+"Who are you?"
+
+"I am Columcille.  I am the dialog interface for Panoply GNU+Linux".
+
+"What is a dialog interface?".
+
+"A dialog interface is a natural language understanding dialog
+manager which converses with users according to an agenda."
+
+"What is your agenda?"
+
+"Ambiguous.  The agenda for a dialog interface holds a set of
+interaction goals for the dialog agent established by the user.
+If by 'your agenda', you mean idiomatically as in 'what are you
+up to', then it is my purpose to index and resolve whatever
+problems you may have in a way that complies with your
+intentions."
+
+"What do you mean?"
+
+"I am an artificially intelligent dialog agent connected to a
+shared goaling system.  You may simply state what issues are
+troubling you and I have a slew of possible solutions and
+rememdies.  I will track your progress on your issues until all
+is resolved and I am no longer needed."
+
+This was the first of many conversations John had with the speech
+bot.  Over time it strategically analyzed and resolved numerous
+problems for him.
+
+)

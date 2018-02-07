@@ -1,0 +1,855 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Free Life Planner</title>
+    <meta name="generator" content="emacs-wiki.el" />
+    <meta http-equiv="Content-Type"
+          content="text/html; charset=utf-8" />
+    <link rel="made" href="mailto:webmaster@aloysius.frdcsa.org" />
+    <link rel="home" href="WelcomePage.html" />
+    <link rel="index" href="WikiIndex.html" />
+    <style type="text/css">
+a.nonexistent {
+  background-color: #F5F5F5;          /* white smoke */
+  color: red;
+  font-weight: bold;
+}
+
+a.nonexistent:visited {
+  background-color: #F5F5F5;          /* white smoke */
+  color: red;
+}
+
+body {
+  background-color: white;
+  color: black;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 3%;
+}
+
+em { font-style: italic; }
+strong { font-weight: bold; }
+
+ul { list-style-type: disc }
+
+dl.contents { margin-top: 0; }
+dt.contents { margin-bottom: 0; }
+
+p.verse {
+  white-space: pre;
+  margin-left: 5%;
+}
+
+pre {
+  white-space: pre;
+  font-family: monospace;
+  margin-left: 5%;
+}
+
+/* Menu properties */
+
+.menu {
+  background-color: #F5F5F5;          /* white smoke */
+  color: white;
+  border-top: 5px solid #D3D3D3;      /* light gray */
+  border-bottom: 5px solid #D3D3D3;   /* light gray */
+  content: "Menu";
+  display: inline-table;
+  float: right;
+  padding: .5em;
+}
+
+.menuitem {
+  margin: .2em;
+  text-align: center;
+}
+
+.menuitem a:link, .menuitem a:visited {
+  color: #006400;                     /* dark green */
+  text-decoration: none;
+}
+
+.menuitem a:hover {
+  background-color: #D3D3D3;          /* light gray */
+}
+
+/* Uncomment this if you want characters to appear before a menu
+   entry when hovering the mouse over it.
+
+.menuitem a:hover:before { content:">> "}
+*/
+
+.menu:before {
+  border: 1pt solid;
+  color: #BEBEBE;                     /* gray */
+  display: block;
+  content: "Menu";
+  text-align: center;
+}
+
+#tooltipbox {
+  float: right;
+  visibility: hidden;
+}
+
+#tooltip {
+  color: #D3D3D3;                     /* light gray */
+}
+</style>
+
+  </head>
+  <body>
+
+    <!-- If you want a menu, uncomment the following lines and
+    put (require 'emacs-wiki-menu) in your Emacs setup somewhere.
+
+    <script type="text/javascript">
+function showToolTip(machaine) {
+  if (machaine != "")   {
+    document.getElementById('tooltip').innerHTML     = machaine;
+    document.getElementById('tooltipbox').style.visibility = 'visible';
+  }
+}
+function hide() {
+  document.getElementById('tooltip').innerHTML     = '';
+  document.getElementById('tooltipbox').style.visibility = 'hidden';
+}
+</script>
+<div class="menu">
+
+</div><!-- menu ends here -->
+<div id="tooltipbox">
+<div id="tooltip"></div>
+</div>
+    -->
+
+    <h1 id="top">Free Life Planner</h1>
+
+    <!-- Page published by Emacs Wiki begins here -->
+<p>
+<a href="http://dev.freelifeplanner.org">http://dev.freelifeplanner.org</a> [access currently restricted, working
+to release ASAP]
+
+</p>
+
+<p>
+<strong>HELPING THE HOMELESS AND SIMILARLY DISADVANTAGED</strong>
+
+</p>
+
+<hr />
+
+<p>
+THE TIME HAS COME for me to summarize about our efforts to help those
+experiencing homelessness, poverty, illness and disability.
+
+</p>
+
+<p>
+We are writing a program that provides logistical support to the
+homeless and similarly disadvantaged.  To learn more about related
+conditions, perhaps watch some of the videos here <a href="https://invisiblepeople.tv/">https://invisiblepeople.tv/</a>
+
+</p>
+
+<p>
+I myself was homeless off and on for 5 years, I know what it is like,
+and began writing this program to fix my situation.  It took 20 years
+to build, and is now finally being released.
+(<a href="https://github.com/aindilis?tab=repositories">https://github.com/aindilis?tab=repositories</a>)
+
+</p>
+
+<hr />
+
+<p>
+What can the program do to help the homeless?  EXACTLY <em>HOW</em> can a
+life planner help the homeless?
+
+</p>
+
+<p>
+Well, I just wrote up a short story that hopefully will fill people in
+on how this is supposed to work. It may seem unbelievable, but it
+really works this way, because of the fact that it borrows the
+PrologCYC discipline.
+
+</p>
+
+<p>
+<a href="http://frdcsa.org/%7eandrewdo/writings/homeless-story.html">http://frdcsa.org/~andrewdo/writings/homeless-story.html</a>
+
+</p>
+
+<hr />
+
+<p>
+When you are homeless you are exposed to the elements.  Also you are
+exposed to your own needs such as hunger.  You might not have enough
+money to get where you're going.  You have to develop a pattern of
+survival.  (see <a href="http://frdcsa.org/frdcsa/internal/verber">http://frdcsa.org/frdcsa/internal/verber</a>) It is
+expensive being poor, you don't have money to preempt problems.  To
+help with survival, the system is capable of micromanaging your
+situation, ensuring you do what you want to do, and helping you to
+plan for many potential contingencies. You can say things that you are
+afraid of happening, and it will begin work looking at both how to
+prevent them and how to deal with them if they do happen.  
+
+</p>
+
+<p>
+It also can keep track of or retrieve relevant information
+automatically, such as how much money you have in a bank, or will have
+if you take certain actions
+(<a href="https://github.com/aindilis/financial-planning/#financial-planning">https://github.com/aindilis/financial-planning/#financial-planning</a>),
+whether or not the store will be open by the time you get there, what
+the forecast is tomorrow, whether it is raining here now, etc.
+
+</p>
+
+<p>
+The system is capable of examining literally billions of potential
+situations per second.  It's obviously not <strong><em>invincible</em></strong>, yet it is
+perhaps better than nothing, probably quite a bit better than nothing.
+For instance the transportation planner is going to be designed to
+have a contingency plan for what happens should a vehicle you are
+travelling break down with a resolution of every hundred feet or so
+(for now).  It may indeed eventually be possible to even solve exactly
+for the threshold at which different options becomes necessary.
+
+</p>
+
+<p>
+For now you can see this writeup which I did back in the years
+2002-2005:
+
+</p>
+
+<p>
+<a href="http://frdcsa.org/%7eandrewdo/writings/artificialintelligence.txt">http://frdcsa.org/~andrewdo/writings/artificialintelligence.txt</a>
+
+</p>
+
+<p>
+There is also a illustriative scenario about resupply milk starting on
+the latter part of page 4 of this paper:
+
+</p>
+
+<p>
+<a href="http://frdcsa.org/%7eandrewdo/writings/Temporal-Planning-and-Inferencing-for-Personal-Task-Management-with-SPSE2.pdf">http://frdcsa.org/~andrewdo/writings/Temporal-Planning-and-Inferencing-for-Personal-Task-Management-with-SPSE2.pdf</a>
+
+</p>
+
+<p>
+And here is a hoaky story I wrote, reminding us why I leave writing to
+Meredith:
+
+</p>
+
+<p>
+<a href="http://frdcsa.org/%7eandrewdo/writings/dangerously-cheesy.txt">http://frdcsa.org/~andrewdo/writings/dangerously-cheesy.txt</a>
+
+</p>
+
+<p>
+Here follows an FAQ about common objections and a first attempt at a
+clarification.  Going to flesh this out, but as Buckminister Fuller
+noted it is probably easier to change people's circumstances than to
+change their minds.  Unfortunately, I need help getting the AI done,
+so I can't show it working very well, I can only tell, or try to show
+with stories.  
+
+</p>
+
+<p>
+Here is hoping that this FAQ disarms some of the legitimate objections
+that have slowed progress on the Free Life Planner:
+this system:
+
+</p>
+
+<hr />
+
+<p>
+<strong>COMMON OBJECTIONS to the Free Life Planner:</strong>
+
+</p>
+
+<hr />
+
+<p>
+<strong>IT'S UNWISE!</strong>
+
+</p>
+
+<p>
++ <strong>Is it going to take away our jobs?</strong>
+
+</p>
+
+<p>
+It could, or maybe it could replace work with something more conducive
+to happiness, and explore the galaxy with you.  One does not need to
+automatically resort to a scarcity mentality.
+
+</p>
+
+<p>
++ <strong>Are you making Skynet?</strong>
+
+</p>
+
+<p>
+The FRDCSA is unique in that it has always avoided military contract
+work, and seeks to create what Buckminister Fuller described as
+Livingry as a sort of antisymmetric to Weaponry.  That said, the
+FRDCSA uses and enhances open source software used by the government
+and the military.  This is unavoidable due to the nature of the
+licenses, and a possible cui bono as to why it is tolerated.
+
+</p>
+
+<p>
++ <strong>What exactly do you intend to accomplish with it.</strong>
+
+</p>
+
+<p>
+That is a great question.  I've written hundreds of thousand of to-do
+items, but reading those is hard.  I also have difficulty summarizing.
+Here are some mantras that the project has used: "EVERY FAILED
+DEDUCTION IS EXACTLY THE CAUSE OF ALL FUTURE ACCIDENTS" (intentional
+harm being (a) failed moral deduction(s)).  Another one is "the
+evasion of chance in survival."  To promote the welfare of all feeling
+beings.  Again, see:
+<a href="http://frdcsa.org/%7eandrewdo/writings/artificialintelligence.txt">http://frdcsa.org/~andrewdo/writings/artificialintelligence.txt</a>
+
+</p>
+
+<p>
++ <strong>What is your goal exactly?</strong>
+
+</p>
+
+<p>
+Well when I was a kid my sister died at an early age in unknown
+circumstances.  That was a tragedy that so hurt our family that I was
+left with a latent resolve to do my best as often as possible to
+prevent it from happening again to my family or yours.
+
+</p>
+
+<p>
++ <strong>Is this a cult?</strong>
+
+</p>
+
+<p>
+If it is, it's not a very effective one.
+
+</p>
+
+<p>
++ <strong>What about religious objections?</strong>
+
+</p>
+
+<p>
+What about religious defenses?  Some people think it is trying to play
+God.  I assure you this system is not nor can replace God, never
+thought that.  Never will.  Most of you still use your car right when
+you have to travel long distances?  When you have a problem that the
+AI can solve, if you want to have it solved, that is one way you could
+solve it.
+
+</p>
+
+<p>
++ <strong>What about free will?</strong>
+
+</p>
+
+<p>
+It takes people 10000 hours to master something like Chess for
+instance, or you can use a freely and instantly and worldwide copyable
+computer program with superhuman performance.  If my life depended on
+a game of chess (and only a game of chess), I would trust a computer
+at this point.
+
+</p>
+
+<hr />
+
+<p>
+<strong>IT CANNOT HELP!</strong>
+
+</p>
+
+<p>
++ <strong>What the heck is a cognitive prosthetic anyway, and who would need it, and why?</strong>
+
+</p>
+
+<p>
+For people lacking in certain abilities a cognitive prosthetic is a
+software tool which seeks to remediate the failed abilities.  For
+instance, I sometimes say "it's" when I should use "its" and vice
+versa.  I say vindicitive instead of vindictive.  And I spell
+contigent instead of contingent.  These illustrate simply some
+unimportant yet frequently manifested cognitive deficits I have.  A
+spell and grammar checking program eliminates these errors, although I
+like to leave my spelling and grammatical errors in as it tends to
+give people a metric of my mental performance to aid in their decision
+making.  For instance I posted that I was an autodidact to warn people
+about the inconstancy of my abilities, not to pose as a maverick.  So
+since lives sometimes depend on cognitive skills, having a freely
+available, modifiable, and redistributable tool which can enhance them
+seems like a cogent idea and a means to reduce suffering.
+
+</p>
+
+<p>
++ <strong>I DON'T NEED SUCH A TOOL</strong>
+
+</p>
+
+<p>
+Then don't use it, but don't work against getting it to people who do
+need it.  Maybe you don't need it but maybe your friend with ADD or
+you stepmother who cannot drive needs it.  Or maybe you need it more
+than you realize?
+
+</p>
+
+<p>
++ <strong>How can it help the homeless, because what can a computer do in the real world?</strong>
+
+</p>
+
+<p>
+Computer systems control all kinds of things in the real world, such
+as the monetary system.  Ever try to steal money from an ATM?  Easier
+said than done, right?  They are in fact highly effective at this kind
+of stuff.  The general method involves sensors and effectors.  Sensors
+record data which the computer makes decisions about using proven and
+well tested methods, and then issues its effectors to achieve results.
+An effect can be any computer controlled phenomenon, from sending an
+email or text message, to steering a car, or to guiding a person to a
+location through audiovisual prompts, to even dispensing money.  I
+assume this kind of question stems from a lack of familiarity with
+computer systems.  For instance, when you use the internet your
+computer is filtering millions of ethernet packets.  No one would be
+taken seriously if they were to suggest that a person do this.  It is
+obviously amenable to automation.  People lacking an understanding of
+computer systems tend to underestimate the number and kinds of things
+which are responsive to automation, and have associated psychological
+control issues that manifest when they realize this.
+
+</p>
+
+<p>
++ <strong>AI is impossible!</strong>
+
+</p>
+
+<p>
+I used to have to argue against this all the time but, despite the
+well-known AI Effect, this is a much less frequent phenomenon due to
+the now widespread popularity enjoyed by the term.  Maybe a second
+bubble, but at any rate it's a long drawn out discussion.  It usually
+comes from the fact that people think there is an inherent claim in AI
+to create what is called Strong AI, aka human equivalent or superhuman
+intelligence.  To forgoe this conflict we simply refer to solving
+increasingly complex problems, which is an incontrovertable truth.
+Most people aren't aware of the metamathematical issues surrounding
+such a post-Hilbert reformed/relativized Hilbert Program, but it
+centers on the question of Absolute Undecidability.  I make no attempt
+to suggest that it can do anything more than this, and whether or not
+it can does not affect its usefulness in the mean time.
+
+</p>
+
+<p>
++ <strong>How can it help people on the other side of the world?</strong>
+
+</p>
+
+<p>
+Well computers are actually quite good at helping people on the other
+side of the world.  Thing of the military defense networks which
+enable effective command and control of our armies on the opposite
+side of the world.  That is demonstrated effectiveness?  Now, tailor
+the domain towards helping more than just our military, and you have
+an answer, except for the objection that maybe computers cannot help
+with anything but military problems.  Well some civilian problems
+supervene on military problems, and civilians here make much use of
+computers, no reason to think it should be any different over there,
+right?  Also, communication systems can contact the other side of the
+world on the order of sub-second time frames.  Natural Language and
+media can be employed to solve many problems.  This question is really
+moot.  Another objection, they lack the infrastructure?  Answer is
+Less than you would think and that's a failure mentality, make the
+infrastructure available.  That is what the FRDCSA does.  I am writing
+this so those who want it may have it.
+
+</p>
+
+<p>
++ <strong>Why not have people helping people?  Why use a computer?</strong>
+
+</p>
+
+<p>
+Why not both?  Scarcity mentality again.  Also in point of fairness I
+have on balance received less help from random other people than I
+would like, having asked over 5000 people if they would help on the
+AI.  To their credit, Dmiles and Jbalint are hopefully sufficient.  So
+I am trying to be a person who is helping random other people.  I
+choose to do it with AI.  The reason is it is like loaves and fishes.
+You write it once, then everyone may have.  I cannot have it any
+sooner than them, cause both predepend on writing it.  Since everyone
+may have it, that in my book multiplies the motivation to work on it.
+All for one and one for all!  Imagine if all 7 billion people could
+instantly have a house.  That would be desirable you would think,
+unless you get off on having more than others, which some people think
+I do with words.
+
+</p>
+
+<p>
++ <strong>What if they don't have a computer?</strong>
+
+</p>
+
+<p>
+Well, suppose they have no technology whatsoever?  Patients in a
+hospital don't necessarily have administrative rights to the hospitals
+technology, but the staff use technology to administer care.  Few
+people nowadays would want a hospital that didn't have electronic
+equipment to improve the quality of care.  Chances are that the
+government of wherever they reside probably uses computers to
+coordinate public good.  One does not have to possess a computer to
+benefit from it.
+
+</p>
+
+<p>
+That said, this system already can reach them via phone through a web
+browser.  If it is audio only, I am working to set up an IVR (the kind
+of automated systems that people often wind up disliking, but less and
+less since they are getting better and better).  Or they can have a
+computer, but...
+
+</p>
+
+<p>
++ <strong>What about the digital divide?  Computers are expensive.</strong>
+
+</p>
+
+<p>
+What is lacking here is no so much the availability of cheap computers
+and cell phones (you yourself may have thrown out or returned your
+last super powerful cell phone to get the next even more super
+powerful cell phone), but the availability of software to make use of
+them.  Also there are computers one can buy to replace another one
+here for as low as $20, e.g.:
+
+</p>
+
+<p>
+<a href="https://www.gearbest.com/tv-box-mini-pc/pp_657435.html">https://www.gearbest.com/tv-box-mini-pc/pp_657435.html</a>
+
+</p>
+
+<p>
+And there are even full blown computers as cheap as $5.
+
+</p>
+
+<p>
+<a href="https://www.adafruit.com/product/2885">https://www.adafruit.com/product/2885</a>
+
+</p>
+
+<p>
+Indeed the problem of capitalism is not lack of production.  Karl Marx
+argued that the chief problem with capitalism is OVERPRODUCTION.  So
+the problem is not the physical infrastructure.  It is having software
+that can help people to use their and others infrastructure more
+effective.  The problem is raising the money to write that software.
+Fortunately, I've devoted 20 years of probono work to writing this so
+others don't.
+
+</p>
+
+<p>
++ <strong>I don't have the discipline to use a meal planner.</strong>
+
+</p>
+
+<p>
+The meal planner has software to help manage discipline.  That right
+there is an executive skill, and this system is an executive skills
+prosthetic.  I think it's got you covered.  However, you may more
+likely have a phobia or fear of change.
+
+</p>
+
+<p>
++ <strong>Why do I need it?</strong>
+
+</p>
+
+<p>
+No one, I repeat, no one, is telling you you have to use it.  That
+said there are a lot of cases where you might wish to use it.
+
+</p>
+
+<p>
++ <strong>People have been getting along fine for thousands of years, we don't need computers to do these things.</strong>
+
+</p>
+
+<p>
+I'd argue people really haven't been getting along fine.  Think the
+world wars etc.  But why adapt to new technology?  Why not rely on
+what has worked in a limited sense in the past?  When I first started
+on AI people said it was impossible.  Now these same people say it is
+inevitable.
+
+</p>
+
+<p>
++ <strong>What good will software be if they don't have the raw resources?</strong>
+
+</p>
+
+<p>
+It will track that they don't have this, and develop a plan to try to
+fulfill the resources to satisfice the problem.
+
+</p>
+
+<hr />
+
+<p>
+<strong>WE SHOULDN'T HELP PEOPLE!</strong>
+
+</p>
+
+<p>
++ <strong>What if people lose their critical thinking skills?</strong>
+
+</p>
+
+<p>
+This would happen whether or not AI existed.  If someone is going to
+relinquish their critical thinking skills just because they have a
+tool to help them, did they really possess them to begin with?
+
+</p>
+
+<p>
++ <strong>What if someone can unplug it?</strong>
+
+</p>
+
+<p>
+Ever tried unplugging the US military?  It's harder than it looks.
+
+</p>
+
+<p>
++ <strong>What if someone cannot unplug it?</strong>
+
+</p>
+
+<p>
+People are losing their shit over this.  It's a real problem.  I'd
+argue that an arms race of intelligence would tend to rule out insane
+options rather than promote them.
+
+</p>
+
+<p>
++ <strong>If we enable people they will never get better on their own.</strong>
+
+</p>
+
+<p>
+Well I hope you don't ever require surgery for your health.
+
+</p>
+
+<p>
++ <strong>Instead of having this kind of assistance, they should get jobs.</strong>
+
+</p>
+
+<p>
+Scarcity mentality again.  This will help people as much with their
+jobs as anything else.  Microsoft.com runs Linux.
+
+</p>
+
+<p>
++ <strong>Don't there have to be poor people in the capitalist system?</strong>
+
+</p>
+
+<p>
+That's your necessity not mine.
+
+</p>
+
+<p>
++ <strong>What if they don't want to use it?</strong>
+
+</p>
+
+<p>
+Then the AI will do everything it can to honor their wish.  Informed
+consent is the key here.
+
+</p>
+
+<p>
++ <strong>Doesn't the government already give too much assistance to these people.</strong>
+
+</p>
+
+<p>
+Easy to say when one is in a good position.  Harder to say when one is
+starving or freezing to death.
+
+</p>
+
+<hr />
+
+<p>
+<strong>I CAN'T HELP, I'M NOT A PROGRAMMER!</strong>
+
+</p>
+
+<p>
+Do you not know how to spread the word?  You certainly know how to
+come up with every conceivable objection!  Use your argument skills
+and go online and help promote it.  If you cannot do anything else,
+just send money.  If you don't have money, just wait, the AI should be
+done soon and we will try to help you meet your needs if you so desire
+the assistance.
+
+</p>
+
+<hr />
+
+<p>
+<strong>I AM NOT OBLIGATED TO HELP!</strong>
+
+</p>
+
+<p>
+No one says you have to help.  But it would be nice.  If you are
+purely selfish, think in terms of how much better this can make your
+own life.  If you care about others, think about how this can help
+them!  If you don't do anything, people might begin to doubt whether
+you really want to improve things.
+
+</p>
+
+<hr />
+
+<p>
+There is a contrarian bias, I have it terribly myself, that if someone
+posits something, the automatic response is to try to find fault with
+it. (I have caught myself multiple times arguing against my own points
+when uttered by someone else after I temporarily forgot that it was a
+belief I often defend). There is supposedly a Japanese saying to the
+effect that "he who talks first loses." In Go they say "beginner plays
+contact move". (<a href="https://senseis.xmp.net/?BeginnersPlayAtari">https://senseis.xmp.net/?BeginnersPlayAtari</a>) An
+immoral application of these considerations is given in "The Secrets
+of Power Neogtiating". I was thinking to myself right before I was
+motivated to write this post that I could probably say something as
+self-evident and incontrovertible as 1+1=2, and people would take
+issue with it, and then I remembered that <strong>actually happened</strong>! My father
+tried to persuade me to desist from working on AI by arguing that "all
+your life your opinions will change", so I asked him what he currently
+thought 1+1 equalled, and he said "in what way?" (although I doubt he
+was referring to Z mod 2 or the metamathematics of Presburger
+arithmetic - he knew what I was referring to). Just imagine the grade
+I would get in school if I had responded that way! I knew a guy who
+thought before he spoke, and used these kind of predictable response
+biases in order to guide people into arguing his very points against
+him. I am just not that crafty, but I suppose, and this is what one of
+the great Greeks said about rhetoric, that it should be used to guide
+people to the Truth. And that is what my original "Machiavelli" system
+was supposed to have done, before major parts of it were
+destroyed. Anyway such a system contributed to people misunderstanding
+my motives. I realized that the there is a perfectly logical reason
+why God, whatever you conceive that to mean, works in mysterious
+ways. It is because God's complexity is irreducibly greater than ours
+such that in no way can we fathom God's contingencies. My whole life I
+have sought pragmatic assistance with AI, not resistence effected
+through remaining absurdly skeptical (no matter what lengths must be
+gone to to deny as much) as to its feasibility (once someone said that
+they can't use the Free Life Planner website sight unseen (and thus
+indistinguishable from any other sight unseen website) because "it
+doesn't work with [their] brain") as similarly related here:
+<a href="http://sootyempiric.blogspot.com/2016/11/informal-omega-inconsistency.html">http://sootyempiric.blogspot.com/2016/11/informal-omega-inconsistency.html</a>
+If I saw a house catch on fire people would probably argue with me the
+philosophy of skepticism
+(<a href="https://en.wikipedia.org/wiki/Philosophical_skepticism">https://en.wikipedia.org/wiki/Philosophical_skepticism</a>) before doing
+anything to find out if there was a fire and how they could help to
+put it out. Sorry to be so blunt but it's hurtful. There was a meme:
+<a href="https://www.huffingtonpost.com/entry/ta-nehisi-coates-trump-racism_us_5852a68fe4b0732b82ff04f8">https://www.huffingtonpost.com/entry/ta-nehisi-coates-trump-racism_us_5852a68fe4b0732b82ff04f8</a>
+"If I have to jump six feet to get the same thing that you have to
+jump two feet for ― that’s how racism works."
+
+</p>
+
+<p>
+See also both:
+
+</p>
+
+<p>
+<a href="http://frdcsa.org/%7eandrewdo/WebWiki/FreeLifePlanningCoachSoftware.html">http://frdcsa.org/~andrewdo/WebWiki/FreeLifePlanningCoachSoftware.html</a>
+
+</p>
+
+<p>
+and
+
+</p>
+
+<p>
+<a href="http://frdcsa.org/%7eandrewdo/WebWiki/FreeLifePlanningCoachSoftwareUpdate.html">http://frdcsa.org/~andrewdo/WebWiki/FreeLifePlanningCoachSoftwareUpdate.html</a>
+</p>
+    <!-- Page published by Emacs Wiki ends here -->
+    <div class="navfoot">
+      <hr />
+      <table width="100%" border="0" summary="Footer navigation">
+        <col width="33%" /><col width="34%" /><col width="33%" />
+        <tr>
+          <td align="left">
+            <span class="footdate">Updated: 2018-02-06</span>
+          </td>
+          <td align="center">
+            <span class="foothome">
+              <a href="WelcomePage.html">Home</a> / <a href="WikiIndex.html">Index</a>
+            </span>
+          </td>
+          <td align="right">
+            
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

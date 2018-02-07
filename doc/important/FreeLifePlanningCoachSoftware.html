@@ -1,0 +1,774 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Free Life Planning Coach Software</title>
+    <meta name="generator" content="emacs-wiki.el" />
+    <meta http-equiv="Content-Type"
+          content="text/html; charset=iso-8859-1" />
+    <link rel="made" href="mailto:webmaster@aloysius.frdcsa.org" />
+    <link rel="home" href="WelcomePage.html" />
+    <link rel="index" href="WikiIndex.html" />
+    <style type="text/css">
+a.nonexistent {
+  background-color: #F5F5F5;          /* white smoke */
+  color: red;
+  font-weight: bold;
+}
+
+a.nonexistent:visited {
+  background-color: #F5F5F5;          /* white smoke */
+  color: red;
+}
+
+body {
+  background-color: white;
+  color: black;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 3%;
+}
+
+em { font-style: italic; }
+strong { font-weight: bold; }
+
+ul { list-style-type: disc }
+
+dl.contents { margin-top: 0; }
+dt.contents { margin-bottom: 0; }
+
+p.verse {
+  white-space: pre;
+  margin-left: 5%;
+}
+
+pre {
+  white-space: pre;
+  font-family: monospace;
+  margin-left: 5%;
+}
+
+/* Menu properties */
+
+.menu {
+  background-color: #F5F5F5;          /* white smoke */
+  color: white;
+  border-top: 5px solid #D3D3D3;      /* light gray */
+  border-bottom: 5px solid #D3D3D3;   /* light gray */
+  content: "Menu";
+  display: inline-table;
+  float: right;
+  padding: .5em;
+}
+
+.menuitem {
+  margin: .2em;
+  text-align: center;
+}
+
+.menuitem a:link, .menuitem a:visited {
+  color: #006400;                     /* dark green */
+  text-decoration: none;
+}
+
+.menuitem a:hover {
+  background-color: #D3D3D3;          /* light gray */
+}
+
+/* Uncomment this if you want characters to appear before a menu
+   entry when hovering the mouse over it.
+
+.menuitem a:hover:before { content:">> "}
+*/
+
+.menu:before {
+  border: 1pt solid;
+  color: #BEBEBE;                     /* gray */
+  display: block;
+  content: "Menu";
+  text-align: center;
+}
+
+#tooltipbox {
+  float: right;
+  visibility: hidden;
+}
+
+#tooltip {
+  color: #D3D3D3;                     /* light gray */
+}
+</style>
+
+  </head>
+  <body>
+
+    <!-- If you want a menu, uncomment the following lines and
+    put (require 'emacs-wiki-menu) in your Emacs setup somewhere.
+
+    <script type="text/javascript">
+function showToolTip(machaine) {
+  if (machaine != "")   {
+    document.getElementById('tooltip').innerHTML     = machaine;
+    document.getElementById('tooltipbox').style.visibility = 'visible';
+  }
+}
+function hide() {
+  document.getElementById('tooltip').innerHTML     = '';
+  document.getElementById('tooltipbox').style.visibility = 'hidden';
+}
+</script>
+<div class="menu">
+
+</div><!-- menu ends here -->
+<div id="tooltipbox">
+<div id="tooltip"></div>
+</div>
+    -->
+
+    <h1 id="top">Free Life Planning Coach Software</h1>
+
+    <!-- Page published by Emacs Wiki begins here -->
+<p>
+(note followup updates to this post are available here:
+<a href="FreeLifePlanningCoachSoftwareUpdate.html">FreeLifePlanningCoachSoftwareUpdate</a> and here: <a href="FreeLifePlanner.html">FreeLifePlanner</a>)
+
+</p>
+
+<p>
+This is the page for the Free Life Planning Coach Software, obviously
+a working name.  Some other names that are under consideration are:
+
+</p>
+
+<pre class="example">Action Planner
+Get Help
+Self-Reliance
+On Your Feet
+</pre>
+
+<p>
+Hard to precisely define it.  This system, called Action Planner
+hereout, grew out of work on the SPSE2 system, a personal task
+management application.  SPSE2 can represent Goals and their
+interdependencies, and can perform temporal planning and interactively
+walk users through the resulting plans.  However, with the SPSE2
+system, as many goals were being added, it became difficult to know
+really which of the goals that could be accomplished were more
+important and hence should be prioritized.
+
+</p>
+
+<p>
+One approach is to sort the list of available goal activities by
+asking a series of pairwise comparisons.  Another method from decision
+science is to ask the user to rank the goals etc.  We will probably be
+implementing the former at some point in time.  But, this system,
+Action Planner, grew out of a desire to have the system help in the
+selection of which goals to achieve, followed by their planning using
+the temporal planner.  The idea is that if the temporal planner fails
+to find a plan that satisfies all goals, to know which goals to ignore
+first, and continue replanning (which is fairly efficient) until a
+plan is found that SATISFICES all of the major things.  So for
+instance, if you had two goals, one was "learn stroke prevention" and
+another was "buy an HDTV", the system would be able to classify the
+latter as being a luxury, and the former as being part of emergency
+preparedness.  Then, using a system to compute priorities, it would,
+barring unforeseen arguments in favor of the HDTV, say that the first
+goal was more important because it improved other goals like "Get on
+top of preparedness planning".  The idea with allowing contravening
+arguments is that, while these goals have certain priorities such that
+certain goals override others, it is possible that there are
+complicated dependencies.  So for instance, if the HDTV was for a
+person confined to hospice care with terminal cancer, such overriding
+arguments could be brought to bear.  In AI, we call this
+non-monotonic, defeasible or default reasoning (if an argument can be
+overcome by another).  
+
+</p>
+
+<pre class="example">The canonical example is that you might have a system with the rule:
+&quot;birds fly&quot;, and then you might add that &quot;Tweety is a bird&quot;, and so
+deduce that &quot;Tweety can fly&quot;.  However, if you further add that
+&quot;Tweety is a penguin&quot;, and &quot;penguins can't fly&quot;, then the original
+assertion that &quot;Tweety can fly&quot; will be overridden.
+</pre>
+
+<p>
+So, as has been mentioned briefly, there will be a system of
+priorities, which understand the default rules regarding which goals
+are more important than others.  This also relates to ethics,
+especially deontic ethics.  Deontic logic is the logic of morality
+concerning the moral status of duties.  So for instance, certain
+actions are prohibited, others are obligatory, some or permissible,
+and so on.  A similar system of non-monotonic reasoning about deontics
+(as well as systems for virtue ethics and "the end justifies the
+means" ethics) will be brought in to weigh on the importance of a task
+from a moral perspective.
+
+</p>
+
+<p>
+Knowledge of what happens when a goal fails to be accomplished, and
+the severity of the consequences will also have a commonsense AI
+implementation.  This will be part of the effects matrix.  Similarly,
+we will try to reason with what happens to systems involved when there
+are different failures, to help to develop plans that guard against
+these problems.
+
+</p>
+
+<p>
+The system will have a pairwise comparison that can compare between
+two goals to determine which is more important.  Such a capabability
+would be useful for solving related problems from microeconomics: the
+expenditure minimization problem and the utility maximization problem.
+(See <a href="UtilityMaximizationSystem.html">UtilityMaximizationSystem</a>).
+
+</p>
+
+<p>
+That's an overview of the basic system.  The idea is to get it into a
+position where it can assign scores to goals saying how important they
+are.  The scores thus computed could be arrived at in a manner similar
+to the AI techniques mentioned in the following two papers, except
+that I don't mean exactly those techniques but an analogy to the
+general process of taking all of the facts of a situation and applying
+a set of processes to arrive at answers about the relative utility of
+a goal.
+
+</p>
+
+<p>
+<a href="http://taeb-nethack.blogspot.com/2009/08/planar-taeb-ai.html">http://taeb-nethack.blogspot.com/2009/08/planar-taeb-ai.html</a>
+
+</p>
+
+<p>
+<a href="http://frdcsa.org/%7eandrewdo/archive/taeb/taeb.html">http://frdcsa.org/~andrewdo/archive/taeb/taeb.html</a>
+
+</p>
+
+<p>
+<a href="https://www.youtube.com/watch?v=2JY5-jV29hI">https://www.youtube.com/watch?v=2JY5-jV29hI</a>
+
+</p>
+
+<p>
+<a href="http://www.gnu.org/software/gnugo/gnugo_4.html#SEC39">http://www.gnu.org/software/gnugo/gnugo_4.html#SEC39</a>
+
+</p>
+
+<p>
+Here is an example goal hierarchy, but unfortunately for military
+purposes.
+
+</p>
+
+<p>
+<a href="http://www.isi.edu/soar/ifor/agent/">http://www.isi.edu/soar/ifor/agent/</a>
+
+</p>
+
+<p>
+The action planner is partially implemented.  So far, it consists of
+rules in the Expert System programming language called CLIPS.  Much
+like the above linked GNUGo AI, the current CLIPS based Action Planner
+code will take a static situation, expressed as a set of facts, and
+compute a set of recommended moves for the agent, based on the rules.
+That will be the Expert System component of the move generation phase.
+The idea is that the situation is completely reevaluated at each
+"step", just like with GNUGo.
+
+</p>
+
+<p>
+(Note - Useful ideas for what are essentials can probably be found by
+text mining the literature of survivalism.)
+
+</p>
+
+<p>
+So, I need to work more on constructing the basic SPSE2 goal map that
+includes all the sane goals an individual might have.  Some of the
+goals may have to be recommended based on the users situation by the
+move generator.  In general, the move generator and SPSE2 will talk to
+each other using cape.sourceforge.net, and have redundant goal
+representations.
+
+</p>
+
+<p>
+So, for instance, here is the file that illustrates all of the facts
+of a fictitious situation.  Feel free to skim them.
+
+</p>
+
+<pre class="example">(deffacts init
+ (has-job John-Doe Teacher)
+ ;; (not (disqualified-from-receiving-foodstamps John-Doe))                                                                                                                                                                                                                            
+ (address
+  (name John-Doe)
+  (firstname John)
+  (lastname Doe)
+  (address1 13-Berry-Street)
+  (city Sheridan-Lake)
+  (state Colorado)
+  (zipcode 81071)
+  (country USA)
+  )
+ (has-medical-condition John-Doe Diabetes)
+ (has-health-insurance John-Doe Blue-Cross)
+ (has-bank-account John-Doe PNC-Bank)
+ (father-of John-Doe Steven-Doe)
+ (mother-of John-Doe Margarette-Doe)
+ (brother-of John-Doe Mark-Doe)
+ (is-dead Margarette-Doe)
+ (relationship-strength John-Doe Steven-Doe okay)
+ (relationship-strength John-Doe Mark-Doe good)
+ (has-friend John-Doe Jeremy-Pierce)
+ (relationship-strength John-Doe Jeremy-Pierce fair)
+ (has-friend John-Doe Dina-M-James)
+ (relationship-strength John-Doe Dina-M-James good)
+ (person John-Doe)
+ (person Steven-Doe)
+ (person Mark-Doe)
+ (person Margarette-Doe)
+ (person Jeremy-Pierce)
+ (person Dina-M-James)
+ (has-automobile John-Doe Chevy-Camero)
+ (has-laptop John-Doe dell-laptop)
+ (has-computer John-Doe office-computer)
+ (debt (debtor John-Doe) (amount 3000) (creditor Fannie-Mae) (type Student-Loan))
+ (debt (debtor John-Doe) (amount 500) (creditor Flaherty-Foot-Clinic) (type Medical))
+ (has-goal John-Doe &quot;(is-self-reliant John-Doe)&quot;)
+ ;; (not (is-emotionally-secure John-Doe))
+ (has-fitness-plan John-Doe John-Doe-s-fitness-plan)
+ ;; (not (has-financial-plan John-Doe ?plan))
+ ;; (not (has-budget John-Doe ?budget))
+ )
+</pre>
+
+<hr />
+
+<p>
+The next step then, are the rules.  Here are the rules thus added to the system.
+
+</p>
+
+<p>
+<a href="http://frdcsa.org/%7eandrewdo/projects/action-planner/extension-0.clp.html">http://frdcsa.org/~andrewdo/projects/action-planner/extension-0.clp.html</a>
+
+</p>
+
+<p>
+<a href="http://frdcsa.org/%7eandrewdo/projects/action-planner/extension-1.clp.html">http://frdcsa.org/~andrewdo/projects/action-planner/extension-1.clp.html</a>
+
+</p>
+
+<p>
+<a href="http://frdcsa.org/%7eandrewdo/projects/action-planner/extension-2.clp">http://frdcsa.org/~andrewdo/projects/action-planner/extension-2.clp</a>
+
+</p>
+
+<p>
+That's just some of the rules.  The end result of running this is that
+there are a lot more facts asserted about which goals a person should
+have based on their situation.
+
+</p>
+
+<hr />
+
+<p>
+And here are the example facts when run on the latest version (at time
+of writing) of those rules and initial facts.
+
+</p>
+
+<pre class="example">CLIPS&gt; (facts)
+f-0     (initial-fact)
+f-1     (has-job John-Doe Teacher)
+f-2     (address (name John-Doe) (firstname John) (middle_initial nil) (lastname Doe) (address1 13-Berry-Street) (address2 nil) (city Sheridan-Lake) (county nil) (state Colorado) (zipcode 81071) (country USA))
+f-3     (has-medical-condition John-Doe Diabetes)
+f-4     (has-health-insurance John-Doe Blue-Cross)
+f-5     (has-bank-account John-Doe PNC-Bank)
+f-6     (father-of John-Doe Steven-Doe)
+f-7     (mother-of John-Doe Margarette-Doe)
+f-8     (brother-of John-Doe Mark-Doe)
+f-9     (is-dead Margarette-Doe)
+f-10    (relationship-strength John-Doe Steven-Doe okay)
+f-11    (relationship-strength John-Doe Mark-Doe good)
+f-12    (has-friend John-Doe Jeremy-Pierce)
+f-13    (relationship-strength John-Doe Jeremy-Pierce fair)
+f-14    (has-friend John-Doe Dina-M-James)
+f-15    (relationship-strength John-Doe Dina-M-James good)
+f-16    (person John-Doe)
+f-17    (person Steven-Doe)
+f-18    (person Mark-Doe)
+f-19    (person Margarette-Doe)
+f-20    (person Jeremy-Pierce)
+f-21    (person Dina-M-James)
+f-22    (has-automobile John-Doe Chevy-Camero)
+f-23    (has-laptop John-Doe dell-laptop)
+f-24    (has-computer John-Doe office-computer)
+f-25    (debt (debtor John-Doe) (creditor Fannie-Mae) (amount 3000) (type Student-Loan))
+f-26    (debt (debtor John-Doe) (creditor Flaherty-Foot-Clinic) (amount 500) (type Medical))
+f-27    (has-goal John-Doe &quot;(is-self-reliant John-Doe)&quot;)
+f-28    (has-fitness-plan John-Doe John-Doe-s-fitness-plan)
+f-29    (has-student-loan-debt John-Doe)
+f-30    (has-access-to-computer John-Doe office-computer)
+f-31    (can-run-get-help John-Doe office-computer)
+f-32    (has-access-to-computer John-Doe dell-laptop)
+f-33    (can-run-get-help John-Doe dell-laptop)
+f-34    (is-alive Dina-M-James)
+f-35    (should-have-goal Dina-M-James &quot;(has-financial-plan Dina-M-James)&quot;)
+f-36    (is-alive Jeremy-Pierce)
+f-37    (should-have-goal Jeremy-Pierce &quot;(has-financial-plan Jeremy-Pierce)&quot;)
+f-38    (should-have-goal Margarette-Doe &quot;(has-financial-plan Margarette-Doe)&quot;)
+f-39    (is-alive Mark-Doe)
+f-40    (should-have-goal Mark-Doe &quot;(has-financial-plan Mark-Doe)&quot;)
+f-41    (is-alive Steven-Doe)
+f-42    (should-have-goal Steven-Doe &quot;(has-financial-plan Steven-Doe)&quot;)
+f-43    (is-alive John-Doe)
+f-44    (has-personal-relationship John-Doe Jeremy-Pierce)
+f-45    (has-personal-relationship Jeremy-Pierce John-Doe)
+f-46    (has-personal-relationship John-Doe Dina-M-James)
+f-47    (has-personal-relationship Dina-M-James John-Doe)
+f-48    (has-support-network John-Doe)
+f-49    (should-have-goal John-Doe &quot;(has-financial-plan John-Doe)&quot;)
+f-50    (has-goal John-Doe &quot;(has-financial-plan John-Doe)&quot;)
+f-51    (is-related-to John-Doe Mark-Doe)
+f-52    (is-related-to Mark-Doe John-Doe)
+f-53    (has-personal-relationship Mark-Doe John-Doe)
+f-54    (has-personal-relationship John-Doe Mark-Doe)
+f-55    (is-related-to John-Doe Margarette-Doe)
+f-56    (is-related-to Margarette-Doe John-Doe)
+f-57    (is-related-to John-Doe Steven-Doe)
+f-58    (is-related-to Steven-Doe John-Doe)
+f-59    (has-personal-relationship Steven-Doe John-Doe)
+f-60    (has-personal-relationship John-Doe Steven-Doe)
+f-61    (has-access-to-a-bank-account John-Doe)
+f-62    (must-pay-taxes John-Doe)
+</pre>
+
+<p>
+So, just as in a game of Go, the situation/position could be
+representing textually, we have a representation of the board of a
+person's life.  Like GNUGo, we have the initial facts, and by
+application of the rules we have the analysis, only in this case the
+analysis phase is incomplete.  But hopefully, it will be able to
+synthesize a coherent set of choices to be made and recommend the best
+move for the position.  It seems to me silly that we have software
+that can play a great game of Go (computer is playing White and is
+clearly beating me (Black)), but the same cannot be said of a system
+that helps one get on top of one's life, plan a good life, cover all
+the bases, etc.
+
+</p>
+
+<p>
+<a href="http://frdcsa.org/%7eandrewdo/images/gnugo-game.jpeg"><img src="http://frdcsa.org/~andrewdo/images/gnugo-game.jpeg" alt="" /></a>
+
+</p>
+
+<p>
+So, that's the status of the Action Planner at present.  What is
+needed is to continue developing the taxonomy of needs and wants, to
+implement the non-monotonic logic for determining an item's
+importance.  Knowledge management approaches should be taken.  Pending
+approval by the Free Software Foundation, I may consider using the
+Java based Jena for the rules.
+
+</p>
+
+<p>
+Naturally, we want as many good rules as we can think of.  Please send
+me such rules.  We don't have to worry so much about rules drowning
+each other out because hopefully information about the relative
+importance of goals will outweigh the information about the goals, so
+that we can always effectively know whether it is simple or not to
+determine which goal is more important.
+
+</p>
+
+<p>
+Update: Sun Apr 24 16:51:09 CDT 2011
+
+</p>
+
+<p>
+I have completed preliminary extraction of properties from texts.  The
+method chosen was thus.  I am using wikihow.com as a source of
+Creative Commons licensed howtos.  I downloaded a bunch of these
+howtos.  Given a single one, I run it through a script that extracts
+the steps and possibly tips.  I extract the individual sentences and
+then run them through the KNext system.  From there I post-process the
+resulting information into a form that makes good properties.  To wit:
+
+</p>
+
+<pre class="example">Organize Paperwork at Home
+
+Do you have piles of paper in your home that are overwhelming you? You can
+organize them so you can actually find what you need when you need it. You can
+cut the clutter by understanding what it is okay to throw out.
+
+edit Steps
+
+ 1. 1
+    Get some file folders and a pen. You will need 1 large box and a file box
+    to put the files in. If you have many piles, start with the smallest.
+ 2. 2
+    Eat the elephant one bite at a time. Mark boxes, TRASH, and FILE and begin
+    sorting just on these two categories.
+ 3. 3
+    If you keep an article of paper make a file for that subject, (example:
+    Unpaid Bills). Put the bill in the file folder and label the tab Unpaid
+    Bills and set it in the file box.
+ 4. 4
+    Keep making files for whatever subject you need to file labeling them as
+    you go. These could be anything you think is important to keep: birthday
+    cards, car information, checking account, dental, home loan information,
+    home maintenance, insurance, medical, unpaid bills, utilities, etc.
+      + The best place to file something is where it is most obvious to you.
+        Put things where you think they should go and it will be easiest for
+        you to find them later.
+ 5. 5
+    In another box marked &quot;Trash&quot; put in junk mail, duplicate bills, old papers
+    that you know you will never really need.
+ 6. 6
+    Touch it once. Either file it or throw it out.
+ 7. 7
+    Make sub files if you want to. After you file your papers you might want to
+    make files within files that are close to the same subject. For example,
+    you could divide car information into car insurance, recalls/warranties,
+    repairs,and copies of titles and registrations. This way you have all the
+    info when you need it.
+ 8. 8
+    Start at the mailbox for new papers that come in. When you get your mail
+    out of your mailbox, go through right away and toss the junk. When you get
+    into the house, make it a point to place it near your file cabinet. Choose
+    a specific time that fits your schedule to open your mail and sort it on a
+    daily basis. You could put unpaid bills in a folder in the front of the
+    file box to help you to remember to pay them. File the important things and
+    toss the rest in the trash can located next to your file cabinet.
+ 9. 9
+    Use your calendar. Does a particular piece of paper require action or
+    attendance at a later date? Write it in your calendar, then file the paper.
+    You can even write where you filed the paper.
+</pre>
+
+<p>
+I extract these sentences, and process with KNext, removing errors:
+
+</p>
+
+<pre class="example">$VAR1 = [
+          'A BOX CAN BE LARGE.',
+          'A PERSON MAY HAVE SOME_NUMBER_OF PILES.',
+          'BOXES MAY TRASH.',
+          'A MALE MAY HAVE BOXES.',
+          'A PERSON MAY KEEP AN ARTICLE OF PAPER.',
+          'AN ARTICLE CAN BE CONSTITUTED_OF_OR_FILLED_WITH PAPER.',
+          'A FILE CAN BE FOR A SUBJECT.',
+          'AN UNPAID[PERSON??] MAY HAVE BILLS.',
+          'THINGS MAY GO.',
+          'THINGS CAN BE PUT.',
+          'A PERSON MAY THINK INDIVIDUAL -S.',
+          'A THING-REFERRED-TO MAY BE EASIEST -ED FOR A PERSON.',
+          'A PERSON MAY FILE PAPERS.',
+          'A PERSON MAY HAVE PAPERS.',
+          'A PERSON MAY DIVIDE CAR INFORMATION.',
+          'COPIES CAN BE CONSTITUTED_OF_OR_FILLED_WITH TITLES.',
+          'A WAY MAY HAVE AN INFO.',
+          'A PERSON MAY NEED A THING-REFERRED-TO.',
+          'START CAN BE AT A MAILBOX.',
+          'A MAILBOX CAN BE FOR PAPERS.',
+          'A PERSON MAY GET_OUT MAIL.',
+          'A PERSON MAY HAVE MAIL.',
+          'A PERSON MAY HAVE A MAILBOX.',
+          'A PERSON MAY GET INTO A HOUSE.',
+          'A PERSON MAY HAVE A FILE CABINET.',
+          'A PERSON MAY HAVE A SCHEDULE.',
+          'A PERSON MAY HAVE MAIL.',
+          'A BASIS CAN BE DAILY.',
+          'BILLS CAN BE IN A FOLDER.',
+          'BILLS CAN BE UNPAID.',
+          'A FOLDER CAN BE IN A FRONT OF A FILE BOX.',
+          'A FILE BOX MAY HAVE A FRONT.',
+          'THINGS CAN BE IMPORTANT.',
+          'A REST CAN BE IN A TRASH.',
+          'A PERSON MAY HAVE A FILE CABINET.'
+        ];
+</pre>
+
+<p>
+And then finally convert these with some regexes and conditionals into
+this (note proper conjugations haven't been completed for most verbs):
+
+</p>
+
+<pre class="example">(is-large ?box)
+(has-some_number_of-piles ?person)
+(trash ?box)
+(has-boxes ?male)
+(keep-an-article-of-paper ?person)
+(is-constituted_of_or_filled_with-paper ?article)
+(is-for-a-subject ?file)
+(has-bills ?unpaid[person??])
+(go ?thing)
+(is-put ?thing)
+(think-individual--s ?person)
+(was-easiest--ed-for-a-person ?thing-referred-to)
+(file-papers ?person)
+(has-papers ?person)
+(divide-car-information ?person)
+(is-constituted_of_or_filled_with-titles ?copy)
+(has-an-info ?way)
+(need-a-thing-referred-to ?person)
+(is-at-a-mailbox ?start)
+(is-for-papers ?mailbox)
+(get_out-mail ?person)
+(has-mail ?person)
+(has-a-mailbox ?person)
+(get-into-a-house ?person)
+(has-a-file-cabinet ?person)
+(has-a-schedule ?person)
+(has-mail ?person)
+(is-daily ?basis)
+(is-in-a-folder ?bill)
+(is-unpaid ?bill)
+(is-in-a-front-of-a-file-box ?folder)
+(has-a-front ?file-box)
+(is-important ?thing)
+(is-in-a-trash ?rest)
+(has-a-file-cabinet ?person)
+</pre>
+
+<p>
+Finally I will either manually prune them or work further to extract
+rules in addition to properties.
+
+</p>
+
+<p>
+So far, I have progressed with the extraction of properties.
+Unfortunately, the extracted properties are not as good as I would
+like, and there are tons of them that don't really make sense.  But by
+a few heuristics I think I will be able to get to the good rules
+rather quickly.
+
+</p>
+
+<p>
+Here is a sample of the output data.
+
+</p>
+
+<pre class="example">?computer
+                (has-computer ?camera ?computer)                             A CAMERA MAY HAVE A COMPUTER.      (PC SOFTWARE CAN OFTEN SMOOTH NOISE IN POST PRODUCTION COMMA WHILE PRESERVING DETAIL BETTER THAN TH\
+AT SUPPLIED IN THE CAMERA S INTERNAL
+ COMPUTER COMMA AND YOU CAN REVERT TO YOUR ORIGINAL IMAGE IF YOU DECIDE YOU DID N T WANT SO MUCH SMOOTHING COMMA OR EVEN ANY AT ALL)
+         (has-computer ?individual--s ?computer)                        INDIVIDUAL -S MAY HAVE A COMPUTER.      (THERE ARE PEOPLE OUT THERE WHO WILL DOWNLOAD PICTURES OF YOU ONTO THEIR COMPUTER AND PORE OVER THE\
+M)
+                (has-computer ?person ?computer)                             A PERSON MAY HAVE A COMPUTER.      (IF YOU HAVE A COMPUTER ON COMMA AND IT S NOT THE SOURCE OF LEARNING COMMA TURN IT OFF)
+                (has-desktop ?computer ?desktop)                            A COMPUTER MAY HAVE A DESKTOP.      (DO N T HAVE ANY ICONS ON YOUR COMPUTER S DESKTOP)
+              (has-keyboard ?computer ?keyboard)                           A COMPUTER MAY HAVE A KEYBOARD.      (LABEL-MAKERS THAT CONNECT TO COMPUTERS SAVE A LOT OF TIME BY ALLOWING DATA ENTRY ON THE COMPUTER S\
+ SUPERIOR KEYBOARD COMMA OR EVEN FROM A
+ DATABASE OR OTHER COMPUTER FILE)
+                            (has-outs ?computer)                                 A COMPUTER MAY HAVE OUTS.      (YOUFLYERSPUSH THE HTML BOUNDARIES LEARN THE INS AND OUTS OF YOUR COMPUTER)
+              (has-security ?computer ?security)                           A COMPUTER MAY HAVE A SECURITY.      (PROGRAMS COMMA PLUG-INS OR GAMES COMMA THREATENS YOUR OWN PRIVACY AND THE SECURITY OF YOUR COMPUTE\
+R)
+        (has-time-system ?computer ?time-system)                        A COMPUTER MAY HAVE A TIME SYSTEM.      (GO INTO YOUR COMPUTER S TIME SYSTEM AND SET THE TIME FORWARD COMMA INTO THE FUTURE)
+                (has-wordpad ?computer ?wordpad)                            A COMPUTER MAY HAVE A WORDPAD.      (USE PAPER AND PENCIL OR TRY RECORDING ON THE WORDPAD OF YOUR COMPUTER)
+                 (order-files-by-name ?computer)                        COMPUTERS MAY ORDER FILES BY NAME.      (WHEN YOU TRANSFER YOUR PHOTOS FROM YOUR CAMERA TO YOUR COMPUTER COMMA IMMEDIATELY PUT THEM INTO A \
+FOLDER ON YOUR HARD DRIVE -- NOT JUST
+ MY PICTURES COMMA BUT CREATE A SUBFOLDER BY DATE -LRB- USE REVERSE DATE FORMAT E.G. 2007-06-26 WHICH IS LISTED BETTER BY COMPUTERS
+ ORDERING FILES BY NAME -RRB- COMMA EVENT NAME OR BOTH)
+                      (use-a-firewire ?computer)                            A COMPUTER MAY USE A FIREWIRE.      (IF SO COMMA CONNECT THE CAMCORDER TO THE COMPUTER USING A FIREWIRE OR USB CABLE)
+
+?computer-program
+        (has-computer-program ?person ?computer-program)                     A PERSON MAY HAVE A COMPUTER PROGRAM.      (ALTERNATIVELY COMMA YOU CAN MAKE A COLORFUL CHRISTMAS THEME ON YOUR COMPUTER PROGRAM THAT \
+WILL PRINT DIRECTLY ONTO PLAIN PAPER)
+
+?computer-system
+              (has-limitations ?computer-system)                   A COMPUTER SYSTEM MAY HAVE LIMITATIONS.      (ANY SPECIFIC COMPUTER SYSTEM THAT IS SOLD AS A PC COMMA NO LONGER HAS THE SAME LIMITATIONS OF PCS \
+</pre>
+
+<p>
+You can see all of the extracted properties here:
+
+</p>
+
+<p>
+<a href="http://frdcsa.org/%7eandrewdo/projects/action-planner/all-properties.txt">http://frdcsa.org/~andrewdo/projects/action-planner/all-properties.txt</a>
+
+</p>
+
+<p>
+And here are the properties selected for inclusion so far:
+
+</p>
+
+<p>
+<a href="http://frdcsa.org/%7eandrewdo/projects/action-planner/chosen-properties.txt">http://frdcsa.org/~andrewdo/projects/action-planner/chosen-properties.txt</a>
+
+</p>
+
+<p>
+These properties will be useful in doing positional analysis of a
+persons life.  I will also process Sensei's net to extract Go
+knowledge, and also recipes to extract recipe knowledge.  In fact, the
+system is a (rather slow) ontology development system, most of the
+work being done by KNext, but I will be making some additions that
+extend that core functionality.
+
+</p>
+
+<p>
+Another aspect of the life planner, once the positional attributes of
+the "game" of life are known, will be actually developing a strategy.
+Classically this might involve running a PDDL planner on a custom
+domain.  However, another tack I'm investigating is the use of
+so-called General Game Playing software.  Fortunately, a very winning
+program has been released, called <a class="nonexistent" href="mailto:webmaster@aloysius.frdcsa.org">CadiaPlayer</a>, which is available for
+download here:
+
+</p>
+
+<p>
+<a href="http://cadia.ru.is/wiki/public:cadiaplayer:main">http://cadia.ru.is/wiki/public:cadiaplayer:main</a>
+
+</p>
+
+<p>
+I will be experimenting with generating a game which simulates aspects
+of life, written in the corresponding GDL (Game Description
+Language?).
+
+</p>
+
+
+    <!-- Page published by Emacs Wiki ends here -->
+    <div class="navfoot">
+      <hr />
+      <table width="100%" border="0" summary="Footer navigation">
+        <col width="33%" /><col width="34%" /><col width="33%" />
+        <tr>
+          <td align="left">
+            <span class="footdate">Updated: 2018-02-04</span>
+          </td>
+          <td align="center">
+            <span class="foothome">
+              <a href="WelcomePage.html">Home</a> / <a href="WikiIndex.html">Index</a>
+            </span>
+          </td>
+          <td align="right">
+            
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

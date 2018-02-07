@@ -1,0 +1,836 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Free Life Planning Coach Software Update</title>
+    <meta name="generator" content="emacs-wiki.el" />
+    <meta http-equiv="Content-Type"
+          content="text/html; charset=iso-8859-1" />
+    <link rel="made" href="mailto:webmaster@aloysius.frdcsa.org" />
+    <link rel="home" href="WelcomePage.html" />
+    <link rel="index" href="WikiIndex.html" />
+    <style type="text/css">
+a.nonexistent {
+  background-color: #F5F5F5;          /* white smoke */
+  color: red;
+  font-weight: bold;
+}
+
+a.nonexistent:visited {
+  background-color: #F5F5F5;          /* white smoke */
+  color: red;
+}
+
+body {
+  background-color: white;
+  color: black;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 3%;
+}
+
+em { font-style: italic; }
+strong { font-weight: bold; }
+
+ul { list-style-type: disc }
+
+dl.contents { margin-top: 0; }
+dt.contents { margin-bottom: 0; }
+
+p.verse {
+  white-space: pre;
+  margin-left: 5%;
+}
+
+pre {
+  white-space: pre;
+  font-family: monospace;
+  margin-left: 5%;
+}
+
+/* Menu properties */
+
+.menu {
+  background-color: #F5F5F5;          /* white smoke */
+  color: white;
+  border-top: 5px solid #D3D3D3;      /* light gray */
+  border-bottom: 5px solid #D3D3D3;   /* light gray */
+  content: "Menu";
+  display: inline-table;
+  float: right;
+  padding: .5em;
+}
+
+.menuitem {
+  margin: .2em;
+  text-align: center;
+}
+
+.menuitem a:link, .menuitem a:visited {
+  color: #006400;                     /* dark green */
+  text-decoration: none;
+}
+
+.menuitem a:hover {
+  background-color: #D3D3D3;          /* light gray */
+}
+
+/* Uncomment this if you want characters to appear before a menu
+   entry when hovering the mouse over it.
+
+.menuitem a:hover:before { content:">> "}
+*/
+
+.menu:before {
+  border: 1pt solid;
+  color: #BEBEBE;                     /* gray */
+  display: block;
+  content: "Menu";
+  text-align: center;
+}
+
+#tooltipbox {
+  float: right;
+  visibility: hidden;
+}
+
+#tooltip {
+  color: #D3D3D3;                     /* light gray */
+}
+</style>
+
+  </head>
+  <body>
+
+    <!-- If you want a menu, uncomment the following lines and
+    put (require 'emacs-wiki-menu) in your Emacs setup somewhere.
+
+    <script type="text/javascript">
+function showToolTip(machaine) {
+  if (machaine != "")   {
+    document.getElementById('tooltip').innerHTML     = machaine;
+    document.getElementById('tooltipbox').style.visibility = 'visible';
+  }
+}
+function hide() {
+  document.getElementById('tooltip').innerHTML     = '';
+  document.getElementById('tooltipbox').style.visibility = 'hidden';
+}
+</script>
+<div class="menu">
+
+</div><!-- menu ends here -->
+<div id="tooltipbox">
+<div id="tooltip"></div>
+</div>
+    -->
+
+    <h1 id="top">Free Life Planning Coach Software Update</h1>
+
+    <!-- Page published by Emacs Wiki begins here -->
+<ol>
+<li>History
+</li>
+</ol>
+
+<p>
+This is a follow up to the <a href="FreeLifePlanningCoachSoftware.html">FreeLifePlanningCoachSoftware</a> post from
+~2012.  A followup to this is available here: <a href="FreeLifePlanner.html">FreeLifePlanner</a>
+
+</p>
+
+<p>
+This is an update on the Free Life Planner, probably overdue.  After
+working on it a while, circumstances dictated that I redirect focus
+onto the FLP almost exclusively for a long time.  Fortunately by the
+time this need set in I had learned enough about how it should be
+developed to make great progress on the project.  The most important
+part was realizing that I needed to use Prolog.  I don't remember when
+or how that came about.  It may have began when I realized that I
+needed to temporarily cut a corner in order to make practical
+progress, and this corner was that I chose to use the Cyc
+representation instead of FreeKBS2.  That allowed me to begin working
+more closely with dmiles on his PrologMUD system.  However it happened
+he was able to demonstrate the path forward to me.  I suppose I had
+just gained enough experience to be able to understand some of the
+more accessible bits of what he has always maintained.  (As a minor
+aside - I am still a bit confused on one point, which is employing
+Forward Chaining.  At one point I tried to solve a particular problem
+and realized that that Prolog, or at least as I understood it then,
+simply could not reason in the direction I needed.  I no longer
+remember what system that was).
+
+</p>
+
+<p>
+Another major point of confusion was the concept of Prolog as roughly
+first-order.  Turns out that this conception is somewhat wrong, as one
+can represent higher order languages within it if I'm not mistaken.  I
+don't really understand it.
+
+</p>
+
+<p>
+But the most important practical consideration was that Prolog was
+capable of performing seemingly millions of queries per second, being
+both highly optimized in addition to obtaining an immense reduction in
+computational complexity by making the closed world assumption,
+whereas my theorem provers could only do about one query every 2
+seconds at best.  (Hammering in again the catholic life-lesson from
+the Latin saying: genus nunquam perit (a generic thing does not
+perish).)  Combined with the speed of loading logic and data, and this
+became immensely important.  Furthermore, I was having trouble doing
+nested formula in CLIPS, which Prolog handles with ease.
+
+</p>
+
+<p>
+As I learned more about Prolog I was able to solve certain problems in
+a minimum of code that I had thought it was unable to solve.  Also,
+the closed world assumption is largely unimportant at this stage of
+the project, I'm not even sure that what I believe to be its limitation
+really effectively is one at all.
+
+</p>
+
+<p>
+I began integrating FRDCSA (Perl) with Prolog, through the useful
+Language::Prolog::Yaswi interface, and so developed the Formalog
+system.  By wrapping <a class="nonexistent" href="mailto:webmaster@aloysius.frdcsa.org">UniLang</a> through the Perl function call of Yaswi,
+I was able to implement persistence for Formalog through FreeKBS2
+interlingua.
+
+</p>
+
+<p>
+Also about this time, the excellent on-the-job training and experience
+I had received while working at Ionzero, Inc. had brought me vastly
+further ahead in terms of web-development and prepared me well enough
+to be able to do some beginner-grade development using the Perl
+Catalyst MVC framework, and using the ShinyCMS CMS to get things
+bootstrapped, was able to integrate Formalog to develop the FRDCSA CMS
+(FCMS) system, which loads certain logic/data files to become the Free
+Life Planner (FLP), the web-based system.
+
+</p>
+
+<p>
+Around the same time, a serious of brutal events happened to me and my
+family, and I was put in a position of doing more caregiving.  It was
+therefore fortunate that the FLP was in a minimally adequately usable
+state at the time.  I extended greatly the Akahige system, which is a
+medical system.  The demands of caregiving were great, and around that
+time I saw a promotion for the Amazon Echo Dot which used the Alexa
+Voice Services speech recognition.  I saw that they had exposed an API
+for developers to add an external system to it.  This was the obvious
+route to go in lieu of an open source system, however, at last check
+open source speech recognition was not in a readily usable state.
+When it becomes more easily achievable I will integrate it as the
+default option, retaining an Alexa API.
+
+</p>
+
+<p>
+We bought 3 Alexa's and I managed, after not too great an effort, to
+integrate the FLP as an in-development Alexa skill.  First step was to
+get a skill working.  Second to get it talk to my server.  Third was
+to get it to recognize free text.  Fourth was to begin writing the
+dialog interface.  Fifth was to integrate push notifications.
+
+</p>
+
+<p>
+Now the system is quite usable.  Unfortunately, owing to its
+Incremental development, it relies a lot on hard-coded or copy and
+pasted text, as opposed to abstractions.  Haven't had time or
+resources to promote to cleaning things up.
+
+</p>
+
+<p>
+As far as the reasoning technology, I was able to write a basic
+substratum similar to CYC and <a class="nonexistent" href="mailto:webmaster@aloysius.frdcsa.org">PrologCyc</a>, sometimes copying commands,
+or by generous contributions from dmiles, who has really guided the
+project towards maturity.
+
+</p>
+
+<p>
+<a href="https://github.com/TeamSPoon/prologmud">https://github.com/TeamSPoon/prologmud</a>
+
+</p>
+
+<p>
+Using Emacs to control the Rube-Goldberg-like startup scripts works
+well enough for now.  It is also quick to develop for, especially
+after the `make` predicate was pointed out, which refreshed the
+program in place from source, enabling improvements without the 1
+minute and increasing reboot process.
+
+</p>
+
+<ol>
+<li>Function
+</li>
+</ol>
+
+<p>
+The system keeps a fact base of what it believes to be true of the
+real world or the platonic world.  It distinguishes certain things
+from a forensic point of view, such as the difference between an
+attestation and a fact, or for instance that certain facts hold at a
+certain time but may not later.  In the future it will (paranoidly)
+try to generate large sets of alternative explanations that could be
+confused with recorded circumstances, and generate plans that are
+tolerant of those possibilities.
+
+</p>
+
+<p>
+In general, the state of reasoning implementations for different
+subproblems is very good in Prolog.  For instance, mprolog implements
+various kinds of epistemic reasoning.  By patching these orthoganol
+predicates together it becomes possible to implement a similar AI to
+Cyc in less time than would have been thought.  Cyc can be used as
+inspiration to see how they chose to model certain things.  It seems
+from a practical and incomplete perspective that a very adequate
+personal life planning system can be constructed with only several
+kilobytes of theory (not including the user data, simply the
+definitions of the predicates).
+
+</p>
+
+<p>
+Now, having the system actively working to synchronize its theoretical
+world model with the real world, it becomes possible to do planning on
+top of the world model, in order to satisfy certain life-desiderata.
+Furthermore, with Prolog one can digress during search much deeper by
+calling other predicates.
+
+</p>
+
+<p>
+There are two main approaches to planning.  One is compilation of the
+project of the World KB and life semantics into PDDL.  This is
+difficult, and it can be expected that a reasonable translation of the
+current system is going to be complex enough to saturate current PDDL
+planning algorithms.  So the PDDL export is necessarily curtailed to
+be reasonable.  An additional optimization is to forgo having a more
+optimal plan which would be created by loading the entire relevant
+world state at once, as this exceeds the compile-time limitations on
+the number of certain kinds of resources like types and objects in the
+currently used planning algorithm.  (I have attempted to decompile it
+and change those limitations and recompile.  Unfortunately, many of
+the decompilers I have tried aren't really built with recompilation in
+mind.  So that has stalled a bit.)  In lieu of that, we are trying to
+split the domain into largely unrelated components that can be planned
+independently, and then asserted as subsequent constraints on further
+planning.  And so divide and conquer.  Sort of like packing a car
+trunk, you put in the big items, and then work out the details for the
+increasingly smaller ones.
+
+</p>
+
+<p>
+But PDDL, while being useful, lacks a few nice features.  For one, it
+doesn't really do conditional planning or planning with sensing.  For
+that purpose, I have integrated FLUX, which does have such a
+capability.  The problem with FLUX is I don't have any planning
+algorithm for it is that can efficiently solve problems of the size
+that are being given to it, with the possible exception of some
+conditional planners from NMSU, but these use a foreign representation
+language that I have yet to write a translator for.  Attempts to
+petition authors to release more compatible algorithms have not
+received a response for the most part.
+
+</p>
+
+<p>
+But there was another problem, that I am hoping has been overcome,
+that the PDDL and FLUX planners are unable to use nested terms except
+for a few specific exceptions, and so are unsuitable to plan directly
+with the Prolog <a class="nonexistent" href="mailto:webmaster@aloysius.frdcsa.org">LogicBase</a>.  The solution there was to use a mapping I
+probably read about somewhere that is able to map nested terms into
+function free terms.
+
+</p>
+
+<p>
+So for instance the term:
+
+</p>
+
+<p>
+a(b(c,d),e,f(g,h,i(j,k,l(m,n))))
+
+</p>
+
+<p>
+Would become mapped to this:
+
+</p>
+
+<p>
+a(v1_1,v1_2,v1_5,v1_6),
+b(v1_2,v1_3,v1_4),
+c(v1_3),
+d(v1_4),
+e(v1_5),
+f(v1_6,v1_7,v1_8,v1_9),
+g(v1_7),
+h(v1_8),
+i(v1_9,v1_10,v1_11,v1_12),
+j(v1_10),
+k(v1_11),
+l(v1_12,v1_13,v1_14),
+m(v1_13),
+n(v1_14)).
+
+</p>
+
+<p>
+Note that these terms are no longer nested, and yet they are 1-1
+mappable to the original.  I haven't really been able to or tried to
+prove that this is an equivalent representation, so I plan just to use
+it and see plainly if it does fail and then attempt to work around any
+failure at that point.
+
+</p>
+
+<p>
+FLUX had a further issue in that, due to the constraint programming
+language it used to do much of its more complex reasoning, it was
+unable to have arguments that were not integers. so for instance FLUX
+might have had the following:
+
+</p>
+
+<p>
+occupied(523),
+
+</p>
+
+<p>
+when we really desired to say:
+
+</p>
+
+<p>
+occupied(operatingRoom).
+
+</p>
+
+<p>
+The solution was to use a 1-1 mapping provided by a system called
+<a class="nonexistent" href="mailto:webmaster@aloysius.frdcsa.org">SerPro</a>.  Again, there might be some loss of generality here, basically
+in terms of the how the unification of variables and such in subterms
+would behave.  (Although, in reconsidering this just now, after now
+having written the mapping to function free terms, applying that
+before the <a class="nonexistent" href="mailto:webmaster@aloysius.frdcsa.org">SerPro</a> mapping might resolve the issue?) But again I will
+simply discover that empirically.  It can for instance nevertheless
+correctly solve certain subclasses of this full expressiveness issue,
+which would have made the three days of work worthwhile.
+
+</p>
+
+<p>
+But conditional planning is still not sufficient.  There are two other
+kinds at least which need to be done.  The first is adversarial.  This
+is useful for security reasoning, and as the point of the FLP is to
+promote every security, this is useful.
+
+</p>
+
+<p>
+At first I tried 3t, which looks like a fantastic system.
+Unfortunately, I did not see enough domains and the domains I saw I
+could not comprehend the meaning of the outputted plan representation.
+Judging from the code it is quite expressive, but from a software
+development point of view I have not found the correct documentation
+or proof that it is viable for the kinds of problems I have.  If
+anyone would like to upstage me they could explain it to me
+(especially the plan output at the bottom, the top part provided just
+for reference):
+
+</p>
+
+<p>
+<a href="http://frdcsa.org/%7eandrewdo/writings/3t-planning-output.txt">http://frdcsa.org/~andrewdo/writings/3t-planning-output.txt</a>
+
+</p>
+
+<p>
+Here is the source:
+
+</p>
+
+<p>
+<a href="http://svn.traclabs.com/svn/3t">http://svn.traclabs.com/svn/3t</a>
+
+</p>
+
+<p>
+I have started searching for various other adversarial solvers and
+have come across some.
+
+</p>
+
+<p>
+Probably the most important of these has been the GGP GDL universe,
+which is a general game playing project.  The language is very close
+to Datalog, a restricted version of Prolog.  In fact IIRC Datalog is
+not Turing-complete, whereas Prolog is.  So, the easy translation
+between FLP components is from GDL to Prolog, the harder one is from
+Prolog to GDL.  Fortunately there were some systems online that have
+enough documentation to allow us to translate a fruitful subset of
+Prolog.  It is anticipated that for the purposes of achieving vast
+improvements over current levels of organization the FLP will not need
+that Turing completeness immediately.
+
+</p>
+
+<p>
+The last issue is multiagent planning.  This is where different agents
+may have different goals, beliefs, privacy requirements, etc.
+Fortunately, a recent workshop released a great deal of tools and
+documentation about this, and we have begun integrating it.  I do not
+forsee that as being difficult, now that we have those resources.
+There is also a great text called "Teamwork for Multi-Agent Systems"
+that lays out a lot of the epistemic logic behind it and describes one
+particular algorithmic solution.  There are also a few other solutions
+that have different pros and cons.
+
+</p>
+
+<p>
+So all of these things have contributed to us having a much more
+capable planning interface working.
+
+</p>
+
+<p>
+The next part of course, is making these plans living plans that work
+to bring about our desiderata.  A desiderata may not simply be an
+achievement, it could be basically any feature of the environment,
+past/present/future, agent state, etc, such as that a certain fact
+never obtains during a time period or while another fact obtains.
+These logics are generally: LTL, CTL* ATEL* etc.  The integration of
+different techniques (including model checking and answer set
+programming) for generating plans that provably and/or optimally
+satisfy these properties are in the works.
+
+</p>
+
+<p>
+The planning systems are very useful for protecting the user.  To wit:
+
+</p>
+
+<p>
+<a href="http://frdcsa.org/%7eandrewdo/writings/latin-sayings-regarding-preparedness.txt">http://frdcsa.org/~andrewdo/writings/latin-sayings-regarding-preparedness.txt</a>
+
+</p>
+
+<p>
+An important part is dialog planning, such that for instance the user
+doesn't turn off her cell phone when the AI is going to issue a
+reminder.
+
+</p>
+
+<p>
+Right now I have finished a lot of the scheduling related issues.  I
+have integrated and written a lot of helper functions for the SWIPL
+Julian calendar library.  This has enabled the statement of plans,
+events and recurrent events and such, as well as helping to translate
+between the scalar time values of the planners and the actual dates
+and times.
+
+</p>
+
+<p>
+An issue related to scheduling and dialog planning is the part of the
+system which walks the user through the plans.  Fortunately, to borrow
+an entrepreneurial term, the Minimum Viable Product that does this is
+<em>finally</em> complete.  Though we have just now gotten to the point where
+this enables massive improvements in the executive functioning in our
+household, there are a great many useful enhancements / force
+multipliers that need to be made in the coming months to really drive
+home the bargain.  I will gather the requirements docs together and
+post these needed features in a follow-up post here when I begin work
+on them.  For example, taking the thousands of plan preferences and
+constraints that we've recorded and ensuring the plans adhere to them.
+A useful technique here is deontic logic, and so we are working on
+that through several open source deontic multi-agent system
+implementations.
+
+</p>
+
+<p>
+In order to formalize the rules, I have relied on a manual
+formalization system I wrote called NLU-MF, which expedites the
+translation of rules of thumb from sources such as books and websites
+into Prolog.  Various texts advocating differents life philosophies
+have been formalized and are thus at the disposal of the planner and
+epistemic reasoner, and will again demonstrate their importance for
+instance in terms of goal selection.  The codification of such rules
+for instance is useful in terms of planning for the best way to
+promote good emotions and defuse bad ones.  I have collected dozens of
+papers offering putative formalizations of various emotional concepts,
+expressed in language suitable to agent-based systems.  The planner as
+I've detailed here is expressive enough to make quick work of the more
+easily inferred aspects.  This aspect of the planner will also
+integrate smoothly and be enhanced by the open source software
+mentioned in the book Computational Autism.
+
+</p>
+
+<p>
+<a href="http://frdcsa.org/%7eandrewdo/emotions">http://frdcsa.org/~andrewdo/emotions</a>
+
+</p>
+
+<p>
+<a href="https://www.amazon.com/Computational-Autism-Human-Computer-Interaction-Galitsky-ebook/dp/B01M21JBU5/ref=mt_kindle?_encoding=UTF8&amp;me=">https://www.amazon.com/Computational-Autism-Human-Computer-Interaction-Galitsky-ebook/dp/B01M21JBU5/ref=mt_kindle?_encoding=UTF8&#38;me=</a>
+
+</p>
+
+<p>
+It would now be salient to mention the im2markup system (which is
+installed but presently unclear about how to run as an extractor and
+not for building an extractor model), which attempts to convert such
+pdf papers into <a class="nonexistent" href="mailto:webmaster@aloysius.frdcsa.org">LaTe</a>X, from which it should be easier to convert using
+NLU-MF into Prolog.
+
+</p>
+
+<p>
+<a href="https://github.com/harvardnlp/im2markup">https://github.com/harvardnlp/im2markup</a>
+
+</p>
+
+<p>
+A related system, that helps us to anticipate and fulfill the needs of
+others, as well as to anticipate when any of our needs are possibly at
+risk, is goal recognition.  We have a few such systems we have
+obtained and are still trying to bring them online.
+
+</p>
+
+<p>
+How the system measures the environment is an interesting issue.  For
+instance, things as mundane as checking the temperature have been
+implemented with $7 USB temperature sensors, as well as integration
+with weather service and forecasting APIs.  This can be useful for the
+planning process, to know for instance that we should not proceed with
+a plan because the weather might ruin it, or to bring an umbrella.
+Effectors are also possible, although I haven't really researched any
+API to access the few smart devices such as smart plugs we have so far
+obtained, but that will of course be a priority at some point.  We do
+have tools for remotely executing code on different computers
+automatically, so for instance, playing certain songs before going to
+sleep on certain computers, etc.  This is hand-coded at present but in
+the future will be performed by running plans synthesized by
+Prolog-Agent when that gets reintegrated to the FLP.
+
+</p>
+
+<p>
+Intelligent monitoring of sensors is useful, especially with cell
+phones.  We have localization software configured but having troubles
+with authentication, that does both outdoor (<a class="nonexistent" href="mailto:webmaster@aloysius.frdcsa.org">OwnTracks</a>, using GPS) and
+indoor (Find, using <a class="nonexistent" href="mailto:webmaster@aloysius.frdcsa.org">WiFi</a>) location tracking.  If for instance the user
+proceeds in the direction of the garage, they might receive a warning
+to remember to put something in their car in case they later drive
+near the intended recipient, if their plans have not been anounced.
+
+</p>
+
+<p>
+This is all mentioned in the paper:
+
+</p>
+
+<p>
+Temporal Planning and Inferencing for Personal Task Management with SPSE2:
+
+</p>
+
+<p>
+<a href="http://frdcsa.org/%7eandrewdo/writings/Temporal-Planning-and-Inferencing-for-Personal-Task-Management-with-SPSE2.pdf">http://frdcsa.org/~andrewdo/writings/Temporal-Planning-and-Inferencing-for-Personal-Task-Management-with-SPSE2.pdf</a>
+
+</p>
+
+<p>
+We have much integration with the cell phone.  I think it is possible
+for instance to integrate the car's OBDII bluetooth sensor with
+<a class="nonexistent" href="mailto:webmaster@aloysius.frdcsa.org">OwnTracks</a> in order to report and log the car, even when travelling.
+Think autodetection of auto accidents, incapacitation, being stranded,
+etc.
+
+</p>
+
+<p>
+As far as communications go, we integrated Instant Messaging
+(ejabberd), Texting and Email (mutt).  This is useful for getting the
+user's attention.  Accessing the FLP through the Alexa Voice Interface
+is also possible using the Reverb.AI Android app (although it has most
+recently been no longer able to reach the skill for unknown reasons).
+
+</p>
+
+<p>
+Most of the systems, whereever possible, like <a class="nonexistent" href="mailto:webmaster@aloysius.frdcsa.org">OwnTracks</a>, Find,
+ejabberd, etc run on a VM we are distributing it.  Using vagrant
+scripts, it should be possible to build this VM quickly and configure
+it to your application.
+
+</p>
+
+<p>
+We have futher finally procured a web search API again through
+WWW::Mechanize::Firefox and Xvfb and our wrappers for such.  This now
+allows us to search for software implementing certain capabilities
+using radar-web-search.  It also has allowed us to wrap different
+websites, such as banking ones.  Also, we have Emacs and limited X11
+automation through Prolog-Agent and xdotool respectively.
+
+</p>
+
+<p>
+As much as has been done, for every accomplishment it begs a dozen
+more features to be added.  So the todo list is exploding, not
+shortening.
+
+</p>
+
+<ol>
+<li>Purpose
+</li>
+</ol>
+
+<p>
+The main purpose of this system is that, while an argument could be
+made that almost all of these abilities can through extensive
+configuration in theory be done by human beings under no time
+pressure, in practice, the fact remains that it is both immensely
+easier and more efficient to do them using these tools, enabling
+people to achive much more than they would if they had been diverted
+by these problems.  For instance, no one walks supreme distances
+anymore, we drive or fly.  No one manually reviews billions of
+ethernet packets to comply with firewall rules.  This argument should
+be considered ridiculous, but tragically is among the first things
+many people will offer when presented the FLP.  By using these tools
+one is able to resolve more situations and achieve a better existence,
+in theory.
+
+</p>
+
+<p>
+The main guiding purpose of the FLP is to help people to provide for
+needs that they could be for whatever reason having difficulty
+securing for themselves.  The main purpose is to help the homeless, or
+anyone experiencing a difficult situation.  The reason for this is it
+is easier to get into such a situation than it is to get out.  Because
+the software is free, and can be installed at various places across
+the world, modified to whatever purpose, accessed remotely using
+increasingly cheap technologies like used cell phones accessing public
+wifi hotspots, and so forth, it is hoped that this kind of ubiquitous
+computing, when applied to survival-oriented problems whose solution
+have the potential to dramatically improve people's lives, will not
+only provide for a better quality of life for many people who are at
+greatest danger and often neglected by current mechanisms, but also to
+help people whose situations, owing to a current lack of means of
+prevention, have (avoidably using this technology) worsened to the
+point where they need a great amount of cure.  If they had trouble
+getting the means for prevention, imagine how much more so for the
+means for a cure.
+
+</p>
+
+<p>
+Unfortunately, owing to circumstances, the system has been too heavily
+focused on procuring comforts in a smart home environment, but not
+tending to the graver needs of others outside the home.  The intention
+is for that to change now that the planning systems have given us the
+ability to begin extinguishing the raging domestic fires.
+
+</p>
+
+<p>
+There is a truth some feel inconvenient being witnessed everywhere
+that the capabilities of AI programs such as this are everywhere on
+the ascendant, with no sign of or theoretical reason for stopping.
+Therefore, I contend it is wise to apply these tools to real problems
+affecting sentient beings, even if and especially because there are
+sometimes few direct financial incentives to do so.  I feel bad for
+those who choose to feel threatened by (for instance, economically)
+instead of embracing and mastering the emergence of intelligence as a
+free utility.  To use a quote from a movie playing in the background
+today, "It isn't one way or the other, that's the way a child looks at
+things and we aren't children any more."
+
+</p>
+
+<p>
+Here are the chief links to the project.  Over time I will try to
+aggregate all important references and references to references etc to
+the project here.
+
+</p>
+
+<p>
+Here is a page containing a lot of links at the bottom:
+
+</p>
+
+<p>
+<a href="http://frdcsa.org/%7eandrewdo/writings/News-Challenge-edited.html">http://frdcsa.org/~andrewdo/writings/News-Challenge-edited.html</a>
+
+</p>
+
+<p>
+Several of these systems (currently, free-life-planner, nlu-mf,
+freekbs2 and prolog-agent) are available below - (Please note however
+that the FRDCSA necessarily has currently well over 500 internal
+subprojects (and a great deal more external ones), and that these code
+bases contain mostly references to associated functionality in all of
+the other internal and external codebases, and so represents only
+about 1/100 of the actual data involved in running them.  They are
+however useful for distilling a picture of how it works and what to
+expect when it is released, and also motivating others by example
+rather than instructions):
+
+</p>
+
+<p>
+<a href="https://github.com/aindilis?tab=repositories">https://github.com/aindilis?tab=repositories</a>
+
+</p>
+
+<p>
+The complete FLP system will be released hopefully in one month.
+</p>
+    <!-- Page published by Emacs Wiki ends here -->
+    <div class="navfoot">
+      <hr />
+      <table width="100%" border="0" summary="Footer navigation">
+        <col width="33%" /><col width="34%" /><col width="33%" />
+        <tr>
+          <td align="left">
+            <span class="footdate">Updated: 2018-02-04</span>
+          </td>
+          <td align="center">
+            <span class="foothome">
+              <a href="WelcomePage.html">Home</a> / <a href="WikiIndex.html">Index</a>
+            </span>
+          </td>
+          <td align="right">
+            
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
