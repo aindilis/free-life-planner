@@ -3,9 +3,7 @@
 What is it?
 
 Free Life Planner is a software program that helps people plan and
-manage their day to day lives.  (If you already function well enough
-on your own and have no use for this software, please don't criticize
-it because there are other people who desperately need such a system).
+manage their day to day lives.
 
 It lies somewhere between a personal planner and home automation
 system, but is so much more...
