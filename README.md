@@ -52,47 +52,53 @@ from this system than others.
 In fact, for each of these categories, there are special systems that
 engage when the system knows they are applicable.
 
+
 Here is a video of an older, much smaller and simpler version of the FLP
 booting up (be careful, noisy):
 
 https://www.youtube.com/watch?v=t_dCAlf26LE
 
+
 Here is the beginning of a paper on FLP:
 
 https://frdcsa.org/~andrewdo/pioneer/wk1/flp.pdf
 
+
 and one on FRDCSA:
 
 https://frdcsa.org/~andrewdo/pioneer/wk1/frdcsa.pdf
+
 
 Here is a paper on the SPSE2 subsystem, an early planning system for
 FRDCSA which inspired parts of FLP.
 
 https://frdcsa.org/visual-aid/pdf/Temporal-Planning-and-Inferencing-for-Personal-Task-Management-with-SPSE2.pdf
 
+
 Here is a link to the financial planning submodule:
 
 https://github.com/aindilis/financial-planning#projected-transactions-for-florence-tucker
+
 
 Here is a video which shows some progress on the planner systems and also later the meal planner.
 
 https://www.youtube.com/watch?v=XZh_tHNboCI&t=15s
 
+
 Here are some earlier documents about the FLP:
 
-http://frdcsa.org/~andrewdo/writings/News-Challenge-2.html
+https://frdcsa.org/~andrewdo/writings/News-Challenge-2.html
 
-http://frdcsa.org/~andrewdo/WebWiki/FreeLifePlanningCoachSoftware.html
+https://frdcsa.org/~andrewdo/WebWiki/FreeLifePlanningCoachSoftware.html
 
-http://frdcsa.org/~andrewdo/WebWiki/FreeLifePlanningCoachSoftwareUpdate.html
+https://frdcsa.org/~andrewdo/WebWiki/FreeLifePlanningCoachSoftwareUpdate.html
 
-http://frdcsa.org/~andrewdo/WebWiki/FreeLifePlanner.html
+https://frdcsa.org/~andrewdo/WebWiki/FreeLifePlanner.html
 	
 
 Here is a story describing the Free Life Planner.
 
-http://frdcsa.org/~andrewdo/WebWiki/FreeLifePlanningCoachSoftwareUpdate.html
-
+https://frdcsa.org/~andrewdo/writings/homeless-story.html
 
 
 Older description:
