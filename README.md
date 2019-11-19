@@ -1,5 +1,15 @@
 <h3>The FREE LIFE PLANNER (FLP).</h3>
 
+What if you collect thousands of A.I. tools and apply them towards planning your life? That’s exactly what FRDCSA has been working on for the last twenty years. Only soon, you can download a VM containing the core systems. In today’s increasingly complex world, sometimes we can be blindsided by rules we didn’t know existed. If you’re living on the edge, this can be a disaster. What if all the rules that applied to us, from legal, to financial, to just basic common sense, were collected into a system that was capable of reasoning with them and planning with them. You could put your objectives into the system and it would factor in all these things and spit out a plan. Well that’s just one of the many things that FRDCSA’s Free Life Planner A.I. seeks to do.
+
+A.I. is problem-solving, and software that can do this has to grow larger as problems and their complexity multiply. Over the last 20 years the FRDCSA project has collected thousands of codebases, and written hundreds of codebases, gluing everything together and making it available from within Emacs, Perl and Prolog. The Free Life Planner, FLP, takes this and applies it directly towards assisting users in their minute-to-minute, day-to-day, year-to-year lives.
+Think of a massive collection like V’ger had in Star Trek: The Motion Picture, of things like strong game-playing systems like AlphaZero, but tailored to the specific problems people most often encounter with finances, meal-planning, transportation, health care, etc.
+
+If you’re interested in a personal A.I. assistant, stay tuned as we cover the Free Life Planner. But it is after all only one of over 600 custom codebases developed for FRDCSA. Soon, Panoply, the virtual machine distribution of FRDCSA, will be released for you to explore. So, let’s have a look at some of what FRDCSA can do for you.
+
+
+Older Description:
+
 What is it?
 
 Free Life Planner is a software program that helps people plan and
@@ -21,7 +31,7 @@ predicted storm hits, including the list of the groceries you need.
 paperwork, to send a copy to your doctor.
 
 + Remember what the doctors instructions were, in a paperless office
-with Machine Comprehension software.
+with Machine Comprehension software, and helping you to conform to them.
 
 + Reminding you to record what meal you ate after the bathroom door is
 opened.
@@ -41,7 +51,7 @@ life is quite varied at times.
 There are few user bases that are expected to benefit more strongly
 from this system than others.
 
-+ People with Disabilities such as Pervasive Developmental Disorders.
++ People with disabilities such as pervasive developmental disorders.
 
 + People in poverty who are one misstep from disaster.
 
@@ -106,7 +116,7 @@ Here is a story describing the Free Life Planner.
 https://frdcsa.org/~andrewdo/writings/homeless-story.html
 
 
-Older description:
+Even older description:
 
 # free-life-planner
 The Free Life Planner is the flagship application of the FRDCSA Project.  It provides Free Software Social Friendly AI for general use, but especially for those experiencing poverty, homelessness, disabilty and/or illness.  Note this is only the directory, most of logic is spread throughout FRDCSA.  Won't run without rest of FRDCSA.  It aims to help people get on top of every security (food, financial, health, emotional etc).  It achieves this by employing various planning techniques at multiple scales and granularities.  It closely tracks the user's condition and applies knowledge that has been gathered semi-automatically from online texts to their situation.
