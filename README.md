@@ -53,6 +53,11 @@ In fact, for each of these categories, there are special systems that
 engage when the system knows they are applicable.
 
 
+Here is a recent talk from EmacsConf2019 about FRDCSA/FLP/Panoply.
+
+https://frdcsa.org/~andrewdo/frdcsa-emacsconf2019-final.webm
+
+
 Here is a video of an older, much smaller and simpler version of the FLP
 booting up (be careful, noisy):
 
