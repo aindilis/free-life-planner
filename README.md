@@ -213,7 +213,7 @@ Here are some additional capability requests that were automatically generated b
 
 + Creating a long term plan for the future, including a contingency plan to help you cover unforeseen expenses. 
 
-+ Telling you to take a certain drug that is known to increase the risk of cancer.
++ Telling you not to take a certain drug that is known to increase the risk of cancer.
 
 + Planning for an unexpected medical emergency.
 
