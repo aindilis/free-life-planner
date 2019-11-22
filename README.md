@@ -35,79 +35,6 @@ and ethical constraints.
 + Generating a complex monthly financial plan with contingencies for
 unexpected expenses and if certain income doesn't come through.
 
-The use cases go on and on, it is, afterall, a *LIFE* planner, and
-life is quite varied at times.
-
-
-There are few user bases that are expected to benefit more strongly
-from this system than others.
-
-+ People with disabilities such as pervasive developmental disorders.
-
-+ People in poverty who are one misstep from disaster.
-
-+ People with unwieldy illnesses.
-
-+ People who are homeless.
-
-In fact, for each of these categories, there are special systems that
-engage when the system knows they are applicable.
-
-
-<h3>Links</h3>
-
-Here is a recent talk from EmacsConf2019 about FRDCSA/FLP/Panoply.
-
-https://frdcsa.org/~andrewdo/frdcsa-emacsconf2019-final.webm
-
-
-Here is a video of an older, much smaller and simpler version of the FLP
-booting up (be careful, noisy):
-
-https://www.youtube.com/watch?v=t_dCAlf26LE
-
-
-Here is the beginning of a paper on FLP:
-
-https://frdcsa.org/~andrewdo/pioneer/wk1/flp.pdf
-
-
-and one on FRDCSA:
-
-https://frdcsa.org/~andrewdo/pioneer/wk1/frdcsa.pdf
-
-
-Here is a paper on the SPSE2 subsystem, an early planning system for
-FRDCSA which inspired parts of FLP.
-
-https://frdcsa.org/visual-aid/pdf/Temporal-Planning-and-Inferencing-for-Personal-Task-Management-with-SPSE2.pdf
-
-
-Here is a link to the financial planning submodule:
-
-https://github.com/aindilis/financial-planning#projected-transactions-for-florence-tucker
-
-
-Here is a video which shows some progress on the planner systems and also later the meal planner.
-
-https://www.youtube.com/watch?v=XZh_tHNboCI&t=15s
-
-
-Here are some earlier documents about the FLP:
-
-https://frdcsa.org/~andrewdo/writings/News-Challenge-2.html
-
-https://frdcsa.org/~andrewdo/WebWiki/FreeLifePlanningCoachSoftware.html
-
-https://frdcsa.org/~andrewdo/WebWiki/FreeLifePlanningCoachSoftwareUpdate.html
-
-https://frdcsa.org/~andrewdo/WebWiki/FreeLifePlanner.html
-	
-
-Here is a story describing the Free Life Planner.
-
-https://frdcsa.org/~andrewdo/writings/homeless-story.html
-
 
 <h3>GPT-2 Suggestions</h3>
 
@@ -230,3 +157,80 @@ Here are some additional capability requests that were automatically generated b
 + Having a daily routine that includes a few things you need to do, but also an off day where you can spend time with family and friends.
 
 + Keeping track of what you have on hand, and how much you have spent.
+
+
+
+The use cases go on and on, it is, afterall, a *LIFE* planner, and
+life is quite varied at times.
+
+
+There are few user bases that are expected to benefit more strongly
+from this system than others.
+
++ People with disabilities such as pervasive developmental disorders.
+
++ People in poverty who are one misstep from disaster.
+
++ People with unwieldy illnesses.
+
++ People who are homeless.
+
+In fact, for each of these categories, there are special systems that
+engage when the system knows they are applicable.
+
+
+<h3>Links</h3>
+
+Here is a recent talk from EmacsConf2019 about FRDCSA/FLP/Panoply.
+
+https://frdcsa.org/~andrewdo/frdcsa-emacsconf2019-final.webm
+
+
+Here is a video of an older, much smaller and simpler version of the FLP
+booting up (be careful, noisy):
+
+https://www.youtube.com/watch?v=t_dCAlf26LE
+
+
+Here is the beginning of a paper on FLP:
+
+https://frdcsa.org/~andrewdo/pioneer/wk1/flp.pdf
+
+
+and one on FRDCSA:
+
+https://frdcsa.org/~andrewdo/pioneer/wk1/frdcsa.pdf
+
+
+Here is a paper on the SPSE2 subsystem, an early planning system for
+FRDCSA which inspired parts of FLP.
+
+https://frdcsa.org/visual-aid/pdf/Temporal-Planning-and-Inferencing-for-Personal-Task-Management-with-SPSE2.pdf
+
+
+Here is a link to the financial planning submodule:
+
+https://github.com/aindilis/financial-planning#projected-transactions-for-florence-tucker
+
+
+Here is a video which shows some progress on the planner systems and also later the meal planner.
+
+https://www.youtube.com/watch?v=XZh_tHNboCI&t=15s
+
+
+Here are some earlier documents about the FLP:
+
+https://frdcsa.org/~andrewdo/writings/News-Challenge-2.html
+
+https://frdcsa.org/~andrewdo/WebWiki/FreeLifePlanningCoachSoftware.html
+
+https://frdcsa.org/~andrewdo/WebWiki/FreeLifePlanningCoachSoftwareUpdate.html
+
+https://frdcsa.org/~andrewdo/WebWiki/FreeLifePlanner.html
+	
+
+Here is a story describing the Free Life Planner.
+
+https://frdcsa.org/~andrewdo/writings/homeless-story.html
+
+
