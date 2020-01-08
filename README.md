@@ -24,9 +24,6 @@ paperwork, to send a copy to your doctor.
 + Remember what the doctors instructions were, in a paperless office
 with Machine Comprehension software, and helping you to conform to them.
 
-+ Reminding you to record what meal you ate after the bathroom door is
-opened.
-
 + Reminding you to work on your taxes, and to change your air filter.
 
 + Telling you that a particular plan of yours violates various moral
@@ -158,7 +155,7 @@ Here are some additional capability requests that were automatically generated b
 
 + Keeping track of what you have on hand, and how much you have spent.
 
-
+<h3>Expected User Base</h3>
 
 The use cases go on and on, it is, afterall, a *LIFE* planner, and
 life is quite varied at times.
