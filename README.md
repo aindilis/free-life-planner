@@ -179,12 +179,12 @@ engage when the system knows they are applicable.
 <h3>Links</h3>
 
 
-Here is a story describing the Free Life Planner.
+Here is a story describing the Free Life Planner:
 
 https://frdcsa.org/~andrewdo/writings/homeless-story.html
 
 
-Here is a recent talk from EmacsConf2019 about FRDCSA/FLP/Panoply.
+Here is a recent talk from EmacsConf2019 about FRDCSA/FLP/Panoply:
 
 https://frdcsa.org/~andrewdo/frdcsa-emacsconf2019-final.webm
 
@@ -206,7 +206,7 @@ https://frdcsa.org/~andrewdo/pioneer/wk1/frdcsa.pdf
 
 
 Here is a paper on the SPSE2 subsystem, an early planning system for
-FRDCSA which inspired parts of FLP.
+FRDCSA which inspired parts of FLP:
 
 https://frdcsa.org/visual-aid/pdf/Temporal-Planning-and-Inferencing-for-Personal-Task-Management-with-SPSE2.pdf
 
@@ -216,7 +216,7 @@ Here is a link to the financial planning submodule:
 https://github.com/aindilis/financial-planning#projected-transactions-for-florence-tucker
 
 
-Here is a video which shows some progress on the planner systems and also later the meal planner.
+Here is a video which shows some progress on the planner systems and also later the meal planner:
 
 https://www.youtube.com/watch?v=XZh_tHNboCI&t=15s
 
@@ -230,4 +230,14 @@ https://frdcsa.org/~andrewdo/WebWiki/FreeLifePlanningCoachSoftware.html
 https://frdcsa.org/~andrewdo/WebWiki/FreeLifePlanningCoachSoftwareUpdate.html
 
 https://frdcsa.org/~andrewdo/WebWiki/FreeLifePlanner.html
+
+
+Here is the LogicMOO system mentioned in the EmacsConf video, which FLP draws heavily upon and intends to integrate with eventually:
+
+https://github.com/TeamSPoon/prologmud/wiki
+
+
+And here the design docs for LogicMOO:
+
+https://drive.google.com/drive/#folders/0B0QA19UX0ehlV1ZEaXEzc3hjTWM
 
