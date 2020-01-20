@@ -232,6 +232,11 @@ https://frdcsa.org/~andrewdo/WebWiki/FreeLifePlanningCoachSoftwareUpdate.html
 https://frdcsa.org/~andrewdo/WebWiki/FreeLifePlanner.html
 
 
+Here is the README for Panoply/FRDCSA:
+
+https://frdcsa.org/~andrewdo/writings/README.html
+
+
 Here is the LogicMOO system mentioned in the EmacsConf video, which FLP draws heavily upon and intends to integrate with eventually:
 
 https://github.com/TeamSPoon/prologmud/wiki
