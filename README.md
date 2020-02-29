@@ -124,6 +124,25 @@ And here the design docs for LogicMOO:
 
 https://drive.google.com/drive/#folders/0B0QA19UX0ehlV1ZEaXEzc3hjTWM
 
-Test
+<h3>Screencaps</h3>
 
-![model_2](http://pjreddie.com/media/image/model_2.png)
+(https://frdcsa.org/~andrewdo/projects/flp-screencaps/01.jpg)
+![flp-02](https://frdcsa.org/~andrewdo/projects/flp-screencaps/02.jpg)
+![flp-03](https://frdcsa.org/~andrewdo/projects/flp-screencaps/03.jpg)
+![flp-04](https://frdcsa.org/~andrewdo/projects/flp-screencaps/04.jpg)
+![flp-05](https://frdcsa.org/~andrewdo/projects/flp-screencaps/05.jpg)
+![flp-06](https://frdcsa.org/~andrewdo/projects/flp-screencaps/06.jpg)
+![flp-09](https://frdcsa.org/~andrewdo/projects/flp-screencaps/09.jpg)
+![flp-10](https://frdcsa.org/~andrewdo/projects/flp-screencaps/10.jpg)
+![flp-11](https://frdcsa.org/~andrewdo/projects/flp-screencaps/11.jpg)
+![flp-12](https://frdcsa.org/~andrewdo/projects/flp-screencaps/12.jpg)
+![flp-14](https://frdcsa.org/~andrewdo/projects/flp-screencaps/14.jpg)
+![flp-16](https://frdcsa.org/~andrewdo/projects/flp-screencaps/16.jpg)
+![flp-17](https://frdcsa.org/~andrewdo/projects/flp-screencaps/17.jpg)
+![flp-18](https://frdcsa.org/~andrewdo/projects/flp-screencaps/18.jpg)
+![flp-19](https://frdcsa.org/~andrewdo/projects/flp-screencaps/19.jpg)
+![flp-20](https://frdcsa.org/~andrewdo/projects/flp-screencaps/20.jpg)
+![flp-21](https://frdcsa.org/~andrewdo/projects/flp-screencaps/21.jpg)
+![flp-22](https://frdcsa.org/~andrewdo/projects/flp-screencaps/22.jpg)
+![flp-23](https://frdcsa.org/~andrewdo/projects/flp-screencaps/23.jpg)
+![flp-25](https://frdcsa.org/~andrewdo/projects/flp-screencaps/25.jpg)
