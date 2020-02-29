@@ -124,3 +124,6 @@ And here the design docs for LogicMOO:
 
 https://drive.google.com/drive/#folders/0B0QA19UX0ehlV1ZEaXEzc3hjTWM
 
+Test
+
+![model_2](http://pjreddie.com/media/image/model_2.png)
