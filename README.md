@@ -124,7 +124,7 @@ And here the design docs for LogicMOO:
 
 https://drive.google.com/drive/#folders/0B0QA19UX0ehlV1ZEaXEzc3hjTWM
 
-<h3>Screencaps</h3>
+<h3>A Few Screencaps</h3>
 
 ![flp-01](https://frdcsa.org/~andrewdo/projects/flp-screencaps/01.jpg)
 ![flp-02](https://frdcsa.org/~andrewdo/projects/flp-screencaps/02.jpg)
