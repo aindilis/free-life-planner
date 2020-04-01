@@ -57,6 +57,11 @@ engage when the system knows they are applicable.
 <h3>Links</h3>
 
 
+Here is the release of FRDCSA Panoply Git VM:
+
+https://github.com/aindilis/frdcsa-panoply-git-20200329
+
+
 Here is a story describing the Free Life Planner:
 
 https://frdcsa.org/~andrewdo/writings/homeless-story.html
@@ -113,6 +118,11 @@ https://frdcsa.org/~andrewdo/WebWiki/FreeLifePlanner.html
 Here is the README for Panoply/FRDCSA:
 
 https://frdcsa.org/~andrewdo/writings/README.html
+
+
+Here is the project blog:
+
+https://facebook.com/frdcsa
 
 
 Here is the LogicMOO system mentioned in the EmacsConf video, which FLP draws heavily upon and intends to integrate with eventually:
