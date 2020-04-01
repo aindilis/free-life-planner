@@ -57,7 +57,7 @@ engage when the system knows they are applicable.
 <h3>Links</h3>
 
 
-Here is the release of FRDCSA Panoply Git VM:
+Here is the release of FRDCSA Panoply Git VM (containing older and stripped down versions of FRDCSA and Free Life Planner):
 
 https://github.com/aindilis/frdcsa-panoply-git-20200329
 
