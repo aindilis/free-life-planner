@@ -1,5 +1,9 @@
-1. [The FREE LIFE PLANNER (FLP)](#the-free-life-planner-(flp))
-2. [My second title](#my-second-title)
+1. [The FREE LIFE PLANNER](#the-free-life-planner)
+2. [Types of Problems](#types-of-problems)
+3. [Expected User Base](#expected-user-base)
+4. [Links](#links)
+5. [A Few Screenshots](#a-few-screenshots)
+6. [FLP Subsystems](#flp-subsystems)
 
 ##The FREE LIFE PLANNER (FLP)
 
