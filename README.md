@@ -1,11 +1,11 @@
-1. [The FREE LIFE PLANNER](#the-free-life-planner)
+1. [The FREE LIFE PLANNER (FLP)](#the-free-life-planner-(flp))
 2. [Types of Problems](#types-of-problems)
 3. [Expected User Base](#expected-user-base)
 4. [Links](#links)
 5. [A Few Screenshots](#a-few-screenshots)
 6. [FLP Subsystems](#flp-subsystems)
 
-##The FREE LIFE PLANNER (FLP)
+## The FREE LIFE PLANNER (FLP)
 
 What if you collect thousands of A.I. tools and apply them towards planning your life? That’s exactly what FRDCSA has been working on for the last twenty years. Only now, you can download a VM containing the core systems. In today’s increasingly complex world, sometimes we can be blindsided by rules we didn’t know existed. If you’re living on the edge, this can be a disaster. What if all the rules that applied to us, from legal, to financial, to just basic common sense, were collected into a system that was capable of reasoning with them and planning with them. You could put your objectives into the system and it would factor in all these things and spit out a plan. Well that’s just one of the many things that FRDCSA’s Free Life Planner A.I. seeks to do.
 
