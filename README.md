@@ -236,7 +236,7 @@ https://drive.google.com/drive/#folders/0B0QA19UX0ehlV1ZEaXEzc3hjTWM
 <tr><td>productivityRequirements</td><td>Tracks the conditions for being productive, whether they are satisfied, and plans to satisfy and maintain them.</td></tr>
 <tr><td>programSynthesis</td><td>Allows FLP to compose algorithms to solve problems it is facing.</td></tr>
 <tr><td>prologToGdlConversion</td><td>Bidirectional converion from Prolog to GDL (Game Description Language) to allow GGP (General Game Playing) agents to solve life-games.</td></tr>
-<tr><td>qlfPersistence</td><td>Move nonmonotonic FLP FreeKBS2 Contexts/Microtheories into QLF for faster loading, compression, and cold storage.</td></tr>
+<tr><td>qlfPersistence</td><td>Move monotonic FLP FreeKBS2 Predicates/Contexts/Microtheories into QLF for faster loading, compression, and cold storage.</td></tr>
 <tr><td>receiptManager</td><td>Tracks online downloaded or email and brick and mortar scanned receipts, pulls supplier and pricing information.</td></tr>
 <tr><td>resourceManager</td><td>Tracks household resources, finances and productivity requirements.</td></tr>
 <tr><td>securityPlanner</td><td>Generates adversarial plans to keep information/resources secure.</td></tr>
