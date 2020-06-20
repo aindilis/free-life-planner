@@ -80,7 +80,7 @@ Here is a recent talk from EmacsConf2019 about FRDCSA/FLP/Panoply:
 https://frdcsa.org/~andrewdo/frdcsa-emacsconf2019-final.webm
 
 
-Here is an indpendent (no dependncies on FRDCSA) for interactive plan monitoring:
+Here is an independent (no dependencies on FRDCSA) for interactive plan monitoring:
 
 https://github.com/aindilis/plan-monitor
 
