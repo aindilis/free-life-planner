@@ -169,6 +169,8 @@ https://drive.google.com/drive/#folders/0B0QA19UX0ehlV1ZEaXEzc3hjTWM
 ![flp-22](https://frdcsa.org/~andrewdo/projects/flp-screencaps/22.jpg)
 ![flp-23](https://frdcsa.org/~andrewdo/projects/flp-screencaps/23.jpg)
 ![flp-25](https://frdcsa.org/~andrewdo/projects/flp-screencaps/25.jpg)
+![flp-26](https://frdcsa.org/~andrewdo/projects/flp-screencaps/26.jpg)
+![flp-28](https://frdcsa.org/~andrewdo/projects/flp-screencaps/28.jpg)
 
 ## FLP Subsystems
 
