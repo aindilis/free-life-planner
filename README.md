@@ -85,6 +85,13 @@ Here is an independent codebase (no dependencies on FRDCSA) for interactive plan
 https://github.com/aindilis/plan-monitor
 
 
+Here is some more recent work on the Interactive Execution Monitor:
+
+https://frdcsa.org/~andrewdo/iem2-2.mp4
+
+https://frdcsa.org/~andrewdo/iem2-3.mp4
+
+
 Here is a video of an older, much smaller and simpler version of the FLP
 booting up (be careful, noisy):
 
