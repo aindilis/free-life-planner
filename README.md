@@ -1,4 +1,4 @@
-1. [The FREE LIFE PLANNER - FLP](#the-free-life-planner-flp)
+1. [The FREE LIFE PLANNER (FLP)](#the-free-life-planner-flp)
 2. [Types of Problems](#types-of-problems)
 3. [Expected User Base](#expected-user-base)
 4. [Links](#links)
