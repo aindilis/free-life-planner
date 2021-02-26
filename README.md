@@ -156,6 +156,8 @@ https://drive.google.com/drive/#folders/0B0QA19UX0ehlV1ZEaXEzc3hjTWM
 
 ## A Few Screenshots
 
+There is a lot more work that has been finished than we are able to display here.   This is because we are "dogfooding" FLP, i.e. using our tools as we develop them, hence it's full of personal info unfit to be demoed or otherwise displayed.  So these select few (outdated) screencaps have to suffice.
+
 ![flp-01](https://frdcsa.org/~andrewdo/projects/flp-screencaps/01.jpg)
 ![flp-02](https://frdcsa.org/~andrewdo/projects/flp-screencaps/02.jpg)
 ![flp-03](https://frdcsa.org/~andrewdo/projects/flp-screencaps/03.jpg)
