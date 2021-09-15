@@ -119,6 +119,11 @@ Here is a link to the financial planning submodule:
 https://github.com/aindilis/financial-planning#projected-transactions-for-florence-tucker
 
 
+Here is a link to the meal planning submodule:
+
+https://frdcsa.org/~andrewdo/WebWiki/MealPlanningResources.html
+
+
 Here is a video which shows some progress on the planner systems and also later the meal planner:
 
 https://www.youtube.com/watch?v=XZh_tHNboCI&t=15s
