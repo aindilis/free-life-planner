@@ -80,7 +80,7 @@ Here is the most recent talk on FLP.
 https://ontologforum.org/index.php/ConferenceCall_2022_04_20
 
 
-Here is the beginning of the release of FRDCSA (marking the Panoply release the official release and deeming the last five years of work the "private" version of FRDCSA, and backporting from private to public as able:
+Here is the beginning of the release of FRDCSA (marking the Panoply release the official public release and deeming the last five years of work the "private" version of FRDCSA, and backporting from private to public as able):
 
 https://github.com/aindilis/frdcsa-installer
 
