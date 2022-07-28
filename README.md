@@ -7,9 +7,12 @@
 
 ## The FREE LIFE PLANNER (FLP)
 
-This page will soon be deprecated.  To see the new (under construction) page for FLP:
+This page will soon be deprecated.  To see the new (under construction) pages for FLP:
 
 https://github.com/aindilis/flp
+
+https://github.com/aindilis/flp/blob/main/ReferenceManual.md
+
 
 What if one could collect thousands of A.I. tools and apply them towards planning their life? That’s exactly what FRDCSA has been working on for the last twenty years. Only now, you can download a VM containing the core systems. In today’s increasingly complex world, sometimes we can be blindsided by rules we didn’t know existed. If you’re living on the edge, this can be a disaster. What if all the rules that applied to us, from legal, to financial, to just basic common sense, were collected into a system that was capable of reasoning with them and planning with them. You could put your objectives into the system and it would factor in all these things and spit out a plan. Well that’s just one of the many things that FRDCSA’s Free Life Planner A.I. seeks to do.
 
