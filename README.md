@@ -14,14 +14,41 @@ https://github.com/aindilis/flp
 https://github.com/aindilis/flp/blob/main/ReferenceManual.md
 
 
-What if one could collect thousands of A.I. tools and apply them towards planning their life? That’s exactly what FRDCSA has been working on for the last twenty years. Only now, you can download a VM containing the core systems. In today’s increasingly complex world, sometimes we can be blindsided by rules we didn’t know existed. If you’re living on the edge, this can be a disaster. What if all the rules that applied to us, from legal, to financial, to just basic common sense, were collected into a system that was capable of reasoning with them and planning with them. You could put your objectives into the system and it would factor in all these things and spit out a plan. Well that’s just one of the many things that FRDCSA’s Free Life Planner A.I. seeks to do.
+The FRDCSA project has collected a many A.I. tools and is working to
+apply them toward planning for day-to-day life.  (There is a VM
+containing the core systems:
+https://github.com/aindilis/frdcsa-panoply-git-20200329 ). Sometimes
+people are blindsided by things they didn't expect (and if they are
+already struggling, it can be a serious problem). The Free Life
+Planner (FLP) is trying to gather information that applies to us, such
+as legal, financial, common sense, etc, and put that information into
+a system that can reason and plan with it. One could put their goals
+into the FLP and it should factor everything in and attempt to create
+a plan.
 
-A.I. is problem-solving, and software that can do this has to grow larger as problems and their complexity multiply. Over the last 20 years the FRDCSA project has collected thousands of codebases, and written hundreds of codebases, gluing everything together and making it available from within Emacs, Perl and Prolog. The Free Life Planner, FLP, takes this and applies it directly towards assisting users in their minute-to-minute, day-to-day, year-to-year lives.
-Think of a massive collection like V’ger had in Star Trek: The Motion Picture, of things like strong game-playing systems like AlphaZero, but tailored to the specific problems people most often encounter with finances, meal-planning, transportation, health care, etc.
+Artificial intelligence involves problem-solving, and in order for
+A.I. software to problem-solve it must grow larger in proportion to
+problems and their complexity.  The FRDCSA has taken all these
+codebases and "glued" everything together and made it available from
+Emacs, Perl and Prolog (with APIs to other systems).  FLP applies this
+directly towards helping users in their day-to-day lives. It contains
+a large collection of things like planners and game-playing programs
+(such as AlphaZero), and applies them to common problems such as
+finances, meal-planning, transportation, health care, etc.
 
-If you’re interested in a personal A.I. assistant, please continue reading about FLP. But it is after all only one of over 600 custom codebases developed for FRDCSA. Now, Panoply, the virtual machine distribution of FRDCSA, has been released for you to explore. So, let’s have a look at some of what the Free Life Planner can do for you.
+FLP is similar to a personal planner, a personal information manager,
+a home automation system, etc. It is designed with the disadvantaged
+in mind, but is generally useful. Please note that the
+free-life-planner GitHub repository does not contain the whole FLP
+system, which is spread throughout all the FRDCSA codebases, and it
+cannot run without them. (We are attempting to build an installer, but
+it's not ready: https://github.com/aindilis/frdcsa-installer ).
 
-Free Life Planner is a software program that helps people plan and manage their day to day lives.  It lies somewhere between a personal planner and home automation system, but is so much more...  It is the flagship application of the FRDCSA Project.  It provides Free Software Social Friendly AI for general use, but especially for those experiencing poverty, homelessness, disabilty and/or illness.  Note this is only the directory, most of logic is spread throughout FRDCSA.  Won't run without rest of FRDCSA.  It aims to help people get on top of every security (food, financial, health, emotional etc).  It achieves this by employing various planning techniques at multiple scales and granularities.  It closely tracks the user's condition and applies knowledge that has been gathered semi-automatically from online texts to their situation.
+FLP tries to get on top of food security, financial security,
+emotional security, using many different methods, and aiming at
+different time frames and levels of detail. It tries to keep a digital
+twin of the user and apply the gathered life-planning information to
+their situation.
 
 ## Types of Problems
 
@@ -114,6 +141,11 @@ https://frdcsa.org/~andrewdo/iem2-2.mp4
 https://frdcsa.org/~andrewdo/iem2-3.mp4
 
 
+Here is recent work on the executive function assistant:
+
+https://frdcsa.org/~andrewdo/executive-function-assistant.mp4
+
+
 Here is a video of an older, much smaller and simpler version of the FLP
 booting up (be careful, noisy):
 
@@ -180,6 +212,7 @@ https://github.com/TeamSPoon/prologmud/wiki
 And here the design docs for LogicMOO:
 
 https://drive.google.com/drive/#folders/0B0QA19UX0ehlV1ZEaXEzc3hjTWM
+
 
 ## A Few Screenshots
 
