@@ -14,7 +14,7 @@ https://github.com/aindilis/flp/blob/main/ReferenceManual.md
 https://github.com/aindilis/flp
 
 
-The FRDCSA project has collected a many A.I. tools and is working to
+The FRDCSA project has collected many A.I. tools and is working to
 apply them toward planning for day-to-day life.  (There is a VM
 containing the core systems:
 https://github.com/aindilis/frdcsa-panoply-git-20200329 ). Sometimes
