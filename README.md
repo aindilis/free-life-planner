@@ -33,7 +33,7 @@ codebases and "glued" everything together and made it available from
 Emacs, Perl and Prolog (with APIs to other systems).  FLP applies this
 directly towards helping users in their day-to-day lives. It contains
 a large collection of things like planners and game-playing programs
-(such as AlphaZero), and applies them to common problems such as
+(similar to AlphaZero), and applies them to common problems such as
 finances, meal-planning, transportation, health care, etc.
 
 FLP is similar to a personal planner, a personal information manager,
@@ -45,7 +45,7 @@ cannot run without them. (We are attempting to build an installer, but
 it's not ready: https://github.com/aindilis/frdcsa-installer ).
 
 FLP tries to get on top of food security, financial security,
-emotional security, using many different methods, and aiming at
+emotional security, etc, using many different methods, and aiming at
 different time frames and levels of detail. It tries to keep a digital
 twin of the user and apply the gathered life-planning information to
 their situation.
