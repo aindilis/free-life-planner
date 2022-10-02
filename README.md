@@ -9,9 +9,9 @@
 
 This page will soon be deprecated.  To see the new (under construction) pages for FLP:
 
-https://github.com/aindilis/flp
-
 https://github.com/aindilis/flp/blob/main/ReferenceManual.md
+
+https://github.com/aindilis/flp
 
 
 The FRDCSA project has collected a many A.I. tools and is working to
@@ -52,9 +52,7 @@ their situation.
 
 ## Types of Problems
 
-So, what kind of planning and management problems are we talking about?
-
-Here are a few:
+Here are some examples of planning and management problems:
 
 + Remembering to take the trash out before the trash truck arrives.
 
@@ -78,12 +76,8 @@ unexpected expenses and if certain income doesn't come through.
 
 ## Expected User Base
 
-The use cases go on and on, it is, afterall, a *LIFE* planner, and
-life is quite varied at times.
-
-
-There are few user bases that are expected to benefit more strongly
-from this system than others.
+There are few user bases that should benefit more from this system
+than others:
 
 + People with disabilities such as pervasive developmental disorders.
 
@@ -93,8 +87,11 @@ from this system than others.
 
 + People who are homeless.
 
-In fact, for each of these categories, there are special systems that
-engage when the system knows they are applicable.
++ People experiencing relationship violence.
+
++ Returning citizens.
+
+There are special modules for each of these situations.
 
 
 ## Links
@@ -141,7 +138,7 @@ https://frdcsa.org/~andrewdo/iem2-2.mp4
 https://frdcsa.org/~andrewdo/iem2-3.mp4
 
 
-Here is recent work on the executive function assistant:
+Here is recent work on the Executive Function Assistant:
 
 https://frdcsa.org/~andrewdo/executive-function-assistant.mp4
 
