@@ -98,7 +98,14 @@ There are special modules for each of these situations.
 
 Here is the beginning of a replacement README.md (and Manual/etc) for this page (free-life-planner).
 
+https://github.com/aindilis/flp/blob/main/ReferenceManual.md
+
 https://github.com/aindilis/flp
+
+
+Here is the containing project:
+
+https://frdcsa.org
 
 
 Here is the release of FRDCSA Panoply Git VM (containing older and stripped down versions of FRDCSA and Free Life Planner):
