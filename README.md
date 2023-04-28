@@ -7,6 +7,16 @@
 
 ## The FREE LIFE PLANNER (FLP)
 
+Introducing the Free Life Planner (FLP) - a revolutionary artificial 
+intelligence software designed to tackle global issues like poverty, 
+hunger, and disease. Thanks to its open-source nature and the decreasing 
+digital divide, FLP can be distributed worldwide at virtually no cost, 
+providing superhuman problem-solving abilities to everyone. With FLP, 
+we're paving the way for a virtual secondary social safety net, 
+promoting self-reliance, improving quality of life, and saving lives. 
+Join us in harnessing the power of free AI to create a better future 
+for all.
+
 This page will soon be deprecated.  To see the new (under construction) pages for FLP:
 
 https://github.com/aindilis/flp/blob/main/ReferenceManual.md
