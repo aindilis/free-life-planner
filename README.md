@@ -21,7 +21,7 @@ for all.
 ## Overview
 
 This page will soon be deprecated.  To see the new (under construction) 
-pages for FLP (The Reference Manual in particular gives a thorough 
+pages for FLP (the Reference Manual in particular gives a thorough 
 overview):
 
 https://github.com/aindilis/flp/blob/main/ReferenceManual.md
