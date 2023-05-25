@@ -20,6 +20,45 @@ for all.
 
 ## Overview
 
+The Free Life Planner (FLP) is an innovative tool that harnesses the 
+power of artificial intelligence to help you navigate the complexities 
+of daily life. The FLP is your personal assistant, guiding you through 
+life's unexpected challenges, and helping you achieve your goals with 
+ease and confidence.
+
+Powered by the FRDCSA project, the FLP combines a wealth of AI tools 
+and resources to create a comprehensive, user-friendly system that 
+takes the stress out of planning. Whether you're dealing with legal 
+matters, financial planning, or simply trying to make sense of 
+day-to-day tasks, the FLP is designed to simplify and streamline your 
+life.
+
+With a growing library of AI-powered tools, the FLP offers a versatile 
+solution tailored to your unique needs. From meal planning and 
+transportation to healthcare and home automation, our cutting-edge 
+technology can help you stay on track and make informed decisions.
+
+Designed with everyone in mind, the FLP is especially useful for 
+those facing challenges or disadvantages. Our goal is to provide a 
+system that fosters financial, emotional, and overall well-being, 
+offering support and guidance at every turn.
+
+While the FLP is still in development, our team is hard at work 
+creating an installer that will make it easy to access and utilize 
+the full capabilities of the system. In the meantime, you can explore 
+the core components of the FRDCSA project by visiting our GitHub 
+repository:
+
+https://github.com/aindilis/frdcsa-panoply-git-20200329 
+
+We believe that the Free Life Planner has the potential to 
+revolutionize the way we approach life planning. By harnessing the 
+power of artificial intelligence and providing a comprehensive, 
+user-friendly system, we can help individuals navigate the 
+complexities of daily life with ease and confidence. Stay tuned for 
+updates as we continue to develop and refine this groundbreaking 
+tool!
+
 This page will soon be deprecated.  To see the new (under construction) 
 pages for FLP (the Reference Manual in particular gives a thorough 
 overview):
@@ -27,44 +66,6 @@ overview):
 https://github.com/aindilis/flp/blob/main/ReferenceManual.md
 
 https://github.com/aindilis/flp
-
-
-The FRDCSA project has collected many A.I. tools and is working to
-apply them toward planning for day-to-day life.  (There is a VM
-containing the core systems:
-https://github.com/aindilis/frdcsa-panoply-git-20200329 ). Sometimes
-people are blindsided by things they didn't expect (and if they are
-already struggling, it can be a serious problem). The Free Life
-Planner (FLP) is trying to gather information that applies to us, such
-as legal, financial, common sense, etc, and put that information into
-a system that can reason and plan with it. One could put their goals
-into the FLP and it should factor everything in and attempt to create
-a plan.
-
-Artificial intelligence involves problem-solving, and in order for
-A.I. software to problem-solve it must grow larger in proportion to
-problems and their complexity.  The FRDCSA has taken all these
-codebases and "glued" everything together and made it available from
-a WebUI frontend, and Emacs, Perl and Prolog backends (with APIs to
-other systems).  FLP applies this directly towards helping users in 
-their day-to-day lives. It contains a large collection of things like
-planners and game-playing programs (similar to AlphaZero), and applies
-them to common problems such as finances, meal-planning, 
-transportation, health care, etc.
-
-FLP is similar to a personal planner, a personal information manager,
-a home automation system, etc. It is designed with the disadvantaged
-in mind, but is generally useful. Please note that the
-free-life-planner GitHub repository does not contain the whole FLP
-system, which is spread throughout all the FRDCSA codebases, and it
-cannot run without them. (We are attempting to build an installer, but
-it's not ready: https://github.com/aindilis/frdcsa-installer ).
-
-FLP tries to get on top of food security, financial security,
-emotional security, etc, using many different methods, and aiming at
-different time frames and levels of detail. It tries to keep a digital
-twin of the user and apply the gathered life-planning information to
-their situation.
 
 ## Types of Problems
 
