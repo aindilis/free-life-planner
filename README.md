@@ -45,11 +45,12 @@ Artificial intelligence involves problem-solving, and in order for
 A.I. software to problem-solve it must grow larger in proportion to
 problems and their complexity.  The FRDCSA has taken all these
 codebases and "glued" everything together and made it available from
-Emacs, Perl and Prolog (with APIs to other systems).  FLP applies this
-directly towards helping users in their day-to-day lives. It contains
-a large collection of things like planners and game-playing programs
-(similar to AlphaZero), and applies them to common problems such as
-finances, meal-planning, transportation, health care, etc.
+a WebUI frontend, and Emacs, Perl and Prolog backends (with APIs to
+other systems).  FLP applies this directly towards helping users in 
+their day-to-day lives. It contains a large collection of things like
+planners and game-playing programs (similar to AlphaZero), and applies
+them to common problems such as finances, meal-planning, 
+transportation, health care, etc.
 
 FLP is similar to a personal planner, a personal information manager,
 a home automation system, etc. It is designed with the disadvantaged
