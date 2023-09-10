@@ -18,6 +18,10 @@ promoting self-reliance, improving quality of life, and saving lives.
 Join us in harnessing the power of free AI to create a better future 
 for all.
 
+Must see this: 
+
+https://github.com/aindilis/flp/blob/main/ReferenceManual.md
+
 ## Overview
 
 The Free Life Planner (FLP) is an innovative tool that harnesses the 
@@ -64,8 +68,6 @@ pages for FLP (the Reference Manual in particular gives a thorough
 overview):
 
 https://github.com/aindilis/flp/blob/main/ReferenceManual.md
-
-https://github.com/aindilis/flp
 
 ## Types of Problems
 
