@@ -1,11 +1,3 @@
-1. [The FREE LIFE PLANNER (FLP)](#the-free-life-planner-flp)
-2. [Overview](#overview)
-3. [Types of Problems](#types-of-problems)
-4. [Expected User Base](#expected-user-base)
-5. [Links](#links)
-6. [A Few Screenshots](#a-few-screenshots)
-7. [FLP Subsystems](#flp-subsystems)
-
 ## The FREE LIFE PLANNER (FLP)
 
 Introducing the Free Life Planner (FLP) - a revolutionary artificial 
@@ -21,6 +13,8 @@ for all.
 Must see this: 
 
 https://github.com/aindilis/flp/blob/main/ReferenceManual.md
+
+<!-- TOC -->
 
 ## Overview
 
