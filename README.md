@@ -10,9 +10,11 @@ promoting self-reliance, improving quality of life, and saving lives.
 Join us in harnessing the power of free AI to create a better future 
 for all.
 
-Must see this: 
+For more detail, see here: 
 
 https://github.com/aindilis/flp/blob/main/ReferenceManual.md
+
+## TOC
 
 1. [The FREE LIFE PLANNER (FLP)](#the-free-life-planner-flp)
 2. [Overview](#overview)
