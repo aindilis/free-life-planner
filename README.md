@@ -14,7 +14,7 @@ For more detail, see here:
 
 https://github.com/aindilis/flp/blob/main/ReferenceManual.md
 
-## TOC
+## Table of Contents
 
 1. [The FREE LIFE PLANNER (FLP)](#the-free-life-planner-flp)
 2. [Overview](#overview)
