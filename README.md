@@ -40,6 +40,6 @@ We believe in the power of collaboration and open-source development to drive po
 - 🧪 Participate in testing and providing feedback to enhance the system's performance
 - 📣 Spread the word about FLP and advocate for its adoption in your community
 - 💡 Share your ideas and expertise to guide the project's future direction
-- 💰 [Support the project financially](https://frdcsa.org/~andrewdo/donations.html) to help us sustain and accelerate development
+- 💰 [Support the project financially](https://frdcsa.org/~andrewdo#donate) to help us sustain and accelerate development
 
 Together, we can leverage the power of AI to create a brighter, more equitable future for all. Join us in our mission to transform lives, one plan at a time! 🌍✨
