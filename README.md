@@ -31,7 +31,7 @@ While FLP is still under active development, we're working hard to create an eas
 To learn more about the vision and journey behind FLP, we invite you to:
 - 📖 Read the gripping [story that inspired FLP's creation](https://frdcsa.org/~andrewdo/writings/homeless-story.html)
 - 🎥 Watch the [most recent talk on FLP](https://ontologforum.org/index.php/ConferenceCall_2022_04_20) and an [earlier presentation on FRDCSA, the driving force behind FLP](https://frdcsa.org/~andrewdo/frdcsa-emacsconf2019-final.webm)
-- 📚 Explore the academic papers on [FLP](https://frdcsa.org/~andrewdo/pioneer/wk1/flp.pdf), [FRDCSA](https://frdcsa.org/~andrewdo/pioneer/wk1/frdcsa.pdf), and [SPSE2, an early planning system that inspired FLP](https://frdcsa.org/visual-aid/pdf/Temporal-Planning-and-Inferencing-for-Personal-Task-Management-with-SPSE2.pdf)
+- 📚 Explore the academic papers on [FLP](https://frdcsa.org/%7eandrewdo/flp-jwas-article-draft-1.pdf), [FRDCSA](https://frdcsa.org/~andrewdo/pioneer/wk1/frdcsa.pdf), and [SPSE2, an early planning system that inspired FLP](https://frdcsa.org/visual-aid/pdf/Temporal-Planning-and-Inferencing-for-Personal-Task-Management-with-SPSE2.pdf)
 
 ## 🙌 Get Involved
 We believe in the power of collaboration and open-source development to drive positive change. Whether you're a developer, researcher, domain expert, or simply passionate about our mission, there are many ways to contribute:
