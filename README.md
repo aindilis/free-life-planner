@@ -30,7 +30,7 @@ While FLP is still under active development, we're working hard to create an eas
 ## 💡 Inspiration and Background
 To learn more about the vision and journey behind FLP, we invite you to:
 - 📖 Read the gripping [fictionalized account about FLP](https://frdcsa.org/~andrewdo/writings/homeless-story.html)
-- 📚 Explore the academic papers on [FLP](https://frdcsa.org/%7eandrewdo/flp-jwas-article-draft-1.pdf), [FRDCSA](https://frdcsa.org/~andrewdo/pioneer/wk1/frdcsa.pdf), and [SPSE2, an early planning system that inspired FLP](https://frdcsa.org/visual-aid/pdf/Temporal-Planning-and-Inferencing-for-Personal-Task-Management-with-SPSE2.pdf)
+- 📚 Explore the academic papers on [FLP](https://frdcsa.org/%7eandrewdo/flp-jwas-article-draft-1.pdf), [FRDCSA](https://www.academia.edu/97848398/The_FRDCSA_Project_DRAFT_), and [SPSE2, an early planning system that inspired FLP](https://frdcsa.org/visual-aid/pdf/Temporal-Planning-and-Inferencing-for-Personal-Task-Management-with-SPSE2.pdf)
 - 📖 Read more about some of the more important FLP subsystems, like the [Financial Planner](https://github.com/aindilis/financial-planning/blob/master/README.md) and the [Meal Planner](https://github.com/aindilis/gourmet-formalog-standalone/blob/main/README.md).
 - 🎥 Watch the [most recent talk on FLP](https://ontologforum.org/index.php/ConferenceCall_2022_04_20) and an [earlier presentation on FRDCSA, the driving force behind FLP](https://frdcsa.org/~andrewdo/frdcsa-emacsconf2019-final.webm)
 
